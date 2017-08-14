@@ -14,14 +14,33 @@ Baidu의 연구 결과로 기존 CNN(2D)를 3D 데이터로 확장
 
 2D 이미지 대비 장점 : pose and shape of the detected objects
 
+2D CNN `DenseBox.`를 기반으로 아이디어 확장 
 
 ## 2. 기존 연구 
 - 기존 연구 Pipeline : 후보 영역 선정 -> 분류 
 
 - rule-based segmentation is suggested for specific scene [10, 20, 5].
 
+
+### 2.1 Convolutional Neural Network and 3D Object Detection
+
+> [논문](https://arxiv.org/pdf/1611.08069.pdf)
+
+- [3], [9],[16], [17], [24], [25] embed 3D information in 2D projection and use 2D CNN for recognition or detection.
+- [16] also suggest it possible to predict 3D object localization by 2D CNN network on range scans.
+
+- [10] operates 3D voxel data but regards one dimension as a channel to apply 2D CNN.
+
+- [8], [20], [26], [32] are among the very few earlier works on3D CNN.
+
+ - [8], [20], [32] focus on object recognition and 
+ - [26] proposes 3D R-CNN techniques for indoor object detection combining the Kinect image and point cloud.
+
+> 복셀(voxel : 볼륨+픽셀) : 3D 공간에서 볼륨과 색상 정보를 포함하는 점(포인트)
+
 ### 2.1 Object Detection from Range Scans
 
+> Range Sensor = LiDAR, RGBD Camera (cf. Range scans??)
 
 #### A. 후보영역 탐지
 1. simply removing the ground plane 
@@ -105,5 +124,7 @@ In this paper, **our approach project range scans as 2D maps** similar to the de
 
 The frameworks of Huang et al. [11], Sermanet et al. [25] are transplanted to predict the objectness and the 3D object bounding boxes in a unified end-to-end manner.
 
+
+## 3. 제안 방식 
 
 
