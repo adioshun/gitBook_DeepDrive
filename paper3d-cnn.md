@@ -2,7 +2,7 @@
 |-|-|
 |저자(소속)|Bo Li (Baidu)|
 |학회/년도|2017, [논문](https://arxiv.org/pdf/1611.08069.pdf)|
-|키워드| |
+|키워드|project range scans as 2D maps similar to the depthmap of RGBD data |
 |참고|[2016논문](https://arxiv.org/pdf/1608.07916.pdf)|
 |코드|[TF](https://github.com/yukitsuji/3D_CNN_tensorflow)|
 
@@ -20,13 +20,16 @@ Baidu의 연구 결과로 기존 CNN(2D)를 3D 데이터로 확장
 
 - rule-based segmentation is suggested for specific scene [10, 20, 5].
 
-### 2.1 후보영역 탐지
+### 2.1 Object Detection from Range Scans
+
+
+#### A. 후보영역 탐지
 1. simply removing the ground plane 
 2. cluster the remaining points can generate reasonable segmentation[10, 5].
 
 개선된 방안 : forming graphs on the point cloud [32, 14, 21, 29, 30].
 
-### 2.2 분류 방법들 
+#### B. 분류 방법들 
 - Behley et al. [2] suggests to segment the scene hierarchically and keep segments of different scales.
 
 - Other methods directly exhaust the range scan space to propose candidates to avoid incorrect segmentation.
@@ -45,13 +48,46 @@ A comparison of features can be found in [1].
 
 Besides the hand-crafted features, Deuge et al. [4], Laiet al. [15] explore to learn feature representation of point cloud via sparse coding.
 
+#### C. RGBD images
 
-We would also like to mention that object detection on RGBD images [3, 17] is closely related to the topic of object detection on range scan.
+range scan에서의 물체 탐지는 RGBD images [3, 17]를 이용한 탐지 방법과 깊은 연관이있다.  
+- The depth channel can be interpreted as a range scan and naturally applies to some detection algorithms designed for range scan.
 
-The depth channel can be interpreted as a range scan and naturally applies to some detection algorithms designed for range scan.
+>  RGBD data : 색상정보(RGB) + 물체까지의 거리정보 (Depth)를 함께 측정할
 
-On the otherhand, numerous researches have been done on exploiting both depth and RGB information in object detection tasks.
+### 2.1 Convolutional Neural Network on Object Detection
 
-We omit detailed introduction about traditional literatures on RGBD data here but the proposed algorithm in this paper can also be generalized to RGBD data.
+#### A. 기존 2D CNN기반 물체 탐지 
+
+- R-CNN [8] proposes candidate regions and uses CNN to verify candidates as valid objects
+
+- OverFeat [25], DenseBox [11] and YOLO [23] uses end-to-end unified FCN frameworks which predict the objectness confidence and the bounding boxes simultaneously over the whole image.
+
+#### B. 3D로의 확장 연구 
+Some research has also been focused on applying CNN on 3D data.
+
+##### 가. RGBD
+RGBD dat에서 D를 하나의 이미지 채널로 간주 하고 2D CNN를 이용하여 분류/탐지 하였다. [9, 24, 26].
+
+> - [9] S Gupta, R Girshick, P Arbelaez, and J Malik. Learning ´Rich Features from RGB-D Images for Object Detection and Segmentation. arXiv preprint arXiv:1407.5736, pages 1–16, 2014.
+> - [24] Max Schwarz, Hannes Schulz, and Sven Behnke. RGB-D Object Recognition and Pose Estimation based on Pretrained Convolutional Neural Network Features. IEEE International Conference on Robotics and Automation
+(ICRA), (May), 2015.
+> - [26] Richard Socher, Brody Huval, Bharath Bath, Christopher D Manning, and Andrew Y Ng. Convolutionalrecursive deep learning for 3d object classification. Advances in Neural Information Processing Systems, pages 665–673, 2012.
+
+##### 나. Point CLoud 
+ - For 3D range scan some works discretize point cloud along 3D grids and train3D CNN structure for classification [33, 19]. (포인트 클라우드를 3D 그리드 + Traind 3D CNN으로 분리) 
+  
+> - [33] Zhirong Wu and Shuran Song. 3D ShapeNets : A Deep Representation for Volumetric Shapes. IEEE Conference
+on Computer Vision and Pattern Recognition (CVPR2015), pages 1–9, 2015.
+> - [19] Daniel Maturana and Sebastian Scherer. VoxNet : A 3D Convolutional Neural Network for Real-Time Object
+Recognition. pages 922–928, 2015
+
+These classifier scan be integrated with region proposal method like slidin gwindow [27] for detection tasks.
+
+### 2.3 본 논문의 접근 방안 
+In this paper, **our approach project range scans as 2D maps** similar to the depthmap of RGBD data. 
+
+The frameworks of Huang et al. [11], Sermanet et al. [25] are transplanted to predict the objectness and the 3D object bounding boxes in a unified end-to-end manner.
+
 
 
