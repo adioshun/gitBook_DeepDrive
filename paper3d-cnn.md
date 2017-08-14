@@ -128,3 +128,15 @@ The frameworks of Huang et al. [11], Sermanet et al. [25] are transplanted to pr
 ## 3. 제안 방식 
 
 
+
+---
+
+[1] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang and J. Xiao. 3D ShapeNets: A Deep Representation for Volumetric Shapes. CVPR2015.
+[2] D. Maturana and S. Scherer. VoxNet: A 3D Convolutional Neural Network for Real-Time Object Recognition. IROS2015.
+[3] H. Su, S. Maji, E. Kalogerakis, E. Learned-Miller. Multi-view Convolutional Neural Networks for 3D Shape Recognition. ICCV2015.
+[4] B Shi, S Bai, Z Zhou, X Bai. DeepPano: Deep Panoramic Representation for 3-D Shape Recognition. Signal Processing Letters 2015.
+[5] Song Bai, Xiang Bai, Zhichao Zhou, Zhaoxiang Zhang, Longin Jan Latecki. GIFT: A Real-time and Scalable 3D Shape Search Engine. CVPR 2016.
+[6] Edward Johns, Stefan Leutenegger and Andrew J. Davison. Pairwise Decomposition of Image Sequences for Active Multi-View Recognition CVPR 2016. 
+[7] Vishakh Hegde, Reza Zadeh 3D Object Classification Using Multiple Data Representations. 
+
+Is there a Convolutional Neural Network implementation for 3D.... Available from: https://www.researchgate.net/post/Is_there_a_Convolutional_Neural_Network_implementation_for_3D_images [accessed Aug 14, 2017].
