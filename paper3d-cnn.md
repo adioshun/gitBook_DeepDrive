@@ -29,10 +29,26 @@ Baidu의 연구 결과로 기존 CNN(2D)를 3D 데이터로 확장
 
 개선된 방안 : forming graphs on the point cloud [32, 14, 21, 29, 30].
 
-#### B. 분류 방법들 
-- Behley et al. [2] suggests to segment the scene hierarchically and keep segments of different scales.
+###### 후보영역 추천 알로리즘들 Candidates can be proposed by 
+- segmentation algorithms [2], [5], [11], [14], [21], [22], [28], [29], [31], 
+- sliding window [30], 
+- random sampling [13], 
+- Region Proposal Network (RPN) [26].
 
-- Other methods directly exhaust the range scan space to propose candidates to avoid incorrect segmentation.
+
+#### B. 분류 방법들 
+
+For the classification stage, research have been 
+ - drawn to features including shape model [6], [13] and geometry statistic features [22], [27], [29], [31].
+ - Sparsing coding [4], [15] 
+ - deep learning [26] are also used for feature representation.
+
+3D를 2D로 투영하는 방법 : Besides directly operating in the 3D point cloud space,some other previous detection alogrithms project 3D point cloud onto 2D surface as depthmaps or range scans [3], [16],[17].
+ - 3D위치 정보를 잃어 버리는 문제점 있음 
+
+Behley et al. [2] suggests to segment the scene hierarchically and keep segments of different scales.
+
+Other methods directly exhaust the range scan space to propose candidates to avoid incorrect segmentation.
  - For example, Johnson and Hebert [13] randomly samples points from the point cloud as correspondences.
  - Wang andPosner [31] scan the whole space by a sliding window to generate proposals.
 
