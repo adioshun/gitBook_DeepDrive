@@ -87,3 +87,4 @@ from unknown space.
 
 We also study different representations of occupancy and propose techniques to improve performance when the data varies significantly in scale and orientation
 
+## 3. Approach
