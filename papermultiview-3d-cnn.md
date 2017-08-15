@@ -158,3 +158,58 @@ Both 3DOP and Mono3D (use hand-crated) features.
 
 ### 3.1. 3D Point Cloud Representation
 
+기존 방식 
+- Usually encodes 3D LIDAR point cloud into a 3D grid [26, 7] 
+ - Raw 데이터를 잘 유지하고 있지만, feature extraction 계산 부하가 크다. 
+- Usually encodes 3D LIDAR point cloud into a front view map [17]. 
+
+
+제안 방식
+- Encodes 3D LIDAR point cloud into the bird’s eye view
+- Encodes 3D LIDAR point cloud into the front view
+
+![](http://i.imgur.com/atUf0Of.png)
+
+#### A. Bird’s Eye View Representation. 
+The bird’s eye view representation is encoded by height, intensity and density.
+
+We discretize the projected point cloud into a 2D grid with resolution of 0.1m. 
+
+##### 가. height feature
+
+- For each cell, the height feature is computed as the maximum height of the points in the cell. 
+
+- To encode more detailed height information, the point cloud is devided equally into M slices. 
+
+- A height map is computed for each slice, thus we obtain M height maps. 
+
+##### 나. intensity feature(빛의 반사)
+
+- The intensity feature is the reflectance value of the point which has the maximum height in each cell. 
+
+##### 다. density feature
+
+- The point cloud density indicates the number of points in each cell. 
+
+
+##### 라. 3개의 Feature 처리 방법 
+
+- To normalize the feature, it is computed as $$min(1.0, \frac{log(N+1)}{log(54)})$$
+ -  $$N$$ = the number of points in the cell. 
+
+
+- Note that the **intensity** and **density** features are computed for the whole point cloud while the **height** feature is computed for M slices, thus in total the bird’s eye view map is encoded as (M +2)-channel features.
+
+#### B. Front View Representation. 
+
+- Front view는 bird’s eye view에 추가적 정보(complementary information)들 제공(provide)
+
+- LiDAR 포인트 클라우드는 sparse하기 때문에 이미지에 투영하게 되면 sparse 2D pointmap이 생성된다. 
+ - `As LIDAR point cloud is very sparse, projecting it into the image plane results in a sparse 2D pointmap. `
+
+- 따라서, 제안 방식은 `cylinder plane`에 투영하여 `dense front view map`을 생성한다. [17:Bo Li]
+
+As LIDAR point cloud is very sparse, projecting it into the image plane results in a sparse 2D pointmap. 
+  - `Instead, we project it to a cylinder plane to generate a dense front view map as in [17].`
+
+Given a 3D point $$p = (x, y, z)$$, its coordinates $$p_{fv} = (r, c)$$ in the front view map can be computed using
