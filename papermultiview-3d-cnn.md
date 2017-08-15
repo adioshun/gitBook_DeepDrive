@@ -213,3 +213,11 @@ As LIDAR point cloud is very sparse, projecting it into the image plane results 
   - `Instead, we project it to a cylinder plane to generate a dense front view map as in [17].`
 
 Given a 3D point $$p = (x, y, z)$$, its coordinates $$p_{fv} = (r, c)$$ in the front view map can be computed using
+![](http://i.imgur.com/fJhY03j.png)
+
+- ∆θ and ∆φ are the horizontal and vertical resolution of laser beams, respectively. 
+
+We encode the front view map with three-channel features, which are **height**, **distance** and **intensity**
+
+### 3D Proposal Network
+
