@@ -302,13 +302,37 @@ We use IoU threshold of 0.7 for NMS.
 The top 2000 boxes are kept during training, while in testing, we only use 300 boxes.
 
 ### 3.3. Region-based Fusion Network
-We design a region-based fusion network to effectively **combine features** from multiple views and jointly classify object proposals and do oriented 3D box regression
+
+역할 
+- **combine features** from multiple views 
+- jointly **classify** object proposals and do oriented 3D **box regression**
 
 #### A. Multi-View ROI Pooling. 
+
+목적 : 여러 view에서 오는 데이터들을 same length로 맞추기 
 Since features from different views/modalities usually have different resolutions, we employ ROI pooling [10] for each view to obtain feature vectors of the same length. 
 
-Given the generated 3D proposals,we can project them to any views in the 3D space. 
+Given the generated 3D proposals,we can project them to _any views_ in the 3D space. 
+- Any views =  bird’s eye view(BV), front view (FV), and the image plane (RGB). 
 
-$$\bigstar$$ In our case, we project them to three views, i.e., bird’s eye view(BV), front view (FV), and the image plane (RGB). 
+Given a 3D proposal $$p_{3D}$$, we obtain ROIs on each view via:
 
-Given a 3D proposal p3D, we obtain ROIs on each view via:
+$$
+ROI_v = T_{3D \rightarrow v}(p3d), v \in \{BV, FV, RGB\}
+$$
+- $$T_{3D \rightarrow v}$$ : the tranformation functions from the LIDAR coordinate system to the BV,FV,RGB
+
+Given an input feature map x from the front-end network of each view, we obtain fixed-length features $$f_v$$ via ROI pooling:
+$$
+f_v = R(x, ROI_v), v \in\{BV, FV, RGB\}
+$$
+
+#### B. Deep Fusion. 
+![](http://i.imgur.com/1XqvE4Q.png)
+
+서로 다른 Feature의 정보를 합치는 방법 
+- 기존 : usually use early fusion [1] or late fusion [23, 13]. 
+- 제안 : Inspired by [15, 27], we employ a deep fusion approach, which fuses multi-view features hierarchically. 
+
+For a network that has L layers, early fusion combines features $$\{f_v\}$$ from multiple views in the input stage:
+![](http://i.imgur.com/6BRrT0N.png)
