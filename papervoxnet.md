@@ -3,8 +3,10 @@
 |저자(소속)|Daniel Maturana (CMU)|
 |학회/년도| IROS 2015, [논문](http://ieeexplore.ieee.org/document/7353481/)|
 |키워드|Volumetric Occupancy Grid + 3D CNN |
-|참고||
+|참고|이전연구: 3D convolutional neural networks for landing zone detection from lidar,” in ICRA, 2015.|
 |코드|[Theano+Lasagne](https://github.com/dimatura/voxnet)|
+
+![](http://i.imgur.com/yXb89IB.png)
 
 # VoxNet
 
@@ -48,13 +50,40 @@ from unknown space.
     
 ### 2.2 2.5D Convolutional Neural Networks
 
+#### A. RGBD
+
 이미지(RGB)에서 사용한 CNN기법을 RGBD로 확장하려는 연구가 진행 되었다. [17], [18], [19], [20]
 - 간단한 접근법은 D를 또 다른 채널로 간주하고 처리 하는 것이다. 
 - 단점 #1 : geometric information를 제대로 활용 못함 
 - 단점 #2 : integrate information across viewpoints하기 어려움 
 
-For LiDAR, [4] propose a feature that locally describes scans with a 2.5D representation, and [21] studies this approach in combination with a form of unsupervised feature learning. 
+#### B. LiDAR
 
-[22] propose an encoding that makes better use of the 3D information in the depth, but is still 2D-centric. 
+- [4] propose a feature that locally describes scans with a 2.5D representation, 
 
-Our work differs from these in that we employ a fully volumetric representation, resulting in a richer and more discriminativerepresentation of the environment.
+- [21] studies this approach in combination with a form of unsupervised feature learning. 
+
+- [22] propose an encoding that makes better use of the 3D information in the depth, but is still 2D-centric. 
+
+### 2.3 3D Convolutional Neural Networks
+
+비디오 분석에서는 3D CNN이 성공적으로 적용 되었다. ([23], [24])
+- 하지만 이때는 `시간 정보`가 3rd D로 작용하였다. 
+- 알고림적으로 논문의 제안 방식과 비슷하지만, 사용되는 데이터 속성이 다르다. 
+
+#### A. RGBD
+
+- [25] uses an unsupervised volumetric feature learning approach as part of a pipeline to detect indoor objects. 
+    - This approach is based on `sparse coding`, which is generally slower than convolutional models. 
+
+-[26] propose a generative 3D convolutional model of shape and apply it to RGBD object recognition, among other tasks. 
+
+#### B. LiDAR 
+
+- [27] is an early work that studies a3D CNN for use with LiDAR data with a binary classification task. 
+
+- [28], which introduced 3D CNNs for landing zone detection in UAVs. 
+    - Compared to this work, we tackle a more general objectre cognition task with 3D data from different modalities. 
+
+We also study different representations of occupancy and propose techniques to improve performance when the data varies significantly in scale and orientation
+
