@@ -1,4 +1,4 @@
-|논문명|Multi-View 3D Object Detection Network for Autonomous Driving|
+|논문명|Multi-View 3D Object Detection Network for Autonomous Driving
 |-|-|
 |저자(소속)|Xiaozhi Chen (칭화대), Bo Li (Baidu)|
 |학회/년도|2017, [논문](https://arxiv.org/pdf/1611.07759.pdf)|

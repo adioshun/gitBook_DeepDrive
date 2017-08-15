@@ -1,4 +1,4 @@
-|논문명|Monocular 3D Object Detection for Autonomous Driving|
+|논문명|Monocular 3D Object Detection for Autonomous Driving
 |-|-|
 |저자(소속)|Xiaozhi Chen|
 |학회/년도|CVPR 2016,  [논문](http://3dimage.ee.tsinghua.edu.cn/files/publications/CVPR16_XiaozhiChen.pdf)|
