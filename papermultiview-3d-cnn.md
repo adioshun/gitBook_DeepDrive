@@ -145,3 +145,16 @@ Both 3DOP and Mono3D (use hand-crated) features.
  - However, it operates on 3D voxel grids and uses computationally expensive 3D convolutions. 
 
 본 논문에서는 : We propose a more efficient approach by introducing a bird’s eye view representation of point cloud and employing 2D convolutions to generate accurate 3D proposals.
+
+## 3. MV3D Network
+
+###### Step 1. 입력 =  multi-view representation of 3D point cloud(Bird Eye view, Front view) + 이미지
+
+###### Step 2. 3D 후보영역 선발 : bird’s eye view이용
+
+###### Step 3. region-based representation을 통해 Multi-view representation 통합(Fuse)
+
+###### Step 4. 분류 및 BBox 찾기 (category classification and oriented 3D box regression)
+
+### 3.1. 3D Point Cloud Representation
+
