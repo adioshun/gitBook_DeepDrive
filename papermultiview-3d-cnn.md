@@ -334,5 +334,53 @@ $$
 - 기존 : usually use early fusion [1] or late fusion [23, 13]. 
 - 제안 : Inspired by [15, 27], we employ a deep fusion approach, which fuses multi-view features hierarchically. 
 
+##### 가. early fusion
+
 For a network that has L layers, early fusion combines features $$\{f_v\}$$ from multiple views in the input stage:
 ![](http://i.imgur.com/6BRrT0N.png)
+
+- $$\{H_l, l = 1, ..., L\} $$ : feature transformation functions 
+- $$\oplus$$ : a join operation (e.g., concatenation, summation)
+
+##### 나. late fusion
+
+In contrast, late fusion uses seperate subnetworks to learn feature transformation independently and combines their outputs in the prediction stage:
+
+![](http://i.imgur.com/YL74QSz.png)
+
+##### 다. deep fusion 
+
+To enable more interactions among features of the intermediate layers from different views, we design the following deep fusion process:
+
+![](http://i.imgur.com/CWqcudp.png)
+
+We use element-wise mean for the join operation for deep fusion since it is more flexible when combined with droppath training [15].
+
+#### C. Oriented 3D Box Regression 
+- Given the fusion features of the multi-view network, we regress to oriented 3D boxes from 3D proposals. 
+
+- In particular, the regression targets are the 8 corners of 3D boxes:
+ - $$t =(\Delta_{x0}, ...,\Delta_{x7},\Delta_{y0},...,\Delta_{y7},\Delta_{z0}, ...,\Delta_{z7})$$
+
+They are encoded as the corner offsets normalized by the diagonal length of the proposal box.
+ 
+24D 벡터가 불필요 해 보이지만, 연구 결과 효과 적었. 
+- `Despite such a 24-D vector representation is redundant in representing an oriented 3D box, we found that this encoding approach works better than the centers and sizes encoding approach. 
+
+Note that our 3D box regression differs from [23] which regresses to axis-aligned 3D boxes. 
+
+In our model, the object orientations can be computed from the predicted 3D box corners. 
+
+We use a multitask loss to jointly predict object categories and oriented 3D boxes.
+ 
+As in the proposal network, the category loss uses cross-entropy and the 3D box loss uses smooth $$l_1$$. 
+
+During training, the positive/negative ROIs are determined based on the IoU overlap of brid’s eye view boxes. 
+
+A 3D proposal is considered to be positive if the bird’s eye view IoU overlap is above 0.5, and negative otherwise. 
+
+During inference,we apply NMS on the 3D boxes after 3D bounding box regression. 
+
+We project the 3D boxes to the bird’s eye view to compute their IoU overlap. 
+
+We use IoU threshold of 0.05 to remove redundant boxes, which ensures objects can not occupy the same space in bird’s eye view.
