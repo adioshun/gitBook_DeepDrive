@@ -219,5 +219,96 @@ Given a 3D point $$p = (x, y, z)$$, its coordinates $$p_{fv} = (r, c)$$ in the f
 
 We encode the front view map with three-channel features, which are **height**, **distance** and **intensity**
 
-### 3D Proposal Network
+### 3.2 3D Proposal Network
 
+> Faster R-CNN의 RPN에 영감을 얻음 
+
+입력 : bird’s eye view map
+
+In 3D object detection에서 `bird’s eye view map`이 `front view/image plane`대비 가지는 장점 3가지 
+
+1. 물리적 크기 정보를 가지고 있음 : objects preserve physical sizes when projected to the bird’s eye view, thus having small size variance, which is not the case in the front view/image plane. 
+
+2. 가림 현상 제거 : objects in the bird’s eye view occupy different space, thus avoiding the occlusion problem.
+ 
+3. 차량들이 바닥에 위치 하기 떄문에 위에서 내려다 보는것이 더 유용하다. in the road scene, since objects typically lie on the ground plane and have small variance invertical location, the bird’s eye view location is more crucial to obtaining accurate 3D bounding boxes. 
+
+Given a bird’s eye view map. the network generates 3D box proposals from a set of 3D prior boxes. 
+
+- Each 3D box is parameterized by $$(x, y, z, l, w, h)$$
+ - (x, y) is the varying positions in the bird’s eye view feature map
+ - z can be computed based on the camera height and object height. 
+
+
+- For each 3D prior box, the corresponding bird’s eye view anchor $$(x_{bv}, y_{bv}, l_{bv}, w_{bv})$$ can be obtained by discretizing $$(x, y, l, w)$$. 
+ - 차량 탐지의 `prior boxes`의 (l, w)= {(3.9, 1.6), (1.0, 0.6)}, h = 1.56m.
+
+- We design $$N$$ 3D prior boxes by clustering ground truth object sizes in the training set. 
+ 
+- By rotating the bird’s eye view anchors 90 degrees, we obtain N = 4 prior boxes. 
+
+- We do not do orientation regression in proposal generation, whereas we left it to the next prediction stage. 
+
+- The orientations of 3D boxes are restricted to {0◦, 90◦}, which are close to the actual orientations of most road scene objects. 
+
+- This simplificatio nmakes training of proposal regression easier
+
+#### A. Upsampling / Deconvolutional 
+문제점 With a disretization resolution of 0.1m으로 인해서 , object boxes in the bird’s eye view only occupy 5~40 pixels.
+- Detecting such extra-small objects is still a difficult problem for deep networks.
+ 
+해결책 #1 : 고해상도 이미지를 입력으로 이용 -> 컴퓨팅 파워 필요 
+
+해결책 #2 : We opt for feature map upsampling as in [1]. 
+
+- We use 2x bilinear upsampling after the last convolution layer in the proposal network. 
+
+In our implementation, the front-end convolutions only proceed three pooling operations, i.e., 8x downsampling. 
+
+Therefore, combined with the 2x deconvolution, the feature map fed to the proposal network is 4x downsampled with respect to the bird’s eye view input.
+
+
+#### B. 3D box regression
+
+> RMP과 같은 방식 사용 
+
+We do 3D box regression by regressing to $$t = (\Delta x, \Delta y, \Delta z, \Delta l, \Delta w, \Delta h)$$, similarly to RPN [19].
+ - $$(\Delta x, \Delta y, \Delta z)$$ are the center offsets normalized byanchor sizes
+ - $$(\Delta l, \Delta w, \Delta h)$$ are computed as$$∆s = log\frac{S_{GT}}{S_{Anchor}},s \in \{l,w,h\}  $$ . 
+
+- Loss계산 : we use a multi-task loss to simultaneously classify object/background and do 3D box regression. 
+
+ - In particular, we use class-entropy for the “objectness” loss and Smooth $$l_1$$[10] for the 3D box regression loss.
+ 
+ - Background anchors are ignored when computing the box regression loss. 
+
+During training, we compute the IoU overlap between anchors and ground truth bird’s eye view boxes. 
+
+An anchor is considered to be positive if its overlap is above 0.7, and negative if the overlap is below 0.5. 
+
+Anchors with overlap in between are ignored
+
+
+Lidar의 산재한 포인트 클라우드로 인해서 빈 anchor가 발생한다. 본 논문에서는 연산부하를 줄이기 위해서 학습/테스트시 빈 Anchor는 제거 하였다. 
+
+- This can be achieved by computing an integral image over the point occupancy map.
+- For each non-empty anchor at each position of the last convolution feature map, the network generates a 3D box. 
+- To reduce redundancy, we apply Non-Maximum Suppression (NMS) on the bird’s eye view boxes. 
+
+Different from [23], we did not use 3D NMS because objects shouldoccupy different space on the ground plane. 
+
+We use IoU threshold of 0.7 for NMS. 
+
+The top 2000 boxes are kept during training, while in testing, we only use 300 boxes.
+
+### 3.3. Region-based Fusion Network
+We design a region-based fusion network to effectively **combine features** from multiple views and jointly classify object proposals and do oriented 3D box regression
+
+#### A. Multi-View ROI Pooling. 
+Since features from different views/modalities usually have different resolutions, we employ ROI pooling [10] for each view to obtain feature vectors of the same length. 
+
+Given the generated 3D proposals,we can project them to any views in the 3D space. 
+
+$$\bigstar$$ In our case, we project them to three views, i.e., bird’s eye view(BV), front view (FV), and the image plane (RGB). 
+
+Given a 3D proposal p3D, we obtain ROIs on each view via:
