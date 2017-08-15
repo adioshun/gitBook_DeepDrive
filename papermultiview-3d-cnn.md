@@ -357,6 +357,8 @@ To enable more interactions among features of the intermediate layers from diffe
 We use element-wise mean for the join operation for deep fusion since it is more flexible when combined with droppath training [15].
 
 #### C. Oriented 3D Box Regression 
+##### 가. 
+
 - Given the fusion features of the multi-view network, we regress to oriented 3D boxes from 3D proposals. 
 
 - In particular, the regression targets are the 8 corners of 3D boxes:
@@ -364,23 +366,95 @@ We use element-wise mean for the join operation for deep fusion since it is more
 
 They are encoded as the corner offsets normalized by the diagonal length of the proposal box.
  
-24D 벡터가 불필요 해 보이지만, 연구 결과 효과 적었. 
-- `Despite such a 24-D vector representation is redundant in representing an oriented 3D box, we found that this encoding approach works better than the centers and sizes encoding approach. 
+24D 벡터가 불필요 해 보이지만, 연구 결과 효과 적이었다. 
+- `Despite such a 24-D vector representation is redundant in representing an oriented 3D box, we found that this encoding approach works better than the centers and sizes encoding approach. `
+
 
 Note that our 3D box regression differs from [23] which regresses to axis-aligned 3D boxes. 
 
 In our model, the object orientations can be computed from the predicted 3D box corners. 
 
+##### 나. multitask loss
 We use a multitask loss to jointly predict object categories and oriented 3D boxes.
  
 As in the proposal network, the category loss uses cross-entropy and the 3D box loss uses smooth $$l_1$$. 
 
-During training, the positive/negative ROIs are determined based on the IoU overlap of brid’s eye view boxes. 
+###### During training, 
+- the positive/negative ROIs are determined based on the IoU overlap of brid’s eye view boxes. 
 
-A 3D proposal is considered to be positive if the bird’s eye view IoU overlap is above 0.5, and negative otherwise. 
+- A 3D proposal is considered to be positive if the bird’s eye view IoU overlap is above 0.5, and negative otherwise. 
 
-During inference,we apply NMS on the 3D boxes after 3D bounding box regression. 
+###### During inference,
+- we apply NMS on the 3D boxes after 3D bounding box regression. 
 
-We project the 3D boxes to the bird’s eye view to compute their IoU overlap. 
+- We project the 3D boxes to the bird’s eye view to compute their IoU overlap. 
 
-We use IoU threshold of 0.05 to remove redundant boxes, which ensures objects can not occupy the same space in bird’s eye view.
+- We use IoU threshold of 0.05 to remove redundant boxes, which ensures objects can not occupy the same space in bird’s eye view.
+
+#### D. Network Regularization 
+region-based fusion network에 사용된 두가지 Regularization 기법들 
+- drop-pathtraining [15] 
+- auxiliary losses. 
+
+##### 가. drop-pathtraining
+
+For each iteration, we randomly choose to do `global drop-path` or `local drop-path` with a probability of 50%. 
+- If `global drop-path` is chosen, wes elect a single view from the three views with equal probability. 
+- If `local drop-path` is chosen, paths input to each join node are randomly dropped with 50% probability. 
+
+We ensure that for each join node at least one input path is kept.
+
+##### 나. auxiliary losses
+
+To further strengthen the representation capability of each view, we add auxiliary paths and losses to the network. 
+
+![](http://i.imgur.com/qs7jp5l.png)
+As shown in Fig. 4, the auxiliary paths have the same number of layers with the main network.
+
+Each layer in the auxiliary paths shares weights with the corresponding layer in the main network. 
+
+We use the same multi-task loss, i.e. classification loss plus 3D box regression loss, to back-propagate
+each auxiliary path. 
+
+We weight all the losses including auxiliary losses equally. 
+
+중요 : 예측시에는 `auxiliary paths`사용 안함 : The auxiliary paths are removed during inference.
+
+### 3.4. Implementation
+
+#### A. Network Architecture. 
+In our multi-view network, each view has the same architecture. 
+
+기본은 VGG-16이고, 몇가지 부분을 수정 하였다. 
+- Channels are reduced to half of the original network.
+- To handle extra-small objects, we use feature approximation to obtain high-resolution feature map. 
+ - In particular, we insert a 2x bilinear upsampling layer before feeding the last convolution feature map to the 3DProposal Network. 
+ - Similarly, we insert a 4x/4x/2x upsampling layer before the ROI pooling layer for theBV/FV/RGB branch.
+- We remove the 4th pooling operation in the originalVGG network, thus the convolution parts of our network proceed 8x downsampling.
+- In the muti-view fusion network, we add an extra fully connected layer fc8 in addition to the original fc6 and fc7 layer.
+
+초기 파라미터는 VGG-16 network pretrained on ImageNet으로 세팅 하였다. 
+
+Despite our network has three branches, the number of parameters is about 75% of the VGG-16 network. 
+
+예측(inference )시 소요 시간 : 이미지당 0.36S (GeForce Titan X GPU)
+
+#### 나. Input Representation. 
+In the case of KITTI, which provides only annotations for objects in the front view (around 90◦ field of view), we use point cloud in the range of [0,70.4] × [-40, 40] meters. 
+
+We also remove points that are out of the image boundaries when projected to the image plane. 
+
+For bird’s eye view, the discretization resolution is set to 0.1m, therefore the bird’s eye view input has sizeof 704×800. 
+
+Since KITTI uses a 64-beam Velodyne lasers canner, we can obtain a 64×512 map for the front viewpoints. 
+
+The RGB image is up-scaled so that the shortest size is 500.
+
+#### 다. Training. 
+- The network is trained in an end-to-end fashion. 
+
+- For each mini-batch we use 1 image and sample 128 ROIs, roughly keeping 25% of the ROIs as positive. 
+
+- We train the network using SGD with a learning rate of 0.001 for 100K iterations. 
+
+- Then we reduce the learning rate to 0.0001 and train another 20K iterations.
