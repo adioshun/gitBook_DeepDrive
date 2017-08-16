@@ -151,3 +151,11 @@ ax.scatter(points[point_range, 0],   # x
 ax.axis('scaled')  # {equal, scaled}
 plt.show()
 ```
+
+### 4.3 RViz이용 
+
+> 참고 : [Roslaunch to visualize a rosbag file from Udacity (DiDi Challenge)](https://github.com/jokla/didi_challenge_ros)
+
+
+## 5. ROS bag 파일 살펴 보기 
+
