@@ -42,6 +42,8 @@ In order to create a birds eye view image, the relevant axes from the point clou
 - The x, and y axes point in the opposite direction.
 - You have to shift the values across so that (0,0) is the smallest possible value in the image.
 
+> [참고] cpp로 작성한 코드 : [mjshiggins's github](https://github.com/mjshiggins/ros-examples)
+
 ```python
 import numpy as np
 
