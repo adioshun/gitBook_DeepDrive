@@ -80,6 +80,7 @@ v_fov_total = -v_fov[0] + v_fov[1]
 ### 4.1 Mayavi 이용 
 
 - [Mayavi 홈페이지](http://docs.enthought.com/mayavi/mayavi/)
+- 설치 과정이 복잡하지만, 성능이 좋다. 
 
 #### A. 설치 
 
@@ -118,3 +119,33 @@ def viz_mayavi(points, vals="distance"):
     mayavi.mlab.show()
 ```
 
+### 4.2 Matplotlib이용
+
+#### A. 설치 
+
+- 설치가 쉽지만, 느리고 3D를 충분히 표현하지 못한다. 
+
+#### B. 실행 코드 
+
+In order to prevent matplotlib from crashing your computer, it is recomended to only view a subset of the point cloud data. 
+
+For instance, if you are visualizing LIDAR data, then you may only want to view one in every 25-100 points. Below is some sample code to get you started.
+
+```python
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+skip = 100   # Skip every n points
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+point_range = range(0, points.shape[0], skip) # skip points to prevent crash
+ax.scatter(points[point_range, 0],   # x
+           points[point_range, 1],   # y
+           points[point_range, 2],   # z
+           c=points[point_range, 2], # height data for color
+           cmap='spectral',
+           marker="x")
+ax.axis('scaled')  # {equal, scaled}
+plt.show()
+```
