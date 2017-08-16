@@ -33,6 +33,8 @@
 
 ## 2. Creating Birdseye View of Point Cloud Data
 
+> 참고 : Height의 Level별 값 추출 (Height as Channels), [Creating Height Slices of Lidar Data](http://ronny.rest/blog/post_2017_03_27_lidar_height_slices/)
+
 In order to create a birds eye view image, the relevant axes from the point cloud data will be the x and y axes.
 
 ![](http://i.imgur.com/cHsb48Y.png)
@@ -43,7 +45,7 @@ In order to create a birds eye view image, the relevant axes from the point clou
 - You have to shift the values across so that (0,0) is the smallest possible value in the image.
 
 
-|- [Creating Birdseye View of Point Cloud Data 코드 및 설명(python)](https://gist.github.com/adioshun/12873804f472080c612e506310674797)|
+|- [Creating Birdseye View of Point Cloud Data 코드 및 설명(python)](http://ronny.rest/blog/post_2017_03_26_lidar_birds_eye/), [gist](https://gist.github.com/adioshun/12873804f472080c612e506310674797)|
 |-|
 
 > [참고] cpp로 작성한 코드 : [mjshiggins's github](https://github.com/mjshiggins/ros-examples)
