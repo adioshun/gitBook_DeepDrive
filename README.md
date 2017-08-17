@@ -2,7 +2,13 @@
 
 - 참고 논문
 
+- [3D Convolutional Neural Networks — A Reading List](http://davidstutz.de/3d-convolutional-neural-networks-a-reading-list/)
+
+
 - 데이터 셋 
+
+
+
 
 
 [3D Vehicle Detection](https://experiencor.github.io/sdc_3d.html)
