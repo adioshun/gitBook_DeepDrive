@@ -115,9 +115,6 @@ if config.cfg.USE_CLIDAR_TO_TOP:
 #    SharedLib = ctypes.cdll.LoadLibrary('/home/stu/MV3D/src/lidar_data_preprocess/'
 #                                        'Python_to_C_Interface/ver3/LidarTopPreprocess.so')
 
-
-#tracklet_file = os.path.join(dataset.data_path, 'tracklet_labels.xml')
-tracklet_file = "/workspace/mv3d/data/2011_09_26/tracklet_labels.xml"
 ```
 
 ## 4. trainer.py
