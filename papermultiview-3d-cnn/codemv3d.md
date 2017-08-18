@@ -45,6 +45,8 @@ print(tf.__version__) # version more than v1.
 
 ## 1. 데이터 다운로드
 
+> 코드에 `2011_09_26_drive_0017_sync/`로 고정된 값이 있는것 같음 
+
 ![](http://i.imgur.com/TqGRi0G.png)
 
 [The KITTI Vision Benchmark Suite Raw Data](http://www.cvlibs.net/datasets/kitti/raw_data.php)
@@ -105,6 +107,7 @@ sudo chmod 755 ./make.sh
 
 ### 3.9 수정 필요 
 
+#### A. data.py 수정
 ```
 #data.py
 
@@ -115,6 +118,22 @@ if config.cfg.USE_CLIDAR_TO_TOP:
 #    SharedLib = ctypes.cdll.LoadLibrary('/home/stu/MV3D/src/lidar_data_preprocess/'
 #                                        'Python_to_C_Interface/ver3/LidarTopPreprocess.so')
 
+```
+
+#### B. NameError: name 'MATRIX_Mt' is not defined
+
+```
+# /MV3D/src/net/processing/boxes3d.py 상단에 추가 
+
+#rgb camera
+MATRIX_Mt = ([[ 2.34773698e-04, 1.04494074e-02, 9.99945389e-01, 0.00000000e+00],
+[ -9.99944155e-01, 1.05653536e-02, 1.24365378e-04, 0.00000000e+00],
+[ -1.05634778e-02, -9.99889574e-01, 1.04513030e-02, 0.00000000e+00],
+[ 5.93721868e-02, -7.51087914e-02, -2.72132796e-01, 1.00000000e+00]])
+
+MATRIX_Kt = ([[ 721.5377, 0. , 0. ],
+[ 0. , 721.5377, 0. ],
+[ 609.5593, 172.854 , 1. ]])
 ```
 
 ## 4. trainer.py
