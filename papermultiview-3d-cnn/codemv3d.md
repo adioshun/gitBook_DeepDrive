@@ -45,18 +45,30 @@ print(tf.__version__) # version more than v1.
 
 ## 1. 데이터 다운로드
 
-> 코드에 `2011_09_26_drive_0017_sync/`로 고정된 값이 있는것 같음 
+
 
 ![](http://i.imgur.com/TqGRi0G.png)
 
 [The KITTI Vision Benchmark Suite Raw Data](http://www.cvlibs.net/datasets/kitti/raw_data.php)
 
-### 1.9 수정 필요 
+## 1.9 수정 필요 
+
+### A. 
 
 ![](http://i.imgur.com/va7Lg8J.png)
 
 - `data/raw/kitti/` 경로 밑에 데이터 위치 
 - `tracklet_labels.xml`파일은 `2011_09_26_drive_0001_sync` 하위 폴더에 위치 
+
+### B. 
+`src/kitti_data/pykitti/tracklet.py L289`에서 다운 받은 파일명으로 변경 
+
+```
+DEFAULT_DRIVE = '2011_09_26_drive_0001'
+
+```
+
+
 
 
 ## 2. ./src/make.sh
@@ -124,7 +136,7 @@ if config.cfg.USE_CLIDAR_TO_TOP:
 
 ```
 # /MV3D/src/net/processing/boxes3d.py 상단에 추가 
-
+# ./src/config.py 참고 
 #rgb camera
 MATRIX_Mt = ([[ 2.34773698e-04, 1.04494074e-02, 9.99945389e-01, 0.00000000e+00],
 [ -9.99944155e-01, 1.05653536e-02, 1.24365378e-04, 0.00000000e+00],
@@ -134,6 +146,21 @@ MATRIX_Mt = ([[ 2.34773698e-04, 1.04494074e-02, 9.99945389e-01, 0.00000000e+00],
 MATRIX_Kt = ([[ 721.5377, 0. , 0. ],
 [ 0. , 721.5377, 0. ],
 [ 609.5593, 172.854 , 1. ]])
+```
+
+### A. ./src/config.py
+
+```
+#if __C.DATA_SETS_TYPE=='test':
+#    __C.DATA_SETS_DIR = osp.abspath('/home/stu/round12_data_test')
+    
+if __C.DATA_SETS_TYPE=='test':
+    __C.DATA_SETS_DIR = osp.abspath('/workspace/mv3d')
+```
+
+### B. src/kitti_data/pykitti/tracklet.py
+```
+
 ```
 
 ## 4. trainer.py
