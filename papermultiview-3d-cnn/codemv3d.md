@@ -1,25 +1,24 @@
-
 ![](http://i.imgur.com/Myw0TVr.png)
 
-## 0. 환경 준비 
+## 0. 환경 준비
 
-- install tensorflow-gpu and CUDA. 
+* install tensorflow-gpu and CUDA. 
 
-A Nvidia GPU card with computation capability > 3
-CUDA
-Python3.5 for MV3D related code
-Tensorflow-GPU(version>1.0)
+A Nvidia GPU card with computation capability &gt; 3  
+CUDA  
+Python3.5 for MV3D related code  
+Tensorflow-GPU\(version&gt;1.0\)  
 Python2.7 for ROS related script
 
-### 0.1 GPU용으로 설정 변경 
+### 0.1 GPU용으로 설정 변경
 
-`src/net/lib/setup.py` and `src/lib/make.sh` : "arch=sm_30" 
+`src/net/lib/setup.py` and `src/lib/make.sh` : "arch=sm\_30"
 
 ```
 # Which CUDA capabilities do we want to pre-build for?
 # https://developer.nvidia.com/cuda-gpus
 #   Compute/shader model   Cards
-#   6.1		      P4, P40, Titan X so CUDA_MODEL = 61
+#   6.1              P4, P40, Titan X so CUDA_MODEL = 61
 #   6.0                    P100 so CUDA_MODEL = 60
 #   5.2                    M40
 #   3.7                    K80
@@ -29,24 +28,25 @@ Python2.7 for ROS related script
 #   time as the code is pre-optimized for them.
 CUDA_MODELS=30 35 37 52 60 61
 ```
+
 test
-```python 
+
+```python
 import tensorflow as tf
 sess = tf.Session()
-print(tf.__version__) # version more than v1. 
+print(tf.__version__) # version more than v1.
 ```
 
-
-
-## 1. 데이터 다운로드 
+## 1. 데이터 다운로드
 
 ![](http://i.imgur.com/TqGRi0G.png)
 
 [The KITTI Vision Benchmark Suite Raw Data](http://www.cvlibs.net/datasets/kitti/raw_data.php)
 
-## 2. ./src/make.sh 
+## 2. ./src/make.sh
 
-### 2.1 실행 방법 
+### 2.1 실행 방법
+
 ```
 cd src
 source activate didi
@@ -54,50 +54,46 @@ sudo chmod 755 ./make.sh
 ./make.sh
 ```
 
+### 2.2 실행시 진행 내용
+
+    #- `./net/lib/setup.py` : Fast R-CNN (MS)
+
+    #- `./net/lib/make.sh` : building psroi_pooling layer
+
+    #- build required .so files
+    ln -s ./net/lib/roi_pooling_layer/roi_pooling.so ./net/roipooling_op/roi_pooling.so
+    ln -s ./net/lib/nms/gpu_nms.cpython-35m-x86_64-linux-gnu.so ./net/processing/gpu_nms.cpython-35m-x86_64-linux-gnu.so
+    ln -s ./net/lib/nms/cpu_nms.cpython-35m-x86_64-linux-gnu.so ./net/processing/cpu_nms.cpython-35m-x86_64-linux-gnu.so
+    ln -s ./net/lib/utils/cython_bbox.cpython-35m-x86_64-linux-gnu.so ./net/processing/cython_bbox.cpython-35m-x86_64-linux-gnu.so
+
+에러 : `"tensorflow.python.framework.errors_impl.NotFoundError: YOUR_FOLDER/roi_pooling.so: undefined symbol: ZN10tensorflow7strings6StrCatB5cxx11ERKNS0_8AlphaNumES3"`
+
+* it is related to compilation of roi\_pooling layer.
+* A simple fix will be changing "GLIBCXX\_USE\_CXX11\_ABI=1" to "GLIBCXX\_USE\_CXX11\_ABI=0" in "src/net/lib/make.sh" \(line 17\)
+
+## 3. Preprocess data \(`./src/data.py`\)
+
+* we get the required inputs for MV3D net. It is saved in kitti. 
+  * didi data 이용시 `utils/bag_to_kitti` 실행 필요 
+* for process raw data to input network input format
+* Ouput : 
+  * Lidar bird eye view features
+  * Lidar front view features
+  * RGB image 
+  * Ground Truth label
+  * Ground bounding box coordinate
+  * time stamp
+
+| ![](http://i.imgur.com/bb67R50.png) | ![](http://i.imgur.com/AbdY7YU.png) |
+| --- | --- |
 
 
-### 2.2 실행시 진행 내용 
-```
-#- `./net/lib/setup.py` : Fast R-CNN (MS)
-
-#- `./net/lib/make.sh` : building psroi_pooling layer
-
-#- build required .so files
-ln -s ./net/lib/roi_pooling_layer/roi_pooling.so ./net/roipooling_op/roi_pooling.so
-ln -s ./net/lib/nms/gpu_nms.cpython-35m-x86_64-linux-gnu.so ./net/processing/gpu_nms.cpython-35m-x86_64-linux-gnu.so
-ln -s ./net/lib/nms/cpu_nms.cpython-35m-x86_64-linux-gnu.so ./net/processing/cpu_nms.cpython-35m-x86_64-linux-gnu.so
-ln -s ./net/lib/utils/cython_bbox.cpython-35m-x86_64-linux-gnu.so ./net/processing/cython_bbox.cpython-35m-x86_64-linux-gnu.so
-```
-
-에러 : `"tensorflow.python.framework.errors_impl.NotFoundError: YOUR_FOLDER/roi_pooling.so: undefined symbol: ZN10tensorflow7strings6StrCatB5cxx11ERKNS0_8AlphaNumES3"` 
-- it is related to compilation of roi_pooling layer.
-- A simple fix will be changing "GLIBCXX_USE_CXX11_ABI=1" to "GLIBCXX_USE_CXX11_ABI=0" in "src/net/lib/make.sh" (line 17)
-
-## 3. Preprocess data (`./src/data.py`)
-
-- we get the required inputs for MV3D net. It is saved in kitti. 
-    - didi data 이용시 `utils/bag_to_kitti` 실행 필요 
-- for process raw data to input network input format
-- Ouput : 
-    - Lidar bird eye view features
-    - Lidar front view features
-    - RGB image 
-    -  Ground Truth label
-    - Ground bounding box coordinate
-    -  time stamp
-    
-
-
-|![](http://i.imgur.com/bb67R50.png)|![](http://i.imgur.com/AbdY7YU.png)|
-|-|-|
-
-
-## 4. trainer.py 
-
-
+## 4. trainer.py
 
 ---
+
 File Structure
+
 ```
 ├── data   <-- all data is stored here. (Introduced in detail below)
 │   ├── predicted  <-- after prediction, results will be saved here.
@@ -125,9 +121,11 @@ File Structure
 │    └── bag_to_kitti  <--- Take lidar value from ROS bag and save it as bin files.
 └── external_models    <-- use as a submodule, basically code from other repos.
     └── didi-competition  <--- Code from Udacity's challenge repo with slightly modification, sync with Udacity's new
-     updates regularly. 
+     updates regularly.
 ```
-Related data are organized in this way. (Under /data directory)
+
+Related data are organized in this way. \(Under /data directory\)
+
 ```
 ├── predicted <-- after prediction, results will be saved here.
 │   ├── didi <-- when didi dataset is used, the results will be put here
@@ -177,6 +175,7 @@ Related data are organized in this way. (Under /data directory)
             ├── calib_cam_to_cam.txt
             ├── calib_imu_to_velo.txt
             └── calib_velo_to_cam.txt
-
-
 ```
+
+
+
