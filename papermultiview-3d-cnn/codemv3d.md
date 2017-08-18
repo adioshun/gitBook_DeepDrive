@@ -10,6 +10,14 @@ Python3.5 for MV3D related code
 Tensorflow-GPU\(version&gt;1.0\)  
 Python2.7 for ROS related script
 
+```bash
+conda create -n "mv3d3" python=3.5
+source activate mv3d3
+conda install tensorflow-gpu
+conda install Cython
+
+```
+
 ### 0.1 GPU용으로 설정 변경
 
 `src/net/lib/setup.py` and `src/lib/make.sh` : "arch=sm\_30"
