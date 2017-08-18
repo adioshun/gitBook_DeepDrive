@@ -105,9 +105,8 @@ sudo chmod 755 ./make.sh
 
 * we get the required inputs for MV3D net. It is saved in kitti. 
   * didi data 이용시 `utils/bag_to_kitti` 실행 필요 
-  * 저장 위치 : `'data/preprocessing/kitti/rgb`
 * for process raw data to input network input format
-* Ouput : 
+* Ouput : `./data/preprocessing/kitti/{gt_boxes3d, gt_box_plot, gt_labels, rgb, top,top_image}`
   * Lidar bird eye view features
   * Lidar front view features
   * RGB image 
