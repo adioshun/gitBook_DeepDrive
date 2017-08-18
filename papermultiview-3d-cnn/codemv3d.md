@@ -13,8 +13,8 @@ Python2.7 for ROS related script
 ```bash
 conda create -n "mv3d3" python=3.5
 source activate mv3d3
-conda install tensorflow-gpu
-conda install Cython
+conda install tensorflow-gpu 
+conda install Cython matplotlib
 
 ```
 
@@ -68,7 +68,7 @@ sudo chmod 755 ./make.sh
 
     #- `python ./net/lib/setup.py build_ext --inplace` : Fast R-CNN (MS)
 
-    #- `./net/lib/make.sh` : building psroi_pooling layer
+    #- 'bash ./net/lib/make.sh` : building psroi_pooling layer
 
     #- build required .so files
     ln -s ./net/lib/roi_pooling_layer/roi_pooling.so ./net/roipooling_op/roi_pooling.so
