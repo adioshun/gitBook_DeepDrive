@@ -62,9 +62,11 @@ sudo chmod 755 ./make.sh
 ./make.sh
 ```
 
+> 아래 [2.2]를 직접 실행 하는것 추천 
+
 ### 2.2 실행시 진행 내용
 
-    #- `./net/lib/setup.py` : Fast R-CNN (MS)
+    #- `python ./net/lib/setup.py build_ext --inplace` : Fast R-CNN (MS)
 
     #- `./net/lib/make.sh` : building psroi_pooling layer
 
