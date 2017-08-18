@@ -13,7 +13,7 @@ Python2.7 for ROS related script
 
 ### 0.1 GPU용으로 설정 변경 
 
-src/net/lib/setup.py and src/lib/make.sh : "arch=sm_30" 
+`src/net/lib/setup.py` and `src/lib/make.sh` : "arch=sm_30" 
 
 ```
 # Which CUDA capabilities do we want to pre-build for?
@@ -46,26 +46,38 @@ print(tf.__version__) # version more than v1.
 
 ## 2. ./src/make.sh 
 
-- build required .so files
-
+### 2.1 실행 방법 
 ```
 cd src
 source activate didi
 sudo chmod 755 ./make.sh
 ./make.sh
-# prerequisite for next step, i.e. running preprocessing using data.py, is to 
-# follow steps in utils/bag_to_kitti if using didi data
-python data.py # for process raw data to input network input format
-python train.py # training the network. 
 ```
 
+
+
+### 2.2 실행시 진행 내용 
+```
+#- `./net/lib/setup.py` : Fast R-CNN (MS)
+
+#- `./net/lib/make.sh` : building psroi_pooling layer
+
+#- build required .so files
+ln -s ./net/lib/roi_pooling_layer/roi_pooling.so ./net/roipooling_op/roi_pooling.so
+ln -s ./net/lib/nms/gpu_nms.cpython-35m-x86_64-linux-gnu.so ./net/processing/gpu_nms.cpython-35m-x86_64-linux-gnu.so
+ln -s ./net/lib/nms/cpu_nms.cpython-35m-x86_64-linux-gnu.so ./net/processing/cpu_nms.cpython-35m-x86_64-linux-gnu.so
+ln -s ./net/lib/utils/cython_bbox.cpython-35m-x86_64-linux-gnu.so ./net/processing/cython_bbox.cpython-35m-x86_64-linux-gnu.so
+```
 
 에러 : `"tensorflow.python.framework.errors_impl.NotFoundError: YOUR_FOLDER/roi_pooling.so: undefined symbol: ZN10tensorflow7strings6StrCatB5cxx11ERKNS0_8AlphaNumES3"` 
 - it is related to compilation of roi_pooling layer.
 - A simple fix will be changing "GLIBCXX_USE_CXX11_ABI=1" to "GLIBCXX_USE_CXX11_ABI=0" in "src/net/lib/make.sh" (line 17)
 
 ## 3. ./src/data.py 실행 
+
 - we get the required inputs for MV3D net. It is saved in kitti. 
+    - didi data 이용시 `utils/bag_to_kitti` 실행 필요 
+- for process raw data to input network input format
 - Ouput : Lidar bird eye view(after data.py)
 
 
