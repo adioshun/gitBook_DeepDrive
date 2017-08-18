@@ -103,17 +103,25 @@ sudo chmod 755 ./make.sh
 
 ## 3. Preprocess data \(`./src/data.py`\)
 
-* we get the required inputs for MV3D net. It is saved in kitti. 
-  * didi data 이용시 `utils/bag_to_kitti` 실행 필요 
-* for process raw data to input network input format
-* Ouput : `./data/preprocessing/kitti/{gt_boxes3d, gt_box_plot, gt_labels, rgb, top,top_image}`
-  * Lidar bird eye view features
-  * Lidar front view features
-  * RGB image 
-  * Ground Truth label
-  * Ground bounding box coordinate
-  * time stamp
+> kitti기준, didi data 이용시 `utils/bag_to_kitti` 실행 필요 
 
+* MV3D net 학습시 필요한 입력 데이터 생성 
+    * Lidar bird eye view features
+    * Lidar front view features
+    * RGB image
+    * Ground Truth label
+    * Ground bounding box coordinate
+    * time stamp
+```
+./data/preprocessing/kitti/
+    - gt_boxes3d :npy
+    - gt_box_plot : png
+    - gt_labels : npy
+    - rgb : png
+    - top : .npy.npz
+    - top_image : png
+
+```
 | ![](http://i.imgur.com/bb67R50.png) | ![](http://i.imgur.com/AbdY7YU.png) |
 | --- | --- |
 
