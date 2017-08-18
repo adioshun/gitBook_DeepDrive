@@ -73,12 +73,19 @@ ln -s ./net/lib/utils/cython_bbox.cpython-35m-x86_64-linux-gnu.so ./net/processi
 - it is related to compilation of roi_pooling layer.
 - A simple fix will be changing "GLIBCXX_USE_CXX11_ABI=1" to "GLIBCXX_USE_CXX11_ABI=0" in "src/net/lib/make.sh" (line 17)
 
-## 3. ./src/data.py 실행 
+## 3. Preprocess data (`./src/data.py`)
 
 - we get the required inputs for MV3D net. It is saved in kitti. 
     - didi data 이용시 `utils/bag_to_kitti` 실행 필요 
 - for process raw data to input network input format
-- Ouput : Lidar bird eye view(after data.py)
+- Ouput : 
+    - Lidar bird eye view features
+    - Lidar front view features
+    - RGB image 
+    -  Ground Truth label
+    - Ground bounding box coordinate
+    -  time stamp
+    
 
 
 |![](http://i.imgur.com/bb67R50.png)|![](http://i.imgur.com/AbdY7YU.png)|
