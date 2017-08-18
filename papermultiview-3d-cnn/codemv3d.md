@@ -105,6 +105,7 @@ sudo chmod 755 ./make.sh
 
 * we get the required inputs for MV3D net. It is saved in kitti. 
   * didi data 이용시 `utils/bag_to_kitti` 실행 필요 
+  * 저장 위치 : `'data/preprocessing/kitti/rgb`
 * for process raw data to input network input format
 * Ouput : 
   * Lidar bird eye view features
@@ -136,7 +137,7 @@ if config.cfg.USE_CLIDAR_TO_TOP:
 
 ```
 # /MV3D/src/net/processing/boxes3d.py 상단에 추가 
-# ./src/config.py 참고 
+# ./src/config.py L126 참고 
 #rgb camera
 MATRIX_Mt = ([[ 2.34773698e-04, 1.04494074e-02, 9.99945389e-01, 0.00000000e+00],
 [ -9.99944155e-01, 1.05653536e-02, 1.24365378e-04, 0.00000000e+00],
