@@ -13,7 +13,7 @@ Python2.7 for ROS related script
 ```bash
 # https://github.com/adioshun/gitBook_DeepDrive/blob/master/papermultiview-3d-cnn/environment_gpu.yml
 conda env create -f environment_gpu.yml --name mv3d_p3_gpu
-conda install shapely
+conda install shapely scikit-learn
 ```
 
 ### 0.1 GPU용으로 설정 변경
