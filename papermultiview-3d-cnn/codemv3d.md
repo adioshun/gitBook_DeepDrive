@@ -49,6 +49,14 @@ print(tf.__version__) # version more than v1.
 
 [The KITTI Vision Benchmark Suite Raw Data](http://www.cvlibs.net/datasets/kitti/raw_data.php)
 
+### 1.9 수정 필요 
+
+![](http://i.imgur.com/va7Lg8J.png)
+
+- `data/raw/kitti/` 경로 밑에 데이터 위치 
+- `tracklet_labels.xml`파일은 `2011_09_26_drive_0001_sync` 하위 폴더에 위치 
+
+
 ## 2. ./src/make.sh
 
 ### 2.1 실행 방법
@@ -95,6 +103,22 @@ sudo chmod 755 ./make.sh
 | ![](http://i.imgur.com/bb67R50.png) | ![](http://i.imgur.com/AbdY7YU.png) |
 | --- | --- |
 
+### 3.9 수정 필요 
+
+```
+#data.py
+
+if config.cfg.USE_CLIDAR_TO_TOP:
+    SharedLib = ctypes.cdll.LoadLibrary('/workspace/mv3d/src/lidar_data_preprocess/'
+                                        'Python_to_C_Interface/ver3/LidarTopPreprocess.so')
+#if config.cfg.USE_CLIDAR_TO_TOP:
+#    SharedLib = ctypes.cdll.LoadLibrary('/home/stu/MV3D/src/lidar_data_preprocess/'
+#                                        'Python_to_C_Interface/ver3/LidarTopPreprocess.so')
+
+
+#tracklet_file = os.path.join(dataset.data_path, 'tracklet_labels.xml')
+tracklet_file = "/workspace/mv3d/data/2011_09_26/tracklet_labels.xml"
+```
 
 ## 4. trainer.py
 
