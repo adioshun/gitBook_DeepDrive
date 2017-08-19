@@ -10,8 +10,6 @@
     (*environment_gpu.yml상 버젼 [7.5](http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb), `apt-get install cuda-7.5-15`)
 - cuDNN
     - Download cuDNN v5.1  for CUDA 7.5 : [Runtime lib.](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v5.1/prod_20161129/7.5/libcudnn5_5.1.10-1+cuda7.5_amd64-deb), [소스](wget http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/cudnn-7.5-linux-x64-v5.1.tgz), [소스설치방법](https://github.com/adioshun/System_Setup/wiki/4_CUDA_CuDNN-Setup#2-cudnn-%EC%84%A4%EC%B9%98)
-- nvidia-cuda-toolkit
-    - cudatoolkit=7.5=0
 
 - Python3.5 for MV3D related code  
 - Tensorflow-GPU\(version&gt;1.0\)  
@@ -20,7 +18,7 @@
 ```bash
 # https://github.com/adioshun/gitBook_DeepDrive/blob/master/papermultiview-3d-cnn/environment_gpu.yml
 conda env create -f environment_gpu.yml --name mv3d_p3_gpu
-conda install shapely scikit-learn
+conda install shapely scikit-learn keras
 ```
 
 ### 0.1 GPU용으로 설정 변경
@@ -107,6 +105,8 @@ sudo chmod 755 ./make.sh
 
 * it is related to compilation of roi\_pooling layer.
 * A simple fix will be changing "GLIBCXX\_USE\_CXX11\_ABI=1" to "GLIBCXX\_USE\_CXX11\_ABI=0" in "src/net/lib/make.sh" \(line 17\)
+
+> nvcc 못 찾을경우 절대 경로로 수정 후 실행 
 
 ## 3. Preprocess data \(`./src/data.py`\)
 
