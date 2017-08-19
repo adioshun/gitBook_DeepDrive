@@ -6,7 +6,11 @@
 
 - A Nvidia GPU card with computation capability &gt; 3  
 - ubuntu (* Cuda에 맞는 버젼은 14.04임, a)
-- CUDA (*environment_gpu.yml상 버젼 [7.5](http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb), `apt-get install cuda-7.5-15`)
+- CUDA 
+    (*environment_gpu.yml상 버젼 [7.5](http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb), `apt-get install cuda-7.5-15`)
+- cuDNN
+    - Download cuDNN v5.1  for CUDA 7.5 : [Runtime lib.](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v5.1/prod_20161129/7.5/libcudnn5_5.1.10-1+cuda7.5_amd64-deb), [소스](wget http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/cudnn-7.5-linux-x64-v5.1.tgz), [소스설치방법](https://github.com/adioshun/System_Setup/wiki/4_CUDA_CuDNN-Setup#2-cudnn-%EC%84%A4%EC%B9%98)
+
 - Python3.5 for MV3D related code  
 - Tensorflow-GPU\(version&gt;1.0\)  
 - Python2.7 for ROS related script
