@@ -28,7 +28,7 @@ conda install shapely scikit-learn keras
 
 ### 0.1 GPU용으로 설정 변경
 
-`src/net/lib/setup.py` and `src/lib/make.sh` : "arch=sm\_30"
+`src/net/lib/setup.py` and `src/lib/make.sh` : "arch=sm\_37" #Google Cloud GPU Tesla K80
 
 ```
 # Which CUDA capabilities do we want to pre-build for?
