@@ -4,11 +4,12 @@
 
 * install tensorflow-gpu and CUDA. 
 
-A Nvidia GPU card with computation capability &gt; 3  
-CUDA  
-Python3.5 for MV3D related code  
-Tensorflow-GPU\(version&gt;1.0\)  
-Python2.7 for ROS related script
+- A Nvidia GPU card with computation capability &gt; 3  
+- ubuntu (* Cuda에 맞는 버젼은 14.04임)
+- CUDA (*environment_gpu.yml상 버젼 7.5)
+- Python3.5 for MV3D related code  
+- Tensorflow-GPU\(version&gt;1.0\)  
+- Python2.7 for ROS related script
 
 ```bash
 # https://github.com/adioshun/gitBook_DeepDrive/blob/master/papermultiview-3d-cnn/environment_gpu.yml
