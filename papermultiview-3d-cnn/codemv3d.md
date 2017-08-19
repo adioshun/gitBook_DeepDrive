@@ -175,7 +175,7 @@ if __C.DATA_SETS_TYPE=='test':
 
 ### B. roi_pooling.so을 심볼릭이 아닌 파일로 대체 
 
-> https://github.com/bostondiditeam/MV3D/issues/15
+> 이후에도 같은 문제가 발생 하므로 [C]방법 추천 
 
 ```
 cd ./src/net/roipooling_op
@@ -183,7 +183,11 @@ mv roi_pooling.so roi_pooling.so~
 cp ../../net/lib/roi_pooling_layer/roi_pooling.so ./
 ```
 
+### C. roi_pooling.so 수정 버젼 다운 로드 
 
+1. [다운로드 roi_pooling.so](https://github.com/CharlesShang/TFFRCNN/tree/roi_pooling/lib/roi_pooling_layer)
+
+2. chmod +x roi_pooling.so
 
 ## 4. trainer.py
 
