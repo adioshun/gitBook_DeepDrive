@@ -10,6 +10,8 @@
     (*environment_gpu.yml상 버젼 [7.5](http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb), `apt-get install cuda-7.5-15`)
 - cuDNN
     - Download cuDNN v5.1  for CUDA 7.5 : [Runtime lib.](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v5.1/prod_20161129/7.5/libcudnn5_5.1.10-1+cuda7.5_amd64-deb), [소스](wget http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/cudnn-7.5-linux-x64-v5.1.tgz), [소스설치방법](https://github.com/adioshun/System_Setup/wiki/4_CUDA_CuDNN-Setup#2-cudnn-%EC%84%A4%EC%B9%98)
+- nvidia-cuda-toolkit
+    - cudatoolkit=7.5=0
 
 - Python3.5 for MV3D related code  
 - Tensorflow-GPU\(version&gt;1.0\)  
@@ -171,10 +173,17 @@ if __C.DATA_SETS_TYPE=='test':
     __C.DATA_SETS_DIR = osp.abspath('/workspace/mv3d')
 ```
 
-### B. src/kitti_data/pykitti/tracklet.py
-```
+### B. roi_pooling.so을 심볼릭이 아닌 파일로 대체 
+
+> https://github.com/bostondiditeam/MV3D/issues/15
 
 ```
+cd ./src/net/roipooling_op
+mv roi_pooling.so roi_pooling.so~
+cp ../../net/lib/roi_pooling_layer/roi_pooling.so ./
+```
+
+
 
 ## 4. trainer.py
 
