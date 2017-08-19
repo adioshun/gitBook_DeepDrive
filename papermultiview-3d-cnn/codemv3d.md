@@ -22,8 +22,19 @@
 
 ```bash
 # https://github.com/adioshun/gitBook_DeepDrive/blob/master/papermultiview-3d-cnn/environment_gpu.yml
-conda env create -f environment_gpu.yml --name mv3d_p3_gpu
-conda install shapely scikit-learn keras
+
+# conda env create -f environment_gpu.yml --name mv3d_p3_gpu
+
+
+## python 3.5에서 수행
+conda create -n python35 python=3.5
+conda install tensorflow-gpu opencv shapely scikit-learn keras Cython matplotlib simplejson
+pip install easydict
+```
+
+
+
+
 ```
 
 ### 0.1 GPU용으로 설정 변경
@@ -85,12 +96,18 @@ DEFAULT_DRIVE = '2011_09_26_drive_0001'
 
 ### 2.1 실행 방법
 
+
+
+
 ```
 cd src
 source activate didi
 sudo chmod 755 ./make.sh
 ./make.sh
 ```
+
+conda create -n python27 python=2.7
+
 
 > 아래 [2.2]를 직접 실행 하는것 추천 
 
@@ -114,6 +131,8 @@ sudo chmod 755 ./make.sh
 > nvcc 못 찾을경우 절대 경로로 수정 후 실행 
 
 ## 3. Preprocess data \(`./src/data.py`\)
+
+
 
 > kitti기준, didi data 이용시 `utils/bag_to_kitti` 실행 필요 
 
@@ -195,6 +214,7 @@ cp ../../net/lib/roi_pooling_layer/roi_pooling.so ./
 2. chmod +x roi_pooling.so
 
 ## 4. trainer.py
+
 
 ---
 
