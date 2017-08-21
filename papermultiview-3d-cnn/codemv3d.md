@@ -133,8 +133,7 @@ conda create -n python27 python=2.7
 - 절대 경로로 수정 후 실행 
 
 ###### [에러] `arning: calling a constexpr __host__ function from a __host__ __device__ function is not allowed.`
--  `make.sh`파일에 아래 flag `--expt-relaxed-constexpr
-` 추가 
+-  `make.sh`파일에 아래 flag `--expt-relaxed-constexpr` 추가 
 
 ```
 if [ -d "$CUDA_PATH" ]; then
