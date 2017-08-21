@@ -134,7 +134,7 @@ conda create -n python27 python=2.7
 * it is related to compilation of roi\_pooling layer.
 * A simple fix will be changing "GLIBCXX\_USE\_CXX11\_ABI=1" to "GLIBCXX\_USE\_CXX11\_ABI=0" in "src/net/lib/make.sh" \(line 17\)
 
-OR Download and replace the .so with following file :[[Download]](https://github.com/smallcorgi/Faster-RCNN_TF/blob/6e2a941ac250da668cf93899dbd870cc4d838773/lib/roi_pooling_layer/roi_pooling.so)
+OR Download and replace the .so with following file :[[Download]](https://github.com/smallcorgi/Faster-RCNN_TF/blob/6e2a941ac250da668cf93899dbd870cc4d838773/lib/roi_pooling_layer/roi_pooling.so), CUDA 8.0, Python 3.5
 
 ###### [에러]  nvcc 못 찾을경우 
 - 절대 경로로 수정 후 실행 
