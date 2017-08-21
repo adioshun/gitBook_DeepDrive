@@ -156,6 +156,7 @@ if [ -d "$CUDA_PATH" ]; then
     * Ground Truth label
     * Ground bounding box coordinate
     * time stamp
+    
 ```
 ./data/preprocessing/kitti/
     - gt_boxes3d :npy
@@ -166,13 +167,22 @@ if [ -d "$CUDA_PATH" ]; then
     - top_image : png
 
 ```
+
 | ![](http://i.imgur.com/bb67R50.png) | ![](http://i.imgur.com/AbdY7YU.png) |
 | --- | --- |
 
 ### 3.9 수정 필요 
 
 #### A. data.py 수정
+
+작업 환경 
+```bash
+
+
 ```
+
+
+```python
 #data.py
 
 if config.cfg.USE_CLIDAR_TO_TOP:
