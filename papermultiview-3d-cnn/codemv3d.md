@@ -4,13 +4,13 @@
 
 - [nepal](https://github.com/s-nepal/MV3D)
 
-- [jinbeibei](https://github.com/jinbeibei/mv3d_ros_interface)
-
 - [lihua213#1](https://github.com/lihua213/didi-udacity-compatition)
 
 - [lihua213#2](https://github.com/lihua213/MV3D)
 
 - [zxf8665905](https://github.com/zxf8665905/didi-udacity-compatition)
+
+- [jinbeibei(??)](https://github.com/jinbeibei/mv3d_ros_interface)
 
 
 
