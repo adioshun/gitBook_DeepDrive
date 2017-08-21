@@ -39,15 +39,9 @@
 
 # conda env create -f environment_gpu.yml --name mv3d_p3_gpu
 
-
-## python 3.5에서 수행
 conda create -n python35 python=3.5
 conda install tensorflow-gpu opencv shapely scikit-learn keras Cython matplotlib simplejson
 pip install easydict
-```
-
-
-
 
 ```
 
