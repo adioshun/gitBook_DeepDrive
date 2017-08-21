@@ -131,12 +131,23 @@ conda create -n python27 python=2.7
     ln -s ./net/lib/nms/cpu_nms.cpython-35m-x86_64-linux-gnu.so ./net/processing/cpu_nms.cpython-35m-x86_64-linux-gnu.so
     ln -s ./net/lib/utils/cython_bbox.cpython-35m-x86_64-linux-gnu.so ./net/processing/cython_bbox.cpython-35m-x86_64-linux-gnu.so
 
-에러 : `"tensorflow.python.framework.errors_impl.NotFoundError: YOUR_FOLDER/roi_pooling.so: undefined symbol: ZN10tensorflow7strings6StrCatB5cxx11ERKNS0_8AlphaNumES3"`
+###### [에러]  `"tensorflow.python.framework.errors_impl.NotFoundError: YOUR_FOLDER/roi_pooling.so: undefined symbol: ZN10tensorflow7strings6StrCatB5cxx11ERKNS0_8AlphaNumES3"`
 
 * it is related to compilation of roi\_pooling layer.
 * A simple fix will be changing "GLIBCXX\_USE\_CXX11\_ABI=1" to "GLIBCXX\_USE\_CXX11\_ABI=0" in "src/net/lib/make.sh" \(line 17\)
 
-> nvcc 못 찾을경우 절대 경로로 수정 후 실행 
+###### [에러]  nvcc 못 찾을경우 
+- 절대 경로로 수정 후 실행 
+
+###### [에러] `arning: calling a constexpr __host__ function from a __host__ __device__ function is not allowed.`
+-  `make.sh`파일에 아래 flag 추가 
+
+```
+if [ -d "$CUDA_PATH" ]; then
+	nvcc -std=c++11 -c -o roi_pooling_op.cu.o roi_pooling_op_gpu.cu.cc \
+		-I $TF_INC -D GOOGLE_CUDA=1 -x cu -Xcompiler -fPIC $CXXFLAGS \
+		-arch=sm_37 --expt-relaxed-constexpr
+```
 
 ## 3. Preprocess data \(`./src/data.py`\)
 
