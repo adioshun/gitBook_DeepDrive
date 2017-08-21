@@ -250,6 +250,10 @@ OR Download and replace the .so with following file :[[Download]](https://github
 > user this version of [train.py](https://raw.githubusercontent.com/lihua213/didi-udacity-compatition/development/src/train.py): for python2
 
 
+###### [에러] "module 'tensorflow.python.ops.nn' has no attribute 'convolution'"
+
+> `conda list | grep tensorflow`후 tensorflow(cpu & gpu) 버젼을 1.0 이상으로 변경 
+
 ---
 
 File Structure
