@@ -10,8 +10,6 @@
 
 - [lihua213#2](https://github.com/lihua213/MV3D)
 
-
-
 - [zxf8665905](https://github.com/zxf8665905/didi-udacity-compatition)
 
 
@@ -20,10 +18,10 @@
 
 * install tensorflow-gpu and CUDA. 
 
-- A Nvidia GPU card with computation capability &gt; 3  
-- ubuntu (* Cuda에 맞는 버젼은 14.04임, a)
+- A Nvidia GPU card with computation capability 
+- ubuntu (* Cuda7.5에 맞는 버젼은 14.04임)
 - CUDA 
-    (*environment_gpu.yml상 버젼 [7.5
+    (*environment_gpu.yml상 버젼 =7.5)
  
  - http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb
  -  `apt-get install cuda-7.5-15`)
