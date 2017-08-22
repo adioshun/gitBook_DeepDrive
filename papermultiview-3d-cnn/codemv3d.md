@@ -37,8 +37,7 @@
 # conda env create -f environment_gpu.yml --name mv3d_p3_gpu
 
 conda create -n python35 python=3.5
-conda install -c https://conda.binstar.org/menpo opencv3
-conda install tensorflow-gpu shapely scikit-learn keras Cython matplotlib simplejson
+conda install tensorflow-gpu opencv3 shapely scikit-learn keras Cython matplotlib simplejson numba
 pip install easydict
 
 ```
