@@ -52,6 +52,9 @@ wget http://kitti.is.tue.mpg.de/kitti/data_object_velodyne.zip
 
 
 wget http://kitti.is.tue.mpg.de/kitti/data_object_calib.zip
+
+
+wget http://kitti.is.tue.mpg.de/kitti/data_object_label_2.zip
 ```
 
 ## Build the Cython modules
