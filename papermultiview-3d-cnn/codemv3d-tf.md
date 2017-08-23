@@ -12,3 +12,9 @@ pip install easydict opencv_python pyyaml
 conda install -c anaconda cudatoolkit=7.5
 
 
+
+## datasets 
+
+wget http://kitti.is.tue.mpg.de/kitti/data_object_image_3.zip
+
+
