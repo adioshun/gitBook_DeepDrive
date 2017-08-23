@@ -63,9 +63,7 @@ wget http://kitti.is.tue.mpg.de/kitti/data_object_label_2.zip
 
 python kitti2pascalvoc.py --kitti /workspace/MV3D_TF/data/kitti/object/ --out /workspace/MV3D_TF/data/kittivoc
 ```
-> [kitti2pascalvoc.py](https://github.com/CharlesShang/TFFRCNN/blob/master/experiments/scripts/kitti2pascalvoc.py
-
-)
+> [kitti2pascalvoc.py](https://github.com/CharlesShang/TFFRCNN/blob/master/experiments/scripts/kitti2pascalvoc.py)
 
 ## Build the Cython modules
 
