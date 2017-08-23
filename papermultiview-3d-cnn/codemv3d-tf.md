@@ -55,6 +55,7 @@ wget http://kitti.is.tue.mpg.de/kitti/data_object_calib.zip
 
 
 wget http://kitti.is.tue.mpg.de/kitti/data_object_label_2.zip
+
 ```
 `/lidar_bv` 폴더 생성
 
@@ -63,7 +64,8 @@ wget http://kitti.is.tue.mpg.de/kitti/data_object_label_2.zip
 
 python kitti2pascalvoc.py --kitti /workspace/MV3D_TF/data/kitti/object/ --out /workspace/MV3D_TF/data/kittivoc
 ```
-> [kitti2pascalvoc.py](https://github.com/CharlesShang/TFFRCNN/blob/master/experiments/scripts/kitti2pascalvoc.py)
+> [kitti2pascalvoc.py](https://github.com/CharlesShang/TFFRCNN/blob/master/experiments/scripts/kitti2pascalvoc.py): .training/label_2/007400.txt 파일 생성, 필요 없는듯 
+
 
 ## Build the Cython modules
 
