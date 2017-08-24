@@ -82,7 +82,14 @@ v_fov_total = -v_fov[0] + v_fov[1]
 ### 4.1 Mayavi 이용 
 
 - [Mayavi 홈페이지](http://docs.enthought.com/mayavi/mayavi/)
-- 설치 과정이 복잡하지만, 성능이 좋다. 
+
+```
+sudo apt-get install vtk6 python-vtk
+python -c "import vtk"
+# cp -r /usr/lib/python2.7/dist-packages/vtk /opt/anaconda3/envs/python2_gpu/lib/python2.7/site-packages/
+pip install mayavi
+```
+
 
 #### A. 설치 
 
