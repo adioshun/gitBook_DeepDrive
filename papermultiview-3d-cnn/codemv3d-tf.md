@@ -28,7 +28,7 @@ git clone --recursive https://github.com/leeyevi/MV3D_TF.git
 > [Object Detection Evaluation 2012](http://www.cvlibs.net/datasets/kitti/eval_object.php)
 
 ```
-# cd /workspace/MV3D/data
+# cd /workspace/MV3D/data/KITTI/object
 wget http://kitti.is.tue.mpg.de/kitti/data_object_image_2.zip
 wget http://kitti.is.tue.mpg.de/kitti/data_object_image_3.zip
 wget http://kitti.is.tue.mpg.de/kitti/data_object_velodyne.zip
@@ -36,18 +36,25 @@ wget http://kitti.is.tue.mpg.de/kitti/data_object_calib.zip
 wget http://kitti.is.tue.mpg.de/kitti/data_object_label_2.zip
 ```
 
-`/lidar_bv` 폴더 생성
-
-```
+`/workspace/MV3D/data/KITTI/object/{testing/training}/lidar_bv` 폴더 생성
 
 
+## 3. Make Lidar Bird View data
+
+- change the root_dir in `read_lidar.py` file
+
+
+
+
+
+![](http://i.imgur.com/sJi1PFV.png)
 ## Build the Cython modules
 
  cd $MV3D/lib
  make
  
  
-## Make Lidar Bird View data
+
 ```
 # edit the kitti_path in tools/read_lidar.py
 # then start make data
