@@ -83,6 +83,15 @@ v_fov_total = -v_fov[0] + v_fov[1]
 
 - [Mayavi 홈페이지](http://docs.enthought.com/mayavi/mayavi/)
 
+
+
+
+#### A. 설치 
+
+- 설치 스크립트 : [Install Mayavi on Ubuntu](https://gist.github.com/ronrest/d778ee5d49c026ccee1dbec6bd5b3988)
+
+
+- 패키지 설치 
 ```
 sudo apt-get install vtk6 python-vtk
 python -c "import vtk"
@@ -92,9 +101,7 @@ import mayavi.mlab as mlab
 ```
 
 
-#### A. 설치 
 
-- 설치 스크립트 : [Install Mayavi on Ubuntu](https://gist.github.com/ronrest/d778ee5d49c026ccee1dbec6bd5b3988)
 
 #### B. 실행 코드 
 
