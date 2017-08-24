@@ -79,3 +79,15 @@ python tools/read_lidar.py
 
 
 `./train_net.py --device gpu --device_id 0 --weights /workspace/MV3D_TF/data/pretrain_model/VGG_imagenet.npy --imdb kitti_train --iters 50001 --cfg /workspace/MV3D_TF/experiments/cfgs/faster_rcnn_end2end.yml --network MV3D_train`
+
+
+###### [에러] undefined symbol: ZN10tensorflow7strings6StrCatB5cxx11ERKNS0_8AlphaNumES3"
+```
+#/workspace/MV3D_TF/lib/make.sh
+
+        #g++ -std=c++11 -shared -o roi_pooling.so roi_pooling_op.cc \
+        g++ -std=c++11 -shared -D_GLIBCXX_USE_CXX11_ABI=0 -o roi_pooling.so roi_pooling_op.cc \
+                roi_pooling_op.cu.o -I $TF_INC  -D GOOGLE_CUDA=1 -fPIC $CXXFLAGS \
+                -lcudart -L $CUDA_PATH/lib64
+
+```

@@ -1,38 +1,42 @@
 ![](http://i.imgur.com/Myw0TVr.png)
 
-- [bostondiditeam](https://github.com/bostondiditeam/MV3D)
+* [bostondiditeam](https://github.com/bostondiditeam/MV3D)
 
-    - [nepal](https://github.com/s-nepal/MV3D)
-    
-    - [zxf8665905](https://github.com/zxf8665905/didi-udacity-compatition) : 추천 
-        - [lihua213#1](https://github.com/lihua213/didi-udacity-compatition)
-        
-        - [lihua213#2](https://github.com/lihua213/MV3D): Old version 
+  * [nepal](https://github.com/s-nepal/MV3D)
 
-- [leeyevi](https://github.com/leeyevi/MV3D_TF)
-    - [Super-Tree](https://github.com/Super-Tree/MV3D_TF)
+  * [zxf8665905](https://github.com/zxf8665905/didi-udacity-compatition) : 추천
 
-- [jinbeibei(??)](https://github.com/jinbeibei/mv3d_ros_interface)
+    * [lihua213\#1](https://github.com/lihua213/didi-udacity-compatition)
 
+    * [lihua213\#2](https://github.com/lihua213/MV3D): Old version
 
+* [leeyevi](https://github.com/leeyevi/MV3D_TF)
+
+  * [Super-Tree](https://github.com/Super-Tree/MV3D_TF)
+
+* [jinbeibei\(??\)](https://github.com/jinbeibei/mv3d_ros_interface)
 
 ## 0. 환경 준비
 
-* install tensorflow-gpu and CUDA. 
+* install tensorflow-gpu and CUDA.
 
-- A Nvidia GPU card with computation capability 
-- ubuntu (* Cuda7.5에 맞는 버젼은 14.04임)
-- CUDA 
-    (*environment_gpu.yml상 버젼 =7.5)
- 
- - http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb
- -  `apt-get install cuda-7.5-15`)
-- cuDNN
-    - Download cuDNN v5.1  for CUDA 7.5 : [Runtime lib.](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v5.1/prod_20161129/7.5/libcudnn5_5.1.10-1+cuda7.5_amd64-deb), [소스설치방법](https://github.com/adioshun/System_Setup/wiki/4_CUDA_CuDNN-Setup#driver--cuda-install-script)
+* A Nvidia GPU card with computation capability
 
-- Python3.5 for MV3D related code  
-- Tensorflow-GPU\(version&gt;1.0\)  
-- Python2.7 for ROS related script
+* ubuntu \(\* Cuda7.5에 맞는 버젼은 14.04임\)
+* CUDA   
+    \(\*environment\_gpu.yml상 버젼 =7.5\)
+
+  * [http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local\_installers/cuda-repo-ubuntu1404-7-5-local\_7.5-18\_amd64.deb](http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb)
+  * `apt-get install cuda-7.5-15`\)
+
+* cuDNN
+
+  * Download cuDNN v5.1  for CUDA 7.5 : [Runtime lib.](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v5.1/prod_20161129/7.5/libcudnn5_5.1.10-1+cuda7.5_amd64-deb), [소스설치방법](https://github.com/adioshun/System_Setup/wiki/4_CUDA_CuDNN-Setup#driver--cuda-install-script)
+
+* Python3.5 for MV3D related code
+
+* Tensorflow-GPU\(version&gt;1.0\)  
+* Python2.7 for ROS related script
 
 ```bash
 # https://github.com/adioshun/gitBook_DeepDrive/blob/master/papermultiview-3d-cnn/environment_gpu.yml
@@ -42,12 +46,11 @@
 conda create -n python35 python=3.5
 conda install tensorflow-gpu opencv3 shapely scikit-learn keras Cython matplotlib simplejson numba
 pip install easydict
-
 ```
 
 ### 0.1 GPU용으로 설정 변경
 
-`src/net/lib/setup.py` and `src/lib/make.sh` : "arch=sm\_37" #Google Cloud GPU Tesla K80
+`src/net/lib/setup.py` and `src/lib/make.sh` : "arch=sm\_37" \#Google Cloud GPU Tesla K80
 
 ```
 # Which CUDA capabilities do we want to pre-build for?
@@ -74,38 +77,30 @@ print(tf.__version__) # version more than v1.
 
 ## 1. 데이터 다운로드
 
-
-
 ![](http://i.imgur.com/TqGRi0G.png)
 
 [The KITTI Vision Benchmark Suite Raw Data](http://www.cvlibs.net/datasets/kitti/raw_data.php)
 
-## 1.9 수정 필요 
+## 1.9 수정 필요
 
-### A. 
+### A.
 
 ![](http://i.imgur.com/va7Lg8J.png)
 
-- `data/raw/kitti/` 경로 밑에 데이터 위치 
-- `tracklet_labels.xml`파일은 `2011_09_26_drive_0001_sync` 하위 폴더에 위치 
+* `data/raw/kitti/` 경로 밑에 데이터 위치 
+* `tracklet_labels.xml`파일은 `2011_09_26_drive_0001_sync` 하위 폴더에 위치 
 
-### B. 
-`src/kitti_data/pykitti/tracklet.py L289`에서 다운 받은 파일명으로 변경 
+### B.
+
+`src/kitti_data/pykitti/tracklet.py L289`에서 다운 받은 파일명으로 변경
 
 ```
 DEFAULT_DRIVE = '2011_09_26_drive_0001'
-
 ```
-
-
-
 
 ## 2. ./src/make.sh
 
 ### 2.1 실행 방법
-
-
-
 
 ```
 cd src
@@ -116,8 +111,7 @@ sudo chmod 755 ./make.sh
 
 conda create -n python27 python=2.7
 
-
-> 아래 [2.2]를 직접 실행 하는것 추천 
+> 아래 \[2.2\]를 직접 실행 하는것 추천
 
 ### 2.2 실행시 진행 내용
 
@@ -131,34 +125,33 @@ conda create -n python27 python=2.7
     ln -s ./net/lib/nms/cpu_nms.cpython-35m-x86_64-linux-gnu.so ./net/processing/cpu_nms.cpython-35m-x86_64-linux-gnu.so
     ln -s ./net/lib/utils/cython_bbox.cpython-35m-x86_64-linux-gnu.so ./net/processing/cython_bbox.cpython-35m-x86_64-linux-gnu.so
 
+###### \[에러\]  nvcc 못 찾을경우
 
-###### [에러]  nvcc 못 찾을경우 
-- 절대 경로로 수정 후 실행 
+* 절대 경로로 수정 후 실행 
 
-###### [에러] `arning: calling a constexpr __host__ function from a __host__ __device__ function is not allowed.`
--  `make.sh`파일에 아래 flag `--expt-relaxed-constexpr` 추가 
+###### \[에러\] `arning: calling a constexpr __host__ function from a __host__ __device__ function is not allowed.`
+
+* `make.sh`파일에 아래 flag `--expt-relaxed-constexpr` 추가 
 
 ```
 if [ -d "$CUDA_PATH" ]; then
-	nvcc -std=c++11 -c -o roi_pooling_op.cu.o roi_pooling_op_gpu.cu.cc \
-		-I $TF_INC -D GOOGLE_CUDA=1 -x cu -Xcompiler -fPIC $CXXFLAGS \
-		-arch=sm_37 --expt-relaxed-constexpr
+    nvcc -std=c++11 -c -o roi_pooling_op.cu.o roi_pooling_op_gpu.cu.cc \
+        -I $TF_INC -D GOOGLE_CUDA=1 -x cu -Xcompiler -fPIC $CXXFLAGS \
+        -arch=sm_37 --expt-relaxed-constexpr
 ```
 
 ## 3. Preprocess data \(`./src/data.py`\)
 
-
-
-> kitti기준, didi data 이용시 `utils/bag_to_kitti` 실행 필요 
+> kitti기준, didi data 이용시 `utils/bag_to_kitti` 실행 필요
 
 * MV3D net 학습시 필요한 입력 데이터 생성 
-    * Lidar bird eye view features
-    * Lidar front view features
-    * RGB image
-    * Ground Truth label
-    * Ground bounding box coordinate
-    * time stamp
-    
+  * Lidar bird eye view features
+  * Lidar front view features
+  * RGB image
+  * Ground Truth label
+  * Ground bounding box coordinate
+  * time stamp
+
 ```
 ./data/preprocessing/kitti/
     - gt_boxes3d :npy
@@ -167,22 +160,21 @@ if [ -d "$CUDA_PATH" ]; then
     - rgb : png
     - top : .npy.npz
     - top_image : png
-
 ```
 
 | ![](http://i.imgur.com/bb67R50.png) | ![](http://i.imgur.com/AbdY7YU.png) |
 | --- | --- |
 
-### 3.9 수정 필요 
+
+### 3.9 수정 필요
 
 #### A. data.py 수정
 
-작업 환경 
+작업 환경
+
 ```bash
 
-
 ```
-
 
 ```python
 #data.py
@@ -193,10 +185,9 @@ if config.cfg.USE_CLIDAR_TO_TOP:
 #if config.cfg.USE_CLIDAR_TO_TOP:
 #    SharedLib = ctypes.cdll.LoadLibrary('/home/stu/MV3D/src/lidar_data_preprocess/'
 #                                        'Python_to_C_Interface/ver3/LidarTopPreprocess.so')
-
 ```
 
-#### B. NameError: name 'MATRIX_Mt' is not defined
+#### B. NameError: name 'MATRIX\_Mt' is not defined
 
 ```
 # /MV3D/src/net/processing/boxes3d.py 상단에 추가 
@@ -217,14 +208,14 @@ MATRIX_Kt = ([[ 721.5377, 0. , 0. ],
 ```
 #if __C.DATA_SETS_TYPE=='test':
 #    __C.DATA_SETS_DIR = osp.abspath('/home/stu/round12_data_test')
-    
+
 if __C.DATA_SETS_TYPE=='test':
     __C.DATA_SETS_DIR = osp.abspath('/workspace/mv3d')
 ```
 
-### B. roi_pooling.so을 심볼릭이 아닌 파일로 대체 
+### B. roi\_pooling.so을 심볼릭이 아닌 파일로 대체
 
-> 이후에도 같은 문제가 발생 하므로 [C]방법 추천 
+> 이후에도 같은 문제가 발생 하므로 \[C\]방법 추천
 
 ```
 cd ./src/net/roipooling_op
@@ -232,30 +223,28 @@ mv roi_pooling.so roi_pooling.so~
 cp ../../net/lib/roi_pooling_layer/roi_pooling.so ./
 ```
 
-### C. roi_pooling.so 수정 버젼 다운 로드 
+### C. roi\_pooling.so 수정 버젼 다운 로드
 
-1. [다운로드 roi_pooling.so](https://github.com/CharlesShang/TFFRCNN/tree/roi_pooling/lib/roi_pooling_layer)
+1. [다운로드 roi\_pooling.so](https://github.com/CharlesShang/TFFRCNN/tree/roi_pooling/lib/roi_pooling_layer)
 
-2. chmod +x roi_pooling.so
+2. chmod +x roi\_pooling.so
 
 ## 4. train.py
 
-
-###### [에러] `"tensorflow.python.framework.errors_impl.NotFoundError: YOUR_FOLDER/roi_pooling.so: undefined symbol: ZN10tensorflow7strings6StrCatB5cxx11ERKNS0_8AlphaNumES3"`
+###### \[에러\] `"tensorflow.python.framework.errors_impl.NotFoundError: YOUR_FOLDER/roi_pooling.so: undefined symbol: ZN10tensorflow7strings6StrCatB5cxx11ERKNS0_8AlphaNumES3"`
 
 * it is related to compilation of roi\_pooling layer.
 * A simple fix will be changing "GLIBCXX\_USE\_CXX11\_ABI=1" to "GLIBCXX\_USE\_CXX11\_ABI=0" in "src/net/lib/make.sh" \(line 17\)
 
-OR Download and replace the .so with following file :[[Download]](https://github.com/smallcorgi/Faster-RCNN_TF/blob/6e2a941ac250da668cf93899dbd870cc4d838773/lib/roi_pooling_layer/roi_pooling.so), CUDA 8.0, Python 3.5
+OR Download and replace the .so with following file :[\[Download\]](https://github.com/smallcorgi/Faster-RCNN_TF/blob/6e2a941ac250da668cf93899dbd870cc4d838773/lib/roi_pooling_layer/roi_pooling.so), CUDA 8.0, Python 3.5
 
-###### [에러] NameError: name 'data_splitter' is not defined
+###### \[에러\] NameError: name 'data\_splitter' is not defined
 
 > user this version of [train.py](https://raw.githubusercontent.com/lihua213/didi-udacity-compatition/development/src/train.py): for python2
 
+###### \[에러\] "module 'tensorflow.python.ops.nn' has no attribute 'convolution'"
 
-###### [에러] "module 'tensorflow.python.ops.nn' has no attribute 'convolution'"
-
-> `conda list | grep tensorflow`후 tensorflow(cpu & gpu) 버젼을 1.0 이상으로 변경 
+> `conda list | grep tensorflow`후 tensorflow\(cpu & gpu\) 버젼을 1.0 이상으로 변경
 
 ---
 
