@@ -1,62 +1,41 @@
 
 > https://github.com/CharlesShang/TFFRCNN
 
-git clone --recursive https://github.com/adioshun/MV3D_TF.git
 
+## 0. setup the python environment. 
 
+```bash
+#Google cloud GPU Tesla K80
+#Ubuntu 16.4
 conda create -n python2_gpu python=2.7
-
-
 conda install -y numpy Cython tensorflow-gpu matplotlib scikit-learn PIL
 pip install easydict opencv_python pyyaml
-
-
-
 conda install -c anaconda cudatoolkit=7.5
-
-
-
-## Downloads KITTI object datasets.
-
-- [Object Detection Evaluation 2012](http://www.cvlibs.net/datasets/kitti/eval_object.php)
+```
+OR
 
 ```
- % Specify KITTI data path so that the structure is like
 
- % {kitti_dir}/object/training/image_2
- %                            /image_3
- %                            /calib
- %                            /lidar_bv
- %							 /velodyne
-       
+```
 
- % {kitti_dir}/object/testing/image_2
- %                           /image_3
- %                           /calib
- %                           /lidar_bv
- %							/velodyne
+## 1. git clone 
+```
+git clone --recursive https://github.com/leeyevi/MV3D_TF.git
+```
 
+## 2. Downloads KITTI object datasets.
 
+> [Object Detection Evaluation 2012](http://www.cvlibs.net/datasets/kitti/eval_object.php)
 
-
+```
+# cd /workspace/MV3D/data
 wget http://kitti.is.tue.mpg.de/kitti/data_object_image_2.zip
-
-
-
-
 wget http://kitti.is.tue.mpg.de/kitti/data_object_image_3.zip
-
-
 wget http://kitti.is.tue.mpg.de/kitti/data_object_velodyne.zip
-
-
-
 wget http://kitti.is.tue.mpg.de/kitti/data_object_calib.zip
-
-
 wget http://kitti.is.tue.mpg.de/kitti/data_object_label_2.zip
-
 ```
+
 `/lidar_bv` 폴더 생성
 
 ```
