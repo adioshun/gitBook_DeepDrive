@@ -9,7 +9,7 @@
 #Ubuntu 16.4
 conda create -n python2_gpu python=2.7
 conda install -y numpy Cython tensorflow-gpu matplotlib scikit-learn PIL
-pip install easydict opencv_python pyyaml
+pip install easydict opencv_python pyyaml mayavi
 conda install -c anaconda cudatoolkit=7.5
 ```
 OR
