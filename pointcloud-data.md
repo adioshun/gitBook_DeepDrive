@@ -92,23 +92,28 @@ v_fov_total = -v_fov[0] + v_fov[1]
 
 
 - 패키지 설치 
+##### python2
+- conda install -c anaconda mayavi
+
+###### python3
+- conda install -c clinicalgraphics vtk=7.1.0; pip install mayavi
+
+> ImportError: Could not import backend for traits 
+> - conda install -c conda-forge pyside=1.2.4 
+> - {OR} conda install pyqt=4
+
+
+
+
 ```
 sudo apt-get install vtk6 python-vtk
 python -c "import vtk"
 # cp -r /usr/lib/python2.7/dist-packages/vtk /opt/anaconda3/envs/python2_gpu/lib/python2.7/site-packages/
 pip install mayavi
 import mayavi.mlab as mlab
-
-
-#python2 : conda install -c anaconda mayavi
-#python3 : conda install -c clinicalgraphics vtk=7.1.0; pip install mayavi
 ```
 
-```
-#에러처리
-conda install pyqt=4
-ImportError: Could not import backend for traits -> conda install -c conda-forge pyside=1.2.4 
-```
+
 
 
 #### B. 실행 코드 
