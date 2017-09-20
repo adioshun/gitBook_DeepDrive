@@ -1,12 +1,12 @@
+
+|![](https://i.imgur.com/3yPzbxR.png)|[Awesome Autonomous Vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles)|
+|-|-|
+
 [Project: Development of AEB System for Pedestrian Protection (4th year)](https://github.com/nlkim0817/ProjAEB_4thYear)
 
 - 참고 논문
 
 - [3D Convolutional Neural Networks — A Reading List](http://davidstutz.de/3d-convolutional-neural-networks-a-reading-list/)
-
-
-- 데이터 셋 
-
 
 
 
