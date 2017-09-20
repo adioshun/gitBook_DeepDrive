@@ -1,16 +1,20 @@
 
+# List 
+
 |![](https://i.imgur.com/3yPzbxR.png)|[Awesome Autonomous Vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles)|
 |-|-|
 
+# Project
+
 [Project: Development of AEB System for Pedestrian Protection (4th year)](https://github.com/nlkim0817/ProjAEB_4thYear)
 
-- 참고 논문
+# 참고 논문
 
 - [3D Convolutional Neural Networks — A Reading List](http://davidstutz.de/3d-convolutional-neural-networks-a-reading-list/)
 
 
 
-
+---
 [3D Vehicle Detection](https://experiencor.github.io/sdc_3d.html)
 
 1. Detect 2D BBoxes of other vehicles visible on CAMERA frame. This can be achieved by YOLOv2 or SqueezeDet. It turns out that SqueezeDet works better for this job and is selected.
