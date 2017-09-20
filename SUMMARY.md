@@ -11,6 +11,7 @@
   * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
 * [Paper\_2017\_Survey](paper2017-survey.md)
 * [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
+* [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 
 ## 3D CNN
 
