@@ -10,8 +10,7 @@
   * [ROS bags-TO-Point Clods.ipynb](https://gist.github.com/anonymous/e675ea14113252be321320be62248034)
   * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
 * [Paper\_2017\_Survey](paper2017-survey.md)
-* [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
-* [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
+* [Paper\_2016\_PointNet](paper2016-pointnet.md)
 
 ## 3D CNN
 
@@ -22,6 +21,8 @@
 * [Paper\_MovileNet](papermovilenet.md)
 * [Paper\_Vote3Deep](papervote3deep.md)
 * [Paper\_Monocular 3D](papermonocular-3d.md)
+* [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
+* [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 * [Paper\_2015\_VoxNet](papervoxnet.md)
 * [Paper\_2017\_3D BBox](paper2017-3d-bbox.md)
 * [Paper\_2016\_SqueezeDet](paper2016-squeezedet.md)
