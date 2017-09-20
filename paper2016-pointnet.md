@@ -3,7 +3,7 @@
 |저자(소속)|Charles R. Qi, Hao Su, Kaichun Mo, Leonidas J. Guibas (Stanford University)|
 |학회/년도|CVPR 2017,  [논문](https://arxiv.org/abs/1612.00593)|
 |키워드| |
-|참고|[TFKR](https://www.facebook.com/thinking.factory/posts/1408857052524274)|
+|참고|[TFKR](https://www.facebook.com/thinking.factory/posts/1408857052524274), [홈페이지](http://stanford.edu/~rqi/pointnet/)|
 |코드||
 
 
