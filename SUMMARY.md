@@ -23,7 +23,7 @@
 * [Paper\_2016\_VeloFCN4VD\(30%\)](paper2016-velofcn4vd.md)
 * [Paper\_2017\_FCN4VD \(30%\)](paper3d-cnn.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
-* [Paper\_2016\_PointNet](paper2016-pointnet.md)
+* [Paper\_2017\_PointNet](paper2016-pointnet.md)
 
 ## 3D CNN-Images
 
