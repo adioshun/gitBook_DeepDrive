@@ -21,14 +21,17 @@
 * [Paper\_2016\_Vote3Deep](papervote3deep.md)
 * [Paper\_2016\_VeloFCN4VD\(30%\)](paper2016-velofcn4vd.md)
 * [Paper\_2017\_FCN4VD \(30%\)](paper3d-cnn.md)
-* [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 * [Paper\_2016\_PointNet](paper2016-pointnet.md)
-* [Paper\_2017\_3D BBox](paper2017-3d-bbox.md)
+
 
 ## 3D CNN-Images
 
 * [Paper\_Monocular 3D](papermonocular-3d.md)
+* [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
+* [Paper\_2017\_3D BBox](paper2017-3d-bbox.md)
+
+
 
 ## Sensorfusion
 
