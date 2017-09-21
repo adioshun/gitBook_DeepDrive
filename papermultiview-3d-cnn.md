@@ -58,12 +58,12 @@
 최근 Fusion(LiDAR + Image) 기반 방식들 기술 동향 
 - [11, 8] combine LIDAR and images for 2D detection by employing **early or late fusion schemes**. 
 - [참고] 본 논문은 Deep fusion schemes 이용 
-
-```
-[11] A. Gonzalez, D. Vazquez, A. Lopez, and J. Amores. Onboard object detection: Multicue, multimodal, and multiview random forest of local experts. In IEEE Transactions on Cybernetics,
-2016
-[8] M. Enzweiler and D. M. Gavrila. A multilevel mixture-of experts framework for pedestrian classification. IEEE Transactions on Image Processing, 20(10):2967–2979, 2011
-```
+ 
+ ```
+ [11] A. Gonzalez, D. Vazquez, A. Lopez, and J. Amores. Onboard object detection: Multicue, multimodal, and multiview random forest of local experts. In IEEE Transactions on Cybernetics,
+ 2016
+ [8] M. Enzweiler and D. M. Gavrila. A multilevel mixture-of experts framework for pedestrian classification. IEEE Transactions on Image Processing, 20(10):2967–2979, 2011
+ ```
 
 
 ### 1.2 본 논문 제안 
@@ -144,6 +144,18 @@ In this work, we encode 3D point cloud with multi-view feature maps, enabling re
 
 본 논문에서는 : Our work shows how to incorporate LIDAR point cloud to improve 3D localization.
 
+
+```
+[28] Y. Xiang, W. Choi, Y. Lin, and S. Savarese. Data-driven 3d voxel patterns for object category recognition. In CVPR, 2015
+[4] X. Chen, K. Kundu, Y. Zhu, A. Berneshawi, H. Ma, S. Fidler, and R. Urtasun. 3d object proposals for accurate object class detection. In NIPS, 2015
+[3] X. Chen, K. Kundu, Z. Zhang, H. Ma, S. Fidler, and R. Urtasun. Monocular 3d object detection for autonomous driving. In CVPR, 2016
+[31] M. Z. Zia, M. Stark, B. Schiele, and K. Schindler. Detailed 3d representations for object recognition and modeling. PAMI, 2013.
+[32] M. Z. Zia, M. Stark, and K. Schindler. Are cars just 3d boxes? jointly estimating the 3d shape of multiple objects. In CVPR, pages 3678–3685, 2014.
+[6] V. Dhiman, Q. H. Tran, J. J. Corso, and M. Chandraker. A continuous occlusion model for road scene understanding. In CVPR, pages 4331–4339, 2016.
+[21] S. Song and M. Chandraker. Joint sfm and detection cues for monocular 3d localization in road scenes. In Computer Vision and Pattern Recognition, pages 3734–3742, 2015
+```
+
+
 ### 2.3 Multimodal Fusion
 
 자율 주행 분야에서는 멀티모달 퓨전에 대하여서는 많은 연구가 이루어 지지는 않았다. 
@@ -158,6 +170,16 @@ In this work, we encode 3D point cloud with multi-view feature maps, enabling re
  - Similarly, [27] constructs deeply-fused networks by combining shallow and deep sub networks. 
 
 위 방식과 다른점 :  `Our network differs from them by using the same base network for each column and adding auxiliary paths and losses for regularization.`
+
+```
+[11] A. Gonzalez, D. Vazquez, A. Lopez, and J. Amores. Onboard object detection: Multicue, multimodal, and multiview random forest of local experts. In IEEE Transactions on Cybernetics,
+2016.
+[8] M. Enzweiler and D. M. Gavrila. A multilevel mixture-of experts framework for pedestrian classification. IEEE Transactions on Image Processing, 20(10):2967–2979, 2011
+[15] G. Larsson, M. Maire, and G. Shakhnarovich. Fractalnet: Ultra-deep neural networks without residuals. arXiv:1605.07648, 2016.
+[27] J. Wang, Z. Wei, T. Zhang, and W. Zeng. Deeply-fused nets. arXiv:1605.07716, 2016.
+
+
+```
 
 ### 2.4 3D Object Proposals 
 2D와 유사한 방법으로 3D에서는 Object Proposals 을 수행 한다.  
