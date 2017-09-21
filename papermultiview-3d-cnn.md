@@ -18,32 +18,53 @@
  - 출력 : predicts oriented 3D bounding boxes
 
 구성 
-- 3D object proposal generation 
+- 3D object proposal generation : Generates 3D candidate boxes 
+ - from the bird’s eye view representation of 3D point cloud. 
+
 - multi-view feature fusion
 
 특징
-- Generates 3D candidate boxes efficiently from the bird’s eye view representation of
-3D point cloud. 
 - We design a deep fusion scheme to combine region-wise features from multiple views and enable interactions between intermediate layers of different paths.
 
+목표 
+- We aim at highly accurate **3D localization** and **recognition of objects** in the road scene.
 
 ## 1. Introduction
 
 ### 1.1 기존 연구 
 각 센서들의 장점 
-- Laser scanners have the advantage of accurate depth information 
-- cameras preserve much more detailed semantic information
+- Laser scanners :  accurate depth information 
+- cameras : detailed semantic information
 
 최근 LIDAR기반 방식들 기술 동향 
 - Place 3D windows in 3D voxel grids to score the point cloud [26, 7] 
 - Apply CNN to the front view point map in a dense box prediction scheme [17].
 
+ ```
+ [26] D. Z. Wang and I. Posner. Voting for voting in online point cloud object detection. In Proceedings of Robotics: Science and Systems, 2015
+ [7] M. Engelcke, D. Rao, D. Zeng Wang, C. Hay Tong, and I. Posner. Vote3Deep: Fast Object Detection in 3D Point Clouds Using Efficient Convolutional Neural Networks. arXiv:1609.06666, 2016
+ [17] B. Li, T. Zhang, and T. Xia. Vehicle detection from 3d lidar using fully convolutional network. In Robotics: Science and Systems, 2016
+ ```
 
 최근 Image기반 방식들 기술 동향 
 - Image-based methods [4, 3] typically first generate 3D box proposals and then perform region-based recognition using the Fast RCNN [10] pipeline.
 
-최근 LiDAR + Image 기반 방식들 기술 동향 
-- [11, 8] combine LIDAR and images for 2D detection by employing early or late fusion schemes. 
+ ```
+ [4] X. Chen, K. Kundu, Y. Zhu, A. Berneshawi, H. Ma, S. Fidler, and R. Urtasun. 3d object proposals for accurate object class detection. In NIPS, 2015
+ [3] X. Chen, K. Kundu, Z. Zhang, H. Ma, S. Fidler, and R. Urtasun. Monocular 3d object detection for autonomous driving. In CVPR, 2016
+ ```
+
+
+최근 Fusion(LiDAR + Image) 기반 방식들 기술 동향 
+- [11, 8] combine LIDAR and images for 2D detection by employing **early or late fusion schemes**. 
+- [참고] 본 논문은 Deep fusion schemes 이용 
+
+```
+[11] A. Gonzalez, D. Vazquez, A. Lopez, and J. Amores. Onboard object detection: Multicue, multimodal, and multiview random forest of local experts. In IEEE Transactions on Cybernetics,
+2016
+[8] M. Enzweiler and D. M. Gavrila. A multilevel mixture-of experts framework for pedestrian classification. IEEE Transactions on Image Processing, 20(10):2967–2979, 2011
+```
+
 
 ### 1.2 본 논문 제안 
 
