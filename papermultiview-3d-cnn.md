@@ -75,27 +75,28 @@ The main idea for utilizing multimodal information is to perform `region-based` 
 |MV3D|a 3D Proposal Network |+ |a Region-based Fusion Network. |
 |-|-|-|-|
 
-제안 #1 : multi-view encoding schemㄷ
+제안 #1 : multi-view encoding scheme
 - to obtain a compact and effective representation for sparse 3D point cloud.
 
 #### A. 3D proposal network
-- 목적 : 포인트 클라우드의 bird’s eye view를 이용하여서 3D 후보 영역을 추천 한다. 
- - `The 3D proposal network utilizes a bird’s eye view representation of point cloud to generate highly accurate 3D candidate boxes.`
+- 목적 : 포인트 클라우드의 bird’s eye view를 이용하여서 3D 후보 영역을 추천 한다. `The 3D proposal network utilizes a bird’s eye view representation of point cloud to generate highly accurate 3D candidate boxes.`
 
-- 장점 : The benefit of [3D object proposals] is that **it can be projected to any views in 3D space**.
+- 장점 : The benefit of [3D object proposals] is that it can be projected to **any views** in 3D space.
 
 #### B. Region-based Fusion Network
 
-The multi-view fusion network extracts region-wise features by projecting 3D proposals to the feature maps from mulitple views.
+- 목적 : 3D 후보영역을 mulitple views에서 Feature map으로 투영하여 region-wise feature들을 추출 한다. 'The multi-view fusion network extracts region-wise features by projecting 3D proposals to the feature maps from mulitple views.'
 
-We design a deep fusion approach to enable interactions of intermediate layers from different views.
+- 특징 : We design a `deep fusion` approach to enable interactions of intermediate layers from different views.
 
-### C. 성능 향상을 위한 기타 방법 
+###### early/late fusion scheme 대비 deep fusion 성능 향상을 위해 사용한 방법 
 
-- Combined with drop-path training [15] and auxiliary loss, our approach shows superior performance over the early/late fusion scheme.
+- Drop-path training [15] 
+- Auxiliary loss
 
-Given the multi-view feature representation,the network performs oriented 3D box regression which predict accurate 3D location, size and orientation of objects in 3D space.
-
+```
+[15] G. Larsson, M. Maire, and G. Shakhnarovich. Fractalnet:Ultra-deep neural networks without residuals.arXiv:1605.07648, 2016.
+```
 
 ## 2. 관련 연구 
 
