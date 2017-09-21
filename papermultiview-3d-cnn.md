@@ -82,7 +82,7 @@ The main idea for utilizing multimodal information is to perform `region-based` 
 - 목적 : 포인트 클라우드의 bird’s eye view를 이용하여서 3D 후보 영역을 추천 한다. 
  - `The 3D proposal network utilizes a bird’s eye view representation of point cloud to generate highly accurate 3D candidate boxes.`
 
-- 장점 : The benefit of 3D object proposals is that **it can be projected to any views in 3D space**.
+- 장점 : The benefit of [3D object proposals] is that **it can be projected to any views in 3D space**.
 
 #### B. Region-based Fusion Network
 
