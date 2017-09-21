@@ -177,8 +177,6 @@ In this work, we encode 3D point cloud with multi-view feature maps, enabling re
 [8] M. Enzweiler and D. M. Gavrila. A multilevel mixture-of experts framework for pedestrian classification. IEEE Transactions on Image Processing, 20(10):2967–2979, 2011
 [15] G. Larsson, M. Maire, and G. Shakhnarovich. Fractalnet: Ultra-deep neural networks without residuals. arXiv:1605.07648, 2016.
 [27] J. Wang, Z. Wei, T. Zhang, and W. Zeng. Deeply-fused nets. arXiv:1605.07716, 2016.
-
-
 ```
 
 ### 2.4 3D Object Proposals 
@@ -195,6 +193,14 @@ Both 3DOP and Mono3D (use hand-crated) features.
  - However, it operates on 3D voxel grids and uses computationally expensive 3D convolutions. 
 
 본 논문에서는 : We propose a more efficient approach by introducing a bird’s eye view representation of point cloud and employing 2D convolutions to generate accurate 3D proposals.
+
+|Dim|Paper|Method|Weekpoint|
+|2D|Selective search[25],[33],[2]|||
+|3D|3DOP [4]|depth features(From stereo point cloud)|hand-crated features|
+|3D|Mono3D [3]|some segmentation features(From Image)|hand-crated features|
+|3D|Deep Sliding Shapes [23]|more powerful deep learning features(??)|computationally expensive|
+|3D|제안(MV3D)|2D convolutions (From bird’s eye view )||
+
 
 ## 3. MV3D Network
 
