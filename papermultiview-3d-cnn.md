@@ -195,6 +195,7 @@ Both 3DOP and Mono3D (use hand-crated) features.
 본 논문에서는 : We propose a more efficient approach by introducing a bird’s eye view representation of point cloud and employing 2D convolutions to generate accurate 3D proposals.
 
 |Dim|Paper|Method|Weekpoint|
+|-|-|-|-|
 |2D|Selective search[25],[33],[2]|||
 |3D|3DOP [4]|depth features(From stereo point cloud)|hand-crated features|
 |3D|Mono3D [3]|some segmentation features(From Image)|hand-crated features|
