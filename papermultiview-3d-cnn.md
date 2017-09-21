@@ -71,7 +71,10 @@
 The main idea for utilizing multimodal information is to perform `region-based` feature fusion.
 
 ![](http://i.imgur.com/RDijuv4.png)
-구성 : a 3D Proposal Network + a Region-based Fusion Network. 
+
+|MV3D|a 3D Proposal Network |+ |a Region-based Fusion Network. |
+|-|-|-|-|
+
 
 
 1. We first propose a multi-view encoding scheme to obtain a compact and effective representation for sparse 3D point cloud.
