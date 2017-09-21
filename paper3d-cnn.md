@@ -54,7 +54,7 @@ Pipeline : 후보 영역 선정(candidate proposal) -> 분류(classification)
 
 - [10] operates 3D voxel data but regards one dimension as a channel to apply 2D CNN.
 
-- [8], [20-VoxNet], [26], [32-3DShapeNet] are among the very few earlier works on3D CNN.
+- [8-VeloFCN], [20-VoxNet], [26], [32-3DShapeNet] are among the very few earlier works on3D CNN.
  - [8], [20], [32] focus on object recognition 
  - [26] proposes 3D R-CNN techniques for indoor object detection combining the Kinect image and point cloud.
 
