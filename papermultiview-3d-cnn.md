@@ -75,9 +75,8 @@ The main idea for utilizing multimodal information is to perform `region-based` 
 |MV3D|a 3D Proposal Network |+ |a Region-based Fusion Network. |
 |-|-|-|-|
 
-
-
-1. We first propose a multi-view encoding scheme to obtain a compact and effective representation for sparse 3D point cloud.
+제안 #1 : multi-view encoding schemㄷ
+- to obtain a compact and effective representation for sparse 3D point cloud.
 
 #### A. 3D proposal network
 - 목적 : 포인트 클라우드의 bird’s eye view를 이용하여서 3D 후보 영역을 추천 한다. 
