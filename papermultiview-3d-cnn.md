@@ -108,7 +108,7 @@ The main idea for utilizing multimodal information is to perform `region-based` 
 - Sliding Shapes [22] and Vote3D [26] apply SVM classifers on 3D grids encoded with geometry features.
 - Some recently proposed methods [23, 7, 16] improve feature representation with 3D convolutions.
 
-- In addition to the 3Dvoxel representation, VeloFCN [17] projects point cloud to the front view, obtaining a 2D point map. 
+- In addition to the 3D voxel representation, VeloFCN [17] projects point cloud to the front view, obtaining a 2D point map. 
  - They apply a fully convolutional network on the 2D point map and predict 3D boxes densely from the convolutional feature maps.
  
 - [24, 18, 12] investigate volumetric and multi-view representation of point cloud for 3D object classification. 
@@ -116,7 +116,7 @@ The main idea for utilizing multimodal information is to perform `region-based` 
 
 In this work, we encode 3D point cloud with multi-view feature maps, enabling region-based representation for multimodal fusion
 
-
+```
 [22] S. Song and J. Xiao. Sliding shapes for 3d object detection in depth images. In ECCV. 2014.
 [26] D. Z. Wang and I. Posner. Voting for voting in online point cloud object detection. In Proceedings of Robotics: Science and Systems, 2015.
 [23] S. Song and J. Xiao. Deep sliding shapes for amodal 3d object detection in rgb-d images. In CVPR, 2016. 
@@ -126,6 +126,7 @@ In this work, we encode 3D point cloud with multi-view feature maps, enabling re
 [24] H. Su, S.Maji, E.Kalogerakis, and E. Learned-Miller. Multiview convolutional neural networks for 3d shape recognition. In ICCV, 2015. 
 [18] C. R. Qi, M. N. H. Su, A. Dai, M. Yan, and L.Guibas. Volumetric and multi-view cnns for object classification on 3d data. In CVPR, 2016. 
 [12] V. Hegde and R. Zadeh. Fusionnet: 3d object classification using multiple data representations. CoRR, abs/1607.05695, 2016. 
+```
 
 ### 2.2 3D Object Detection in Images. 
 
