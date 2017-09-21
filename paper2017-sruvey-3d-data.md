@@ -186,5 +186,74 @@ In their final model, the class labels were extracted directly from the orientat
 
 #### E. Convolutional AutoEncoder Extreme Learning Machine (CAE-ELM)
 
+A new 3D descriptor learning method combining the strengths of CNNs, AEs, and ELMs
+
+구성 요소 
+- Convolutional feature map generation: 
+    - in this part of the network, the 3D input data, that is, voxel and Signed Distance Field (SDF) data, were convolved with randomly generated 3D kernels and convolutional feature maps were computed. 
+    - Following, average pooling was applied to the feature maps in order to maintain rotation invariance. 
+- AE descriptors extraction: 
+    - after pooling, each feature map was provided as input to a separate AE. 
+    - All AEs were originally initialized with random weights and their final (output) weights were learned via training. 
+- ELM classifier
+    - in the last part of the network, all descriptors extracted from the AEs were concatenated into a vector that was used for predicting the current 3D shape’s label.
+
+성능평가 결과 ShapeNets(Wu et al. [2015])보다 좋은 성과를 보임 
+
+
+
+##### F. Mesh Convolutional Restricted Boltzmann Machines (MCRBMs)
+learning high discriminative 3D features from 3D meshes. , Han et al. [2016] 
+
+- The learned features were designed to preserve the structure between local regions and can be used as local or global features. 
+- A novel raw representation of the local region, called Local Function Energy Distribution (LFED), was provided as input to the network. 
+- In addition, Multiple MCRBMs were combined forming a deeper model, named Mesh Convolutional
+Deep Belief Network (MCDBN). 
+
+
+#### G. 성능 향상 제안 
+
+Qi et al. [2016] elaborated on two factors
+- The first proposed CNN included a 3D extension of the `mlpconv layers` proposed in Lin et al. [2013] 
+- The second CNN initially took advantage of long anisotropic kernels to consider long-distance interactions and exploited an adapted NIN network [Lin et al. 2013]
+
+```
+C. R. Qi, H. Su, M. Niessner, A. Dai, M. Yan, and L. J. Guibas. 2016. Volumetric and multi-view CNNs for object classification on 3D data.arXiv preprint arXiv:1604.03265v2 (2016).
+```
+
+
+
+#### H. Voxception-ResNet (VRN)
+
+> 여러 DLL 기술들을 적용하여 성능 향상 
+
+voxel-based (i.e., fully 3D) models for shape modeling and 3D object classification
+
+The authors took advantage of recent advancements in the field of DNNs and designed an architecture that relied on 
+- (i) inception-style modules [Szegedy et al. 2016], 
+- (ii) batch normalization [Ioffe and Szegedy 2015], 
+- (iii) residual connections with preactivation (He et al. [2015a, 2016]) 
+- (iv) stochastic network depth [Huang et al. 2016]. 
+
+The proposed model,Voxception-ResNet (VRN), is 45 layers deep. 
+
+It should be noted that significant data augmentation was required for training such a deep model.
+
+```
+A. Brock, Th. Lim, J. M. Ritchie, and N. Weston. 2016. Generative and discriminative voxel modeling with convolutional neural networks.CoRR abs/1608.04236 (2016).
+```
+
+#### I. Deep Sliding Shapes
+
+A pipeline for 3D object detection and recognition in RGB-D scenes was presented in Song and Xiao [2016]. 
+
+
+- 흥미로운 점은 depth channel을 사용하는 대신 TSDF를 이용하여 full 3D voxel grid 컨버젼 하는 방법을 채택 한것이다. `Interestingly, instead of just working on the depth channel, Song and Xiao exploited the raw 3D information of the scenes by converting each depth image to a full 3D voxel grid using a directional Truncated Signed Distance Function (TSDF). `
+
+- A fully 3D convolutional network, called 3D Region Proposal Network (RPN), was then utilized in order to generate 3D object bounding boxes from the 3D voxel grid at two different scales so that it could handle different object sizes. 
+
+- Objectness scores were also provided for each generated object proposal. 
+
+- Moreover, each detected 3D proposal box and its corresponding 2D color patch (i.e., 2D projection of the 3D proposal) were fed to a 3D ConvNet and a 2D ConvNet, respectively, for jointly learning the object’s category and 3D box regression. 
 
 
