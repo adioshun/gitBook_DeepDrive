@@ -85,11 +85,106 @@ Existing approaches on 3D object retrieval can be divided into [Gao and Dai 2014
 ## 4. ADVANCES IN DEEP LEARNING WITH 3D DATA
 
 
+연구분야 (5개)
+
+- 입력으로 사용할 descriptors 추출 : The first category includes methods that extract descriptors from the 3D data and give these as input to the DNN. 
+- 데이터 수집 : The approaches belonging to the second category exploit RGB-D data (i.e., separate color and depth channels) captured from popular low-cost cameras like Microsoft’s Kinect. 
+- 아키텍쳐 설계 : Deep architectures designed to have direct access to the 3D data form the third category. 
+- The fourth category includes methods utilizing one or more 2D projections/views of the 3D object/scene captured from different viewpoints and use them to feed the employed deep model. 
+- DL methods designed for data captured from hyperspectral cameras are included in the last category.
+
+### 4.1. DL Architectures Exploiting Descriptors Extracted from 3D Data
+
+- A common practice is to extract **low-level descriptors** and then, provide them as input to a DNN in order to get a more effective high-level representation for recognition, retrieval, or other tasks.
+
+> 여러 가공된 Feature들이 있지만 가장 좋은건 Raw정보를 입력 하는것 아닌가? 
+
+### 4.2. DL Architectures Exploiting RGB-D Data
+
+A study of data fusion methods for RGB-D visual recognition can be found in Sanchez-Riera et al. [2016].
+
+RGB-D data를 이용한 최초의 3D 물체 식별 방법은 `Socher et al. [2012]`에 의해 제안 되었다. 
+- The authors proposed a combination of convolutional and recursive neural networks where color and depth channels were processed separately. 
+ - At first, two single-layer CNNs were employed in order to extract low-level descriptors from the RGB and depth images. 
+ - Then, each CNN’s output was forwarded to a different set of RNNs initialized with random weights. 
+ - The RNN descriptors extracted from each modality were finally merged and provided to a joint softmax classifier. 
+ - The proposed method demonstrated accurate performance in classifying household objects. 
 
 
+Couprie et al. [2013] used a multiscale CNN for semantic segmentation of indoor RGB-D scenes.
+- The network processed the input depth and RGB images at three different scales 
+- the upsampled results were combined and forwarded to a classifier in order to get object class labels. 
+- The final labeling of the scene was obtained by merging the classi-fier’s predictions with a superpixels segmentation of the scene performed in parallel
 
 
+The possibility of using transfer learning(전이학습) between CNNs for object recognition was investigated in Alexandre [2014]. 
+- The author proposed the employment of four independent CNNs for processing the four input channels of an RGB-D image. 
+- The four CNNs were trained sequentially, passing the weights of a trained CNN as input to the next. 
+- Experiments on 3D objects from 10 categories indicated that the proposed training strategy can boost the performance.
 
+```
+R. Socher, B. Huval, B. Bhat, C. D. Manning, and A. Y. Ng. 2012. Convolutional-recursive deep learning for 3D object classification. InAdvances in Neural Information Processing Systems 25 . 656–664.
+C. Couprie, C. Farabet, L. Najman, and Y. Lecun. 2013. Indoor semantic segmentation using depth informa-tion.CoRR abs/1301.3572 (2013).
+```
+
+The task of RGB-D **object recognition** was also addressed by Eitel et al. [2015]. 
+- A two-stream CNN architecture for RGB-D object recognition was designed in this work too. 
+- Each stream (one for color and the other for depth) contained five convolutional and two FC layers. 
+- The two streams were originally trained individually and afterward, they were fused together in a FC layer and a softmax classifier. 
+- The two CNNs employed for recognition were pretrained for the task of object classification on the ImageNet dataset hence, preprocessing of the input data (especially depth) was required. 
+
+
+```
+A. Eitel, J. T. Springenberg, L. Spinello, M. Riedmiller, and W. Burgard. 2015. Multimodal deep learning for robust RGB-D object recognition. InIEEE/RSJ International Conference on IROS 
+```
+
+
+### 4.3. DL Architectures Exploiting Directly 3D Data
+
+최근 들어 3D Geo정보를 통채로 이용하는 방법이 개발 되기 시작 하였다. 
+
+#### A. 3D ShapeNets `Wu et al. [2015]`
+
+- 3D shapes were provided as input (a 3D voxel grid where each voxel was a binary variable indicating whether it belonged to the 3D shape or it was empty space), while the DBN model was employed. 
+- In order to diminish the huge number of parameters required from feeding a fully connected DBN with a 3D voxel volume of normal resolution, convolution with 3D filters was applied. 
+- Most specifically, a Convolutional Deep Belief Network (CDBN) with five layers (three convolutional, one fully connected, and one output layer) was proposed. 
+- The model was initially pretrained layerwise and afterward, fine-tuned by backpropagation. 
+- Standard contrastive divergence was used for training the first four layers, but the more sophis-ticated Fast Persistent Contrastive Divergence (FPCD) was employed for training the top layer. 
+- The proposed framework was tested on the tasks of 3D shape classification and retrieval, next-best view prediction, and view-based 2.5D recognition outperform-ing other state-of-the-art methods.
+
+#### B. ModelNet 
+
+- `ShapeNets` 저자 발표 
+- large-scale 3D dataset with CAD models from 662 unique categories.
+
+#### C. VoxNet
+
+![](https://i.imgur.com/TJZTH2r.png)
+
+Maturana and Scherer have also employed volumetric (i.e., spatially 3D) representation of the 3D data to perform 3D object recognition [Maturana and Scherer 2015]. 
+
+- In the proposed VoxNet architecture, a volumetric occupancy grid of size 32×32× 32 voxels was at first generated from a point cloud’s segment that was then given as input to a CNN. 
+- The employed network was constructed using two convolutional (with 3D filters), one pooling, and two FC layers, while it was trained using SGD with momentum. 
+- An object class label was finally predicted for each seg-ment. 
+- Data from three different domains were used for evaluating VoxNet.
+    - LIDAR data point clouds
+    - RGB-D point clouds
+    - CAD models 
+
+#### D. boosted VoxNet
+Sedaghat et al. [2016] modified VoxNet’s architecture in such a way that the object’s orientation was taken into account. 
+
+In their final model, the class labels were extracted directly from the orientation activations. 
+
+
+```
+[3D ShapeNets] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang, and J. Xiao. 2015. 3D shapenets: A deep representation for volumetric shapes. InIEEE Conference on Computer Vision and Pattern Recognition . 1912–1920.
+[VoxNet] D. Maturana and S. Scherer. 2015. VoxNet: A 3D convolutional neural network for real-time object recogni-tion. InIEEE/RSJ International Conference on Intelligent Robots and Systems . 922–928
+[boosted VoxNet] N. Sedaghat, M. Zolfaghari, and Th. Brox. 2016. Orientation-boosted voxel nets for 3D object recognition. CoRR abs/1604.03351 (2016).
+```
+
+
+#### E. Convolutional AutoEncoder Extreme Learning Machine (CAE-ELM)
 
 
 
