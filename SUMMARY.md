@@ -15,14 +15,12 @@
 
 * [Paper\_2016\_SqueezeDet](paper2016-squeezedet.md)
 
-
 ## 3D CNN-PointCloud
 
 * [Paper\_2015\_VoxNet](papervoxnet.md)
 * [Paper\_2016\_Vote3Deep](papervote3deep.md)
 * [Paper\_2016\_VeloFCN4VD\(30%\)](paper2016-velofcn4vd.md)
 * [Paper\_2017\_FCN4VD \(30%\)](paper3d-cnn.md)
-* [Paper\_MovileNet](papermovilenet.md)
 * [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 * [Paper\_2016\_PointNet](paper2016-pointnet.md)
@@ -32,14 +30,12 @@
 
 * [Paper\_Monocular 3D](papermonocular-3d.md)
 
-
 ## Sensorfusion
+
 * [Paper\_2017\_Multiview\_3D\_CNN\(70%\)](papermultiview-3d-cnn.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
   * [code\_MV3D\_TF](papermultiview-3d-cnn/codemv3d-tf.md)
 * [Sensor\_Fusion](sensorfusion.md)
-
-
 
 ## 참고
 
