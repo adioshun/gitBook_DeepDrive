@@ -10,6 +10,7 @@
   * [ROS bags-TO-Point Clods.ipynb](https://gist.github.com/anonymous/e675ea14113252be321320be62248034)
   * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
 * [Paper\_2017\_Survey](paper2017-survey.md)
+* [Paper\_2016\_DeepSlidingShape](paper2016-deepslidingshape.md)
 
 ## 2D CNN
 
