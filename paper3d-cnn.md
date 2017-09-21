@@ -1,9 +1,9 @@
 |논문명|3D Fully Convolutional Network for Vehicle Detection in Point Cloud
 |-|-|
 |저자(소속)|Bo Li (Baidu)|
-|학회/년도|2017, [논문](https://arxiv.org/pdf/1611.08069.pdf)|
+|학회/년도|Nov. 2016 ~ Jan. 2017, [논문](https://arxiv.org/abs/1611.08069)|
 |키워드|project range scans as 2D maps similar to the depthmap of RGBD data |
-|참고|[2016논문](https://arxiv.org/pdf/1608.07916.pdf)|
+|참고|[이전 논문(Aug. 2016)](https://arxiv.org/pdf/1608.07916.pdf)|
 |코드|[TF](https://github.com/yukitsuji/3D_CNN_tensorflow)|
 
 # 3D CNN for Vehicle Detection 
