@@ -13,9 +13,9 @@
 
 ## 3D CNN
 
-* [Paper\_2016\_VeloFCN4VD](paper2016-velofcn4vd.md)
-* [Paper\_3D\_CNN for Vehicle\_Bo Li](paper3d-cnn.md)
-* [Paper\_2017\_Multiview\_3D\_CNN](papermultiview-3d-cnn.md)
+* [Paper\_2016\_VeloFCN4VD\(30%\)](paper2016-velofcn4vd.md)
+* [Paper\_3D\_CNN for Vehicle\_Bo Li \(30%\)](paper3d-cnn.md)
+* [Paper\_2017\_Multiview\_3D\_CNN\(70%\)](papermultiview-3d-cnn.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
   * [code\_MV3D\_TF](papermultiview-3d-cnn/codemv3d-tf.md)
 * [Paper\_MovileNet](papermovilenet.md)
