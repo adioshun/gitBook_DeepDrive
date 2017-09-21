@@ -46,7 +46,16 @@
 from unknown space. 
 
     - In addition, features based on point clouds often require spatial neighborhood queries, which can quickly become intractable(고치기 어려운) with large numbers of points.
-    
+
+```
+[10] A. Frome, D. Huber, and R. Kolluri, “Recognizing objects in range data using regional point descriptors,” ECCV, vol. 1, pp. 1–14, 2004.
+[11] J. Behley, V. Steinhage, and A. B. Cremers, “Performance of histogram descriptors for the classification of 3D laser range data in urban environments,” in ICRA, 2012, pp. 4391–4398.
+[12] A. Teichman, J. Levinson, and S. Thrun, “Towards 3D object recognition via classification of arbitrary object tracks,” in ICRA, 2011, pp. 4034–4041.
+[13] A. Golovinskiy, V. G. Kim, and T. Funkhouser, “Shape-based recognition of 3D point clouds in urban environments,” ICCV, 2009.
+[14] D. Munoz, N. Vandapel, and M. Hebert, “Onboard contextual classification of 3-D point clouds with learned high-order markov random fields,” in ICRA, 2009.
+[15] H. Koppula, “Semantic labeling of 3D point clouds for indoor scenes,”NIPS, 2011.
+[16] X. Ren, L. Bo, and D. Fox, “RGB-(D) scene labeling: Features and algorithms,” in CVPR, 2012.
+```        
     
 ### 2.2 2.5D Convolutional Neural Networks
 
@@ -57,6 +66,13 @@ from unknown space.
 - 단점 #1 : geometric information를 제대로 활용 못함 
 - 단점 #2 : integrate information across viewpoints하기 어려움 
 
+```
+[17] I. Lenz, H. Lee, and A. Saxena, “Deep learning for detecting robotic grasps,” in RSS, 2013.
+[18] Richard Socher and Brody Huval and Bharath Bhat and Christopher D.Manning and Andrew Y. Ng, “Convolutional-Recursive Deep Learning for 3D Object Classification,” in NIPS, 2012.
+[19] L. A. Alexandre, “3D object recognition using convolutional neural networks with transfer learning between input channels,” in IAS, vol. 301, 2014.
+[20] N. Hoft, H. Schulz, and S. Behnke, “Fast semantic segmentation of RGBD scenes with gpu-accelerated deep neural networks,” in 37th Annual German Conference on AI, 2014, pp. 80–85.
+```
+
 #### B. LiDAR
 
 - [4] propose a feature that locally describes scans with a 2.5D representation, 
@@ -64,6 +80,12 @@ from unknown space.
 - [21] studies this approach in combination with a form of unsupervised feature learning. 
 
 - [22] propose an encoding that makes better use of the 3D information in the depth, but is still 2D-centric. 
+
+```
+[4] A. Quadros, J. Underwood, and B. Douillard, “An occlusion-aware feature for range images,” in ICRA, May 14-18 2012.
+[21] M. De Deuge, A. Quadros, C. Hung, and B. Douillard, “Unsupervised feature learning for classification of outdoor 3d scans,” in ACRA, 2013.
+[22] S. Gupta, R. Girshick, P. Arbelaez, and J. Malik, “Learning rich features ´from RGB-D images for object detection and segmentation,” in ECCV, 2014.
+```
 
 ### 2.3 3D Convolutional Neural Networks
 
@@ -76,7 +98,12 @@ from unknown space.
 - [25] uses an unsupervised volumetric feature learning approach as part of a pipeline to detect indoor objects. 
     - This approach is based on `sparse coding`, which is generally slower than convolutional models. 
 
--[26] propose a generative 3D convolutional model of shape and apply it to RGBD object recognition, among other tasks. 
+- [26] propose a generative 3D convolutional model of shape and apply it to RGBD object recognition, among other tasks. 
+
+```
+[25] K. Lai, L. Bo, and D. Fox, “Unsupervised feature learning for 3D scene labeling,” in ICRA, 2014.
+[26] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang, and J. Xiao, “3d shapenets: A deep representation for volumetric shape modeling,” in CVPR, 2015.
+```
 
 #### B. LiDAR 
 
@@ -86,5 +113,11 @@ from unknown space.
     - Compared to this work, we tackle a more general objectre cognition task with 3D data from different modalities. 
 
 We also study different representations of occupancy and propose techniques to improve performance when the data varies significantly in scale and orientation
+
+```
+[27] D. Prokhorov, “A convolutional learning system for object classification in 3-D lidar data,” IEEE TNN, vol. 21, no. 5, pp. 858–863, May 2010.
+[28] D. Maturana and S. Scherer, “3D convolutional neural networks for landing zone detection from lidar,” in ICRA, 2015.
+```
+
 
 ## 3. Approach
