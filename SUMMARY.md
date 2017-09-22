@@ -11,6 +11,7 @@
   * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
 * [Paper\_2017\_Survey\_CV4Vehicle](paper2017-survey.md)
 * [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
+* [Paper\_2017\_3D Object Proposals](paper2017-3d-object-proposals.md)
 
 ## 2D CNN
 
