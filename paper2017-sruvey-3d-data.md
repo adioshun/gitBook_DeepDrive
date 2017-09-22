@@ -245,7 +245,7 @@ A. Brock, Th. Lim, J. M. Ritchie, and N. Weston. 2016. Generative and discrimina
 
 #### I. Deep Sliding Shapes
 
-A pipeline for 3D object detection and recognition in RGB-D scenes was presented in Song and Xiao [2016]. 
+A pipeline for 3D object detection and recognition in **RGB-D** scenes was presented in Song and Xiao [2016]. 
 
 
 - 흥미로운 점은 depth channel을 사용하는 대신 TSDF를 이용하여 full 3D voxel grid 컨버젼 하는 방법을 채택 한것이다. `Interestingly, instead of just working on the depth channel, Song and Xiao exploited the raw 3D information of the scenes by converting each depth image to a full 3D voxel grid using a directional Truncated Signed Distance Function (TSDF). `
@@ -255,5 +255,45 @@ A pipeline for 3D object detection and recognition in RGB-D scenes was presented
 - Objectness scores were also provided for each generated object proposal. 
 
 - Moreover, each detected 3D proposal box and its corresponding 2D color patch (i.e., 2D projection of the 3D proposal) were fed to a 3D ConvNet and a 2D ConvNet, respectively, for jointly learning the object’s category and 3D box regression. 
+
+### 4.4. DL Architectures Exploiting 2D Projections/Views of 3D Objects
+
+3D를 여러개의 2D로 투영하여 활용하는것은 일종의 `트릭`으로 많이 사용되고 있다. 
+`Collecting multiple 2D projections rendered from different directions in order to rep-resent a 3D shape/object is a “trick” commonly adopted for 3D shape analysis and understanding.`
+
+
+#### A. 최초 도입한 논문 
+
+In the aforementioned work, an AE was used in order to generate a global deep representation of a 3D shape for the application scenario of 3D shape retrieval. 
+
+Pose normalization for differences in translation and scale was initially applied to each 3D model, while a set of 2D projections was subsequently collected for each of them. 
+
+After pretraining the stacked RBMs with the projections, the AE was fine-tuned using back-propagation in order to minimize the reconstruction error. 
+
+Finally, the hidden (code) layer was used for representing the corresponding projection/view of the 3D shape in the retrieval process. 
+
+Since more than one code was generated for each model (one per projection), a variant of the Hausdorff distance was used to compute the distance between the final representations of two different 3D shapes. 
+
+
+```
+Z. Zhu, X. Wang, S. Bai, C. Yao, and X. Bai. 2014. Deep learning representation using autoencoder for 3D shape retrieval.CoRR abs/1409.7164 (2014).
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
