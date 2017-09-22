@@ -16,6 +16,23 @@
 
 ## 참고 논문
 
+0. Unsupervised Depth Estimation. [[Garg, ECCV '16]](http://arxiv.org/abs/1603.04992)
+0. LIDAR point upsampling. [[Schneider, Arxiv '16]](https://arxiv.org/abs/1608.00753)
+0. Unified multi-scale CNN. (KITTI: 8th car, 1st ped) [[Cai, ECCV '16]](http://arxiv.org/abs/1607.07155) [[Home]](https://sites.google.com/site/zhaoweicai1989/) [[Code]](https://github.com/zhaoweicai/mscnn) [[Video]](https://www.youtube.com/watch?v=NQFCURgv_cY&feature=youtu.be)
+0. Subcategory-aware CNN. (KITTI: 7th car, 3rd ped)) [[Xiang, Arxiv '16]](http://arxiv.org/abs/1604.04693) [[Home]](https://yuxng.github.io/)
+0. Exploit all layers. (KITTI: 10th car, 5th ped) [[Yang, CVPR '16]](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Exploit_All_the_CVPR_2016_paper.pdf) [[Home]](http://www.umiacs.umd.edu/~fyang/)
+0. 2D/3D Sensor Exploitation and Fusion for Enhanced Object Detection (Similar to ours) [[Xu, CVPRW '14]](http://www.cv-foundation.org/openaccess/content_cvpr_workshops_2014/W19/papers/Xu_2D3D_Sensor_Exploitation_2014_CVPR_paper.pdf)
+ 
+
+
++ 3D Object Proposals for Accurate Object Class Detection [[Chen, NIPS 15]](http://papers.nips.cc/paper/5644-3d-object-proposals-for-accurate-object-class-detection) [[Project]](http://www.cs.toronto.edu/objprop3d/) [[Code]](http://www.cs.toronto.edu/objprop3d/downloads.php)
++ Multiview random forest of local experts combining rgb and lidar data for pedestrian detection [[Gonzalez, IV '15]](https://scholar.google.de/scholar?q=Multiview%20Random%20Forest%20of%20Local%20Experts%20Combining%20RGB%20and%20LIDAR%20data%20%20for%20Pedestrian%20Detection)
++ Voting for Voting in Online Point Cloud Object Detection [[Wang, RSS '15]](http://www.roboticsproceedings.org/rss11/p35.pdf) [[Project]](http://mrg.robots.ox.ac.uk/vote3d/)
++ Pedestrian Detection Combining RGB and Dense LIDAR Data [[Premebida, IROS '14]](https://people.eecs.berkeley.edu/~carreira/papers/iros2014.pdf) [[Project]](http://home.isr.uc.pt/~cpremebida/IROS14/LaserVisionFusion.html) [[Code]](http://home.isr.uc.pt/~cpremebida/IROS14/Codes_CP_IROS2014.zip)
++ Vehicle Detection from 3D Lidar Using Fully Convolutional Network [[Li, RSS '16]](http://www.roboticsproceedings.org/rss12/p42.pdf)
++ Visual Object Recognition with 3D-Aware Features in KITTI Urban Scenes [[Yebes, Sensors '15]](http://www.mdpi.com/1424-8220/15/4/9228/htm)
+
+
 ### 1. 3D DL 
 
 [Instant Object Detection in Lidar Point Clouds](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7927715&tag=1)
@@ -67,4 +84,30 @@
 https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=3D_CNN_Trend.xml#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D0B6Ry8c3OoOuqVUh1b2tyc2lhMEE%26export%3Ddownload
 
 
-Deep S.Shape(2016)[23] 
+
+---
+
++ KITTI [[Link]](http://www.cvlibs.net/datasets/kitti/)
+	+ Stereo, Lidar, GPS		
+	+ Classes: Car, Pedestrian, Cyclist
+	+ GT: Bounding box
++ Cityscapes [[Link]](https://www.cityscapes-dataset.com/)
+	+ Stereo, Timestamp		
+	+ Groups: flat, human, vehicle, construction, object, nature, sky, void
+	+ GT: Dense pixel-level annotations 
++ Virtual KITTI [[Link]](http://www.xrce.xerox.com/Research-Development/Computer-Vision/Proxy-Virtual-Worlds)
+	+ Mono (forward / 15-deg-right, 15-deg-left)
+	+ Classes: Car, Pedestrian, Cyclist
+	+ GT: Bounding box, Instance-level pixel annotations, Optical-flow, Depth	
+	+ Weather conditions: morning, sunset, overcast, fog, rain
++ Synthia [[Link]](http://synthia-dataset.net/)
+	+ 8 RGB (form binocular 360 deg), 8 depth sensors
+	+ Classes: misc, sky, building, road, sidewalk, fence, vegetation, pole, car, sign, pedestrian, cyclist, lanemarking
+	+ GT: Instance-level pixel annotations
+	+ Seasons: winter, fall, spring, summer
+	+ Lightings: dynamic light, shadows, day-time, rain, night-time
+
+
+
+
+
