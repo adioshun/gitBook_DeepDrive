@@ -10,3 +10,7 @@
 
 
 # Monocular 3D 
+
+![](http://3dimage.ee.tsinghua.edu.cn/files/XiaozhiChen/mono3d/mono3d_head.jpg)
+
+MV3D저자 

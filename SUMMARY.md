@@ -11,7 +11,6 @@
   * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
 * [Paper\_2017\_Survey\_CV4Vehicle](paper2017-survey.md)
 * [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
-* [Paper\_2017\_3D Object Proposals](paper2017-3d-object-proposals.md)
 
 ## 2D CNN
 
@@ -29,7 +28,8 @@
 
 ## 3D CNN-Images
 
-* [Paper\_Monocular 3D](papermonocular-3d.md)
+* [Paper\_2017\_3D Object Proposals\_2017](paper2017-3d-object-proposals.md)
+* [Paper\_Monocular 3D\_2016](papermonocular-3d.md)
 * [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
 * [Paper\_2017\_3D BBox](paper2017-3d-bbox.md)
 
