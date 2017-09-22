@@ -1,7 +1,7 @@
 |논문명|Deep Learning Advances in Computer Vision with 3D Data: A Survey
 |-|-|
 |저자(소속)||
-|학회/년도| ACM Computing Surveys 2017, [논문](https://www.mendeley.com/viewer/?fileId=241a7816-fe42-e7ef-0a90-974189bcebfa&documentId=ca50a030-c06a-377c-812d-900466b273d3)|
+|학회/년도| [ACM Computing Surveys 2017](http://dl.acm.org/citation.cfm?id=3042064), [논문](https://www.mendeley.com/viewer/?fileId=241a7816-fe42-e7ef-0a90-974189bcebfa&documentId=ca50a030-c06a-377c-812d-900466b273d3)|
 |키워드||
 |참고|Chpter 4|
 |코드||
