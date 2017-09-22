@@ -1,4 +1,15 @@
 ![](https://i.imgur.com/OPatJnW.png)
+
+- Point cloud represents shapes as a collection of unordered 3d coordinates.
+
+- Polygonal mesh describes a shape by a set of polygonal faces.
+
+- Volumetric representation encodes a shape as 3d volumetric occupancy
+
+- Depth map is a very common 3d representation
+- Primitive-based CAD models use simple geometry such as cuboids and cylinders to assemble 3d shapes.
+
+
 # List 
 
 - [Awesome : Autonomous Vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles)
@@ -21,9 +32,9 @@
 
 # Material 
 
-- [Synthesize for Learning: Joint analysis of 2D images and 3D shapes](http://ai.stanford.edu/~haosu/slides/3dv.pptx)
+- ~~[Synthesize for Learning: Joint analysis of 2D images and 3D shapes](http://ai.stanford.edu/~haosu/slides/3dv.pptx)~~: ShapeNet (3D Datasets)
 
-- [3D Deep Learning on Geometric Forms](http://ai.stanford.edu/~haosu/slides/NIPS16_3DDL.pptx)
+- [3D Deep Learning on Geometric Forms](http://ai.stanford.edu/~haosu/slides/NIPS16_3DDL.pptx): [추천] 3D 모델들에 대한 설명, 3D DL 설명 
 
 - ~~[Scene Understanding with 3D Deep Networks](https://www.cs.princeton.edu/~funk/nips16.pdf)~~: 3D Match, Deep Sliding Shapes, SSCNet(Semantic Scene Completion)
 
@@ -53,11 +64,17 @@
 Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16.pdf): [추가자료](http://proceedings.mlr.press/v48/elhoseiny16-supp.pdf)
 
 - [3D Bounding Box Estimation Using Deep Learning and Geometry](https://arxiv.org/abs/1612.00496): (Submitted on 1 Dec 2016 (v1), last revised 10 Apr 2017 (this version, v2))
+
 + 3D Object Proposals for Accurate Object Class Detection [[Chen, NIPS 15]](http://papers.nips.cc/paper/5644-3d-object-proposals-for-accurate-object-class-detection) [[Project]](http://www.cs.toronto.edu/objprop3d/) [[Code]](http://www.cs.toronto.edu/objprop3d/downloads.php)
+
 + Multiview random forest of local experts combining rgb and lidar data for pedestrian detection [[Gonzalez, IV '15]](https://scholar.google.de/scholar?q=Multiview%20Random%20Forest%20of%20Local%20Experts%20Combining%20RGB%20and%20LIDAR%20data%20%20for%20Pedestrian%20Detection)
+
 + Voting for Voting in Online Point Cloud Object Detection [[Wang, RSS '15]](http://www.roboticsproceedings.org/rss11/p35.pdf) [[Project]](http://mrg.robots.ox.ac.uk/vote3d/)
+
 + Pedestrian Detection Combining RGB and Dense LIDAR Data [[Premebida, IROS '14]](https://people.eecs.berkeley.edu/~carreira/papers/iros2014.pdf) [[Project]](http://home.isr.uc.pt/~cpremebida/IROS14/LaserVisionFusion.html) [[Code]](http://home.isr.uc.pt/~cpremebida/IROS14/Codes_CP_IROS2014.zip)
+
 + Vehicle Detection from 3D Lidar Using Fully Convolutional Network [[Li, RSS '16]](http://www.roboticsproceedings.org/rss12/p42.pdf)
+
 + Visual Object Recognition with 3D-Aware Features in KITTI Urban Scenes [[Yebes, Sensors '15]](http://www.mdpi.com/1424-8220/15/4/9228/htm)
 
 
@@ -125,29 +142,6 @@ Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16
 
 https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=3D_CNN_Trend.xml#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D0B6Ry8c3OoOuqVUh1b2tyc2lhMEE%26export%3Ddownload
 
-
-
----
-
-+ KITTI [[Link]](http://www.cvlibs.net/datasets/kitti/)
-	+ Stereo, Lidar, GPS		
-	+ Classes: Car, Pedestrian, Cyclist
-	+ GT: Bounding box
-+ Cityscapes [[Link]](https://www.cityscapes-dataset.com/)
-	+ Stereo, Timestamp		
-	+ Groups: flat, human, vehicle, construction, object, nature, sky, void
-	+ GT: Dense pixel-level annotations 
-+ Virtual KITTI [[Link]](http://www.xrce.xerox.com/Research-Development/Computer-Vision/Proxy-Virtual-Worlds)
-	+ Mono (forward / 15-deg-right, 15-deg-left)
-	+ Classes: Car, Pedestrian, Cyclist
-	+ GT: Bounding box, Instance-level pixel annotations, Optical-flow, Depth	
-	+ Weather conditions: morning, sunset, overcast, fog, rain
-+ Synthia [[Link]](http://synthia-dataset.net/)
-	+ 8 RGB (form binocular 360 deg), 8 depth sensors
-	+ Classes: misc, sky, building, road, sidewalk, fence, vegetation, pole, car, sign, pedestrian, cyclist, lanemarking
-	+ GT: Instance-level pixel annotations
-	+ Seasons: winter, fall, spring, summer
-	+ Lightings: dynamic light, shadows, day-time, rain, night-time
 
 
 
