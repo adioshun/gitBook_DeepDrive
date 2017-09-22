@@ -485,13 +485,19 @@ H. F. M. Zaki, F. Shafait, and A. Mian. 2016. Convolutional hypercube pyramid fo
 
 ### 4.7. Overview of the DL Architectures Designed for 3D Data
 
-딥러닝 기술들이 1D, 2D용으로 개발 되었기 때문에 3D에 바로 적용하기는 어렵다. 본 챕터에서는 이를 해결하기 위한 5개 방법들을 기술 하였다. 
+딥러닝 기술들이 1D, 2D용으로 개발 되었기 때문에 3D에 바로 적용하기는 어렵다. 본 챕터에서는 이를 해결하기 위한 5개 Categories의 접근 방법들을 기술 하였다. 
+
+- 1. DL을 이용한 고수준 Descriptor
+- 2. 
+- 3. 2D CNN을 3D CNN으로 대체 
+- 4. 
+- 5. Multiview
 
 3D 데이터를 다루기 위해서 Feature Engineering기술을 활용 하여 왔다. 
 `In order to deal with the 3D data, many researchers took advantage of the developments in feature engineering. `
 
 
-Low-level 특징 추출은 CV분야에서 많 은 성과를 냈고, 다양한 descriptors 들이 3D data 분석에 제안 되었다. 
+Low-level 특징 추출은 CV분야에서 많은 성과를 냈고, 다양한 descriptors 들이 3D data 분석에 제안 되었다. 
 `Low-level feature extraction has been used in several computer vision tasks with great success and a large variety of local or global descriptors has been proposed for 3D data so far.`
 
 Low-level 특징은 3D 물체의 고수준 의미 분석에는 어렵기 때문에 DL기술을 이용하여서 [high-level descriptor]을 추출 한다. 
