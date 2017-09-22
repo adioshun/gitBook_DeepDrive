@@ -11,7 +11,6 @@
   * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
 * [Paper\_2017\_Survey\_CV4Vehicle](paper2017-survey.md)
 * [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
-* [Paper\_2016\_FusionNet](paper2016-fusionnet.md)
 
 ## 2D CNN
 
@@ -38,6 +37,7 @@
 * [Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
   * [code\_MV3D\_TF](papermultiview-3d-cnn/codemv3d-tf.md)
+* [Paper\_2016\_FusionNet](paper2016-fusionnet.md)
 * [Sensor\_Fusion](sensorfusion.md)
 
 ## 참고

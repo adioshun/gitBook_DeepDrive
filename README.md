@@ -9,9 +9,26 @@
 
 [Project: Development of AEB System for Pedestrian Protection (4th year)](https://github.com/nlkim0817/ProjAEB_4thYear)
 
-# 참고 논문
-
+# Post/Article
 - [3D Convolutional Neural Networks — A Reading List](http://davidstutz.de/3d-convolutional-neural-networks-a-reading-list/)
+
+
+
+## 참고 논문
+
+### 1. 3D DL 
+
+[Instant Object Detection in Lidar Point Clouds](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7927715&tag=1)
+
+[Fast LIDAR-based Road Detection Using Fully Convolutional Neural Networks](https://arxiv.org/abs/1703.03613): 2017.03
+
+### 2. Fusion 
+
+[Fusing LIDAR and images for pedestrian detection using convolutional neural networks](http://ieeexplore.ieee.org/abstract/document/7487370/): 2016.04
+
+### 3. RNN/RL
+
+[3DCNN-DQN-RNN: A Deep Reinforcement Learning Framework for Semantic Parsing of Large-scale 3D Point Clouds](https://arxiv.org/abs/1707.06783): 2017.07, 3D CNN + RNN + DQN
 
 # Datasets
 - Princeton Shape Benchmark (PSB) [Shilane et al. 2004] 
@@ -23,6 +40,11 @@
 - National Taiwan University (NTU) dataset [Chen et al. 2003] 
 
 - SHREC’09 [Godil et al. 2009]
+
+- [Semantic3D.net: A new Large-scale Point Cloud Classification Benchmark](https://arxiv.org/abs/1704.03847): 2017.04, Datasets, 도시, four billion~
+
+
+
 ---
 [3D Vehicle Detection](https://experiencor.github.io/sdc_3d.html)
 
