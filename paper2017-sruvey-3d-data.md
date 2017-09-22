@@ -456,10 +456,11 @@ X. Zhang, H. Zhang, Y. Zhang, Y. Yang, M. Wang, H. Luan, J. Li, and T. S. Chua. 
 
 > 3D volumetric + 2D pixel, AlexNet network사용
 
+In the work of Hegde and Zadeh [2016], a fusion of volumetric (i.e., 3D) and pixel (i.e., 2D views) representations was attempted for 3D object classification. 
 
+More specifically, the authors used AlexNet network [Krizhevsky et al. 2012] for the 2D views of each 3D object, while they proposed two 3D CNNs for the volumetric data. 
 
-
-In the work of Hegde and Zadeh [2016], a fusion of volumetric (i.e., 3D) and pixel (i.e., 2D views) representations was attempted for 3D object classification. More specifically, the authors used AlexNet network [Krizhevsky et al. 2012] for the 2D views of each 3D object, while they proposed two 3D CNNs for the volumetric data. The multiview network performed better on ModelNet40 than the volumetric ones, but the highest performance was achieved by the combination of the three different networks, namedFusionNet 
+The multiview network performed better on ModelNet40 than the volumetric ones, but the highest performance was achieved by the combination of the three different networks, named FusionNet 
 
 ```
 V. Hegde and R. Zadeh. 2016. FusionNet: 3D object classification using multiple data representations. CoRR abs/1607.05695 (2016)
@@ -471,9 +472,67 @@ V. Hegde and R. Zadeh. 2016. FusionNet: 3D object classification using multiple 
 
 In a similar vein, RGB, Depth, and Point Cloud data were combined in Zaki et al. [2016]. 
 
-Depth maps and point cloud embedding was initially performed, while a CNN pretrained on RGB images was employed for feature extraction. A Hypercube Pyramid descriptor was proposed for representing multiscale, spatially relevant information for object and instance classification using ELMs. The extracted descriptor was fused with the activations of the pretrained network’s FC layers creating an even more compact representation. The proposed approach was compared to state-of-the-art methods on two benchmark RGB-D datasets presenting superior performance in terms of recognition accuracy
+Depth maps and point cloud embedding was initially performed, while a CNN pretrained on RGB images was employed for feature extraction. 
+
+A Hypercube Pyramid descriptor was proposed for representing multiscale, spatially relevant information for object and instance classification using ELMs. 
+
+The extracted descriptor was fused with the activations of the pretrained network’s FC layers creating an even more compact representation. 
 
 
 ```
 H. F. M. Zaki, F. Shafait, and A. Mian. 2016. Convolutional hypercube pyramid for accurate RGB-D object category and instance recognition. InIEEE ICRA . 1685–1692
 ```
+
+### 4.7. Overview of the DL Architectures Designed for 3D Data
+
+딥러닝 기술들이 1D, 2D용으로 개발 되었기 때문에 3D에 바로 적용하기는 어렵다. 본 챕터에서는 이를 해결하기 위한 5개 방법들을 기술 하였다. 
+
+3D 데이터를 다루기 위해서 Feature Engineering기술을 활용 하여 왔다. 
+`In order to deal with the 3D data, many researchers took advantage of the developments in feature engineering. `
+
+
+Low-level 특징 추출은 CV분야에서 많 은 성과를 냈고, 다양한 descriptors 들이 3D data 분석에 제안 되었다. 
+`Low-level feature extraction has been used in several computer vision tasks with great success and a large variety of local or global descriptors has been proposed for 3D data so far.`
+
+Low-level 특징은 3D 물체의 고수준 의미 분석에는 어렵기 때문에 DL기술을 이용하여서 [high-level descriptor]을 추출 한다. 
+`Since low-level descriptors are usually not sufficient to characterize the high-level semantics of the 3D objects, the works in this category exploited them in combination with a deep model in order to extract high-level descriptors.`
+
+하지만, 3D데이터의 복잡성을 고려하면 'shallow representations'은 중요 정보를 놓쳐서 식별력이 부족할수 있다. 
+`However, considering the complexity of 3D data, this representation may be lacking discriminative power since the shallow representations may omit significant information from the 3D representation. `
+
+RGB-D센서는 색상과 깊이 정보를 가지고 있으며 보통 이둘을 분리 하여 활용 한다. 이 센서는 가격이 싸지만 대신에 노이즈와 완벽한 데이터 수집이 어렵다. 
+`RGB-D sensors provide the extra depth modality (in addition to the standard RGB channels) that contains important information about a 3D object’s shape. Most researchers dealt with color and depth channels (i.e., images) separately, while others used only the depth information in order to design their systems. The big advantage of these sensors is that they are inexpensive for an average user and at the same time many open-source software solutions exist facilitating their usage. However, their low cost is often combined with noisy and incomplete captured data that probably makes them unsuitable for complex scenarios. `
+
+2D CNN을 3D CNN으로 대체 하여 3D 데이터를 바로 사용 하려는 연구가 최근 진행 되고 있다. 
+`Exploiting directly the 3D information by replacing the 2D convolutional layers with 3D ones has been attempted by some recent works. `
+
+3D volumetric models은 3D 물체를 표현하는데 충분한 표현력을 가지고 있다. 
+`3D volumetric models provide a rich and powerful representation of 3D shapes including all the important details. `
+
+컴퓨팅 파워가 발전 하였지만 그래도 많은 메모리와 계산 시간은 부담스러운 요소이다. 결과적으로 최근까지는 저해상도가 주로 사용되었다. 
+`Despite the huge advancements made in computational hardware though, their processing is still demanding both in terms of memory and computation time. As a result, low resolutions have only been utilized so far.`
+
+###### Multiview
+
+일부 연구원들은 2D의 여러 각도이미지를 이용하는 방법(Multiview)을 통해 이를 해결 하였다. 
+`Other researchers approached the problem from a different angle and utilized one or more 2D views of a scene captured from different viewpoints (multiview). By doing so, the problem is indirectly transformed to the image domain, therefore multiview-based methods can take advantage of the latest advancements in image processing and are straightforward to employ. `
+
+하지만 몇가지 고려 사항들이 발생 하였다. `However, several concerns arise from their exploitation: `
+- (1) the full 3D geometry information of a 3D shape is lost in 2D views
+- (2) the number of views that should be acquired and the way in which they should be linked for representing a 3D shape is a critical step that could influence both the efficiency and the effectiveness of a proposed method.
+
+###### [ 3D object retrieval에 대한 방법 비교 ]
+![](https://i.imgur.com/BPq5k0P.png)
+
+- Regarding 3D shape retrieval, AEs are a typical choice.
+
+
+###### [ 3D object classification/recognition에 대한 방법 비교 ]
+![](https://i.imgur.com/i64SI7G.png)
+
+- DBNs and CNNs have been used extensively in 3D ob-ject classification and recognition.
+
+###### [ 정확도 성능 비교 ]
+![](https://i.imgur.com/NthVfjk.png)
+
+CV기반 방식보다 DL기반 방식이 3D 에서도 좋은 성능을 보이고 있다. 
