@@ -1,28 +1,38 @@
 ![](https://i.imgur.com/OPatJnW.png)
 # List 
 
-[Awesome Autonomous Vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles)
+- [Awesome : Autonomous Vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles)
 
-[Bookmark of 3D CNN Rearch](https://github.com/NotAndOr/bookmarks/blob/master/20170203.md)
+- [Paper : 3D Convolutional Neural Networks](http://davidstutz.de/3d-convolutional-neural-networks-a-reading-list/)
+
+
+---
 
 # Project
 
-[Project: Development of AEB System for Pedestrian Protection (4th year)](https://github.com/nlkim0817/ProjAEB_4thYear)
+~~[Project: Development of AEB System for Pedestrian Protection (4th year)](https://github.com/nlkim0817/ProjAEB_4thYear)~~
+
+---
 
 # Post/Article
-- [3D Convolutional Neural Networks — A Reading List](http://davidstutz.de/3d-convolutional-neural-networks-a-reading-list/)
+
+
+---
 
 # Material 
 
-- [Synthesize for Learning:Joint analysis of 2D images and 3D shapes](http://ai.stanford.edu/~haosu/slides/3dv.pptx)
+- [Synthesize for Learning: Joint analysis of 2D images and 3D shapes](http://ai.stanford.edu/~haosu/slides/3dv.pptx)
 
 - [3D Deep Learning on Geometric Forms](http://ai.stanford.edu/~haosu/slides/NIPS16_3DDL.pptx)
 
-- [Scene Understanding with 3D Deep Networks](https://www.cs.princeton.edu/~funk/nips16.pdf): 
+- ~~[Scene Understanding with 3D Deep Networks](https://www.cs.princeton.edu/~funk/nips16.pdf)~~: 3D Match, Deep Sliding Shapes, SSCNet(Semantic Scene Completion)
 
 - [Learning 3D representations,disparity estimation, and structure from motion](http://3ddl.cs.princeton.edu/2016/slides/brox.pdf): FlowNet, DispNet, DeMoN
 
-- [Scene Understanding with 3D Deep Networks](http://3ddl.cs.princeton.edu/2016/slides/funkhouser.pdf)
+
+
+
+---
 
 ## 참고 논문
 
@@ -72,6 +82,8 @@ Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16
 
 [3DCNN-DQN-RNN: A Deep Reinforcement Learning Framework for Semantic Parsing of Large-scale 3D Point Clouds](https://arxiv.org/abs/1707.06783): 2017.07, 3D CNN + RNN + DQN
 
+---
+
 # Datasets
 - Princeton Shape Benchmark (PSB) [Shilane et al. 2004] 
 
@@ -84,6 +96,8 @@ Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16
 - SHREC’09 [Godil et al. 2009]
 
 - [Semantic3D.net: A new Large-scale Point Cloud Classification Benchmark](https://arxiv.org/abs/1704.03847): 2017.04, Datasets, 도시, four billion~
+
+---
 
 # Workshop
 
