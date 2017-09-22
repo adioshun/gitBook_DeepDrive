@@ -485,7 +485,7 @@ H. F. M. Zaki, F. Shafait, and A. Mian. 2016. Convolutional hypercube pyramid fo
 
 ### 4.7. Overview of the DL Architectures Designed for 3D Data
 
-딥러닝 기술들이 1D, 2D용으로 개발 되었기 때문에 3D에 바로 적용하기는 어렵다. 본 챕터에서는 이를 해결하기 위한 5개 Categories의 접근 방법들을 기술 하였다. 
+딥러닝 기술들이 1D, 2D용으로 개발 되었기 때문에 3D에 바로 적용하기는 어렵다. 본 챕터에서는 이를 해결하기 위한 5개 Categories의 접근 방법들을 기술 하였다. (입력 데이터 처리 방식에 따라 분류 )
 
 - 1. DL을 이용한 고수준 Descriptor
 - 2. 
@@ -542,3 +542,20 @@ RGB-D센서는 색상과 깊이 정보를 가지고 있으며 보통 이둘을 �
 ![](https://i.imgur.com/NthVfjk.png)
 
 CV기반 방식보다 DL기반 방식이 3D 에서도 좋은 성능을 보이고 있다. 
+
+## 5. CONCLUSION AND DISCUSSION
+
+- DL 기술을 3D 데이터에 적용 하는 기술을 5개로 분류 (입력 데이터 처리 방식에 따라)
+`In this work, we classified methods applying DL tech-niques on 3D data into five categories based on how they treated the input data before feeding them to the employed DNN.`
+
+- 실험 결과 Multivew방식이 3D 정보를 통채로 사용하는 것보다 조금 성능 향상이 있음 
+Experimental results indicate in general a slight advantage of methods exploiting multiple 2D views for representing the 3D scene in comparison to those taking advantage of the full 3D geometry.
+
+- 3D model을 이용하여 성능 향상을 보였지만, 좀더 복잡한 구조와 Data augmentation 필요 함
+A recent work managed to achieve superior performance utilizing volumetric (i.e., 3D) models; however, a more complex architecture was proposed and notable data augmentation was required
+
+##### 향후 연구 방향 
+
+- RNN과 결합 :  Another current research trend, not applied yet in 3D, is the use of spatial RNNs, especially LSTM-based models. LSTMs have several desired properties, for example, they can be fine-tuned end-to-end and they allow variable lengths in in-put and output.
+
+- 시각화 기술 개발 : By visualizing how a network responds to a specific input, the opportunity to guide and improve its training process or its design arises.
