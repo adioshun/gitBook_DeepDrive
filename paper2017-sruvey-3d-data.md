@@ -262,7 +262,7 @@ A pipeline for 3D object detection and recognition in **RGB-D** scenes was prese
 `Collecting multiple 2D projections rendered from different directions in order to rep-resent a 3D shape/object is a “trick” commonly adopted for 3D shape analysis and understanding.`
 
 
-#### A. 최초 도입한 논문 
+#### A. 최초 도입한 논문 (2014)
 
 In the aforementioned work, an AE was used in order to generate a global deep representation of a 3D shape for the application scenario of 3D shape retrieval. 
 
@@ -280,7 +280,7 @@ Z. Zhu, X. Wang, S. Bai, C. Yao, and X. Bai. 2014. Deep learning representation 
 ```
 
 
-#### B. Stacked Local Convo-lutional AutoEncoder (SLCAE)
+#### B. Stacked Local Convo-lutional AutoEncoder (SLCAE) (2015)
 
 An AE was also adopted for 3D object retrieval in Leng et al. [2015a]. 
 
@@ -299,7 +299,7 @@ B. Leng, S. Guo, X. Zhang, and Z. Xiong. 2015. 3D object retrieval with stacked 
 ```
 
 
-#### C. 3D Convolutional Neural Network (3DCNN)
+#### C. 3D Convolutional Neural Network (3DCNN) (2016)
 
 Dealing with multiple 2D views of a 3D object at the same time.
  
@@ -323,8 +323,157 @@ B. Leng, Y. Liu, K. Yu, X. Zhang, and Z. Xiong. 2016. 3D object understanding wi
 ```
 
 
-#### D. 
+#### D. Multi-View CNN (MVCNN) (2015)
+
+![](https://i.imgur.com/31qOwzR.png)
+
+Multiple views of a 3D object were also exploited in the work of Su et al. [2015] in order to build a compact shape descriptor for the tasks of 3D object classification and retrieval.
+
+In order to obtain different views of the models, two setups were tested. 
+- The first setup included 12 rendered views of the 3D objects by placing an equal number of virtual cameras around them, while the second involved 80 views. 
+
+네트워크 
+- All the available views of an object passed through the first part of the network separately 
+- and then, elementwise max pooling was performed across all views in the view pooling layer. 
+- Finally, the aggregated result passed through the remaining network. 
+
+For retrieval, the penultimate seventh layer of the network (which is fully connected) was used as shape descriptor. 
+
+The employed network was pretrained using the ImageNet1K dataset and then, fine-tuned using the 3D dataset ModelNet40 [Wu et al. 2015] that was used in the experimental evaluation of the MVCNN architecture.
+
+
+제안된 Shape descriptors(여러 2D)는 3D ShapeNets of Wu et al. [2015]보다 좋은 성능 보임 
+
+```
+H. Su, S. Maji, E. Kalogerakis, and E. Learned-Miller. 2015. Multi-view convolutional neural networks for 3D shape recognition. InProceedings of the International Conference on Computer Vision (ICCV’15) 
+```
+
+#### E. Pairwise Multi-View CNN (2016)
+
+A different approach for exploiting the multiple views of a 3D object was followed by Johns et al. [2016] for the application scenario of multiview object recognition under unconstrained camera trajectories. 
+
+In this work, the collection of views was organized in **pairs** that were provided to a CNN together with their relative pose. 
+
+The VGG-M network [Chatfield et al. 2014] was employed in this case consisting of five convolutional and three FC layers. 
+
+입력 : Grayscale images + depth images 
+
+The outputs of the convolutional layers from the two images were concatenated before being provided to the first FC layer. 
+
+> 제안 방식은 voxel-based 3D ShapeNets [Wu et al. 2015],  MVCNN보다 좋은 성능 보임 
+
+
+
+```
+E. Johns, S. Leutenegger, and A. J. Davison. 2016. Pairwise decomposition of image sequences for active multi-view recognition. InProceedings of the IEEE Conference on CVPR . 3183–3822.
+```
+
+#### F. GIFT 
+
+A real-time 3D shape **search engine** based on 2D views of 3D objects was presented in Bai et al. [2016]. 
+
+The proposed system exploited GPU for CNN-based feature extraction and utilized two inverted files, 
+- one for accelerating the multiview matching process 
+- the other for re-ranking the initial results. 
+
+수초 이내에 retrieval process완료 가능. `The retrieval process for a query shape was reported to be completed within a second. `
+
+```
+S. Bai, X. Bai, Z. Zhou, Z. Zhang, and L. Jan Latecki. 2016. GIFT: A real-time and scalable 3D shape search engine. InIEEE Conference on Computer Vision and Pattern Recognition (CVPR) .
+```
+
+#### G. 2D view + 2D sketch (2015)
+
+> Sketch 데이터가 필요 하므로 참고 활용 어려움 - 생략 
+
+A different approach where 3D models were retrieved based on 2D sketches and 2D views has recently been presented in Wang et al. [2015]. More specifically, Wang et al. proposed an architecture that takes as input a {2D view + sketch} pair of an object. The model consisted of two Siamese CNNs (i.e., two identical subconvolutional networks), one for dealing with the 2D sketch of the 3D object to be retrieved and the other with the 2D view. The two subnetworks were trained separately using SGD and backpropagation. Each subnetwork contained three convolutional layers, each followed by a max-pooling layer, and one FC plus one output layer on top. Every 3D model was characterized by two randomly generated views as far as their angles differed morethan 45◦ . The proposed network was tested on three datasets and achieved the best performance.
+
+
+#### H. MVD-ELM
+
+Xie et al. [2015b] presented the Multi-View Deep Extreme Learning Machine (MVD-ELM) and tested it on the tasks of 3D shape classification and segmentation. 
+
+Each 3D shape was represented by a collection of **20 2.5D depth** images/projections captured uniformly using a sphere centered at each object. 
+
+The MVD-ELM model contained convolutional and pooling layers. 
+
+The weights in each convolutional layer were shared across all views. The output weights were optimized based on the extracted feature maps. 
+
+###### [확장버젼] FC-MVD-ELM
+
+A Fully Convolutional extension of the proposed model (FC-MVD-ELM) was also presented for the task of 3D shape segmentation. 
+
+This network contained only two convolutional layers without any pooling layer. 
+
+FC-MVD-ELM was trained using the multiview depth images of the training examples. 
+
+Then, all the predicted labels were projected back into the original 3D mesh. 
+
+Finally, the segmentation result was smoothed using graph cuts optimization.
+ 
+ 
+```
+Z. Xie, K. Xu, W. Shan, L. Liu, Y. Xiong, and H. Huang. 2015b. Projective feature learning for 3D shapes with multi-view depth images.Computer Graphics Forum (Proceedings of Pacific Graphics 2015) 34, 6 (2015).
+```
+
+
+#### I. sphere rendering
+
+> 비교 분석 내용 포함 : comparison of volumetric VS. multiview CNN
+
+For the case of multiview CNNs, Qi et al. proposed `sphere rendering` 
+
+sphere rendering is, multiresolution 3D filtering in order to exploit information from mul-tiple scales, and in combination with training data augmentation
+
+```
+C. R. Qi, H. Su, M. Niessner, A. Dai, M. Yan, and L. J. Guibas. 2016. Volumetric and multi-view CNNs for object classification on 3D data.arXiv preprint arXiv:1604.03265v2 (2016).
+```
+
+### 4.5. DL Architectures Exploiting HyperSpectral Data
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/HyperspectralCube.jpg/300px-HyperspectralCube.jpg)
+HyperSpectral Data, 인공위성등 -> 생략 
+
+### 4.6. DL Architectures Fusing Different 3D Data Modalities
+
+
+fusion of different data modalities 한 연구들 
+- Doulamis and Doulamis [2012]
+- Mart ́ ınez and Yannakakis [2014]
+- Xu et al. [2015a]
+- Zhang et al. [2016b]
+
+
+
+```
+N. Doulamis and A. Doulamis. 2012. Fast and adaptive deep fusion learning for detecting visual objects. In Proceedings of ECCV 2012. Workshops and Demonstrations . 345–354
+H. P. Mart ́ ınez and G. N. Yannakakis. 2014. Deep multimodal fusion: Combining discrete events and contin-uous signals. InProceedings of the 16th International Conference on Multimodal Interaction . 34–41
+Q. Xu, S. Jiang, W. Huang, F. Ye, and S. Xu. 2015a. Feature fusion based image retrieval using deep learning. Journal of Information and Computational Science 12, 6 (2015), 2361–2373.
+X. Zhang, H. Zhang, Y. Zhang, Y. Yang, M. Wang, H. Luan, J. Li, and T. S. Chua. 2016b. Deep fusion of multiple semantic cues for complex event recognition.IEEE TIP 25, 3 (2016), 1033–1046
+```
+
+#### A. FusionNet
+
+> 3D volumetric + 2D pixel, AlexNet network사용
 
 
 
 
+In the work of Hegde and Zadeh [2016], a fusion of volumetric (i.e., 3D) and pixel (i.e., 2D views) representations was attempted for 3D object classification. More specifically, the authors used AlexNet network [Krizhevsky et al. 2012] for the 2D views of each 3D object, while they proposed two 3D CNNs for the volumetric data. The multiview network performed better on ModelNet40 than the volumetric ones, but the highest performance was achieved by the combination of the three different networks, namedFusionNet 
+
+```
+V. Hegde and R. Zadeh. 2016. FusionNet: 3D object classification using multiple data representations. CoRR abs/1607.05695 (2016)
+```
+
+
+
+#### B. Convolutional hypercube pyramid
+
+In a similar vein, RGB, Depth, and Point Cloud data were combined in Zaki et al. [2016]. 
+
+Depth maps and point cloud embedding was initially performed, while a CNN pretrained on RGB images was employed for feature extraction. A Hypercube Pyramid descriptor was proposed for representing multiscale, spatially relevant information for object and instance classification using ELMs. The extracted descriptor was fused with the activations of the pretrained network’s FC layers creating an even more compact representation. The proposed approach was compared to state-of-the-art methods on two benchmark RGB-D datasets presenting superior performance in terms of recognition accuracy
+
+
+```
+H. F. M. Zaki, F. Shafait, and A. Mian. 2016. Convolutional hypercube pyramid for accurate RGB-D object category and instance recognition. InIEEE ICRA . 1685–1692
+```
