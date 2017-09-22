@@ -280,19 +280,50 @@ Z. Zhu, X. Wang, S. Bai, C. Yao, and X. Bai. 2014. Deep learning representation 
 ```
 
 
+#### B. Stacked Local Convo-lutional AutoEncoder (SLCAE)
+
+An AE was also adopted for 3D object retrieval in Leng et al. [2015a]. 
+
+In this method, an extension of the standard AE inspired from CNNs, called Stacked Local Convo-lutional AutoEncoder (SLCAE)
+
+A Local Convolutional Autoencoder (LCAE) is constructed by substituting the FC layers of a standard AE with locally connected layers using the convolution operation.
+
+In the stacked version of LCAE, many encoders were placed on top of each other and the output of the last one was used as the representation of a 3D object. 
+
+The input provided to the proposed AE was multiple depth images of several views of the 3D object, while each layer of the architecture was trained using the gradient descent method. 
 
 
 
+```
+B. Leng, S. Guo, X. Zhang, and Z. Xiong. 2015. 3D object retrieval with stacked local convolutional autoen-coder.Signal Processing 112, C (2015), 119–128
+```
+
+
+#### C. 3D Convolutional Neural Network (3DCNN)
+
+Dealing with multiple 2D views of a 3D object at the same time.
+ 
+Each object’s views were sorted into three reasonable sequences before being fed to the network, so that the views were listed in a fixed order. 
+
+The 3DCNN was comprised of four convolutional layers, three subsampling layers, and two FC layers. 
+
+Convolu-tional layers were initially pretrained in the same way of training an AE. 
+
+Afterward, the whole network was fine-tuned using backpropagation. 
+
+The output of the first FC layer was used as the representation of the input data for the retrieval.
+
+
+> 성능이 좋기는 하지만, SLCAE보다는 약함, indicates that the latter representation is probably a better choice for this task
 
 
 
+```
+B. Leng, Y. Liu, K. Yu, X. Zhang, and Z. Xiong. 2016. 3D object understanding with 3D convolutional neural networks.Information Sciences 336, C (Oct. 2016), 188–201
+```
 
 
-
-
-
-
-
+#### D. 
 
 
 

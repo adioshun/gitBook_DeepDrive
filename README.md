@@ -14,8 +14,15 @@
 - [3D Convolutional Neural Networks — A Reading List](http://davidstutz.de/3d-convolutional-neural-networks-a-reading-list/)
 
 # Datasets
-Experiments on two popular datasets, that is, Princeton Shape Benchmark (PSB) [Shilane et al. 2004] and Engineering Shape Benchmark (ESB) [Jayanti et al. 2006]
+- Princeton Shape Benchmark (PSB) [Shilane et al. 2004] 
 
+- Engineering Shape Benchmark (ESB) [Jayanti et al. 2006]
+
+- PSB [Shilane et al. 2004]
+
+- National Taiwan University (NTU) dataset [Chen et al. 2003] 
+
+- SHREC’09 [Godil et al. 2009]
 ---
 [3D Vehicle Detection](https://experiencor.github.io/sdc_3d.html)
 
