@@ -2,7 +2,7 @@
 |-|-|
 |저자(소속)| Charles R. Qi (Standford)|
 |학회/년도| 2016 , [논문](https://arxiv.org/abs/1604.03265)|
-|키워드| |
+|키워드|Volumetric CNN 성능향상, Multi-View CNNs 성능향상 |
 |참고||
 |코드||
 
