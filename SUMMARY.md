@@ -8,6 +8,7 @@
   * [ROS bags-TO-Image.ipynb](https://gist.github.com/anonymous/4857f8920c9fc901121a429ead32a7db)
   * [ROS bags-TO-Point Clods.ipynb](https://gist.github.com/anonymous/e675ea14113252be321320be62248034)
   * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
+  * [Read\_RGBD](pointcloud-data/readrgbd.md)
 * [Paper\_2017\_Survey\_CV4Vehicle](paper2017-survey.md)
 
 ## 2D CNN
