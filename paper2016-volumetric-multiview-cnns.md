@@ -199,3 +199,8 @@ The accuracy of this multi-view CNN is reported in blue.
 
 > 4장/5장에서 volumetric CNN/multi-view CNN의 성능 향상을 시도 한다. 
 
+## 4. Volumetric Convolutional Neural Networks
+
+
+
+## 5. Multi-View Convolutional Neural Networks
