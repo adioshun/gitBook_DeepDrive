@@ -12,9 +12,13 @@
 - Depth map is a very common 3d representation
 - Primitive-based CAD models use simple geometry such as cuboids and cylinders to assemble 3d shapes.
 
+---
+
+# List
+
 - [awesome-point-cloud-processing](https://github.com/mmolero/awesome-point-cloud-processing)
 
-- [Paper : 3D Convolutional Neural Networks](http://davidstutz.de/3d-convolutional-neural-networks-a-reading-list/)
+- [Paper Reading List : 3D Convolutional Neural Networks](http://davidstutz.de/3d-convolutional-neural-networks-a-reading-list/)
 
 
 ---
@@ -40,7 +44,7 @@
 
 - [Learning 3D representations,disparity estimation, and structure from motion](http://3ddl.cs.princeton.edu/2016/slides/brox.pdf): FlowNet, DispNet, DeMoN
 
-
+---
 
 
 ## Paper
@@ -48,9 +52,11 @@
 
 - [OctNet: Learning Deep 3D Representations at High Resolutions](https://arxiv.org/abs/1611.05009v4): 2016~2017
 
-- [Deep Semantic Classification for 3D LiDAR Data](https://arxiv.org/abs/1706.08355v1)
+- [Deep Semantic Classification for 3D LiDAR Data](https://arxiv.org/abs/1706.08355v1): 물체를 고정된, 움직이는, 움직일수 있는 것으로 3분류 
 
 - Unsupervised Depth Estimation. [[Garg, ECCV '16]](http://arxiv.org/abs/1603.04992)
+
+- [CNN-Based Object Segmentation in Urban LIDAR with Missing Points](http://ieeexplore.ieee.org/document/7785116/): 2016
 
 - LIDAR point upsampling. [[Schneider, Arxiv '16]](https://arxiv.org/abs/1608.00753)
 
@@ -76,29 +82,29 @@ Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16
 
 + Pedestrian Detection Combining RGB and Dense LIDAR Data [[Premebida, IROS '14]](https://people.eecs.berkeley.edu/~carreira/papers/iros2014.pdf) [[Project]](http://home.isr.uc.pt/~cpremebida/IROS14/LaserVisionFusion.html) [[Code]](http://home.isr.uc.pt/~cpremebida/IROS14/Codes_CP_IROS2014.zip)
 
-+ Vehicle Detection from 3D Lidar Using Fully Convolutional Network [[Li, RSS '16]](http://www.roboticsproceedings.org/rss12/p42.pdf)
++ ~~Vehicle Detection from 3D Lidar Using Fully Convolutional Network [[Li, RSS '16]](http://www.roboticsproceedings.org/rss12/p42.pdf)~~
 
 + Visual Object Recognition with 3D-Aware Features in KITTI Urban Scenes [[Yebes, Sensors '15]](http://www.mdpi.com/1424-8220/15/4/9228/htm)
 
 
-[Generalized Convolutional Neural Networks for Point Cloud Data](https://arxiv.org/abs/1707.06719v1): 2017
+- [Generalized Convolutional Neural Networks for Point Cloud Data](https://arxiv.org/abs/1707.06719v1): 2017
 
-### 1. 3D DL 
 
-[Instant Object Detection in Lidar Point Clouds](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7927715&tag=1)
 
-[Fast LIDAR-based Road Detection Using Fully Convolutional Neural Networks](https://arxiv.org/abs/1703.03613): 2017.03
+- ~~[Instant Object Detection in Lidar Point Clouds](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7927715&tag=1)~~
+
+- [Fast LIDAR-based Road Detection Using Fully Convolutional Neural Networks](https://arxiv.org/abs/1703.03613): 2017.03
 
 ### 2. Fusion 
 
-[Fusing LIDAR and images for pedestrian detection using convolutional neural networks](http://ieeexplore.ieee.org/abstract/document/7487370/): 2016.04
+- [Fusing LIDAR and images for pedestrian detection using convolutional neural networks](http://ieeexplore.ieee.org/abstract/document/7487370/): 2016.04
 
 
-[RegNet: Multimodal sensor registration using deep neural networks](http://ieeexplore.ieee.org/document/7995968/#full-text-section): 2017.06, LiDAR + monocular camera, 
+- [RegNet: Multimodal sensor registration using deep neural networks](http://ieeexplore.ieee.org/document/7995968/#full-text-section): 2017.06, LiDAR + monocular camera, 
 
-[Multi-Modal Obstacle Detection in Unstructured Environments with Conditional Random Fields](https://arxiv.org/abs/1706.02908): 2017.06
-- Unstructured Environments: 농장 
-- lidar + camera sensing using a conditional random field
+- [Multi-Modal Obstacle Detection in Unstructured Environments with Conditional Random Fields](https://arxiv.org/abs/1706.02908): 2017.06
+ - Unstructured Environments: 농장 
+ - lidar + camera sensing using a conditional random field
 
 ### 3. RNN/RL
 
