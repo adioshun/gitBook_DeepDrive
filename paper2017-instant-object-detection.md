@@ -2,11 +2,11 @@
 |-|-|
 |저자(소속)|Attila Börcs|
 |학회/년도| IEEE Letter 2017, [논문](http://ieeexplore.ieee.org/document/7927715/)|
-|키워드| |
-|참고||
+|키워드|4단계 Pipeline정의 |
+|참고|[Dataset](http://web.eee.sztaki.hu/i4d/SZTAKI-Velo64Road-DB.html)|
 |코드||
 
-> 제안 방식이 Old fashion인듯함 
+
 
 # Instant Object Detection in Lidar Point Clouds
 
@@ -80,4 +80,34 @@ Voxel-based approaches allow to perform a detailed interpretation of the scene [
 ```
 
 
+## 2. WORKFLOW OF THE PROPOSED MODEL
 
+목적 : Detect and localize all vehicles and pedestrians in the proximity of the mobile Lidar
+platform, as shown in Fig. 1. 
+
+###### [1단계] 4개의 영역으로 분류(지면, 낮은 물체, 높은 물체, 희미한 부분)
+First, the input point cloud is segmented into four regions: ground, low foreground, high foreground, and sparse areas. 
+- Low foreground is the estimated region of short street objects, such as cars, pedestrians, benches,mail boxes, billboards,
+- high foreground covers tall objects, among others building walls, trees, traffic signs, and lamp posts. 
+- Following the segmentation, ground and sparse areas are `removed`, as they are not used by the further processing steps. 
+
+###### [2단계] 낮은/높은 물체를 연결된 blob으로 나눔
+Second, both the low and high foreground regions are divided into connected blobs representing individual object candidates. 
+
+###### [3단계] Classification 
+Third, objects extracted from the low foreground region undergo an appearance-based classification, which provides evidences for discriminating vehicles and pedestrians from other street entities. 
+
+In parallel, large facade segments—called as anchor facades—are detected within the high foreground’s object set. 
+
+###### [4단계] 후처리 
+
+Fourth, the classification result of the previous purely appearance-based step is refined with
+contextual information, considering the relative positions of the various sorts of short objects and anchor facades.
+
+### 2.1  Point Cloud Segmentation
+
+### 2.2  Object Separation With Fast Connected Component Analysis
+
+### 2.3 Appearance-Based Object Recognition
+
+### 2.4 Contextual Labeling Refinement
