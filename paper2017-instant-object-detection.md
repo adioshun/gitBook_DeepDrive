@@ -3,8 +3,8 @@
 |저자(소속)|Attila Börcs|
 |학회/년도| IEEE Letter 2017, [논문](http://ieeexplore.ieee.org/document/7927715/)|
 |키워드|4단계 Pipeline정의 |
-|참고|[Dataset](http://web.eee.sztaki.hu/i4d/SZTAKI-Velo64Road-DB.html)|
-|코드||
+|참고|[Fast 3-D Urban Object Detection on Streaming Point Clouds, 2014](http://vigir.missouri.edu/~gdesouza/Research/Conference_CDs/ECCV_2014/workshops/w15/Paper%202.pdf)|
+|코드|[Dataset](http://web.eee.sztaki.hu/i4d/SZTAKI-Velo64Road-DB.html)|
 
 
 
