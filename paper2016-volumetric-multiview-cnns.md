@@ -188,13 +188,14 @@ However, the difference in input resolution is not the primary reason for this p
 
 ###### Network 
 
-
 We compare the two networks by providing them with data containing similar level of detail.
-To this end, we feed the multi-view CNN with renderings of
-the 30 × 30 × 30 occupancy grid using sphere rendering3
-,
-i.e., for each occupied voxel, a ball is placed at its center,
-with radius equal to the edge length of a voxel (Multi-View
-Sphere Rendering in Fig 1). We train the multi-view CNN
-from scratch using these sphere renderings. The accuracy
-of this multi-view CNN is reported in blue.
+
+To this end, we feed the multi-view CNN with renderings of the 30 × 30 × 30 occupancy grid using sphere rendering, i.e., for each occupied voxel, a ball is placed at its center,
+with radius equal to the edge length of a voxel (Multi-View Sphere Rendering in Fig 1).
+
+We train the multi-view CNN from scratch using these sphere renderings. 
+
+The accuracy of this multi-view CNN is reported in blue.
+
+> 4장/5장에서 volumetric CNN/multi-view CNN의 성능 향상을 시도 한다. 
+
