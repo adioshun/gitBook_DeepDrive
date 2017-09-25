@@ -9,7 +9,20 @@
 
 
 
-* PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation
+# PointNet
+
+Due to Point cloud's irregular format, most researchers transform such data to 
+- regular 3D voxel grids or 
+- collections of images
+
+we design a novel type of neural network that directly consumes point clouds
+
+## 1. 
+
+
+
+
+---
 
 [요약]
 "Research Question: Point clouds에서 바로 feature learning을 효과적으로 하는 방법이 무엇이 있을까?"
