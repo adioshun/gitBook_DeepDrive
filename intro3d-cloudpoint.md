@@ -27,6 +27,8 @@
 
 ~~[Project: Development of AEB System for Pedestrian Protection (4th year)](https://github.com/nlkim0817/ProjAEB_4thYear)~~
 
+- [Kaggle_3D MNIST](https://www.kaggle.com/daavoo/3d-mnist): A 3D version of the MNIST database of handwritten digits
+
 ---
 
 # Post/Article
