@@ -18,19 +18,16 @@
 
 * [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
 * [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
-* [Paper\_2015\_VoxNet](papervoxnet.md)
-* [Paper\_2016\_DeepSlidingShape](paper2016-deepslidingshape.md)
 * [Paper\_2016\_Vote3Deep \(10%\)](papervote3deep.md)
 * [Paper\_2016\_VeloFCN4VD\_Bo Li \(30%\)](paper2016-velofcn4vd.md)
 * [Paper\_2017\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 * [Paper\_2017\_LoDNN\_Road Detection](paper2017-lodnnroad-detection.md)
-* [Paper\_2017\_PointNet](paper2016-pointnet.md)
 * [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
 
 ## 3D CNN-Images
 
-* [Paper\_2017\_3D Object Proposals\_2017](paper2017-3d-object-proposals.md)
+* [Paper\_2017\_3D Object Proposals\_X Chen](paper2017-3d-object-proposals.md)
 * [Paper\_Monocular 3D\_2016](papermonocular-3d.md)
 * [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
 * [Paper\_2017\_3D BBox](paper2017-3d-bbox.md)
@@ -38,6 +35,9 @@
 ## 3D RGB-D
 
 * [Intro\_3D\_RGB-D](intro3d-rgb-d.md)
+* [Paper\_2015\_VoxNet](papervoxnet.md)
+* [Paper\_2016\_DeepSlidingShape](paper2016-deepslidingshape.md)
+* [Paper\_2017\_PointNet](paper2016-pointnet.md)
 
 ## Sensorfusion
 
