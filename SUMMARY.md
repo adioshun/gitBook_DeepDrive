@@ -23,9 +23,9 @@
 * [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
 * [Paper\_2015\_VoxNet](papervoxnet.md)
 * [Paper\_2016\_DeepSlidingShape](paper2016-deepslidingshape.md)
-* [Paper\_2016\_Vote3Deep](papervote3deep.md)
-* [Paper\_2016\_VeloFCN4VD\(30%\)](paper2016-velofcn4vd.md)
-* [Paper\_2017\_FCN4VD \(30%\)](paper3d-cnn.md)
+* [Paper\_2016\_Vote3Deep \(10%\)](papervote3deep.md)
+* [Paper\_2016\_VeloFCN4VD\_Bo Li \(30%\)](paper2016-velofcn4vd.md)
+* [Paper\_2017\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 * [Paper\_2017\_PointNet](paper2016-pointnet.md)
 

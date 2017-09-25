@@ -71,21 +71,16 @@ and 3D crops respectively.
 
 While the convolutional kernels are only applied at sparse feature locations, the presented algorithm still has to consider neighbouring values which take a value of either zero or a constant bias, leading to unnecessary operations and memory consumption. 
 
+Another method for performing sparse convolutions is introduced in [12] who make use of “permutohedral lattices”, but only consider comparatively small inputs, as opposed to our work.
 
 ```
 [10] B. Graham, “Spatially-sparse convolutional neural networks,” arXiv Preprint arXiv:1409.6070, pp. 1–13, 2014
 [11] “Sparse 3D convolutional neural networks,” arXiv preprint arXiv:1505.02890, pp. 1–10, 2015.
-```
-
-### 2.4 
-
-Another method for performing sparse convolutions is introduced in [12] who make use of “permutohedral lattices”, but only consider comparatively small inputs, as opposed to our work.
-
-```
 [12] V. Jampani, M. Kiefel, and P. V. Gehler, “Learning Sparse High Dimensional Filters: Image Filtering, Dense CRFs and Bilateral Neural Networks,” in IEEE Conf. on Computer Vision and Pattern Recognition (CVPR), 2016
+
 ```
 
-### 2.5 biomedical image analysis
+### 2.4 biomedical image analysis
 
 CNNs have also been applied to dense 3D data in biomedical image analysis (e.g. [13], [14], [15]). 
 
@@ -98,4 +93,10 @@ A combination of three CNNs is suggested in [15].
 Each CNN processes a different 2D plane and the three streams are joined in the last layer. 
 
 These systems run on relatively small inputs and in some cases take more than a minute for processing a single frame with GPU acceleration.
+
+## 3. METHODS
+
+
+
+
 
