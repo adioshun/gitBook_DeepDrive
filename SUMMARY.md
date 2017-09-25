@@ -10,10 +10,6 @@
   * [ROS bags-TO-Point Clods.ipynb](https://gist.github.com/anonymous/e675ea14113252be321320be62248034)
   * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
 * [Paper\_2017\_Survey\_CV4Vehicle](paper2017-survey.md)
-* [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
-* [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
-* [Paper\_2017\_LoDNN\_Road Detection](paper2017-lodnnroad-detection.md)
-
 
 ## 2D CNN
 
@@ -22,13 +18,16 @@
 ## 3D CNN-PointCloud
 
 * [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
+* [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
 * [Paper\_2015\_VoxNet](papervoxnet.md)
 * [Paper\_2016\_DeepSlidingShape](paper2016-deepslidingshape.md)
 * [Paper\_2016\_Vote3Deep \(10%\)](papervote3deep.md)
 * [Paper\_2016\_VeloFCN4VD\_Bo Li \(30%\)](paper2016-velofcn4vd.md)
 * [Paper\_2017\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
+* [Paper\_2017\_LoDNN\_Road Detection](paper2017-lodnnroad-detection.md)
 * [Paper\_2017\_PointNet](paper2016-pointnet.md)
+* [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
 
 ## 3D CNN-Images
 
@@ -40,7 +39,6 @@
 ## 3D RGB-D
 
 * [Intro\_3D\_RGB-D](intro3d-rgb-d.md)
-
 
 ## Sensorfusion
 

@@ -1,2 +1,0 @@
-SfM 완전이해
-- toy-sfm 코드를 통해 framework 을 완전이해하였다. 이 역시 앞으로 큰 자산이 될 듯. sfm에 best view select part 가 using sequential image 로 바뀌면 visual odometry 이고 여기에 loop closing module 이 붙으면 vSLAM이 된다!라는 간단한 핵심 파악. (물론 vSLAM의 경우 실제 모듈은 병렬적으로 즉 PTAM 적으로 구성되어야 함)
