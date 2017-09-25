@@ -49,16 +49,39 @@
 
 ## Paper
 
+### 1. Missing points 
 
+- [CNN-Based Object Segmentation in Urban LIDAR with Missing Points](http://ieeexplore.ieee.org/document/7785116/): 2016
+
+- LIDAR point upsampling. [[Schneider, Arxiv '16]](https://arxiv.org/abs/1608.00753)
+
++ Voting for Voting in Online Point Cloud Object Detection [[Wang, RSS '15]](http://www.roboticsproceedings.org/rss11/p35.pdf) [[Project]](http://mrg.robots.ox.ac.uk/vote3d/)
+
+
+
+
+### 2. 3D point cloud to 2D 
+
++ ~~Vehicle Detection from 3D Lidar Using Fully Convolutional Network [[Li, RSS '16]](http://www.roboticsproceedings.org/rss12/p42.pdf)~~
+
+
+
+
+### 3. Multiview 
+
+- [A Comparative Analysis and Study of Multiview CNN Models for Joint Object
+Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16.pdf): [추가자료](http://proceedings.mlr.press/v48/elhoseiny16-supp.pdf)
+
+
+
+### 
 - [OctNet: Learning Deep 3D Representations at High Resolutions](https://arxiv.org/abs/1611.05009v4): 2016~2017
 
 - [Deep Semantic Classification for 3D LiDAR Data](https://arxiv.org/abs/1706.08355v1): 물체를 고정된, 움직이는, 움직일수 있는 것으로 3분류 
 
 - Unsupervised Depth Estimation. [[Garg, ECCV '16]](http://arxiv.org/abs/1603.04992)
 
-- [CNN-Based Object Segmentation in Urban LIDAR with Missing Points](http://ieeexplore.ieee.org/document/7785116/): 2016
 
-- LIDAR point upsampling. [[Schneider, Arxiv '16]](https://arxiv.org/abs/1608.00753)
 
 - Unified multi-scale CNN. (KITTI: 8th car, 1st ped) [[Cai, ECCV '16]](http://arxiv.org/abs/1607.07155) [[Home]](https://sites.google.com/site/zhaoweicai1989/) [[Code]](https://github.com/zhaoweicai/mscnn) [[Video]](https://www.youtube.com/watch?v=NQFCURgv_cY&feature=youtu.be)
 
@@ -69,20 +92,14 @@
 - 2D/3D Sensor Exploitation and Fusion for Enhanced Object Detection (Similar to ours) [[Xu, CVPRW '14]](http://www.cv-foundation.org/openaccess/content_cvpr_workshops_2014/W19/papers/Xu_2D3D_Sensor_Exploitation_2014_CVPR_paper.pdf)
  
 
-- [A Comparative Analysis and Study of Multiview CNN Models for Joint Object
-Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16.pdf): [추가자료](http://proceedings.mlr.press/v48/elhoseiny16-supp.pdf)
-
 - [3D Bounding Box Estimation Using Deep Learning and Geometry](https://arxiv.org/abs/1612.00496): (Submitted on 1 Dec 2016 (v1), last revised 10 Apr 2017 (this version, v2))
 
 + 3D Object Proposals for Accurate Object Class Detection [[Chen, NIPS 15]](http://papers.nips.cc/paper/5644-3d-object-proposals-for-accurate-object-class-detection) [[Project]](http://www.cs.toronto.edu/objprop3d/) [[Code]](http://www.cs.toronto.edu/objprop3d/downloads.php)
 
 + Multiview random forest of local experts combining rgb and lidar data for pedestrian detection [[Gonzalez, IV '15]](https://scholar.google.de/scholar?q=Multiview%20Random%20Forest%20of%20Local%20Experts%20Combining%20RGB%20and%20LIDAR%20data%20%20for%20Pedestrian%20Detection)
 
-+ Voting for Voting in Online Point Cloud Object Detection [[Wang, RSS '15]](http://www.roboticsproceedings.org/rss11/p35.pdf) [[Project]](http://mrg.robots.ox.ac.uk/vote3d/)
 
-+ Pedestrian Detection Combining RGB and Dense LIDAR Data [[Premebida, IROS '14]](https://people.eecs.berkeley.edu/~carreira/papers/iros2014.pdf) [[Project]](http://home.isr.uc.pt/~cpremebida/IROS14/LaserVisionFusion.html) [[Code]](http://home.isr.uc.pt/~cpremebida/IROS14/Codes_CP_IROS2014.zip)
 
-+ ~~Vehicle Detection from 3D Lidar Using Fully Convolutional Network [[Li, RSS '16]](http://www.roboticsproceedings.org/rss12/p42.pdf)~~
 
 + Visual Object Recognition with 3D-Aware Features in KITTI Urban Scenes [[Yebes, Sensors '15]](http://www.mdpi.com/1424-8220/15/4/9228/htm)
 

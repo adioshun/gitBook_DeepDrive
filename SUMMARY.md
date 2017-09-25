@@ -14,6 +14,7 @@
 * [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
 * [Paper\_2017\_LoDNN\_Road Detection](paper2017-lodnnroad-detection.md)
 
+
 ## 2D CNN
 
 * [Paper\_2016\_SqueezeDet](paper2016-squeezedet.md)
@@ -35,6 +36,11 @@
 * [Paper\_Monocular 3D\_2016](papermonocular-3d.md)
 * [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
 * [Paper\_2017\_3D BBox](paper2017-3d-bbox.md)
+
+## 3D RGB-D
+
+* [Intro\_3D\_RGB-D](intro3d-rgb-d.md)
+
 
 ## Sensorfusion
 
