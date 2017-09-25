@@ -22,6 +22,8 @@ http://ssan664.tistory.com/716
 
 거리 오차 : ±2cm
 
+측정 포인트 : HDL-64 = 64K points/frame
+
 측정 거리 : ~60m(센서 마다 다름~200m)
 
 > Startup : [sweep](http://scanse.io/), $349.00
@@ -34,7 +36,8 @@ More recently the move has been to replace mechanical scanning LiDAR, that physi
 
 SSLs currently have lower field-of-view (FOV) coverage but their lower cost provides the possibility of using multiple sensors to cover a larger area.
 
-
+        Mobile Laser Scanning(MLS) : eg. VMX450
+        Rotating Multibeam(RMB) Lidar system : eg. Velodyne HDL-64
 
 ## Radar (radio direction and ranging)
 
