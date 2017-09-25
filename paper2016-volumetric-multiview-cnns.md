@@ -168,10 +168,33 @@ Tensor로 저장되어 있으므로 두개다 CNN으로 학습 할 수 있다. `
 
 ![](https://i.imgur.com/I1yMqvH.png)
 
-Fig 2 reports the classification accuracy on the ModelNet40 dataset by state-of-the-art volumetric/multiview architectures
 
-A volumetric CNN based on voxel occupancy (green) is 7.3% worse than a multi-view CNN
-(yellow).
+The gap seems to be caused by two factors: 
+- input resolution 
+- network architecture differences. 
+
+###### Input resolution 
+
+The multi-view CNN downsamples each rendered view to 227 × 227 pixels (Multiview Standard Rendering in Fig 1); 
+
+the volumetric CNN uses a 30×30×30 occupancy grid (Volumetric Occupancy Grid in Fig 1) to maintain a similar computational cost.
+
+However, the difference in input resolution is not the primary reason for this performance gap, as evidenced by further experiments. 
+
+> 추가적 실험 결과 입력값은 성능에 큰 영향을 주지 않는 것으로 밝혀 졌다. 
+
+![](https://i.imgur.com/CMyNVE0.png)
 
 
+###### Network 
 
+
+We compare the two networks by providing them with data containing similar level of detail.
+To this end, we feed the multi-view CNN with renderings of
+the 30 × 30 × 30 occupancy grid using sphere rendering3
+,
+i.e., for each occupied voxel, a ball is placed at its center,
+with radius equal to the edge length of a voxel (Multi-View
+Sphere Rendering in Fig 1). We train the multi-view CNN
+from scratch using these sphere renderings. The accuracy
+of this multi-view CNN is reported in blue.
