@@ -25,6 +25,8 @@ we design a novel type of neural network that directly consumes point clouds
 
 ### 2.1 Point Cloud Features
 
+> Point Cloud 특징들은 `수작업`으로 만든것들이다. 이전 CV 방식 처럼 
+
 Most existing features for point cloud are `handcrafted` towards specific tasks. 
 
 Point features often encode certain statistical properties of points and are designed to be invariant to certain transformations, which are typically classified as intrinsic [2, 24, 3] or extrinsic [20, 19, 14, 10, 5]. 
@@ -58,6 +60,8 @@ However, volumetric representation is constrained by its resolution due to data 
 
 
 #### B. Multiview CNNs
+
+> 3D Point Cloud를 2D 이미지로 맵핑하고 2D CNN을 접목하는 방법, 성능이 잘 나옴 
 
 Multiview CNNs: [23, 18] have tried to render 3D point cloud or shapes into 2D images and then apply 2D conv nets to classify them. 
 
