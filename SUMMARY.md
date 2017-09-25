@@ -4,7 +4,6 @@
 
 * [Introduction](README.md)
 * [Vision-based SLAM](vision-based-slam.md)
-* [SfM](sfm.md)
 * [Point\_Cloud\_Data](pointcloud-data.md)
   * [ROS bags-TO-Image.ipynb](https://gist.github.com/anonymous/4857f8920c9fc901121a429ead32a7db)
   * [ROS bags-TO-Point Clods.ipynb](https://gist.github.com/anonymous/e675ea14113252be321320be62248034)
