@@ -20,6 +20,7 @@
 
 ## 3D CNN-PointCloud
 
+* [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
 * [Paper\_2015\_VoxNet](papervoxnet.md)
 * [Paper\_2016\_DeepSlidingShape](paper2016-deepslidingshape.md)
 * [Paper\_2016\_Vote3Deep](papervote3deep.md)
