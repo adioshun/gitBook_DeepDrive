@@ -43,6 +43,8 @@ http://velodynelidar.com/downloads.html
 - [The Velodyne High Definition LiDAR (HDL) Grabber](http://pointclouds.org/documentation/tutorials/hdl_grabber.php): pcap설정, cpp
 
 ---
+
+## `pcap`파일 읽어 Play하기 
 - [pcap_reader.py](https://gist.github.com/gerkey/bf749775e6bc600368b97ce3d9f113e5): Read a .pcap file full of UDP packets from a velodyne and play them back to
 
 ```python 
@@ -87,4 +89,4 @@ if __name__ == '__main__':
         parse(sys.argv[1])
 ```
 
-        To prevent exception: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd4 in position 0: invalid continuation byte we need to use binary mode for open file: dpkt.pcap.Reader(open(filename,'rb'))
+> To prevent exception: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd4 in position 0: invalid continuation byte we need to use binary mode for open file: dpkt.pcap.Reader(open(filename,'rb'))
