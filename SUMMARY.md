@@ -51,7 +51,6 @@
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
   * [code\_MV3D\_TF](papermultiview-3d-cnn/codemv3d-tf.md)
 * [Paper\_2016\_FusionNet](paper2016-fusionnet.md)
-* [Sensor\_Fusion](sensorfusion.md)
 
 ## 참고
 
