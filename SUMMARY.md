@@ -10,6 +10,7 @@
   * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
   * [KITTI Dataset Exploration.ipynb](https://gist.github.com/anonymous/1d972e4ccdd797aee6011d9999e530fe)
   * [Read\_RGBD](pointcloud-data/readrgbd.md)
+  * [Velodyne\_LiDAR](pointcloud-data/velodynelidar.md)
 * [Paper\_2017\_Survey\_CV4Vehicle](paper2017-survey.md)
 
 ## 2D CNN
