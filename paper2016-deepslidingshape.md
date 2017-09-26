@@ -101,3 +101,113 @@ box for the whole object
 ```
 [14] A. Kar, S. Tulsiani, J. Carreira, and J. Malik. Amodal completion and size constancy in natural scenes. In ICCV, 2015
 ```
+
+#### A. 2D Object Detector in RGB-D Images 
+
+깊이 정보를 3rd 입력으로 사용 
+2D object detection approaches for RGB-D images treat depth as extra channel(s) appended to the color images, using handcrafted features [9], sparse coding [2, 3], or recursive neural networks [23]. 
+
+##### 가. Depth-RCNN 
+
+Depth-RCNN [11, 10] is the first object detector using deep ConvNets on RGB-D images. 
+
+They extend the RCNN framework [8] for color-based object detection by encoding the depth map as three extra channels (with Geocentric Encoding: Disparity, Height, and Angle) appended to the color images. 
+
+[10] extended Depth-RCNN to produce 3D bounding boxes by aligning 3D CAD models to the recognition results. 
+
+[12] further improved the result by cross model supervision transfer. 
+
+
+```
+
+```
+
+#### 나. 3D CAD model classification
+
+For 3D CAD model classification, [26] and [20] took a view-based deep learning approach by rendering 3D shapes as 2D image(s).
+
+
+#### B. 3D Object Detector 
+
+##### 가. Sliding Shapes 
+
+Sliding Shapes [25] is a 3D object detector that runs sliding windows in 3D to directly classify each 3D window. 
+
+However, the algorithm uses hand-crafted features and the algorithm uses many exemplar classifiers so it is very slow. 
+
+##### 나. Clouds of Oriented Gradients feature
+
+Recently, [32] also proposed the Clouds of Oriented Gradients feature on RGB-D images.
+
+In this paper we hope to improve these hand-crafted feature representations with 3D ConvNets that can learn powerful 3D and color features from the data.
+
+#### C. 3D Feature Learning 
+
+HMP3D [15] introduced a hierarchical sparse coding technique for unsupervised learning
+features from RGB-D images and 3D point cloud data. 
+
+The feature is trained on a synthetic CAD dataset, and tested on scene labeling task in RGB-D video. 
+
+본 논문의 제안 방식과 비교 : In contrast, we desire a supervised way to learn 3D features using the deep learning techniques that are proven to be more effective for image-based feature learning
+
+#### D. 3D Deep Learning 3D 
+
+ShapeNets [29] introduced 3D deep learning for modeling 3D shapes, and demonstrated
+that powerful 3D features can be learned from a large amount of 3D data. 
+
+Several recent works [17, 5, 31, 13] also extract deep learning features for retrieval and classification of CAD models. 
+
+While these works are inspiring, none of them focuses on 3D object detection in RGB-D images.
+
+#### E. Region Proposal 
+
+For 2D object proposals, previous approaches [27, 1, 11] are mostly based on merging segmentation results. 
+
+Recently, Faster RCNN [18] introduces a more efficient and effective ConvNet-based formulation, which inspires us to learn 3D objectness using ConvNets. 
+
+For 3D object proposals, [4] introduces an MRF formulation with `hand-crafted` features for a few object categories in street scenes. 
+
+We desire to learn 3D objectness for general scenes from the data using ConvNets.
+
+## 2. Encoding 3D Representation
+
+> 3D공간을 어떻게 가공하여 ConvNet에 입력 하여야 할까?
+
+- For color images, naturally the input is a 2D array of pixel color
+
+- For depth maps, Depth RCNN [10, 11] proposed to encode `depth` as a 2D color image with three channels. 
+    - Although it has the advantage to reuse the pretrained ConvNets for color images [12], 
+
+
+본 논문의 방식 
+
+
+- we desire a way to encode the geometric shapes naturally in 3D, preserving
+spatial locality.
+
+- compared to methods using hand-crafted 3D features [5, 31], We desire a representation that encodes the 3D geometry as raw as possible, and let ConvNets learn the most discriminative features from the raw data.
+
+
+![](https://i.imgur.com/Piqj68M.png)
+
+- To encode a 3D space for recognition, we propose to adopt a directional Truncated Signed Distance Function (TSDF). 
+
+Given a 3D space, we divide it into an equally spaced 3D voxel grid. 
+
+The value in each voxel is defined to be the shortest distance between the voxel center and the surface from the input depth map. 
+
+To encode the direction of the surface point, instead of a single distance value, we propose a directional TSDF to store a three-dimensional vector [dx, dy, dz] in each voxel to record the distance in three directions to the closest surface point. 
+
+The value is clipped by `2J`, where `J` is the grid size in each dimension. The sign of the value indicates whether the cell is in front of or behind the surface
+
+To further speed up the TSDF computation, as an approximation, we can also use projective TSDF instead of accurate TSDF where the nearest point is found only on the
+line of sight from the camera. 
+
+The projective TSDF is faster to compute, but empirically worse in performance compared
+to the accurate TSDF for recognition (see Table 2).
+
+We also experiment with other encodings, and we find that the proposed directional TSDF outperforms all the other alternatives (see Table 2). 
+
+Note that we can also encode colors in this 3D volumetric representation, by appending RGB values to each voxel [28].
+
+
