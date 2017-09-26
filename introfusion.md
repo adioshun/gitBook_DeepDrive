@@ -12,6 +12,8 @@
 
 - [Fusing LIDAR and images for pedestrian detection using convolutional neural networks](http://ieeexplore.ieee.org/abstract/document/7487370/): 2016.04
 
+- H. Su, S. Maji, E. Kalogerakis, E. Learned-Miller. Multi-view Convolutional Neural Networks for 3D Shape Recognition. ICCV2015
+
 
 - [RegNet: Multimodal sensor registration using deep neural networks](http://ieeexplore.ieee.org/document/7995968/#full-text-section): 2017.06, LiDAR + monocular camera, 
 
