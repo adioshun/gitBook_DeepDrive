@@ -41,7 +41,7 @@
 * [Intro\_3D\_RGB-D](intro3d-rgb-d.md)
 * [Paper\_2015\_VoxNet \(10%\)](papervoxnet.md)
 * [Paper\_2016\_Volumetric\_Multiview CNNs \(50%\)](paper2016-volumetric-multiview-cnns.md)
-* [Paper\_2016\_DeepSlidingShape](paper2016-deepslidingshape.md)
+* [Paper\_2016\_DeepSlidingShape \(30%\)](paper2016-deepslidingshape.md)
 * [Paper\_2017\_PointNet \(10%\)](paper2016-pointnet.md)
 
 ## Sensorfusion
