@@ -26,7 +26,7 @@
 * [Paper\_2016\_VeloFCN4VD\_Bo Li \(30%\)](paper2016-velofcn4vd.md)
 * [Paper\_2017\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
-* [Paper\_2017\_LoDNN\_Road Detection](paper2017-lodnnroad-detection.md)
+* [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
 * [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
 
 ## 3D CNN-Images
