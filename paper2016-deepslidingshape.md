@@ -54,6 +54,8 @@ Depth RCNN [10] takes a 2D approach: detect objects in the 2D image plane by tre
 
 ---
 
+![](https://i.imgur.com/7oMAaGv.png)
+
 따라서, 본 논문에서는 we introduce Deep Sliding Shapes, a complete 3D formulation to learn object proposals and classifiers using 3D convolutional neural networks (ConvNets)
 
 제안 1 : 3D Region Proposal Network (RPN) 
