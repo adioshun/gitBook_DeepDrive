@@ -2,7 +2,7 @@
 |-|-|
 |저자(소속)|Arsalan Mousavian (GMU)|
 |학회/년도| 2016~2017, [논문](https://arxiv.org/pdf/1612.00496.pdf)|
-|키워드|2D이미지에 3D BBox 적용하기, KITTI 29th|
+|키워드|카메라 1대, 2D이미지에 3D BBox 적용하기|
 |참고|[3D Vehicle Detection](https://experiencor.github.io/sdc_3d.html), [Github](https://github.com/experiencor/didi-starter/tree/master/simple_solution)|
 |코드|[Keras](https://github.com/experiencor/image-to-3d-bbox)|
 

@@ -2,12 +2,12 @@
 |-|-|
 |저자(소속)|Xiaozhi Chen|
 |학회/년도|CVPR 2016,  [논문](http://3dimage.ee.tsinghua.edu.cn/files/publications/CVPR16_XiaozhiChen.pdf)|
-|키워드|MV3D 저자, KITTI, 후보영역 선출 |
+|키워드|MV3D 저자, KITTI, 후보영역 선출, 카메라 1대 |
 |참고|[홈페이지](http://3dimage.ee.tsinghua.edu.cn/cxz/mono3d)|
-|코드|[코드](http://3dimage.ee.tsinghua.edu.cn/files/XiaozhiChen/mono3d/mono3d_v1.2.tar.gz)|
+|코드|[Download](http://3dimage.ee.tsinghua.edu.cn/files/XiaozhiChen/mono3d/mono3d_v1.2.tar.gz)|
 
 
-
+> 연구 목표 및 관련 연구가 주로 `후보영역 선출`에 관한 것들임 
 
 # Monocular 3D 
 
@@ -80,3 +80,106 @@ We learn per-class weights for these features using S-SVM [24], adapting to each
 
 The top object candidates are then scored with a CNN, resulting in the final set of detections. 
 
+## 2. Related Work
+
+Our work is related to `methods for object proposal generation`,as well as monocular 3D object detection. 
+
+> autonomous Driving분야에서의 object proposal에 대하여 주로 살펴 보겠다. 
+
+Mostof the existing work on proposal generation uses RGB [45,55, 9, 2, 11, 29], RGB-D [4, 21, 31, 25], or video [35].
+
+### 2.1 RGB 
+
+###### similarity
+
+In RGB, most methods combine superpixels into larger regions via several similarity functions using e.g. color and texture [45, 2]. 
+
+These approaches prune the exhaustive set of windows down to about 2K proposals per image achievingal most perfect recall on PASCAL VOC [12]. 
+
+###### parametric min-cut
+
+[9] defines parametric affinities between pixels and finds the regions using parametric min-cut. 
+
+The resulting regions are then scored via simple features, and the top-ranked proposals are used in recognition tasks [8, 15, 53]. 
+
+Exhaustively sampled boxes are scored using several “objectness” features in [1].
+
+###### objectness
+
+BING proposals [11] score boxes based on an object closure measure as a proxy for “objectness”. 
+
+###### contour
+
+Edgeboxes [55] score an exhaustive set of windows based on contour information inside and on the boundary of each window.
+
+
+
+
+> 본 논문의 방식과 비슷한 것들은 학습을 이용한 방식이다. `The most related approaches to ours are recent methods that aim to `learn` how to propose objects. `
+
+###### learns parametric energies
+
+[29] learns `parametric energies` in order to propose multiple diverse regions.
+
+###### learnt ensemble of segmentation models
+
+In [27], an ensemble of figure-ground segmentation models are learnt. 
+
+Joint learning of the ensemble of local and globalbinary CRFs enables the individual predictors to specializein different ways. 
+
+
+###### learned how to place promising object
+
+[26] learned how to place promising object seeds and employ geodesic distance transform to obtain candidate regions. 
+
+
+###### cascading the layers
+
+Parallel to our work, [18] introduced a method that generates object proposals by cascading the layers of the convolutional neural network. 
+
+The method is efficient since it explores an exhaustive set of windows via integral images over the CNN responses. 
+
+##### 본 논문의 방식 
+
+Our approach also exploits integral images to score the candidates, however,in our work we exploit domain priors to place 3D bounding boxes and score them with semantic features. 
+
+We use pixel levelclass scores from the output layer of the grid CNN, as well as contextual and shape features.
+
+
+### 2.2 RGB-D
+
+###### conditional random field
+
+In RGB-D, [10] exploited stereo imagery to exhaustively scored 3D bounding boxes using a conditional random field with several depth-informed potentials. 
+
+Our work also evaluates 3D bounding boxes, but uses semantic object and instance segmentation and 3D priors to place proposals onthe ground plane. 
+
+Our RGB potentials are partly inspired by [15, 53] which exploits efficiently computed segmentation potentials for 2D object detection.
+
+Our work is also related to detection approaches for autonomous driving. 
+
+###### deformable wireframe model
+
+[54] first detects a candidate set of objects via a poselet-like approach and then fits a deformable wireframe model within the box. 
+
+###### extends DPM 
+
+[38] extends DPM [13] to 3D by linking parts across different viewpoints, while [14]extends DPM to reason about deformable 3D cuboids. 
+
+###### ensemble of visual and geometrical clusters Model 
+
+[34]uses an ensemble of models derived from visual and geometrical clusters of object instances. 
+
+##### Regionlets 
+
+Regionlets [32] proposes boxes via Selective Search and re-localizes them using a top-down approach. 
+
+###### holistic model 
+
+[46] introduced a holistic model that re-reasons about DPM object candidates via cartographicpriors.
+
+###### 3DVP  
+
+Recently proposed 3DVP [47] learns occlusion patterns in order to significantly improve performance of occluded cars on KITTI.
+
+## 3. Monocular 3D Object Detection
