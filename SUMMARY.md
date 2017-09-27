@@ -28,6 +28,7 @@
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 * [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
 * [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
+* [Paper\_2017\_SqueezeSeg](paper2017-squeezeseg.md)
 
 ## 3D CNN-Images
 

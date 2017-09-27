@@ -76,7 +76,12 @@ Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16
 
 
 
-### 
+### Cloud
+
+- SqueezeSeg
+ - https://www.youtube.com/watch?v=Xyn5Zd3lm6s
+ 
+ 
 - [OctNet: Learning Deep 3D Representations at High Resolutions](https://arxiv.org/abs/1611.05009v4): 2016~2017
 
 - [Deep Semantic Classification for 3D LiDAR Data](https://arxiv.org/abs/1706.08355v1): 물체를 고정된, 움직이는, 움직일수 있는 것으로 3분류 
