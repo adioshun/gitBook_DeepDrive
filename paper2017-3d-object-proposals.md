@@ -56,6 +56,10 @@ We also present a `3D object detection neural network` that takes 3D object prop
 
 제안 네트워크는 최종적으로  The neural net exploits `contextual information` and uses a `multi-task loss` to jointly regress to bounding box coordinates and object orientation.
 
-성능 : In particular, compared with the state-of-the-art RGB-D
-method MCG-D [18], we obtain 25% higher recall with 2K
-proposals
+성능 : In particular, compared with the state-of-the-art RGB-D method MCG-D [18], we obtain 25% higher recall with 2K proposals
+
+```
+[17] T. Joachims, T. Finley, and C.-N. J. Yu, “Cutting-plane training of
+structural svms,” JLMR, 2009.
+[18] S. Gupta, R. Girshick, P. Arbelaez, and J. Malik, “Learning rich features from RGB-D images for object detection and segmentation,” in ECCV, 2014.
+```
