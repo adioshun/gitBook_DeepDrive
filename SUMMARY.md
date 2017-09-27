@@ -17,8 +17,13 @@
 ## 2D CNN
 
 * [Paper\_2016\_SqueezeDet](paper2016-squeezedet.md)
+* [Paper\_2017\_3D Object Proposals\_X Chen](paper2017-3d-object-proposals.md)
+* [Paper\_Monocular 3D\_2016](papermonocular-3d.md)
+* [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
+* [Paper\_2017\_3D BBox](paper2017-3d-bbox.md)
 
-## 3D CNN-PointCloud
+
+## PointCloud
 
 * [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
 * [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
@@ -30,14 +35,8 @@
 * [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
 * [Paper\_2017\_SqueezeSeg](paper2017-squeezeseg.md)
 
-## 3D CNN-Images
 
-* [Paper\_2017\_3D Object Proposals\_X Chen](paper2017-3d-object-proposals.md)
-* [Paper\_Monocular 3D\_2016](papermonocular-3d.md)
-* [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
-* [Paper\_2017\_3D BBox](paper2017-3d-bbox.md)
-
-## 3D RGB-D
+## RGB-D
 
 * [Intro\_3D\_RGB-D](intro3d-rgb-d.md)
 * [Paper\_2015\_VoxNet \(10%\)](papervoxnet.md)
@@ -45,7 +44,7 @@
 * [Paper\_2016\_DeepSlidingShape \(30%\)](paper2016-deepslidingshape.md)
 * [Paper\_2017\_PointNet \(10%\)](paper2016-pointnet.md)
 
-## Sensorfusion
+## Fusion
 
 * [Intro\_Fusion](introfusion.md)
 * [Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)

@@ -16,9 +16,7 @@
 
 # List
 
-- [awesome-point-cloud-processing](https://github.com/mmolero/awesome-point-cloud-processing)
 
-- [Paper Reading List : 3D Convolutional Neural Networks](http://davidstutz.de/3d-convolutional-neural-networks-a-reading-list/)
 
 
 ---
