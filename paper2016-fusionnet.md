@@ -8,6 +8,10 @@
 
 > 동명의 논문 : FusionNet: A deep fully residual convolutional neural network for image segmentation in connectomics
 
+![](https://i.imgur.com/Pog63M8.png)
+
+
+
 # FusionNet
 
 Two data representations
@@ -148,12 +152,32 @@ all objects in the training set to learn features which are partly complementary
 
 - For pixel data: we use ideas from `Multi View CNN (MV-CNN) proposed by [24]` which use multiple projected views of the same 3D model and aggregate them in a way which improves the performance over a single projection. 
 
+Finally in FusionNet, we combine multiple networks in the final fully connected layer which outputs class scores in a way which improves the classification accuracy over each of its component networks.
 
 
 
-In particular, one of our Volumetric CNN has about 3.5 million parameters (compared
-to AlexNet, which has 60 million parameters [13]). Therefore, it can be used as an add on network
-to MV-CNN without increasing the number of parameters by too much. Finally in FusionNet, we
-combine multiple networks in the final fully connected layer which outputs class scores in a way
-which improves the classification accuracy over each of its component networks.
+## 4 Dataset and Accuracy Measure
+
+ModelNet 사용
+
+## 5 Volumetric CNN (V-CNN)
+
+본 논문에서 2개의 CNN을 소개 할것이다. `We introduce two CNNs for volumetric data which constructively combines information from multiple orientations by max-pooling across 60 orientations. `
+
+This is similar to [24] which aggregates multiple 2D projections of a 3D polygonal mesh using a well established CNN architecture on 2D RGB images, like VGG-M [22]. 
+
+```
+[24] H. Su, S. Maji, E. Kalogerakis, and E. Learned-Miller. Multi-view convolutional neural networks for 3d shape recognition. In Proceedings of the IEEE International Conference on Computer Vision, pages 945–953, 2015.
+[22] K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. CoRR, abs/1409.1556, 2014
+```
+
+Both our networks also use long range 3D convolutions which aggregate information across a dimension of the object. 
+
+In one of the networks, we concatenate the output from kernels of various sizes, similar to the inception module used in [25]. 
+
+```
+[25] C. Szegedy, W. Liu, Y. Jia, P. Sermanet, S. E. Reed, D. Anguelov, D. Erhan, V. Vanhoucke, and A. Rabinovich. Going deeper with convolutions. CoRR, abs/1409.4842, 2014. URL http://arxiv.org/abs/1409.4842.
+```
+
+
 
