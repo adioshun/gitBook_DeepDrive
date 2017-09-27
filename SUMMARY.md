@@ -9,9 +9,9 @@
 ## 2D CNN
 
 * [Paper\_2016\_SqueezeDet](paper2016-squeezedet.md)
-* [Paper\_2017\_3D Object Proposals\_X Chen](paper2017-3d-object-proposals.md)
-* [Paper\_Monocular 3D\_2016](papermonocular-3d.md)
-* [Paper\_2016\_Monocular Depth](paper2016-monocular-depth.md)
+* [Paper\_2016\_Monocular Depth /w 2Camera](paper2016-monocular-depth.md)
+* [Paper\_2016\_Monocular 3D](papermonocular-3d.md)
+* [Paper\_2017\_3DOP\_X Chen](paper2017-3d-object-proposals.md)
 * [Paper\_2017\_Deep3DBox](paper2017-3d-bbox.md)
 
 ## PointCloud
