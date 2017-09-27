@@ -122,6 +122,8 @@ and different neurons means that there are a huge number of ways to aggregate th
 
 ## 3. Methods
 
+![](https://i.imgur.com/WHNmzHb.png)
+
 Most state of the art 3D object classification algorithms are based on using Convolutional Neural Networks (CNNs) to discriminate between target classes [16-Voxnet] [21-Deeppano] [24-MVCNN] [10] [19]. 
 
 
