@@ -91,4 +91,7 @@ https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&titl
 
 a 3D voxel grid where each voxel was a binary variable indicating whether it belonged to the 3D shape or it was empty space
 
+Volumetric representation, where the 3D object is discretized spatially as binary voxels (1 if the voxel is occupied and 0 otherwise. )
+
+
 
