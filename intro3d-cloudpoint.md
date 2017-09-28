@@ -56,11 +56,11 @@
 
 - [ModelNet](http://modelnet.cs.princeton.edu/): 프린스톤대, 127,915 CAD Models, 662 Object Categories, 10 Categories with Annotated Orientation
 
-
+### [Generalized Convolutional Neural Networks for Point Cloud Data](https://arxiv.org/pdf/1707.06719v1.pdf)
 ![](https://i.imgur.com/6oAJmnx.png)
-[Generalized Convolutional Neural Networks for Point Cloud Data](https://arxiv.org/pdf/1707.06719v1.pdf)
 
-
+### [3D Object Proposals using Stereo Imagery for Accurate Object Class Detection](https://arxiv.org/pdf/1608.07711.pdf), 2017
+![](https://i.imgur.com/a0WmMQb.png)
 
 ---
 [3D Vehicle Detection](https://experiencor.github.io/sdc_3d.html)
