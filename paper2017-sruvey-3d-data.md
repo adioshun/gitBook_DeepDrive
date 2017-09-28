@@ -85,13 +85,13 @@ Existing approaches on 3D object retrieval can be divided into [Gao and Dai 2014
 ## 4. ADVANCES IN DEEP LEARNING WITH 3D DATA
 
 
-연구분야 (5개)
+연구분야 
 
-- 입력으로 사용할 descriptors 추출 : The first category includes methods that extract descriptors from the 3D data and give these as input to the DNN. 
-- 데이터 수집 : The approaches belonging to the second category exploit RGB-D data (i.e., separate color and depth channels) captured from popular low-cost cameras like Microsoft’s Kinect. 
-- 아키텍쳐 설계 : Deep architectures designed to have direct access to the 3D data form the third category. 
-- The fourth category includes methods utilizing one or more 2D projections/views of the 3D object/scene captured from different viewpoints and use them to feed the employed deep model. 
-- DL methods designed for data captured from hyperspectral cameras are included in the last category.
+1. 입력으로 사용할 descriptors 추출 : methods that extract descriptors from the 3D data and give these as input to the DNN. 
+2. 데이터 수집 : The approaches belonging to the second category exploit RGB-D data (i.e., separate color and depth channels) captured from popular low-cost cameras like Microsoft’s Kinect. 
+3. 아키텍쳐 설계 : Deep architectures designed to have direct access to the 3D data form the third category. 
+4. The fourth category includes methods utilizing one or more 2D projections/views of the 3D object/scene captured from different viewpoints and use them to feed the employed deep model. 
+    - DL methods designed for data captured from hyperspectral cameras are included in the last category.
 
 ### 4.1. DL Architectures Exploiting Descriptors Extracted from 3D Data
 
@@ -103,6 +103,12 @@ Existing approaches on 3D object retrieval can be divided into [Gao and Dai 2014
 
 A study of data fusion methods for RGB-D visual recognition can be found in Sanchez-Riera et al. [2016].
 
+```
+J. Sanchez-Riera, K.-L. Hua, Y.-S. Hsiao, T. Lim, S. C. Hidayati, and W.-H. Cheng. 2016. A comparative study of data fusion for RGB-D based visual recognition. Pattern Recognition Letters 73 (2016), 1–6.
+```
+
+#### A. 
+
 RGB-D data를 이용한 최초의 3D 물체 식별 방법은 `Socher et al. [2012]`에 의해 제안 되었다. 
 - The authors proposed a combination of convolutional and recursive neural networks where color and depth channels were processed separately. 
  - At first, two single-layer CNNs were employed in order to extract low-level descriptors from the RGB and depth images. 
@@ -110,22 +116,29 @@ RGB-D data를 이용한 최초의 3D 물체 식별 방법은 `Socher et al. [201
  - The RNN descriptors extracted from each modality were finally merged and provided to a joint softmax classifier. 
  - The proposed method demonstrated accurate performance in classifying household objects. 
 
+```
+R. Socher, B. Huval, B. Bhat, C. D. Manning, and A. Y. Ng. 2012. Convolutional-recursive deep learning for 3D object classification. InAdvances in Neural Information Processing Systems 25 . 656–664.
+```
+
+#### B. Multiscale CNN
 
 Couprie et al. [2013] used a multiscale CNN for semantic segmentation of indoor RGB-D scenes.
 - The network processed the input depth and RGB images at three different scales 
 - the upsampled results were combined and forwarded to a classifier in order to get object class labels. 
 - The final labeling of the scene was obtained by merging the classi-fier’s predictions with a superpixels segmentation of the scene performed in parallel
 
+```
+C. Couprie, C. Farabet, L. Najman, and Y. Lecun. 2013. Indoor semantic segmentation using depth informa-tion.CoRR abs/1301.3572 (2013).
+```
+
+#### C. 
 
 The possibility of using transfer learning(전이학습) between CNNs for object recognition was investigated in Alexandre [2014]. 
 - The author proposed the employment of four independent CNNs for processing the four input channels of an RGB-D image. 
 - The four CNNs were trained sequentially, passing the weights of a trained CNN as input to the next. 
 - Experiments on 3D objects from 10 categories indicated that the proposed training strategy can boost the performance.
 
-```
-R. Socher, B. Huval, B. Bhat, C. D. Manning, and A. Y. Ng. 2012. Convolutional-recursive deep learning for 3D object classification. InAdvances in Neural Information Processing Systems 25 . 656–664.
-C. Couprie, C. Farabet, L. Najman, and Y. Lecun. 2013. Indoor semantic segmentation using depth informa-tion.CoRR abs/1301.3572 (2013).
-```
+#### D. 
 
 The task of RGB-D **object recognition** was also addressed by Eitel et al. [2015]. 
 - A two-stream CNN architecture for RGB-D object recognition was designed in this work too. 
