@@ -158,46 +158,47 @@ A. Eitel, J. T. Springenberg, L. Spinello, M. Riedmiller, and W. Burgard. 2015. 
 
 #### A. 3D ShapeNets `Wu et al. [2015]`
 
-- 3D shapes were provided as input (a 3D voxel grid where each voxel was a binary variable indicating whether it belonged to the 3D shape or it was empty space), while the DBN model was employed. 
+- 3D shapes were provided as input (`a 3D voxel grid` where each voxel was a binary variable indicating whether it belonged to the 3D shape or it was empty space), while the DBN model was employed. 
 - In order to diminish the huge number of parameters required from feeding a fully connected DBN with a 3D voxel volume of normal resolution, convolution with 3D filters was applied. 
 - Most specifically, a Convolutional Deep Belief Network (CDBN) with five layers (three convolutional, one fully connected, and one output layer) was proposed. 
 - The model was initially pretrained layerwise and afterward, fine-tuned by backpropagation. 
 - Standard contrastive divergence was used for training the first four layers, but the more sophis-ticated Fast Persistent Contrastive Divergence (FPCD) was employed for training the top layer. 
 - The proposed framework was tested on the tasks of 3D shape classification and retrieval, next-best view prediction, and view-based 2.5D recognition outperform-ing other state-of-the-art methods.
 
-#### B. ModelNet 
+```
+[3D ShapeNets] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang, and J. Xiao. 2015. 3D shapenets: A deep representation for volumetric shapes. InIEEE Conference on Computer Vision and Pattern Recognition . 1912–1920.
+```
 
-- `ShapeNets` 저자 발표 
-- large-scale 3D dataset with CAD models from 662 unique categories.
-
-#### C. VoxNet
+#### B. VoxNet
 
 ![](https://i.imgur.com/TJZTH2r.png)
 
-Maturana and Scherer have also employed volumetric (i.e., spatially 3D) representation of the 3D data to perform 3D object recognition [Maturana and Scherer 2015]. 
+Maturana and Scherer have also employed `volumetric (i.e., spatially 3D) representation` of the 3D data to perform 3D object recognition [Maturana and Scherer 2015]. 
 
-- In the proposed VoxNet architecture, a volumetric occupancy grid of size 32×32× 32 voxels was at first generated from a point cloud’s segment that was then given as input to a CNN. 
+- In the proposed VoxNet architecture, a `volumetric occupancy grid` of size 32×32× 32 voxels was at first generated from a point cloud’s segment that was then given as input to a CNN. 
 - The employed network was constructed using two convolutional (with 3D filters), one pooling, and two FC layers, while it was trained using SGD with momentum. 
 - An object class label was finally predicted for each seg-ment. 
 - Data from three different domains were used for evaluating VoxNet.
     - LIDAR data point clouds
     - RGB-D point clouds
     - CAD models 
+    
+```
+[VoxNet] D. Maturana and S. Scherer. 2015. VoxNet: A 3D convolutional neural network for real-time object recogni-tion. InIEEE/RSJ International Conference on Intelligent Robots and Systems . 922–928
+```
 
-#### D. boosted VoxNet
+#### C. boosted VoxNet
 Sedaghat et al. [2016] modified VoxNet’s architecture in such a way that the object’s orientation was taken into account. 
 
 In their final model, the class labels were extracted directly from the orientation activations. 
 
 
 ```
-[3D ShapeNets] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang, and J. Xiao. 2015. 3D shapenets: A deep representation for volumetric shapes. InIEEE Conference on Computer Vision and Pattern Recognition . 1912–1920.
-[VoxNet] D. Maturana and S. Scherer. 2015. VoxNet: A 3D convolutional neural network for real-time object recogni-tion. InIEEE/RSJ International Conference on Intelligent Robots and Systems . 922–928
 [boosted VoxNet] N. Sedaghat, M. Zolfaghari, and Th. Brox. 2016. Orientation-boosted voxel nets for 3D object recognition. CoRR abs/1604.03351 (2016).
 ```
 
 
-#### E. Convolutional AutoEncoder Extreme Learning Machine (CAE-ELM)
+#### D. Convolutional AutoEncoder Extreme Learning Machine (CAE-ELM)
 
 A new 3D descriptor learning method combining the strengths of CNNs, AEs, and ELMs
 
@@ -215,7 +216,7 @@ A new 3D descriptor learning method combining the strengths of CNNs, AEs, and EL
 
 
 
-##### F. Mesh Convolutional Restricted Boltzmann Machines (MCRBMs)
+##### E. Mesh Convolutional Restricted Boltzmann Machines (MCRBMs)
 learning high discriminative 3D features from 3D meshes. , Han et al. [2016] 
 
 - The learned features were designed to preserve the structure between local regions and can be used as local or global features. 
@@ -224,7 +225,7 @@ learning high discriminative 3D features from 3D meshes. , Han et al. [2016]
 Deep Belief Network (MCDBN). 
 
 
-#### G. 성능 향상 제안 
+#### F. 성능 향상 제안 
 
 Qi et al. [2016] elaborated on two factors
 - The first proposed CNN included a 3D extension of the `mlpconv layers` proposed in Lin et al. [2013] 
@@ -236,7 +237,7 @@ C. R. Qi, H. Su, M. Niessner, A. Dai, M. Yan, and L. J. Guibas. 2016. Volumetric
 
 
 
-#### H. Voxception-ResNet (VRN)
+#### G. Voxception-ResNet (VRN)
 
 > 여러 DLL 기술들을 적용하여 성능 향상 
 
@@ -256,7 +257,7 @@ It should be noted that significant data augmentation was required for training 
 A. Brock, Th. Lim, J. M. Ritchie, and N. Weston. 2016. Generative and discriminative voxel modeling with convolutional neural networks.CoRR abs/1608.04236 (2016).
 ```
 
-#### I. Deep Sliding Shapes
+#### H. Deep Sliding Shapes
 
 A pipeline for 3D object detection and recognition in **RGB-D** scenes was presented in Song and Xiao [2016]. 
 
@@ -268,6 +269,10 @@ A pipeline for 3D object detection and recognition in **RGB-D** scenes was prese
 - Objectness scores were also provided for each generated object proposal. 
 
 - Moreover, each detected 3D proposal box and its corresponding 2D color patch (i.e., 2D projection of the 3D proposal) were fed to a 3D ConvNet and a 2D ConvNet, respectively, for jointly learning the object’s category and 3D box regression. 
+
+```
+S. Song and J. Xiao. 2016. Deep sliding shapes for amodal 3D object detection in RGB-D images. In Proceedings of the 29th IEEE Conference on Computer Vision and Pattern Recognition.
+```
 
 ### 4.4. DL Architectures Exploiting 2D Projections/Views of 3D Objects
 

@@ -64,6 +64,11 @@
 
 ![](https://i.imgur.com/a0WmMQb.png)
 
+
+### [Deep Learning Advances in Computer Vision with 3D Data: A Survey](http://dl.acm.org/citation.cfm?id=3042064)
+
+![](https://i.imgur.com/i64SI7G.png)
+
 ---
 [3D Vehicle Detection](https://experiencor.github.io/sdc_3d.html)
 
@@ -80,6 +85,10 @@ https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&titl
 
 
 
+--- 
 
+## Terms
+
+a 3D voxel grid where each voxel was a binary variable indicating whether it belonged to the 3D shape or it was empty space
 
 
