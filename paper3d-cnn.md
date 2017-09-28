@@ -50,11 +50,25 @@ Pipeline : 후보 영역 선정(candidate proposal) -> 분류(classification)
 
 - 3D정보를 2D로 투영후 2D CNN 사용 : [3], [9],[16], [17], [24], [25]
 
-- 3D object localization을 2D CNN에 바로 작용 하여도 동작함 [16] 
+```
+[3-3DOP] Xiaozhi Chen, Kaustav Kundu, Yukun Zhu, Andrew G Berneshawi, Huimin Ma, Sanja Fidler, and Raquel Urtasun. 3d object proposals for accurate object class detection. Advances in Neural Information Processing Systems, pages 424–432, 2015.
+[9] S Gupta, R Girshick, P Arbelaez, and J Malik. Learning Rich Features from RGB-D Images for Object Detection and Segmentation. arXiv preprint arXiv:1407.5736, pages 1–16, 2014.
+[16-VeloFCN] Bo Li, Tianlei Zhang, and Tian Xia. Vehicle detection from 3d lidar using fully convolutional network. Proceedings of Robotics: Science and Systems, 2016.
+[17] Dahua Lin, Sanja Fidler, and Raquel Urtasun. Holistic scene understanding for 3D object detection with RGBD cameras. Proceedings of the IEEE International Conference on Computer Vision, pages 1417–1424, 2013.
+[24] Max Schwarz, Hannes Schulz, and Sven Behnke. RGB-D Object Recognition and Pose Estimation based on Pre-trained Convolutional Neural Network Features. IEEE International Conference on Robotics and Automation (ICRA), (May), 2015.
+[25] Richard Socher, Brody Huval, Bharath Bath, Christopher D Manning, and Andrew Y Ng. Convolutional-recursive deep learning for 3d object classification. Advances in Neural Information Processing Systems, pages 665–673, 2012.
+```
+
+
+- 3D object localization을 2D CNN에 바로 작용 하여도 동작함 [16-VeloFCN] 
 
 - [10] operates 3D voxel data but regards one dimension as a channel to apply 2D CNN.
 
-- [8-VeloFCN], [20-VoxNet], [26], [32-3DShapeNet] are among the very few earlier works on3D CNN.
+```
+[10] Michael Himmelsbach, Felix V Hundelshausen, and Hans-Joachim Wunsche. Fast segmentation of 3d point clouds for ground vehicles. Intelligent Vehicles Symposium (IV), 2010 IEEE, pages 560–565, 2010.
+```
+
+- [8], [20-VoxNet], [26], [32-3DShapeNet] are among the very few earlier works on3D CNN.
  - [8], [20], [32] focus on object recognition 
  - [26] proposes 3D R-CNN techniques for indoor object detection combining the Kinect image and point cloud.
 

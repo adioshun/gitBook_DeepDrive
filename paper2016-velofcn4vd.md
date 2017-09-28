@@ -57,6 +57,12 @@ range scan에서의 물체 탐지는 RGBD images [3, 17]를 이용한 탐지 방
 
 >  RGBD data : 색상정보(RGB) + 물체까지의 거리정보 (Depth)를 함께 측정할
 
+> [3]은 RGBD가 아니라, 그냥 카메라 센서로 알고 있음 
+
+```
+[3] Xiaozhi Chen, Kaustav Kundu, Yukun Zhu, Andrew G Berneshawi, Huimin Ma, Sanja Fidler, and Raquel Urtasun. 3d object proposals for accurate object class detection. Advances in Neural Information Processing Systems, pages 424–432, 2015.
+[17] Dahua Lin, Sanja Fidler, and Raquel Urtasun. Holistic scene understanding for 3D object detection with RGBD cameras. Proceedings of the IEEE International Conference on Computer Vision, pages 1417–1424, 2013.
+```
 
 
 ### 2.1 Convolutional Neural Network on Object Detection
