@@ -2,7 +2,7 @@
 |-|-|
 |저자(소속)|Shuran Song (Princeton)|
 |학회/년도| CVPR 2016, [논문](http://dss.cs.princeton.edu/paper.pdf)|
-|키워드|amodal, RPN, ORN |
+|키워드|object retrieval분야, RPN+ORN |
 |참고|[CVPR2016](https://www.youtube.com/watch?v=D-lDbS9NQ_0), [Youtube](https://www.youtube.com/watch?v=zzcipxzZP9E), [Homepage](http://dss.cs.princeton.edu/) |
 |코드|[matlab](https://github.com/shurans/DeepSlidingShape)|
 
@@ -111,7 +111,7 @@ box for the whole object
 
 Depth-RCNN [11, 10] is the first object detector using deep ConvNets on RGB-D images. 
 
-They extend the RCNN framework [8] for color-based object detection by encoding the depth map as three extra channels (with Geocentric Encoding: Disparity, Height, and Angle) appended to the color images. 
+They extend the RCNN framework [8-RCNN] for color-based object detection by encoding the depth map as three extra channels (with Geocentric Encoding: Disparity, Height, and Angle) appended to the color images. 
 
 [10] extended Depth-RCNN to produce 3D bounding boxes by aligning 3D CAD models to the recognition results. 
 
@@ -119,13 +119,19 @@ They extend the RCNN framework [8] for color-based object detection by encoding 
 
 
 ```
-
+[11] S. Gupta, R. Girshick, P. Arbelaez, and J. Malik. Learning rich features from RGB-D images for object detection and segmentation. In ECCV, 2014.
+[10] S. Gupta, P. A. Arbelaez, R. B. Girshick, and J. Malik. Aligning 3D models to RGB-D images of cluttered scenes. In CVPR, 2015.
+[12] S. Gupta, J. Hoffman, and J. Malik. Cross modal distillation for supervision transfer. arXiv, 2015.
 ```
 
 #### 나. 3D CAD model classification
 
-For 3D CAD model classification, [26] and [20] took a view-based deep learning approach by rendering 3D shapes as 2D image(s).
+For 3D CAD model classification, [26-MVCNN] and [20-DeepPano] took a view-based deep learning approach by rendering 3D shapes as 2D image(s).
 
+```
+[26-MVCNN] H. Su, S. Maji, E. Kalogerakis, and E. G. Learned-Miller.Multi-view convolutional neural networks for 3D shape recognition. In ICCV, 2015
+[20] B. Shi, S. Bai, Z. Zhou, and X. Bai. DeepPano: Deep panoramic representation for 3-D shape recognition. Signal Processing Letters, 2015.
+```
 
 #### B. 3D Object Detector 
 
@@ -135,11 +141,19 @@ Sliding Shapes [25] is a 3D object detector that runs sliding windows in 3D to d
 
 However, the algorithm uses hand-crafted features and the algorithm uses many exemplar classifiers so it is very slow. 
 
+```
+[25] S. Song and J. Xiao. Sliding Shapes for 3D object detection in depth images. In ECCV, 2014.
+```
+
 ##### 나. Clouds of Oriented Gradients feature
 
 Recently, [32] also proposed the Clouds of Oriented Gradients feature on RGB-D images.
 
 In this paper we hope to improve these hand-crafted feature representations with 3D ConvNets that can learn powerful 3D and color features from the data.
+
+```
+[32] R. Zhile and E. B. Sudderth. Three-dimensional object detection and layout prediction using clouds of oriented gradients. In CVPR, 2016.
+```
 
 #### C. 3D Feature Learning 
 
@@ -150,22 +164,49 @@ The feature is trained on a synthetic CAD dataset, and tested on scene labeling 
 
 본 논문의 제안 방식과 비교 : In contrast, we desire a supervised way to learn 3D features using the deep learning techniques that are proven to be more effective for image-based feature learning
 
+```
+[15] K. Lai, L. Bo, and D. Fox. Unsupervised feature learning for 3d scene labeling. In ICRA, 2014.
+```
+
 #### D. 3D Deep Learning 3D 
 
 ShapeNets [29] introduced 3D deep learning for modeling 3D shapes, and demonstrated
 that powerful 3D features can be learned from a large amount of 3D data. 
 
+```
+[29] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang, and J. Xiao. 3D ShapeNets: A deep representation for volumetric shapes. In CVPR, 2015.
+```
+
 Several recent works [17, 5, 31, 13] also extract deep learning features for retrieval and classification of CAD models. 
 
 While these works are inspiring, none of them focuses on 3D object detection in RGB-D images.
 
+```
+[17] D. Maturana and S. Scherer. VoxNet: A 3D convolutional neural network for real-time object recognition. In IROS, 2015
+[5] Y. Fang, J. Xie, G. Dai, M. Wang, F. Zhu, T. Xu, and E. Wong. 3D deep shape descriptor. In CVPR, 2015.
+[31] J. Xie, Y. Fang, F. Zhu, and E. Wong. DeepShape: Deep learned shape descriptor for 3D shape matching and retrieval. In CVPR, 2015.
+[13] H. Huang, E. Kalogerakis, and B. Marlin. Analysis and synthesis of 3D shape families via deep-learned generative models of surfaces. Computer Graphics Forum, 2015.
+```
+
+
+
 #### E. Region Proposal 
 
-For 2D object proposals, previous approaches [27, 1, 11] are mostly based on merging segmentation results. 
+For 2D object proposals, previous approaches [27-SelectiveSearch, 1, 11] are mostly based on merging segmentation results. 
 
-Recently, Faster RCNN [18] introduces a more efficient and effective ConvNet-based formulation, which inspires us to learn 3D objectness using ConvNets. 
+```
+[11] S. Gupta, R. Girshick, P. Arbelaez, and J. Malik. Learning
+rich features from RGB-D images for object detection and
+segmentation. In ECCV, 2014.
+```
 
-For 3D object proposals, [4] introduces an MRF formulation with `hand-crafted` features for a few object categories in street scenes. 
+Recently, Faster RCNN introduces a more efficient and effective ConvNet-based formulation, which inspires us to learn 3D objectness using ConvNets. 
+
+For 3D object proposals, [4] introduces an MRF formulation with `hand-crafted` features for a few object categories in street scenes.
+
+```
+[4] X. Chen, K. Kunku, Y. Zhu, A. Berneshawi, H. Ma, S. Fidler, and R. Urtasun. 3d object proposals for accurate object class detection. In NIPS, 2015.
+``` 
 
 We desire to learn 3D objectness for general scenes from the data using ConvNets.
 
