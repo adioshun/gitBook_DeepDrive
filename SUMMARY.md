@@ -4,8 +4,9 @@
 
 * [Introduction](README.md)
 * [Vision-based SLAM](vision-based-slam.md)
-* [Paper\_2017\_Survey\_CV4Vehicle](paper2017-survey.md)
+* [Paper\_2017\_Survey\_CV4Vehicle \(50%\)](paper2017-survey.md)
 * [Paper\_2017\_OctNet](paper2017-octnet.md)
+* [Paper\_2017\_Overview of Services](paper2017-overview-of-services.md)
 
 ## 2D CNN
 
