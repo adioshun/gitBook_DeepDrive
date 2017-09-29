@@ -92,6 +92,8 @@ Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16
 
 ## 6. Material (Pdf, ppt)
 
+- [3D Object Representation](http://www.connellybarnes.com/work/class/2015/intro_gfx/lectures/17-3DObjectRepresentation.pdf)
+
 
 ### 6.2 Point Cloud
 
