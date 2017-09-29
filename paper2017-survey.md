@@ -167,3 +167,105 @@ The main goal is to gain efficiency through a compact, complete, stable, and  ro
 
 In  addition,  Stixel  representations provide an encoding of the free space and the obstacles in the scene.
 
+### 4.3 3D Primitives
+
+Atomic regions which are geometrically meaningful allow the shape of urban objects to be better preserved.  
+
+###### 관련 연구들 
+
+- In Cornelis et al. (2008), 3D city models are composed of ruled surfaces for both the facades and the roads.  
+
+- Duan & Lafarge (2016) use poly-gons with elevation estimate for 3D city modeling from pairs of satellite images.  
+
+- de Oliveira et al. (2016) update a list of large scale polygons over time for an incremental scene representa-tion from 3D range measurements.  
+
+- Lafarge et al. (2010) use library of 3D blocks for reconstructing buildings with different roof forms. 
+
+- Lafarge & Mallet (2012); Lafarge et al. (2013) use 3D-primitives such as planes,  cylinders,  spheres or cones for describing regular structures of the scene.  
+
+- Dub ́ e et al. (2016) segments point clouds into distinct elements for a  loop-closure detection algorithm based on the matching of 3D segments
+
+
+## 5.  Object Detection
+
+**Sensor **
+-  The visible spectrum (VS) is typically used for daytime detections whereas the infrared spectrum can be used for night-time detection.  
+- Thermal infrared (TIR) cameras capture rela-tive temperature which allows to distinguish warm objects like pedestrians from cold objects like vegetation or the road.
+- Laser scanners(LiDAR) can provide range information which is helpful for detecting an object and localizing it in 3D
+- 요즘은 여러 센서 정보를 함께 고려 하는 `Fusion Sensor`기술 연구 중임 
+
+**Standard Pipeline**
+- preprocessing
+- region of interest extraction (ROI)
+- object classification 
+- verification/ refinement.
+
+**Classification**
+- Handcraft
+- CNN
+
+**Part-based Approaches**
+- 연결된 물체 전체를 학습 시키는 것은 다양성 때문에 어렵다.-> 부분으로 나누어서 학습 제안 (사람 = 머리 + 몸통+팔+다리)
+- 관련 연구 : The Deformable Part Model (DPM) by Felzenszwalb et al. (2008) attempts to break down the complex appearance of objects into easier parts for training SVMs 
+- 문제점 : Can not represent contextual information which is necessary for occlusion reasoning
+
+
+![](https://i.imgur.com/8AhdGaB.png)
+
+### 5.1 2D Object Detection
+
+
+> 추후 시간 가지고 다시 살펴 보기 
+
+
+
+
+### 5.2 3D Object Detection from 2D Images 
+
+Geometric 3D representations of object classes can recover far more details than just 2D or 3D bounding boxes, however most of today’s object detectors are focused on robust 2D match-ing.
+
+3D representations는 2D에 비하여 정보량은 많지만, 현재 대부분의 연구는 2D에 맞추어져 있다. 
+  
+#### A. 3D CAD + PCA  
+  
+Zia et al. (2013) exploit the fact that high-quality 3D CAD models are available for many important classes.  
+- From these models, they obtain coarse 3D wireframe models using principal components analysis and train detectors for the vertices of the wireframe. 
+- At test time, they generate evidence for vertices by densely applying the detectors. 
+
+```
+Zia, M., Stark, M., Schiele, B., & Schindler, K. (2013). Detailed 3D representations for object recognition and modeling. IEEE Trans. on Pattern Analysis and Machine Intelligence (PAMI),35 , 2608–2623
+```
+
+
+#### B. Advanced 3D CAD + PCA 
+
+Zia et al. (2015) extend this work by directly using detailed 3D CAD models in their formu-lation, combining them with explicit representations of likely occlusion patterns. 
+- Further, a ground plane is jointly estimated to stabilize the pose estimation process. 
+- This extension outperforms the pseudo-3D model of Zia et al. (2013) and shows the benefits of reasoning in true metric 3D space.
+
+```
+Zia, M., Stark, M., & Schindler, K. (2015).  Towards scene understanding with detailed 3d object representations. International Journal of Computer Vision (IJCV),112 , 188–203.
+```
+
+#### C. 3D geometric representation(CAD?) + real-world images
+
+기존 방법 단점 : they can not yet compete with state-of-the-art detectors using 2D bounding boxes. 
+
+Pepik et al. (2015) propose a 3D extension of the powerful deformable part model, 
+- which combines the 3D geometric representation with robust matching to real-world images.
+- They further add 3D CAD information of the object class of interest as geometry cue to enrich the appearance model.
+
+```
+Pepik, B., Stark, M., Gehler, P. V., & Schiele, B. (2015).  Multi-view and 3d deformable  part  models. IEEE  Trans.  on  Pattern  Analysis  and  Machine Intelligence (PAMI),37 , 2232–2245.
+```
+
+
+### 5.3 3D Object Detection from 3D Point Clouds
+
+> 3D 데이터는 sparse하여 2D에 비하여 성능이 별로 좋지 않다. 
+
+
+
+
+
+
