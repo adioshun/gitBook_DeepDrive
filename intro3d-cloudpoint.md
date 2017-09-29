@@ -13,6 +13,13 @@
 - Primitive-based CAD models use simple geometry such as cuboids and cylinders to assemble 3d shapes.
 
 
+###### 3D Object Representations
+- Raw data : **Point cloud**, Range image, Polygon soup,  
+- Surfaces : **Mesh**, Subdivision, Parametric, Implicit
+- Solids : **Voxels**, BSP tree, CSG, Sweep, 
+- High-level structures : Scene graph, Skeleton, Application specific
+
+> [3D Object Representation](http://www.connellybarnes.com/work/class/2015/intro_gfx/lectures/17-3DObjectRepresentation.pdf): 각 분류에 대한 상세 이미지 및 설명 포함 
 
 ### RNN/RL
 
