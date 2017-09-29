@@ -416,11 +416,71 @@ From an application perspective, the scene representation is a common way of cla
 
 ###### Depth map
 
+The depth map representation typically consists of 
+- a depth map for each input view estimated 
+- with a 3D modeling pipeline which starts with image matching followed by pose estimation and dense stereo. 
+
+This representationis usually preferred in scene analysis due to its flexibility and scalability to large scenes. 
+
+```
+- Plane Sweeping Stereo algorithm(Collins (1996)) : 
+    - It sweeps a family of parallel planes in a scene, projects images onto a plane via planar homographies, then evaluates photo-consistency values on each plane. 
+
+In largescenes, one of the challenges is to handle massive amount ofdata in real-time. 
+
+- Pollefeys (2008) propose a large scale, realtime3D reconstruction system based on depth map representation.
+    - The real-time performance is achieved by incorporating a set of components which are particularly efficient on typical urban scenes such as a 2D feature tracker with automatic gain adaptation for handling large dynamic range in natural scenes, and parallel implementations of plane sweeping stereo and depth map fusion on GPU.
+```
+
 ###### Point cloud
+
+In contrast to a partial depthmap for each view, point-cloud or patch based surface representations reconstruct a single 3D point-cloud model using all the input images. 
+
+Under spatial consistency assumptions, the pointcloudon the surface of the scene can grow or expand whichprovides easy model manipulation such as merging and splitting.
+
+```
+- Patch-based Multi-View Stereo (PMVS) by Furukawa & Ponce(2010). 
+
+PMVS starts with a feature matching step to generate a sparse set of patches and then iterate between a greedy expansion step and a filtering step to make patches dense and remove erroneous matches.
+```
 
 ###### Volumetric
 
+Volumetric approaches represent geometry on a regularly `sampled 3D grid`, i.e. volume, 
+- either as a discrete occupancy function (Kutulakos & Seitz (2000)) 
+- or a function encoding distance to the closest surface (level-set)(Faugeras & Keriven (1998)). 
+
+More recent approaches use aprobability map defined at regular voxel locations to encodethe probability of occupancy (Bhotika et al. (2002); Pollard &Mundy (2007); Ulusoy et al. (2015)). 
+
+The amount of memory required is the main limitation for volumetric approaches.
+
+There is a variety of methods for dealing with this problem such as 
+- voxel hashing (Nießner et al. (2013)) 
+- a data adaptive discretization of the space in the form of a Delaunay triangulation(Labatut et al. (2007)). 
+
+One effective solution is an octree data structure which is essentially an adaptive voxel grid to allocate high resolution cells only near the surfaces.
+
+
+
 ###### Mesh or Surface
+
+typically triangular mesh-based surfaces. 
+
+Volumetric surface extraction fuses 3D information from an intermediate representation such as
+- depth maps
+- point clouds
+- volumesor scans into a single, clean mesh model. 
+
+
+Seminal workby Curless & Levoy (1996) proposes an algorithm to accumulate surface evidence into a voxel grid using signed distance functions. 
+
+The surface is implicitly represented as the zero crossing of the aggregated signed distance functions. 
+
+It can be extracted using the Marching Cube algorithm Lorensen & Cline (1987) or using volumetric graph cuts to label each voxel as interior or exterior. 
+
+There are approaches which directly start from images and refine a mesh model using an energy function composed of a data term based on photo-consistency function and a regularization term for smoothness. 
+
+In these approaches,the energy is usually optimized using gradient descent, where the movement of each vertex is determined by the gradient of the objective function.
 
 
 
@@ -444,13 +504,17 @@ Musialski et al.(2013) provide a survey of urban reconstruction approaches by fo
 
 ### 7.3. Reconstruction and Recognition
 
-In autonomous driving, it is important to understand boththe structural and semantic information of the surroundings.Traditionally, image segmentation methods employ priors entirelyin the 2D image domain, i.e., spatial smoothness terms,and reconstruction methods usually encourage piecewise smoothsurfaces. 
+In autonomous driving, it is important to understand both the structural and semantic information of the surroundings.
 
-It has been long argued that semantics and 3D reconstructioncarry valuable information to each other. 
+Traditionally, `image segmentation` methods employ priors entirely in the 2D image domain, i.e., spatial smoothness terms,and reconstruction methods usually encourage piecewise smooth surfaces. 
 
-Similarly tostereo, the motivation to incorporate semantics in reconstructionis photo-consistency failing in case of imperfect and ambiguousimage information due to specularities, lack of texture,repetitive structures, or strong lighting changes. 
+It has been long argued that semantics and 3D reconstruction carry valuable information to each other. 
 
-Semantic labelsprovide geometric cues about likely surface orientationsat a certain location and help resolving inherent ambiguities.3D reconstruction lifts the reasoning from 2D to 3D and actsas a strong regularizer by enforcing geometric consistency overmultiple images for segmentation.
+Similarly to stereo, the motivation to incorporate semantics in reconstruction is photo-consistency failing in case of imperfect and ambiguous image information due to specularities, lack of texture,repetitive structures, or strong lighting changes. 
+
+Semantic labels provide geometric cues about likely surface orientations at a certain location and help resolving inherent ambiguities.
+
+3D reconstruction lifts the reasoning from 2D to 3D and acts as a strong regularizer by enforcing geometric consistency over multiple images for segmentation.
 
 
 
