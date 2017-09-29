@@ -1,22 +1,12 @@
-# 3D Cloud Point 
-
+# 3D Object Representations
 
 ![](https://i.imgur.com/OPatJnW.png)
-
-- Point cloud represents shapes as a collection of unordered 3d coordinates.
-
-- Polygonal mesh describes a shape by a set of polygonal faces.
-
-- Volumetric representation encodes a shape as 3d volumetric occupancy
-
-- Depth map is a very common 3d representation
-- Primitive-based CAD models use simple geometry such as cuboids and cylinders to assemble 3d shapes.
-
-
-###### 3D Object Representations
-- Raw data : **Point cloud**, Range image, Polygon soup,  
+- Raw data : **Point cloud**, Range image(eg.Kinect), Polygon soup,
+  - Point cloud represents shapes as a collection of unordered 3d coordinates.
 - Surfaces : **Mesh**, Subdivision, Parametric, Implicit
+  - Polygonal mesh describes a shape by a set of polygonal faces.
 - Solids : **Voxels**, BSP tree, CSG, Sweep, 
+  - Volumetric representation encodes a shape as 3d volumetric occupancy
 - High-level structures : Scene graph, Skeleton, Application specific
 
 > [3D Object Representation](http://www.connellybarnes.com/work/class/2015/intro_gfx/lectures/17-3DObjectRepresentation.pdf): 각 분류에 대한 상세 이미지 및 설명 포함 
