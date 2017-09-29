@@ -94,7 +94,7 @@ Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16
 
 - [3D Object Representation](http://www.connellybarnes.com/work/class/2015/intro_gfx/lectures/17-3DObjectRepresentation.pdf)
 
-- [ADAS (Advanced Driving Assistance System)](https://www.slideshare.net/yuhuang/advanced-driving-assistance-system): ppt 261
+- [ADAS (Advanced Driving Assistance System)](https://www.slideshare.net/yuhuang/advanced-driving-assistance-system): ppt 261, Baidu USA, 2017.04
 
 
 ### 6.2 Point Cloud
