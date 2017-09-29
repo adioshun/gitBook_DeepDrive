@@ -264,8 +264,213 @@ Pepik, B., Stark, M., Gehler, P. V., & Schiele, B. (2015).  Multi-view and 3d de
 
 > 3D 데이터는 sparse하여 2D에 비하여 성능이 별로 좋지 않다. 
 
+#### A. Vote 3D
+Wang & Posner (2015) propose an efficient scheme to apply the common `2D sliding window detection` approach to 3D data. 
+- More specifically, they exploit the sparse nature of the problem using  a `voting  scheme`  to  search  all  possible  object  locations and orientations.  
+
+```
+Wang, D. Z., & Posner, I. (2015). Voting for voting in online point cloud object
+detection. In Proc. Robotics: Science and Systems (RSS).
+```
+
+#### B. VeloFCN
+
+Li et al. (2016b) improve upon these results by exploiting a fully convolutional neural network for detecting vehicles from range data. 
+
+They represent the data in a **2D point map**, and predict an objectness confidence and a bounding box simultaneously using a single 2D CNN. 
+
+The encoding used to represent the data allows them to predict the full 3D bounding box of the vehicles. 
+
+```
+Li, B., Zhang, T., & Xia, T. (2016b). Vehicle detection from 3d lidar using fully
+convolutional network. In Proc. Robotics: Science and Systems (RSS).
+```
+  
+   
+#### C. Vote3deep
+    
+Engelcke et al. (2016) leverage a feature-centric voting scheme to implement a novel convolutional layer which  exploits  the  sparsity  of  the  point  cloud.   
+
+Additionally, they propose to use the $$L1$$ penalty for regularization. Relying on laser range data alone makes the detection task challenging due to the limited density of the laser scans. 
+
+Thus, existing  LiDAR-based  approaches  perform  weaker  compared to their image-based counterparts on the KITTI datasets. 
+
+```
+Engelcke, M., Rao, D., Wang, D. Z., Tong, C. H., & Posner, I. (2016). Vote3deep: Fast object detection in 3d point clouds using efficient convolutional neural networks. arXiv.org, 609.06666.
+```
+
+#### MV3D
+
+
+Chen et al. (2016c) combine `LiDAR laser` range data with `RGB images` for object detection.   
+
+In their approach,  the sparse point cloud  is encoded  using  a  compact  multi-view  representation and a proposal generation network utilizes the bird’s eye view representation of the point cloud to generate 3D candidates. 
+
+Finally, they combine region-wise features from multiple views with  a  deep  fusion  scheme   
+
+```
+Chen, X., Ma, H., Wan, J., Li, B., & Xia, T. (2016c). Multi-view 3d object
+detection network for autonomous driving. arXiv.org, 1611.07759.
+```
+
+### 5.4 Person Detection
+
+> 5.3 은 포괄적인 Detection에 초점을 맞추었다면 5.4는 특정 타겟(보행자) Detection에 대해 살펴 보겠다. 
+
+
+### 5.5 Human Pose Estimation
+
+
+### 5.6. Discussion
+
+- 차량 탐지는 좋은 성과를 보이고 있다. 하지만, 보행자와 자전거 타는 사람 탐지는 성능이 낮다. 이는 학습 데이터가 적고, 자전거를 탄다는걸 빼고는 객체가 같아 혼란을 주는것 같다. 
+
+- 추가 연구 분야는 `Hige Occluded Object`탐지에 관한 것이다. 
+    - 이는 KITTI 리더보드의 easy, moderate and hard examples의 정확도가 많은 차이가 나는것을 보면 알수 있다. 
+
+- A major source of errors are crowds of pedestrians, groups of cyclists and lines of cars that cause many occlusions and lead to missing detections for all methods. 
+
+- Furthermore, a large amount of distant objects needs to be detected in some cases which is still a challenging task for modern methods since the amount of information provided by these objects is very low
+
+
+## 6. Semantic Segmentation
+
+
+### 6.1. Semantic Instance Segmentation
+
+목표 : simultaneous detection, segmentation and classification of every individual object in an image. 
+
+차이점 : Unlike semantic segmentation, it provides information about the position, semantics, shape and count of individual objects, and therefore has many applications in autonomous driving.
+
+### 6.2. Label Propagation
+        
+### 6.3. Semantic Segmentation with Multiple Frames
+
+### 6.4. Semantic Segmentation of 3D Data
+
+#### A. Online Methods
+
+#### B. 3D CNN
+
+there exists relatively little work on `labeling 3D data` using convolutional networks.
+
+##### 가. Point cloud labeling
+
+Huang & You (2016) propose a framework for labeling3D point cloud data using a 3D Convolutional Neural Network(3D-CNN). 
+
+Specifically, they compute 3D occupancy grids of size 203 centered at a set of randomly generated key points. 
+
+The occupancy and the labels form the input to a 3D CNN, which is composed of convolutional layers, max-pooling layers, a fully connected layer and a logistic regression layer. 
+
+Due to the dense voxel representation, 3D CNNs are only able to process voxel grids of very coarse resolution considering the memory limitations of modern GPUs. 
+
+```
+Huang, J., & You, S. (2016). Point cloud labeling using 3d convolutional neural network. In Proc. of the International Conf. on Pattern Recognition (ICPR)
+```
+
+##### 나. OctNets
+
+To alleviate this problem, Riegler et al. (2017) propose OctNets,a 3D convolutional network, that allows for training deep architectures at significantly higher resolutions. 
+
+They build onthe observation that 3D data (e.g., point clouds, meshes) is oftensparse in nature. 
+
+The proposed OctNet exploits this sparsity property by hierarchically partitioning the 3D space into aset of octrees and applying pooling in a data-adaptive fashion.
+
+This leads to a reduction in computational and memory requirements as the convolutional network operations are defined on the structure of these trees and thus can dynamically allocate resources depending on the structure of the input.
+
+```
+Riegler, G., Ulusoy, A. O., & Geiger, A. (2017). Octnet: Learning deep 3d representations at high resolutions. In Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR).
+``
+
+
+### 6.5. Semantic Segmentation of Street Side Views
+
+### 6.6. Semantic Segmentation of Aerial Images
+
+### 6.7. Road Segmentation
+
+
+## 7. Reconstruction
+
+### 7.1. Stereo
+
+### 7.2. Multi-view 3D Reconstruction
+
+Goal :  to model the underlying 3D geometry by inverting the image formation process often under certain prior or smoothness assumptions. 
+
+In contrast to two-view stereo, 
+- multi-view reconstruction algorithms in particular address the problems of varying viewpoints and the complete reconstruction of 3D scenes from more than two and potentially a very large number of images. 
+
+If the camera parameters are known, solving for the 3D geometry of the scene is equivalent to solving the correspondence problem, based on a photo-consistency function which measures the agreement between different viewpoints.
+
+
+#### A. 분류(Taxonomies)
+
+Several categorizations of **multi-view reconstruction algorithms** have been proposed in the literature, typically considering the form of the photo-consistency function, the scene representation, visibility computation, priors, and initialization requirements as in Seitz et al. (2006). 
+
+From an application perspective, the scene representation is a common way of classifying multi-view reconstruction approaches into 
+- depth map
+- point cloud
+- volumetric
+- mesh
+
+###### Depth map
+
+###### Point cloud
+
+###### Volumetric
+
+###### Mesh or Surface
 
 
 
 
+#### B. Urban Reconstruction
 
+![](https://i.imgur.com/w9kiBsn.png)
+
+In this survey, we focus on multiview reconstruction from an autonomous driving perspective which mainly concerns the reconstruction of large urban areas, up to whole cities. 
+
+The goal : to produce fully automatic, high-quality, dense reconstructions of urban areas by addressing inherent challenges such as 
+- lighting conditions
+- occlusions
+- appearance changes
+- high-resolution inputs
+- large scale outputs. 
+
+###### survey 논문 : urban reconstruction 
+
+Musialski et al.(2013) provide a survey of urban reconstruction approaches by following an output-based ordering, namely buildings and semantics, facades and images, and finally blocks and cities.
+
+### 7.3. Reconstruction and Recognition
+
+In autonomous driving, it is important to understand boththe structural and semantic information of the surroundings.Traditionally, image segmentation methods employ priors entirelyin the 2D image domain, i.e., spatial smoothness terms,and reconstruction methods usually encourage piecewise smoothsurfaces. 
+
+It has been long argued that semantics and 3D reconstructioncarry valuable information to each other. 
+
+Similarly tostereo, the motivation to incorporate semantics in reconstructionis photo-consistency failing in case of imperfect and ambiguousimage information due to specularities, lack of texture,repetitive structures, or strong lighting changes. 
+
+Semantic labelsprovide geometric cues about likely surface orientationsat a certain location and help resolving inherent ambiguities.3D reconstruction lifts the reasoning from 2D to 3D and actsas a strong regularizer by enforcing geometric consistency overmultiple images for segmentation.
+
+
+
+## 8. Motion & Pose Estimation
+
+## 9. Tracking
+
+## 10. Scene Understanding
+
+## 11. End-to-End Learning of Sensorimotor Control
+
+Current state-of-the-art approaches to autonomous driving are comprised of numerous models, 
+- detection (of traffic signs, lights, cars, pedestrians), 
+- segmentation (of lanes, facades),
+- motion estimation, 
+- tracking of traffic participants, 
+- reconstruction
+
+The results from these components are then combined in a `rule based` control system.
+
+최근 동향 ......
+
+## 12. Conclusion
