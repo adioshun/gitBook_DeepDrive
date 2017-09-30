@@ -512,8 +512,11 @@ Table VI highlights key representative works in vehicle detection and tracking.
 
 We performed experiments on KITTI datasets. 
 
-A total of 278 frames were used and results are obtained with the tracking by detection method 10, the scene flow-based method [158], an L1-based tracking method [159], and a compressive
-method [160]. 
+A total of 278 frames were used and results are obtained with the tracking by 
+- detection method , 
+- the scene flow-based method [158], 
+- an L1-based tracking method [159], and 
+- a compressive method [160]. 
 
 These algorithms were applied to tracking single vehicle and comparative results from separate video frames results are given in Fig. 6. 
 
@@ -525,3 +528,55 @@ has the best performance.
 
 
 ### 5.3 Behavior analysis
+
+Using the results from the **vehicle detection** and **tracking system**, an analysis of the behaviors of other vehicles can be performed. 
+
+> 차량 탐지와 추적이 가능해지면 행동(context, maneuvers, trajectories, behavior classification) 분석이 가능하다. 
+
+Four characteristics of vehicle behavior are presented, namely 
+- context
+- maneuvers
+- trajectories 
+- behavior classification [146].
+
+#### 가. Context
+
+The role of context is important for vehicle behavior analysis. 
+
+In [117], modeling the driving context, the driving environment was classified. 
+
+In [161], a dynamic visual model was designed to detect critical motions of nearby vehicles. 
+
+In [154], the behavior of on-coming vehicles was inferred by motion and depth information.
+
+#### 나. Maneuvers
+
+An overtaking monitoring system was presented in [162]. 
+
+In [163], combining the information provided by Radar and camera, an optical flow method was implemented to detect overtaking vehicles. 
+
+In [154], an IMM was evaluated for inferring the turning behavior of oncoming vehicles. 
+
+In [149], a Markov process was constructed to model the behavior of on-road vehicles.
+
+
+#### 다. Trajectories
+
+In [164], a long-term prediction method of vehicles was proposed. 
+
+In [165], highway trajectories were clustered using hidden Markov model. 
+
+In [166], vehicle tracking in combination with a long term motion prediction method was presented.
+
+
+#### 라. Behavior classification
+
+Efficient models such as Gaussian mixture models, Markov models, and Bayesian networks have been validated for vehicle behavior classification. 
+
+In [164], the vehicle behavior was classified by a Gaussian mixture model. 
+
+In [167], the vehicle behavior was modeled by Markov model before their future trajectories was estimated.
+
+In [168], the behavior of vehicles was classified by a Bayesian network.
+
+## 6.  SCENE UNDERSTANDING
