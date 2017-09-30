@@ -6,3 +6,29 @@
 |참고||
 |코드||
 
+# Overview of Environment Perception for Intelligent Vehicles
+
+- lane and road detection
+- traffic sign recognition
+- vehicle tracking
+- behavior analysis
+- scene understanding
+
+## I. INTRODUCTION
+
+|![](https://i.imgur.com/B4DrZAr.png)|![](https://i.imgur.com/sqCqaRs.png)|
+|-|-|
+
+자율 주행 차의 주요 기술 [3]
+- environment perception and modeling
+- Localization and map building
+- path planning and decision-making
+- motion control
+
+
+
+
+The main functions
+of environment perception for intelligent vehicles are based
+on lane and road detection, traffic sign recognition, vehicle
+tracking and behavior analysis, and scene understanding.
