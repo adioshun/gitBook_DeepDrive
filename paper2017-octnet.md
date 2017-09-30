@@ -11,20 +11,20 @@
 # OctNet
 
 ```
-To alleviate this problem, Riegler et al. (2017) propose OctNets,a 3D convolutional network, that allows for training deep architectures at significantly higher resolutions. 
+Riegler et al. (2017) propose OctNets,a 3D convolutional network, that allows for training deep architectures at significantly higher resolutions. 
 
 They build on the observation that 3D data (e.g., point clouds, meshes) is often sparse in nature. 
 
 The proposed OctNet exploits this sparsity property by hierarchically partitioning the 3D space into aset of octrees and applying pooling in a data-adaptive fashion.
 
 This leads to a reduction in computational and memory requirements as the convolutional network operations are defined on the structure of these trees and thus can dynamically allocate resources depending on the structure of the input.
-
+```
 
 our representation enables 3D convolutional networks which are both deep and high resolution. 
 
 Towards this goal, we exploit the **sparsity** in the input data 
 - to hierarchically partition the space using a set of unbalanced octrees where each leaf node stores a pooled feature representation
-```
+
 
 ## 1. Introduction
 
@@ -85,4 +85,55 @@ The convolutional network operations are directly defined on the structure of th
 Therefore, our network dynamically focuses computational and memory resources, depending on the 3D structure of the input.
 - 이렇게 함으로써 계산 자원을 줄일수 있다. 
 
+## 2. Related Work
 
+we review existing work on **dense** and **sparse** models.
+
+### 2.1 Dense Models
+
+#### A. 3D Shapenets
+
+Wu et al. [48] trained a deep belief network on shapes discretized to a $$30^3$$ voxel grid for object classification, shape completion and next best view prediction.
+
+#### B. VoxNet
+
+Maturana et al. [30] proposed VoxNet, a feed-forward convolutional network for classifying $$32^3$$ voxel volumes from RGB-D data. 
+
+#### C. Boosted voxel nets
+
+In follow-up work, Sedaghat et al. [1] showed that introducing an auxiliary orientation loss increases classification performance over the original VoxNet. 
+
+```
+[1] N. S. Alvar, M. Zolfaghari, and T. Brox. Orientation-boosted voxel nets for 3d object recognition. arXiv.org, 1604.03351, 2016.
+```
+
+#### D. Point cloud labeling & Deepcontext
+
+Similar models have also been exploited for semantic point cloud labeling [21] and scene context has been integrated in [52].
+
+```
+[21] J. Huang and S. You. Point cloud labeling using 3d convolutional neural network. In Proc. of the International Conf. on Pattern Recognition (ICPR), 2016.
+[52] Y. Zhang, M. Bai, P. Kohli, S. Izadi, and J. Xiao. Deepcontext: Context-encoding neural pathways for 3d holistic scene understanding. arXiv.org, 1603.04922, 2016.
+```
+
+#### E. generative models & auto-encoders
+
+Recently, generative models [37] and auto-encoders [5,40] have demonstrated impressive performance in learning low-dimensional object representations from collections of low-resolution ($$32^3$$) 3D shapes. 
+
+```
+[37] D. J. Rezende, S. M. A. Eslami, S. Mohamed, P. Battaglia, M. Jaderberg, and N. Heess. Unsupervised learning of 3d structure from images. arXiv.org, 1607.00662, 2016.
+[5] A. Brock, T. Lim, J. M. Ritchie, and N. Weston. Generative and discriminative voxel modeling with convolutional neural networks. arXiv.org, 1608.04236, 2016
+[40] A. Sharma, O. Grau, and M. Fritz. Vconv-dae: Deep volumetric shape learning without object labels. arXiv.org, 1604.03755, 2016
+```
+
+#### F. 3D-R2N2
+
+Interestingly, these low dimensional representations can be directly inferred from a
+single image [15] or a sequence of images [8].
+
+```
+[15] R. Girdhar, D. F. Fouhey, M. Rodriguez, and A. Gupta. Learning a predictable and generative vector representation for objects. In Proc. of the European Conf. on Computer
+Vision (ECCV), 2016
+[8] C. B. Choy, D. Xu, J. Gwak, K. Chen, and S. Savarese. 3dr2n2: A unified approach for single and multi-view 3d object reconstruction. In Proc. of the European Conf. on Computer
+Vision (ECCV), 2016.
+```
