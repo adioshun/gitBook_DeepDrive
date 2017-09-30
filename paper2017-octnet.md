@@ -156,5 +156,39 @@ Vision (ECCV), 2016.
 
 ### 2.2 Sparse Models
 
+데이터의 sparsity를 이용하는 논문의 수는 많지 않다. `There exist only few network architectures which explicitly exploit sparsity in the data. `
+
+이러한 네트워크는 **exhaustive dense convolutions**를 필요로 하지 않기 때문에 **고해상도**를 다룰수 있다. `As these networks do not require exhaustive dense convolutions they have the potential of handling higher resolutions. `
+
+#### A. 
+
+Engelcke et al. [10] proposed to calculate convolutions at sparse input locations by pushing values to their target locations. 
+- This has the potential to reduce the number of convolutions but does not reduce the amount of memory required.
+- 3Layer의 낮은 네트워크 : Consequently, their work considers only very shallow networks with up to three layers.
+
+#### B. 
+
+A similar approach is presented in [16, 17] where sparse convolutions are reduced to matrix operations. 
+
+단점 
+- Unfortunately, the model only allows for 2 × 2 convolutions and results in indexing and copy overhead which prevents processing volumes of larger resolution (the maximum resolution considered in [16, 17] is $$80^3$$ voxels). 
+- Besides, each layer decreases sparsity and thus increases the number of operations, even at a single resolution. 
+
+OctNet와 차이점 : In contrast, the number of operations remains constant in our model.
+
+#### C. 
+
+Li et al. [28] proposed field probing networks which sample 3D data at sparse points before feeding them into fully connected layers. 
+
+- 단점 : While this reduces memory and computation, it does not allow for exploiting the distributed computational power of convolutional networks as field probing layers can not be stacked, convolved or pooled.
+
+#### D. 
+
+Jampani et al. [23] introduced bilateral convolution layers(BCL) which map sparse inputs into permutohedral space where learnt convolutional filters are applied. 
+
+- OctNet과 비슷 : Their work is related to ours with respect to efficiently exploiting the sparsity in the input data. 
+
+- OctNet와 차이점 : However, in contrast to BCL our method is specifically targeted at 3D convolutional networks and can be immediately dropped in as a replacement in existing network architectures.
+
 
 ## 3. Octree Networks
