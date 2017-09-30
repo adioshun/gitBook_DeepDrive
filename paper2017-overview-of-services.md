@@ -16,7 +16,7 @@
 
 ## I. INTRODUCTION
 
-|![](https://i.imgur.com/B4DrZAr.png)|![](https://i.imgur.com/sqCqaRs.png)|
+|![](https://i.imgur.com/B4DrZAr.png)|![](https://i.imgur.com/sqCqaRs.png)
 |-|-|
 
 자율 주행 차의 주요 기술 [3]
@@ -25,10 +25,8 @@
 - path planning and decision-making
 - motion control
 
-
-
-
-The main functions
-of environment perception for intelligent vehicles are based
-on lane and road detection, traffic sign recognition, vehicle
-tracking and behavior analysis, and scene understanding.
+The main functions of environment perception are based on 
+- lane and road detection
+- traffic sign recognition
+- vehicle tracking and behavior analysis
+- scene understanding.
