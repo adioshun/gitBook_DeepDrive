@@ -40,25 +40,24 @@ environment perception for intelligent vehicles.
 
 ## II. VEHICULAR SENSORS
 
-센서 & 데이터 퓨젼 
-```
-[4] C. Lundquist, “Sensor fusion for automotive applications,” Ph.D. dissertation, Linkoping University, Link ¨ oping, 2011. ¨
-[5] N.-E. E. Faouzi, H. Leung, and A. Kurian, “Data fusion in intelligent transportation systems: Progress and challenges : A survey,” Information Fusion, vol. 12, no. 1, pp. 4 – 10, 2011.
-```
-
 - GPS
-
 - INS (Inertial navigation system)
-
 - Radar : However, measurements are usually noisy and need to be filtered extensively [7].
-
 - LiDAR : Compared with Radar, LiDAR provides a much wider fieldof-view and cleaner measurements. However, LiDAR is more sensitive to precipitation [7].
-
 - Vision : camera, 야간카메라, infrared night vision, stereo vision
 
 ```
 [7] S. Sivaraman, “Learning, modeling, and understanding vehicle surround using multi-modal sensing,” Ph.D. dissertation, Uinversity of California, San Diego, 2013.
 ```
+
+센서 & 데이터 퓨젼 
+
+```
+[4] C. Lundquist, “Sensor fusion for automotive applications,” Ph.D. dissertation, Linkoping University, Link ¨ oping, 2011. ¨
+[5] N.-E. E. Faouzi, H. Leung, and A. Kurian, “Data fusion in intelligent transportation systems: Progress and challenges : A survey,” Information Fusion, vol. 12, no. 1, pp. 4 – 10, 2011.
+```
+
+
 
 ## III. LANE AND ROAD DETECTION
 
@@ -69,7 +68,7 @@ Some surveys on recent developments in lane and road detection can be found in [
 [10] V. Kastrinaki, M. Zervakis, and K. Kalaitzakis, “A survey of video processing techniques for traffic applications,” Image and Vision Computing, vol. 21, no. 4, pp. 359 – 381, 2003.
 [11] J. C. McCall and M. M. Trivedi, “Video-based lane estimation and tracking for driver assistance: survey, system, and evaluation,” IEEE Transactions on Intelligent Transportation Systems, vol. 7, no. 1, pp. 20–37, 2006.
 [12] A. Bar Hillel, R. Lerner, D. Levi, and G. Raz, “Recent progress in road and lane detection: A survey,” Machine Vision and Applications, vol. 25, no. 3, pp. 727–745, 2014.
-``
+```
 
 The characteristics of these systems are given as follows: 
 - (1) 차선 이탈 경고 Lane departure warning: By predicting the trajectory of the host vehicle, a lane departure warning system warns for near lane departure events.
@@ -377,3 +376,100 @@ the dynamic driving environment.
 ```
 ### 5.2 Vehicle tracking
 
+목적 : The aim of vehicle tracking is to re-identify and measure dynamics and motion characteristics and to **predict** and estimate the **upcoming position** of vehicles [9]. 
+
+문제점 : The major problems include: 
+- A. measurement error uncertainty
+- B. data association
+- C. necessity to fuse efficiently data from multiple sensors.
+
+#### A. Measurement uncertainty
+
+the **measurement noise** is the main issue of measurement uncertainty. 
+
+
+##### 가. 가우시안 분포 노이즈 
+칼만필터를 사용하면 가우시안 분포 노이즈를 제거 할수 있다. The Kalman filter is the optimal algorithm in a linear system under Gaussian noises.
+
+##### 나. Non-가우시안 분포 노이즈 
+
+하지만 Radar기반 방식에서는 가우시안 분포가 아닌 경우가 있다. However, in **Radar-based tracking** non-Gaussian distributions are often observed [121]. 
+
+해결 방안 분류 [122]: They can be classified as 
+- recursive approaches
+- batch approaches 
+
+###### The recursive approaches
+
+The recursive approaches are performed online [123], such as 
+- the Masreliez filter, 
+- multiple model (MM) approaches, 
+- Sequential Monte Carlo (SMC) approaches, 
+- interacting multiple model (IMM) filters. 
+
+###### The batch approaches
+
+The batch approaches are with offline implementations. 
+
+- In [124], an expectation maximization (EM) algorithm and an IMM algorithm were developed. 
+
+- In [125], a variational Bayesian (VB) algorithm was proposed to estimate the state and parameters in non-Gaussian noise systems.
+
+
+
+#### B. Data association
+
+Data association plays an important role in the multi-sensor multi-target systems. 
+
+The algorithms of data association can be divided into 
+- explicit data association algorithms 
+- implicit data association algorithms [126].
+
+##### 가. explicit data association
+
+- the nearest neighbor (NN) algorithm [127]
+- the multihypothesis tracking (MHT) approach [128]
+- the probabilistic data association (PDA) approach [129]
+- to the joint probability data association (JPDA) algorithms [130], [131]. 
+
+##### 나. implicit data association
+
+In contrast to explicit data association, implicit data association tracking approaches output a set of object hypotheses in an implicit way, such as 
+- particle filtering [132], 
+- probability hypothesis density (PHD) filtering [133]
+- multi-target multi Bernoulli (MeMBer) filtering [134], [135], 
+- labeled multi Bernoulli filtering [136].
+
+#### C. Fusion 
+
+The architectures for sensor data fusion can be divided into **centralized** and **decentralized** fusion. 
+
+##### 가. centralized fusion architecture
+
+Combining the overall system measurements, most of the data and information processing steps are performed at the fusion center in centralized fusion. 
+
+In [137], a multi target detection and tracking approach for the case of multiple measurements per target and for an unknown and varying number of targets was proposed. 
+
+In [138], [139], a joint sensor registration and
+fusion approach was developed for cooperative driving in
+intelligent transportation systems. In [140], [141], a multisensor
+and multitarget surveillance system was developed
+based on solving jointly the registration, data association and
+data fusion problems.
+
+
+##### 나. decentralized fusion architecture
+
+For the decentralized fusion architecture, the fusion of tracks
+can be performed at the tracks level. In [142], based on
+equivalent measurements, a joint sensor registration and trackto-track
+fusion approach was proposed. In [143], using a
+pseudo-measurement approach, a joint registration, association
+and fusion method at distributed architecture was developed.
+In [144], using information matrix fusion, a track-to-track
+fusion approach was presented for automotive environment
+perception. Therefore, many heterogeneous sensor data can
+be fused for vehicle tracking [145].
+
+
+### 5.3 Behavior analysis
