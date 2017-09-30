@@ -1,5 +1,15 @@
 # Deep Drive
 
+
+|% | 진행도|
+|-|-|
+|0%|읽을 논문으로 선택, 미 진행|
+|10%|개요 및 논문 목적 파악|
+|30%|관련 연구 파악|
+|50%|제안 방식 간략한 파악|
+|70%|제안 방식 깊은 파악|
+|100%|완료|
+
 ## 1. List
 
 - [Awesome : Autonomous Vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles)

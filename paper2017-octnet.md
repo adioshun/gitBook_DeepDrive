@@ -137,3 +137,24 @@ Vision (ECCV), 2016
 [8] C. B. Choy, D. Xu, J. Gwak, K. Chen, and S. Savarese. 3dr2n2: A unified approach for single and multi-view 3d object reconstruction. In Proc. of the European Conf. on Computer
 Vision (ECCV), 2016.
 ```
+
+#### G. high-resolution 3D
+
+위에 제안된 방법들은 계산 부하의 문제로 $$30^3$$ voxels로 된 coarse resolution에서만 동작 한다. 
+
+또한 고해상도 Output처리(eg.labeling 3D point clouds)를 위해서는 제한된 receptive field를 가진 비 효율적인 sliding window techniques를 반드시 사용 해야 한다. `Besides, when high-resolution outputs are desired, e.g., for labeling 3D point clouds, inefficient sliding window techniques with a limited receptive field must be adopted [21]. `
+
+해상도를 높히면 네트워크 깊이를 줄여야 한다. `Increasing the resolution na¨ıvely [33-Vnet, 41-Deep sliding, 53-3D Unet] reduces the depth of the networks and hence their expressiveness.`
+```
+[33] F. Milletari, N. Navab, and S. Ahmadi. V-net: Fully convolutional neural networks for volumetric medical image segmentation. arXiv.org, 1606.04797, 2016
+[41] S. Song and J. Xiao. Deep sliding shapes for amodal 3d object detection in RGB-D images. arXiv.org, 1511.02300, 2015
+[53] Ozg ¨ un Cicek, A. Abdulkadir, S. S. Lienkamp, T. Brox, and O. Ronneberger. 3d u-net: Learning dense volumetric segmentation from sparse annotation. arXiv.org, 1606.06650,
+2016
+```
+
+> 하지만, OctNet은 네트워크 깊이를 줄이지 않고도 고해상도를 처리할수 있다. `In contrast, the proposed OctNets allow for training deep architectures at significant higher resolutions.`
+
+### 2.2 Sparse Models
+
+
+## 3. Octree Networks
