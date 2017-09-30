@@ -10,6 +10,10 @@
 |70%|제안 방식 깊은 파악||
 |100%|완료||
 
+![](https://i.imgur.com/HAZ3yiE.png)
+https://mind42.com/public/df5a7bc7-0e97-4807-b550-a21ed9e6699d
+
+
 ## 1. List
 
 - [Awesome : Autonomous Vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles)
