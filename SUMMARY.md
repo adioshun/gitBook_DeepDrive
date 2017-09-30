@@ -8,7 +8,6 @@
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection ](paper2013-survey-vehicle-detection.md)
 
-
 ## 2D CNN
 
 * [Paper\_2016\_SqueezeDet](paper2016-squeezedet.md)
@@ -27,7 +26,7 @@
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 * [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
 * [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
-* [Paper\_2017\_OctNet](paper2017-octnet.md)
+* [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
 * [Paper\_2017\_SqueezeSeg](paper2017-squeezeseg.md)
 * [Point\_Cloud\_Data](pointcloud-data.md)
   * [ROS bags-TO-Image.ipynb](https://gist.github.com/anonymous/4857f8920c9fc901121a429ead32a7db)
@@ -55,11 +54,9 @@
 * [Paper\_2016\_FusionNet \(50%\)](paper2016-fusionnet.md)
 * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
 
-## 4D (Time, RNN)
+## 4D \(Time, RNN\)
 
 * [Paper\_2016\_3D-R2N2](paper2016-3d-r2n2.md)
-
-
 
 ## 참고
 
