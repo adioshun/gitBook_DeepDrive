@@ -102,7 +102,7 @@ Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16
 
 ## 4. Youtube
 
-
+- [Tutorial : 3D Deep Learning](https://www.youtube.com/watch?v=8CenT_4HWyY): CVPR 2017, MVCNN, 3DCNN, Point Cloud, Meshes
 
 ## 6. Material (Pdf, ppt)
 
