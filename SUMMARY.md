@@ -10,7 +10,7 @@
 
 ## 2D CNN
 
-* [Paper\_2016\_SqueezeDet](paper2016-squeezedet.md)
+* [Paper\_2017\_SqueezeDet](paper2016-squeezedet.md)
 * [Paper\_2016\_Monocular Depth /w 2Camera](paper2016-monocular-depth.md)
 * [Paper\_2016\_Monocular 3D \(30%\)](papermonocular-3d.md)
 * [Paper\_2017\_3DOP\_X Chen \(30%\)](paper2017-3d-object-proposals.md)

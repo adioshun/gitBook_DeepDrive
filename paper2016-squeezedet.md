@@ -2,8 +2,8 @@
 |-|-|
 |저자(소속)|Bichen Wu(버클리)|
 |학회/년도|CVPR 2017, [논문](https://arxiv.org/abs/1612.01051)|
-|키워드||
-|참고|[정](https://theintelligenceofinformation.wordpress.com/2017/03/02/introducing-squeezedet-low-power-fully-convolutional-neural-network-framework-for-autonomous-driving/)|
+|키워드|KITTI, |
+|참고|[정리](https://theintelligenceofinformation.wordpress.com/2017/03/02/introducing-squeezedet-low-power-fully-convolutional-neural-network-framework-for-autonomous-driving/)|
 |Code|[TF](https://github.com/BichenWuUCB/squeezeDet), [TF /wKITTI](https://github.com/fregu856/2D_detection/blob/master/README.md),  [Docker](https://hub.docker.com/r/lorenagdl/squeezedet/)|
 
 
