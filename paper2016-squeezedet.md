@@ -163,3 +163,21 @@ Finally, we keep the top `N` bounding boxes with the highest confidence and use 
 During inference, the entire detection pipeline consists of only **one forward pass** of one neural network with minimal post-processing.
 
 
+### 3.2. ConvDet
+
+SqueezeDet의 기본 방법은 YOLO에서 가져 왔지만, `ConvDet layer`을 사용함으로써 YOLO보다 적은 model parameters를 가지고도 tens-of-thousands of region proposals을 생성 할수 있다. 
+
+ConvDet은 학습을 통해 **bounding box 좌표** 와 **class probabilities** 출력하는 중요한 합성곱 레이어이다. 
+
+**sliding window**처럼 Feature Map에 동작한다. `It works as a sliding window that moves through each spatial position on the feature map.`
+- At each position, it computes $$K × (4 + 1 + C)$$ values that encode the bounding box predictions. 
+ - Here, K is the number of reference bounding boxes with pre-selected shapes. 
+
+Using the notation from [22], we call these reference bounding boxes as `anchor`. 
+
+Each position on the feature map corresponds to a grid center in the original image, so each anchor can be described by `4 scalars` as $$(\hat{x}_i, \hat{y}_j, \hat{w}_k, \hat{h}_k), i \in [1,W], j \in [1,H], k \in [1,K]$$. 
+- $$\hat{x}_i, \hat{y}_j$$ are spatial coordinates of the reference grid center (i, j).
+- $$\hat{w}_k, \hat{h}_k$$ are the width and height of the `k-th` reference bounding box
+
+We used the method described by [2] to select reference bounding box shapes to match the data distribution.
+
