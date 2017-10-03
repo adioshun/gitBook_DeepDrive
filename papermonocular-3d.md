@@ -1,7 +1,7 @@
 |논문명|Monocular 3D Object Detection for Autonomous Driving
 |-|-|
 |저자(소속)|Xiaozhi Chen|
-|학회/년도|CVPR 2016,  [논문](http://3dimage.ee.tsinghua.edu.cn/files/publications/CVPR16_XiaozhiChen.pdf)|
+|학회/년도|CVPR 2016,  [논문](https://xiaozhichen.github.io/papers/cvpr16chen.pdf)|
 |키워드|MV3D 저자, KITTI, 후보영역 선출, 카메라 1대 |
 |참고|[홈페이지](http://3dimage.ee.tsinghua.edu.cn/cxz/mono3d)|
 |코드|[Download](http://3dimage.ee.tsinghua.edu.cn/files/XiaozhiChen/mono3d/mono3d_v1.2.tar.gz)|
@@ -183,3 +183,59 @@ Regionlets [32] proposes boxes via Selective Search and re-localizes them using 
 Recently proposed 3DVP [47] learns occlusion patterns in order to significantly improve performance of occluded cars on KITTI.
 
 ## 3. Monocular 3D Object Detection
+
+In this paper, we present an approach to object detection to perform accurate 3D object detection. 
+
+In particular, we first make use of the ground plane in order to propose objects that lie close to it. 
+
+Since our input is a single monocular image, our ground-plane is assumed to be orthogonal to the image plane and a distance down from the camera, the value of which we assume to be known from calibration.
+
+Since this ground-plane may not reflect perfect reality in each image, we do not force objects to lie on the ground, and only encourage them to be close. 
+
+The 3D object candidates are then exhaustively scored in the image plane by utilizing class segmentation, instance level segmentation, shape, contextual features and location priors. 
+
+![](https://i.imgur.com/n73Zi0o.png)
+
+###### Overview of our approach
+- We sample candidate bounding boxes with typical physical sizes in the 3D space by assuming a
+prior on the ground-plane. 
+- We then project the boxes to the image plane, thus avoiding multi-scale search in the image.
+- We score candidate boxes by exploiting multiple features: 
+    - class semantic
+    - instance semantic
+    - contour
+    - object shape
+    - context
+    - location prior. 
+- A final set of object proposals is obtained after non-maximum suppression.
+
+3D후보군 결과들은 점수 순으로 정렬된후 가장 높은 것만 CNN을 통해 scored 된다. `The resulting 3D candidates are then sorted according to their score, and only the most promising ones (after non-maxima suppression) are further scored via a Convolutional Neural Net (CNN)`. 
+
+This results in a fast and accurate approach to 3D detection.
+
+
+### 3.1. Generating 3D Object Proposals
+
+We represent each object with a 3D bounding box, $$y = (x, y, z, \theta, c, t)$$
+- where $$(x, y, z)$$ is the center of the 3D box,
+- $$\theta$$ denotes the azimuth(방위각) angle 
+- $$c \in C$$ is the object class (Cars, Pedestrians and Cyclists on KITTI). 
+
+
+BBox의 크기 : We represent the **size of the bounding box** with a set of representative 3D templates `t`, which are learnt from the training data. 
+
+- We use 3 templates per class and two orientations $$\theta \in \{0, 90\}. $$
+
+We then define our scoring function by combining semantic cues (both class and instance level segmentation), location priors, context as well as shape:
+
+![](https://i.imgur.com/W022Nq2.png)
+
+#### 가. Semantic segmentation
+
+This potential takes as input a pixel wise semantic segmentation containing multiple semantic
+classes such as car, pedestrian, cyclist and road.
+
+We incorporate two types of features encoding semantic segmentation.
+
+The first feature encourages the presence of an object inside the bounding box by counting the percentage of pixels labeled as the relevant class:
+

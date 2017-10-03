@@ -245,3 +245,119 @@ Parallel to our work, Faster R-CNN improves upon their prior R-CNN pipeline by i
 
 However, these methods only produce 2D detections, whereas our work aims at 3D object detection in order to infer both, accurate object pose as well as the distance from the ego-car.
 
+## 3. 3D OBJECT PROPOSALS
+
+목표 : Our approach aims at generating **a diverse set of 3D object proposals** in the context of autonomous driving. 
+
+- 입력 : stereo image pair
+
+- 처리 : We compute **depth** using the method by Yamaguchi et al. [47], yielding a point cloud x. 
+
+- 결과 : We place object proposals in 3D space in the form of 3D bounding boxes. 
+
+> Note that **only depth information** (no appearance) is used in our **proposal generation** process. 
+
+
+```
+[47] K. Yamaguchi, D. McAllester, and R. Urtasun, “Efficient joint segmentation, occlusion labeling, stereo and flow estimation,” in ECCV, 2014.
+```
+
+### 3.1 Proposal Generation as Energy Minimization
+
+#### A. 
+
+We use a 3D bounding box to represent each object proposal `y`, which is parametrized by a tuple, $$(x, y, z, \theta, c, t)$$, 
+- where(x, y, z) is the 3D box center 
+- and $$\theta$$ denotes the azimuth angle. 
+- Here, $$c \in C$$ is the object class and 
+- $$ t \in \{{1, . . . , Tc}\}$$ indexes a set of 3D box templates, 
+    - which are learnt from training data to represent the typical physical size of each class c _(details in Sec. 3.3.1)_. 
+    - 학습 데이터에 있는 정보들을 이용하여 일련의 종류별 크기 템플릿을 만들어서 활용 (??)
+
+We discretize the 3D space into voxels for candidate box sampling and thus each box y is
+represented in discretized form _(details in Sec. 3.2)_.
+
+#### B. 
+
+We generate proposals by minimizing an energy function which encodes several depth-informed potentials. 
+
+- We encode the fact that the object should live in a space occupied with high **density by the point cloud**. 
+
+- Furthermore, the box `y` should have minimal overlap with the **free space** in the scene. 
+
+- We also encode the **height prior** of objects, 
+- and the fact that the point cloud in the box’s immediate vicinity should have lower prior values of object height than the box.
+
+The energy function is formulated as:
+
+![](https://i.imgur.com/OActz0U.png)
+
+The weights of the energy terms are learnt via structured SVM [48] (details in Sec. 3.3). 
+
+Note that the above formulation encodes dependency of weights on the object class, thus weights are learnt specific to each class. 
+
+However, we can also learn a single set of weights for all classes (details in Sec. 3.3.3). 
+
+We next explain each potential in more detail.
+
+
+##### 가. Point Cloud Density
+
+This potential encodes the point cloud density within the box:
+
+![](https://i.imgur.com/9peSwSe.png)
+
+- $$P(v) \in  \{0, 1\}$$ : indicates whether voxel `v` contains point cloud points or not, 
+- $$ \Omega(y) $$: the set of voxels within box y. 
+
+The feature `P` is visualized in Fig. 1. This potential is simply computed as the fraction of occupied voxels within the box. 
+
+![](https://i.imgur.com/ZebQDMG.png)
+Features in our model (from left to right): 
+- left camera image, stereo 3D reconstruction, depth-based features and our prior.
+    - In the third image, **occupancy** is marked with yellow (P in Eq. (1)) and purple denotes **free space** (F in Eq. (2)). 
+    - In the prior, the ground plane is green and blue to red indicates increasing **prior value of object height**.
+
+
+
+By using integral accumulators (integral images in 3D), the potential can be computed efficiently in constant time.
+
+
+##### 나. Free Space
+
+정의 : Free space is defined as the space that lies on the rays between the point cloud and the camera. 
+
+This potential encodes the fact that the box should not contain a significant amount of free space (since it is occupied by the object). 
+
+We define `F` as a binary valued grid, where F(v) = 1 means that the ray from the camera to voxel `v` is not intercepted by any occupied voxel, (i.e., voxel `v` belongs to the free space).
+
+The potential is defined as follows:
+
+![](https://i.imgur.com/rMBTT8y.png)
+    
+
+It encourages less free space within the box, and can be efficiently computed using integral accumulators.
+
+##### 다. Height Prior
+
+This potential encourages the height of the point cloud within the box 
+    - w.r.t. the road plane to be close to the mean height $$\mu_{c,ht}$$ of the object class `c`. 
+
+We encode it as follows:
+
+![](https://i.imgur.com/n84sXoD.png)
+
+Here, $$d_v$$ is the distance between the center of the voxel `v` and the road plane, along the direction of the gravity vector. 
+
+By assuming a Gaussian distribution of the data, we compute $$\mu_{c,ht}, \sigma_{c, ht}$$as the **MLE estimates** of `mean height` and `standard deviation`. 
+
+The feature is shown in Fig. 1. It can be efficiently computed via integral accumulators.
+
+##### 라. Height Contrast
+
+This potential encodes the fact that the point cloud surrounding the box should have lower values of the height prior relative to the box. 
+
+We first compute a surrounding region y+ of box y by extending y by 0.6m in the direction of each face. 
+
+We formulate the contrast of height priors between box y and surrounding box y+ as:
+![](https://i.imgur.com/QhXpFky.png)
