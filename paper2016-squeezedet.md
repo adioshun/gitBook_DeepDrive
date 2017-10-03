@@ -48,8 +48,112 @@ Autonomous driving some **basic requirements** for image object detectors
 [16] F. N. Iandola, S. Han, M. W. Moskewicz, K. Ashraf, W. J. Dally, and K. Keutzer. SqueezeNet: Alexnet-level accuracy with 50x fewer parameters and <0.5mb model size. arXiv:1602.07360, 2016
 ```
 
-- Model size : ~ 8MB
-- Inference속도는 57.2 FPS이다. (입력: 1242x375)
-- 전력 소보 : 1.4J of energy per image (TITAN X GPU, Faster RCNN보다 84배 적음)
-- cyclist detection에서는 최고 성능 보임 (차량 탐지는??) 
+- Small model size: Model size : ~ 8MB
+- Speed: Inference속도는 57.2 FPS이다. (입력: 1242x375)
+- Energy efficiency(전력 소모) : 1.4J of energy per image (TITAN X GPU, Faster RCNN보다 84배 적음)
+- Accuracy: cyclist detection에서는 최고 성능 보임 (차량 탐지는??) 
+
+## 2. Related Work
+
+### 2.1. CNNs for object detection
+
+#### A. Hand-crafted Features
+
+From 2005 to 2013, various techniques were applied to advance the accuracy of object detection on datasets such as PASCAL [7]. In most of these years, versions of HOG+SVM [5] or DPM [8] led the state-of-art accuracy on these datasets
+
+#### B. R-CNN
+
+However, in 2013, Girshick et al. proposed Region-based Convolutional Neural Networks (RCNN)[11], which led to substantial gains in object detection accuracy. 
+    
+The R-CNN approach begins 
+- by identifying region proposals (i.e. regions of interest that are likely to contain objects) and 
+- then classifying these regions using a CNN. 
+
+단점 : One disadvantage of R-CNN is that it computes the CNN independently on each region proposal, leading to time-consuming (≤ 1 fps) and energy-inefficient (≥ 200 J/frame) computation. 
+
+해결책 : To remedy this, Girshick et al. experimented with a number of strategies to amortize computation across the region proposals [13, 17, 10], culminating in Faster R-CNN [22].
+
+
+#### C. R-FCN
+
+An other model, R-FCN, is fullyconvolutional and delivers accuracy that is competitive with
+R-CNN, but R-FCN is fully-convolutional which allows it to amortize more computation across the region proposals
+
+#### D. Vehicle Detection 
+
+[2] modified the CNN architecture to use shallower networks to improve accuracy. 
+ 
+[3, 26] on the other hand focused on generating better region proposals. 
+
+
+#### E. YOLO : real-time speed
+
+Region proposals are a **cornerstone** in all of the object detection methods that we have discussed so far. 
+
+However, in YOLO (You Only Look Once) [21], region proposition and classification are integrated into one single stage. 
+
+### 2.2. Small CNN models
+
+Given the **same level of accuracy**, it is often beneficial to **develop smaller CNNs** (i.e. CNNs with fewer model parameters), as discussed in [16]. 
+
+- AlexNet model : 240MB of parameters, 80% top-5 accuracy on ImageNet.
+- VGG-19 model :575MB of parameters, 87% top-5 accuracy on ImageNet. 
+- SqueezeNet [16] model : 4.8MB of parameters, **AlexNet-level** accuracy on ImageNet. 
+- GoogLeNetv[25] model : 53MB of parameters, **VGG-19-level** accuracy on ImageNet
+
+
+### 2.3 Fully convolutional networks
+
+Fully-convolutional networks (FCN) were popularizedby Long et al., who applied them to the **semantic segmentation** domain [20]. 
+
+FCN defines a broad class of CNNs, where the output of the final parameterized layer is a grid rather than a vector.
+
+This is useful in semantic segmentation, where each location in the grid corresponds to the predicted class of a pixel.
+
+FCN models have been applied in other areas as well.
+
+To address the image classification problem, a CNN needs to output a 1-dimensional vector of class probabilities.
+
+One common approach is to have one or more fully connected layers, which by definition output a 1D vector– 1×1×Channels (e.g. [18, 23]). 
+
+However, an alternative approach is to have the final parameterized layer be a convolutional layer that outputs a grid (H×W×Channels), and to then use average-pooling to downsample the grid to 1×1×Channels to a vector of produce class probabilities(e.g. [16, 19]). 
+
+Finally, the R-FCN method that we mentioned earlier in this section is a fully-convolutional network.
+
+## 3. Method Description
+
+### 3.1. Detection Pipeline
+
+Inspired by YOLO [21], we also adopt a **single-stage detection pipeline** : region proposition and classification is performed by one single network simultaneously. 
+
+![](https://i.imgur.com/enbAgkK.png)
+
+1. a convolutional neural network first takes an image as input and extract a low-resolution, high dimensional feature map from the image. 
+
+2. Then, the feature map is fed it into the ConvDet layer to compute bounding boxes centered around W × H uniformly distributed spatial grids. 
+ - Here, W and H are number of grid centers along horizontal and vertical axes.
+
+Each bounding box is associated with `C + 1` values, where `C` is the number of classes to distinguish, and the extra `1` is for the confidence score, which indicates how likely does the bounding box actually contain an object.
+
+
+Similarly to YOLO [21], we define the confidence score as $$Pr(Object) \times IOU^{pred}_{truth}$$
+
+
+A high confidence score implies a high probability that an object of interest does exist and
+that the overlap between the predicted bounding box and the ground truth is high. 
+
+The other C scalars represents the conditional class probability distribution given that the object exists within the bounding box.
+
+More formally, we denote the conditional probabilities as $$Pr(class_c \mid Object), c \in [1,C]$$
+
+We assign the label with the highest conditional probability to this bounding box and we use
+
+![](https://i.imgur.com/wMT0Fjg.png)
+
+as the metric to estimate the confidence of the bounding box prediction.
+
+Finally, we keep the top N bounding boxes with the highest confidence and use Non-Maximum Suppression (NMS) to filter redundant bounding boxes to obtain the final detections. 
+
+During inference, the entire detection pipeline consists of only one forward pass of one neural network with minimal post-processing.
+
 
