@@ -128,21 +128,27 @@ Inspired by YOLO [21], we also adopt a **single-stage detection pipeline** : reg
 
 ![](https://i.imgur.com/enbAgkK.png)
 
-1. a convolutional neural network first takes an image as input and extract a low-resolution, high dimensional feature map from the image. 
+1. 입력된 이미지에서 low-resolution, high dimensional feature map 추출
 
-2. Then, the feature map is fed it into the ConvDet layer to compute bounding boxes centered around W × H uniformly distributed spatial grids. 
- - Here, W and H are number of grid centers along horizontal and vertical axes.
+2. Feature map을 ConvDet layer에 입력 & Compute bounding boxes centered around W × H uniformly distributed spatial grids. 
+ - Here, `W` and `H` are number of grid centers along horizontal and vertical axes.
 
-Each bounding box is associated with `C + 1` values, where `C` is the number of classes to distinguish, and the extra `1` is for the confidence score, which indicates how likely does the bounding box actually contain an object.
+Each bounding box is associated with `C + 1` values
+- where `C` is the number of classes to distinguish, 
+- the extra `1` is for the confidence score
+
+
+
+   confidence score
+   - how likely does the bounding box actually contain an object
+   - A high confidence score = a high probability that an object of interest does exist and
+   that the overlap between the predicted bounding box and the ground truth is high. 
 
 
 Similarly to YOLO [21], we define the confidence score as $$Pr(Object) \times IOU^{pred}_{truth}$$
 
 
-A high confidence score implies a high probability that an object of interest does exist and
-that the overlap between the predicted bounding box and the ground truth is high. 
-
-The other C scalars represents the conditional class probability distribution given that the object exists within the bounding box.
+The other `C` scalars represents the conditional class probability distribution given that the object exists within the bounding box.
 
 More formally, we denote the conditional probabilities as $$Pr(class_c \mid Object), c \in [1,C]$$
 
@@ -152,8 +158,8 @@ We assign the label with the highest conditional probability to this bounding bo
 
 as the metric to estimate the confidence of the bounding box prediction.
 
-Finally, we keep the top N bounding boxes with the highest confidence and use Non-Maximum Suppression (NMS) to filter redundant bounding boxes to obtain the final detections. 
+Finally, we keep the top `N` bounding boxes with the highest confidence and use Non-Maximum Suppression (NMS) to filter redundant bounding boxes to obtain the final detections. 
 
-During inference, the entire detection pipeline consists of only one forward pass of one neural network with minimal post-processing.
+During inference, the entire detection pipeline consists of only **one forward pass** of one neural network with minimal post-processing.
 
 
