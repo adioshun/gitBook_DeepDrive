@@ -239,6 +239,8 @@ Parallel to our work, Faster R-CNN improves upon their prior R-CNN pipeline by i
 
 However, these methods only produce 2D detections, whereas our work aims at 3D object detection in order to infer both, accurate object pose as well as the distance from the ego-car.
 
+---
+
 ## 3. 3D OBJECT PROPOSALS
 
 목표 : Our approach aims at generating **a diverse set of 3D object proposals** in the context of autonomous driving.
