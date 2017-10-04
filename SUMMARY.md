@@ -7,6 +7,7 @@
 * [Paper\_2017\_Survey\_CV4Vehicle \(50%\)](paper2017-survey.md)
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection ](paper2013-survey-vehicle-detection.md)
+* ref04\_non-maxima suppression \(NMS\)
 
 ## 2D CNN
 

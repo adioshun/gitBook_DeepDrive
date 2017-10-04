@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Xiaozhi Chen |
 | 학회/년도 | TPAMI 2017,  [논문](https://arxiv.org/abs/1608.07711) |
-| 키워드 | MV3D 저자, stereo imagery |
+| 키워드 | MV3D 저자, stereo imagery, HHA Feature, +LiDAR |
 | 참고 | [홈페이지](http://www.cs.toronto.edu/objprop3d/), [보충자료](http://www.cs.toronto.edu/objprop3d/3DOP_journal_suppl.pdf), [이전버젼\(2015\)](http://www.cs.toronto.edu/objprop3d/3dopNIPS15.pdf) |
 | 코드 | [Download](http://www.cs.toronto.edu/objprop3d/downloads.php) |
 
@@ -257,37 +257,37 @@ However, these methods only produce 2D detections, whereas our work aims at 3D o
 
 ### 3.1 Proposal Generation as Energy Minimization
 
-#### A.
+#### A. object proposal `y`
 
 We use a 3D bounding box to represent each object proposal `y`, which is parametrized by a tuple, $$(x, y, z, \theta, c, t)$$,
 
-* where\(x, y, z\) is the 3D box center 
-* and $$\theta$$ denotes the azimuth angle. 
-* Here, $$c \in C$$ is the object class and 
-* $$ t \in \{{1, . . . , Tc}\}$$ indexes a set of 3D box templates, 
+* \(x, y, z\) : 3D box center 
+* $$\theta$$ : azimuth angle. 
+* $$c \in C$$ :object class
+* $$ t \in \{{1, . . . , Tc}\}$$ : set of 3D box templates, 
   * which are learnt from training data to represent the typical physical size of each class c _\(details in Sec. 3.3.1\)_. 
   * 학습 데이터에 있는 정보들을 이용하여 일련의 종류별 크기 템플릿을 만들어서 활용 \(??\)
 
 We discretize the 3D space into voxels for candidate box sampling and thus each box y is  
 represented in discretized form _\(details in Sec. 3.2\)_.
 
-#### B.
+#### B. Energy function
 
 We generate proposals by minimizing an energy function which encodes several depth-informed potentials.
 
-* We encode the fact that the object should live in a space occupied with high **density by the point cloud**.
+* object = live in a space occupied with high **density by the point cloud**.
 
-* Furthermore, the box `y` should have minimal overlap with the **free space** in the scene.
+* box `y` = minimal overlap with the **free space** 
 
-* We also encode the **height prior** of objects,
+* **height prior** of objects,
 
-* and the fact that the point cloud in the box’s immediate vicinity should have lower prior values of object height than the box.
+* point cloud in the box’s **immediate vicinity(목전)** should have lower prior values of object height than the box.
 
 The energy function is formulated as:
 
 ![](https://i.imgur.com/OActz0U.png)
 
-The weights of the energy terms are learnt via structured SVM \[48\] \(details in Sec. 3.3\).
+The weights of the energy terms are learnt via **structured SVM** \[48\] \(details in Sec. 3.3\).
 
 Note that the above formulation encodes dependency of weights on the object class, thus weights are learnt specific to each class.
 
@@ -331,7 +331,7 @@ It encourages less free space within the box, and can be efficiently computed us
 
 ##### 다. Height Prior
 
-This potential encourages the height of the point cloud within the box
+This potential encourages the **height of the point cloud** within the box
 
 * w.r.t. the road plane to be close to the mean height $$\mu_{c,ht}$$ of the object class `c`. 
 
@@ -354,3 +354,217 @@ We first compute a surrounding region y+ of box y by extending y by 0.6m in the 
 We formulate the contrast of height priors between box y and surrounding box y+ as:  
 ![](https://i.imgur.com/QhXpFky.png)
 
+### 3.2 Inference
+
+1. 이미지 쌍에서 point cloud x 계산 `We compute the point cloud x from a stereo image pair using the approach by Yamaguchi et al. [47]. `
+
+2. 후보 박스 영역 샘플링을 위해 3D Space쪼게어서 Road Plane계산 `Then we discretize the 3D space and estimate the road plane for 3D candidate box sampling.` 
+
+3. Energy Function을 이요하여 후보 박스 영역 Scoring실시, NMS를 이용 가장 좋은 `k`개 선발 `We perform exhaustive scoring of each candidate using our energy function, and use nonmaximal suppression (NMS) to obtain top K diverse 3D proposals. `
+
+  - In particular, we use a greedy algorithm, where at each iteration we select the next proposal that has the lowest energy and its IoU overlap with the previously selected proposals does not exceed a threshold $$\delta$$. 
+  
+  - Specifically, the $$m^{th}$$ proposal $$y^m$$ is obtained by solving the following problem
+
+![](https://i.imgur.com/IiyRVVz.png)
+
+#### A. Discretization and Accumulators
+
+The point cloud is defined in a left-handed coordinate system, 
+  - the Y-axis goes in the direction of gravity 
+  - the positive Z-axis is along the camera’s viewing direction. 
+
+We **discretize** the 3D continuous space such that the each voxel has length of 0.2m in each dimension. 
+
+We compute the **point cloud occupancy**, **free space** and **height prior grids** in this voxel space, as well as their **3D integral accumulators**.
+
+#### B. Ground Plane Estimation
+
+We estimate the **ground plane** by classifying superpixels [47] using a very small **neural network**, and fitting a plane to the estimated ground pixels using RANSAC. 
+
+입력 : We use the following features on the superpixels as input to the network: 
+- mean RGB values, 
+- average 2D and 3D position, 
+- pitch and roll angles relative to the camera of the plane fit to the superpixel, 
+- a flag as to whether the average 2D position was above the horizon line, 
+- and standard deviation of both the color values and 3D position.
+
+출력 : This results in a 22-dimensional feature vector. 
+
+네트워크 구조 : The neural network consists of only a single hidden layer which also has 22 units. We use tanh as the activation function and cross-entropy as the loss function. We train the network on the KITTI’s road benchmark [15].
+
+#### C. Bounding Boxes Sampling and Scoring: 
+
+For 3D candidate box sampling, we use three size templates per class and two
+orientations θ ∈ {0, 90}. 
+
+As all the features can be efficiently computed via integral accumulators, it takes constant time to evaluate each configuration y. 
+
+모든 Space을 모두 검사 하는것은 느리기 때문에 아래 방법을 이용해 영역을 줄인다. 
+
+- We reduce the search space by skipping empty boxes that do not contain any points. 
+
+- With ground plane estimation, we further reduce the search space along the vertical dimension by only placing candidate boxes on the ground plane.
+
+###### 먼거리의 물체 깊이 정보 보정 
+
+20M이상 거리가 먼 경우에 깊이 정보의 노이즈 제거를 위해 추가적인 후보 박스를 sample한다. `However, to alleviate the noise of stereo depth at large distances, we sample additional candidate boxes at distances larger than 20m from the camera. `
+
+In particular, let $$y_{road}$$ denote the height of the ground plane. 
+
+We deviate this height along the vertical dimension to compute two additional planes that have heights $$y = y_{road} \pm \sigma_{road}$$. 
+
+- Here $$\sigma_{road}$$ denotes the MLE estimate of the standard deviation of a Gaussian distribution modeling the distance of objects from the ground plane. 
+
+We then sample additional boxes on these planes. 
+
+With our sampling strategy, scoring all configurations can be done in a fraction of a second.
+
+###### non-maxima suppression (NMS)
+
+Note that the energy function is computed independently with respect to each candidate box. 
+
+We rank all boxes according to the values of E(x, y), and perform greedy inference with non-maxima suppression (NMS). 
+
+In practice, we perform NMS in 2D as it achieves similar recall as NMS in 3D while being much faster. 
+
+The IoU threshold $$\delta$$ is set to 0.75. 
+
+The entire feature computation and inference process takes 1.2s per image on average for 2K proposals.
+
+
+
+### 3.3 Learning
+
+We next explain how we obtain the **3D bounding box templates**, and how we learn the **weights** in our model.
+
+#### 3.3.1 3D Bounding Box Templates
+
+The size templates are obtained by clustering the ground truth 3D bounding boxes on the training set. 
+1. we first compute a histogram for the object sizes, 
+2. choose a cluster of boxes that have IoU overlaps with the mode of the histogram above 0.6, 
+3. then remove those boxes and iterate. 
+
+The representative size templates are computed by averaging the box sizes in each cluster.
+
+#### 3.3.2 Learning the Weights in Our Model
+
+We use structured SVM [48] to learn the model’s weights $$\{ w_{c,pcd}, w_{c,fs}, w_{c,ht}, w_{c,ht-contr}\}$$.
+
+Given N input-output training pairs,$$ \{ x^{(i)}, y^{(i)}\}_{i=1,...,N}$$ 
+
+we obtain the parameters by solving the following optimization problem:
+
+![](https://i.imgur.com/Wvrk7Fg.png)
+
+We use the parallel cutting plane implementation of [49] to solve this minimization problem. 
+
+As the task loss $$ \Delta(y^{(i)},y)$$, 
+- we use the strict 3D Intersection-over-Union (IoU) to encourage accurate placement of the 3D proposals. 
+- In particular, 3D IoU is computed as the volume of intersection of two 3D bounding boxes divided by the volume of their union.
+
+#### 3.3.3 Class-Independent 3D Proposals
+
+The method described above learns separate weights for each category, thus generating **class-dependent** object proposals.
+
+However, the approach can be easily modified to generate **class-independent** proposals by learning only a single scoring model for all categories. 
+
+- In particular, we learn object templates for all classes jointly rather than for each specific class. 
+
+- Therefore, the weights in this energy are class-independent (we have only a single set of weights). 
+
+## 4 3D OBJECT DETECTION NETWORKS
+In this section, we describe how we score the top-ranked 3D object proposals via convolutional networks. 
+
+We design a network architecture for two tasks: 
+- joint 2D object detection and orientation estimation
+- 3D object detection.
+
+### 4.1 Joint 2D Object Detection and Pose Estimation
+
+The architecture of our network for joint 2D object detection and orientation estimation is shown in Fig. 2. 
+
+![](https://i.imgur.com/S9HiGbQ.png)
+
+The network is built upon **Fast R-CNN** [16], 
+- which share the convolutional features across all proposals 
+- and use a ROI pooling layer to compute proposal-specific features. 
+
+확장 부분 We extend this basic network by 
+- adding a **context branch** after the last convolutional layer (i.e., conv5), 
+- and an **orientation regression loss** to jointly learn object location and orientation. 
+
+Specifically, 
+- the first branch encodes features from the original candidate regions 
+- while the second branch is specific to context regions, 
+  - which are computed by enlarging the candidate boxes by a factor of 1.5, following the `segDeepM` approach [5].
+- Both branches consist of a ROI pooling layer and two fully connected layers. 
+  - ROIs are obtained by projecting the 3D proposals onto the image plane and then onto the conv5 feature maps. 
+
+###### 예측 작업 & multi-task loss
+
+We concatenate the features from fc7 layers and feed them to the prediction layers.
+
+We predict the 
+- class labels
+- bounding box coordinate offsets
+- and object orientation 
+jointly using a multi-task loss.
+
+We define the category loss as cross entropy, the orientation loss and bounding box offset loss as a smooth $$l_1$$ loss. 
+
+We parameterize the bounding box coordinates as in [4]. 
+
+Each loss is weighted equally and only the category label loss is employed for the background boxes.
+
+### 4.2 3D Object Detection
+
+For 3D object detection, we want to output full 3D bounding boxes for objects. 
+
+We use the same network as in Fig. 2, except that 2D bounding box regressors are replaced by **3D bounding box regressors**. 
+
+Similarly to 2D box regression, we parametrize the centers of 3D boxes with size normalization
+for scale-invariant translation, and the 3D box sizes with log-space shift. 
+
+In particular, 
+- we denote a 3D box proposal as $$P=(P_x, P_y, P_z, P^s_x, P^s_y, P^s_z)$$
+- its corresponding ground truth 3D box as $$G=(G_x, G_y, G_z, G^s_x, G^s_y, G^s_z)$$
+
+which specify the box center and the box size in each dimension. 
+
+The regression targets for the box center $$T_c(P)$$ and the box size $$T^s_c(P)$$ are parametrized as follows:
+
+![](https://i.imgur.com/qvZv3ZZ.png)
+
+Given the 3D box coordinates and the estimated orientation, we then compute the azimuth angle θ of the box.
+
+### 4.3 CNN Scoring with Depth Features
+
+To take advantage of **depth information** in CNN scoring process, we further compute a depth image encoded with **HHA features** [18]. 
+
+```
+[18] S. Gupta, R. Girshick, P. Arbelaez, and J. Malik, “Learning rich features from RGB-D images for object detection and segmentation,” in ECCV, 2014.
+```
+
+HHA has three channels which represent 
+- the disparity map, 
+- height above the ground, 
+- and the angle of the normal at each pixel with respect to the gravity direction. 
+
+
+We explore two approaches to learn feature representation with both RGB and depth images as input. 
+###### single-stream network
+The first approach is a single-stream network, 
+1. which directly combines RGB channels and HHA channels to form a 6-channel image, 
+2. and feed it to the network. 
+
+This architecture is exactly the same as the basic model in Fig. 2, except that its input is a 6-channel image. 
+
+###### two-stream network
+The second approach is a two-stream network which learns features from RGB and HHA images respectively, as shown in Fig. 3.
+
+![](https://i.imgur.com/UQq3CoR.png)
+
+이 방법은 2배의 컴퓨팅 자원 소모가 발생 한다. 
+
+### 4.4 Implementation Details
