@@ -1,29 +1,28 @@
-|논문명|Monocular 3D Object Detection for Autonomous Driving
-|-|-|
-|저자(소속)|Xiaozhi Chen|
-|학회/년도|CVPR 2016,  [논문](https://xiaozhichen.github.io/papers/cvpr16chen.pdf)|
-|키워드|MV3D 저자, KITTI, 후보영역 선출, 카메라 1대 |
-|참고|[홈페이지](http://3dimage.ee.tsinghua.edu.cn/cxz/mono3d)|
-|코드|[Download](http://3dimage.ee.tsinghua.edu.cn/files/XiaozhiChen/mono3d/mono3d_v1.2.tar.gz)|
+| 논문명 | Monocular 3D Object Detection for Autonomous Driving |
+| --- | --- |
+| 저자\(소속\) | Xiaozhi Chen |
+| 학회/년도 | CVPR 2016,  [논문](https://xiaozhichen.github.io/papers/cvpr16chen.pdf) |
+| 키워드 | MV3D 저자, KITTI, 카메라 1대, 깊이 정보 사용 못함, 물체 탐지 초점 |
+| 참고 | [홈페이지](http://3dimage.ee.tsinghua.edu.cn/cxz/mono3d) |
+| 코드 | [Download](http://3dimage.ee.tsinghua.edu.cn/files/XiaozhiChen/mono3d/mono3d_v1.2.tar.gz) |
 
+> 연구 목표 및 관련 연구가 주로 `후보영역 선출`에 관한 것들임
 
-> 연구 목표 및 관련 연구가 주로 `후보영역 선출`에 관한 것들임 
-
-# Monocular 3D 
+# Monocular 3D
 
 ![](http://3dimage.ee.tsinghua.edu.cn/files/XiaozhiChen/mono3d/mono3d_head.jpg)
 
 목적 : perform 3D object detection from a single monocular image
 
-Our method
-1. first aims to generate a set of candidate class-specific `object proposals`
+Our method  
+1. first aims to generate a set of candidate class-specific `object proposals`  
 2. run a standard CNN pipeline to obtain high quality `object detections`
 
-> `object proposals`에 좀더 중점을 두고 있음 
+> `object proposals`에 좀더 중점을 두고 있음
 
 ## 1. Introduction
 
-자율주행차의 센서로 LIDAR를 많이 쓰지만, 비싼가격으로 최근에는 저렴한 Camera를 활용하는 방법에 대하여 연구 되고 있다. 
+자율주행차의 센서로 LIDAR를 많이 쓰지만, 비싼가격으로 최근에는 저렴한 Camera를 활용하는 방법에 대하여 연구 되고 있다.
 
 Faster R-CNN등의 물체 탐지 방법들은 후보영역을 선출하는 방법을 쓰고 있다. `Most of the recent object detection pipelines [19-Fast RCNN, 20-RCNN] typically proceed by generating adiverse set of object proposals that have a high recall and are relatively fast to compute [45, 2]. By doing this, computationally more intense classifiers such as CNNs [28, 42]can be devoted to a smaller subset of promising image regions, avoiding computation on a large set of futile candidates.`
 
@@ -36,12 +35,11 @@ Faster R-CNN등의 물체 탐지 방법들은 후보영역을 선출하는 방�
 
 ### 1.1 object proposal methods
 
-본 논문도 `후보영역` 아이디어를 활용한다. `Our paper follows this line of work. Different types of object proposal methods have been developed in the past few years. `
+본 논문도 `후보영역` 아이디어를 활용한다. `Our paper follows this line of work. Different types of object proposal methods have been developed in the past few years.`
 
+* 후보영역 선출의 일반적 방법은 `픽셀단위`로 나누고 `유사도`를 측정하는 것이다. `A common approach is to over-segment the image into super pixels and group these using several similarity measures [45, 2].`
 
-- 후보영역 선출의 일반적 방법은 `픽셀단위`로 나누고 `유사도`를 측정하는 것이다. `A common approach is to over-segment the image into super pixels and group these using several similarity measures [45, 2]. `
-
-- `objectness`와 `contour`정보를 이용하여 윈도우 탐색하는 방법도 있다. `Approaches that efficiently explore an exhaustive set of windows using simple “objectness” features [1, 11], or contour information[55] have also been proposed.`
+* `objectness`와 `contour`정보를 이용하여 윈도우 탐색하는 방법도 있다. `Approaches that efficiently explore an exhaustive set of windows using simple “objectness” features [1, 11], or contour information[55] have also been proposed.`
 
 ```
 [1] B. Alexe, T. Deselares, and V. Ferrari. Measuring the objectness of image windows. PAMI, 2012.
@@ -49,7 +47,7 @@ Faster R-CNN등의 물체 탐지 방법들은 후보영역을 선출하는 방�
 [55] L. Zitnick and P. Dollar. Edge boxes: Locating object proposals from edges. In ECCV. 2014
 ```
 
-- 최근에는 `세그멘테이션 모델`, `parametric energies`, `CNN Feature`를 사용하는 방법이 연구되고 있다.`The most recent line of work aims to learn how to propose promising object candidates using either ensembles of binary segmentation models [27], parametric energies [29] or window classifiers based on CNN features [18].`
+* 최근에는 `세그멘테이션 모델`, `parametric energies`, `CNN Feature`를 사용하는 방법이 연구되고 있다.`The most recent line of work aims to learn how to propose promising object candidates using either ensembles of binary segmentation models [27], parametric energies [29] or window classifiers based on CNN features [18].`
 
 ```
 [27] P. Kr ahenb uhl and V. Koltun. Learning to propose objects. In CVPR, 2015.
@@ -59,180 +57,172 @@ Faster R-CNN등의 물체 탐지 방법들은 후보영역을 선출하는 방�
 
 ### 1.2 object proposal methods & KITTI Datasets
 
-이러한 방식들은 PASCAL VOC에서는 좋은 성과를 보였다. 하지만, 자율주행의 경우에는 좀더 Strict한 룰이 적용 되어야 한다. 유명한 R-CNN같은 것들도 KITTI데이터에서는 성능이 않좋다. KITTI 데이터에서 좋은 성능을 보이는 [10]은 stereo imagery(2개의)을 이용하여서 3D 후보영역을 제안 한다. 
+이러한 방식들은 PASCAL VOC에서는 좋은 성과를 보였다. 하지만, 자율주행의 경우에는 좀더 Strict한 룰이 적용 되어야 한다. 유명한 R-CNN같은 것들도 KITTI데이터에서는 성능이 않좋다. KITTI 데이터에서 좋은 성능을 보이는 \[10\]은 stereo imagery\(2개의\)을 이용하여서 3D 후보영역을 제안 한다.   
 `The current leader on KITTI is Chen et al. [10], which exploits stereo imagery to create accurate 3D proposals.`
 
 ```
 [10] X. Chen, K. Kundu, Y. Zhu, A. Berneshawi, H. Ma, S. Fidler, and R. Urtasun. 3d object proposals for accurate object class detection. In NIPS, 2015
 ```
 
-하지만 대부분의 차량은 카메라가 한개 달려 있다.따라서  `monocular object detection` 는 중요한 도전 과제 이다. 
+하지만 대부분의 차량은 카메라가 한개 달려 있다.따라서  `monocular object detection` 는 중요한 도전 과제 이다.
 
-### 1.3 본 논문의 방식 
+### 1.3 본 논문의 방식
 
-본 논문 제안 : this paper proposes a method that learns to generate class-specific 3D object proposals with very high recall by exploiting contextual models as well as semantics. 
+본 논문 제안 : this paper proposes a method that learns to generate class-specific 3D object proposals with very high recall by exploiting contextual models as well as semantics.
 
-These proposals are generated by exhaustively placing 3D bounding boxes on the ground-plane and scoring them via simple and efficiently computable image features. 
+These proposals are generated by exhaustively placing 3D bounding boxes on the ground-plane and scoring them via simple and efficiently computable image features.
 
-In particular, we use semantic and object instance segmentation, context, as well as shape features and location priors to score our boxes. 
+In particular, we use semantic and object instance segmentation, context, as well as shape features and location priors to score our boxes.
 
-We learn per-class weights for these features using S-SVM [24], adapting to each individual object class. 
+We learn per-class weights for these features using S-SVM \[24\], adapting to each individual object class.
 
-The top object candidates are then scored with a CNN, resulting in the final set of detections. 
+The top object candidates are then scored with a CNN, resulting in the final set of detections.
 
 ## 2. Related Work
 
-Our work is related to `methods for object proposal generation`,as well as monocular 3D object detection. 
+Our work is related to `methods for object proposal generation`,as well as monocular 3D object detection.
 
-> autonomous Driving분야에서의 object proposal에 대하여 주로 살펴 보겠다. 
+> autonomous Driving분야에서의 object proposal에 대하여 주로 살펴 보겠다.
 
-Mostof the existing work on proposal generation uses RGB [45,55, 9, 2, 11, 29], RGB-D [4, 21, 31, 25], or video [35].
+Mostof the existing work on proposal generation uses RGB \[45,55, 9, 2, 11, 29\], RGB-D \[4, 21, 31, 25\], or video \[35\].
 
-### 2.1 RGB 
+### 2.1 RGB
 
 ###### similarity
 
-In RGB, most methods combine superpixels into larger regions via several similarity functions using e.g. color and texture [45, 2]. 
+In RGB, most methods combine superpixels into larger regions via several similarity functions using e.g. color and texture \[45, 2\].
 
-These approaches prune the exhaustive set of windows down to about 2K proposals per image achievingal most perfect recall on PASCAL VOC [12]. 
+These approaches prune the exhaustive set of windows down to about 2K proposals per image achievingal most perfect recall on PASCAL VOC \[12\].
 
 ###### parametric min-cut
 
-[9] defines parametric affinities between pixels and finds the regions using parametric min-cut. 
+\[9\] defines parametric affinities between pixels and finds the regions using parametric min-cut.
 
-The resulting regions are then scored via simple features, and the top-ranked proposals are used in recognition tasks [8, 15, 53]. 
+The resulting regions are then scored via simple features, and the top-ranked proposals are used in recognition tasks \[8, 15, 53\].
 
-Exhaustively sampled boxes are scored using several “objectness” features in [1].
+Exhaustively sampled boxes are scored using several “objectness” features in \[1\].
 
 ###### objectness
 
-BING proposals [11] score boxes based on an object closure measure as a proxy for “objectness”. 
+BING proposals \[11\] score boxes based on an object closure measure as a proxy for “objectness”.
 
 ###### contour
 
-Edgeboxes [55] score an exhaustive set of windows based on contour information inside and on the boundary of each window.
+Edgeboxes \[55\] score an exhaustive set of windows based on contour information inside and on the boundary of each window.
 
-
-
-
-> 본 논문의 방식과 비슷한 것들은 학습을 이용한 방식이다. `The most related approaches to ours are recent methods that aim to `learn` how to propose objects. `
+> 본 논문의 방식과 비슷한 것들은 학습을 이용한 방식이다. `The most related approaches to ours are recent methods that aim to`learn`how to propose objects.`
 
 ###### learns parametric energies
 
-[29] learns `parametric energies` in order to propose multiple diverse regions.
+\[29\] learns `parametric energies` in order to propose multiple diverse regions.
 
 ###### learnt ensemble of segmentation models
 
-In [27], an ensemble of figure-ground segmentation models are learnt. 
+In \[27\], an ensemble of figure-ground segmentation models are learnt.
 
-Joint learning of the ensemble of local and globalbinary CRFs enables the individual predictors to specializein different ways. 
-
+Joint learning of the ensemble of local and globalbinary CRFs enables the individual predictors to specializein different ways.
 
 ###### learned how to place promising object
 
-[26] learned how to place promising object seeds and employ geodesic distance transform to obtain candidate regions. 
-
+\[26\] learned how to place promising object seeds and employ geodesic distance transform to obtain candidate regions.
 
 ###### cascading the layers
 
-Parallel to our work, [18] introduced a method that generates object proposals by cascading the layers of the convolutional neural network. 
+Parallel to our work, \[18\] introduced a method that generates object proposals by cascading the layers of the convolutional neural network.
 
-The method is efficient since it explores an exhaustive set of windows via integral images over the CNN responses. 
+The method is efficient since it explores an exhaustive set of windows via integral images over the CNN responses.
 
-##### 본 논문의 방식 
+##### 본 논문의 방식
 
-Our approach also exploits integral images to score the candidates, however,in our work we exploit domain priors to place 3D bounding boxes and score them with semantic features. 
+Our approach also exploits integral images to score the candidates, however,in our work we exploit domain priors to place 3D bounding boxes and score them with semantic features.
 
 We use pixel levelclass scores from the output layer of the grid CNN, as well as contextual and shape features.
-
 
 ### 2.2 RGB-D
 
 ###### conditional random field
 
-In RGB-D, [10] exploited stereo imagery to exhaustively scored 3D bounding boxes using a conditional random field with several depth-informed potentials. 
+In RGB-D, \[10\] exploited stereo imagery to exhaustively scored 3D bounding boxes using a conditional random field with several depth-informed potentials.
 
-Our work also evaluates 3D bounding boxes, but uses semantic object and instance segmentation and 3D priors to place proposals onthe ground plane. 
+Our work also evaluates 3D bounding boxes, but uses semantic object and instance segmentation and 3D priors to place proposals onthe ground plane.
 
-Our RGB potentials are partly inspired by [15, 53] which exploits efficiently computed segmentation potentials for 2D object detection.
+Our RGB potentials are partly inspired by \[15, 53\] which exploits efficiently computed segmentation potentials for 2D object detection.
 
-Our work is also related to detection approaches for autonomous driving. 
+Our work is also related to detection approaches for autonomous driving.
 
 ###### deformable wireframe model
 
-[54] first detects a candidate set of objects via a poselet-like approach and then fits a deformable wireframe model within the box. 
+\[54\] first detects a candidate set of objects via a poselet-like approach and then fits a deformable wireframe model within the box.
 
-###### extends DPM 
+###### extends DPM
 
-[38] extends DPM [13] to 3D by linking parts across different viewpoints, while [14]extends DPM to reason about deformable 3D cuboids. 
+\[38\] extends DPM \[13\] to 3D by linking parts across different viewpoints, while \[14\]extends DPM to reason about deformable 3D cuboids.
 
-###### ensemble of visual and geometrical clusters Model 
+###### ensemble of visual and geometrical clusters Model
 
-[34]uses an ensemble of models derived from visual and geometrical clusters of object instances. 
+\[34\]uses an ensemble of models derived from visual and geometrical clusters of object instances.
 
-##### Regionlets 
+##### Regionlets
 
-Regionlets [32] proposes boxes via Selective Search and re-localizes them using a top-down approach. 
+Regionlets \[32\] proposes boxes via Selective Search and re-localizes them using a top-down approach.
 
-###### holistic model 
+###### holistic model
 
-[46] introduced a holistic model that re-reasons about DPM object candidates via cartographicpriors.
+\[46\] introduced a holistic model that re-reasons about DPM object candidates via cartographicpriors.
 
-###### 3DVP  
+###### 3DVP
 
-Recently proposed 3DVP [47] learns occlusion patterns in order to significantly improve performance of occluded cars on KITTI.
+Recently proposed 3DVP \[47\] learns occlusion patterns in order to significantly improve performance of occluded cars on KITTI.
 
 ## 3. Monocular 3D Object Detection
 
-In this paper, we present an approach to object detection to perform accurate 3D object detection. 
-
-In particular, we first make use of the ground plane in order to propose objects that lie close to it. 
+In this paper, we present an approach to object detection to perform accurate 3D object detection.
+1. we first make use of the ground plane in order to propose objects that lie close to it.
 
 Since our input is a single monocular image, our ground-plane is assumed to be orthogonal to the image plane and a distance down from the camera, the value of which we assume to be known from calibration.
 
-Since this ground-plane may not reflect perfect reality in each image, we do not force objects to lie on the ground, and only encourage them to be close. 
+Since this ground-plane may not reflect perfect reality in each image, we do not force objects to lie on the ground, and only encourage them to be close.
 
-The 3D object candidates are then exhaustively scored in the image plane by utilizing class segmentation, instance level segmentation, shape, contextual features and location priors. 
 
 ![](https://i.imgur.com/n73Zi0o.png)
 
 ###### Overview of our approach
-- We sample candidate bounding boxes with typical physical sizes in the 3D space by assuming a
-prior on the ground-plane. 
-- We then project the boxes to the image plane, thus avoiding multi-scale search in the image.
-- We score candidate boxes by exploiting multiple features: 
-    - class semantic
-    - instance semantic
-    - contour
-    - object shape
-    - context
-    - location prior. 
-- A final set of object proposals is obtained after non-maximum suppression.
 
-3D후보군 결과들은 점수 순으로 정렬된후 가장 높은 것만 CNN을 통해 scored 된다. `The resulting 3D candidates are then sorted according to their score, and only the most promising ones (after non-maxima suppression) are further scored via a Convolutional Neural Net (CNN)`. 
+1. We sample candidate bounding boxes with typical physical sizes in the 3D space by assuming a
+  prior on the ground-plane. 
+2. We then project the boxes to the image plane, thus avoiding multi-scale search in the image.
+3. We score candidate boxes by exploiting multiple features: 
+  * class semantic
+  * instance semantic
+  * contour
+  * object shape
+  * context
+  * location prior. 
+* A final set of object proposals is obtained after non-maximum suppression.
+
+3D후보군 결과들은 점수 순으로 정렬된후 가장 높은 것만 CNN을 통해 scored 된다. `The resulting 3D candidates are then sorted according to their score, and only the most promising ones (after non-maxima suppression) are further scored via a Convolutional Neural Net (CNN)`.
 
 This results in a fast and accurate approach to 3D detection.
-
 
 ### 3.1. Generating 3D Object Proposals
 
 We represent each object with a 3D bounding box, $$y = (x, y, z, \theta, c, t)$$
-- where $$(x, y, z)$$ is the center of the 3D box,
-- $$\theta$$ denotes the azimuth(방위각) angle 
-- $$c \in C$$ is the object class (Cars, Pedestrians and Cyclists on KITTI). 
 
+* where $$(x, y, z)$$ is the center of the 3D box,
+* $$\theta$$ denotes the azimuth\(방위각\) angle 
+* $$c \in C$$ is the object class \(Cars, Pedestrians and Cyclists on KITTI\). 
 
-BBox의 크기 : We represent the **size of the bounding box** with a set of representative 3D templates `t`, which are learnt from the training data. 
+BBox의 크기 : We represent the **size of the bounding box** with a set of representative 3D templates `t`, which are learnt from the training data.
 
-- We use 3 templates per class and two orientations $$\theta \in \{0, 90\}. $$
+* We use 3 templates per class and two orientations $$\theta \in \{0, 90\}. $$
 
-We then define our scoring function by combining semantic cues (both class and instance level segmentation), location priors, context as well as shape:
+We then define our scoring function by combining semantic cues \(both class and instance level segmentation\), location priors, context as well as shape:
 
 ![](https://i.imgur.com/W022Nq2.png)
 
 #### 가. Semantic segmentation
 
-This potential takes as input a pixel wise semantic segmentation containing multiple semantic
+This potential takes as input a pixel wise semantic segmentation containing multiple semantic  
 classes such as car, pedestrian, cyclist and road.
 
 We incorporate two types of features encoding semantic segmentation.
@@ -241,50 +231,51 @@ The first feature encourages the presence of an object inside the bounding box b
 
 ![](https://i.imgur.com/Jr8KG42.png)
 
-with $$\Omega(y)$$ the set of pixels in the 2D box generated by projecting the 3D box `y` to the image plane, and $$S_c$$ the segmentation mask for class `c`. 
+with $$\Omega(y)$$ the set of pixels in the 2D box generated by projecting the 3D box `y` to the image plane, and $$S_c$$ the segmentation mask for class `c`.
 
-The second feature computes the fraction of pixels that belong to classes other than the
+The second feature computes the fraction of pixels that belong to classes other than the  
 object class
 
 ![](https://i.imgur.com/5ZwPV9I.png)
 
 #### 나. Shape:
 
-#### 다. Instance Segmentation: 
+#### 다. Instance Segmentation:
 
-#### 라. Context 
+#### 라. Context
 
 #### 마. Location
 
 ### 3.2. 3D Proposal Learning and Inference
 
-We use **exhaustive search** as inference to create our candidate proposals. 
+We use **exhaustive search** as inference to create our candidate proposals.
 
-This can be done efficiently as all the features can be computed with **integral images**. (1.8s in a single core)
+This can be done efficiently as all the features can be computed with **integral images**. \(1.8s in a single core\)
 
-- We learn the weights of the model using structured SVM [44]. 
+* We learn the weights of the model using structured SVM \[44\].
 
-- We use the parallel cutting plane implementation of [40]. 
+* We use the parallel cutting plane implementation of \[40\].
 
-- We use 3D Intersectionover-Union (IoU) as our task loss.
+* We use 3D Intersectionover-Union \(IoU\) as our task loss.
 
-> [적분 영상(integral image)](http://kugistory.net/4)이란 쉽게 말해서 다음 픽셀에 이전 픽셀까지의 합이 더해진 영상이다, 적분 영상의 장점은 특정 영역의 픽셀 값의 총합을 매우 쉽게 구할 수 있다
+> [적분 영상\(integral image\)](http://kugistory.net/4)이란 쉽게 말해서 다음 픽셀에 이전 픽셀까지의 합이 더해진 영상이다, 적분 영상의 장점은 특정 영역의 픽셀 값의 총합을 매우 쉽게 구할 수 있다  
 > ![](https://i.imgur.com/gkpzpvx.png)
 
 ### 3.3. CNN Scoring of Top Proposals
 
-NMS이후 선발된 top candidates들을 CNN을 이용하여서 further scored하는지 설명 `In this section, we describe how the top candidates (after non-maxima suppression) are further scored via a CNN. `
+NMS이후 선발된 top candidates들을 CNN을 이용하여서 further scored하는지 설명 `In this section, we describe how the top candidates (after non-maxima suppression) are further scored via a CNN.`
 
-We employ the same network as in [10-3DOP], which for completeness we briefly describe here. 
-- The network is built using the Fast R-CNN [19] implementation. 
-- It computes convolutional features from the whole image and splits it into **two branches** after the last convolutional layer, i.e., conv5. 
-    - One branch encodes features from the proposal regions 
-    - while another is specific to context regions, which are obtained by enlarging the proposal regions by a factor of 1.5, following [53]. 
-    - Both branches are composed of a RoI pooling layer and two fully-connected layers. 
+We employ the same network as in \[10-3DOP\], which for completeness we briefly describe here.
+
+* The network is built using the Fast R-CNN \[19\] implementation. 
+* It computes convolutional features from the whole image and splits it into **two branches** after the last convolutional layer, i.e., conv5. 
+  * One branch encodes features from the proposal regions 
+  * while another is specific to context regions, which are obtained by enlarging the proposal regions by a factor of 1.5, following \[53\]. 
+  * Both branches are composed of a RoI pooling layer and two fully-connected layers. 
 
 RoIs are obtained by projecting the proposals or context regions onto the conv5 feature maps.
 
-We obtain the final feature vectors by concatenating the output features from the two branches. 
+We obtain the final feature vectors by concatenating the output features from the two branches.
 
 ```
 [10] X. Chen, K. Kundu, Y. Zhu, A. Berneshawi, H. Ma, S. Fidler, and R. Urtasun. 3d object proposals for accurate object class detection. In NIPS, 2015
@@ -295,11 +286,14 @@ The network architecture is illustrated in Fig. 2.
 
 ![](https://i.imgur.com/5Dz9LOq.png)
 
-We use a multi-task loss to jointly predict category labels, bounding box offsets, and object orientation. 
+We use a multi-task loss to jointly predict category labels, bounding box offsets, and object orientation.
 
 For background boxes, only the category label loss is employed.
 
-We weight each loss equally, and define the category loss as cross entropy, the orientation loss as a smooth $$l1$$ and the bounding box offset loss as a smooth $$l1$$ loss over the
-4 coordinates that parameterized the 2D bounding box, as in [20-RCNN].
+We weight each loss equally, and define the category loss as cross entropy, the orientation loss as a smooth $$l1$$ and the bounding box offset loss as a smooth $$l1$$ loss over the  
+4 coordinates that parameterized the 2D bounding box, as in \[20-RCNN\].
 
 ### 3.4. Implementation Details
+
+
+
