@@ -301,3 +301,5 @@ For background boxes, only the category label loss is employed.
 
 We weight each loss equally, and define the category loss as cross entropy, the orientation loss as a smooth $$l1$$ and the bounding box offset loss as a smooth $$l1$$ loss over the
 4 coordinates that parameterized the 2D bounding box, as in [20-RCNN].
+
+### 3.4. Implementation Details
