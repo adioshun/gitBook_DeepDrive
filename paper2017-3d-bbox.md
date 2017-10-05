@@ -61,25 +61,27 @@ The 3D bounding box is described by
 - dimensions $$D = [d_x, d_y, d_z]$$, 
 - orientation $$R(θ, φ, α)$$ , here paramaterized by the azimuth(방위각), elevation(고도) and roll angles(회전각). 
 
-Given the pose of the object in the camera coordinate frame $$(R, T) \in SE(3)$$ and the camera intrinsics matrix K, the projection of a 3D point $$X_0 = [X, Y, Z, 1]^T$$ in the **object’s coordinate frame** into the image $$x = [x, y, 1]^T$$ is:
+Given the pose of the object in the camera coordinate frame $$(R, T) \in SE(3)$$ and **the camera intrinsics matrix** `K`, **the projection of a 3D point** $$X_0 = [X, Y, Z, 1]^T$$ in the **object’s coordinate frame** into the image $$x = [x, y, 1]^T$$ is:
 
 $$
 x=k[R T]X_0
 $$
 
-Assuming that the origin of the object coordinate frame is at the center of the 3D bounding box and the object dimensions D are known, the coordinates of the 3D bounding box vertices can be described simply by $$X_1 = [d_x/2, d_y/2, d_z/2]^T,  X_2 = [-d_x/2, d_y/2, d_z/2]^T, ... , X_8 = [-d_x/2, -d_y/2, -d_z/2]^T$$ 
+Assuming that 
+- the origin of the **object coordinate frame** is at the center of the 3D bounding box 
+- the object dimensions `D` are known
+- the coordinates of the 3D bounding box vertices can be described simply by $$X_1 = [d_x/2, d_y/2, d_z/2]^T,  X_2 = [-d_x/2, d_y/2, d_z/2]^T, ... , X_8 = [-d_x/2, -d_y/2, -d_z/2]^T$$ 
 
-The constraint that the 3D bounding box fits tightly into 2D detection window requires that each side of the 2D bounding box to be touched by the projection of at least one of the 3D box corners.
+제약 : The constraint that the 3D bounding box fits tightly into 2D detection window requires that each side of the 2D bounding box to be touched by the projection of at least one of the 3D box corners.
+- For example, consider the projection of one 3D corner $$X_0 = [d_x/2, -d_y/2, d_z/2]^T$$ that touches the left side of the 2D bounding box with coordinate $$x_{min}$$.
 
-For example, consider the projection of one 3D corner $$X_0 = [d_x/2, -d_y/2, d_z/2]^T$$ that touches the left side of the 2D bounding box with coordinate $$x_{min}$$.
-
- This point-to side correspondence constraint results in the equation:
+This point-to side correspondence constraint results in the equation:
 
 ![](https://i.imgur.com/NlkJDDZ.png)
 
 - where (.)x refers to the `x` coordinate from the perspective projection. 
 
-Similar equations can be derived for the remaining2D box side parameters $$x_{max} , y_{min}, y_{max}$$ . 
+> 나머지 $$x_{max} , y_{min}, y_{max}$$ 도 같은 공식으로 유추 할수 있다. Similar equations can be derived for the remaining 2D box side parameters $$x_{max} , y_{min}, y_{max}$$ . 
 
 In total the sides of the 2D bounding box provide four constraints on the 3D bounding box. 
 
