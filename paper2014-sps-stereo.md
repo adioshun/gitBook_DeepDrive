@@ -2,8 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Koichiro Yamaguchi (토요타)   |
 | 학회/년도 | ECCV 2014,  [논문](https://arxiv.org/abs/1608.07711) |
-| 키워드 |KITTI (stereo and Optical Flow Evaluation)
-benchmarks |
+| 키워드 |KITTI (stereo and Optical Flow Evaluation) benchmarks |
 | 참고 | [홈페이지](http://ttic.uchicago.edu/~dmcallester/SPS/index.html), [Youtube](https://www.youtube.com/watch?v=EcrHKd1w8t8)|
 | 코드 | [Download](https://github.com/vbodlloyd/StereoSegmentation) |
 
