@@ -67,8 +67,24 @@ $$
 x=k[R T]X_0
 $$
 
-Assuming that the origin of the object coordinate frame is at the center of the 3D bounding box and the object dimensions D are known, the coordinates of the 3D bounding box vertices can be described simply by $$X_1 = [d_x/2, d_y/2, d_z/2]^T,  X_2 = [-d_x/2, d_y/2, d_z/2]^T, ... , X_8 = [-d_x/2, -d_y/2, -d_z/2]^T, 
+Assuming that the origin of the object coordinate frame is at the center of the 3D bounding box and the object dimensions D are known, the coordinates of the 3D bounding box vertices can be described simply by $$X_1 = [d_x/2, d_y/2, d_z/2]^T,  X_2 = [-d_x/2, d_y/2, d_z/2]^T, ... , X_8 = [-d_x/2, -d_y/2, -d_z/2]^T$$ 
 
 The constraint that the 3D bounding box fits tightly into 2D detection window requires that each side of the 2D bounding box to be touched by the projection of at least one of the 3D box corners.
 
 For example, consider the projection of one 3D corner $$X_0 = [d_x/2, -d_y/2, d_z/2]^T$$ that touches the left side of the 2D bounding box with coordinate $$x_{min}$$.
+
+ This point-to side correspondence constraint results in the equation:
+
+![](https://i.imgur.com/NlkJDDZ.png)
+
+- where (.)x refers to the `x` coordinate from the perspective projection. 
+
+Similar equations can be derived for the remaining2D box side parameters $$x_{max} , y_{min}, y_{max}$$ . 
+
+In total the sides of the 2D bounding box provide four constraints on the 3D bounding box. 
+
+This is not enough to constrain the nine degrees of freedom (DoF) (three for translation, threefor rotation, and three for box dimensions). 
+
+There are several different geometric properties we could estimate from the visual appearance of the box to further constrain the 3D box. 
+
+The main criteria is that they should be tied strongly to the visual appearance and further constrain the final 3D box.
