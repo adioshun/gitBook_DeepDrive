@@ -264,8 +264,8 @@ However, these methods only produce 2D detections, whereas our work aims at 3D o
 We use a 3D bounding box to represent each object proposal `y`, which is parametrized by a tuple, $$(x, y, z, \theta, c, t)$$,
 
 * \(x, y, z\) : 3D box center 
-* $$\theta$$ : azimuth angle. 
-* $$c \in C$$ :object class
+* $$ \theta $$ : azimuth angle. 
+* $$ c \in C $$ :object class
 * $$ t \in \{{1, . . . , Tc}\}$$ : set of 3D box templates, 
   * which are learnt from training data to represent the typical physical size of each class c _\(details in Sec. 3.3.1\)_. 
   * 학습 데이터에 있는 정보들을 이용하여 일련의 종류별 크기 템플릿을 만들어서 활용 \(??\)
