@@ -8,15 +8,18 @@
 |코드||
 
 
+# Single image depth estimation by dilated DNN
 
+The advantages of our method come from the usage of 
+- dilated convolution, 
+- Skip connection architecture 
+- soft-weight-sum inference
+
+## 1. INTRODUCTION
 
 
 --- 
-- [cs231n-Report] [Depth Estimation from Single Image Using CNN-Residual Network](http://cs231n.stanford.edu/reports/2017/pdfs/203.pdf), 2017
 - David Eigen, Depth Map Prediction from a Single Image using a Multi-Scale Deep Network, NIPS 2014, [논문](https://www.cs.nyu.edu/~deigen/depth/depth_nips14.pdf), [Homepage](https://www.cs.nyu.edu/~deigen/depth/),  NYU Depth v2 ,KITTI 
 - Andrew Y. Ng, 3-D Depth Reconstruction from a Single Still Image, IJCV 2007, [논문](http://www.cs.cornell.edu/~asaxena/reconstruction3d/saxena_iccv_3drr07_learning3d.pdf), [Homepage](http://www.cs.cornell.edu/~asaxena/learningdepth/) 
 - Nidhi Chahal, Depth estimation from single image using machine learning techniques, ICVGIP 16 [논문](https://dl.acm.org/citation.cfm?id=3010019)
-
-
-
 ---

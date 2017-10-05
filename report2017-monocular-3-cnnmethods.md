@@ -70,7 +70,7 @@ Notably, these approaches rely on the assumption that similarities between regio
 
 The authors addressed the task by employing two deep network stacks.
 
-- The first network makes a global coarse depthprediction for the whole image,
+- The first network makes a global coarse depth prediction for the whole image,
 - The second refines this prediction locally.
 
 ```
