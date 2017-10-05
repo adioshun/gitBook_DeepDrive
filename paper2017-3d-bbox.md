@@ -52,6 +52,23 @@ In summary, the main contributions of our paper include:
 
 ## 3. 3D Bounding Box Estimation
 
-In order to leverage the success of existing work on 2D object detection for 3D bounding box estimation, we use the fact that the perspective projection of a 3D bounding box should fit tightly within its 2D detection window. 
+기존 전제 : we use the fact that the perspective projection of a 3D bounding box should fit tightly within its 2D detection window. 
 
-We  assume that the 2D object detector has been trained to produce boxes that correspond to the bounding box of the projected 3D box
+We  assume that the 2D object detector has been trained to produce boxes that correspond to the bounding box of the projected 3D box.
+
+The 3D bounding box is described by 
+- its center $$T = [t_x, t_y, t_z]^T$$, 
+- dimensions $$D = [d_x, d_y, d_z]$$, 
+- orientation $$R(θ, φ, α)$$ , here paramaterized by the azimuth(방위각), elevation(고도) and roll angles(회전각). 
+
+Given the pose of the object in the camera coordinate frame $$(R, T) \in SE(3)$$ and the camera intrinsics matrix K, the projection of a 3D point $$X_0 = [X, Y, Z, 1]^T$$ in the **object’s coordinate frame** into the image $$x = [x, y, 1]^T$$ is:
+
+$$
+x=k[R T]X_0
+$$
+
+Assuming that the origin of the object coordinate frame is at the center of the 3D bounding box and the object dimensions D are known, the coordinates of the 3D bounding box vertices can be described simply by $$X_1 = [d_x/2, d_y/2, d_z/2]^T,  X_2 = [-d_x/2, d_y/2, d_z/2]^T, ... , X_8 = [-d_x/2, -d_y/2, -d_z/2]^T, 
+
+The constraint that the 3D bounding box fits tightly into 2D detection window requires that each side of the 2D bounding box to be touched by the projection of at least one of the 3D box corners.
+
+For example, consider the projection of one 3D corner $$X_0 = [d_x/2, -d_y/2, d_z/2]^T$$ that touches the left side of the 2D bounding box with coordinate $$x_{min}$$.
