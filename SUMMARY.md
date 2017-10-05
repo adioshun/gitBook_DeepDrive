@@ -7,7 +7,6 @@
 * [Paper\_2017\_Survey\_CV4Vehicle \(50%\)](paper2017-survey.md)
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection ](paper2013-survey-vehicle-detection.md)
-* [Paper\_2014\_SPS-Stereo](paper2014-sps-stereo.md)
 
 ## 2D CNN
 
@@ -17,6 +16,7 @@
 
 * [Paper\_국내 논문\_단일카메라](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0.md)
   * [Lab\_Depth Map from Stereo Images](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0/labdepth-map-from-stereo-images.md)
+* [Paper\_2014\_SPS-Stereo \(30%\)](paper2014-sps-stereo.md)
 * [Paper\_2016\_Monocular Depth /w 2Camera](paper2016-monocular-depth.md)
 * [Paper\_2016\_Monocular 3D \(70%\)](papermonocular-3d.md)
 * [Paper\_2017\_3DOP\_X Chen \(70%\)](paper2017-3d-object-proposals.md)
