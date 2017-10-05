@@ -4,7 +4,7 @@
 |학회/년도| cs231n-Report 2017, [논문](http://cs231n.stanford.edu/reports/2017/pdfs/203.pdf)|
 |키워드|CNN+FC, Pure CNN, CNN+Residual, NYU Depth|
 |참고||
-|코드||
+|코드|[유사프로젝트](https://github.com/iro-cp/FCRN-DepthPrediction)|
 
 # Depth Estimation from Single Image Using CNN-Residual Network
 
@@ -172,7 +172,31 @@ The first architecture follows the work in [3], where the authors used coarse an
 
 ### 3.2. Pure CNN
 
+> 오버피팅 문제를 해결하기 위해 FC를  convolution layers로 변경 : CNN+FC 보다 성능 좋음 
+
+다른 CNN based method for depth estimation들은 일반적으로 
+- the original image is usually downsampled to have a small height and width feature
+- then upsampled to have the size of the final depth map. 
+
+그래서 바꿈 So we changed the last two layers of this network. 
+- The second last layer is followed by a 2 × 2 max-pooling layer, 
+- the last layer is replaced with a transposed convolution layer to upsample the input.
+
+
 ### 3.3. CNN+Residual
+
+Our third and most promising architecture follows the work in [11]. 
+
+전이학습 수행 : 
+- The essence is that we do transfer learning with extracted image features, 
+- the transfer learning involves 
+    - not only **training the fully connected layer** as we do in classification tasks, 
+    - but also **convolution and up projection** to construct a depth map.
+
+- 입력 : RGB
+- pretrained ResNet-50 network + unpooling layer(upsampling,고해상도 위해) + convolution
+layer +  a projection connection 
+
 
 
 

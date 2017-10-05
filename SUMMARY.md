@@ -20,7 +20,7 @@
 * [Paper\_2016\_Monocular 3D \(70%\)](papermonocular-3d.md)
 * [Paper\_2017\_3DOP\_X Chen \(70%\)](paper2017-3d-object-proposals.md)
 * [Paper\_2017\_Deep3DBox](paper2017-3d-bbox.md)
-* [Report\_2017\_Monocular 3 CNN Methods](report2017-monocular-3-cnnmethods.md)
+* [Report\_2017\_Monocular 3 CNN Methods \(70%\)](report2017-monocular-3-cnnmethods.md)
 
 ## 3D PointCloud
 
