@@ -2,7 +2,7 @@
 |-|-|
 |저자(소속)|Xiaobai Ma (Standford)|
 |학회/년도| cs231n-Report 2017, [논문](http://cs231n.stanford.edu/reports/2017/pdfs/203.pdf)|
-|키워드|CNN+FC, Pure CNN, CNN+Residual, NYU Depth|
+|키워드|1 camera, CNN+FC, Pure CNN, CNN+Residual, NYU Depth|
 |참고||
 |코드|[유사프로젝트](https://github.com/iro-cp/FCRN-DepthPrediction)|
 
