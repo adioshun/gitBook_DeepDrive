@@ -7,6 +7,7 @@
 * [Paper\_2017\_Survey\_CV4Vehicle \(50%\)](paper2017-survey.md)
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection ](paper2013-survey-vehicle-detection.md)
+* [Paper\_2017\_Domain Independent MDE ](paper2017-domain-independent-mde.md)
 
 ## 2D CNN
 
@@ -20,6 +21,7 @@
 * [Paper\_2016\_Monocular Depth /w 2Camera](paper2016-monocular-depth.md)
 * [Paper\_2016\_Monocular 3D \(70%\)](papermonocular-3d.md)
 * [Paper\_2017\_3DOP\_X Chen \(70%\)](paper2017-3d-object-proposals.md)
+* [Paper\_2017\_J-MOD \(30%\)](paper2017-j-mod.md)
 * [Paper\_2017\_Deep3DBox](paper2017-3d-bbox.md)
 * [Paper\_2017\_Depth dilated DNN \(50%\)](paperdepth-from-single-image.md)
 * [Report\_2017\_Monocular 3 CNN Methods \(70%\)](report2017-monocular-3-cnnmethods.md)

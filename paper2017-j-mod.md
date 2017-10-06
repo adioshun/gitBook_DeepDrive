@@ -1,0 +1,152 @@
+|논문명|J-MOD^2: Joint Monocular Obstacle Detection and Depth Estimation|
+|-|-|
+|저자(소속)| Michele Mancini ()|
+|학회/년도| Sep 2017 , [논문](https://arxiv.org/abs/1709.08480)|
+|키워드| 1 camera, YOLO |
+|참고|[홈페이지](http://isar.unipg.it/index.php?option=com_content&view=article&id=47&catid=2&Itemid=188), [Youtube](https://youtu.be/ZxHcZ0XQfI4)|
+|코드||
+
+# J-MOD^2
+
+![](https://i.imgur.com/SkuMLvl.png)
+
+> 깊이탐지는 [13]알고리즘 활용, 물체 탐지는 YOLO 아이디어 활용 
+
+## I. INTRODUCTION
+
+###### 장애물 탐지 여러 기법들 
+Most fruitful approaches rely on range sensors to build 3D maps and compute obstacle-free trajectories
+- laser-scanner [1], [2], 
+- stereo cameras [3], [4] 
+- RGB-D cameras [5], [6] 
+
+```
+[1] A. Bachrach, S. Prentice, R. He, and N. Roy, “Range–robust autonomous navigation in gps-denied environments,” Journal of Field Robotics, vol. 28, no. 5, pp. 644–666, 2011.
+[2] S. Grzonka, G. Grisetti, and W. Burgard, “A fully autonomous indoor quadrotor,” IEEE Transactions on Robotics, vol. 28, no. 1, pp. 90–100, 2012.
+[3] F. Fraundorfer, L. Heng, D. Honegger, G. H. Lee, L. Meier, P. Tanskanen, and M. Pollefeys, “Vision-based autonomous mapping and exploration using a quadrotor mav,” in Intelligent Robots and Systems
+(IROS), 2012 IEEE/RSJ International Conference on. IEEE, 2012, pp. 4557–4564.
+[4] C. De Wagter, S. Tijmons, B. D. Remes, and G. C. de Croon, “Autonomous flight of a 20-gram flapping wing mav with a 4-gram onboard stereo vision system,” in Robotics and Automation (ICRA), 2014 IEEE International Conference on. IEEE, 2014, pp. 4982–4987
+[5] A. Bachrach, S. Prentice, R. He, P. Henry, A. S. Huang, M. Krainin, D. Maturana, D. Fox, and N. Roy, “Estimation, planning, and mapping for autonomous flight using an rgb-d camera in gps-denied environments,” The International Journal of Robotics Research, vol. 31, no. 11, pp. 1320–1343, 2012.
+[6] A. S. Huang, A. Bachrach, P. Henry, M. Krainin, D. Maturana, D. Fox, and N. Roy, “Visual odometry and mapping for autonomous flight using an rgb-d camera,” in Robotics Research. Springer, 2017, pp.235–252.
+```
+
+###### 싱글 카메라 방법들 
+- Monocular Visual SLAM (VSLAM) approaches address the above limitations by exploiting single camera pose estimation and 3D map reconstruction [7], [8], [9], [10], [11].
+
+```
+[7] R. A. Newcombe, S. J. Lovegrove, and A. J. Davison, “Dtam: Dense tracking and mapping in real-time,” in Computer Vision (ICCV), 2011 IEEE International Conference on. IEEE, 2011, pp. 2320–2327.
+[8] M. W. Achtelik, S. Lynen, S. Weiss, M. Chli, and R. Siegwart, “Motion-and uncertainty-aware path planning for micro aerial vehicles,” Journal of Field Robotics, vol. 31, no. 4, pp. 676–698, 2014.
+[9] D. Scaramuzza, M. C. Achtelik, L. Doitsidis, F. Friedrich, E. Kosmatopoulos, A. Martinelli, M. W. Achtelik, M. Chli, S. Chatzichristofis, L. Kneip, et al., “Vision-controlled micro flying robots: from system design to autonomous navigation and mapping in gps-denied environments,” IEEE Robotics & Automation Magazine, vol. 21, no. 3, pp. 26–40, 2014.
+[10] J. Engel, T. Schops, and D. Cremers, “Lsd-slam: Large-scale direct monocular slam,” in European Conference on Computer Vision. Springer, 2014, pp. 834–849.
+[11] C. Forster, M. Pizzoli, and D. Scaramuzza, “Svo: Fast semi-direct monocular visual odometry,” in Robotics and Automation (ICRA), 2014 IEEE International Conference on. IEEE, 2014, pp. 15–22.
+```
+
+
+###### 기존 싱글 카메라 방법의 문제점 
+- the absolute scale is not observable (which easily results in wrong obstacle distance estimations); 
+- they fail to compute reliable 3D maps on low textured environments; 
+- the 3D map updates are slow with respect to real-time requirements of fast maneuvers.
+
+
+###### CNN을 이용한 싱글 카메라 방법들  
+- monocular depth estimation methods based on Convolutional Neural Networks (CNNs) [12], [13], [14].
+
+```
+[12] D. Eigen and R. Fergus, “Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture,” in Proceedings of the IEEE International Conference on Computer
+Vision, 2015, pp. 2650–2658.
+[13] M. Mancini, G. Costante, P. Valigi, T. A. Ciarfuglia, J. Delmerico, and D. Scaramuzza, “Towards domain independence for learning-based monocular depth estimation,” IEEE Robotics and Automation Letters, 2017.
+[14] S. Yang, S. Konam, C. Ma, S. Rosenthal, M. Veloso, and S. Scherer, “Obstacle avoidance through deep networks based intermediate perception,” arXiv preprint arXiv:1704.08759, 2017
+```
+
+
+###### 기존 CNN을 이용한 싱글 카메라 방법들의 문제점 
+
+- However, these depth models are biased with respect to appearance domains and camera intrinsics. 
+
+- Depth 측정에 초점을 두고 있지, 장애물 탐지 기능은 없다. `Furthermore, the CNN architectures so far proposed address the more general task of pixel-wise depth prediction and are not specifically devised for obstacle detection.`
+
+###### 제안하는 CNN을 이용한 싱글 카메라 방법
+
+- 장점 :  fast and robust to focal length(초점거리) and appearance changes
+
+- 구조 : We achieve this by introducing a **multi-task CNN architecture** that jointly learns to predict **full depth maps** and **obstacle bounding boxes**. 
+
+## 2. RELATED WORK
+
+Range 제약 
+- Microsoft Kinect RGB-D sensor :~5 meters
+- stereo camera(MAV’s sizes) : ~ 3 meters [16]. baselines 늘리면 향상 가능 
+
+제안 하는 monocular camera 방식 : ~20 meters(물체탐지), ~40 meters(Depth map)
+
+### 2.1 geometric monocular algorithms : SLAM, SFM
+
+일반적으로 물체 탐지는 (SLAM이나 SFM을 통해 생성된) 3D map을이용하여 가능하다. `Monocular obstacle detection can be achieved by dense 3D map reconstruction via SLAM or Structure from Motion (SFM) based procedures [7], [10], [19], [20].`
+
+SLAM이나 SFM을 이용하는 방법들이 간단하기는 하지만, **triangulation of consecutive frames**에 기반하고 있어서 고속에서는 정확도가 떨어진다.   `In particular, geometric based 3D reconstruction algorithms rely on the triangulation of consecutive frames. their accuracy drops during high-speed motion, as dense alignment becomes more challenging. `
+
+또한, 물체의 Absolute 크기 구하지 못하기 떄문에 거리 측정에도 한계가 있다. 그래서 이러한 방법들은 **optical information **을 같이 사용한다. `In addition, with standard geometric monocular systems it is not possible to recover the absolute scale of the objects. This prevents them to accurately estimate obstacle distances. For this reason, most approaches exploit optical information to detect proximity of obstacles from camera, or, similarly, detect traversable space [21], [22], [23], [24].`
+
+### 2.2 deep learning-based algorithms 
+
+These models produce a dense 3D representation of the environment from a single image, 
+- exploiting the knowledge acquired through training on large labeled datasets, both real world and synthetic [25], [12], [26], [13]. 
+
+
+```
+[25] D. Eigen, C. Puhrsch, and R. Fergus, “Depth map prediction from a single image using a multi-scale deep network,” in Advances in neural information processing systems, 2014, pp. 2366–2374.
+[12] D. Eigen and R. Fergus, “Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture,” in Proceedings of the IEEE International Conference on Computer Vision, 2015, pp. 2650–2658.
+[26] F. Liu, C. Shen, G. Lin, and I. Reid, “Learning depth from single monocular images using deep convolutional neural fields,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 38, no. 10, pp. 2024–2039, Oct 2016
+[13] M. Mancini, G. Costante, P. Valigi, T. A. Ciarfuglia, J. Delmerico, and D. Scaramuzza, “Towards domain independence for learning-based monocular depth estimation,” IEEE Robotics and Automation Letters, 2017
+```
+
+
+#### A. 기존 MAV에 적용한 사례들 
+
+In [27], the authors fine-tune on a self-collected dataset the global coarse depth estimation model proposed by [25]. 
+
+Then, they compute MAV’s control signals during test flights on the basis of the estimated depth.
+
+```
+[27] P. Chakravarty, K. Kelchtermans, T. Roussel, S. Wellens, T. Tuytelaars, and L. Van Eycken, “Cnn-based single image obstacle avoidance on a quadrotor,” in Robotics and Automation (ICRA), 2017 IEEE International Conference on. IEEE, 2017, pp. 6369–6374.
+[25] D. Eigen, C. Puhrsch, and R. Fergus, “Depth map prediction from a single image using a multi-scale deep network,” in Advances in neural information processing systems, 2014, pp. 2366–2374.
+```
+
+In [14] the authors exploit depth and normals estimationsof a deep model presented in [12] as an intermediate stepto train an visual reactive obstacle avoidance system. 
+
+Differently from [14] and [27], we propose to learn a more robotic-focused model that jointly learns depth and obstacle representations to strengthen the obstacle detection task.
+
+```
+[14] S. Yang, S. Konam, C. Ma, S. Rosenthal, M. Veloso, and S. Scherer, “Obstacle avoidance through deep networks based intermediate perception,” arXiv preprint arXiv:1704.08759, 2017.
+[12] D. Eigen and R. Fergus, “Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture,” in Proceedings of the IEEE International Conference on Computer Vision, 2015, pp. 2650–2658
+```
+
+
+#### B. 본 논문에서 활요한 사례들 
+
+##### 가. 장애물 탐지 
+
+> inspired by [31]
+
+we regress bounding boxes anchor points and dimensions, but with a slightly different implementation. 
+- we remove the fully connected layers, maintaining a fully convolutional architecture. 
+    - We favor this strategy over other object detection approaches because of its high computational efficiency, as it allows multiple bounding box predictions with a single forward pass. 
+- In addition, we also let the obstacle detector regress the average depth and the corresponding estimate variance of the detected obstacles.
+
+```
+[31] J. Redmon, S. Divvala, R. Girshick, and A. Farhadi, “You only look once: Unified, real-time object detection,” in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2016, pp.779–788.
+```
+
+##### 나. 깊이 예측 
+
+Depth estimation is devised following the architecture of [13], improved by taking into account the obstacle detection branch. 
+
+In particular, 
+- we correct the depth predictions by using the mean depth estimates computed by the obstacle detection branch to achieve robustness with respect to appearance changes. 
+- We prove the benefits of this strategy by validating the model in test sequences with different focal length and scene appearance.
+
+```
+[13] M. Mancini, G. Costante, P. Valigi, T. A. Ciarfuglia, J. Delmerico, and D. Scaramuzza, “Towards domain independence for learning-based monocular depth estimation,” IEEE Robotics and Automation Letters, 2017.
+```
+
+
