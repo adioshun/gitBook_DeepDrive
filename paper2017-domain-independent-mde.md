@@ -56,3 +56,117 @@ domain independence는 중요한 도전 과제 이다.
 - 성능향상을 위해 invariant에 중요한 요소인 **optical flow**레이어를 제거 하였다. `we reduce the computational complexity of the network by removing the network dependence on optical flow, even if it often acts as a environment-invariant feature. `
 - 제거로 인해 발생하는 정보 손신은 LSTM레이러를 이용하여 만외 하였다. `To balance this loss of information, we exploit the input stream sequentiality by using Long Short Term Memory (LSTM) layers, a specific form of Recurrent Neural Networks (RNNs).`
 
+## II. RELATED WORK
+
+###### Stereo camera 제약
+
+- Traditional vision-based depth estimation is based on **stereo vision** [13]. 
+
+- 양안 카메라 제약 Its main limitations lie on 
+    - the lack of robustness on long range measurements and 
+    - pixel matching errors. 
+
+- 부가적으로 : weight and power consumption minimization is highly desirable. 
+
+###### Monocular camera /w geometric methods 제약
+
+- Monocular depth estimation based on geometric methods is grounded on the **triangulation of consecutive frames**.
+
+- 일부 좋은 성과를 보이지만[14], [15], [16],고속 이동시 성능이 떨어 진다. `the performance of their reconstruction routines drops during high-speed motion, as dense alignment becomes extremely challenging. `
+
+- 또한, **absolute scal** 구하는게 불가능 하다. `In addition, it is not possible to recover the absolute scale of the object distances.`
+
+
+> 본 연구에서는 compute the **scene depth** and the associated **absolute scale** from a single image (i.e., `without processing multiple frames`) 방법을 제안 한다. 
+
+### 2.1 기존 연구 
+
+###### Markov Random Field -> Make3D project
+
+- 기존 학습 기반 깊이 측정 방법은 특정 학습된 도메인에서만 좋은 성과를 보였다. 
+
+- Saxena et al. [17] first proposed a **Markov Random Field** to predict depth from a monocular, horizontally-aligned image, 
+    - which then later evolved into the Make3D project [10]. 
+
+- 문제점 : This method tends to suffer in uncontrolled settings, especially when the horizontal alignment condition does not hold. 
+
+###### 깊이 측정에 CNN을 적용한 최초의 논문 
+
+- Eigen et al. ([7], [18],exploit for the first time in their work the emergence of Deep Learning solutions for this kind of problems, training a multi scale CNN to estimate depth. 
+
+###### CNN + Conditional Random Field
+
+- Liu et al. [8] combine a CNN with a Conditional Random Field to improve smoothness. 
+
+###### Neural Regression Forest
+
+- Roy et al. [9] recently proposed a novel depth estimation method based on Neural Regression Forest. 
+
+> 위 논문들은 not domain independent
+
+###### 
+
+For our intended embedded application, computational
+efficiency is very important, and, in this respect, most of
+the existing methods for monocular depth estimation are not
+appropriate. In [8] and [9], although they reported slightly
+improved performances on several benchmarks with respect
+to Eigen et al.’s work, they cannot guarantee real-time
+performance on embedded hardware. They report a single
+image inference time of ∼ 1s both on a GTX780 and a Tesla
+k80, far more powerful hardware than the ones generally
+embedded on MAVs. Conversely, Eigen et al. method is
+able to estimate a coarser resolution (1/4 of the input
+image) of the scene depth map with a inference time of
+about 10ms. Our system’s inference time is less than 30ms
+on a comparable hardware (Tesla k40) and less than 0.4s
+on an embedded hardware (Jetson TK1), making real-time
+application feasible. Based on these various factors, we chose
+the Eigen et al. [7] method to serve as a reference to the state
+of the art during our experiments.
+
+###### 
+Although we are interested in performing well against the state of the art in accuracy, our primary goal is to develop
+a robust estimator that is capable of generalizing well to
+previously unseen environments, in order to be useful in
+robotic applications. For this reason, we did not perform
+any finetuning on evaluation benchmarks, focusing on how
+architectural choices and synthetic datasets generation influence
+generalization. Our previous work propose a baseline
+solution to the problem, suggesting a Fully Convolutional
+Network (FCN) fed with both the current frame and the optical
+flow between current and previous frame [12]. Despite
+optical flow acts as a good environment-invariant feature,
+it is not sufficient to achieve generalization across different
+scenarios. Furthermore, the computation of the optical flow
+considerably increase the overall inference time. In this
+work, only the current frame is fed into the network: by
+using a deeper architecture and the LSTM paradigm together
+with a wise mix of different synthetic datasets we report a
+significant performance gain in a simpler and more efficient
+fashion.
+
+###### 
+
+A relatively unexplored area of research is the training
+of networks given data scarcity. Recently, Garg et al. [11]
+proposed an unsupervised approach for monocular depth
+estimation with CNNs. In their work they propose a data
+augmentation technique to deal with the cost of acquiring
+real images with depth ground truth. However, the augmented
+dataset has to be generated from already acquired images,
+and thus this technique is unable to generate unseen environments.
+For this reason the authors train and test only
+on the KITTI dataset. Our work is similar to theirs in the
+aspect of finding ways to effectively augment training data,
+but is aimed to generalize performances across different
+environments. We achieve this exploiting synthetic data, for
+which exact labels are easily generated. Synthetic training
+sets are able to represent any kind of scenario, illumination
+conditions, motion trajectory and camera optics, without any
+limitation imposed by real world data collection equipments.
+This allows us to reach good performance on different
+domains, using different training and test images, and not
+requiring fine-tuning. However, at the time of the writing of
+this work, the authors of [11] did not yet make their trained
+model publicly available for an effective comparison.
