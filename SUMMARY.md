@@ -8,6 +8,7 @@
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection ](paper2013-survey-vehicle-detection.md)
 * [Paper\_2017\_Domain Independent MDE ](paper2017-domain-independent-mde.md)
+* [Paper\_2016\_Depth Fusion](paper2016-depth-fusion.md)
 
 ## 2D CNN
 
