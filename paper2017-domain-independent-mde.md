@@ -104,69 +104,39 @@ domain independence는 중요한 도전 과제 이다.
 
 > 위 논문들은 not domain independent
 
-###### 
+###### 제안 방식들의 속도 
 
-For our intended embedded application, computational
-efficiency is very important, and, in this respect, most of
-the existing methods for monocular depth estimation are not
-appropriate. In [8] and [9], although they reported slightly
-improved performances on several benchmarks with respect
-to Eigen et al.’s work, they cannot guarantee real-time
-performance on embedded hardware. They report a single
-image inference time of ∼ 1s both on a GTX780 and a Tesla
-k80, far more powerful hardware than the ones generally
-embedded on MAVs. Conversely, Eigen et al. method is
-able to estimate a coarser resolution (1/4 of the input
-image) of the scene depth map with a inference time of
-about 10ms. Our system’s inference time is less than 30ms
-on a comparable hardware (Tesla k40) and less than 0.4s
-on an embedded hardware (Jetson TK1), making real-time
-application feasible. Based on these various factors, we chose
-the Eigen et al. [7] method to serve as a reference to the state
-of the art during our experiments.
+- 기존의 monocular depth estimation 임베디드 시스템에 사용하기에는 적절하지 않다. 
 
-###### 
-Although we are interested in performing well against the state of the art in accuracy, our primary goal is to develop
-a robust estimator that is capable of generalizing well to
-previously unseen environments, in order to be useful in
-robotic applications. For this reason, we did not perform
-any finetuning on evaluation benchmarks, focusing on how
-architectural choices and synthetic datasets generation influence
-generalization. Our previous work propose a baseline
-solution to the problem, suggesting a Fully Convolutional
-Network (FCN) fed with both the current frame and the optical
-flow between current and previous frame [12]. Despite
-optical flow acts as a good environment-invariant feature,
-it is not sufficient to achieve generalization across different
-scenarios. Furthermore, the computation of the optical flow
-considerably increase the overall inference time. In this
-work, only the current frame is fed into the network: by
-using a deeper architecture and the LSTM paradigm together
-with a wise mix of different synthetic datasets we report a
-significant performance gain in a simpler and more efficient
-fashion.
+- [8] and [9]에서 속도 향상이 있지만 1s both on a GTX780 and a Tesla k80로 실시간에 맞지 않다. 
 
-###### 
+- Conversely, **Eigen et al**. method is able to estimate a coarser resolution (1/4 of the input image) of the scene depth map with a inference time of about **10ms**. 
 
-A relatively unexplored area of research is the training
-of networks given data scarcity. Recently, Garg et al. [11]
-proposed an unsupervised approach for monocular depth
-estimation with CNNs. In their work they propose a data
-augmentation technique to deal with the cost of acquiring
-real images with depth ground truth. However, the augmented
-dataset has to be generated from already acquired images,
-and thus this technique is unable to generate unseen environments.
-For this reason the authors train and test only
-on the KITTI dataset. Our work is similar to theirs in the
-aspect of finding ways to effectively augment training data,
-but is aimed to generalize performances across different
-environments. We achieve this exploiting synthetic data, for
-which exact labels are easily generated. Synthetic training
-sets are able to represent any kind of scenario, illumination
-conditions, motion trajectory and camera optics, without any
-limitation imposed by real world data collection equipments.
-This allows us to reach good performance on different
-domains, using different training and test images, and not
-requiring fine-tuning. However, at the time of the writing of
-this work, the authors of [11] did not yet make their trained
-model publicly available for an effective comparison.
+-** Our system**’s inference time is less than **30ms** on a comparable hardware (Tesla k40) and less than **0.4s** on an embedded hardware (Jetson TK1), making real-time application feasible. 
+
+
+###### optical flow 제거 
+
+- 베이스라인으로 이전 연구 결과를 사용하였다. 해당 방식은 입력으로 **current frame**과 **optical flow**을 사용한다. `Our previous work propose a baseline solution to the problem, suggesting a Fully Convolutional Network (FCN) fed with both the current frame and the optical flow between current and previous frame [12-기존연구]. `
+
+- optical flow는 invariant feature로는 좋지만 다른 도메인에서 일반화 하기에는 부족하다. 속도 저하도 유발한다.  `Despite optical flow acts as a good environment-invariant feature, it is not sufficient to achieve generalization across different scenarios. Furthermore, the computation of the optical flow considerably increase the overall inference time. `
+
+- 제안방식은 current frame 사용  : In this work, only the current frame is fed into the network: by using a deeper architecture and the LSTM paradigm together with a wise mix of different synthetic datasets we report a significant performance gain in a simpler and more efficient fashion.
+
+###### data scarcity(부족)
+
+- 본 논문에서 다루지 못한 부분은 the training of networks given data scarcity(부족). 
+
+- Recently, Garg et al. [11] proposed an **unsupervised approach** for monocular depth estimation with CNNs. 
+
+    - propose a data augmentation technique 
+    - the augmented dataset has to be generated from already acquired images, 
+    - this technique is unable to generate unseen environments.
+
+- 본 논문은 가상 데이터를 사용하였다. 
+    - 결과가 좋게 나왔다. 
+    - 파인 튜닝도 불 필요하다. 
+
+
+
+
