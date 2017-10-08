@@ -6,7 +6,11 @@
 |참고|[홈페이지](http://www.sira.diei.unipg.it/supplementary/ral2016/extra.html), [Youtube](https://www.youtube.com/watch?v=UfoAkYLb-5I)|
 |코드|[caffe??(374M)](http://www.sira.diei.unipg.it/supplementary/ral2016/unipg_models.tar.gz)|
 
+> LSTM이 어떻게 **global scale** 측정 문제를 해결 하였나??
+
 # Towards Domain Independence for Learning-based Monocular Depth Estimation
+
+
 
 가상 데이터를 이용하여서도 좋은 성능 보임을 확인 `In this work, we propose a DNN for scene depth estimation that is trained on synthetic datasets, `
 - which allow inexpensive generation of ground truth data. 
@@ -56,7 +60,7 @@ domain independence는 중요한 도전 과제 이다.
 - 성능향상을 위해 invariant에 중요한 요소인 **optical flow**레이어를 제거 하였다. `we reduce the computational complexity of the network by removing the network dependence on optical flow, even if it often acts as a environment-invariant feature. `
 - 제거로 인해 발생하는 정보 손신은 LSTM레이러를 이용하여 만외 하였다. `To balance this loss of information, we exploit the input stream sequentiality by using Long Short Term Memory (LSTM) layers, a specific form of Recurrent Neural Networks (RNNs).`
 
-## II. RELATED WORK
+## 2. RELATED WORK
 
 ###### Stereo camera 제약
 
@@ -137,6 +141,61 @@ domain independence는 중요한 도전 과제 이다.
     - 결과가 좋게 나왔다. 
     - 파인 튜닝도 불 필요하다. 
 
+## 3. NETWORK OVERVIEW
 
+### 3.1  Fully Convolutional Network
 
+![](https://i.imgur.com/XZUZ4h3.png)
 
+We propose as a** baseline method** a fully convolutional architecture, structured in a encoder-decoder fashion, as depicted in Figure 2. 
+
+This a very popular architectural choice for several pixel-wise prediction tasks, as optical flow estimation [19] or semantic segmentation [20]. 
+
+In our proposed network, the encoder section corresponds to the popular VGG network [21], pruned of its fully connected layers.
+
+We initialize the encoder weights with the VGG pretrained model for image classification. Models trained on huge image classification datasets, as [22], proved to act as a great generic-purpose feature extractor [23]: low-level features are extracted by convolutional layers closer to the input layer of the net, while layers closer to the output of the net extract high-level, more task-dependent descriptors.
+
+During training, out of the 16 convolutional layers of the VGG net, the weights of the first 8 layers are kept fixed; remaining layers are fine-tuned. 
+
+The decoder section of the network is composed by 2 deconvolutional layers and a final convolutional layer which outputs the predicted depth at original input resolution. 
+
+These layers are trained from scratch, using random weight initialization.
+
+### 3.2 Adding LSTM layers into the picture
+
+문제점 : Any monocular, single image depth estimation method suffers from the infeasibility of correctly estimating the **global scale **of the scene. 
+
+Learning-based methods try to infer global scale from the learned proportions between depicted
+objects in the training dataset. 
+
+기존 방법의 실패 : This paradigm inevitably fails when previously unseen environments are evaluated or when
+the camera focal length is modified.
+
+제안 방법의 차별점 : We can try to correct these failures by exploiting the sequential nature of the image stream captured by a vision module mounted on a deployed robot. 
+
+        RNN이란 : Recurrent neural networks (RNN) are typically used in tasks where long term temporal dependencies between inputs matter when it comes to performing estimation: text/speech analysis, action recognition in a video stream, person re-identification [24], [25], [26].
+
+Their output is a function of both the current input fed into the network and the past output, so that memory is carried forward through time as the sequence progresses:
+
+$$
+y_t = f(Wx_t + Yy_{t-1})
+$$
+- W represents the weight matrix (as in common feedforward networks) 
+- U is called transition matrix.
+
+        LSTM이란 : Long Short Term Memory networks (LSTM) are a special kind of recurrent neural network introduced by Hochreiter & Schmidhuber in 1997 to overcome some of the RNN main issues, as vanishing gradients during training, which made them very challenging to use in practical applications [27]. 
+
+Memory in LSTMs is maintained as a **gated cell **where information can be read, written or deleted. 
+
+During training, the cell learns autonomously how to treat incoming and stored information. 
+
+We insert two LSTM layers between the encoder and decoder section of the previously introduced
+FCN network, in a similar fashion of [24]. 
+
+Our motivation is to refine features extracted by the encoder according to the information stored in the LSTM cells, so that the decoder section can return a more coherent depth estimation. 
+
+![](https://i.imgur.com/Gm3FLzj.png)
+
+The proposed LSTM network is depicted in Image 3. 
+
+Dropout is applied before, after and in the middle of the two LSTM layers to improve regularization during training.
