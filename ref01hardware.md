@@ -61,8 +61,24 @@ RADAR sensors 분류(거리)
 해결 방법 : a radar sensor could be paired with a camera sensor in the vehicle to provide additional context to the detection.
 
 
+## RGB-D
+
+![](https://i.imgur.com/wIcIFvr.png)
+
+- In [Bamji et al., 2015] it is reported that the Kinect v2 can measure depth in the range 0.8-4.2 m with an accuracy of 0.5% of the measured range. 
+
+- SR 4000 : 0.5~10m
+
+> [An Overview of Depth Cameras and Range Scanners Based on Time-of-Flight Technologies](http://www.eecs.qmul.ac.uk/~milesh/Horaud-TOF-HAL.pdf), [3D Camera Survey](http://rosindustrial.org/news/2016/1/13/3d-camera-survey)
+
+
+
+
 
 ## Camera
+
+
+
 
 제약 사항 : adverse weather conditions and variations in lighting. 
 
@@ -70,11 +86,13 @@ RADAR sensors 분류(거리)
 
 
 
-
 ![](https://i.imgur.com/ExCCr82.png)
 
 
 
+### Stereo Camera 
+
+- DUO M/MLX :  0.23-2.5m,0.1-0.3mm accuracy [[출처]](https://duo3d.com/kb/what-is-the-accuracy-of-the-depth/) 
 
 
 ## Camera Only Approach company

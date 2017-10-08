@@ -10,6 +10,7 @@
 * [Paper\_2017\_Domain Independent MDE  \(30%\)](paper2017-domain-independent-mde.md)
 * [Paper\_2016\_Depth Fusion](paper2016-depth-fusion.md)
 * [Paper\_2017\_Semi\_MDE](paper2017-semi-mde.md)
+* [Intro\_Back\_projection](introback-projection.md)
 
 ## 2D CNN
 
