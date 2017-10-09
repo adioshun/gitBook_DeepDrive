@@ -9,7 +9,7 @@
   - Volumetric representation encodes a shape as 3d volumetric occupancy
 - High-level structures : Scene graph, Skeleton, Application specific
 
-> [3D Object Representation](http://www.connellybarnes.com/work/class/2015/intro_gfx/lectures/17-3DObjectRepresentation.pdf): 각 분류에 대한 상세 이미지 및 설명 포함 
+> [3D Object Representation](http://www.connellybarnes.com/work/class/2015/intro_gfx/lectures/17-3DObjectRepresentation.pdf): 각 분류에 대한 상세 이미지 및 설명 포함, [Youtube](https://youtu.be/prwm9jTpths?t=11m23s) 
 
 
 ## 1. shape descriptor
