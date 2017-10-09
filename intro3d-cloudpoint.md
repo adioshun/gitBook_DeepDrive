@@ -11,6 +11,40 @@
 
 > [3D Object Representation](http://www.connellybarnes.com/work/class/2015/intro_gfx/lectures/17-3DObjectRepresentation.pdf): 각 분류에 대한 상세 이미지 및 설명 포함 
 
+
+shape descriptor
+- motivation : challenge of shape matching
+- 정의 : a structured abstraction of a 3D model that captures salient shape information
+- 활용 : So that rather than comparing two models directly, the two models are compared by comparing their shape descriptors. 
+
+Representation 
+- the different ways that a shape descriptors can be used to represent a model.
+- 종류 
+  - Volumetric Representations
+  - Surface Representations
+    - Spherical Parameterization​
+    - Extended Gaussian Image​
+    - Shape Histograms (Sectors + Shells)​
+    - Gaussian EDT​
+  - View-Based Representations
+    - Spherical Extent Function​
+    - Light Field Descriptor​
+
+Volumetric Representations
+  - shape descriptors that seek to represent the volumetric information in the model
+  - Represent models by the volume that they occupy: 
+  - Rasterize the models into a binary voxel grid(Rasterize :텍스트와 이미지를 프린터 가능한 형태로 전환시키)
+    - A voxel has value 1 if it is inside the model
+    - A voxel has value 0 if it is outside
+  - Similarity is measured by the size of the intersection
+  - The advantage of this representation it that it is invertible (up to the resolution of the sampling) so that no information is lost in representing a 3D model by this type of shape descriptor.
+  
+
+Surface Representations​
+
+
+> https://www.slideshare.net/secret/Ls3Y0t8O7jat80
+
 ### RNN/RL
 
 [3DCNN-DQN-RNN: A Deep Reinforcement Learning Framework for Semantic Parsing of Large-scale 3D Point Clouds](https://arxiv.org/abs/1707.06783): 2017.07, 3D CNN + RNN + DQN
