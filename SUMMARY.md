@@ -33,8 +33,8 @@
 
 * [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
 * [Papers\_Shape Descriptor\_Representation \(30%\)](paper2016-deep-learning-representation.md)
-* [Paper\_2016\_Vote3Deep \(10%\)](papervote3deep.md)
 * [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
+* [Paper\_2016\_Vote3Deep \(10%\)](papervote3deep.md)
 * [Paper\_2016\_VeloFCN\_Bo Li \(30%\)](paper2016-velofcn4vd.md)
 * [Paper\_2017\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)

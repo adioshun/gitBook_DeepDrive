@@ -51,11 +51,39 @@ Finally, we examine multiview CNNs; our experiments show that we are able to imp
 
 ### 1.1 Problem Statement
 
-다시 살펴 보기
+We consider **volumetric representations** of 3D point clouds or meshes as input to the 3D object classification problem. 
+
+This is primarily inspired by recent advances in real-time scanning technology, which use volumetric data representations. 
+
+We further assume that the input data is already pre-segmented by 3D bounding boxes. 
+
+In practice, these bounding boxes can be extracted using the sliding windows, object proposals, or background subtraction. 
+
+The output of the method is the category label of the volumetric data instance.
 
 ### 1.2 Approach
 
-다시 살펴 보기
+We provide a detailed analysis over factors that influence the performance of volumetric CNNs, including network architecture and volumn resolution. 
+
+Based uponour analysis, we strive to improve the performance of volumetric CNNs. 
+
+We propose two volumetric CNN network architectures that signficantly improve state-of-the-art of volumetric CNNs on 3D shape classification. 
+
+This result has also closed the gap between volumetric CNNs and multi-view CNNs, when they are provided with 3D input discretized at 30×30×30 3D resolution. 
+
+- The first network introduces auxiliary learning tasks by classifying part of an object, which help to scrutize details of 3D objects more deeply. 
+
+- The second network uses long anisotropic kernels to probe for long-distance interactions. 
+
+Combining data augmentation with a multi-orientation pooling, we observe significant performance improvement for both networks.
+
+We also conduct extensive experiments to study the in-fluence of volume resolution, which sheds light on future directions of improving volumetric CNNs. 
+
+Furthermore, we introduce a new multi-resolution component to multi-view CNNs, which improves their already compelling performance.
+
+In addition to providing extensive experiments on 3DCAD model datasets, we also introduce a dataset of realworld 3D data, constructed using dense 3D reconstructiontaken with [25]. 
+
+Experiments show that our networks can better adapt from synthetic data to this real-world data than previous methods.
 
 ## 2. Related Work
 

@@ -12,12 +12,33 @@
 > [3D Object Representation](http://www.connellybarnes.com/work/class/2015/intro_gfx/lectures/17-3DObjectRepresentation.pdf): 각 분류에 대한 상세 이미지 및 설명 포함 
 
 
-shape descriptor
+## 1. shape descriptor
 - motivation : challenge of shape matching
-- 정의 : a structured abstraction of a 3D model that captures salient shape information
+- 정의 : a structured abstraction of a 3D model that captures salient(가장 뚜렷한) shape information
 - 활용 : So that rather than comparing two models directly, the two models are compared by comparing their shape descriptors. 
 
-Representation 
+
+![](https://i.imgur.com/xW0AyYM.png)
+
+
+어떤 shape descriptor를 이용하여 retrieval할지 선택시 고려할점 
+- what kind of models can be represented by the shape descriptor?
+  - What can you represent?
+- What type of shape information is captured by the descriptor?
+  - given a shape descriptor, how much of the model information can we get back?
+  - What are you representing?
+
+
+> genus 0 : 가운데에 구멍이 뚫린 원통 같은 것에 붙이는 위상학적 '번호' 라고 할 수 있죠. 구형은 genus 0, 도넛은 genus 1 이 되죠.. 위상적으로 동형인 물체들은 반드시 종수가 같기 때문
+
+
+
+- shape matching Challenge
+  - shape descriptors can be matched across these different transformations(translation, scale, or rotation).
+  - partial shape matching
+
+
+## 2. Representation 
 - the different ways that a shape descriptors can be used to represent a model.
 - 종류 
   - Volumetric Representations
@@ -30,17 +51,68 @@ Representation
     - Spherical Extent Function​
     - Light Field Descriptor​
 
-Volumetric Representations
-  - shape descriptors that seek to represent the volumetric information in the model
-  - Represent models by the volume that they occupy: 
-  - Rasterize the models into a binary voxel grid(Rasterize :텍스트와 이미지를 프린터 가능한 형태로 전환시키)
-    - A voxel has value 1 if it is inside the model
-    - A voxel has value 0 if it is outside
-  - Similarity is measured by the size of the intersection
-  - The advantage of this representation it that it is invertible (up to the resolution of the sampling) so that no information is lost in representing a 3D model by this type of shape descriptor.
-  
 
-Surface Representations​
+![](https://i.imgur.com/ITSs925.png)
+
+### 2.1 Volumetric Representations
+Perhaps the most direct way to compare two models is to measure how much they overlap.
+
+This notion of shape similarity can be encoded in a shape descriptor that represents a model by a regularly sampled three-dimensional array, where the value of a 3D point is either one or zero, depending on whether it is interior to the model or exterior to it.
+
+The advantage of this representation it that it is invertible (up to the resolution of the sampling) so that no information is lost in representing a 3D model by this type of shape descriptor.
+
+Furthermore, this type of representation has the advantage that the similarity between two shape descriptors corresponds to the size of the overlap between the two models as desired.
+
+Thus, using the shape descriptor we have the advantage of a vector-based representation that allows for efficient matching, and we also satisfy the property that the difference between two descriptors gives a direct and meaningful measure of the geometric similarity of the underlying models.
+
+While this shape descriptor satisfies a number of desirable properties – providing an invertible representation of a 3D model a vector that gives rise to a meaningful shape metric, it is often impractical to use in retrieval settings. 
+
+In particular, the shape descriptor depends on the ability to identify whether a particular point is interior or exterior to the model. 
+
+Thus, it can only be applied to water-tight meshes.
+
+Since in practice, we often want to match models that have boundaries and cracks with no well defined interior, this type of shape descriptor end up being too limiting.
+
+### 2.2 Surface Representations​
+
+
+### 2.3 View-Based Representation 
+
+- shape descriptors that seek to capture information about how humans see the model.
+
+- In these approaches, a viewer is placed at different locations on the view sphere and a shape descriptor is built from information gathered from these aggregate views
+
+
+#### A. Spherical Extent Function 
+
+This shape descriptor is obtained by placing viewers at different points on the view sphere, and computing the distance to the first point that the viewer would see when looking at the origin.
+
+This shape descriptor is no longer invertible, because it only considers the distance to the first point of intersection, ignoring all subsequent points of intersection.
+
+
+#### B. Light Field Descriptor 
+
+The last shape descriptor that we will consider is similar to the Spherical Extent Function in that it computes a model representation by placing viewers at different locations on the view sphere. 
+
+However, instead of computing a single pixel depth image at each view position, this approach computes a 2D image at each point, representing a model by a collection of 2D snapshots.
+
+The Light Field descriptor is then obtained by extracting the silhouette and the interior of each image and using those for matching. 
+
+Thus, while the Light Field Descriptor is not completely invertible, we can use it to extract the visual hull of the model, giving rise to a reasonable approximation of a model’s shape, for models that do not have too much depth complexity.
+
+## 3. 결론
+
+![](https://i.imgur.com/8zdfu4c.png)
+
+To summarize, in this part of the lecture we have reviewed a number of existing shape descriptors and showed how they assist in the task of shape matching.
+
+- We saw that because of its dependence on differential properties of the surface, the **Extended Gaussian Image** becomes unstable in the presence of noise.
+
+- We saw that the **Gaussian EDT** provides a method for distributing the surface of a model across 3D space without blurring out the model details.
+
+- We saw that while it is generally difficult to obtain a spherical parameterization of a 3D model, the Spherical Extent Function, provides a method for computing the star-shaped hull of an arbitrary model, giving a method to approximate arbitrary genus models by genus-0 models.
+
+- And we saw how by transforming the challenge of 3D shape matching to the domain of 2D image matching, the Light Field Descriptor could take advantage of the fact that certain matching problems are easier to solve in 2D then they are in 3D.
 
 
 > https://www.slideshare.net/secret/Ls3Y0t8O7jat80
