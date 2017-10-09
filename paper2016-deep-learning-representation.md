@@ -1,8 +1,73 @@
-Deep Learning Representation using Autoencoder for 3D Shape Retrieval
+|논문명||
+|-|-|
+|저자(소속)| ()|
+|학회/년도| IROS 2015, [논문]()|
+|키워드| |
+|참고||
+|코드||
 
 
-http://www.sciencedirect.com/science/article/pii/S0925231216301047
 
+
+
+
+
+
+---
+
+|논문명|A Survey of 2D and 3D Shape Descriptors |
+|-|-|
+|저자(소속)|Ismail Khalid Kazmi, (Bournemouth University )|
+|학회/년도| IEEE 2013, [논문](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6658152)|
+|키워드| |
+|참고||
+|코드||
+
+정의 : a shape descriptor is a simplified representation of a 2D or 3D shape in the form of a vector containing a set of numerical values or a graphlike structure used to describe the shape geometrically or topologically 
+
+The following common characteristics of an effective shape descriptor have been proposed in [1], [2], [3], [4].
+- a) Discriminative accuracy: To accurately distinguish one shape from another based on subtle differences
+- b) Transformation (translation, scaling, and rotation) invariance: Also known as pose normalization
+- c) Robustness against model degeneracies /roughness 
+- d) Uniqueness: Each shape descriptor must be uniquely coupled with a unique shape
+- e) Performance and memory efficient
+- f) Partial matching: robust against incomplete shapes
+- g) Insensitive to noise: Small changes in the shape to lead to small changes in the shape descriptor 
+
+
+![](https://i.imgur.com/ACX39em.png)
+
+![](https://i.imgur.com/xaS4CgW.png)
+
+
+---
+
+
+|논문명|3D Deep Shape Descriptor|
+|-|-|
+|저자(소속)|Yi Fang ( New York University)|
+|학회/년도| IEEE 2015, [논문](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7298845)|
+|키워드| |
+|참고||
+|코드||
+
+정의 : Shape descriptor refers to an informative description that provides a 3D object with an identification as a member of some category.
+
+
+
+
+
+
+---
+
+
+|논문명|Deep Learning Representation using Autoencoder for 3D Shape Retrieval|
+|-|-|
+|저자(소속)| ()|
+|학회/년도| IROS 2015, [논문](http://www.sciencedirect.com/science/article/pii/S0925231216301047)|
+|키워드| |
+|참고||
+|코드||
 
 
 # Deep Learning Representation
