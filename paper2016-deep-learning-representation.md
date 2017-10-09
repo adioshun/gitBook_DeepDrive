@@ -44,6 +44,8 @@ http://www.sciencedirect.com/science/article/pii/S0925231216301047
 
 ### 1.2 deep learning frameworks
 
+![](https://i.imgur.com/IKVZxtG.png)
+
 Until now, few approaches based on **deep learning frameworks** have been proposed to deal with 3D shape retrieval.
 
 - Following [6], Fang et al. [7] trained a deep neural network using **Eigen-shape descriptor** and **Fisher-shape descriptor** 
