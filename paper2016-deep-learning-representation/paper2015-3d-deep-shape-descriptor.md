@@ -124,7 +124,7 @@ SD 정의 : Shape descriptor refers to an informative description that provides 
   * Despite the success of deeplearning as a technique for feature learning in images and videos \[3, 32, 52, 50\], 
   * very few techniques based on deeplearning have been developed for learning 3D shape features. 
 
-##### 라. Zhu et al. \[53\]
+##### 라. Zhu et al. \[53\] 
 
 * Zhu et al. \[53\] attempt to learn a 3D shape representation by projecting a 3D shape into many 2D views and then perform training on the projected 2D shapes.
 
@@ -145,6 +145,8 @@ Therefore, the rationale of learning 3D shape representation from 2D contours ne
 ```
 [53] Z. Zhu, X. Wang, S. Bai, C. Yao, and X. Bai. Deep learning representation using autoencoder for 3d shape retrieval. CoRR, abs/1409.7164, 2014.
 ```
+
+> Gitboot 정리 : [Paper_2015_DL Representation]()
 
 ### 1.3 Our solution: 3D Deep Shape Descriptor
 
