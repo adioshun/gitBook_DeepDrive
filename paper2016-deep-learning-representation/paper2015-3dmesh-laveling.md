@@ -2,7 +2,7 @@
 |-|-|
 |저자(소속)|KAN GUO (Beihang University )|
 |학회/년도| ACM 2015, [논문](https://dl.acm.org/citation.cfm?id=2835487)|
-|키워드|7가지 Feature를 CNN을 통해 가공 |
+|키워드|Kan2015, 7가지 Feature를 CNN을 통해 가공 |
 |참고||
 |코드||
 
