@@ -179,7 +179,7 @@ Given input shapes, three steps are included along with the pipeline:
 2. Heat shape descriptors are fed into two deep neural networks with target values using ESD and FSD, respectively. 
 3. The deep shape descriptor is formed by concatenating nodes in hidden layer \(circled by yellow dash lines\).
 
-#### C. 4가지 구성 요소
+#### C. 4가지 구성 요소 (Input Shape, Shape Features,Deep Learning, and Target)
 
 ![](https://i.imgur.com/Nel3wPu.png)
 
@@ -200,3 +200,38 @@ After training, the deep encoder is used to construct deep shape descriptor.
 
 Features in the middle hidden layers are extracted as deep shape descriptor for representing the 3D shape.
 
+## 2. Method
+
+### 2.1 Shape Feature Extraction 
+
+#### A. Heat Kernel Signature 
+
+> Heat kernel signature has been widely used for 3D shape analysis [45].
+
+#### B. Heat shape descriptor
+
+> To describe the entire shape, we develop a multi-scale shape descriptor based on HKS.
+
+### 2.2 Deep shape descriptor
+
+- hand-crafted SD가 강건성을 가지기란 쉽지 않다. 다행히 빅데이터와 연산력의 향상으로 insensitive할수 있게 되었따. `It is challenging to find hand-crafted shape descriptors that are robust to large structural variations. Fortunately,the large volume of data and powerful computational resourcesmake it possible to learn a deep shape descriptorthat is insensitive to structural variations. `
+
+As illustrated inFigure 2, four components, Input Shape, Shape Features,Deep Learning, and Target are included in the process of learning a deep shape descriptor. 
+
+We will explain two components related to training DNN: Deep learning and Target.
+
+Since one of the contributions in this project is the development of **Eigen-shape descriptor (ESD)** and **Fisher-shapedescriptor (FSD)** to guide the training of DNN in order to maximize inter-class margin while minimizing intra-classvariance, 
+
+we will first explain the target component and then explain the deep learning component.
+
+#### A. 
+
+Target values: The target of the our proposed DNN isESD or FSD. 
+
+As indicated in Figure 4, Eigen-shape descriptors(on the right column) are computed by traininga principle component analysis (PCA) model on a set ofpre-computed HeatSD obtained from each group (in middlecolumn). 
+
+Fisher-shape descriptors (on the left column) arecomputed by training a linear discriminative analysis (LDA)model on a set of pre-computed HeatSDs obtained fromeach group. 
+
+Separate Eigen-shape descriptors and Fishershapedescriptors are trained for each group. 
+
+The DNNwill force the mapping of HeatSDs from the same groupto their assigned ESD or FSD (the mapping process will be explained below).
