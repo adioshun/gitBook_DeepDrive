@@ -241,3 +241,19 @@ Separate **Eigen-shape descriptors** and **Fishershape descriptors** are trained
 The DNN will force the mapping of HeatSDs from the same groupto their assigned ESD or FSD (the mapping process will be explained below).
 
 ![](https://i.imgur.com/kWoqxI3.png)
+
+#### B. Deep Learning
+
+- We use the architecture of a **many-to one encoder** neural network to develop our encoder for deepshape descriptor [4, 20]. 
+
+- A many-to-one encoder forces the inputs from the same class to be mapped to a unique targetvalue, which is different from the original auto-encoder that sets the target value to be identical to the input. 
+
+- By enforcing the target value to be unique for input HeatSDs from the same group but with structural variations, the deep shape descriptor represented by the neurons in the hidden layer is invariant to within-group structural variations but will discriminate against other groups. 
+
+- We developed a new training method by setting target value as pre-computed Eigen shape descriptor and Fisher-shape descriptor for each group as described earlier. 
+
+- This new training strategy will increase the discriminative power of deep shape descriptor by maximizinginter-class margin and minimizing intra-class variance.
+
+To avoid over-fitting, we impose the $$l_2$$ norm constrainton the weights of the many-to-one encoder neuralnetwork. 
+
+
