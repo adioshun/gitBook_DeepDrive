@@ -224,14 +224,20 @@ Since one of the contributions in this project is the development of **Eigen-sha
 
 we will first explain the target component and then explain the deep learning component.
 
-#### A. 
+#### A. Target values
 
-Target values: The target of the our proposed DNN isESD or FSD. 
+The target of the our proposed DNN is ESD or FSD. 
 
-As indicated in Figure 4, Eigen-shape descriptors(on the right column) are computed by traininga principle component analysis (PCA) model on a set ofpre-computed HeatSD obtained from each group (in middlecolumn). 
+![](https://i.imgur.com/Fc8ohbd.png)
+Figure 4: Pipeline of generating Eigen-shape descriptor and Fisher-shape descriptor. 
 
-Fisher-shape descriptors (on the left column) arecomputed by training a linear discriminative analysis (LDA)model on a set of pre-computed HeatSDs obtained fromeach group. 
 
-Separate Eigen-shape descriptors and Fishershapedescriptors are trained for each group. 
+- **Eigen-shape descriptors**(on the right column): are computed by training a **principle component analysis (PCA)** model on a set of pre-computed `HeatSD` obtained from each group (in middle column). 
 
-The DNNwill force the mapping of HeatSDs from the same groupto their assigned ESD or FSD (the mapping process will be explained below).
+- **Fisher-shape descriptors** (on the left column): are computed by training a **linear discriminative analysis (LDA)** model on a set of pre-computed `HeatSDs` obtained from each group. 
+
+Separate **Eigen-shape descriptors** and **Fishershape descriptors** are trained for each group. 
+
+The DNN will force the mapping of HeatSDs from the same groupto their assigned ESD or FSD (the mapping process will be explained below).
+
+![](https://i.imgur.com/kWoqxI3.png)
