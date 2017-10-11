@@ -176,10 +176,64 @@ In ECCV. 2014.
 
 The energy, $$E$$, of a convolutional layer in our model can be computed as:
 $$
-E(v,h) = - \sum_f \sum_i (h^f_j (W^f \* v )_j + c^f h ^f_j) - \sum_l b_lv_l
+E(v,h) = - \sum_f \sum_i (h^f_j (W^f \circledast v )_j + c^f h ^f_j) - \sum_l b_lv_l
 $$
 - $$v_l$$ : each visible unit
 - $$h^f_j$$ : each hidden unit in a feature channel $$f$$
 - $$W^f$$ : the convolu-tional filter
-- $$\*$$ : convolution operation
+- $$\circledast$$ : convolution operation
 
+- In this energy definition, 
+    - each visible unit $$v_l$$ is associated with a unique bias term $$b_l$$ to facilitate reconstruction, 
+    - and all hidden units $$\{ h^f_j\}$$ in the same convolution channel share the same bias term $$c^f$$. 
+    
+- Similar to [19], we also allow for a convolution stride.
+
+- A 3D shape is represented as a 24 × 24 × 24 voxel grid with 3 extra cells of padding in both directions to reduce the convolution border artifacts. 
+
+- The labels are presented as standard one of K softmax variables. 
+
+### 3.1 모델 구조 
+
+- The first layer has 48 filters of size 6 and stride 2; 
+
+- the second layer has 160 filters of size 5 and stride 2 (i.e., each filter has 48×5×5×5 parameters); 
+
+- the third layer has 512 filters of size 4; each convolution filter is connected to all the feature channels in the previous layer; 
+
+- the fourth layer is a standard fully connected RBM with 1200 hidden units; 
+
+- and the fifth and final layer with 4000 hidden units takes as input a combination of multinomial label variables and Bernoulli feature variables.
+
+- The top layer forms an associative memory DBN as indicated by the bi-directional arrows, while all the other layer connections are directed top-down.
+
+### 3.2 
+
+- We first pre-train the model in a layer-wise fashion followed by a generative fine-tuning procedure. 
+
+- During pre-training, 
+    - the first four layers are trained using standard Contrastive Divergence [14], 
+    - while the top layer is trained more carefully using Fast Persistent Contrastive Divergence (FPCD) [32]. 
+
+- Once the lower layer is learned, the weights are fixed and the hidden activations are fed into the next layer as input. 
+
+- Our fine-tuning procedure is similar to wake sleep algorithm [15] except that we keep the weights tied.
+
+- In the wake phase, we propagate the data bottom-up and use the activations to collect the positive learning signal. 
+
+- In the sleep phase, we maintain a persistent chain on the topmost layer and propagate the data top-down to collect the negative learning signal. 
+
+- This fine-tuning procedure mimics the recognition and generation behavior of the model and works well in practice. 
+
+We visualize some of the learned filters in Figure 2(b).
+
+
+During pre-training of the first layer, we collect learning signal only in receptive fields which are non-empty. 
+
+Because of the nature of the data, empty spaces occupy a large proportion of the whole volume, which have no information for the RBM and would distract the learning. 
+
+Our experiment shows that ignoring those learning signals during gradient computation results in our model learning more meaningful filters. 
+
+In addition, for the first layer, we also add sparsity regularization to restrict the mean activation of the hidden units to be a small constant (following the method of [20]). 
+
+During pre-training of the topmost RBM where the joint distribution of labels and high-level abstractions are learned, we duplicate the label units 10 times to increase their significance.
