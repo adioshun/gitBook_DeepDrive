@@ -17,17 +17,17 @@
 
 * [Intro\_Back\_projection](introback-projection.md)
 * [Papers\_국내 논문\_단일카메라](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0.md)
-* [Paper\_2017\_Semi\_MDE](paper2017-semi-mde.md)
-* [Paper\_2016\_Monocular Depth /w 2Camera](paper2016-monocular-depth.md)
 * [Paper\_2016\_Mono3D2016 \(70%\)](papermonocular-3d.md)
-* [Paper\_2017\_3DOP\_X Chen \(70%\)](paper2017-3d-object-proposals.md)
-  * [Paper\_2014\_SPS-Stereo \(30%\)](paper2014-sps-stereo.md)
 * [Paper\_2017\_J-MOD \(30%\)](paper2017-j-mod.md)
   * [Paper\_2017\_Domain Independent MDE  \(30%\)](paper2017-domain-independent-mde.md)
+* [Paper\_2016\_Monocular Depth /w 2Camera](paper2016-monocular-depth.md)
+* [Paper\_2017\_3DOP\_X Chen \(70%\)](paper2017-3d-object-proposals.md)
+  * [Paper\_2014\_SPS-Stereo \(30%\)](paper2014-sps-stereo.md)
 * [Paper\_2017\_Deep3DBox](paper2017-3d-bbox.md)
 * [Paper\_2017\_Depth dilated DNN \(50%\)](paperdepth-from-single-image.md)
 * [Report\_2017\_Monocular 3 CNN Methods \(70%\)](report2017-monocular-3-cnnmethods.md)
 * [Paper\_2016\_Depth Fusion](paper2016-depth-fusion.md)
+* [Paper\_2017\_Semi\_MDE](paper2017-semi-mde.md)
 * [Lab\_Depth Map from Stereo Images](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0/labdepth-map-from-stereo-images.md)
 
 ## 3D PointCloud
@@ -39,7 +39,8 @@
   * [Paper\_2015\_DL Representation ](paper2016-deep-learning-representation/paper2015-dl-representation.md)
   * [Paper\_2015\_3DMesh\_Laveling](paper2016-deep-learning-representation/paper2015-3dmesh-laveling.md)
 * [Paper\_2015\_3D\_ShapeNet](paper2015-3d-shapenet.md)
----
+* [Paper\_2015\_VoxNet \(10%\)](papervoxnet.md)
+* [Paper\_2016\_Volumetric\_Multiview CNNs \(50%\)](paper2016-volumetric-multiview-cnns.md)
 * [Paper\_2016\_Vote3Deep \(10%\)](papervote3deep.md)
 * [Paper\_2016\_VeloFCN\_Bo Li \(30%\)](paper2016-velofcn4vd.md)
 * [Paper\_2017\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
@@ -48,8 +49,8 @@
 * [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
 * [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
 * [Paper\_2017\_SqueezeSeg](paper2017-squeezeseg.md)
-* [Paper\_2015\_VoxNet \(10%\)](papervoxnet.md)
-* [Paper\_2016\_Volumetric\_Multiview CNNs \(50%\)](paper2016-volumetric-multiview-cnns.md)
+
+
 * [Paper\_2016\_DeepSlidingShape \(30%\)](paper2016-deepslidingshape.md)
 * [Paper\_2017\_PointNet \(10%\)](paper2016-pointnet.md)
 * [Point\_Cloud\_Data](pointcloud-data.md)
