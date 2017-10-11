@@ -132,8 +132,8 @@ SD 정의 : Shape descriptor refers to an informative description that provides 
 
   * This does not result in a concise shape descriptor that can represent the 3D shape well.
 
-* 단점들 It has the following shortcomings:   
-  1. a collection of 2Dprojection images is not a concise form to represent a 3Dshape as it increases the size of the data,   
+* 단점들 It has the following shortcomings:  
+  1. a collection of 2Dprojection images is not a concise form to represent a 3Dshape as it increases the size of the data,  
   2. a collection of 2D projection images is not geometrically informative as it does not capture the underlying geometric essence of a 3D object.
 
   * For instance it is very sensitive to isometric geometrictrans formation, 
@@ -263,21 +263,25 @@ We formulate the objective function of the proposed sparse many-to-one encoder b
 
 ![](https://i.imgur.com/iU9M8dg.png)
 
-- $$L$$ : the number of layers in the deep neural network,
-- $$W$$ : the weight matrix of the multiple-hidden-layer neural network
-- $$b$$ : the bias matrix of the neural network,
-- $$x_i^j$$: the j-th training sample from the i-th group
-- $$h(x_i^j, W, b)$$: a non-linear mapping from the input $$x_i^j$$ to the output
-- $$ \lambda$$ : the weight of the regularizer
-- $$Y_i$$ : the target value for the i-th group. 
+* $$L$$ : the number of layers in the deep neural network,
+* $$W$$ : the weight matrix of the multiple-hidden-layer neural network
+* $$b$$ : the bias matrix of the neural network,
+* $$x_i^j$$: the j-th training sample from the i-th group
+* $$h(x_i^j, W, b)$$: a non-linear mapping from the input $$x_i^j$$ to the output
+* $$ \lambda$$ : the weight of the regularizer
+* $$Y_i$$ : the target value for the i-th group. 
 
-For each group of shapes, two encoders will be trained: 
-- one is trained by setting the target value $$Y_i$$ as the `i-th` ESD
-- the other is trained by setting the target value $$Y_i$$ as the `i-th` FSD (see Figure 4). 
+For each group of shapes, two encoders will be trained:
 
-Because we impose that the target value be unique for all input HeatSDs from the same group, the deep shape descriptor extracted from hidden layer will be
-insensitive to intra-class structural variations. 
+* one is trained by setting the target value $$Y_i$$ as the `i-th` ESD
+* the other is trained by setting the target value $$Y_i$$ as the `i-th` FSD \(see Figure 4\). 
 
-At the same time, because of discriminative power of target values (either ESD or FSD), the deep shape descriptor will be discriminative with a large inter-class margin.
+Because we impose that the target value be unique for all input HeatSDs from the same group, the deep shape descriptor extracted from hidden layer will be  
+insensitive to intra-class structural variations.
+
+At the same time, because of discriminative power of target values \(either ESD or FSD\), the deep shape descriptor will be discriminative with a large inter-class margin.
 
 ## 3. Experiments
+
+
+
