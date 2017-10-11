@@ -3,6 +3,7 @@
 | 저자\(소속\) | Daniel Maturana \(CMU\) |
 | 학회/년도 | IROS 2015, [논문](http://ieeexplore.ieee.org/document/7353481/) |
 | 키워드 | Volumetric Occupancy Grid + 3D CNN |
+|데이터셋/모델||
 | 참고 | 이전연구: 3D convolutional neural networks for landing zone detection from lidar,” in ICRA, 2015. |
 | 코드 | [Theano+Lasagne](https://github.com/dimatura/voxnet) |
 
