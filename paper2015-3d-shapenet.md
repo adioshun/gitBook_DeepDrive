@@ -176,5 +176,10 @@ In ECCV. 2014.
 
 The energy, $$E$$, of a convolutional layer in our model can be computed as:
 $$
-E(v,h) = - \sum_f \sum_i (h^f_j (W^f \times v )_j + c^f h ^f_j) - \sum_l b_lv_l
+E(v,h) = - \sum_f \sum_i (h^f_j (W^f \* v )_j + c^f h ^f_j) - \sum_l b_lv_l
 $$
+- $$v_l$$ : each visible unit
+- $$h^f_j$$ : each hidden unit in a feature channel $$f$$
+- $$W^f$$ : the convolu-tional filter
+- $$\*$$ : convolution operation
+
