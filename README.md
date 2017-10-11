@@ -150,6 +150,7 @@ Categorization and Pose Estimation](http://proceedings.mlr.press/v48/elhoseiny16
 |저자(소속)| ()|
 |학회/년도| IROS 2015, [논문]()|
 |키워드| |
+|데이터셋/모델||
 |참고||
 |코드||
 
