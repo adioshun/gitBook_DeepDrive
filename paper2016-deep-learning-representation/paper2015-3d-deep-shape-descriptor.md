@@ -46,15 +46,15 @@ SD 정의 : Shape descriptor refers to an informative description that provides 
 
 ### 1.2 Related Works
 
-위에서 언급한 3가지 사항에 대한 관련 연구들. 두가지 접근 방법으로 분류 가능   
-1. develop better 3D shape signature and descriptor   
+위에서 언급한 3가지 사항에 대한 관련 연구들. 두가지 접근 방법으로 분류 가능  
+1. develop better 3D shape signature and descriptor  
 2. develop methods to automatically learn the 3D features
 
 #### A. 3D shape signatures and descriptors
 
 * 정의 : 3D shape **signature** and **descriptor** are succinct and compact** representations** of 3D object that capture the geometric essence of a 3D object\[19\]. 
 
-> shape signature\(SS\) : a local description for a point on a 3D surface   
+> shape signature\(SS\) : a local description for a point on a 3D surface  
 > shape descriptor\(SD\) :a global description for the entire shape.
 
 ```
@@ -124,7 +124,7 @@ SD 정의 : Shape descriptor refers to an informative description that provides 
   * Despite the success of deeplearning as a technique for feature learning in images and videos \[3, 32, 52, 50\], 
   * very few techniques based on deeplearning have been developed for learning 3D shape features. 
 
-##### 라. Zhu et al. \[53\] 
+##### 라. Zhu et al. \[53\]
 
 * Zhu et al. \[53\] attempt to learn a 3D shape representation by projecting a 3D shape into many 2D views and then perform training on the projected 2D shapes.
 
@@ -132,11 +132,12 @@ SD 정의 : Shape descriptor refers to an informative description that provides 
 
   * This does not result in a concise shape descriptor that can represent the 3D shape well.
 
-* 단점들 It has the following shortcomings: 
-  1. a collection of 2Dprojection images is not a concise form to represent a 3Dshape as it increases the size of the data, 
-  2. a collection of 2D projection images is not geometrically informative as it does not capture the underlying geometric essence of a 3D object. 
-     * For instance it is very sensitive to isometric geometrictrans formation, 
-  3. Projected 2D shapes are basically 2D contour representation of 3D shapes. 
+* 단점들 It has the following shortcomings:   
+  1. a collection of 2Dprojection images is not a concise form to represent a 3Dshape as it increases the size of the data,   
+  2. a collection of 2D projection images is not geometrically informative as it does not capture the underlying geometric essence of a 3D object.
+
+  * For instance it is very sensitive to isometric geometrictrans formation, 
+    1. Projected 2D shapes are basically 2D contour representation of 3D shapes. 
 
 They do not include critical descriptive information such as color, texture and appearance.
 
@@ -146,7 +147,7 @@ Therefore, the rationale of learning 3D shape representation from 2D contours ne
 [53] Z. Zhu, X. Wang, S. Bai, C. Yao, and X. Bai. Deep learning representation using autoencoder for 3d shape retrieval. CoRR, abs/1409.7164, 2014.
 ```
 
-> Gitboot 정리 : [Paper_2015_DL Representation]()
+> Gitboot 정리 : [Paper\_2015\_DL Representation]()
 
 ### 1.3 Our solution: 3D Deep Shape Descriptor
 
@@ -154,7 +155,8 @@ Therefore, the rationale of learning 3D shape representation from 2D contours ne
 
 * 딥러닝을 이용하여 descriptor\(Deep SD\)을 학습 하는 방법 제안 `we have developed techniques for learning a deep shape descriptor (DeepSD) based on the use of a deep neural network.`
 
-* Specifically, we have developed 
+* Specifically, we have developed
+
   * 1\) **heat shape descriptor** \(HeatSD\) based on point based **heat kernel signature** \(HKS\) 
   * 2\) new definitions of **Eigen-shape descriptor** \(ESD\) and **Fisher-shape descriptor** \(ESD\) to guide the training of deep neural network.
 
@@ -177,11 +179,11 @@ Therefore, the rationale of learning 3D shape representation from 2D contours ne
 Given input shapes, three steps are included along with the pipeline:
 
 1. Heat kernel signatures are extracted for each shape in the database. 
-  - Heat shape descriptor are computed based on HKS.
+   * Heat shape descriptor are computed based on HKS.
 2. Heat shape descriptors are fed into two deep neural networks with target values using ESD and FSD, respectively. 
 3. The deep shape descriptor is formed by concatenating nodes in hidden layer \(circled by yellow dash lines\).
 
-#### C. 4가지 구성 요소 (Input Shape, Shape Features,Deep Learning, and Target)
+#### C. 4가지 구성 요소 \(Input Shape, Shape Features,Deep Learning, and Target\)
 
 ![](https://i.imgur.com/Nel3wPu.png)
 
@@ -204,11 +206,11 @@ Features in the middle hidden layers are extracted as deep shape descriptor for 
 
 ## 2. Method
 
-### 2.1 Shape Feature Extraction 
+### 2.1 Shape Feature Extraction
 
-#### A. Heat Kernel Signature 
+#### A. Heat Kernel Signature
 
-> Heat kernel signature has been widely used for 3D shape analysis [45].
+> Heat kernel signature has been widely used for 3D shape analysis \[45\].
 
 #### B. Heat shape descriptor
 
@@ -216,46 +218,66 @@ Features in the middle hidden layers are extracted as deep shape descriptor for 
 
 ### 2.2 Deep shape descriptor
 
-- hand-crafted SD가 강건성을 가지기란 쉽지 않다. 다행히 빅데이터와 연산력의 향상으로 insensitive할수 있게 되었따. `It is challenging to find hand-crafted shape descriptors that are robust to large structural variations. Fortunately,the large volume of data and powerful computational resourcesmake it possible to learn a deep shape descriptorthat is insensitive to structural variations. `
+* hand-crafted SD가 강건성을 가지기란 쉽지 않다. 다행히 빅데이터와 연산력의 향상으로 insensitive할수 있게 되었따. `It is challenging to find hand-crafted shape descriptors that are robust to large structural variations. Fortunately,the large volume of data and powerful computational resourcesmake it possible to learn a deep shape descriptorthat is insensitive to structural variations.`
 
-As illustrated inFigure 2, four components, Input Shape, Shape Features,Deep Learning, and Target are included in the process of learning a deep shape descriptor. 
+As illustrated inFigure 2, four components, Input Shape, Shape Features,Deep Learning, and Target are included in the process of learning a deep shape descriptor.
 
 We will explain two components related to training DNN: Deep learning and Target.
 
-Since one of the contributions in this project is the development of **Eigen-shape descriptor (ESD)** and **Fisher-shapedescriptor (FSD)** to guide the training of DNN in order to maximize inter-class margin while minimizing intra-classvariance, 
+Since one of the contributions in this project is the development of **Eigen-shape descriptor \(ESD\)** and **Fisher-shapedescriptor \(FSD\)** to guide the training of DNN in order to maximize inter-class margin while minimizing intra-classvariance,
 
 we will first explain the target component and then explain the deep learning component.
 
 #### A. Target values
 
-The target of the our proposed DNN is ESD or FSD. 
+The target of the our proposed DNN is ESD or FSD.
 
-![](https://i.imgur.com/Fc8ohbd.png)
-Figure 4: Pipeline of generating Eigen-shape descriptor and Fisher-shape descriptor. 
+![](https://i.imgur.com/Fc8ohbd.png)  
+Figure 4: Pipeline of generating Eigen-shape descriptor and Fisher-shape descriptor.
 
+* **Eigen-shape descriptors**\(on the right column\): are computed by training a **principle component analysis \(PCA\)** model on a set of pre-computed `HeatSD` obtained from each group \(in middle column\).
 
-- **Eigen-shape descriptors**(on the right column): are computed by training a **principle component analysis (PCA)** model on a set of pre-computed `HeatSD` obtained from each group (in middle column). 
+* **Fisher-shape descriptors** \(on the left column\): are computed by training a **linear discriminative analysis \(LDA\)** model on a set of pre-computed `HeatSDs` obtained from each group.
 
-- **Fisher-shape descriptors** (on the left column): are computed by training a **linear discriminative analysis (LDA)** model on a set of pre-computed `HeatSDs` obtained from each group. 
+Separate **Eigen-shape descriptors** and **Fishershape descriptors** are trained for each group.
 
-Separate **Eigen-shape descriptors** and **Fishershape descriptors** are trained for each group. 
-
-The DNN will force the mapping of HeatSDs from the same groupto their assigned ESD or FSD (the mapping process will be explained below).
+The DNN will force the mapping of HeatSDs from the same groupto their assigned ESD or FSD \(the mapping process will be explained below\).
 
 ![](https://i.imgur.com/kWoqxI3.png)
 
 #### B. Deep Learning
 
-- We use the architecture of a **many-to one encoder** neural network to develop our encoder for deepshape descriptor [4, 20]. 
+* We use the architecture of a **many-to one encoder** neural network to develop our encoder for deepshape descriptor \[4, 20\].
 
-- A many-to-one encoder forces the inputs from the same class to be mapped to a unique targetvalue, which is different from the original auto-encoder that sets the target value to be identical to the input. 
+* A many-to-one encoder forces the inputs from the same class to be mapped to a unique target value, which is different from the original auto-encoder that sets the target value to be identical to the input.
 
-- By enforcing the target value to be unique for input HeatSDs from the same group but with structural variations, the deep shape descriptor represented by the neurons in the hidden layer is invariant to within-group structural variations but will discriminate against other groups. 
+* By enforcing the target value to be unique for input HeatSDs from the same group but with structural variations, the deep shape descriptor represented by the neurons in the hidden layer is invariant to within-group structural variations but will discriminate against other groups.
 
-- We developed a new training method by setting target value as pre-computed Eigen shape descriptor and Fisher-shape descriptor for each group as described earlier. 
+* We developed a new training method by setting target value as pre-computed Eigen shape descriptor and Fisher-shape descriptor for each group as described earlier.
 
-- This new training strategy will increase the discriminative power of deep shape descriptor by maximizinginter-class margin and minimizing intra-class variance.
+* This new training strategy will increase the discriminative power of deep shape descriptor by maximizinginter-class margin and minimizing intra-class variance.
 
-To avoid over-fitting, we impose the $$l_2$$ norm constrainton the weights of the many-to-one encoder neuralnetwork. 
+To avoid over-fitting, we impose the $$l_2$$ norm constrainton the weights of the many-to-one encoder neuralnetwork.
 
+We formulate the objective function of the proposed sparse many-to-one encoder by the square-loss function with sparse constraint on the weights as:
 
+![](https://i.imgur.com/iU9M8dg.png)
+
+- $$L$$ : the number of layers in the deep neural network,
+- $$W$$ : the weight matrix of the multiple-hidden-layer neural network
+- $$b$$ : the bias matrix of the neural network,
+- $$x_i^j$$: the j-th training sample from the i-th group
+- $$h(x_i^j, W, b)$$: a non-linear mapping from the input $$x_i^j$$ to the output
+- $$ \lambda$$ : the weight of the regularizer
+- $$Y_i$$ : the target value for the i-th group. 
+
+For each group of shapes, two encoders will be trained: 
+- one is trained by setting the target value $$Y_i$$ as the `i-th` ESD
+- the other is trained by setting the target value $$Y_i$$ as the `i-th` FSD (see Figure 4). 
+
+Because we impose that the target value be unique for all input HeatSDs from the same group, the deep shape descriptor extracted from hidden layer will be
+insensitive to intra-class structural variations. 
+
+At the same time, because of discriminative power of target values (either ESD or FSD), the deep shape descriptor will be discriminative with a large inter-class margin.
+
+## 3. Experiments
