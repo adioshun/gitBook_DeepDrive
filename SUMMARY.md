@@ -45,7 +45,6 @@
 * [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
 * [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
 * [Paper\_2017\_SqueezeSeg](paper2017-squeezeseg.md)
-* [Intro\_3D\_RGB-D](intro3d-rgb-d.md)
 * [Paper\_2015\_VoxNet \(10%\)](papervoxnet.md)
 * [Paper\_2016\_Volumetric\_Multiview CNNs \(50%\)](paper2016-volumetric-multiview-cnns.md)
 * [Paper\_2016\_DeepSlidingShape \(30%\)](paper2016-deepslidingshape.md)
