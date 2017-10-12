@@ -1,16 +1,18 @@
-| 논문명 | Volumetric and Multi-View CNNs for Object Classification on 3D Data |
+
+|
+논문명 | Volumetric and Multi-View CNNs for Object Classification on 3D Data |
 | --- | --- |
 | 저자\(소속\) | Charles R. Qi \(Standford\) |
 | 학회/년도 | 2016 , [논문](https://arxiv.org/abs/1604.03265) |
 | 키워드 | Volumetric CNN 성능향상, Multi-View CNNs 성능향상 |
-| 참고 |  |
-| 코드 |  |
+| 참고 | |
+| 코드 | |
 
 # Volumetric and Multi-View CNNs for Object Classification on 3D Data
 
 최근 개발된 3D 처리를 위한 방법
 
-* CNNs based upon volumetric representations 
+* CNNs based upon volumetric representations
 * CNNs based upon multi-view representations.
 
 In this paper, we aim to improve both `volumetric CNNs` and `multi-view CNNs` according to extensive analysis of existing approaches.
@@ -21,8 +23,8 @@ In this paper, we aim to improve both `volumetric CNNs` and `multi-view CNNs` ac
 
 2D -&gt; 3D 확장시 고려 사항
 
-* the additional computational complexity \(volumetric domain\) 
-* data sparsity 
+* the additional computational complexity \(volumetric domain\)
+* data sparsity
 
 Seminal work by Wu et al. \[33\] propose volumetric CNN architectures on volumetric grids for object classification and retrieval.
 
@@ -51,37 +53,37 @@ Finally, we examine multiview CNNs; our experiments show that we are able to imp
 
 ### 1.1 Problem Statement
 
-We consider **volumetric representations** of 3D point clouds or meshes as input to the 3D object classification problem. 
+We consider **volumetric representations** of 3D point clouds or meshes as input to the 3D object classification problem.
 
-This is primarily inspired by recent advances in real-time scanning technology, which use volumetric data representations. 
+This is primarily inspired by recent advances in real-time scanning technology, which use volumetric data representations.
 
-We further assume that the input data is already pre-segmented by 3D bounding boxes. 
+We further assume that the input data is already pre-segmented by 3D bounding boxes.
 
-In practice, these bounding boxes can be extracted using the sliding windows, object proposals, or background subtraction. 
+In practice, these bounding boxes can be extracted using the sliding windows, object proposals, or background subtraction.
 
 The output of the method is the category label of the volumetric data instance.
 
 ### 1.2 Approach
 
-We provide a detailed analysis over factors that influence the performance of volumetric CNNs, including network architecture and volumn resolution. 
+We provide a detailed analysis over factors that influence the performance of volumetric CNNs, including network architecture and volumn resolution.
 
-Based uponour analysis, we strive to improve the performance of volumetric CNNs. 
+Based uponour analysis, we strive to improve the performance of volumetric CNNs.
 
-We propose two volumetric CNN network architectures that signficantly improve state-of-the-art of volumetric CNNs on 3D shape classification. 
+We propose two volumetric CNN network architectures that signficantly improve state-of-the-art of volumetric CNNs on 3D shape classification.
 
-This result has also closed the gap between volumetric CNNs and multi-view CNNs, when they are provided with 3D input discretized at 30×30×30 3D resolution. 
+This result has also closed the gap between volumetric CNNs and multi-view CNNs, when they are provided with 3D input discretized at 30×30×30 3D resolution.
 
-- The first network introduces auxiliary learning tasks by classifying part of an object, which help to scrutize details of 3D objects more deeply. 
+- The first network introduces auxiliary learning tasks by classifying part of an object, which help to scrutize details of 3D objects more deeply.
 
-- The second network uses long anisotropic kernels to probe for long-distance interactions. 
+- The second network uses long anisotropic kernels to probe for long-distance interactions.
 
 Combining data augmentation with a multi-orientation pooling, we observe significant performance improvement for both networks.
 
-We also conduct extensive experiments to study the in-fluence of volume resolution, which sheds light on future directions of improving volumetric CNNs. 
+We also conduct extensive experiments to study the in-fluence of volume resolution, which sheds light on future directions of improving volumetric CNNs.
 
 Furthermore, we introduce a new multi-resolution component to multi-view CNNs, which improves their already compelling performance.
 
-In addition to providing extensive experiments on 3DCAD model datasets, we also introduce a dataset of realworld 3D data, constructed using dense 3D reconstructiontaken with [25]. 
+In addition to providing extensive experiments on 3DCAD model datasets, we also introduce a dataset of realworld 3D data, constructed using dense 3D reconstructiontaken with [25].
 
 Experiments show that our networks can better adapt from synthetic data to this real-world data than previous methods.
 
@@ -97,7 +99,7 @@ Alternatives include models based on distances, angles, triangle areas, or tetra
 
 The `spherical harmonic descriptor (SPH) [17]` and the `Light Field descriptor (LFD) [4]`are other popular descriptors.
 
-* LFD extracts geometric and Fourier descriptors from object silhouettes rendered from several different viewpoints, and can be directly applied to the shape classification task. 
+* LFD extracts geometric and Fourier descriptors from object silhouettes rendered from several different viewpoints, and can be directly applied to the shape classification task.
 
 In contrast to recently developed feature learning techniques, these features are handcrafted and do not generalize well across different domains.
 
@@ -105,7 +107,7 @@ In contrast to recently developed feature learning techniques, these features ar
 
 ### 2.2 Convolutional Neural Networks
 
-It turns out that training from large RGB image datasets \(e.g., ImageNet \[6\]\) is able to learn general purpose image descriptors that outperform handcrafted features for a number of vision tasks, including object detection, scene recognition, texture recognition and  
+It turns out that training from large RGB image datasets \(e.g., ImageNet \[6\]\) is able to learn general purpose image descriptors that outperform handcrafted features for a number of vision tasks, including object detection, scene recognition, texture recognition and
 classification \[7, 10, 27, 5, 12\].
 
 > 2D CNN에 대한 일반적 내용, 이미지를 이용하여 학습한 descriptors 는 handcrafted 보다 좋은 성능을 보였다.
@@ -118,7 +120,7 @@ A very first approach combines convolutional and recursive neural networks for l
 
 Impressive performance for object detection from RGB-D images has been achieved using a geocentric embedding for depth images that encodes height above ground and angle with gravity for each pixel in addition to the horizontal disparity \[11\].
 
-Recently, a CNN architecture has been proposed where the RGB and depth data are processed  
+Recently, a CNN architecture has been proposed where the RGB and depth data are processed
 in two separate streams; in the end, the two streams are combined with a late fusion network \[8\].
 
 All these descriptors operate on single RGB-D images, thus processing 2.5D data.
@@ -162,7 +164,7 @@ In this context, `DeepPano [28]` converts 3D shapes into panoramic views; i.e., 
 
 Current state-of-the-art uses multiple rendered views, and trains a CNN that can process all views jointly \[32\].
 
-This multi-view CNN \(MVCNN\) is pre-trained on ImageNet \[6\] and uses view-point pooling to  
+This multi-view CNN \(MVCNN\) is pre-trained on ImageNet \[6\] and uses view-point pooling to
 combine all streams obtained from each view.
 
 A similar idea on stereo views has been proposed earlier \[22\].
@@ -179,7 +181,7 @@ A similar idea on stereo views has been proposed earlier \[22\].
 Two representations of generic 3D shapes are popularly used for object classification,
 
 * **volumetric** : The volumetric representation encodes a 3D shape as a 3D tensor of binary or real values.
-* **multi-view** : The multi-view representation encodes a 3D shape as a collection of renderings from multiple viewpoints. 
+* **multi-view** : The multi-view representation encodes a 3D shape as a collection of renderings from multiple viewpoints.
 
 Tensor로 저장되어 있으므로 두개다 CNN으로 학습 할 수 있다. `Stored as tensors, both representations can easily be used to train convolutional neural networks, i.e., volumetric CNNs and multi-view CNNs.`
 
@@ -191,8 +193,8 @@ Tensor로 저장되어 있으므로 두개다 CNN으로 학습 할 수 있다. `
 
 The gap seems to be caused by two factors:
 
-* input resolution 
-* network architecture differences. 
+* input resolution
+* network architecture differences.
 
 ###### Input resolution
 
@@ -210,7 +212,7 @@ However, the difference in input resolution is not the primary reason for this p
 
 We compare the two networks by providing them with data containing similar level of detail.
 
-To this end, we feed the multi-view CNN with renderings of the 30 × 30 × 30 occupancy grid using sphere rendering, i.e., for each occupied voxel, a ball is placed at its center,  
+To this end, we feed the multi-view CNN with renderings of the 30 × 30 × 30 occupancy grid using sphere rendering, i.e., for each occupied voxel, a ball is placed at its center,
 with radius equal to the edge length of a voxel \(Multi-View Sphere Rendering in Fig 1\).
 
 We train the multi-view CNN from scratch using these sphere renderings.
@@ -221,35 +223,35 @@ The accuracy of this multi-view CNN is reported in blue.
 
 ## 4. Volumetric Convolutional Neural Networks
 
-### 4.1. Overview 
+### 4.1. Overview
 
 We improve volumetric CNNs through three separate means
 1. network structures
 2. data augmentation
 3. feature pooling
 
-#### A. Network Architecture 
+#### A. Network Architecture
 
-We propose two network variations that significantly improve state-of-the-art CNNs on 3D volumetric data. 
+We propose two network variations that significantly improve state-of-the-art CNNs on 3D volumetric data.
 
-##### 가. The first network 
+##### 가. The first network
 
-- Designed to **mitigate over fitting** by introducing auxiliary training tasks, which are themselves challenging. 
+- Designed to **mitigate over fitting** by introducing auxiliary training tasks, which are themselves challenging.
 
-- These auxiliary tasks encourage the network to **predict object class** labels from **partial subvolumes**. 
-    - Therefore, no additional annotation efforts are needed. 
+- These auxiliary tasks encourage the network to **predict object class** labels from **partial subvolumes**.
+- Therefore, no additional annotation efforts are needed.
 
-##### 나. The second network 
+##### 나. The second network
 
 - Designed to **mimic multiview CNNs**, as they are strong in 3D shape classification.
 
-- Instead of using rendering routines from computer graphics, our network p**rojects a 3D shape to 2D** by convolving its 3D volume with an anisotropic probing kernel. 
+- Instead of using rendering routines from computer graphics, our network p**rojects a 3D shape to 2D** by convolving its 3D volume with an anisotropic probing kernel.
 
-- This kernel is capable of encoding long-range interactions between points. 
+- This kernel is capable of encoding long-range interactions between points.
 
-- An image CNN is then appended to classify the 2D projection. 
+- An image CNN is then appended to classify the 2D projection.
 
-- Note that the training of the projection module and the image classification module is end-to-end. 
+- Note that the training of the projection module and the image classification module is end-to-end.
 
 - This emulation of multi-view CNNs achieves similar performance to them, using only standard layers in CNN.
 
@@ -265,48 +267,48 @@ In order to mitigate overfitting from too many parameters, we adopt the **mlpcon
 ```
 
 - 제안 : Main task가 오버피팅 되어도 auxiliary tasks를 두어서 계속 학습 하도록 함 `We thus introduce auxiliary tasks that are closely correlated with the main task but are difficult to overfit, so that learning continues even if our main task is overfitted.`
- - auxiliary tasks도 label예측을 목표로 하지만, 입력값의 local subvolume에서만 동작함 ` These auxiliary training tasks also predict the same object labels, but the predictions are made solely on a local subvolume of the input. `
+- auxiliary tasks도 label예측을 목표로 하지만, 입력값의 local subvolume에서만 동작함 ` These auxiliary training tasks also predict the same object labels, but the predictions are made solely on a local subvolume of the input. `
 
-- Without complete knowledge of the object, the auxiliary tasks are more challenging, and can thus better exploit the discriminative power of local regions. 
+- Without complete knowledge of the object, the auxiliary tasks are more challenging, and can thus better exploit the discriminative power of local regions.
 
 - 이러한 제안은 기존의 multitask learning방식과는 다른 것이다. `This design is different from the classic multitask learning setting of hetergenous auxiliary tasks,`
- - which inevitably requires collecting additional annotations (e.g., conducting both object classification and detection [9]).
+- which inevitably requires collecting additional annotations (e.g., conducting both object classification and detection [9]).
 
-We implement this design through an architecture shown in Fig 3. 
+We implement this design through an architecture shown in Fig 3.
 
 ![](https://i.imgur.com/5PSzKxu.png)
 
 ```
 [Figure 3. Auxiliary Training by Subvolume Supervision (Sec 4.2).]
-- The main innovation is that we add auxiliary tasks to predict class labels that focus on part of an object, intended to drive the CNN to more heavily exploit local discriminative features. 
+- The main innovation is that we add auxiliary tasks to predict class labels that focus on part of an object, intended to drive the CNN to more heavily exploit local discriminative features.
 - An mlpconv layer is a composition of three conv layers interleaved by ReLU layers.
-- The five numbers under mlpconv are the number of channels, kernel size and stride of the first conv layer, and the number of channels of the second and third conv layers, respectively. 
-- The kernel size and stride of the second and third conv layers are 1. 
-- For example, mlpconv(48, 6, 2; 48; 48) is a composition of conv(48, 6, 2), ReLU, conv(48, 1, 1), ReLU, conv(48, 1, 1) and ReLU layers. 
+- The five numbers under mlpconv are the number of channels, kernel size and stride of the first conv layer, and the number of channels of the second and third conv layers, respectively.
+- The kernel size and stride of the second and third conv layers are 1.
+- For example, mlpconv(48, 6, 2; 48; 48) is a composition of conv(48, 6, 2), ReLU, conv(48, 1, 1), ReLU, conv(48, 1, 1) and ReLU layers.
 - Note that we add dropout layers with rate=0.5 after fully connected layers.
 ```
 
-- The first three layers are mlpconv (multilayer perceptron convolution) layers, a 3D extension of the 2Dmlpconv proposed by [23]. 
+- The first three layers are mlpconv (multilayer perceptron convolution) layers, a 3D extension of the 2Dmlpconv proposed by [23].
 
-- The input and output of ourmlpconv layers are both 4D tensors. 
+- The input and output of ourmlpconv layers are both 4D tensors.
 
-- Compared with the standard combination of linear convolutional layers and max pooling layers, mlpconv has a three-layer structure and is thus a universal function approximator if enough neurons are provided in its intermediate layers. 
+- Compared with the standard combination of linear convolutional layers and max pooling layers, mlpconv has a three-layer structure and is thus a universal function approximator if enough neurons are provided in its intermediate layers.
 
 - Therefore, mlpconv is a powerful filter for feature extraction of local patches,enhancing approximation of more abstract representations.
 
 - In addition, mlpconv has been validated to be more discriminative with fewer parameters than ordinary convolution with pooling [23].
 
-- At the fourth layer, the network branches into two. 
+- At the fourth layer, the network branches into two.
 
-- The lower branch takes the whole object as input for traditional classification. 
+- The lower branch takes the whole object as input for traditional classification.
 
-- The upper branch is a novel branch for auxiliary tasks. 
+- The upper branch is a novel branch for auxiliary tasks.
 
-- It slices the 512 × 2 × 2 × 2 4D tensor (2 grids along x, y, z axes and 512 channels) into 2×2×2 = 8 vectors of dimension 512. 
+- It slices the 512 × 2 × 2 × 2 4D tensor (2 grids along x, y, z axes and 512 channels) into 2×2×2 = 8 vectors of dimension 512.
 
-- We set up a classification task for each vector. 
+- We set up a classification task for each vector.
 
-- A fully connected layer and a softmax layer are then appended independently to each vector to construct classification losses. 
+- A fully connected layer and a softmax layer are then appended independently to each vector to construct classification losses.
 
 - Simple calculation shows that the receptive field of each task is 22×22×22, coverin groughly 2/3 of the entire volume.
 
@@ -314,23 +316,25 @@ We implement this design through an architecture shown in Fig 3.
 
 - 멀티뷰 CNN은 3D 물체를 2D로 투영하고 2 CNN을 적용하여 분류 작업을 한다. `multiview CNNs first project 3D objects to 2D and then make use of well-developed 2D image CNNs for classification.`
 
-- Inspired by its success, we design a neural network architecture that is also composed of the two stages. 
+- Inspired by its success, we design a neural network architecture that is also composed of the two stages.
 
-However,while multi-view CNNs use external rendering pipelinesfrom computer graphics, we achieve the 3D-to-2D projectionusing network layers in a manner similar to ‘X-rayscanning’.Key to this network is the use of an elongated anisotropickernel which helps capture the global structure of the 3Dvolume. 
+- 일반적인 멀티뷰 CNN은 외부 CV의 도움이 필요 하다(투영파일 생성). 하지만 본 논문에서는  투영도 네트워크 안에서 진행하여 진정한 End-to-End화 하였다. `However, while multi-view CNNs use external rendering pipelines from computer graphics, we achieve the 3D-to-2D projection using network layers in a manner similar to X-rayscanning.`
 
-As illustrated in Fig 4, the neural network has twomodules: an anisotropic probing module and a network innetwork module. 
+Key to this network is the use of an elongated anisotropickernel which helps capture the global structure of the 3Dvolume. 
 
-The anisotropic probing module containsthree convolutional layers of elongated kernels, each followedby a nonlinear ReLU layer. 
+As illustrated in Fig 4, the neural network has twomodules: an anisotropic probing module and a network innetwork module.
 
-Note that both the inputand output of each layer are 3D tensors.In contrast to traditional isotropic kernels, an anisotropicprobing module has the advantage of aggregating longrangeinteractions in the early feature learning stage withfewer parameters. 
+The anisotropic probing module containsthree convolutional layers of elongated kernels, each followedby a nonlinear ReLU layer.
 
-As a comparison, with traditional neuralnetworks constructed from isotropic kernels, introducinglong-range interactions at an early stage can only beachieved through large kernels, which inevitably introducemany more parameters. 
+Note that both the inputand output of each layer are 3D tensors.In contrast to traditional isotropic kernels, an anisotropicprobing module has the advantage of aggregating longrangeinteractions in the early feature learning stage withfewer parameters.
 
-After anisotropic probing, we usean adapted NIN network [23] to address the classificationproblem.Our anistropic probing network is capable of capturinginternal structures of objects through its X-ray like projectionmechanism. 
+As a comparison, with traditional neuralnetworks constructed from isotropic kernels, introducinglong-range interactions at an early stage can only beachieved through large kernels, which inevitably introducemany more parameters.
 
-This is an ability not offered by standardrendering. 
+After anisotropic probing, we usean adapted NIN network [23] to address the classificationproblem.Our anistropic probing network is capable of capturinginternal structures of objects through its X-ray like projectionmechanism.
 
-Combined with multi-orientation pooling (introducedbelow), it is possible for this probing mechanism tocapture any 3D structure, due to its relationship with theRadon transform.In addition, this architecture is scalable to higher resolutions,since all its layers can be viewed as 2D. 
+This is an ability not offered by standardrendering.
+
+Combined with multi-orientation pooling (introducedbelow), it is possible for this probing mechanism tocapture any 3D structure, due to its relationship with theRadon transform.In addition, this architecture is scalable to higher resolutions,since all its layers can be viewed as 2D.
 
 While3D convolution involves computation at locations of cubicresolution, we maintain quadratic compute.
 
@@ -338,3 +342,7 @@ While3D convolution involves computation at locations of cubicresolution, we mai
 
 
 
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjcyNTc1MDNdfQ==
+-->
