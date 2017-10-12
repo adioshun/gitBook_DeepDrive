@@ -320,7 +320,7 @@ We implement this design through an architecture shown in Fig 3.
 
 - 일반적인 멀티뷰 CNN은 외부 CV의 도움이 필요 하다(투영파일 생성). 하지만 본 논문에서는  투영도 네트워크 안에서 진행하여 진정한 End-to-End화 하였다. `However, while multi-view CNNs use external rendering pipelines from computer graphics, we achieve the 3D-to-2D projection using network layers in a manner similar to X-rayscanning.`
 
-Key to this network is the use of an elongated anisotropickernel which helps capture the global structure of the 3Dvolume. 
+- 두번째 네트어크의 주 특징은 **anisotropic kernel**을 이용하여서 3D의 global structure 을 잡아 내는 것이다. ` Key to this network is the use of an elongated **anisotropic kernel** which helps capture the global structure of the 3D volume. 
 
 As illustrated in Fig 4, the neural network has twomodules: an anisotropic probing module and a network innetwork module.
 
@@ -344,5 +344,5 @@ While3D convolution involves computation at locations of cubicresolution, we mai
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcyNTc1MDNdfQ==
+eyJoaXN0b3J5IjpbLTIwNTA0Njc0MTZdfQ==
 -->
