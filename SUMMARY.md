@@ -37,7 +37,7 @@
   * [Paper\_2015\_DeepSD \(70%\)](paper2016-deep-learning-representation/paper2015-3d-deep-shape-descriptor.md)
   * [Paper\_2015\_DL Representation ](paper2016-deep-learning-representation/paper2015-dl-representation.md)
   * [Paper\_2015\_3DMesh\_Laveling](paper2016-deep-learning-representation/paper2015-3dmesh-laveling.md)
-* [Paper\_2015\_3D\_ShapeNet](paper2015-3d-shapenet.md)
+* [Paper\_2015\_3D\_ShapeNet \(50%\)](paper2015-3d-shapenet.md)
 * [Paper\_2015\_VoxNet \(10%\)](papervoxnet.md)
 * [Paper\_2016\_Volumetric\_Multiview CNNs \(50%\)](paper2016-volumetric-multiview-cnns.md)
 * [Paper\_2016\_Vote3Deep \(10%\)](papervote3deep.md)
