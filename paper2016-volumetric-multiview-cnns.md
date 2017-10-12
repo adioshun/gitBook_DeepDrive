@@ -221,6 +221,119 @@ The accuracy of this multi-view CNN is reported in blue.
 
 ## 4. Volumetric Convolutional Neural Networks
 
+### 4.1. Overview 
+
+We improve volumetric CNNs through three separate means
+1. network structures
+2. data augmentation
+3. feature pooling
+
+#### A. Network Architecture 
+
+We propose two network variations that significantly improve state-of-the-art CNNs on 3D volumetric data. 
+
+##### 가. The first network 
+
+- Designed to **mitigate over fitting** by introducing auxiliary training tasks, which are themselves challenging. 
+
+- These auxiliary tasks encourage the network to **predict object class** labels from **partial subvolumes**. 
+    - Therefore, no additional annotation efforts are needed. 
+
+##### 나. The second network 
+
+- Designed to **mimic multiview CNNs**, as they are strong in 3D shape classification.
+
+- Instead of using rendering routines from computer graphics, our network p**rojects a 3D shape to 2D** by convolving its 3D volume with an anisotropic probing kernel. 
+
+- This kernel is capable of encoding long-range interactions between points. 
+
+- An image CNN is then appended to classify the 2D projection. 
+
+- Note that the training of the projection module and the image classification module is end-to-end. 
+
+- This emulation of multi-view CNNs achieves similar performance to them, using only standard layers in CNN.
+
+
+In order to mitigate overfitting from too many parameters, we adopt the **mlpconv layer** from [23] as our basic building block in both network variations.
+
+### 4.2 Network 1: Auxiliary Training by Subvolume Supervision
+
+- 3D ShapeNets은 오버피팅 문제가 있다. `We observe significant overfitting when we train the volumetric CNN proposed by [33] in an end-to-end fashion(see supplementary). `
+
+```
+[33] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang, and J. Xiao. 3d shapenets: A deep representation for volumetric shapes. In CVPR 2015, pages 1912–1920, 2015
+```
+
+- 제안 : Main task가 오버피팅 되어도 auxiliary tasks를 두어서 계속 학습 하도록 함 `We thus introduce auxiliary tasks that are closely correlated with the main task but are difficult to overfit, so that learning continues even if our main task is overfitted.`
+ - auxiliary tasks도 label예측을 목표로 하지만, 입력값의 local subvolume에서만 동작함 ` These auxiliary training tasks also predict the same object labels, but the predictions are made solely on a local subvolume of the input. `
+
+- Without complete knowledge of the object, the auxiliary tasks are more challenging, and can thus better exploit the discriminative power of local regions. 
+
+- 이러한 제안은 기존의 multitask learning방식과는 다른 것이다. `This design is different from the classic multitask learning setting of hetergenous auxiliary tasks,`
+ - which inevitably requires collecting additional annotations (e.g., conducting both object classification and detection [9]).
+
+We implement this design through an architecture shown in Fig 3. 
+
+![](https://i.imgur.com/5PSzKxu.png)
+
+```
+[Figure 3. Auxiliary Training by Subvolume Supervision (Sec 4.2).]
+- The main innovation is that we add auxiliary tasks to predict class labels that focus on part of an object, intended to drive the CNN to more heavily exploit local discriminative features. 
+- An mlpconv layer is a composition of three conv layers interleaved by ReLU layers.
+- The five numbers under mlpconv are the number of channels, kernel size and stride of the first conv layer, and the number of channels of the second and third conv layers, respectively. 
+- The kernel size and stride of the second and third conv layers are 1. 
+- For example, mlpconv(48, 6, 2; 48; 48) is a composition of conv(48, 6, 2), ReLU, conv(48, 1, 1), ReLU, conv(48, 1, 1) and ReLU layers. 
+- Note that we add dropout layers with rate=0.5 after fully connected layers.
+```
+
+- The first three layers are mlpconv (multilayer perceptron convolution) layers, a 3D extension of the 2Dmlpconv proposed by [23]. 
+
+- The input and output of ourmlpconv layers are both 4D tensors. 
+
+- Compared with the standard combination of linear convolutional layers and max pooling layers, mlpconv has a three-layer structure and is thus a universal function approximator if enough neurons are provided in its intermediate layers. 
+
+- Therefore, mlpconv is a powerful filter for feature extraction of local patches,enhancing approximation of more abstract representations.
+
+- In addition, mlpconv has been validated to be more discriminative with fewer parameters than ordinary convolution with pooling [23].
+
+- At the fourth layer, the network branches into two. 
+
+- The lower branch takes the whole object as input for traditional classification. 
+
+- The upper branch is a novel branch for auxiliary tasks. 
+
+- It slices the 512 × 2 × 2 × 2 4D tensor (2 grids along x, y, z axes and 512 channels) into 2×2×2 = 8 vectors of dimension 512. 
+
+- We set up a classification task for each vector. 
+
+- A fully connected layer and a softmax layer are then appended independently to each vector to construct classification losses. 
+
+- Simple calculation shows that the receptive field of each task is 22×22×22, coverin groughly 2/3 of the entire volume.
+
+### 4.3 Network 2: Anisotropic Probing
+
+- 멀티뷰 CNN은 3D 물체를 2D로 투영하고 2 CNN을 적용하여 분류 작업을 한다. `multiview CNNs first project 3D objects to 2D and then make use of well-developed 2D image CNNs for classification.`
+
+- Inspired by its success, we design a neural network architecture that is also composed of the two stages. 
+
+However,while multi-view CNNs use external rendering pipelinesfrom computer graphics, we achieve the 3D-to-2D projectionusing network layers in a manner similar to ‘X-rayscanning’.Key to this network is the use of an elongated anisotropickernel which helps capture the global structure of the 3Dvolume. 
+
+As illustrated in Fig 4, the neural network has twomodules: an anisotropic probing module and a network innetwork module. 
+
+The anisotropic probing module containsthree convolutional layers of elongated kernels, each followedby a nonlinear ReLU layer. 
+
+Note that both the inputand output of each layer are 3D tensors.In contrast to traditional isotropic kernels, an anisotropicprobing module has the advantage of aggregating longrangeinteractions in the early feature learning stage withfewer parameters. 
+
+As a comparison, with traditional neuralnetworks constructed from isotropic kernels, introducinglong-range interactions at an early stage can only beachieved through large kernels, which inevitably introducemany more parameters. 
+
+After anisotropic probing, we usean adapted NIN network [23] to address the classificationproblem.Our anistropic probing network is capable of capturinginternal structures of objects through its X-ray like projectionmechanism. 
+
+This is an ability not offered by standardrendering. 
+
+Combined with multi-orientation pooling (introducedbelow), it is possible for this probing mechanism tocapture any 3D structure, due to its relationship with theRadon transform.In addition, this architecture is scalable to higher resolutions,since all its layers can be viewed as 2D. 
+
+While3D convolution involves computation at locations of cubicresolution, we maintain quadratic compute.
+
 ## 5. Multi-View Convolutional Neural Networks
 
 
