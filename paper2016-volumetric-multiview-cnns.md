@@ -322,7 +322,9 @@ We implement this design through an architecture shown in Fig 3.
 
 - 두번째 네트워크의 주 기능은 **anisotropic kernel**을 이용하여서 3D의 global structure 을 잡아 내는 것이다. ` Key to this network is the use of an elongated anisotropic kernel which helps capture the global structure of the 3D volume. `
 
-As illustrated in Fig 4, the neural network has twomodules: an anisotropic probing module and a network innetwork module.
+-  As illustrated in Fig 4, the neural network has two modules: 
+	- an anisotropic probing module 
+	- a network innetwork module.
 
 The anisotropic probing module containsthree convolutional layers of elongated kernels, each followedby a nonlinear ReLU layer.
 
@@ -344,5 +346,5 @@ While3D convolution involves computation at locations of cubicresolution, we mai
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MDIzNTE3OV19
+eyJoaXN0b3J5IjpbMjI2OTUzNTY1XX0=
 -->
