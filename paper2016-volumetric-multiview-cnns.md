@@ -344,5 +344,5 @@ While3D convolution involves computation at locations of cubicresolution, we mai
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzNTA2MTA5XX0=
+eyJoaXN0b3J5IjpbLTI1MDIzNTE3OV19
 -->
