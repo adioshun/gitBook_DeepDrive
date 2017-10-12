@@ -312,3 +312,11 @@ CNN을 사용한 3가지 이유 `There are three main reasons CNNs are an attrac
 - The model has 921736 parameters, most of them from inputs to the first dense layer.
 
 
+### 3.6 Rotation Augmentation and Voting
+
+- 일관된 orientation 을 유지 하는것은 중요하다. `it is nontrivial(중대한) to maintain a consistent orientation of objects around their z axis. `
+
+- 문제 해결을 위해 기존에는 **rotationally invariant**하도록 설게 되었다. `To counter this problem, many features for point clouds are designed to be rotationally invariant (e.g. [36], [37]). `
+
+- 문제 해결을 위해 본 논문은 built-in된 대처 알고리즘은 없지만 다른 방법으로 문제를 해결 하였다. `Our representation has no built-in invariance to large rotations;`
+
