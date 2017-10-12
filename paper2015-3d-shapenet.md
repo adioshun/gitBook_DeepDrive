@@ -127,8 +127,8 @@ In ECCV. 2014.
 
 > \[21\] The model is precisely a convolutional DBM where all the connections are undirected, while ours is a convolutional DBN
 
-```  
-[21] H. Lee, R. Grosse, R. Ranganath, and A. Y. Ng. Unsupervised learning of hierarchical representations with convolutional deep belief networks. Communications of the ACM,  
+```    
+[21] H. Lee, R. Grosse, R. Ranganath, and A. Y. Ng. Unsupervised learning of hierarchical representations with convolutional deep belief networks. Communications of the ACM,    
 2011.``
 
 ### 2.7 active object recognition
@@ -151,7 +151,7 @@ In ECCV. 2014.
 
 ## 3. 3D ShapeNets
 
-### 3.1 입력 데이터 
+### 3.1 입력 데이터
 
 * To study 3D shape representation, we propose to represent a geometric 3D shape as a **probability distribution of binary variables on a 3D voxel grid**.
 
@@ -161,7 +161,7 @@ In ECCV. 2014.
   * 0 indicates the voxel is outside the mesh \(i.e., it is empty space\). 
   * The grid size in our experiments is 30 × 30 × 30.
 
-### 3.2 네트워크 특징 
+### 3.2 네트워크 특징
 
 * To represent the probability distribution of these binary variables for 3D shapes, we design a** Convolutional DeepBelief Network** \(CDBN\).
 
@@ -171,13 +171,11 @@ In ECCV. 2014.
 
 * A 3D voxel volume with reasonable resolution\(say 30 × 30 × 30\) would have the same dimensions as a high-resolution image \(165×165\).
 
-* A fully connected DBN을 적용시 파라미터수가 많아 지므로 본 제안에서는 Convolution\(by weight sharing\) 사용 ` on such an image would result in a huge number of parameters making the model intractable to train effectively. Therefore, we propose to use convolution to reduce model parameters by weight sharing.`
+* A fully connected DBN을 적용시 파라미터수가 많아 지므로 본 제안에서는 Convolution\(by weight sharing\) 사용 `on such an image would result in a huge number of parameters making the model intractable to train effectively. Therefore, we propose to use convolution to reduce model parameters by weight sharing.`
 
 * 하지만, Convolution에서 일반적으로 쓰는 Pooling을 사용하지는 않았다. `However, different from typical convolutional deep learning models (e.g. [21]), we do not use any form of pooling in the hidden layers – while pooling may enhance the invariance properties for recognition, in our case, it would also lead to greater uncertainty for shape reconstruction.`
 
-### 3.3 Energy Function 
-
-
+### 3.3 Energy Function
 
 The energy, $$E$$, of a convolutional layer in our model can be computed as:
 
@@ -219,28 +217,33 @@ $$
 
 * The top layer forms an **associative memory DBN** as indicated by the bi-directional arrows, while all the other layer connections are directed top-down.
 
-### 3.2 학습 방법 
+### 3.2 학습 방법
 
 * We first pre-train the model in a **layer-wise fashion** followed by a generative fine-tuning procedure
+
   * Layer 1~4 : trained using standard **Contrastive Divergence** \[14\], 
   * top layer : trained using **Fast Persistent Contrastive Divergence \(FPCD\)** \[32\]. 
 
 * Once the lower layer is learned, the weights are fixed and the hidden activations are fed into the next layer as input.
 
-#### A. 파인 튜닝 
+#### A. 파인 튜닝
 
 * Our fine-tuning procedure is similar to **wake sleep algorithm** \[15\] except that we keep the weights tied.
+
   * **In the wake phase**, we propagate the data bottom-up and use the activations to collect the positive learning signal.  
   * **In the sleep phase**, we maintain a persistent chain on the topmost layer and propagate the data top-down to collect the negative learning signal.
 
 * This fine-tuning procedure mimics the recognition and generation behavior of the model and works well in practice.
 
-- Layer 1 사전 학습시 `During pre-training of the first layer, we collect learning signal only in receptive fields which are non-empty.`
-  - Because of the nature of the data, empty spaces occupy a large proportion of the whole volume, which have no information for the RBM and would distract the learning.
+* Layer 1 사전 학습시 `During pre-training of the first layer, we collect learning signal only in receptive fields which are non-empty.`
 
-- Our experiment shows that ignoring those learning signals during gradient computation results in our model learning more meaningful filters.
+  * Because of the nature of the data, empty spaces occupy a large proportion of the whole volume, which have no information for the RBM and would distract the learning.
 
-- 추가적으로 **Layer 1**에는 `sparsity regularization`을 추가 하여 작은 값을 유지 하도록 하였다. `In addition, for the first layer, we also add sparsity regularization to restrict the mean activation of the hidden units to be a small constant \(following the method of \[20\]\).`
+* Our experiment shows that ignoring those learning signals during gradient computation results in our model learning more meaningful filters.
 
-- topmost RBM 사전 학습시 Laber과 고수준 abstractions 들이 학습 된다. laber은 중요 하므로 10번 복제 하여 significance를 증가 시겼다. `During pre-training of the topmost RBM where the joint distribution of labels and high-level abstractions are learned, we duplicate the label units 10 times to increase their significance.`
+* 추가적으로 **Layer 1**에는 `sparsity regularization`을 추가 하여 작은 값을 유지 하도록 하였다. `In addition, for the first layer, we also add sparsity regularization to restrict the mean activation of the hidden units to be a small constant \(following the method of \[20\]\).`
+
+* topmost RBM 사전 학습시 Laber과 고수준 abstractions 들이 학습 된다. laber은 중요 하므로 10번 복제 하여 significance를 증가 시겼다. `During pre-training of the topmost RBM where the joint distribution of labels and high-level abstractions are learned, we duplicate the label units 10 times to increase their significance.`
+
+
 
