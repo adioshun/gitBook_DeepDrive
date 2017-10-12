@@ -332,9 +332,9 @@ As illustrated in Fig 4, the neural network has two modules:
 - an anisotropic probing module 
 - a network innetwork module.
 
-The anisotropic probing module containsthree convolutional layers of elongated kernels, each followedby a nonlinear ReLU layer.
+- The anisotropic probing module contains **three convolutional** layers of elongated kernels, each followed by a nonlinear ReLU layer.
 
-Note that both the inputand output of each layer are 3D tensors.In contrast to traditional isotropic kernels, an anisotropicprobing module has the advantage of aggregating longrangeinteractions in the early feature learning stage withfewer parameters.
+- Note that both the inputand output of each layer are 3D tensors.In contrast to traditional isotropic kernels, an anisotropicprobing module has the advantage of aggregating longrangeinteractions in the early feature learning stage withfewer parameters.
 
 As a comparison, with traditional neuralnetworks constructed from isotropic kernels, introducinglong-range interactions at an early stage can only beachieved through large kernels, which inevitably introducemany more parameters.
 
@@ -352,5 +352,5 @@ While3D convolution involves computation at locations of cubicresolution, we mai
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDMwMjc1M119
+eyJoaXN0b3J5IjpbMTg5MzI3MTIyM119
 -->
