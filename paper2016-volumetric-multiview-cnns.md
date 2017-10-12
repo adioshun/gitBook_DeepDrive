@@ -328,8 +328,6 @@ We implement this design through an architecture shown in Fig 3.
 - We use an elongated kernel to convolve the 3D cube and aggregate information to a 2D plane. 
 - Then we use a 2D NIN (NIN-CIFAR10 [23]) to classify the 2D projection of the original 3D shape.
 ```
-
-
 As illustrated in Fig 4, the neural network has two modules: 
 - an anisotropic probing module 
 - a network innetwork module.
@@ -354,5 +352,5 @@ While3D convolution involves computation at locations of cubicresolution, we mai
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTcxMTI4MjldfQ==
+eyJoaXN0b3J5IjpbLTE3NDMwMjc1M119
 -->
