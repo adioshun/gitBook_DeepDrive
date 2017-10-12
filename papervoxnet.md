@@ -314,9 +314,89 @@ CNN을 사용한 3가지 이유 `There are three main reasons CNNs are an attrac
 
 ### 3.6 Rotation Augmentation and Voting
 
-- 일관된 orientation 을 유지 하는것은 중요하다. `it is nontrivial(중대한) to maintain a consistent orientation of objects around their z axis. `
+- 일관된 **orientation** 을 유지 하는것은 중요하다. `it is nontrivial(중대한) to maintain a consistent orientation of objects around their z axis. `
 
 - 문제 해결을 위해 기존에는 **rotationally invariant**하도록 설게 되었다. `To counter this problem, many features for point clouds are designed to be rotationally invariant (e.g. [36], [37]). `
 
 - 문제 해결을 위해 본 논문은 built-in된 대처 알고리즘은 없지만 다른 방법으로 문제를 해결 하였다. `Our representation has no built-in invariance to large rotations;`
+  - **At training time**, we augment the dataset with by creating `n` copies of each input instance, each rotated 360◦/n intervals around the z axis. 
+  - **At testing time**, we pool the activations of the output layer over all `n` copies. 
+  - 본 논문에서 `n`값은 12 or 18. 
+
+- 보팅방법과 비슷 : This can be seen as a **voting approach**, similar to how networks such as [7] average predictions over random crops and flips of the input image; 
+  - 다른점 : however, it is performed over an exhaustive sampling of rotations, not a random selection
+
+- 제안 방식은 아래에서 영감을 받았다. This approach is inspired by the interpretation of convolution as weight sharing across translations; implicitly, we are sharing weights across rotations. 
+
+- 초반에는 Initial versions of this approach were implemented by max-pooling or mean-pooling the dense layers of the network during training in the same way as during test time. 
+
+- 추후 수정 하였다. However, we found that the approach described above yielded comparable results while converging noticeably faster.
+
+### 3.7 Multiresolution Input
+
+- LiDAR 데이터에서 탐지를 위해서는 $$0.2 m^3$$정도 Resolution가 필요 하다고 제안되고 있다. `Visual inspection of the LiDAR dataset suggested a(0.2 m^3) resolution preserves all necessary information for the classification, while allowing sufficient spatial context for most larger objects such as trucks and trees. `
+
+- 우리가 세운 가설은 **좋은 해상도**는 판별력을 더 좋게 할수 있다. `However, we hypothesized that a finer resolution would help in discriminating other classes such as traffic signs and traffic lights, especially for sparser data. `
+
+- 따라서 **Foveal **구조[24]를 참고 삼아 **multiresolution VoxNet**를 구현 하였다. `Therefore, we implemented a multiresolution VoxNet, inspired by the “foveal” architecture of [24] for video analysis. ` 
+  - 이 모델에서는 두개의 동일한 VoxNet 네트워크에 서로 다른 해상도의 occupancy grids를 입력으로 하였다. `In this model we use two networks with an identical VoxNet architectures, each receiving occupancy grids at different resolutions`: $$0.1m^3$$and $$0.2m^3$$. 
+  - 두 입력의 중심점은 같지만 ` Both inputs are centered on the same location`, 
+    - but the **coarser network** covers a **larger area** at low resolution 
+    - while the **finer network** covers a **smaller area** at high resolution. 
+  - 두 출력을 합치는 법 : `To fuse the information from both networks,` 
+    - we concatenate the outputs of their respective FC(128) layers 
+    - and connect them to a softmax output layer.
+    
+### 3.8 Network training details
+
+- Training of the network parameters is performed by **Stochastic Gradient Descent (SGD)** with momentum. 
+
+- The objective is the multinomial negative log-likelihood plus 0.001 times the L2 weight norm for regularization. 
+
+- SGD is initialized with a learning rate of 
+  - 0.01 for the LiDAR dataset 
+  - 0.001 in the the other datasets. 
+  
+- The momentum parameter was 0.9. 
+- Batch size is 32. 
+- The learning rate was decreased by a factor of 10 each 8000 batches for the LiDAR dataset and each 40000 batches in the other datasets.
+- Dropout regularization is added after the output of each layer. 
+- Convolutional layers were **initialized** with the method proposed by [38], whereas dense layers were initialized from a zero-mean Gaussian with σ = 0.01.
+
+- Following common practices for CNN training, we augment the data by adding randomly perturbed copies of each instance. 
+  - The perturbed(교란) copies are generated dynamically during training and consist of randomly mirrored and shifted instances. 
+  
+- Mirroring is done by along the x and y axes; shifting is done between −2 to 2 voxels along all axes.
+
+- 구현 언어 :  Our implementation uses a combination of C++ and Python.
+
+- 라이브러리 : The Lasagne library was used to compute gradients and accelerate computations on the GPU. 
+
+- 학습 소요 시간 : The training process takes around 6 to 12 hours on our K40 GPU, depending on the complexity of the network.
+
+## 4. EXPERIMENTS
+
+To evaluate VoxNet we consider benchmarks with data from three different domains: 
+- LiDAR point clouds : Sydney Objects Dataset
+- RGBD point clouds : NYUv2
+- CAD models : ModelNet40
+
+### 4.1 LiDAR 
+- Sydney데이터셋 설명 : labeled Velodyne LiDAR scans of 631 urban objects in 26 categories. 
+
+- Sydney데이터셋 선택 이유: We chose this dataset for evaluation as it provides labeled object instances and the LiDAR viewpoint, which is used to compute occupancy. 
+
+- When voxelizing the point cloud we use all points in a bounding box around the object, including background clutter. 
+
+- 평가 요소 : F1 값 `We report the average F1 score, weighted by class support, for a subset of 14 classes over four standard training/testing splits. `
+
+- 데이터 증가 및 보팅 실시 : For this dataset we perform augmentation and voting with 18 rotations per instance.
+
+### 4.2 CAD data
+
+> 제외 
+
+### 4.3 RGBD data
+
+> 제외 
 
