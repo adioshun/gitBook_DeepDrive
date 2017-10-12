@@ -133,7 +133,7 @@ All these descriptors operate on single RGB-D images, thus processing 2.5D data.
 
 Wu et al. \[33\] lift 2.5D to 3D with their 3D ShapeNets approach by categorizing each voxel as free space, surface or occluded, depending on whether it is in front of, on, or behind the visible surface \(i.e., the depth value\) from the depth map.
 
-The resulting representation is a 3D binary voxel grid, which is the input to a CNN with 3D filter banks.
+The resulting representation is a **3D binary voxel grid**, which is the input to a CNN with 3D filter banks.
 
 Their method is particularly relevant in the context of this work, as they are the first to apply CNNs on a 3D representation.
 
@@ -143,7 +143,7 @@ Their method is particularly relevant in the context of this work, as they are t
 
 #### VoxNet
 
-A similar approach is VoxNet \[24\], which also uses binary voxel grids and a corresponding 3D CNN architecture.
+A similar approach is VoxNet \[24\], which also uses **binary voxel grids** and a corresponding 3D CNN architecture.
 
 | The advantage of these approaches is that it can process different sources of 3D data, including LiDAR point clouds, RGB-D point clouds, and CAD models; we likewise follow this direction. |
 | --- |
