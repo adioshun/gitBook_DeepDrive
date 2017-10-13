@@ -327,7 +327,8 @@ As illustrated in Fig 4, the neural network has two modules:
 - 이 모듈은 elongated kernels로 이루어진 3개의 Conv. 레이어로 이루러져 있다. `The anisotropic probing module contains  3 convolutional layers of elongated kernels, each followed by a nonlinear ReLU layer.`
 	- 입/출력 값은 모두 3D 텐서 `Note that both the input and output of each layer are 3D tensors.`
 
--  In contrast to traditional isotropic kernels, an anisotropic probing module has the advantage of aggregating long range interactions in the early feature learning stage with fewer parameters.
+-  이 모듈이 가지는 장점 `In contrast to traditional isotropic kernels, an anisotropic probing module has`
+	-  the advantage of aggregating long range interactions in the early feature learning stage with fewer parameters.
 
 - As a comparison, with traditional neural networks constructed from isotropic kernels, introducing long-range interactions at an early stage can only be achieved through large kernels, which inevitably introduce many more parameters.
 
@@ -372,5 +373,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDc0NDQyMjJdfQ==
+eyJoaXN0b3J5IjpbLTE1NTM0NDk3OTZdfQ==
 -->
