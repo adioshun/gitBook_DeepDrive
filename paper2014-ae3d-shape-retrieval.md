@@ -11,6 +11,7 @@
 
 - 3D를 2D로 투영 `we project 3D shapes into 2D space` 
 - 오토인코더를 이용하여 특징 학습 ` use autoencoder for feature learning on the 2D images` (depth images)
+	-  we aim to use autoencoder to learn a 3D shape representation based on the depth images obtained by projection.
 
 ## 1. INTRODUCTION
 
@@ -46,5 +47,5 @@ and the representation based on local descriptors are complementary
 to each other.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY4NDAzNzRdfQ==
+eyJoaXN0b3J5IjpbMTA0MDQxNDM0OF19
 -->
