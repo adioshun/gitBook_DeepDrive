@@ -40,19 +40,15 @@ retrieval.
 - black dots : indicates those extracted from other different views.
 ```
 
+As shown in Fig. 1, a 3D shape is projected into many different depth images; the learnt autoencoder can reconstruct
+the depth images nicely. 
 
-As shown in Fig. 1, a 3D shape is projected into many
-different depth images; the learnt autoencoder can reconstruct
-the depth images nicely. Matching 3D shape based on the
-autoencoder features can be converted to a set-to-set matching
-problem, conventional set-to-set distance, like the Hausdorff
-distance, can be adopted. Our autoencoder based 3D shape
-representation is a deep learning representation; compared to
-the representations based on local descriptor, e.g. SIFT, it is a
-global representation. This global deep learning representation
-and the representation based on local descriptors are complementary
-to each other.
+Matching 3D shape based on the autoencoder features can be converted to a set-to-set matching problem, conventional set-to-set distance, like the Hausdorff distance, can be adopted. 
+
+Our autoencoder based 3D shape representation is a deep learning representation; compared to the representations based on local descriptor, e.g. SIFT, it is a global representation. 
+
+This global deep learning representation and the representation based on local descriptors are complementary to each other.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NTUxNjg4M119
+eyJoaXN0b3J5IjpbMTcwMDk5OTgxNV19
 -->
