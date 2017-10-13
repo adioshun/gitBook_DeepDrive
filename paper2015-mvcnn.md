@@ -193,6 +193,16 @@ Adding more or different viewpoints is trivial, however, we found that the above
 to achieve high performance. 
 
 Finally, rendering each mesh from all the viewpoints takes no more than ten milliseconds on modern graphics hardware.
+
+
+### 3.2 Recognition with Multi-view Representations
+
+In the first setting, we make use of existing 2D image features directly and produce a descriptor for each view. 
+
+This is the most straightforward approach to
+utilize the multi-view representation. However, it results in
+multiple 2D image descriptors per 3D shape, one per view,
+which need to be integrated somehow for recognition tasks.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NTc1OTUxMF19
+eyJoaXN0b3J5IjpbMTYwNzY4Mzk0Nl19
 -->
