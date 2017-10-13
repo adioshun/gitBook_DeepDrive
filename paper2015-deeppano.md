@@ -28,14 +28,13 @@
 - The panoramic view is a **cylinder projection** of a 3-D model around its principle axis.
 - Therefore, the panoramic views are in the **form of 2-D images**,
 
-제안의 특징 :  `To make the learned deep features invariant to the rotation around the principle axis`
-- , a special layer named Row-Wise Max-Pooling
-(RWMP) layer is presented and inserted between the convolution
-layers and the fully-connected layers. This layer takes the
-maximum value of each row in the convolutional feature maps.
-Consequently, the output feature vector is not affected by the
+Row-Wise Max-Pooling (RWMP) layer 추가 
+- To make the learned deep features invariant to the rotation around the principle axis
+- between the convolution layers and the fully-connected layers. 
+- This layer takes the maximum value of each row in the convolutional feature maps. 
+- Consequently, the output feature vector is not affected by the
 shift of the panoramic view, caused by the rotation of 3-D shape.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNTc3MzVdfQ==
+eyJoaXN0b3J5IjpbMTA4NjE3MDI5NV19
 -->
