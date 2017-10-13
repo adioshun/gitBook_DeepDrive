@@ -320,7 +320,7 @@ We implement this design through an architecture shown in Fig 3.
 ```
 As illustrated in Fig 4, the neural network has two modules: 
 - An anisotropic probing module 
-- Anetwork innetwork module.
+- A network innetwork module.
 
 - The anisotropic probing module contains **three convolutional** layers of elongated kernels, each followed by a nonlinear ReLU layer.
 
@@ -371,5 +371,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNDc1OTM1Nl19
+eyJoaXN0b3J5IjpbNTU5NTQ0MTE0XX0=
 -->
