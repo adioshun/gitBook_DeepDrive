@@ -324,7 +324,7 @@ As illustrated in Fig 4, the neural network has two modules:
 
 #### A. Anisotropic probing module 
 
-- 이 모듈은 elongated kernels로 이루어진 3개의 Conv. LThe anisotropic probing module contains  3 convolutional layers of elongated kernels, each followed by a nonlinear ReLU layer.
+- 이 모듈은 elongated kernels로 이루어진 3개의 Conv. The anisotropic probing module contains  3 convolutional layers of elongated kernels, each followed by a nonlinear ReLU layer.
 
 - Note that both the input and output of each layer are 3D tensors.
 
@@ -373,5 +373,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg0Nzc1MDEwXX0=
+eyJoaXN0b3J5IjpbLTE2MjYyMTY5NTRdfQ==
 -->
