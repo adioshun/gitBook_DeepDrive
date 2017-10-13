@@ -31,6 +31,11 @@ retrieval.
 
 본 논문은 View-based 3D Shpae방법에서 영감을 받아 오토인코더를 이용 **Depth image**에서 부터 **3D shape representation**를 학습 하도록 하였다. `Motivated by the view-based 3D shape methods [6], [7], in which a 3D shape can be projected into many 2D depth images, we aim to use autoencoder to learn a 3D shape representation based on the depth images obtained by projection.`
 
+```
+[6] Chen, D., Tian, X., Shen, Y., Ouhyoung, M.: On visual similarity based 3d model retrieval. Computer Graphics Forum 22 (2003) 223–232
+[7] Lian, Z., Godil, A., Sun, X.: Visual similarity based 3d shape retrieval
+using bag-of-features. In: Shape Modeling International Conference (SMI), 2010. (2010) 25–36
+```
 
 ![](https://i.imgur.com/lfzJYCk.png)
 ```
@@ -52,9 +57,17 @@ This **global deep learning representation** and the **representation based on l
 
 **각 보는 각도마다 같아 보이는 두 물체는 같은 물체 이다**라는 생각에서 시작한 View-based접근 방식은  식별력이 좋은 것으로 알려 져 왔다. `Based on the main idea that “two 3D models are similar if they look similar with each other from all viewing angles”, there are plenty of view-based approaches that have been regarded as the most discriminative methods on literature [8].`
 
+```
+[8] Shilane, P., Min, P., Kazhdan, M., Funkhouser, T.: The princeton shape benchmark. In: Shape Modeling Applications, 2004. Proceedings, IEEE (2004) 167–178
+```
+
 ###### [Cyr and Kimia] 
 
 In [9], Cyr and Kimia recognized a 3D shape by comparing a view of the shape with all views of 3D objects using shock graph matching. 
+
+```
+
+```
 
 ###### [Ohbuchi et al.] 
 
@@ -93,5 +106,5 @@ Prior to that, they also proposed a shape descriptor named Geodesic Sphere based
 
 Recently, Bai et al. [17] adopted contour fragments as the input features for learning a BoW model, which is general and efficient for both 2D and 3D shape matching.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjE1MDQ3MF19
+eyJoaXN0b3J5IjpbMTY2MTg0OTkxN119
 -->
