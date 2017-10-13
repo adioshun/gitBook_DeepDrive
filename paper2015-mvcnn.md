@@ -242,16 +242,13 @@ Note that the distance between two 2D images is defined as the $$l_2$$ distance 
 ![](https://i.imgur.com/I4TmnBg.png)
 
 To interpret this definition, we can first define the distance between a 2D image $$x_i$$ and a 3D shape $$y$$ as $$ d(x_i
-, y) = min_j \parallel x_i - y_i \parallel_2. 
+, y) = min_j \parallel x_i - y_i \parallel_2$$. 
 
-Then given all nx distances
-between x’s 2D projections and y, the distance between
-these two shapes is computed by simple averaging. In Eq. 1,
-this idea is applied in both directions to ensure symmetry.
-We investigated alternative distance measures, such as
-minimun distance among all nx · ny image pairs and the
-distance between average image descriptors, but they all led
-to inferior performance
+Then given all $$n_x$$ distances between x’s 2D projections and y, the distance between these two shapes is computed by simple averaging. 
+
+In Eq. 1, this idea is applied in both directions to ensure symmetry.
+
+We investigated alternative distance measures, such as minimun distance among all $$n_x · n_y$$ image pairs and the distance between average image descriptors, but they all led to inferior performance
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NTk4NDE1NV19
+eyJoaXN0b3J5IjpbMTkyNTE2ODQzMl19
 -->
