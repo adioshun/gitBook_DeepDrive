@@ -79,6 +79,10 @@ or extensions of the SIFT and SURF feature descriptors to 3D voxel grids [17].
 
 초반기 연구, An early example of a view-based approach is the work by Murase and Nayar [24] that recognizes objects by matching their appearance in parametric eigenspaces formed by large sets of 2D renderings of 3D models under varying poses and illuminations. 
 
+```
+[24] H. Murase and S. K. Nayar. Visual learning and recognition of 3-D objects from appearance. 14(1), 1995.
+```
+
 ###### [Light Field descriptor]
 
 많이 사용, Light Field descriptor [5] that extracts a set of geometric and Fourier descriptors from object silhouettes rendered from several different viewpoints. 
@@ -310,5 +314,5 @@ We illustrate this capability of MVCNNs in the context of sketch recognition in 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjY1ODQyMzJdfQ==
+eyJoaXN0b3J5IjpbMTM2MTM1ODM5OV19
 -->
