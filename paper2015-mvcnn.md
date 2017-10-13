@@ -285,11 +285,11 @@ All branches in the first part of the network share the same parameters in CNN1.
 - 맥스 풀링/맥스 아웃 레이어와 연관이 깊다. `View-pooling layers are closely related to max-pooling layers and maxout layers[14], `
 	-  단지 차이는 with the only difference being the dimension that their pooling operations are carried out on. 
 
-The MVCNN is a directedacyclic graphs and can be trained or fine-tuned usingstochastic gradient descent with back-propagation.Using fc7 (after ReLU non-linearity) in an MVCNNas an aggregated shape descriptor, we achieve higher performancethan using separate image descriptors from animage-based CNN directly, especially in retrieval (62.8%→ 70.1%). 
+The MVCNN is a directed acyclic graphs and can be trained or fine-tuned usingstochastic gradient descent with back-propagation.Using fc7 (after ReLU non-linearity) in an MVCNNas an aggregated shape descriptor, we achieve higher performancethan using separate image descriptors from animage-based CNN directly, especially in retrieval (62.8%→ 70.1%). 
 
 Perhaps more importantly, the aggregated descriptoris readily available for a variety of tasks, e.g., shapeclassification and retrieval, and offers significant speed-upsagainst multiple image descriptors.An MVCNN can also be used as a general frameworkto integrate perturbed image samples (also known as datajittering). 
 
 We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMDU0NDI4Ml19
+eyJoaXN0b3J5IjpbLTEwNjIwNzc3MDJdfQ==
 -->
