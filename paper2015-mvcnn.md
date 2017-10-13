@@ -110,6 +110,10 @@ There has been existing work on recognizing 3D objects with CNNs [21] using two 
 - 입력으로 여러 views를 하고 출력 으로 shape descriptor 생성 
 	- Our network instead learns a **shape representation** that aggregates information from any number of input views without any specific ordering, and always **outputs a compact shape descriptor** of the same size. 
 - Train시 이미지와 Shpe dataset을 같이 사용 `Furthermore, we leverage both image and shape datasets to train our network.`
+
+ In contrast our multi-view CNN architecture 
+ - learns to recognize 3D shapes from views of the shapes using image-based CNNs but in the context of other views via a view-pooling layer. 
+ - As a result, information from multiple views is effectively accumulated into a single, compact shape descriptor.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDIwODgyODJdfQ==
+eyJoaXN0b3J5IjpbLTEzMTY5MTE3MzldfQ==
 -->
