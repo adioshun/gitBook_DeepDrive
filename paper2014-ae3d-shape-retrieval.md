@@ -10,7 +10,7 @@
 # AE3D Shape Retrieval
 
 - 3D를 2D로 투영 `we project 3D shapes into 2D space` 
-- 오토인코더를 이용하여 특징 학습 ` use autoencoder for feature learning on the 2D images`
+- 오토인코더를 이용하여 특징 학습 ` use autoencoder for feature learning on the 2D images` (depth images)
 
 ## 1. INTRODUCTION
 
@@ -28,7 +28,7 @@
 retrieval.
 ```
 
-Motivated by the view-based 3D shape methods [6], [7], in which a 3D shape can be projected into many 2D depth
+본 논문은 View-based 3D Shpae방법을 참고 하여 오통Depth image에서 부터 Motivated by the view-based 3D shape methods [6], [7], in which a 3D shape can be projected into many 2D depth
 images, we aim to use autoencoder to learn a 3D shape representation based on the depth images obtained by projection.
 
 
@@ -45,5 +45,5 @@ and the representation based on local descriptors are complementary
 to each other.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDAwMzk4MjBdfQ==
+eyJoaXN0b3J5IjpbNTA2ODE1Mjc0XX0=
 -->
