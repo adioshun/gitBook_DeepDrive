@@ -340,7 +340,7 @@ As illustrated in Fig 4, the neural network has two modules:
 
 - Combined with multi-orientation pooling (introduced below), it is possible for this probing mechanism to capture any 3D structure, due to its relationship with the Radon transform.
 
-- In addition, this architecture is scalable to higher resolutions,since all its layers can be viewed as 2D.
+- 2D로 처리 하기 때문에 높은 Resolution도 처리 가능 `In addition, this architecture is scalable to higher resolutions,since all its layers can be viewed as 2D.`
 
 - While 3D convolution involves computation at locations of cubic resolution, we maintain quadratic compute.
 
@@ -373,5 +373,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNjAzNDE4MF19
+eyJoaXN0b3J5IjpbLTYyMDM4Nzk1M119
 -->
