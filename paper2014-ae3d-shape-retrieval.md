@@ -26,9 +26,8 @@
 - After the autoencoder network is learnt, the **coefficients obtained** by reconstructing image/shape based on prototypes are used as feature for 3D shape matching and retrieval. 
 - Since the autoencoder can learn feature adaptively to training data, it can get excellent performance for image
 retrieval.
-``
-
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MTk4OTY2NF19
+eyJoaXN0b3J5IjpbNjgyMTQ5OTE4XX0=
 -->
