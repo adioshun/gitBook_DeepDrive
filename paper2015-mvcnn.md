@@ -249,6 +249,11 @@ Then given all $$n_x$$ distances between x’s 2D projections and y, the distanc
 In Eq. 1, this idea is applied in both directions to ensure symmetry.
 
 We investigated alternative distance measures, such as minimun distance among all $$n_x · n_y$$ image pairs and the distance between average image descriptors, but they all led to inferior performance
+
+
+### 3.3. Multi-view CNN: Learning to Aggregate Views
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNTE2ODQzMl19
+eyJoaXN0b3J5IjpbMTk0NTc0Mjc3OV19
 -->
