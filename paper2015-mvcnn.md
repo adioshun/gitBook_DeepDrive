@@ -4,7 +4,7 @@
 | --- | --- |
 | 저자\(소속\) | Hang Su \(\) |
 | 학회/년도 | 2015, [논문](https://arxiv.org/abs/1505.00880) |
-| 키워드 | MVCNN2015, |
+| 키워드 | MVCNN2015, The Fisher vector + CNN feature, VGG |
 | 데이터셋/모델 | modelnet40 |
 | 참고 | [홈페이지](http://vis-www.cs.umass.edu/mvcnn/), [ppt](http://vis-www.cs.umass.edu/mvcnn/docs/1694_video.mp4) |
 | 코드 | [matlab](https://github.com/suhangpro/mvcnn), [Caffe](https://github.com/suhangpro/mvcnn/tree/master/caffe), [TF](https://github.com/WeiTang114/MVCNN-TensorFlow), [Torch](https://github.com/eriche2016/mvcnn.torch) |
@@ -226,10 +226,9 @@ For our CNN features we use the VGG-M network from [3] which consists of mainly
 
 #### B. Classification. 
 
-We train one-vs-rest linear SVMs (each
-view is treated as a separate training sample) to classify
-shapes using their image features. At test time, we simply
-sum up the SVM decision values over all 12 views and return
+We train one-vs-rest linear SVMs (each view is treated as a separate training sample) to classify shapes using their image features. 
+
+At test time, we simply sum up the SVM decision values over all 12 views and return
 the class with the highest sum. Alternative approaches,
 e.g., averaging image descriptors, lead to worse accuracy.
 
@@ -255,5 +254,5 @@ minimun distance among all nx · ny image pairs and the
 distance between average image descriptors, but they all led
 to inferior performance
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMTcwNTI3OV19
+eyJoaXN0b3J5IjpbLTE1Nzc0NDkxNjhdfQ==
 -->
