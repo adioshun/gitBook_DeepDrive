@@ -199,10 +199,9 @@ However, it results in multiple 2D image descriptors per 3D shape, one per view,
 
 #### A. Image descriptors.
 
-We consider two types of image descriptors
-for each 2D view: a state-of-the-art “hand-crafted”
-image descriptor based on Fisher vectors [29] with multiscale
-SIFT, as well as CNN activation features [10].
+We consider two types of image descriptors for each 2D view: 
+- a state-of-the-art “hand-crafted” image descriptor based on Fisher vectors [29] with multiscale SIFT, 
+- as well as CNN activation features [10].
 The Fisher vector image descriptor is implemented using
 VLFeat [36]. For each image multi-scale SIFT descriptors
 are extracted densely. These are then projected to 80 dimensions
@@ -253,5 +252,5 @@ minimun distance among all nx · ny image pairs and the
 distance between average image descriptors, but they all led
 to inferior performance
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ0MjgxNDg5XX0=
+eyJoaXN0b3J5IjpbNDgyNTIyNzU3XX0=
 -->
