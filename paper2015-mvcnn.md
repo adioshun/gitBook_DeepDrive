@@ -165,15 +165,15 @@ We experimented with two camera setups.
 
 ##### 가. For the 1st camera setup, 
 
-we assume that the input shapes are upright oriented along a consistent axis (e.g., z-axis). 
+물체가 upright oriented 상태라고 가정 :  12개의 이미지 생성 
 
-Most models in modern online repositories, such as the 3D Warehouse, satisfy this requirement, and some previous recognition methods also follow the same assumption [37]. 
-
-In this case, we create 12 rendered views by placing 12 virtual cameras around the mesh every 30 degrees (see Fig. 1). 
-
-The cameras are elevated 30 degrees from the ground plane, pointing towards the centroid of the mesh. 
-
-The centroid is calculated as the weighted average of the mesh face centers, where the weights are the face areas. 
+```
+- we assume that the input shapes are upright oriented along a consistent axis (e.g., z-axis). 
+- Most models in modern online repositories, such as the 3D Warehouse, satisfy this requirement, and some previous recognition methods also follow the same assumption [37]. 
+- In this case, we create 12 rendered views by placing 12 virtual cameras around the mesh every 30 degrees (see Fig. 1). 
+- The cameras are elevated 30 degrees from the ground plane, pointing towards the centroid of the mesh. 
+- The centroid is calculated as the weighted average of the mesh face centers, where the weights are the face areas. 
+```
 
 ##### 나. For the 2nd camera setup,
 
@@ -194,5 +194,5 @@ to achieve high performance.
 
 Finally, rendering each mesh from all the viewpoints takes no more than ten milliseconds on modern graphics hardware.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNjM0NzE4OV19
+eyJoaXN0b3J5IjpbNTYzMjUwNzY0XX0=
 -->
