@@ -50,7 +50,27 @@ This **global deep learning representation** and the **representation based on l
 
 ## RELATED WORK
 
+Based on the main idea that “two 3D models are similar ifthey look similar with each other from all viewing angles”,there are plenty of view-based approaches that have beenregarded as the most discriminative methods on literature [8].Since our shape descriptor is also view-based, we mainly discusssome effective, competing view-based approaches duringthe following part.In [9], Cyr and Kimia recognized a 3D shape by comparinga view of the shape with all views of 3D objectsusing shock graph matching. 
 
+Ohbuchi et al. [10] utilized local visual features by using the Scale Invariant FeatureTransform [11] to retrieve 3D shapes. 
+
+A host of local featuresdescribing the 3D models is integrated into a histogram usingBag-of-Features [12] to reduce the computation complexity.Vranic [13] presented a composite 3D shape feature vector(DESIRE) which consists of depth buffer images, silhouettesand ray-extents of a polygonal mesh. 
+
+The composite of variousfeature vectors extracted in a canonical coordinate framegenerally performs better than the single method which relieson pairwise alignment of 3D objects. 
+
+Later on, Papadakiset al. [14] made use of a hybrid descriptor (Hybrid) whichconsists of both depth buffer based 2D features and sphericalharmonies based 3D features. 
+
+The Hybrid adopts two alignmentmethods to compensate inner rotation variance and thenuses Huffman coding to further compress feature descriptors.Also, they presented a 3D descriptor (PANORAMA) [15] thatcaptures the panoramic view of a 3D shape by projecting itto a lateral surface of a cylinder parallel to one of its threeprincipal axes. 
+
+By aligning its principle axes to capture theglobal information and combining 2D Discrete Fourier Transformand 2D Discrete Wavelet Transform, the PANORAMAoutperforms all the other 3D shape retrieval methods on severalstandard 3D benchmarks. 
+
+Meanwhile, Lian et al. [7] used Bagof-Featuresand Clock Matching (CM-BoF) on a set of depthbufferviews obtained from the projections of the normalizedobject. 
+
+The CM-BoF method also takes advantage of thepreserved local details as well as isometry-invariant globalstructure to reach a competing result. 
+
+Prior to that, they alsoproposed a shape descriptor named Geodesic Sphere basedMulti-view Descriptors (GSMD) [16] measuring the extend towhich a 3D polygon is rectilinear based on the maximum ratioof the surface area to the sum of three orthogonal projectedareas. 
+
+Recently, Bai et al. [17] adopted contour fragments asthe input features for learning a BoW model, which is generaland efficient for both 2D and 3D shape matching.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MTY5OTgyNF19
+eyJoaXN0b3J5IjpbLTEyMjU0ODk3MTRdfQ==
 -->
