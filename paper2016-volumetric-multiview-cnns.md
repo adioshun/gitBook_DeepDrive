@@ -354,7 +354,7 @@ As illustrated in Fig 4, the neural network has two modules:
 
 ### 4.4. Data Augmentation and Multi-Orientation Pooling
 
-- 위에 이야기한 The two networks proposed above are both sensitive to **model orientation**. 
+- 위에 이야기한 두개The two networks proposed above are both sensitive to **model orientation**. 
 
 In the subvolume supervision method,different model orientations define different local subvolumes;in the anisotropic probing method, only voxels ofthe same height and along the probing direction can have interaction in the early feature extraction stage. 
 
@@ -377,5 +377,5 @@ Whilea common practice is to extract the highest level features(features before 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxODI3OTMzNF19
+eyJoaXN0b3J5IjpbMTIyNzg3MDI1OF19
 -->
