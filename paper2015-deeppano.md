@@ -36,11 +36,12 @@ Row-Wise Max-Pooling (RWMP) layer  제안
 
 ### 1.1 관련 연구 
 
-The previous methods on 3-D shape analysis can be coarselycategorized into model-based and view-based methods. 
+기존 연구 동향 분류 : The previous methods on 3-D shape analysis can be coarsely categorized into **model-based** and **view-based** methods. 
 
-Modelbasedmethods calculate a set of features directly from the 3-Dshape mesh or its rendered voxels. 
+#### A. Model based methods 
+- Model based methods calculate a set of features directly from the 3-D shape mesh or its rendered voxels. 
 
-Such methods include theShape Histogram descriptor [2] and the Spin Images [3]. 
+- 예Such methods include the Shape Histogram descriptor [2] and the Spin Images [3]. 
 
 Viewbasedmethods represent 3-D shapes by a set of views [4]–[10].The views can be 2-D projections of the shape or the panoramicview. 
 
@@ -60,5 +61,5 @@ Compared with [14], our method achievesbetter performances on both classificatio
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3Mzc2NjEyM119
+eyJoaXN0b3J5IjpbMjUwMTkwODAyXX0=
 -->
