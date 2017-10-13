@@ -75,13 +75,13 @@ or extensions of the SIFT and SURF feature descriptors to 3D voxel grids [17].
 - robust to 3D shape representation artifacts, such as holes, imperfect polygon mesh tesselations,noisy surfaces. 
 - The rendered shape views can also be directly compared with other 2D images, silhouettes or even hand-drawn sketches. 
 
-###### []
+###### [Murase and Nayar]
 
-An early example of a view-based approach is the work by Murase and Nayar [24] that recognizes objects by matching their appearance in parametric eigenspaces formed by large sets of 2D renderings of 3D models under varying poses and illuminations. 
+초반기 연구, An early example of a view-based approach is the work by Murase and Nayar [24] that recognizes objects by matching their appearance in parametric eigenspaces formed by large sets of 2D renderings of 3D models under varying poses and illuminations. 
 
-###### []
+###### [Light Field descriptor]
 
-Another example,which is particularly popular in computer graphicssetups, is the LightField descriptor [5] that extracts a set ofgeometric and Fourier descriptors from object silhouettesrendered from several different viewpoints. 
+많이 사용, Light Field descriptor [5] that extracts a set of geometric and Fourier descriptors from object silhouettesrendered from several different viewpoints. 
 
 ###### []
 
@@ -93,9 +93,9 @@ Cyr and Kimia [8] defined similarity metrics basedon curve matching and grouped 
 
 ###### []
 
-Eitz et al. [12] compared humansketches with line drawings of 3D models produced fromseveral different views based on local Gabor filters, whileSchneider et al. [30] proposed using Fisher vectors [26]on SIFT features [22] for representing human sketches ofshapes. 
+Eitz et al. [12] compared humansketches with line drawings of 3D models produced fromseveral different views based on local Gabor filters, while Schneider et al. [30] proposed using Fisher vectors [26]on SIFT features [22] for representing human sketches of shapes. 
 
 These descriptors are largely “hand-engineered”and some do not generalize well across different domains
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzg2NDYyNzVdfQ==
+eyJoaXN0b3J5IjpbMTg3MTEzMDQ4NV19
 -->
