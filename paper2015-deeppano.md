@@ -53,12 +53,12 @@ Row-Wise Max-Pooling (RWMP) layer  제안
 
 
 - 비슷한 기존 연구로 **3-D ShapeNets**가 있다. 이와 다른점은 
+	- Different from [14] which performs 3-D convolutionson the **voxels**, we extract the representation of a 3-D shapefrom **2-D images**. 
+	- 성능도 좋다. Compared with [14], our method achieves better performances on both classification and retrieval tasks(refer to Section III), and is simpler to implement using any open source framework.
 
-Different from [14] which performs 3-D convolutionson the voxels, we extract the representation of a 3-D shapefrom 2-D images. 
 
-Compared with [14], our method achievesbetter performances on both classification and retrieval tasks(refer to Section III), and is simpler to implement using any opensource framework.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU1MDUxNDEwXX0=
+eyJoaXN0b3J5IjpbLTEyNjk5MjY5MzVdfQ==
 -->
