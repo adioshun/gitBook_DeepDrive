@@ -67,7 +67,7 @@ unsupervised 3d object retrieval,” Int. J. Comput. Vis., vol. 89, no.
 2–3, pp. 177–192, 2010
 
 I
-``n [6], Panagiotis et al. proposed to represent a 3-D shape bythe Discrete Fourier Transform and Discrete Wavelet Transformdescriptors calculated from a set of panoramic views. 
+```n [6], Panagiotis et al. proposed to represent a 3-D shape bythe Discrete Fourier Transform and Discrete Wavelet Transformdescriptors calculated from a set of panoramic views. 
 
 However,the panoramic view shifts when the 3-D shape rotates along itsprinciple axis. 
 
@@ -78,5 +78,5 @@ As a result,the representation is invariant to the 3-D shape rotation.To summari
 The experiments on large-scale 3-D shape datasetsshow that this representation is effective in both classificationand retrieval tasks, outperforming previous methods by a largemargin.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzQyMTQxMDhdfQ==
+eyJoaXN0b3J5IjpbMTEzMTk2MjczMF19
 -->
