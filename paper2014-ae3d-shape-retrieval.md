@@ -75,15 +75,15 @@ The Hybrid adopts two alignment methods to compensate inner rotation variance an
 
 ###### [PANORAMA]
 
-Also, they presented a 3D descriptor (PANORAMA) [15] that captures the panoramic view of a 3D shape by projecting it to a lateral surface of a cylinder parallel to one of its threeprincipal axes. 
+Also, they presented a 3D descriptor (PANORAMA) [15] that captures the panoramic view of a 3D shape by projecting it to a lateral surface of a cylinder parallel to one of its three principal axes. 
 
-By aligning its principle axes to capture theglobal information and combining 2D Discrete Fourier Transformand 2D Discrete Wavelet Transform, the PANORAMAoutperforms all the other 3D shape retrieval methods on severalstandard 3D benchmarks. 
+By aligning its principle axes to capture theg lobal information and combining 2D Discrete Fourier Transformand 2D Discrete Wavelet Transform, the PANORAMA **outperforms all the other 3D shape retrieval methods** on several standard 3D benchmarks. 
 
-###### []
+###### [Lian et al]
 
-Meanwhile, Lian et al. [7] used Bag of-Features and Clock Matching (CM-BoF) on a set of depthbufferviews obtained from the projections of the normalizedobject. 
+Meanwhile, Lian et al. [7] used Bag of-Features and Clock Matching (CM-BoF) on a set of depth buffer views obtained from the projections of the normalized object. 
 
-The CM-BoF method also takes advantage of thepreserved local details as well as isometry-invariant globalstructure to reach a competing result. 
+The CM-BoF method also takes advantage of the preserved local details as well as isometry-invariant globalstructure to reach a competing result. 
 
 ###### []
 
@@ -93,5 +93,5 @@ Prior to that, they alsoproposed a shape descriptor named Geodesic Sphere basedM
 
 Recently, Bai et al. [17] adopted contour fragments asthe input features for learning a BoW model, which is generaland efficient for both 2D and 3D shape matching.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzczNjE2OTI5XX0=
+eyJoaXN0b3J5IjpbMTc4OTc0NTAzN119
 -->
