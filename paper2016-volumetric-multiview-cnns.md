@@ -352,9 +352,8 @@ As illustrated in Fig 4, the neural network has two modules:
 
 - 따라서 다양한 orientation 에 대하여 augment 하고 orientation pooling하는 것이 필요 하다. `Thus it is helpful to augment the training data by varying object orientation and combining predictions through orientation pooling.`
 
-- 
-
-Similar to Su-MVCNN [32] which aggregates information from multiple view inputs through a view-pooling layer and follow-on fully connected layers, we sample 3D input from different orientations and aggregate them in a multi-orientation volumetric CNN (MO-VCNN) as shown in Fig 5. 
+- 이를 위해서 **Su-MVCNN** 제안을 활용 하였다. `Similar to Su-MVCNN [32] which aggregates information from multiple view inputs through a view-pooling layer and follow-on fully connected layers,'
+	- we sample 3D input from different orientations and aggregate them in a multi-orientation volumetric CNN (MO-VCNN) as shown in Fig 5. `
 
 At training time, we generate different rotations of the 3D model by changing both azimuth and elevation angles, sampled randomly. 
 
@@ -375,5 +374,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc5MTczNjExXX0=
+eyJoaXN0b3J5IjpbLTIwNjE2MjE1OTldfQ==
 -->
