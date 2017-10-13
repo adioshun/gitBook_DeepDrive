@@ -28,10 +28,10 @@
 retrieval.
 ```
 
-Motivated by the view-based 3D shape methods [6], [7],
-in which a 3D shape can be projected into many 2D depth
-images, we aim to use autoencoder to learn a 3D shape
-representation based on the depth images obtained by projection.
+Motivated by the view-based 3D shape methods [6], [7], in which a 3D shape can be projected into many 2D depth
+images, we aim to use autoencoder to learn a 3D shape representation based on the depth images obtained by projection.
+
+
 As shown in Fig. 1, a 3D shape is projected into many
 different depth images; the learnt autoencoder can reconstruct
 the depth images nicely. Matching 3D shape based on the
@@ -45,5 +45,5 @@ and the representation based on local descriptors are complementary
 to each other.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIyNzEwMDQ4XX0=
+eyJoaXN0b3J5IjpbLTE1MDAwMzk4MjBdfQ==
 -->
