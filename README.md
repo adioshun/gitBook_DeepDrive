@@ -12,6 +12,8 @@
 ![](https://i.imgur.com/HAZ3yiE.png)  
 [https://mind42.com/public/df5a7bc7-0e97-4807-b550-a21ed9e6699d](https://mind42.com/public/df5a7bc7-0e97-4807-b550-a21ed9e6699d)
 
+<iframe width='640' height='480' frameborder='0' src='https://mind42.com/mindmap/df5a7bc7-0e97-4807-b550-a21ed9e6699d?rel=embed'></iframe>
+
 ## 1. List
 
 * [Awesome : Autonomous Vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles)
