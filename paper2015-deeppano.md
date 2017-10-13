@@ -34,7 +34,31 @@ Row-Wise Max-Pooling (RWMP) layer  제안
 - This layer takes the maximum value of each row in the convolutional feature maps. 
 - Consequently, the output feature vector is not affected by the shift of the panoramic view, caused by the rotation of 3-D shape.
 
+### 1.1 관련 연구 
+
+The previous methods on 3-D shape analysis can be coarselycategorized into model-based and view-based methods. 
+
+Modelbasedmethods calculate a set of features directly from the 3-Dshape mesh or its rendered voxels. 
+
+Such methods include theShape Histogram descriptor [2] and the Spin Images [3]. 
+
+Viewbasedmethods represent 3-D shapes by a set of views [4]–[10].The views can be 2-D projections of the shape or the panoramicview. 
+
+We extract the shape representation from the panoramicview. 
+
+However, different from most of the methods mentionedabove that use hand-crafted features, we learn the representationfrom data with a variant of CNN. 
+
+Deeply learned representationsare widely used and have achieved superior performancein many pattern recognition and signal processing tasks[11]–[13]. 
+
+There are other attempts that represent 3-D shapesby deep features. 
+
+Recently, Wu et al. 
+
+[14] proposes the 3-DShapeNets, a Convolutional Deep Belief Network for shape representation.Different from [14] which performs 3-D convolutionson the voxels, we extract the representation of a 3-D shapefrom 2-D images. 
+
+Compared with [14], our method achievesbetter performances on both classification and retrieval tasks(refer to Section III), and is simpler to implement using any opensource framework.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc4ODc4ODVdfQ==
+eyJoaXN0b3J5IjpbMTQ3Mzc2NjEyM119
 -->
