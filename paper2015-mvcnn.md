@@ -113,7 +113,9 @@ There has been existing work on recognizing 3D objects with CNNs [21] using two 
 
  In contrast our multi-view CNN architecture 
  - learns to recognize 3D shapes from views of the shapes using image-based CNNs but in the context of other views via a view-pooling layer. 
- - As a result, information from multiple views is effectively accumulated into a single, compact shape descriptor.
+ - As a result, information from multiple views is effectively accumulated into a single, compact **shape descriptor**.
+
+## 3. Method
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTY5MTE3MzldfQ==
+eyJoaXN0b3J5IjpbMTY4NDkzNTY3NV19
 -->
