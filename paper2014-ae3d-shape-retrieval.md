@@ -66,7 +66,7 @@ This **global deep learning representation** and the **representation based on l
 In [9], Cyr and Kimia recognized a 3D shape by comparing a view of the shape with all views of 3D objects using shock graph matching. 
 
 ```
-
+[9] Cyr, C.M., Kimia, B.B.: 3D object recognition using shape similaritybased aspect graph. In: International Conference on Computer Vision. (2001) 254–261
 ```
 
 ###### [Ohbuchi et al.] 
@@ -76,7 +76,7 @@ Ohbuchi et al. [10] utilized local visual features by using the **SIFT**(Scale I
 A host of local features describing the 3D models is integrated into a histogram using Bag-of-Features [12] to reduce the computation complexity.
 
 ```
-
+[10] Ohbuchi, R., Osada, K., Furuya, T., Banno, T.: Salient local visual features for shape-based 3D model retrieval. In: Shape Modeling International. (2008) 93–102
 ```
 
 ###### [Vranic]
@@ -85,7 +85,7 @@ Vranic [13] presented a composite 3D shape feature vector(DESIRE) which consists
 The composite of variousfeature vectors extracted in a canonical coordinate framegenerally performs better than the single method which relieson pairwise alignment of 3D objects. 
 
 ```
-
+[13] Vranic, D.V.: DESIRE: a composite 3D-shape descriptor. In: International Conference on Multimedia Computing and Systems/International Conference on Multimedia and Expo. (2005) 962–965
 ```
 
 ###### [Papadakiset]
@@ -95,9 +95,7 @@ Later on, Papadakiset al. [14] made use of a **hybrid descriptor** (Hybrid) whic
 The Hybrid adopts two alignment methods to compensate inner rotation variance and then uses Huffman coding to further compress feature descriptors.
 
 ```
-[14] Papadakis, P., Pratikakis, I., Theoharis, T., Passalis, G., Perantonis, S.J.,
-Paraskevi, A.: 3D object retrieval using an efficient and compact hybrid
-shape descriptor. (2008) 9–16
+[14] Papadakis, P., Pratikakis, I., Theoharis, T., Passalis, G., Perantonis, S.J., Paraskevi, A.: 3D object retrieval using an efficient and compact hybrid shape descriptor. (2008) 9–16
 ```
 
 ###### [PANORAMA]
@@ -107,10 +105,7 @@ Also, they presented a 3D descriptor (PANORAMA) [15] that captures the panoramic
 By aligning its principle axes to capture theg lobal information and combining 2D Discrete Fourier Transformand 2D Discrete Wavelet Transform, the PANORAMA **outperforms all the other 3D shape retrieval methods** on several standard 3D benchmarks. 
 
 ```
-[15] Papadakis, P., Pratikakis, I., Theoharis, T., Perantonis, S.J.:
-PANORAMA: A 3D shape descriptor based on panoramic views
-for unsupervised 3D object retrieval. International Journal of Computer
-Vision 89 (2010) 177–192
+[15] Papadakis, P., Pratikakis, I., Theoharis, T., Perantonis, S.J.: PANORAMA: A 3D shape descriptor based on panoramic views for unsupervised 3D object retrieval. International Journal of Computer Vision 89 (2010) 177–192
 ```
 
 ###### [Lian et al]
@@ -120,9 +115,7 @@ Meanwhile, Lian et al. [7] used Bag of-Features and Clock Matching (CM-BoF) on a
 The CM-BoF method also takes advantage of the preserved local details as well as isometry-invariant global structure to reach a competing result. 
 
 ```
-[7] Lian, Z., Godil, A., Sun, X.: Visual similarity based 3d shape retrieval
-using bag-of-features. In: Shape Modeling International Conference
-(SMI), 2010. (2010) 25–36
+[7] Lian, Z., Godil, A., Sun, X.: Visual similarity based 3d shape retrieval using bag-of-features. In: Shape Modeling International Conference (SMI), 2010. (2010) 25–36
 ```
 
 ###### [Geodesic Sphere based Multi-view Descriptors ]
@@ -130,8 +123,7 @@ using bag-of-features. In: Shape Modeling International Conference
 Prior to that, they also proposed a shape descriptor named Geodesic Sphere based Multi-view Descriptors (GSMD) [16] measuring the extend to which a 3D polygon is rectilinear based on the maximum ratio of the surface area to the sum of three orthogonal projected areas. 
 
 ```
-[16] Lian, Z., Rosin, P.L., Sun, X.: Rectilinearity of 3D meshes. International
-Journal of Computer Vision 89 (2010) 130–151
+[16] Lian, Z., Rosin, P.L., Sun, X.: Rectilinearity of 3D meshes. International Journal of Computer Vision 89 (2010) 130–151
 ```
 
 ###### [Bai et al]
@@ -144,5 +136,5 @@ Shape Representation for Shape Matching. IEEE Transactions on Image
 Processing 29 (2014) 3935–3949
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzMyODMwNDVdfQ==
+eyJoaXN0b3J5IjpbMTYyMjYwODY4OF19
 -->
