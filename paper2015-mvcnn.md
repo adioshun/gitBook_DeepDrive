@@ -296,7 +296,7 @@ Perhaps more importantly, the aggregated descriptoris readily available for a va
 
 An MVCNN can also be used as a general frame work to integrate perturbed image samples (also known as datajittering). 
 
-We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
+We illustrate this capability of MVCNNs in the context of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI1ODg1OTcwXX0=
+eyJoaXN0b3J5IjpbLTE2MTg1NTI1NzZdfQ==
 -->
