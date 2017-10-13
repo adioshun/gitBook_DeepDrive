@@ -350,7 +350,9 @@ As illustrated in Fig 4, the neural network has two modules:
 	- subvolume 슈퍼 비젼 방식에서는 다른 model orientations은 다른local subvolumes을 정의 한다. ` In the subvolume supervision method, different model orientations define different local subvolumes`
 	-  anisotropic probing 방식에서는 같은 높이와 방향에 있는 Voxel들만 interaction 할수 있따. ` in the anisotropic probing method, only voxels of the same height and along the probing direction can have interaction in the early feature extraction stage. `
 
-- 따라서 다양한 orientation 에 대하여 augment 하고, Thus it is helpful to augment the training data by varying object orientation and combining predictions through orientation pooling.
+- 따라서 다양한 orientation 에 대하여 augment 하고 orientation pooling하는 것이 필요 하다. `Thus it is helpful to augment the training data by varying object orientation and combining predictions through orientation pooling.`
+
+- 
 
 Similar to Su-MVCNN [32] which aggregates information from multiple view inputs through a view-pooling layer and follow-on fully connected layers, we sample 3D input from different orientations and aggregate them in a multi-orientation volumetric CNN (MO-VCNN) as shown in Fig 5. 
 
@@ -373,5 +375,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAxNTY3MV19
+eyJoaXN0b3J5IjpbNzc5MTczNjExXX0=
 -->
