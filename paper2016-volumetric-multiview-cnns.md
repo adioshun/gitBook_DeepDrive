@@ -341,13 +341,18 @@ As illustrated in Fig 4, the neural network has two modules:
 - As a comparison, with traditional neural networks constructed from isotropic kernels, introducing long-range interactions at an early stage can only be achieved through large kernels, which inevitably introduce many more parameters.
 
 - After anisotropic probing, we use an adapted NIN network [23] to address the classification problem.
-- Our anistropic probing network is capable of capturinginternal structures of objects through its X-ray like projectionmechanism.
 
-This is an ability not offered by standardrendering.
+- Our anistropic probing network is capable of capturing internal structures of objects through its X-ray like projection mechanism.
 
-Combined with multi-orientation pooling (introducedbelow), it is possible for this probing mechanism tocapture any 3D structure, due to its relationship with theRadon transform.In addition, this architecture is scalable to higher resolutions,since all its layers can be viewed as 2D.
+- This is an ability not offered by standard rendering.
 
-While3D convolution involves computation at locations of cubicresolution, we maintain quadratic compute.
+- Combined with multi-orientation pooling (introduced below), it is possible for this probing mechanism to capture any 3D structure, due to its relationship with the Radon transform.
+
+- In addition, this architecture is scalable to higher resolutions,since all its layers can be viewed as 2D.
+
+- While 3D convolution involves computation at locations of cubic resolution, we maintain quadratic compute.
+
+### 
 
 ## 5. Multi-View Convolutional Neural Networks
 
@@ -355,5 +360,5 @@ While3D convolution involves computation at locations of cubicresolution, we mai
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5ODg4MTI0N119
+eyJoaXN0b3J5IjpbLTE2MzY5MzExNF19
 -->
