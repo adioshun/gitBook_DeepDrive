@@ -371,11 +371,13 @@ As illustrated in Fig 4, the neural network has two modules:
 
 - MO-VCNN의 초기 가중치값  : The MO-VCNN’s weights are initialized by a previously trained volumetric CNN with CNN1’s weights fixed during fine-tuning. 
 
-- While a common practice is to 
-	- extract the highest level features(features before the last classification linear layer) of multiple orientations, 
-	-  average/max/concatenate them, and traina linear SVM on the combined feature, this is just a special case of the MO-VCNN.
+- 일반적으로 아래 3단계를 진행 하는것에 비하면 특별한 케이스 이다. While a common practice is to 
+	- 1. extract the highest level features(features before the last classification linear layer) of multiple orientations, 
+	-  2. average/max/concatenate them, 
+	- 3. and traina linear SVM on the combined feature, 
+this is just a special case of the MO-VCNN.
 
-Compared to 3DShapeNets [33] which only augments data by rotating around vertical axis, our experiment shows that orientation pooling combined with elevation rotation can greatly increase performance.
+Compared to 3D ShapeNets [33] which only augments data by rotating around vertical axis, our experiment shows that orientation pooling combined with elevation rotation can greatly increase performance.
 
 
 ## 5. Multi-View Convolutional Neural Networks
@@ -384,5 +386,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MjY0MzM0OF19
+eyJoaXN0b3J5IjpbLTIwNDU5NzQ5OTJdfQ==
 -->
