@@ -17,7 +17,7 @@ Representation of 3D shapes for recognition에 대한 학계의 오래된 질문
 
 
 
-##
+## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MjQ5NjAzMF19
+eyJoaXN0b3J5IjpbLTE0MTM0NjY3MzRdfQ==
 -->
