@@ -148,6 +148,8 @@ Compared to exhaustive pairwise comparisons between single view representations 
 대부분의 인터넷 3D 모델들은  **polygon meshes**,로 저장되어 있다.  
 	- polygon meshes :  collections of points connected with edges forming faces. 
 
+전처리 작업 
+
 To generate rendered views of polygon meshes, we use the Phong reflection model [27]. 
 
 The mesh polygons are rendered under a perspective projection and the pixel color is determined by interpolating
@@ -157,5 +159,5 @@ Shapes are uniformly scaled to fit into the viewing volume.
 
 To create a multi-view shape representation, we need to setup viewpoints (virtual cameras) for rendering each mesh.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ3NDY4MzU1XX0=
+eyJoaXN0b3J5IjpbNTY1NjI2NzExXX0=
 -->
