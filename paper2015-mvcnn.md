@@ -13,8 +13,11 @@
 # MVCNN
 
 Representation of 3D shapes for recognition에 대한 학계의 오래된 질문
--  3D Shape는 native 3D formats인 Voxel grid로 표현 해야 할까?  should 3D shapes be represented with descriptors operating on their native 3D formats, such as voxel grid or polygon mesh, or can they be effectively represented with view-based descriptors?
+-  3D Shape는 native 3D formats인 Voxel grid로 표현 해야 할까? View-based로 표현 해야 할까? ` should 3D shapes be represented with descriptors operating on their native 3D formats, such as voxel grid or polygon mesh, or can they be effectively represented with view-based descriptors?`
+
+
+
 ##
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1Njk2NjQ4MF19
+eyJoaXN0b3J5IjpbLTI2MjQ5NjAzMF19
 -->
