@@ -250,7 +250,7 @@ We propose two network variations that significantly improve state-of-the-art CN
 	- An image CNN is then appended to classify the 2D projection.
 
 
-In order to mitigate overfitting from too many parameters, we adopt the **mlpconv layer** from [23] as our basic building block in both network variations.
+In order to mitigate overfitting from too many parameters, we adopt the **mlpconv layer** from [23-Net-In-Net] as our basic building block in both network variations.
 
 ### 4.2 Network 1: Auxiliary Training by Subvolume Supervision
 
@@ -395,5 +395,5 @@ this is just a special case of the MO-VCNN.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NDY3NzM4NF19
+eyJoaXN0b3J5IjpbNDMxNjU1MTQ0XX0=
 -->
