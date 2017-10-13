@@ -14,16 +14,10 @@
 
 ## 1. INTRODUCTION
 
-. Currently, in the context of 3D shape recognition,
-shape descriptors are mainly hand-crafted and deep learning
-representation has not been widely applied.
+현재(2014) 3D인식에 쓰이는 SD들은 hand-crafted이고 딥러닝은 잘 쓰이지 않는다. `Currently, in the context of 3D shape recognition, shape descriptors are mainly hand-crafted and deep learning representation has not been widely applied.`
 
-
-The above developments of deep learning are in a supervised
-way and are not suitable for retrieval task. From the aspect
-of unsupervised deep learning, Hinton and Krizhevsky [4]
-proposed the autoencoder algorithm with the application of image retrieval, which is then used for some other specific
-tasks like face alignment [5].
+The above developments of deep learning are in a supervised way and are not suitable for retrieval task. From the aspect
+of unsupervised deep learning, Hinton and Krizhevsky [4] proposed the autoencoder algorithm with the application of image retrieval, which is then used for some other specific tasks like face alignment [5].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDczNjExMzJdfQ==
+eyJoaXN0b3J5IjpbMjc3Mzk1MTI2XX0=
 -->
