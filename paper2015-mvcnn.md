@@ -73,10 +73,9 @@ or extensions of the SIFT and SURF feature descriptors to 3D voxel grids [17].
 - they are relatively low-dimensional, 
 - efficient to evaluate, 
 - robust to 3D shape representation artifacts, such as holes, imperfect polygon mesh tesselations,noisy surfaces. 
+- The rendered shape views can also be directly compared with other 2D images, silhouettes or even hand-drawn sketches. 
 
-The rendered shape views can also bedirectly compared with other 2D images, silhouettes or evenhand-drawn sketches. 
-
-An early example of a view-basedapproach is the work by Murase and Nayar [24] that recognizesobjects by matching their appearance in parametriceigenspaces formed by large sets of 2D renderings of 3Dmodels under varying poses and illuminations. 
+An early example of a view-based approach is the work by Murase and Nayar [24] that recognizesobjects by matching their appearance in parametriceigenspaces formed by large sets of 2D renderings of 3Dmodels under varying poses and illuminations. 
 
 Another example,which is particularly popular in computer graphicssetups, is the LightField descriptor [5] that extracts a set ofgeometric and Fourier descriptors from object silhouettesrendered from several different viewpoints. 
 
@@ -88,5 +87,5 @@ Eitz et al. [12] compared humansketches with line drawings of 3D models produced
 
 These descriptors are largely “hand-engineered”and some do not generalize well across different domains
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDUyODA5MDhdfQ==
+eyJoaXN0b3J5IjpbLTEzNzI2MjY2ODVdfQ==
 -->
