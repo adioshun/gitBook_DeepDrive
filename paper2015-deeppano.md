@@ -49,9 +49,9 @@ Row-Wise Max-Pooling (RWMP) layer  제안
 - The views can be 2-D projections of the shape or the panoramic view. 
 
 
-However, different from most of the methods mentioned above that use hand-crafted features, we learn the representationfrom data with a variant of CNN. 
+- 위 방법과 제안의 차이는 **hand-crafted**가 아니라 **CNN**을 이용한다. `However, different from most of the methods mentioned above that use hand-crafted features, we learn the representation from data with a variant of CNN. `
 
-Deeply learned representationsare widely used and have achieved superior performancein many pattern recognition and signal processing tasks[11]–[13]. 
+
 
 There are other attempts that represent 3-D shapesby deep features. 
 
@@ -63,5 +63,5 @@ Compared with [14], our method achievesbetter performances on both classificatio
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NDY3OTYzMF19
+eyJoaXN0b3J5IjpbMTU1MjQ1MzU1MF19
 -->
