@@ -253,11 +253,15 @@ We investigated alternative distance measures, such as minimun distance among al
 
 ### 3.3. Multi-view CNN: Learning to Aggregate Views
 
-Although having multiple separate descriptors for each3D shape can be successful for classification and retrieval compared to existing 3D descriptors, it can be inconvenient and inefficient in many cases. 
+Although having multiple separate descriptors for each 3D shape can be successful for classification and retrieval compared to existing 3D descriptors, it can be inconvenient and inefficient in many cases. 
 
-For example, in Eq. 1, we need to compute all $$n_x \times n_y pairwise distances between imagesin order to compute distance between two 3D shapes.Simply averaging or concatenating the image descriptorsleads to inferior performance. 
+For example, in Eq. 1, we need to compute all $$n_x \times n_y$$ pairwise distances between images in order to compute distance between two 3D shapes.
 
-In this section, we focus onthe problem of learning to aggregate multiple views in order to synthesize the information from all views into a single,compact 3D shape descriptor.We design the multi-view CNN (MVCNN) on top ofimage-based CNNs (Fig. 1). 
+Simply averaging or concatenating the image descriptors leads to inferior performance. 
+
+In this section, we focus on the **problem of learning to aggregate multiple views** in order to synthesize the information from all views into a single, compact 3D shape descriptor.
+
+We design the multi-view CNN (MVCNN) on top of image-based CNNs (Fig. 1). 
 
 Each image in a 3D shape’smulti-view representation is passed through the first partof the network (CNN1) separately, aggregated at a viewpoolinglayer, and then sent through the remaining partof the network (CNN2). 
 
@@ -277,5 +281,5 @@ Perhaps more importantly, the aggregated descriptoris readily available for a va
 
 We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTkyNjgwNl19
+eyJoaXN0b3J5IjpbMTM2NzA4OTkzNF19
 -->
