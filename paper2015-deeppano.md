@@ -15,11 +15,11 @@
 
 절차 
 1. 파노라마뷰로 변경 `Firstly, each 3-D shape is converted into a panoramic view`
-2. CNThen, a variant of CNN is specifically designed for learning the deep representations directly from such views. 
+2. 제안된 CNN을 통해 학습 `Then, a variant of CNN is specifically designed for learning the deep representations directly from such views. `
 
 기존 CNN과 다른점은 **row-wise맥스 풀링층**을 추가 하여 invariant에 대처 하도록 함 `Different from typical CNN, a row-wise max-pooling layer is inserted between the convolution and fully-connected layers, making the learned representations invariant to the rotation around a principle axis`
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MDg5MTE1NV19
+eyJoaXN0b3J5IjpbLTE4Nzg2OTg3MjZdfQ==
 -->
