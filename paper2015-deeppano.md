@@ -64,7 +64,7 @@ Our method is related to previously introduced PANORAMA[6].
 [6] P. Papadakis, I. Pratikakis, T. Theoharis, and S. J. Perantonis,“PANORAMA: A 3d shape descriptor based on panoramic views for unsupervised 3d object retrieval,” Int. J. Comput. Vis., vol. 89, no.2–3, pp. 177–192, 2010
 ```
 
-깆In [6], Panagiotis et al. proposed to represent a 3-D shape by the Discrete Fourier Transform and Discrete Wavelet Transform descriptors calculated from a set of panoramic views. 
+기존 연구엣In [6], Panagiotis et al. proposed to represent a 3-D shape by the Discrete Fourier Transform and Discrete Wavelet Transform descriptors calculated from a set of panoramic views. 
 
 However,the panoramic view shifts when the 3-D shape rotates along its principle axis. 
 
@@ -78,5 +78,5 @@ As a result,the representation is invariant to the 3-D shape rotation.To summari
 The experiments on large-scale 3-D shape datasetsshow that this representation is effective in both classificationand retrieval tasks, outperforming previous methods by a largemargin.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODQ2NTYwNDBdfQ==
+eyJoaXN0b3J5IjpbLTEwODc0MDcxMjNdfQ==
 -->
