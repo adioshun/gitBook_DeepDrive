@@ -283,8 +283,8 @@ We implement this design through an architecture shown in Fig 3.
 ```
 #### A. Layer 1, 2, 3 : MLPconv (multilayer perceptron convolution) layers
 
-- The first three layers are mlpconv (multilayer perceptron convolution) layers, 
-	- -a 3D extension of the 2D mlpconv proposed by [23].
+- 첫 3개층 레이어는 MLPconv이다. `The first three layers are mlpconv (multilayer perceptron convolution) layers, `
+	- a 3D extension of the 2D mlpconv proposed by [23].
 
 - 입/출력 값은 모두 4D 텐서 `The input and output of our mlpconv layers are both 4D tensors.`
 
@@ -377,5 +377,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjIwNjU3NjVdfQ==
+eyJoaXN0b3J5IjpbLTEzMDEzMjExNzZdfQ==
 -->
