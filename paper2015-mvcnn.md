@@ -260,7 +260,7 @@ existing 3D descriptors보다 **multiple separate descriptors**를 이용하면 
 
 그렇다고 간단히 평균을 내거나 합치는 작업은 성능 저하를 가져 온다. `Simply averaging or concatenating the image descriptors leads to inferior performance. `
 
-본 장에서는 멀티뷰를 합치는 문제에 대하여 알아 보겠다. In this section, we focus on the **problem of learning to aggregate multiple views** in order to synthesize the information from all views into a single, compact 3D shape descriptor.
+본 장에서는 멀티뷰를 합치는 문제에 대하여 알아 보겠다.  In this section, we focus on the **problem of learning to aggregate multiple views** in order to synthesize the information from all views into a single, compact 3D shape descriptor.
 
 ![](https://i.imgur.com/PaExi1h.png)
 ```
@@ -293,5 +293,5 @@ Perhaps more importantly, the aggregated descriptoris readily available for a va
 
 We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MzA3NTYwOF19
+eyJoaXN0b3J5IjpbLTY1NjEwNjYwXX0=
 -->
