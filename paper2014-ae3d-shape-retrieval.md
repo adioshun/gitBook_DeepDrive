@@ -21,10 +21,8 @@
 오토인코더 설명 
 -  The autoencoder can be regarded as a multi-layer sparse coding network. 
 - Each node in the autoencoder network can be regarded as a prototype of object image/shape. 
-- From the bottom layer to the top layer, the prototype contains richer semantic information and becomes a better representation. After the autoencoder network is learnt,
-the coefficients obtained by reconstructing image/shape based
-on prototypes are used as feature for 3D shape matching and
-retrieval. 
+- From the bottom layer to the top layer, the prototype contains richer semantic information and becomes a better representation. 
+- After the autoencoder network is learnt, the **coefficients obtained** by reconstructing image/shape based on prototypes are used as feature for 3D shape matching and retrieval. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDcwNTk3MDNdfQ==
+eyJoaXN0b3J5IjpbMTAwMTI1MTQ3Ml19
 -->
