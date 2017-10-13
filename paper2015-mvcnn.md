@@ -69,7 +69,10 @@ or extensions of the SIFT and SURF feature descriptors to 3D voxel grids [17].
 
 #### B. view-based descriptors
 
-On the other hand view-based descriptors have a number of desirable properties: they are relatively low-dimensional,efficient to evaluate, and robust to 3D shape representationartifacts, such as holes, imperfect polygon mesh tesselations,noisy surfaces. 
+위 Challenge에 비해 view-based 은 좋은 특징이 있따. 
+- they are relatively low-dimensional, 
+- efficient to evaluate, 
+- robust to 3D shape representation artifacts, such as holes, imperfect polygon mesh tesselations,noisy surfaces. 
 
 The rendered shape views can also bedirectly compared with other 2D images, silhouettes or evenhand-drawn sketches. 
 
@@ -85,5 +88,5 @@ Eitz et al. [12] compared humansketches with line drawings of 3D models produced
 
 These descriptors are largely “hand-engineered”and some do not generalize well across different domains
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMjkzOTc4Ml19
+eyJoaXN0b3J5IjpbLTE1NDUyODA5MDhdfQ==
 -->
