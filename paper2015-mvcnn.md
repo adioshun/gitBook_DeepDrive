@@ -233,9 +233,11 @@ We train **one-vs-rest linear SVMs**` (each view is treated as a separate traini
 
 #### C. Retrieval. 
 
-A distance or similarity measure is required for retrieval tasks. For shape x with nx image descriptors and
-shape y with ny image descriptors, the distance between
-them is defined in Eq. 1. Note that the distance between
+> A **distance** or **similarity measure** is required for retrieval tasks.
+
+For shape x with $$n_x$$ image descriptors and shape $$y$$ with $$n_y$$ image descriptors, the distance between them is defined in `Eq. 1. 
+
+Note that the distance between
 two 2D images is defined as the `2 distance between their
 feature vectors, i.e. kxi − yjk2. 
 
@@ -252,5 +254,5 @@ minimun distance among all nx · ny image pairs and the
 distance between average image descriptors, but they all led
 to inferior performance
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTY4MDg2NDVdfQ==
+eyJoaXN0b3J5IjpbLTE3NDAyMzY5ODddfQ==
 -->
