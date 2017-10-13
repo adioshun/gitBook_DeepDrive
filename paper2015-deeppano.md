@@ -52,7 +52,7 @@ Row-Wise Max-Pooling (RWMP) layer  제안
 - 위 방법과 제안의 차이는 **hand-crafted**가 아니라 **CNN**을 이용한다. `However, different from most of the methods mentioned above that use hand-crafted features, we learn the representation from data with a variant of CNN. `
 
 
-- 비슷한 기존 연구로 Wu et al. [14] proposes the **3-D ShapeNets**, a Convolutional Deep Belief Network for shape representation.
+- 비슷한 기존 연구로 **3-D ShapeNets**, a Convolutional Deep Belief Network for shape representation.
 
 Different from [14] which performs 3-D convolutionson the voxels, we extract the representation of a 3-D shapefrom 2-D images. 
 
@@ -60,5 +60,5 @@ Compared with [14], our method achievesbetter performances on both classificatio
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEzMzQ5NTY5XX0=
+eyJoaXN0b3J5IjpbLTE2MDYyOTQxMl19
 -->
