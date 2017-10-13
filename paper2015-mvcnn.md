@@ -46,12 +46,12 @@ With the exception of the recent work of Wu et al. [37]
 	- which learns shape descriptors from the voxel-based representation of an object through 3D convolutional nets,  
 
 
-###### [hand-designed]
-previous3D shape descriptors were largely “hand-designed”according to a particular geometric property of the shapesurface or volume. 
+###### [기존 hand-designed]
 
-For example, shapes can be representedwith histograms or bag-of-features models constructed outof surface normals and curvatures [15], distances, angles,triangle areas or tetrahedra volumes gathered at sampledsurface points [25], properties of spherical functions definedin volumetric grids [16], local shape diameters measured atdensely sampled surface points [4], heat kernel signatureson polygon meshes [2, 19], or extensions of the SIFT andSURF feature descriptors to 3D voxel grids [17]. 
+shapes can be represented with histograms or bag-of-features models constructed out of surface normals and curvatures [15], distances, angles,triangle areas or tetrahedra volumes gathered at sampledsurface points [25], 
+properties of spherical functions definedin volumetric grids [16], local shape diameters measured atdensely sampled surface points [4], heat kernel signatureson polygon meshes [2, 19], or extensions of the SIFT andSURF feature descriptors to 3D voxel grids [17]. 
 
-Developing classifiers and other supervised machine learning algorithms on top of such 3D shape descriptors poses a numberof challenges. 
+Developing classifiers and other supervised machine learning algorithms on top of such 3D shape descriptors poses a number of challenges. 
 
 First, the size of organized databases withannotated 3D models is rather limited compared to imagedatasets, e.g., ModelNet contains about 150K shapes (its 40category benchmark contains about 4K shapes). 
 
@@ -62,5 +62,5 @@ Second, 3D shape descriptors tend to be very high-dimensional, making classifier
 #### B. view-based descriptors
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjgzNDI2MTldfQ==
+eyJoaXN0b3J5IjpbLTgxNjI0MTIyMl19
 -->
