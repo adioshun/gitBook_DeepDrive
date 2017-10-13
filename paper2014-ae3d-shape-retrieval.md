@@ -9,7 +9,9 @@
 
 # AE3D Shape Retrieval
 
+we project 3D shapes into 2D space and use autoencoder for feature learning on the 2D images
+
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMjk5Njk3N119
+eyJoaXN0b3J5IjpbLTkyMjU1MjQyNV19
 -->
