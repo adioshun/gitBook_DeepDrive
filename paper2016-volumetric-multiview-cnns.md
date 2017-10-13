@@ -266,7 +266,7 @@ In order to mitigate overfitting from too many parameters, we adopt the **mlpcon
 - Without complete knowledge of the object, the auxiliary tasks are more challenging, and can thus better exploit the discriminative power of local regions.
 
 - 이러한 제안은 기존의 multitask learning방식과는 다른 것이다. `This design is different from the classic multitask learning setting of hetergenous auxiliary tasks,`
-- which inevitably requires collecting additional annotations (e.g., conducting both object classification and detection [9]).
+- which inevitably requires collecting additional annotations (e.g., conducting both object classification and detection [9-Fast R-CNN]).
 
 We implement this design through an architecture shown in Fig 3.
 
@@ -288,6 +288,11 @@ We implement this design through an architecture shown in Fig 3.
 	- 입/출력 값은 모두 4D 텐서 `The input and output of our mlpconv layers are both 4D tensors.`
 
 -  mlpconv은 입력층-은닉층-출력층으로 구성된 뉴런 네트워크로 **Feature Extraction**에 좋은 성능을 보임 : `mlpconv has a three-layer structure and is thus a universal function approximator if enough neurons are provided in its intermediate layers. Therefore, mlpconv is a powerful filter for feature extraction of local patches, enhancing approximation of more abstract representations. In addition, mlpconv has been validated to be more discriminative with fewer parameters than ordinary convolution with pooling [23].`
+
+```
+[23] M. Lin, Q. Chen, and S. Yan. Network in network. arXiv preprint arXiv:1312.4400, 2013.
+```
+
 
 #### B. Layer 4 :  둘로 나누어짐 
 - At the fourth layer, the network branches into two.
@@ -390,5 +395,5 @@ this is just a special case of the MO-VCNN.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDExNjQxMDddfQ==
+eyJoaXN0b3J5IjpbMjA1NDY3NzM4NF19
 -->
