@@ -217,15 +217,12 @@ For our CNN features we use the VGG-M network from [3] which consists of mainly
 - five convolutional layers $$conv_{1,...,5} $$ followed by 
 - three fully connected layers $$fc_{6,...,8}$$ 
 - softmax classification layer. 
-
-The penultimate layer fc7 (after ReLU non-linearity, 4096-dimensional) is used as image descriptor. 
+- The penultimate(끝에서 두번째) layer fc7 (after ReLU non-linearity, 4096-dimensional) is used as image descriptor. 
 
 The network is pre-trained on ImageNet images from 1k categories, and then fine-tuned on all 2D views of the 3D shapes in training set. 
 
-As we show in our experiments, fine-tuning improves performance significantly. 
 
-Both Fisher vectors and CNN features yield very good performance in classification and retrieval compared with popular 3D shape descriptors (e.g., SPH [16], LFD [5])
-as well as 3D ShapeNets [37].
+Both **Fisher vectors** and **CNN features** yield very good performance in classification and retrieval compared with popular 3D shape descriptors (e.g., SPH [16], LFD [5]) as well as 3D ShapeNets [37].
 
 #### B. Classification. 
 
@@ -258,5 +255,5 @@ minimun distance among all nx · ny image pairs and the
 distance between average image descriptors, but they all led
 to inferior performance
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjAwNTg2ODddfQ==
+eyJoaXN0b3J5IjpbNjUyNTE5XX0=
 -->
