@@ -260,7 +260,7 @@ existing 3D descriptors보다 **multiple separate descriptors**를 이용하면 
 
 그렇다고 간단히 평균을 내거나 합치는 작업은 성능 저하를 가져 온다. `Simply averaging or concatenating the image descriptors leads to inferior performance. `
 
-본 장에서는 멀티뷰를 합치는 문제에 대하여 알아 보겠다. ㅣ In this section, we focus on the **problem of learning to aggregate multiple views** in order to synthesize the information from all views into a single, compact 3D shape descriptor.
+본 장에서는 멀티뷰를 합치는 문제에 대하여 알아 보겠다. In this section, we focus on the **problem of learning to aggregate multiple views** in order to synthesize the information from all views into a single, compact 3D shape descriptor.
 
 ![](https://i.imgur.com/PaExi1h.png)
 ```
@@ -284,7 +284,8 @@ All branches in the first part of the network share the same parameters in CNN1.
 - 뷰-풀링 레이어는 아무 곳나 위치 해도 된다. `The view-pooling layer can be placed anywhere in the network.`
 	- 하지만 실험 결과 최적 위치는 close to the last conv5 for optimal classification and retrieval performance. 
 
-View-pooling layers are closely related to max-pooling layers and maxout layers[14], with the only difference being the dimension that theirpooling operations are carried out on. 
+- 맥스 풀링/맥스 아웃 레이어와 연관이 깊다. `View-pooling layers are closely related to max-pooling layers and maxout layers[14], `
+	-  단지 차이는 with the only difference being the dimension that their pooling operations are carried out on. 
 
 The MVCNN is a directedacyclic graphs and can be trained or fine-tuned usingstochastic gradient descent with back-propagation.Using fc7 (after ReLU non-linearity) in an MVCNNas an aggregated shape descriptor, we achieve higher performancethan using separate image descriptors from animage-based CNN directly, especially in retrieval (62.8%→ 70.1%). 
 
@@ -292,5 +293,5 @@ Perhaps more importantly, the aggregated descriptoris readily available for a va
 
 We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxOTg5MjEyNl19
+eyJoaXN0b3J5IjpbLTQ4MzA3NTYwOF19
 -->
