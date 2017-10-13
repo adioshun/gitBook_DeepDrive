@@ -165,19 +165,20 @@ We experimented with two camera setups.
 
 ##### 가. For the 1st camera setup, 
 
-we assume that the input shapes are upright oriented
-along a consistent axis (e.g., z-axis). Most models in
-modern online repositories, such as the 3D Warehouse, satisfy
-this requirement, and some previous recognition methods
-also follow the same assumption [37]. In this case,
-we create 12 rendered views by placing 12 virtual cameras
-around the mesh every 30 degrees (see Fig. 1). The cameras
-are elevated 30 degrees from the ground plane, pointing towards
-the centroid of the mesh. The centroid is calculated
+we assume that the input shapes are upright oriented along a consistent axis (e.g., z-axis). 
+
+Most models in modern online repositories, such as the 3D Warehouse, satisfy this requirement, and some previous recognition methods also follow the same assumption [37]. 
+
+In this case, we create 12 rendered views by placing 12 virtual cameras around the mesh every 30 degrees (see Fig. 1). 
+
+The cameras are elevated 30 degrees from the ground plane, pointing towards the centroid of the mesh. 
+
+The centroid is calculated
 as the weighted average of the mesh face centers, where
 the weights are the face areas. 
 
 ##### 나. For the 2nd camera setup,
+
 we do not make use of the assumption about consistent upright
 orientation of shapes. In this case, we render from
 several more viewpoints since we do not know beforehand
@@ -189,5 +190,5 @@ generate 4 rendered views from each camera, using 0, 90,
 180, 270 degrees rotation along the axis passing through the
 camera and the object centroid, yielding total 80 views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NDkwMjYyXX0=
+eyJoaXN0b3J5IjpbLTMwNzQzMjc4Ml19
 -->
