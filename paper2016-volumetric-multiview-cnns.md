@@ -338,6 +338,10 @@ As illustrated in Fig 4, the neural network has two modules:
 
 -  In contrast to traditional isotropic kernels, an anisotropic probing module has the advantage of aggregating long range interactions in the early feature learning stage with fewer parameters.
 
+
+
+
+
 As a comparison, with traditional neuralnetworks constructed from isotropic kernels, introducinglong-range interactions at an early stage can only beachieved through large kernels, which inevitably introducemany more parameters.
 
 After anisotropic probing, we usean adapted NIN network [23] to address the classificationproblem.Our anistropic probing network is capable of capturinginternal structures of objects through its X-ray like projectionmechanism.
@@ -354,5 +358,5 @@ While3D convolution involves computation at locations of cubicresolution, we mai
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzYyMzQ0NzhdfQ==
+eyJoaXN0b3J5IjpbLTExMDg2NDczMzRdfQ==
 -->
