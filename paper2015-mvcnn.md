@@ -226,11 +226,10 @@ For our CNN features we use the VGG-M network from [3] which consists of mainly
 
 #### B. Classification. 
 
-We train one-vs-rest linear SVMs (each view is treated as a separate training sample) to classify shapes using their image features. 
+We train **one-vs-rest linear SVMs**` (each view is treated as a separate training sample)` to classify shapes using their image features. 
 
-At test time, we simply sum up the SVM decision values over all 12 views and return
-the class with the highest sum. Alternative approaches,
-e.g., averaging image descriptors, lead to worse accuracy.
+At test time, we simply sum up the SVM decision values over all 12 views and return the class with the highest sum. 
+
 
 #### C. Retrieval. 
 
@@ -254,5 +253,5 @@ minimun distance among all nx · ny image pairs and the
 distance between average image descriptors, but they all led
 to inferior performance
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Nzc0NDkxNjhdfQ==
+eyJoaXN0b3J5IjpbLTE5OTU3ODk5ODZdfQ==
 -->
