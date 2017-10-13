@@ -139,8 +139,13 @@ view-based representations는 멀티뷰에서 부터 시작한다. `Our view-bas
 - All the parameters of our CNN architecture are learned discriminatively to produce a single compact descriptor for the 3D shape. 
 
 
+###### [single view와의 비교 ]
 
 Compared to exhaustive pairwise comparisons between single view representations of 3D shapes, our resulting descriptors can be directly used to compare 3D shapes leading to significantly higher computational efficiency.
+
+### 3.1. Input: A Multi-view Representation
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjkzMTExM119
+eyJoaXN0b3J5IjpbLTk5NDc3MDU4MF19
 -->
