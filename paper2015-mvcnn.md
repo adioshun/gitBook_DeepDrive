@@ -277,11 +277,13 @@ We design the multi-view CNN (MVCNN) on top of image-based CNNs (Fig. 1).
 
 All branches in the first part of the network share the same parameters in CNN1. 
 
-We use element-wise maximum operation across the views in the view-pooling layer. 
+###### [view-pooling Layer]
 
-An alternative is element-wise meanoperation, but it is not as effective in our experiments. 
+- We use element-wise maximum operation across the views in the view-pooling layer. 
 
-Theview-pooling layer can be placed anywhere in the network.We show in our experiments that it should be placed closeto the last convolutional layer (conv5) for optimal classifi-cation and retrieval performance. 
+- The view-pooling layer can be placed anywhere in the network.
+
+We show in our experiments that it should be placed close to the last convolutional layer (conv5) for optimal classification and retrieval performance. 
 
 View-pooling layers areclosely related to max-pooling layers and maxout layers[14], with the only difference being the dimension that theirpooling operations are carried out on. 
 
@@ -291,5 +293,5 @@ Perhaps more importantly, the aggregated descriptoris readily available for a va
 
 We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMzg0NDk3NV19
+eyJoaXN0b3J5IjpbNDUzNTM1ODM3XX0=
 -->
