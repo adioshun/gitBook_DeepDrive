@@ -281,11 +281,10 @@ All branches in the first part of the network share the same parameters in CNN1.
 
 - We use element-wise maximum operation across the views in the view-pooling layer. 
 
-- The view-pooling layer can be placed anywhere in the network.
+- 뷰-풀링 레이어는 아무 곳나 위치 해도 된다. `The view-pooling layer can be placed anywhere in the network.`
+	- 하지만 실험 결과 최적 위치는 close to the last conv5 for optimal classification and retrieval performance. 
 
-We show in our experiments that it should be placed close to the last convolutional layer (conv5) for optimal classification and retrieval performance. 
-
-View-pooling layers areclosely related to max-pooling layers and maxout layers[14], with the only difference being the dimension that theirpooling operations are carried out on. 
+View-pooling layers are closely related to max-pooling layers and maxout layers[14], with the only difference being the dimension that theirpooling operations are carried out on. 
 
 The MVCNN is a directedacyclic graphs and can be trained or fine-tuned usingstochastic gradient descent with back-propagation.Using fc7 (after ReLU non-linearity) in an MVCNNas an aggregated shape descriptor, we achieve higher performancethan using separate image descriptors from animage-based CNN directly, especially in retrieval (62.8%→ 70.1%). 
 
@@ -293,5 +292,5 @@ Perhaps more importantly, the aggregated descriptoris readily available for a va
 
 We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUzNTM1ODM3XX0=
+eyJoaXN0b3J5IjpbMTAxOTg5MjEyNl19
 -->
