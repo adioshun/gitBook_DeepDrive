@@ -271,11 +271,13 @@ existing 3D descriptors보다 **multiple separate descriptors**를 이용하면 
 
 We design the multi-view CNN (MVCNN) on top of image-based CNNs (Fig. 1). 
 
-Each image in a 3D shape’s multi-view representation is passed through the first part of the network (CNN1) separately, aggregated at a view pooling layer, and then sent through the remaining part of the network (CNN2). 
+1. Each image in a 3D shape’s multi-view representation is passed through the first part of the network (CNN1) separately, 
+2. aggregated at a view pooling layer, 
+3. then sent through the remaining part of the network (CNN2). 
 
-All branches in the first part ofthe network share the same parameters in CNN1. 
+All branches in the first part of the network share the same parameters in CNN1. 
 
-We useelement-wise maximum operation across the views in theview-pooling layer. 
+We use element-wise maximum operation across the views in the view-pooling layer. 
 
 An alternative is element-wise meanoperation, but it is not as effective in our experiments. 
 
@@ -289,5 +291,5 @@ Perhaps more importantly, the aggregated descriptoris readily available for a va
 
 We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMjM1NjA1NF19
+eyJoaXN0b3J5IjpbMTkyMzg0NDk3NV19
 -->
