@@ -243,13 +243,11 @@ We propose two network variations that significantly improve state-of-the-art CN
 
 ##### 나. The second network
 
-- 멀티뷰와 비슷한 역할 수행 : Designed to **mimic multiview CNNs**, as they are strong in 3D shape classification.
+- 멀티뷰와 비슷한 역할 수행 : `Designed to _mimic multiview CNNs_, as they are strong in 3D shape classification`.
 
 - 네트워크 내에서 end-to-end로 3D를 2D로 투영함 `Instead of using rendering routines from computer graphics, our network projects a 3D shape to 2D** by convolving its 3D volume with an anisotropic probing kernel.`
-
-- This kernel is capable of encoding long-range interactions between points.
-
-- An image CNN is then appended to classify the 2D projection.
+	- This kernel is capable of encoding long-range interactions between points.
+	- An image CNN is then appended to classify the 2D projection.
 
 - Note that the training of the projection module and the image classification module is end-to-end.
 
@@ -381,5 +379,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjczMjkyODgyXX0=
+eyJoaXN0b3J5IjpbLTEwODk2NTAwNTRdfQ==
 -->
