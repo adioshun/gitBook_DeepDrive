@@ -32,6 +32,12 @@ retrieval.
 본 논문은 View-based 3D Shpae방법에서 영감을 받아 오토인코더를 이용 **Depth image**에서 부터 **3D shape representation**를 학습 하도록 하였다. `Motivated by the view-based 3D shape methods [6], [7], in which a 3D shape can be projected into many 2D depth images, we aim to use autoencoder to learn a 3D shape representation based on the depth images obtained by projection.`
 
 
+![](https://i.imgur.com/lfzJYCk.png)
+[Fig. 1. A specific illustration of our method to reconstruct 2D images]
+- first row displays the original depth images in gray-scale of the 3D shape, 
+- while the second row shows the reconstructed ones corresponding to the images of the first row. 
+- And the black dots indicates those extracted from other different views.
+
 
 
 As shown in Fig. 1, a 3D shape is projected into many
@@ -47,5 +53,5 @@ and the representation based on local descriptors are complementary
 to each other.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MDQxNDM0OF19
+eyJoaXN0b3J5IjpbMTQ1MjMxODUwMF19
 -->
