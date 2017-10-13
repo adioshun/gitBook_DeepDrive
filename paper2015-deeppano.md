@@ -66,9 +66,9 @@ Our method is related to previously introduced PANORAMA[6].
 
 기존 연구도 **panoramic views**를 이용하였다. ` In [6], Panagiotis et al. proposed to represent a 3-D shape by the Discrete Fourier Transform and Discrete Wavelet Transform descriptors calculated from a set of panoramic views. `
 
-Panoramoc view의 큰 문제점 However,the panoramic view shifts when the 3-D shape rotates along its principle axis. 
+Panoramoc view의 큰 문제점 : However,the panoramic view shifts when the 3-D shape rotates along its principle axis. 
 
-In [6], this problem is alleviated by pose normalization.
+기존 연구에서는 **normalization**으로 해결 `In [6], this problem is alleviated by pose normalization.`
 
 
 As illustrated in Fig. 1, the convolutional feature mapsextracted from panoramic views shifts when the 3-D shape rotates.We pool the the responses of each row so that the resultingrepresentation is not affected by this kind of shift. 
@@ -78,5 +78,5 @@ As a result,the representation is invariant to the 3-D shape rotation.To summari
 The experiments on large-scale 3-D shape datasetsshow that this representation is effective in both classificationand retrieval tasks, outperforming previous methods by a largemargin.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MDQwNzEwNF19
+eyJoaXN0b3J5IjpbLTE0MTUyNTM4NDVdfQ==
 -->
