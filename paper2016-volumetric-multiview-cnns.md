@@ -362,6 +362,10 @@ As illustrated in Fig 4, the neural network has two modules:
 - 이를 위해서 **Su-MVCNN** 제안을 활용 하였다. `Similar to Su-MVCNN [32] which aggregates information from multiple view inputs through a view-pooling layer and follow-on fully connected layers,'
 	- 다른 orientations에서 3D 입력을 샘플링하고, multi-orientation volumetric CNN를 통해서 합치는 작업 수행 `we sample 3D input from different orientations and aggregate them in a multi-orientation volumetric CNN (MO-VCNN) as shown in Fig 5. `
 
+```
+[32] H. Su, S. Maji, E. Kalogerakis, and E. G. Learned-Miller. Multi-view convolutional neural networks for 3d shape recognition. In ICCV 2015, 2015.
+```
+
 
 - 학습시 rotations이 다른 3D 모델들을 생성 `At training time, we generate different rotations of the 3D model by changing both azimuth(방위각) and elevation(고도) angles, sampled randomly. `
 
@@ -377,7 +381,7 @@ As illustrated in Fig 4, the neural network has two modules:
 	- 3. and traina linear SVM on the combined feature, 
 this is just a special case of the MO-VCNN.
 
-Compared to 3D ShapeNets [33] which only augments data by rotating around vertical axis, our experiment shows that orientation pooling combined with elevation rotation can greatly increase performance.
+> 3D ShapeNets 와 비교 해서의 성능 : Compared to 3D ShapeNets [33] which only augments data by rotating around vertical axis, our experiment shows that orientation pooling combined with elevation rotation can greatly increase performance.
 
 
 ## 5. Multi-View Convolutional Neural Networks
@@ -386,5 +390,5 @@ Compared to 3D ShapeNets [33] which only augments data by rotating around vertic
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDU5NzQ5OTJdfQ==
+eyJoaXN0b3J5IjpbNDExNjQxMDddfQ==
 -->
