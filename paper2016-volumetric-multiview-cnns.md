@@ -367,11 +367,11 @@ As illustrated in Fig 4, the neural network has two modules:
 
 - volumetric CNN은 처음에는 single rotations으로 학습 수행 `A volumetric CNN is firstly trained on single rotations. `
 
-- 이후 네트워크를 CNN1과 CNN2로 분리 하여 Then we decompose the network to CNN1 (lower layers) and CNN2 (higher layers)to construct a multi-orientation version. 
+- 이후 네트워크를 CNN1과 CNN2로 분리 하여 multi-orientation version 생성 `Then we decompose the network to CNN1 (lower layers) and CNN2 (higher layers)to construct a multi-orientation version.` 
 
-The MO-VCNN’sweights are initialized by a previously trained volumetricCNN with CNN1’s weights fixed during fine-tuning. 
+- MO-VCNN의 초기 가중치값  : The MO-VCNN’s weights are initialized by a previously trained volumetric CNN with CNN1’s weights fixed during fine-tuning. 
 
-Whilea common practice is to extract the highest level features(features before the last classification linear layer) of multipleorientations, average/max/concatenate them, and traina linear SVM on the combined feature, this is just a specialcase of the MO-VCNN.
+- While a common practice is to extract the highest level features(features before the last classification linear layer) of multiple orientations, average/max/concatenate them, and traina linear SVM on the combined feature, this is just a specialcase of the MO-VCNN.
 
 Compared to 3DShapeNets [33] which only augments data by rotating around vertical axis, our experiment shows that orientation pooling combined with elevation rotation can greatly increase performance.
 
@@ -382,5 +382,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkzOTI4ODNdfQ==
+eyJoaXN0b3J5IjpbNzM5OTMwNjA4XX0=
 -->
