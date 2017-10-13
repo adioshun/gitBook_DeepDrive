@@ -42,12 +42,12 @@ retrieval.
 
 그림 1 처럼 3D shape는 여러 depth images로 투영 된다. 학습된 오토 인코더는 재 구성도 성능도 좋다 `As shown in Fig. 1, a 3D shape is projected into many different depth images; the learnt autoencoder can reconstruct the depth images nicely. `
 
-Matching 3D shape based on the autoencoder features can be converted to a set-to-set matching problem, conventional set-to-set distance, like the Hausdorff distance, can be adopted. 
+결국 features를 비교하며 검색(`match`) 하는 것은 일종의 **set-to-set distance**문제로 바뀌게 된다. Matching 3D shape based on the autoencoder features can be converted to a set-to-set matching problem, conventional set-to-set distance, like the Hausdorff distance, can be adopted. 
 
 Our autoencoder based 3D shape representation is a deep learning representation; compared to the representations based on local descriptor, e.g. SIFT, it is a global representation. 
 
 This global deep learning representation and the representation based on local descriptors are complementary to each other.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTcxNTk2MDBdfQ==
+eyJoaXN0b3J5IjpbNjM2MTgzNDA1XX0=
 -->
