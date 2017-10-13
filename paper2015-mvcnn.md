@@ -34,13 +34,12 @@ Native 3D formats인 Voxel grid를 사용 하는 방법이 ShapeNet을 통해 �
 ### 2.1 Shape descriptors
 
 Shape descriptors can be classified into two broad categories
-- 3D shape descriptors that directly work on the native 3D representations of objects, such as polygon meshes, voxel-based discretizations, point clouds, or implicit surfaces
-- viewbased descriptors that describe the shape of a 3D object by
-“how it looks” in a collection of 2D projections.
-
+- 3D shape descriptors : directly work on the n**ative 3D representations** of objects, 
+	- such as polygon meshes, voxel-based discretizations, point clouds, or implicit surfaces
+- viewbased descriptors : describe the shape of a 3D object by “**how it looks**” in a collection of 2D projections.
 
 #### B. view-based descriptors
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5ODMzMDkxMF19
+eyJoaXN0b3J5IjpbLTE3MzA4MTM2OV19
 -->
