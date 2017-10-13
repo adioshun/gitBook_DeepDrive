@@ -93,7 +93,7 @@ Cyr and Kimia [8] defined similarity metrics based on **curve matching** and **g
 
 ###### [Eitz et al/Schneider et al]
 
-Eitz et al. [12] compared humans ketches with line drawings of 3D models produced from several different views based on local Gabor filters, 
+Eitz et al. [12] compared human s ketches with line drawings of 3D models produced from several different views based on local Gabor filters, 
 
 while Schneider et al. [30] proposed using Fisher vectors [26]on SIFT features [22] for representing human sketches of shapes. 
 
@@ -307,10 +307,8 @@ We illustrate this capability of MVCNNs in the context of sketch recognition in 
 
 ## 5. Conclusion
 
-While the world is full of 3D shapes, as humans at least, we understand that world is mostly through 2D images. 
 
-We
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI1OTE1ODI1XX0=
+eyJoaXN0b3J5IjpbLTE3NDM2NzkzNzBdfQ==
 -->
