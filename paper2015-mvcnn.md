@@ -81,21 +81,21 @@ or extensions of the SIFT and SURF feature descriptors to 3D voxel grids [17].
 
 ###### [Light Field descriptor]
 
-많이 사용, Light Field descriptor [5] that extracts a set of geometric and Fourier descriptors from object silhouettesrendered from several different viewpoints. 
+많이 사용, Light Field descriptor [5] that extracts a set of geometric and Fourier descriptors from object silhouettes rendered from several different viewpoints. 
 
-###### []
+###### [shock graph]
 
-Alternatively,the silhouette of an object can be decomposed into parts andthen represented by a directed acyclic graph (shock graph)[23]. 
+Alternatively,the silhouette of an object can be decomposed into parts and then represented by a directed acyclic graph (shock graph)[23]. 
 
-###### []
+###### [Cyr and Kimia]
 
-Cyr and Kimia [8] defined similarity metrics basedon curve matching and grouped similar views, called aspectgraphs of 3D models [18]. 
+Cyr and Kimia [8] defined similarity metrics based on **curve matching** and **grouped similar views**, called aspect graphs of 3D models [18]. 
 
-###### []
+###### [Eitz et al]
 
-Eitz et al. [12] compared humansketches with line drawings of 3D models produced fromseveral different views based on local Gabor filters, while Schneider et al. [30] proposed using Fisher vectors [26]on SIFT features [22] for representing human sketches of shapes. 
+Eitz et al. [12] compared humans ketches with line drawings of 3D models produced from several different views based on local Gabor filters, while Schneider et al. [30] proposed using Fisher vectors [26]on SIFT features [22] for representing human sketches of shapes. 
 
 These descriptors are largely “hand-engineered”and some do not generalize well across different domains
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MTEzMDQ4NV19
+eyJoaXN0b3J5IjpbLTg3MTA1MDg3NV19
 -->
