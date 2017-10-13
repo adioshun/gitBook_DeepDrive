@@ -17,9 +17,9 @@
 - Firstly, each 3-D shape is converted into a panoramic view
 - Then, a variant of CNN is specifically designed for learning the deep representations directly from such views. 
 
-기존 CNN과 다른점은 **row-wise맥스 풀링층**을 추가 항Different from typical CNN, a row-wise max-pooling layer is inserted between the convolution and fully-connected layers, making the learned representations invariant to the rotation around a principle axis
+기존 CNN과 다른점은 **row-wise맥스 풀링층**을 추가 하여 Different from typical CNN, a row-wise max-pooling layer is inserted between the convolution and fully-connected layers, making the learned representations invariant to the rotation around a principle axis
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0Njc0MDk0XX0=
+eyJoaXN0b3J5IjpbMTU4NDA0MjI4N119
 -->
