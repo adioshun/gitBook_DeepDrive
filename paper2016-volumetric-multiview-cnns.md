@@ -236,7 +236,7 @@ We propose two network variations that significantly improve state-of-the-art CN
 
 ##### 가. The first network
 
-- Designed to **mitigate over fitting** by introducing auxiliary training tasks, which are themselves challenging.
+- 오버피팅 방지 목적 : Designed to **mitigate over fitting** by introducing auxiliary training tasks, which are themselves challenging.
 
 - These auxiliary tasks encourage the network to **predict object class** labels from **partial subvolumes**.
 - Therefore, no additional annotation efforts are needed.
@@ -381,5 +381,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjMyMzA0NTZdfQ==
+eyJoaXN0b3J5IjpbNzkwMzQwNjk2XX0=
 -->
