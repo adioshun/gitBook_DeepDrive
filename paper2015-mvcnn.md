@@ -241,7 +241,6 @@ Note that the distance between two 2D images is defined as the $$l_2$$ distance 
 
 ![](https://i.imgur.com/I4TmnBg.png)
 
-
 To interpret this definition, we can first define the distance
 between a 2D image xi and a 3D shape y as
 d(xi
@@ -254,5 +253,5 @@ minimun distance among all nx · ny image pairs and the
 distance between average image descriptors, but they all led
 to inferior performance
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMjcxODUxM119
+eyJoaXN0b3J5IjpbMTc1ODQ4NDgzMV19
 -->
