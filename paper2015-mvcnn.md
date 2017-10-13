@@ -286,17 +286,17 @@ All branches in the first part of the network share the same parameters in CNN1.
 	-  단지 차이는 with the only difference being the dimension that their pooling operations are carried out on. 
 
 
-###### [view-pooling Layer]
+###### [Train / Fine-tune]
 
 The MVCNN is a directed acyclic graphs and can be trained or fine-tuned using **stochastic gradient descent** with back-propagation.
 
 Using fc7 (after ReLU non-linearity) in an MVCNN as an aggregated shape descriptor, we achieve higher performance than using separate image descriptors from an image-based CNN directly, especially in retrieval (62.8%→ 70.1%). 
 
-Perhaps more importantly, the aggregated descriptoris readily available for a variety of tasks, e.g., shapeclassification and retrieval, and offers significant speed-upsagainst multiple image descriptors.
+Perhaps more importantly, the aggregated descriptoris readily available for a variety of tasks, e.g., shape classification and retrieval, and offers significant speed-ups against multiple image descriptors.
 
-An MVCNN can also be used as a general frameworkto integrate perturbed image samples (also known as datajittering). 
+An MVCNN can also be used as a general frame workto integrate perturbed image samples (also known as datajittering). 
 
 We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODI4NzQxMDNdfQ==
+eyJoaXN0b3J5IjpbLTI0ODgxNzM4XX0=
 -->
