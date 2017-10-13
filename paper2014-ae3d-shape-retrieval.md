@@ -3,7 +3,7 @@
 | 저자(소속) | Zhuotun Zhu () |
 | 학회/년도 | 2014, 논문 |
 | 키워드 | |
-| 데이터셋/모델 | |
+| 데이터셋/모델 |Princeton Shape Benchmark |
 | 참고 | |
 | 코드 | |
 
@@ -93,5 +93,5 @@ Prior to that, they also proposed a shape descriptor named Geodesic Sphere based
 
 Recently, Bai et al. [17] adopted contour fragments as the input features for learning a BoW model, which is general and efficient for both 2D and 3D shape matching.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzU3NDE4MDNdfQ==
+eyJoaXN0b3J5IjpbMTcyMDI1MTgxXX0=
 -->
