@@ -124,16 +124,15 @@ view-based representations는 멀티뷰에서 부터 시작한다. `Our view-bas
 - then use the individual descriptors directly for recognition tasks based on some voting or alignment scheme. 
 
 예 
-- a naıve approach would be to average the individual descriptors, treating all the views as equally important. 
-- 반대로, Alternatively, if the views are rendered in a reproducible order, one could also concatenate the 2D descriptors of all the views. 
+- a **naıve approach** would be to average the individual descriptors, treating all the views as **equally important**. 
+- 반대로, Alternatively, if the views are rendered in a **reproducible order**, one could also concatenate the 2D descriptors of all the views. 
+	- Unfortunately,aligning a 3D shape to a canonical orientation is hard and sometimes ill-defined. 
 
-Unfortunately,aligning a 3D shape to a canonical orientation is hard and sometimes ill-defined. 
-
-In contrast to the above simple approaches,an aggregated representation combining featuresfrom multiple views is more desirable since it yields a single,compact descriptor representing the 3D shape.Our approach is to learn to combine information frommultiple views using a unified CNN architecture that includesa view-pooling layer (Fig. 1). 
+In contrast to the above simple approaches, an aggregated representation combining features from multiple views is more desirable since it yields a single,compact descriptor representing the 3D shape.Our approach is to learn to combine information frommultiple views using a unified CNN architecture that includesa view-pooling layer (Fig. 1). 
 
 All the parameters ofour CNN architecture are learned discriminatively to producea single compact descriptor for the 3D shape. 
 
 Comparedto exhaustive pairwise comparisons between singleviewrepresentations of 3D shapes, our resulting descriptorscan be directly used to compare 3D shapes leading to significantlyhigher computational efficiency.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MzI3NzU2MV19
+eyJoaXN0b3J5IjpbMTU2MzY2NDk1NF19
 -->
