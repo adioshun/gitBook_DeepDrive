@@ -6,7 +6,7 @@
 | 학회/년도 | 2015, [논문](https://arxiv.org/abs/1505.00880) |
 | 키워드 | MVCNN2015, |
 | 데이터셋/모델 | |
-| 참고 | |
+| 참고 | [홈페이지](http://vis-www.cs.umass.edu/mvcnn/) |
 | 코드 | |
 
 
@@ -29,5 +29,5 @@ Native 3D formats인 Voxel grid를 사용 하는 방법이 ShapeNet을 통해 �
 [37] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang, and J. Xiao. 3D ShapeNets: A deep representation for volumetric shape modeling. In Proc. CVPR, 2015.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI4MzQzNzI2XX0=
+eyJoaXN0b3J5IjpbLTExNjIwNzY0NjhdfQ==
 -->
