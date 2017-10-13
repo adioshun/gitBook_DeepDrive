@@ -12,7 +12,9 @@
 - 3D를 2D로 투영 `we project 3D shapes into 2D space` 
 - 오토인코더를 이용하여 특징 학습 ` use autoencoder for feature learning on the 2D images`
 
-## I. INTRODUCTION
+## 1. INTRODUCTION
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MzU1MzA4Ml19
+eyJoaXN0b3J5IjpbMTU5OTkyODM3OF19
 -->
