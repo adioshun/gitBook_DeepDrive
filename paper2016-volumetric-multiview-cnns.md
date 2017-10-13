@@ -367,7 +367,7 @@ As illustrated in Fig 4, the neural network has two modules:
 
 - volumetric CNN은 처음에는 single rotations으로 학습 수행 `A volumetric CNN is firstly trained on single rotations. `
 
-- 이후 네트워크를 CNN1과 Then we decompose the network to CNN1 (lower layers) and CNN2 (higher layers)to construct a multi-orientation version. 
+- 이후 네트워크를 CNN1과 CNN2Then we decompose the network to CNN1 (lower layers) and CNN2 (higher layers)to construct a multi-orientation version. 
 
 The MO-VCNN’sweights are initialized by a previously trained volumetricCNN with CNN1’s weights fixed during fine-tuning. 
 
@@ -382,5 +382,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNTM3MTEzMF19
+eyJoaXN0b3J5IjpbLTE5MDg5MTgwNjldfQ==
 -->
