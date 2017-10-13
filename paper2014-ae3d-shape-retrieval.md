@@ -83,15 +83,15 @@ By aligning its principle axes to capture theg lobal information and combining 2
 
 Meanwhile, Lian et al. [7] used Bag of-Features and Clock Matching (CM-BoF) on a set of depth buffer views obtained from the projections of the normalized object. 
 
-The CM-BoF method also takes advantage of the preserved local details as well as isometry-invariant globalstructure to reach a competing result. 
+The CM-BoF method also takes advantage of the preserved local details as well as isometry-invariant global structure to reach a competing result. 
 
-###### []
+###### [Geodesic Sphere based Multi-view Descriptors ]
 
-Prior to that, they alsoproposed a shape descriptor named Geodesic Sphere basedMulti-view Descriptors (GSMD) [16] measuring the extend towhich a 3D polygon is rectilinear based on the maximum ratioof the surface area to the sum of three orthogonal projectedareas. 
+Prior to that, they also proposed a shape descriptor named Geodesic Sphere based Multi-view Descriptors (GSMD) [16] measuring the extend to which a 3D polygon is rectilinear based on the maximum ratio of the surface area to the sum of three orthogonal projected areas. 
 
-###### []
+###### [Bai et al]
 
-Recently, Bai et al. [17] adopted contour fragments asthe input features for learning a BoW model, which is generaland efficient for both 2D and 3D shape matching.
+Recently, Bai et al. [17] adopted contour fragments as the input features for learning a BoW model, which is general and efficient for both 2D and 3D shape matching.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4OTc0NTAzN119
+eyJoaXN0b3J5IjpbLTE3MzU3NDE4MDNdfQ==
 -->
