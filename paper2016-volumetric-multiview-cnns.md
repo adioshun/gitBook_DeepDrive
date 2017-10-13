@@ -365,9 +365,9 @@ As illustrated in Fig 4, the neural network has two modules:
 
 - 학습시 rotations이 다른 3D 모델들을 생성 `At training time, we generate different rotations of the 3D model by changing both azimuth(방위각) and elevation(고도) angles, sampled randomly. `
 
-A volumetric CNN is firstly trained on single rotations. 
+- volumetric CNN은 처음에는 single rotations으로 학습 수행 `A volumetric CNN is firstly trained on single rotations. `
 
-Then we decompose the networkto CNN1 (lower layers) and CNN2 (higher layers)to construct a multi-orientation version. 
+- 이후 네트워크를 CNN1과 Then we decompose the network to CNN1 (lower layers) and CNN2 (higher layers)to construct a multi-orientation version. 
 
 The MO-VCNN’sweights are initialized by a previously trained volumetricCNN with CNN1’s weights fixed during fine-tuning. 
 
@@ -382,5 +382,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mzg2MzkyNjNdfQ==
+eyJoaXN0b3J5IjpbMTIzNTM3MTEzMF19
 -->
