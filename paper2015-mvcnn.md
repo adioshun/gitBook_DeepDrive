@@ -1,5 +1,3 @@
-
-
 |논문명 | Multi-view Convolutional Neural Networks for 3D Shape Recognition |
 | --- | --- |
 | 저자\(소속\) | Hang Su \(\) |
