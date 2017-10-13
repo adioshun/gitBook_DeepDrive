@@ -348,7 +348,7 @@ As illustrated in Fig 4, the neural network has two modules:
 
 - 위에 이야기한 두개의 네트워크 들은 모두 model orientation에 민감하다. `The two networks proposed above are both sensitive to model orientation. `
 
-In the subvolume supervision method, different model orientations define different local subvolumes; in the anisotropic probing method, only voxels of the same height and along the probing direction can have interaction in the early feature extraction stage. 
+- subvolume 슈퍼 비젼 방식에서는 다In the subvolume supervision method, different model orientations define different local subvolumes; in the anisotropic probing method, only voxels of the same height and along the probing direction can have interaction in the early feature extraction stage. 
 
 Thus it is helpful to augment the training data by varying object orientation and combining predictions through orientation pooling.
 
@@ -373,5 +373,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMDM4Nzk1M119
+eyJoaXN0b3J5IjpbLTExMjM2MzA2MTRdfQ==
 -->
