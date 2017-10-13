@@ -285,14 +285,9 @@ We implement this design through an architecture shown in Fig 3.
 
 - 첫 3개층 레이어는 MLPconv이다. `The first three layers are mlpconv (multilayer perceptron convolution) layers, `
 	- a 3D extension of the 2D mlpconv proposed by [23].
+	- 입/출력 값은 모두 4D 텐서 `The input and output of our mlpconv layers are both 4D tensors.`
 
-- 입/출력 값은 모두 4D 텐서 `The input and output of our mlpconv layers are both 4D tensors.`
-
-> mlpconv은 입력층-은닉층-출력층으로 구성된 뉴런 네트워크로 Feature Extraction에 좋은 성능을 보임 :  mlpconv has a three-layer structure and is thus a universal function approximator if enough neurons are provided in its intermediate layers.
-
-- Therefore, mlpconv is a powerful filter for feature extraction of local patches, enhancing approximation of more abstract representations.
-
-- In addition, mlpconv has been validated to be more discriminative with fewer parameters than ordinary convolution with pooling [23].
+-  mlpconv은 입력층-은닉층-출력층으로 구성된 뉴런 네트워크로 **Feature Extraction**에 좋은 성능을 보임 : `mlpconv has a three-layer structure and is thus a universal function approximator if enough neurons are provided in its intermediate layers. Therefore, mlpconv is a powerful filter for feature extraction of local patches, enhancing approximation of more abstract representations. In addition, mlpconv has been validated to be more discriminative with fewer parameters than ordinary convolution with pooling [23].`
 
 - At the fourth layer, the network branches into two.
 
@@ -377,5 +372,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMTc5NTQ5NF19
+eyJoaXN0b3J5IjpbMTg1NzA1MzcwM119
 -->
