@@ -19,7 +19,9 @@
 
 기존 CNN과 다른점은 **row-wise맥스 풀링층**을 추가 하여 invariant에 대처 하도록 함 `Different from typical CNN, a row-wise max-pooling layer is inserted between the convolution and fully-connected layers, making the learned representations invariant to the rotation around a principle axis`
 
-## 
+## 1. INTRODUCTION
+
+The performance of many tasks, including shape classification and shape retrieval, heavily depend on the quality of the representation
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Nzg2OTg3MjZdfQ==
+eyJoaXN0b3J5IjpbLTEyNzExMzQ5MjBdfQ==
 -->
