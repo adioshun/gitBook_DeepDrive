@@ -150,12 +150,12 @@ Compared to exhaustive pairwise comparisons between single view representations 
 
 To generate rendered views of polygon meshes, we use the Phong reflection model [27]. 
 
-The mesh polygons are rendered under a perspective projection
-and the pixel color is determined by interpolating
-the reflected intensity of the polygon vertices. Shapes are
-uniformly scaled to fit into the viewing volume.
-To create a multi-view shape representation, we need to
-setup viewpoints (virtual cameras) for rendering each mesh.
+The mesh polygons are rendered under a perspective projection and the pixel color is determined by interpolating
+the reflected intensity of the polygon vertices. 
+
+Shapes are uniformly scaled to fit into the viewing volume.
+
+To create a multi-view shape representation, we need to setup viewpoints (virtual cameras) for rendering each mesh.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYxMzMwNTNdfQ==
+eyJoaXN0b3J5IjpbMzQ3NDY4MzU1XX0=
 -->
