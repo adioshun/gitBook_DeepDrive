@@ -253,7 +253,7 @@ We investigated alternative distance measures, such as minimun distance among al
 
 ### 3.3. Multi-view CNN: Learning to Aggregate Views
 
-Although having multiple separate descriptors for each 3D shape can be successful for classification and retrieval compared to existing 3D descriptors, it can be inconvenient and inefficient in many cases. 
+existing 3D descriptors보다 **multiple separate descriptors**를 이용하면 분류 문제는 잘 처리 할수 있지만, 불편하고 비 효율적이다. ` Although having multiple separate descriptors for each 3D shape can be successful for classification and retrieval compared to existing 3D descriptors, it can be inconvenient and inefficient in many cases. `
 
 For example, in Eq. 1, we need to compute all $$n_x \times n_y$$ pairwise distances between images in order to compute distance between two 3D shapes.
 
@@ -281,5 +281,5 @@ Perhaps more importantly, the aggregated descriptoris readily available for a va
 
 We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NzA4OTkzNF19
+eyJoaXN0b3J5IjpbLTk1NjI2MzAwOV19
 -->
