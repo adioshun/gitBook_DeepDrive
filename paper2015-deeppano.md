@@ -11,7 +11,7 @@
 
 # DeepPano
 
-제안 : ㅁ robust representation of 3-D shapes learned with deep convolutional
+제안 : A robust representation of 3-D shapes learned with deep convolutional
 neural networks (CNN). 
 
 Firstly, each 3-D shape is converted into a
@@ -24,5 +24,5 @@ representations invariant to the rotation around a principle axis
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MDY3MjgyMF19
+eyJoaXN0b3J5IjpbLTU4NzM5MTY2OF19
 -->
