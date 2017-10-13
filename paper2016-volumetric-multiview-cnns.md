@@ -354,20 +354,18 @@ As illustrated in Fig 4, the neural network has two modules:
 
 ![](https://i.imgur.com/Qxq2qOr.png)
 ```
-[Figure 5. Left: Volumetric CNN (single orientation input).]
-- Right: Multi-orientation volumetric CNN (MO-VCNN), which takes in
-various orientations of the 3D input, extracts features from shared
-CNN1 and then pass pooled feature through another network
-CNN2 to make a prediction.
+[Figure 5.]
+- Left: Volumetric CNN (single orientation input).
+- Right: Multi-orientation volumetric CNN (MO-VCNN), which takes in various orientations of the 3D input, extracts features from shared CNN1 and then pass pooled feature through another network CNN2 to make a prediction.
 ```
 
 - 이를 위해서 **Su-MVCNN** 제안을 활용 하였다. `Similar to Su-MVCNN [32] which aggregates information from multiple view inputs through a view-pooling layer and follow-on fully connected layers,'
 	- 다른 orientations에서 3D 입력을 샘플링하고, multi-orientation volumetric CNN를 통해서 합치는 작업 수행 `we sample 3D input from different orientations and aggregate them in a multi-orientation volumetric CNN (MO-VCNN) as shown in Fig 5. `
 
 
-At training time, we generate different rotations of the 3D model by changing both azimuth and elevation angles, sampled randomly. 
+At training time, we generate different rotations of the 3D model by changing both azimuth(방위각) and elevation(고도) angles, sampled randomly. 
 
-A volumetric CNN is firstlytrained on single rotations. 
+A volumetric CNN is firstly trained on single rotations. 
 
 Then we decompose the networkto CNN1 (lower layers) and CNN2 (higher layers)to construct a multi-orientation version. 
 
@@ -384,5 +382,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzODU2NTg2NV19
+eyJoaXN0b3J5IjpbLTYxOTE5ODc1OF19
 -->
