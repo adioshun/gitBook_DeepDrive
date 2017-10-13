@@ -213,7 +213,10 @@ These are then projected to 80 dimensions with PCA, followed by Fisher vector po
 
 ##### 나. CNN features
 
-For our CNN features we use the VGG-M network from [3] which consists of mainly five convolutional layers conv1,...,5  ollowed by three fully connected layers fc6,...,8 and a softmax classification layer. 
+For our CNN features we use the VGG-M network from [3] which consists of mainly 
+- five convolutional layers $$conv_{1,...,5} $$ followed by 
+- three fully connected layers $$fc_{6,...,8}$$ 
+- softmax classification layer. 
 
 The penultimate layer fc7 (after ReLU non-linearity, 4096-dimensional) is used as image descriptor. 
 
@@ -255,5 +258,5 @@ minimun distance among all nx · ny image pairs and the
 distance between average image descriptors, but they all led
 to inferior performance
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NzU0MTZdfQ==
+eyJoaXN0b3J5IjpbLTEzNjAwNTg2ODddfQ==
 -->
