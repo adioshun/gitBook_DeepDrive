@@ -150,7 +150,7 @@ Compared to exhaustive pairwise comparisons between single view representations 
 
 #### A. 전처리 작업 
 
-To generate rendered views of polygon meshes, we use the Phong reflection model [27]. 
+렌더링 이미지 생성을 위해 ** Phong reflection model **모델 사용 `To generate rendered views of polygon meshes, we use the Phong reflection model [27]. `
 
 The mesh polygons are rendered under a perspective projection and the pixel color is determined by interpolating
 the reflected intensity of the polygon vertices. 
@@ -187,7 +187,12 @@ All cameras point towards the centroid of the mesh.
 
 Then we generate 4 rendered views from each camera, using 0, 90, 180, 270 degrees rotation along the axis passing through the camera and the object centroid, yielding total 80 views.
 
+We note that using different shading coefficients or illumination models did not affect our output descriptors due to the invariance of the learned filters to illumination changes, as also observed in image-based CNNs [20, 10].
 
+Adding more or different viewpoints is trivial, however, we found that the above camera setups were already enough
+to achieve high performance. 
+
+Finally, rendering each mesh from all the viewpoints takes no more than ten milliseconds on modern graphics hardware.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MjEzNTc0Ml19
+eyJoaXN0b3J5IjpbLTkwNjM0NzE4OV19
 -->
