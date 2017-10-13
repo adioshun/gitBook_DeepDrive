@@ -23,7 +23,7 @@
 
 - Representation에 위해서 성능이 좌우됨 `The performance of many tasks, including shape classification and shape retrieval, heavily depend on the quality of the representation`
 
-- 본 논문은 DeepPano을 제안
+- 본 논문은 DeepPano을 제안, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NjQ4NjUyMV19
+eyJoaXN0b3J5IjpbLTE4NzIzMTQ0MjddfQ==
 -->
