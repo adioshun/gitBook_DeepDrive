@@ -354,11 +354,11 @@ As illustrated in Fig 4, the neural network has two modules:
 
 ### 4.4. Data Augmentation and Multi-Orientation Pooling
 
-- 위에 이야기한 두개의 네트워크 들은 모두 The two networks proposed above are both sensitive to **model orientation**. 
+- 위에 이야기한 두개의 네트워크 들은 모두 model orientation에 민감하다. `The two networks proposed above are both sensitive to model orientation. `
 
-In the subvolume supervision method,different model orientations define different local subvolumes;in the anisotropic probing method, only voxels ofthe same height and along the probing direction can have interaction in the early feature extraction stage. 
+In the subvolume supervision method, different model orientations define different local subvolumes; in the anisotropic probing method, only voxels of the same height and along the probing direction can have interaction in the early feature extraction stage. 
 
-Thus itis helpful to augment the training data by varying objectorientation and combining predictions through orientationpooling.Similar to Su-MVCNN [32] which aggregates informationfrom multiple view inputs through a view-poolinglayer and follow-on fully connected layers, we sample 3Dinput from different orientations and aggregate them in amulti-orientation volumetric CNN (MO-VCNN) as shownin Fig 5. 
+Thus it is helpful to augment the training data by varying object orientation and combining predictions through orientation pooling.Similar to Su-MVCNN [32] which aggregates informationfrom multiple view inputs through a view-poolinglayer and follow-on fully connected layers, we sample 3Dinput from different orientations and aggregate them in amulti-orientation volumetric CNN (MO-VCNN) as shownin Fig 5. 
 
 At training time, we generate different rotationsof the 3D model by changing both azimuth and elevationangles, sampled randomly. 
 
@@ -377,5 +377,5 @@ Whilea common practice is to extract the highest level features(features before 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MTQwMzg5Nl19
+eyJoaXN0b3J5IjpbMjAyNDA5NDg1XX0=
 -->
