@@ -197,13 +197,14 @@ The gap seems to be caused by two factors:
 
 ###### Input resolution
 
+> 추가적 실험 결과 입력값은 성능에 큰 영향을 주지 않는 것으로 밝혀 졌다.
+
 The multi-view CNN downsamples each rendered view to 227 × 227 pixels \(Multiview Standard Rendering in Fig 1\);
 
 the volumetric CNN uses a 30×30×30 occupancy grid \(Volumetric Occupancy Grid in Fig 1\) to maintain a similar computational cost.
 
 However, the difference in input resolution is not the primary reason for this performance gap, as evidenced by further experiments.
 
-> 추가적 실험 결과 입력값은 성능에 큰 영향을 주지 않는 것으로 밝혀 졌다.
 
 ![](https://i.imgur.com/CMyNVE0.png)
 
@@ -225,9 +226,9 @@ The accuracy of this multi-view CNN is reported in blue.
 ### 4.1. Overview
 
 We improve volumetric CNNs through three separate means
-1. network structures
-2. data augmentation
-3. feature pooling
+1. Network structures
+2. Data augmentation
+3. Feature pooling
 
 #### A. Network Architecture
 
@@ -380,5 +381,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1ODMzMTk0OF19
+eyJoaXN0b3J5IjpbLTEzMjMyMzA0NTZdfQ==
 -->
