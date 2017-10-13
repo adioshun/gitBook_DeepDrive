@@ -35,7 +35,7 @@ retrieval.
 ![](https://i.imgur.com/lfzJYCk.png)
 [Fig. 1. A specific illustration of our method to reconstruct 2D images]
 - first row displays the original depth images in gray-scale of the 3D shape, 
-- while the second row shows the reconstructed ones corresponding to the images of the first row. 
+- en shows the reconstructed ones corresponding to the images of the first row. 
 - And the black dots indicates those extracted from other different views.
 
 
@@ -53,5 +53,5 @@ and the representation based on local descriptors are complementary
 to each other.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MjMxODUwMF19
+eyJoaXN0b3J5IjpbLTc5ODg5OTFdfQ==
 -->
