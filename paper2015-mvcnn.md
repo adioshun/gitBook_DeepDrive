@@ -145,10 +145,11 @@ Compared to exhaustive pairwise comparisons between single view representations 
 
 ### 3.1. Input: A Multi-view Representation
 
-3D models in online databases are typically stored as
-polygon meshes, which are collections of points connected
-with edges forming faces. To generate rendered views of
-polygon meshes, we use the Phong reflection model [27].
+대부분의 인터넷 3D 모델들은  **polygon meshes**,로 저장되어 있다.  
+	- polygon meshes :  collections of points connected with edges forming faces. 
+
+To generate rendered views of polygon meshes, we use the Phong reflection model [27]. 
+
 The mesh polygons are rendered under a perspective projection
 and the pixel color is determined by interpolating
 the reflected intensity of the polygon vertices. Shapes are
@@ -156,5 +157,5 @@ uniformly scaled to fit into the viewing volume.
 To create a multi-view shape representation, we need to
 setup viewpoints (virtual cameras) for rendering each mesh.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDI4MDk4NzJdfQ==
+eyJoaXN0b3J5IjpbOTYxMzMwNTNdfQ==
 -->
