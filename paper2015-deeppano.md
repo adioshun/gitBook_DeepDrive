@@ -23,7 +23,7 @@
 
 - Representation에 위해서 성능이 좌우됨 `The performance of many tasks, including shape classification and shape retrieval, heavily depend on the quality of the representation`
 
-- 본 ㄴ
+- 본 논문ㅇ
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTYwOTIxMV19
+eyJoaXN0b3J5IjpbMjE0MjQwOTI5NF19
 -->
