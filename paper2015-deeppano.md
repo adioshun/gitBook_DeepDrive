@@ -21,7 +21,9 @@
 
 ## 1. INTRODUCTION
 
-The performance of many tasks, including shape classification and shape retrieval, heavily depend on the quality of the representation
+- Representation에 위해서 성능이 좌우됨 `The performance of many tasks, including shape classification and shape retrieval, heavily depend on the quality of the representation`
+
+- 본 ㄴ
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzExMzQ5MjBdfQ==
+eyJoaXN0b3J5IjpbLTE4NTYwOTIxMV19
 -->
