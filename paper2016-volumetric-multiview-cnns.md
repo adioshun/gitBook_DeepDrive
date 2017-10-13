@@ -249,10 +249,6 @@ We propose two network variations that significantly improve state-of-the-art CN
 	- This kernel is capable of encoding long-range interactions between points.
 	- An image CNN is then appended to classify the 2D projection.
 
-- Note that the training of the projection module and the image classification module is end-to-end.
-
-- This emulation of multi-view CNNs achieves similar performance to them, using only standard layers in CNN.
-
 
 In order to mitigate overfitting from too many parameters, we adopt the **mlpconv layer** from [23] as our basic building block in both network variations.
 
@@ -379,5 +375,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODk2NTAwNTRdfQ==
+eyJoaXN0b3J5IjpbMTI5MjA4ODk1MF19
 -->
