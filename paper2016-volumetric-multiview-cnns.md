@@ -4,7 +4,7 @@
 | --- | --- |
 | 저자\(소속\) | Charles R. Qi \(Standford\) |
 | 학회/년도 | 2016 , [논문](https://arxiv.org/abs/1604.03265) |
-| 키워드 | Volumetric CNN 성능향상, Multi-View CNNs 성능향상 |
+| 키워드 | VMCNN2016, Volumetric CNN 성능향상, Multi-View CNNs 성능향상 |
 | 참고 | |
 | 코드 | |
 
@@ -381,5 +381,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNzI4NjU5XX0=
+eyJoaXN0b3J5IjpbLTYzMDk4NjMxMF19
 -->
