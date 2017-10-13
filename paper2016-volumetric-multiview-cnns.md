@@ -363,7 +363,7 @@ As illustrated in Fig 4, the neural network has two modules:
 	- 다른 orientations에서 3D 입력을 샘플링하고, multi-orientation volumetric CNN를 통해서 합치는 작업 수행 `we sample 3D input from different orientations and aggregate them in a multi-orientation volumetric CNN (MO-VCNN) as shown in Fig 5. `
 
 
-At training time, we generate different rotations of the 3D model by changing both azimuth(방위각) and elevation(고도) angles, sampled randomly. 
+- 학습시 rotations이 다른 3D 모델들을 생성 `At training time, we generate different rotations of the 3D model by changing both azimuth(방위각) and elevation(고도) angles, sampled randomly. `
 
 A volumetric CNN is firstly trained on single rotations. 
 
@@ -382,5 +382,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxOTE5ODc1OF19
+eyJoaXN0b3J5IjpbLTE1Mzg2MzkyNjNdfQ==
 -->
