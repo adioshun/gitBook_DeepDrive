@@ -352,7 +352,10 @@ As illustrated in Fig 4, the neural network has two modules:
 
 - While 3D convolution involves computation at locations of cubic resolution, we maintain quadratic compute.
 
-### 
+### 4.4. Data Augmentation and Multi-Orientation Pooling
+
+
+
 
 ## 5. Multi-View Convolutional Neural Networks
 
@@ -360,5 +363,5 @@ As illustrated in Fig 4, the neural network has two modules:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzY5MzExNF19
+eyJoaXN0b3J5IjpbLTE4MzM4OTk4OTVdfQ==
 -->
