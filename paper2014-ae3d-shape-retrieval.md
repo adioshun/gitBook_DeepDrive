@@ -67,15 +67,15 @@ Vranic [13] presented a composite 3D shape feature vector(DESIRE) which consists
 
 The composite of variousfeature vectors extracted in a canonical coordinate framegenerally performs better than the single method which relieson pairwise alignment of 3D objects. 
 
-###### []
+###### [Papadakiset]
 
-Later on, Papadakiset al. [14] made use of a hybrid descriptor (Hybrid) whichconsists of both depth buffer based 2D features and sphericalharmonies based 3D features. 
+Later on, Papadakiset al. [14] made use of a **hybrid descriptor** (Hybrid) which consists of both **depth buffer based 2D features** + **sphericalharmonies based 3D features**. 
 
-The Hybrid adopts two alignmentmethods to compensate inner rotation variance and thenuses Huffman coding to further compress feature descriptors.
+The Hybrid adopts two alignment methods to compensate inner rotation variance and then uses Huffman coding to further compress feature descriptors.
 
-###### []
+###### [PANORAMA]
 
-Also, they presented a 3D descriptor (PANORAMA) [15] that captures the panoramic view of a 3D shape by projecting itto a lateral surface of a cylinder parallel to one of its threeprincipal axes. 
+Also, they presented a 3D descriptor (PANORAMA) [15] that captures the panoramic view of a 3D shape by projecting it to a lateral surface of a cylinder parallel to one of its threeprincipal axes. 
 
 By aligning its principle axes to capture theglobal information and combining 2D Discrete Fourier Transformand 2D Discrete Wavelet Transform, the PANORAMAoutperforms all the other 3D shape retrieval methods on severalstandard 3D benchmarks. 
 
@@ -93,5 +93,5 @@ Prior to that, they alsoproposed a shape descriptor named Geodesic Sphere basedM
 
 Recently, Bai et al. [17] adopted contour fragments asthe input features for learning a BoW model, which is generaland efficient for both 2D and 3D shape matching.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNzAyMjkzXX0=
+eyJoaXN0b3J5IjpbNzczNjE2OTI5XX0=
 -->
