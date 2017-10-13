@@ -373,7 +373,7 @@ As illustrated in Fig 4, the neural network has two modules:
 
 - While a common practice is to 
 	- extract the highest level features(features before the last classification linear layer) of multiple orientations, 
-	- average/max/concatenate them, and traina linear SVM on the combined feature, this is just a special case of the MO-VCNN.
+	-  average/max/concatenate them, and traina linear SVM on the combined feature, this is just a special case of the MO-VCNN.
 
 Compared to 3DShapeNets [33] which only augments data by rotating around vertical axis, our experiment shows that orientation pooling combined with elevation rotation can greatly increase performance.
 
@@ -384,5 +384,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgyMjI4MzMwXX0=
+eyJoaXN0b3J5IjpbLTk5MjY0MzM0OF19
 -->
