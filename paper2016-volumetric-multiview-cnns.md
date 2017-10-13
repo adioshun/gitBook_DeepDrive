@@ -288,9 +288,9 @@ We implement this design through an architecture shown in Fig 3.
 
 - 입/출력 값은 모두 4D 텐서 `The input and output of our mlpconv layers are both 4D tensors.`
 
-> mlpconv :  mlpconv has a three-layer structure and is thus a universal function approximator if enough neurons are provided in its intermediate layers.
+> mlpconv은 입력층-은닉층-출력층으로 구성된 뉴런 네트워크로 Feature Extraction에 좋은 성능을 보:  mlpconv has a three-layer structure and is thus a universal function approximator if enough neurons are provided in its intermediate layers.
 
-- Therefore, mlpconv is a powerful filter for feature extraction of local patches,enhancing approximation of more abstract representations.
+- Therefore, mlpconv is a powerful filter for feature extraction of local patches, enhancing approximation of more abstract representations.
 
 - In addition, mlpconv has been validated to be more discriminative with fewer parameters than ordinary convolution with pooling [23].
 
@@ -377,5 +377,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MTc0ODA3MF19
+eyJoaXN0b3J5IjpbMjEzNDc0NzkwMl19
 -->
