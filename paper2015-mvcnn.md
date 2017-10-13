@@ -130,15 +130,17 @@ view-based representations는 멀티뷰에서 부터 시작한다. `Our view-bas
 - 반대로, Alternatively, if the views are rendered in a **reproducible order**, one could also concatenate the 2D descriptors of all the views. 
 	- Unfortunately,aligning a 3D shape to a canonical orientation is hard and sometimes ill-defined. 
 
-###### [A simple way]
+###### [aggregated representation]
 
-In contrast to the above simple approaches, an aggregated representation combining features from multiple views is more desirable since it yields a single, compact descriptor representing the 3D shape.
+- In contrast to the above simple approaches, an aggregated representation combining features from multiple views is more desirable since it yields a single, compact descriptor representing the 3D shape.
 
-Our approach is to learn to combine information from multiple views using a unified CNN architecture that includes a view-pooling layer (Fig. 1). 
+- Our approach is to learn to combine information from multiple views using a unified CNN architecture that includes a view-pooling layer (Fig. 1). 
 
-All the parameters ofour CNN architecture are learned discriminatively to producea single compact descriptor for the 3D shape. 
+- All the parameters of our CNN architecture are learned discriminatively to produce a single compact descriptor for the 3D shape. 
 
-Comparedto exhaustive pairwise comparisons between singleviewrepresentations of 3D shapes, our resulting descriptorscan be directly used to compare 3D shapes leading to significantlyhigher computational efficiency.
+
+
+Compared to exhaustive pairwise comparisons between single view representations of 3D shapes, our resulting descriptors can be directly used to compare 3D shapes leading to significantly higher computational efficiency.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NTMxMDA3NF19
+eyJoaXN0b3J5IjpbLTE1MjkzMTExM119
 -->
