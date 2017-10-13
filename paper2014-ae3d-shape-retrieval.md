@@ -44,10 +44,10 @@ retrieval.
 
 결국 features를 비교하며 검색(`match`) 하는 것은 일종의 **set-to-set distance**문제로 바뀌게 되어 Hausdorff같은 알고리즘(`set-to-set distance`)을 적용 할수 있게 된다. . `Matching 3D shape based on the autoencoder features can be converted to a set-to-set matching problem, conventional set-to-set distance, like the Hausdorff distance, can be adopted.` 
 
-오토인코드된 representation은 global representation이다. SIFT같은건 Our autoencoder based 3D shape representation is a deep learning representation; compared to the representations based on local descriptor, e.g. SIFT, it is a global representation. 
+오토인코드된 representation은 **global representation**이다. SIFT같은건 **local descriptor**이다. `Our autoencoder based 3D shape representation is a deep learning representation; compared to the representations based on local descriptor, e.g. SIFT, it is a global representation. `
 
-This global deep learning representation and the representation based on local descriptors are complementary to each other.
+This **global deep learning representation** and the **representation based on local descriptors** are complementary(상호 보완적) to each other.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk3NTk3MzA3XX0=
+eyJoaXN0b3J5IjpbLTExNjkxODM1Nl19
 -->
