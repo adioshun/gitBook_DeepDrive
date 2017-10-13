@@ -11,17 +11,15 @@
 
 # DeepPano
 
-제안 : A robust representation of 3-D shapes learned with deep convolutional neural networks (CNN). 
+제안 : A robust representation of 3-D shapes learned with deep CNN
 
-Firstly, each 3-D shape is converted into a
-panoramic view, namely a cylinder projection around its principle
-axis. Then, a variant of CNN is specifically designed for learning
-the deep representations directly from such views. Different from
-typical CNN, a row-wise max-pooling layer is inserted between
-the convolution and fully-connected layers, making the learned
-representations invariant to the rotation around a principle axis
+절차 
+- Firstly, each 3-D shape is converted into a panoramic view
+- Then, a variant of CNN is specifically designed for learning the deep representations directly from such views. 
+
+기존 CNN과 다른점은 **row-wise맥스 풀링층**을 Different from typical CNN, a row-wise max-pooling layer is inserted between the convolution and fully-connected layers, making the learned representations invariant to the rotation around a principle axis
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2ODEwMDU5OF19
+eyJoaXN0b3J5IjpbLTIwOTg3NDQ4OV19
 -->
