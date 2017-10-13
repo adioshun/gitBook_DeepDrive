@@ -18,11 +18,17 @@
 
 딥러닝은 감독기반 학습으로 **retrieval task** 에는 맞지 않다. 비감독기반 학습을 위해 **Autoencode**가 제안 되었다. `The above developments of deep learning are in a supervised way and are not suitable for retrieval task.  From the aspect of unsupervised deep learning, Hinton and Krizhevsky [4] proposed the autoencoder algorithm with the application of image retrieval, which is then used for some other specific tasks like face alignment [5].`
 
+```
 오토인코더 설명 
--  The autoencoder can be regarded as a multi-layer sparse coding network. 
+- The autoencoder can be regarded as a multi-layer sparse coding network. 
 - Each node in the autoencoder network can be regarded as a prototype of object image/shape. 
 - From the bottom layer to the top layer, the prototype contains richer semantic information and becomes a better representation. 
 - After the autoencoder network is learnt, the **coefficients obtained** by reconstructing image/shape based on prototypes are used as feature for 3D shape matching and retrieval. 
+- Since the autoencoder can learn feature adaptively to training data, it can get excellent performance for image
+retrieval.
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMTI1MTQ3Ml19
+eyJoaXN0b3J5IjpbLTY4MDkxMzQ0MF19
 -->
