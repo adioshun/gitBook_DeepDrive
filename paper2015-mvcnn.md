@@ -101,14 +101,16 @@ while Schneider et al. [30] proposed using Fisher vectors [26]on SIFT features [
 
 #### C. Convolutional neural networks.
 
- There has been existing
-work on recognizing 3D objects with CNNs [21] using two
-concatenated views (binocular images) as input. Our network
-instead learns a shape representation that aggregates
-information from any number of input views without any
-specific ordering, and always outputs a compact shape descriptor
-of the same size. Furthermore, we leverage both
-image and shape datasets to train our network.
+There has been existing work on recognizing 3D objects with CNNs [21] using two concatenated views (binocular images) as input. 
+```
+[21] Y. LeCun, F. Huang, and L. Bottou. Learning methods for generic object recognition with invariance to pose and lighting. In Proc. CVPR, 2004.
+```
+
+본 논문에서의 CNN과 기존과의 차별점 
+
+Our network instead learns a shape representation that aggregates information from any number of input views without any specific ordering, and always outputs a compact shape descriptor of the same size. 
+
+Furthermore, we leverage both image and shape datasets to train our network.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDc4NzUyNDhdfQ==
+eyJoaXN0b3J5IjpbMTE2OTk2MTExMF19
 -->
