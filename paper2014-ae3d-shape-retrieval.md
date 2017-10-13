@@ -58,14 +58,15 @@ In [9], Cyr and Kimia recognized a 3D shape by comparing a view of the shape wit
 
 ###### [Ohbuchi et al.] 
 
-Ohbuchi et al. [10] utilized local visual features by using the Scale Invariant Feature Transform [11] to retrieve 3D shapes. 
+Ohbuchi et al. [10] utilized local visual features by using the **SIFT**(Scale Invariant Feature Transform [11]) to retrieve 3D shapes. 
 
 A host of local features describing the 3D models is integrated into a histogram using Bag-of-Features [12] to reduce the computation complexity.
 
-###### []
-Vranic [13] presented a composite 3D shape feature vector(DESIRE) which consists of depth buffer images, silhouettesand ray-extents of a polygonal mesh. 
+###### [Vranic]
+Vranic [13] presented a composite 3D shape feature vector(DESIRE) which consists of **depth buffer images**, silhouettes and ray-extents of a polygonal mesh. 
 
 The composite of variousfeature vectors extracted in a canonical coordinate framegenerally performs better than the single method which relieson pairwise alignment of 3D objects. 
+
 ###### []
 
 Later on, Papadakiset al. [14] made use of a hybrid descriptor (Hybrid) whichconsists of both depth buffer based 2D features and sphericalharmonies based 3D features. 
@@ -92,5 +93,5 @@ Prior to that, they alsoproposed a shape descriptor named Geodesic Sphere basedM
 
 Recently, Bai et al. [17] adopted contour fragments asthe input features for learning a BoW model, which is generaland efficient for both 2D and 3D shape matching.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNTkwNzM2M119
+eyJoaXN0b3J5IjpbMTgyNzAyMjkzXX0=
 -->
