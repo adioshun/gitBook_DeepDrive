@@ -122,9 +122,10 @@ view-based representations는 멀티뷰에서 부터 시작한다. `Our view-bas
 간단한 멀티뷰를 이용하는 방법은 `A simple way to use multiple views is to`
 - generate a 2D image descriptor per each view,
 - then use the individual descriptors directly for recognition tasks based on some voting or alignment scheme. 
-- 예: For example, a naıve approach would be to average the individual descriptors, treating all the views as equally important. 
 
-Alternatively, if the views are rendered in a reproducible order, one could also concatenate the 2D descriptors of all the views. 
+예 
+- a naıve approach would be to average the individual descriptors, treating all the views as equally important. 
+- 반대로, Alternatively, if the views are rendered in a reproducible order, one could also concatenate the 2D descriptors of all the views. 
 
 Unfortunately,aligning a 3D shape to a canonical orientation is hard and sometimes ill-defined. 
 
@@ -134,5 +135,5 @@ All the parameters ofour CNN architecture are learned discriminatively to produc
 
 Comparedto exhaustive pairwise comparisons between singleviewrepresentations of 3D shapes, our resulting descriptorscan be directly used to compare 3D shapes leading to significantlyhigher computational efficiency.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTE2NTA4MTNdfQ==
+eyJoaXN0b3J5IjpbMTg1MzI3NzU2MV19
 -->
