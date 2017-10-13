@@ -116,6 +116,8 @@ There has been existing work on recognizing 3D objects with CNNs [21] using two 
  - As a result, information from multiple views is effectively accumulated into a single, compact **shape descriptor**.
 
 ## 3. Method
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NDkzNTY3NV19
+eyJoaXN0b3J5IjpbMzM3NTY5NjIzXX0=
 -->
