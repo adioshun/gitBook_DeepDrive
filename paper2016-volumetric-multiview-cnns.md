@@ -360,9 +360,9 @@ In the subvolume supervision method, different model orientations define differe
 
 Thus it is helpful to augment the training data by varying object orientation and combining predictions through orientation pooling.
 
-Similar to Su-MVCNN [32] which aggregates informationfrom multiple view inputs through a view-poolinglayer and follow-on fully connected layers, we sample 3Dinput from different orientations and aggregate them in amulti-orientation volumetric CNN (MO-VCNN) as shownin Fig 5. 
+Similar to Su-MVCNN [32] which aggregates information from multiple view inputs through a view-pooling layer and follow-on fully connected layers, we sample 3D input from different orientations and aggregate them in a multi-orientation volumetric CNN (MO-VCNN) as shown in Fig 5. 
 
-At training time, we generate different rotationsof the 3D model by changing both azimuth and elevationangles, sampled randomly. 
+At training time, we generate different rotations of the 3D model by changing both azimuth and elevation angles, sampled randomly. 
 
 A volumetric CNN is firstlytrained on single rotations. 
 
@@ -370,7 +370,9 @@ Then we decompose the networkto CNN1 (lower layers) and CNN2 (higher layers)to c
 
 The MO-VCNN’sweights are initialized by a previously trained volumetricCNN with CNN1’s weights fixed during fine-tuning. 
 
-Whilea common practice is to extract the highest level features(features before the last classification linear layer) of multipleorientations, average/max/concatenate them, and traina linear SVM on the combined feature, this is just a specialcase of the MO-VCNN.Compared to 3DShapeNets [33] which only augmentsdata by rotating around vertical axis, our experiment showsthat orientation pooling combined with elevation rotation can greatly increase performance.
+Whilea common practice is to extract the highest level features(features before the last classification linear layer) of multipleorientations, average/max/concatenate them, and traina linear SVM on the combined feature, this is just a specialcase of the MO-VCNN.
+
+Compared to 3DShapeNets [33] which only augments data by rotating around vertical axis, our experiment shows that orientation pooling combined with elevation rotation can greatly increase performance.
 
 
 ## 5. Multi-View Convolutional Neural Networks
@@ -379,5 +381,5 @@ Whilea common practice is to extract the highest level features(features before 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjI1MzkwODddfQ==
+eyJoaXN0b3J5IjpbLTYyNzI4NjU5XX0=
 -->
