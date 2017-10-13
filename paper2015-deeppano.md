@@ -41,7 +41,7 @@ Row-Wise Max-Pooling (RWMP) layer  제안
 #### A. Model based methods 
 - Model based methods calculate a set of features directly from the 3-D shape mesh or its rendered voxels. 
 
-- 예Such methods include the Shape Histogram descriptor [2] and the Spin Images [3]. 
+- 예 : Such methods include the Shape Histogram descriptor [2] and the Spin Images [3]. 
 
 Viewbasedmethods represent 3-D shapes by a set of views [4]–[10].The views can be 2-D projections of the shape or the panoramicview. 
 
@@ -61,5 +61,5 @@ Compared with [14], our method achievesbetter performances on both classificatio
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUwMTkwODAyXX0=
+eyJoaXN0b3J5IjpbLTI5ODYwMzU1NF19
 -->
