@@ -59,11 +59,11 @@ heat kernel signatures on polygon meshes [2, 19],
 
 or extensions of the SIFT and SURF feature descriptors to 3D voxel grids [17]. 
 
-###### [기존 hand-designed]
+###### [ Challenges ]
 
-Developing classifiers and other supervised machine learning algorithms on top of such 3D shape descriptors poses a number of challenges. 
+- 3D Shape를 이용한 분류 문제 처리의 challenges `Developing classifiers and other supervised machine learning algorithms on top of such 3D shape descriptors poses a number of challenges. `
 
-First, the size of organized databases withannotated 3D models is rather limited compared to imagedatasets, e.g., ModelNet contains about 150K shapes (its 40category benchmark contains about 4K shapes). 
+0 First, the size of organized databases with annotated 3D models is rather limited compared to imagedatasets, e.g., ModelNet contains about 150K shapes (its 40category benchmark contains about 4K shapes). 
 
 In contrast,the ImageNet database [9] already includes tens of millionsof annotated images. 
 
@@ -72,5 +72,5 @@ Second, 3D shape descriptors tend to be very high-dimensional, making classifier
 #### B. view-based descriptors
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0Nzg5MTQ4N119
+eyJoaXN0b3J5IjpbLTE1MDk2OTQzNzZdfQ==
 -->
