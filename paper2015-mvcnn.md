@@ -48,9 +48,18 @@ With the exception of the recent work of Wu et al. [37]
 
 ###### [기존 hand-designed]
 
+> 이런게 있었다라는 참고만 
+
 shapes can be represented with histograms or bag-of-features models constructed out of surface normals and curvatures [15], distances, angles,triangle areas or tetrahedra volumes gathered at sampledsurface points [25], 
 
-properties of spherical functions definedin volumetric grids [16], local shape diameters measured atdensely sampled surface points [4], heat kernel signatureson polygon meshes [2, 19], or extensions of the SIFT andSURF feature descriptors to 3D voxel grids [17]. 
+properties of spherical functions defined in volumetric grids [16],
+
+ local shape diameters measured at densely sampled surface points [4], 
+heat kernel signatures on polygon meshes [2, 19], 
+
+or extensions of the SIFT and SURF feature descriptors to 3D voxel grids [17]. 
+
+###### [기존 hand-designed]
 
 Developing classifiers and other supervised machine learning algorithms on top of such 3D shape descriptors poses a number of challenges. 
 
@@ -63,5 +72,5 @@ Second, 3D shape descriptors tend to be very high-dimensional, making classifier
 #### B. view-based descriptors
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMDkyMTE0MF19
+eyJoaXN0b3J5IjpbLTQ0Nzg5MTQ4N119
 -->
