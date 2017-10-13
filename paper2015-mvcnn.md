@@ -108,9 +108,8 @@ There has been existing work on recognizing 3D objects with CNNs [21] using two 
 
 본 논문에서의 CNN과 기존과의 차별점 
 - 입력으로 여러 views를 하고 출력 으로 shape descriptor 생성 
-- Our network instead learns a **shape representation** that aggregates information from any number of input views without any specific ordering, and always **outputs a compact shape descriptor** of the same size. 
-
-Furthermore, we leverage both image and shape datasets to train our network.
+	- Our network instead learns a **shape representation** that aggregates information from any number of input views without any specific ordering, and always **outputs a compact shape descriptor** of the same size. 
+- Train시 이미지와 Shpe dataset을 같이 사용 `Furthermore, we leverage both image and shape datasets to train our network.`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2OTMzNTQ0OV19
+eyJoaXN0b3J5IjpbLTE4NDIwODgyODJdfQ==
 -->
