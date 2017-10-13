@@ -48,16 +48,22 @@ retrieval.
 
 This **global deep learning representation** and the **representation based on local descriptors** are complementary(상호 보완적) to each other.
 
-## RELATED WORK
+## 2. RELATED WORK
 
 **각 보는 각도마다 같아 보이는 두 물체는 같은 물체 이다**라는 생각에서 시작한 View-based접근 방식은  식별력이 좋은 것으로 알려 져 왔다. `Based on the main idea that “two 3D models are similar if they look similar with each other from all viewing angles”, there are plenty of view-based approaches that have been regarded as the most discriminative methods on literature [8].`
 
+###### [Cyr and Kimia] 
 
-Since our shape descriptor is also view-based, we mainly discusssome effective, competing view-based approaches during the following part.In [9], Cyr and Kimia recognized a 3D shape by comparinga view of the shape with all views of 3D objectsusing shock graph matching. 
+In [9], Cyr and Kimia recognized a 3D shape by comparing a view of the shape with all views of 3D objects using shock graph matching. 
 
-Ohbuchi et al. [10] utilized local visual features by using the Scale Invariant FeatureTransform [11] to retrieve 3D shapes. 
+###### [Ohbuchi et al.] 
 
-A host of local featuresdescribing the 3D models is integrated into a histogram usingBag-of-Features [12] to reduce the computation complexity.Vranic [13] presented a composite 3D shape feature vector(DESIRE) which consists of depth buffer images, silhouettesand ray-extents of a polygonal mesh. 
+Ohbuchi et al. [10] utilized local visual features by using the Scale Invariant Feature Transform [11] to retrieve 3D shapes. 
+
+A host of local features describing the 3D models is integrated into a histogram using Bag-of-Features [12] to reduce the computation complexity.
+
+
+Vranic [13] presented a composite 3D shape feature vector(DESIRE) which consists of depth buffer images, silhouettesand ray-extents of a polygonal mesh. 
 
 The composite of variousfeature vectors extracted in a canonical coordinate framegenerally performs better than the single method which relieson pairwise alignment of 3D objects. 
 
@@ -75,5 +81,5 @@ Prior to that, they alsoproposed a shape descriptor named Geodesic Sphere basedM
 
 Recently, Bai et al. [17] adopted contour fragments asthe input features for learning a BoW model, which is generaland efficient for both 2D and 3D shape matching.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NDg1MjI1OV19
+eyJoaXN0b3J5IjpbMTQ0MDk1MDgxM119
 -->
