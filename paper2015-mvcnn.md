@@ -91,11 +91,13 @@ Alternatively,the silhouette of an object can be decomposed into parts and then 
 
 Cyr and Kimia [8] defined similarity metrics based on **curve matching** and **grouped similar views**, called aspect graphs of 3D models [18]. 
 
-###### [Eitz et al]
+###### [Eitz et al/Schneider et al]
 
-Eitz et al. [12] compared humans ketches with line drawings of 3D models produced from several different views based on local Gabor filters, while Schneider et al. [30] proposed using Fisher vectors [26]on SIFT features [22] for representing human sketches of shapes. 
+Eitz et al. [12] compared humans ketches with line drawings of 3D models produced from several different views based on local Gabor filters, 
 
-These descriptors are largely “hand-engineered”and some do not generalize well across different domains
+while Schneider et al. [30] proposed using Fisher vectors [26]on SIFT features [22] for representing human sketches of shapes. 
+
+단점 : These descriptors are largely “**hand-engineered**”and some do **not generalize** well across different domains
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MTA1MDg3NV19
+eyJoaXN0b3J5IjpbLTMxODE5NDQzXX0=
 -->
