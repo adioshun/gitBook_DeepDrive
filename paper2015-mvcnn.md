@@ -294,9 +294,9 @@ Using fc7 (after ReLU non-linearity) in an MVCNN as an aggregated shape descript
 
 Perhaps more importantly, the aggregated descriptoris readily available for a variety of tasks, e.g., shape classification and retrieval, and offers significant speed-ups against multiple image descriptors.
 
-An MVCNN can also be used as a general frame workto integrate perturbed image samples (also known as datajittering). 
+An MVCNN can also be used as a general frame work to integrate perturbed image samples (also known as datajittering). 
 
 We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0ODgxNzM4XX0=
+eyJoaXN0b3J5IjpbNDI1ODg1OTcwXX0=
 -->
