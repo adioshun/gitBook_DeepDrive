@@ -197,7 +197,48 @@ This is the most straightforward approach to utilize the multi-view representati
 
 However, it results in multiple 2D image descriptors per 3D shape, one per view, which need to be integrated somehow for recognition tasks.
 
+#### A. Image descriptors.
 
+We consider two types of image descriptors
+for each 2D view: a state-of-the-art “hand-crafted”
+image descriptor based on Fisher vectors [29] with multiscale
+SIFT, as well as CNN activation features [10].
+The Fisher vector image descriptor is implemented using
+VLFeat [36]. For each image multi-scale SIFT descriptors
+are extracted densely. These are then projected to 80 dimensions
+with PCA, followed by Fisher vector pooling with a
+Gaussian mixture model with 64 components, square-root
+and `2 normalization.
+For our CNN features we use the VGG-M network from [3] which consists of mainly five convolutional layers
+conv1,...,5 followed by three fully connected layers fc6,...,8
+and a softmax classification layer. The penultimate layer
+fc7 (after ReLU non-linearity, 4096-dimensional) is used
+as image descriptor. The network is pre-trained on ImageNet
+images from 1k categories, and then fine-tuned on all
+2D views of the 3D shapes in training set. As we show in
+our experiments, fine-tuning improves performance significantly.
+Both Fisher vectors and CNN features yield very
+good performance in classification and retrieval compared
+with popular 3D shape descriptors (e.g., SPH [16], LFD [5])
+as well as 3D ShapeNets [37].
+
+#### B. Classification. 
+
+We train one-vs-rest linear SVMs (each
+view is treated as a separate training sample) to classify
+shapes using their image features. At test time, we simply
+sum up the SVM decision values over all 12 views and return
+the class with the highest sum. Alternative approaches,
+e.g., averaging image descriptors, lead to worse accuracy.
+
+#### C. Retrieval. 
+
+A distance or similarity measure is required for
+retrieval tasks. For shape x with nx image descriptors and
+shape y with ny image descriptors, the distance between
+them is defined in Eq. 1. Note that the distance between
+two 2D images is defined as the `2 distance between their
+feature vectors, i.e. kxi − yjk2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NTQ4NzkyOV19
+eyJoaXN0b3J5IjpbMjA3NDA3NzI3MV19
 -->
