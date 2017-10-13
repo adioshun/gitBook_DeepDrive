@@ -23,7 +23,11 @@
 
 - Representation에 위해서 성능이 좌우됨 `The performance of many tasks, including shape classification and shape retrieval, heavily depend on the quality of the representation`
 
-- 본 논문은 DeepPano을 제안, 
+본 논문은 DeepPano을 제안, 
+- Directly learned from the panoramic views of 3-D models
+- The panoramic view is a **cylinder projection** of a 3-D model around its principle axis.
+- Therefore, the panoramic views are in the **form of 2-D images**,
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzIzMTQ0MjddfQ==
+eyJoaXN0b3J5IjpbLTExNDkxOTU5Ml19
 -->
