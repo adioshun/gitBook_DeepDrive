@@ -17,6 +17,13 @@
 . Currently, in the context of 3D shape recognition,
 shape descriptors are mainly hand-crafted and deep learning
 representation has not been widely applied.
+
+
+The above developments of deep learning are in a supervised
+way and are not suitable for retrieval task. From the aspect
+of unsupervised deep learning, Hinton and Krizhevsky [4]
+proposed the autoencoder algorithm with the application of image retrieval, which is then used for some other specific
+tasks like face alignment [5].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzI0NTkyNTddfQ==
+eyJoaXN0b3J5IjpbLTIxNDczNjExMzJdfQ==
 -->
