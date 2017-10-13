@@ -98,6 +98,17 @@ Eitz et al. [12] compared humans ketches with line drawings of 3D models produce
 while Schneider et al. [30] proposed using Fisher vectors [26]on SIFT features [22] for representing human sketches of shapes. 
 
 단점 : These descriptors are largely “**hand-engineered**”and some do **not generalize** well across different domains
+
+#### C. Convolutional neural networks.
+
+ There has been existing
+work on recognizing 3D objects with CNNs [21] using two
+concatenated views (binocular images) as input. Our network
+instead learns a shape representation that aggregates
+information from any number of input views without any
+specific ordering, and always outputs a compact shape descriptor
+of the same size. Furthermore, we leverage both
+image and shape datasets to train our network.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxODE5NDQzXX0=
+eyJoaXN0b3J5IjpbLTEwMDc4NzUyNDhdfQ==
 -->
