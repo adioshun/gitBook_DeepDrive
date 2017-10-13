@@ -9,9 +9,10 @@
 
 # AE3D Shape Retrieval
 
-we project 3D shapes into 2D space and use autoencoder for feature learning on the 2D images
+- 3D를 2D로 투영 `we project 3D shapes into 2D space` 
+- 오토인코더를 이용하여 특징 학습 ` use autoencoder for feature learning on the 2D images`
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMjU1MjQyNV19
+eyJoaXN0b3J5IjpbLTg1Njk4MjQ3MV19
 -->
