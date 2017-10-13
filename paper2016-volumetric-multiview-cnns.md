@@ -185,14 +185,13 @@ Two representations of generic 3D shapes are popularly used for object classific
 
 Tensor로 저장되어 있으므로 두개다 CNN으로 학습 할 수 있다. `Stored as tensors, both representations can easily be used to train convolutional neural networks, i.e., volumetric CNNs and multi-view CNNs.`
 
-당연히 `volumetric`이 Multiview`보다 많은 데이터를 포함 하고 있다.`Intuitively, a volumetric representation should encode as much information, if not more, than its multi-view counterpart. \`
+당연히 `volumetric`이 Multiview 보다 많은 데이터를 포함 하고 있다. `Intuitively, a volumetric representation should encode as much information, if not more, than its multi-view counterpart.`
 
 그러나 실험결과 `multiview CNNs`가 더 좋은 성능을 보인다. `However, experiments indicate that multiview CNNs produce superior performance in object classification.`
 
 ![](https://i.imgur.com/I1yMqvH.png)
 
 The gap seems to be caused by two factors:
-
 * input resolution
 * network architecture differences.
 
@@ -381,5 +380,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMDk4NjMxMF19
+eyJoaXN0b3J5IjpbLTg1ODMzMTk0OF19
 -->
