@@ -65,10 +65,9 @@ or extensions of the SIFT and SURF feature descriptors to 3D voxel grids [17].
 
 - 데이터셋이 적다  First, the size of organized databases with annotated 3D models is rather limited compared to imagedatasets, e.g., ModelNet contains about 150K shapes (its 40category benchmark contains about 4K shapes). In contrast,the ImageNet database [9] already includes tens of millionsof annotated images. 
 
-- Second, 3D shape descriptors tend to be very high-dimensional, making classifiers prone to over-fitting due to the so-called ‘curse of dimensionality’.
-
+- 오버피팅 문제 : 3D데이터는 고차원이라 차원의 저주로 인해 오버피팅 발생  `Second, 3D shape descriptors tend to be very high-dimensional, making classifiers prone to over-fitting due to the so-called ‘curse of dimensionality’.`
 #### B. view-based descriptors
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5ODczODAwXX0=
+eyJoaXN0b3J5IjpbLTIwMTIxMzUxODhdfQ==
 -->
