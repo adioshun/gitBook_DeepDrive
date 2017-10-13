@@ -187,22 +187,17 @@ We experimented with two camera setups.
 - Then we generate 4 rendered views from each camera, using 0, 90, 180, 270 degrees rotation along the axis passing through the camera and the object centroid, yielding total 80 views.
 ```
 
-We note that using different shading coefficients or illumination models did not affect our output descriptors due to the invariance of the learned filters to illumination changes, as also observed in image-based CNNs [20, 10].
-
-Adding more or different viewpoints is trivial, however, we found that the above camera setups were already enough
-to achieve high performance. 
-
-Finally, rendering each mesh from all the viewpoints takes no more than ten milliseconds on modern graphics hardware.
 
 
 ### 3.2 Recognition with Multi-view Representations
 
 In the first setting, we make use of existing 2D image features directly and produce a descriptor for each view. 
 
-This is the most straightforward approach to
-utilize the multi-view representation. However, it results in
-multiple 2D image descriptors per 3D shape, one per view,
-which need to be integrated somehow for recognition tasks.
+This is the most straightforward approach to utilize the multi-view representation. 
+
+However, it results in multiple 2D image descriptors per 3D shape, one per view, which need to be integrated somehow for recognition tasks.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNzY4Mzk0Nl19
+eyJoaXN0b3J5IjpbMTc2NTQ4NzkyOV19
 -->
