@@ -253,7 +253,29 @@ We investigated alternative distance measures, such as minimun distance among al
 
 ### 3.3. Multi-view CNN: Learning to Aggregate Views
 
+Although having multiple separate descriptors for each3D shape can be successful for classification and retrieval compared to existing 3D descriptors, it can be inconvenient and inefficient in many cases. 
 
+For example, in Eq. 1, we need to compute all $$n_x \times n_y pairwise distances between imagesin order to compute distance between two 3D shapes.Simply averaging or concatenating the image descriptorsleads to inferior performance. 
+
+In this section, we focus onthe problem of learning to aggregate multiple views in order to synthesize the information from all views into a single,compact 3D shape descriptor.We design the multi-view CNN (MVCNN) on top ofimage-based CNNs (Fig. 1). 
+
+Each image in a 3D shape’smulti-view representation is passed through the first partof the network (CNN1) separately, aggregated at a viewpoolinglayer, and then sent through the remaining partof the network (CNN2). 
+
+All branches in the first part ofthe network share the same parameters in CNN1. 
+
+We useelement-wise maximum operation across the views in theview-pooling layer. 
+
+An alternative is element-wise meanoperation, but it is not as effective in our experiments. 
+
+Theview-pooling layer can be placed anywhere in the network.We show in our experiments that it should be placed closeto the last convolutional layer (conv5) for optimal classifi-cation and retrieval performance. 
+
+View-pooling layers areclosely related to max-pooling layers and maxout layers[14], with the only difference being the dimension that theirpooling operations are carried out on. 
+
+The MVCNN is a directedacyclic graphs and can be trained or fine-tuned usingstochastic gradient descent with back-propagation.Using fc7 (after ReLU non-linearity) in an MVCNNas an aggregated shape descriptor, we achieve higher performancethan using separate image descriptors from animage-based CNN directly, especially in retrieval (62.8%→ 70.1%). 
+
+Perhaps more importantly, the aggregated descriptoris readily available for a variety of tasks, e.g., shapeclassification and retrieval, and offers significant speed-upsagainst multiple image descriptors.An MVCNN can also be used as a general frameworkto integrate perturbed image samples (also known as datajittering). 
+
+We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0NTc0Mjc3OV19
+eyJoaXN0b3J5IjpbLTEwMTkyNjgwNl19
 -->
