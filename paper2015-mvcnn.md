@@ -263,11 +263,15 @@ existing 3D descriptors보다 **multiple separate descriptors**를 이용하면 
 본 장에서는 멀티뷰를 합치는 문제에 대하여 알아 보겠다. ㅣ In this section, we focus on the **problem of learning to aggregate multiple views** in order to synthesize the information from all views into a single, compact 3D shape descriptor.
 
 ![](https://i.imgur.com/PaExi1h.png)
-
+```
+[Figure 1. Multi-view CNN for 3D shape recognition (illustrated using the 1st camera setup)].
+- At test time a 3D shape is rendered from 12 different views and are passed thorough CNN1 to extract view based features. 
+- These are then pooled across views and passed through CNN2 to obtain a compact shape descriptor
+```
 
 We design the multi-view CNN (MVCNN) on top of image-based CNNs (Fig. 1). 
 
-Each image in a 3D shape’smulti-view representation is passed through the first partof the network (CNN1) separately, aggregated at a viewpoolinglayer, and then sent through the remaining partof the network (CNN2). 
+Each image in a 3D shape’s multi-view representation is passed through the first part of the network (CNN1) separately, aggregated at a view pooling layer, and then sent through the remaining part of the network (CNN2). 
 
 All branches in the first part ofthe network share the same parameters in CNN1. 
 
@@ -285,5 +289,5 @@ Perhaps more importantly, the aggregated descriptoris readily available for a va
 
 We illustrate this capability of MVCNNs in thecontext of sketch recognition in Sect. 4.2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3ODE4NDY1N119
+eyJoaXN0b3J5IjpbMTgwMjM1NjA1NF19
 -->
