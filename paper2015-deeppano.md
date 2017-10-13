@@ -60,6 +60,8 @@ Row-Wise Max-Pooling (RWMP) layer  제안
 
 Our method is related to previously introduced PANORAMA[6]. 
 
+
+
 In [6], Panagiotis et al. proposed to represent a 3-D shape bythe Discrete Fourier Transform and Discrete Wavelet Transformdescriptors calculated from a set of panoramic views. 
 
 However,the panoramic view shifts when the 3-D shape rotates along itsprinciple axis. 
@@ -71,5 +73,5 @@ As a result,the representation is invariant to the 3-D shape rotation.To summari
 The experiments on large-scale 3-D shape datasetsshow that this representation is effective in both classificationand retrieval tasks, outperforming previous methods by a largemargin.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjkwNDU0MjFdfQ==
+eyJoaXN0b3J5IjpbLTIxNzA0NjM1M119
 -->
