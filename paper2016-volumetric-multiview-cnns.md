@@ -294,8 +294,9 @@ We implement this design through an architecture shown in Fig 3.
 	- **The lower branch**: 원래 업무 수행  takes the whole object as input for traditional classification.
 	- **The upper branch** : 보조 업무 수행 is a novel branch for **auxiliary tasks**. 
 
-- 512개로  쪼갬 : It slices the `512 × 2 × 2 × 2` 4D tensor (2 grids along x, y, z axes and 512 channels) into 2×2×2 = 8 vectors of dimension 512.
+- 두개의 네트어크로 나누어 지기 전에 512개로  쪼갬 : It slices the `512 × 2 × 2 × 2` 4D tensor (2 grids along x, y, z axes and 512 channels) into 2×2×2 = 8 vectors of dimension 512.
 
+각 벡터 마다 분류 작업 수행 
 - We set up a classification task for each vector.
 
 - A fully connected layer and a softmax layer are then appended independently to each vector to construct classification losses.
@@ -371,5 +372,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MzIyMTAwMF19
+eyJoaXN0b3J5IjpbLTE2OTExMjUyOTldfQ==
 -->
