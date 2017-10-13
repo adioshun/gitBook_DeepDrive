@@ -173,8 +173,7 @@ In this case, we create 12 rendered views by placing 12 virtual cameras around t
 
 The cameras are elevated 30 degrees from the ground plane, pointing towards the centroid of the mesh. 
 
-The centroid is calculated as the weighted average of the mesh face centers, where
-the weights are the face areas. 
+The centroid is calculated as the weighted average of the mesh face centers, where the weights are the face areas. 
 
 ##### 나. For the 2nd camera setup,
 
@@ -189,5 +188,5 @@ generate 4 rendered views from each camera, using 0, 90,
 180, 270 degrees rotation along the axis passing through the
 camera and the object centroid, yielding total 80 views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUyNDkwMDAyXX0=
+eyJoaXN0b3J5IjpbLTM0MTg3MDI1OF19
 -->
