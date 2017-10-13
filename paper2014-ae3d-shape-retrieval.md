@@ -48,6 +48,9 @@ retrieval.
 
 This **global deep learning representation** and the **representation based on local descriptors** are complementary(상호 보완적) to each other.
 
+## RELATED WORK
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjkxODM1Nl19
+eyJoaXN0b3J5IjpbLTQ1MTY5OTgyNF19
 -->
