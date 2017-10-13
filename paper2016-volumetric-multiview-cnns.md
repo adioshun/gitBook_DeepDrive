@@ -332,7 +332,7 @@ As illustrated in Fig 4, the neural network has two modules:
 
 -  기존 방식은 파라미터수가 많은 문제가 있다. `As a comparison, with traditional neural networks constructed from isotropic kernels, introducing long-range interactions at an early stage can only be achieved through large kernels, which inevitably introduce many more parameters.`
 
-#### ㅠ
+#### B. 
 - After anisotropic probing, we use an adapted NIN network [23] to address the classification problem.
 
 - Our anistropic probing network is capable of capturing internal structures of objects through its X-ray like projection mechanism.
@@ -374,5 +374,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM4OTgxMzgyXX0=
+eyJoaXN0b3J5IjpbLTEwNTMyNTYwNl19
 -->
