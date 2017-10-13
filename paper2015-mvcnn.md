@@ -238,7 +238,20 @@ retrieval tasks. For shape x with nx image descriptors and
 shape y with ny image descriptors, the distance between
 them is defined in Eq. 1. Note that the distance between
 two 2D images is defined as the `2 distance between their
-feature vectors, i.e. kxi − yjk2.
+feature vectors, i.e. kxi − yjk2. 
+
+
+To interpret this definition, we can first define the distance
+between a 2D image xi and a 3D shape y as
+d(xi
+, y) = minj kxi − yjk2. Then given all nx distances
+between x’s 2D projections and y, the distance between
+these two shapes is computed by simple averaging. In Eq. 1,
+this idea is applied in both directions to ensure symmetry.
+We investigated alternative distance measures, such as
+minimun distance among all nx · ny image pairs and the
+distance between average image descriptors, but they all led
+to inferior performance
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NDA3NzI3MV19
+eyJoaXN0b3J5IjpbNjQ0MjgxNDg5XX0=
 -->
