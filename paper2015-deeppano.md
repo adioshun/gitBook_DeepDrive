@@ -56,9 +56,20 @@ Row-Wise Max-Pooling (RWMP) layer  제안
 	- Different from [14] which performs 3-D convolutionson the **voxels**, we extract the representation of a 3-D shapefrom **2-D images**. 
 	- 성능도 좋다. Compared with [14], our method achieves better performances on both classification and retrieval tasks(refer to Section III), and is simpler to implement using any open source framework.
 
+### 1.2 저자의 기존 연구 PANORAMA
 
+Our method is related to previously introduced PANORAMA[6]. 
 
+In [6], Panagiotis et al. proposed to represent a 3-D shape bythe Discrete Fourier Transform and Discrete Wavelet Transformdescriptors calculated from a set of panoramic views. 
+
+However,the panoramic view shifts when the 3-D shape rotates along itsprinciple axis. 
+
+In [6], this problem is alleviated by pose normalization.As illustrated in Fig. 1, the convolutional feature mapsextracted from panoramic views shifts when the 3-D shape rotates.We pool the the responses of each row so that the resultingrepresentation is not affected by this kind of shift. 
+
+As a result,the representation is invariant to the 3-D shape rotation.To summarize, the key contribution of this letter is the deeppanoramic representation that is rotation-invariant to the principleaxis. 
+
+The experiments on large-scale 3-D shape datasetsshow that this representation is effective in both classificationand retrieval tasks, outperforming previous methods by a largemargin.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjk5MjY5MzVdfQ==
+eyJoaXN0b3J5IjpbLTExNjkwNDU0MjFdfQ==
 -->
