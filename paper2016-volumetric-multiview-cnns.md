@@ -294,13 +294,13 @@ We implement this design through an architecture shown in Fig 3.
 	- **The lower branch**: 원래 업무 수행  takes the whole object as input for traditional classification.
 	- **The upper branch** : 보조 업무 수행 is a novel branch for **auxiliary tasks**. 
 
-- It slices the `512 × 2 × 2 × 2` 4D tensor (2 grids along x, y, z axes and 512 channels) into 2×2×2 = 8 vectors of dimension 512.
+- 512개로  쪼갬 : It slices the `512 × 2 × 2 × 2` 4D tensor (2 grids along x, y, z axes and 512 channels) into 2×2×2 = 8 vectors of dimension 512.
 
 - We set up a classification task for each vector.
 
 - A fully connected layer and a softmax layer are then appended independently to each vector to construct classification losses.
 
-- Simple calculation shows that the receptive field of each task is 22×22×22, coverin groughly 2/3 of the entire volume.
+- Simple calculation shows that the receptive field of each task is 22×22×22, cover in groughly 2/3 of the entire volume.
 
 ### 4.3 Network 2: Anisotropic Probing
 
@@ -371,5 +371,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDUyNzc5MF19
+eyJoaXN0b3J5IjpbLTk3MzIyMTAwMF19
 -->
