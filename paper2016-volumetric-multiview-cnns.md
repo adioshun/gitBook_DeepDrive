@@ -330,7 +330,7 @@ As illustrated in Fig 4, the neural network has two modules:
 -  이 모듈이 가지는 장점 `In contrast to traditional isotropic kernels, an anisotropic probing module has`
 	-  the advantage of aggregating long range interactions in the early feature learning stage with fewer parameters.
 
-- As a comparison, with traditional neural networks constructed from isotropic kernels, introducing long-range interactions at an early stage can only be achieved through large kernels, which inevitably introduce many more parameters.
+-  기존 방식은 파라미터수가 많은 문제가 있다. `As a comparison, with traditional neural networks constructed from isotropic kernels, introducing long-range interactions at an early stage can only be achieved through large kernels, which inevitably introduce many more parameters.`
 
 - After anisotropic probing, we use an adapted NIN network [23] to address the classification problem.
 
@@ -373,5 +373,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTM0NDk3OTZdfQ==
+eyJoaXN0b3J5IjpbLTUyNzE2MDE0MF19
 -->
