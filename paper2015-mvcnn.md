@@ -201,7 +201,7 @@ However, it results in multiple 2D image descriptors per 3D shape, one per view,
 
 We consider two types of image descriptors for each 2D view: 
 - a state-of-the-art “hand-crafted” image descriptor based on Fisher vectors [29] with multiscale SIFT, 
-- as well as CNN activation features [10].
+-  CNN activation features [10].
 
 ##### 가. The Fisher vector
 
@@ -209,21 +209,19 @@ The Fisher vector image descriptor is implemented using VLFeat [36].
 
 For each image multi-scale SIFT descriptors are extracted densely. 
 
-These are then projected to 80 dimensions
-with PCA, followed by Fisher vector pooling with a
-Gaussian mixture model with 64 components, square-root
-and `2 normalization.
-For our CNN features we use the VGG-M network from [3] which consists of mainly five convolutional layers
-conv1,...,5 followed by three fully connected layers fc6,...,8
-and a softmax classification layer. The penultimate layer
-fc7 (after ReLU non-linearity, 4096-dimensional) is used
-as image descriptor. The network is pre-trained on ImageNet
-images from 1k categories, and then fine-tuned on all
-2D views of the 3D shapes in training set. As we show in
-our experiments, fine-tuning improves performance significantly.
-Both Fisher vectors and CNN features yield very
-good performance in classification and retrieval compared
-with popular 3D shape descriptors (e.g., SPH [16], LFD [5])
+These are then projected to 80 dimensions with PCA, followed by Fisher vector pooling with a Gaussian mixture model with 64 components, square-root and `2 normalization.
+
+##### 나. CNN features
+
+For our CNN features we use the VGG-M network from [3] which consists of mainly five convolutional layers conv1,...,5  ollowed by three fully connected layers fc6,...,8 and a softmax classification layer. 
+
+The penultimate layer fc7 (after ReLU non-linearity, 4096-dimensional) is used as image descriptor. 
+
+The network is pre-trained on ImageNet images from 1k categories, and then fine-tuned on all 2D views of the 3D shapes in training set. 
+
+As we show in our experiments, fine-tuning improves performance significantly. 
+
+Both Fisher vectors and CNN features yield very good performance in classification and retrieval compared with popular 3D shape descriptors (e.g., SPH [16], LFD [5])
 as well as 3D ShapeNets [37].
 
 #### B. Classification. 
@@ -257,5 +255,5 @@ minimun distance among all nx · ny image pairs and the
 distance between average image descriptors, but they all led
 to inferior performance
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTk1OTM1OTVdfQ==
+eyJoaXN0b3J5IjpbLTk4NzU0MTZdfQ==
 -->
