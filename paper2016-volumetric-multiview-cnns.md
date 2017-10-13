@@ -281,7 +281,7 @@ We implement this design through an architecture shown in Fig 3.
 - For example, mlpconv(48, 6, 2; 48; 48) is a composition of conv(48, 6, 2), ReLU, conv(48, 1, 1), ReLU, conv(48, 1, 1) and ReLU layers.
 - Note that we add dropout layers with rate=0.5 after fully connected layers.
 ```
-#### A. Layer 1, 2
+#### A. Layer 1, 2, 3 
 - The first three layers are mlpconv (multilayer perceptron convolution) layers, a 3D extension of the 2D mlpconv proposed by [23].
 
 - The input and output of our mlpconv layers are both 4D tensors.
@@ -375,5 +375,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg1NzgwMDg5XX0=
+eyJoaXN0b3J5IjpbLTY3NjUxNDA1NF19
 -->
