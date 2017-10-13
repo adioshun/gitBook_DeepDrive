@@ -65,10 +65,25 @@ or extensions of the SIFT and SURF feature descriptors to 3D voxel grids [17].
 
 - 데이터셋이 적다  First, the size of organized databases with annotated 3D models is rather limited compared to imagedatasets, e.g., ModelNet contains about 150K shapes (its 40category benchmark contains about 4K shapes). In contrast,the ImageNet database [9] already includes tens of millionsof annotated images. 
 
-- 오버피팅 문제 : 3D데이터는 고차원이라 차원의 저주로 인해 오버피팅 발생  `Second, 3D shape descriptors tend to be very high-dimensional, making classifiers prone to over-fitting due to the so-called ‘curse of dimensionality’.`
+- 오버피팅 문제 : 3D데이터는 고차원이라 **차원의 저주**로 인해 오버피팅 발생  `Second, 3D shape descriptors tend to be very high-dimensional, making classifiers prone to over-fitting due to the so-called ‘curse of dimensionality’.`
 
 #### B. view-based descriptors
 
+On the other hand view-based descriptors have a number of desirable properties: they are relatively low-dimensional,efficient to evaluate, and robust to 3D shape representationartifacts, such as holes, imperfect polygon mesh tesselations,noisy surfaces. 
+
+The rendered shape views can also bedirectly compared with other 2D images, silhouettes or evenhand-drawn sketches. 
+
+An early example of a view-basedapproach is the work by Murase and Nayar [24] that recognizesobjects by matching their appearance in parametriceigenspaces formed by large sets of 2D renderings of 3Dmodels under varying poses and illuminations. 
+
+Another example,which is particularly popular in computer graphicssetups, is the LightField descriptor [5] that extracts a set ofgeometric and Fourier descriptors from object silhouettesrendered from several different viewpoints. 
+
+Alternatively,the silhouette of an object can be decomposed into parts andthen represented by a directed acyclic graph (shock graph)[23]. 
+
+Cyr and Kimia [8] defined similarity metrics basedon curve matching and grouped similar views, called aspectgraphs of 3D models [18]. 
+
+Eitz et al. [12] compared humansketches with line drawings of 3D models produced fromseveral different views based on local Gabor filters, whileSchneider et al. [30] proposed using Fisher vectors [26]on SIFT features [22] for representing human sketches ofshapes. 
+
+These descriptors are largely “hand-engineered”and some do not generalize well across different domains
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxOTYzNjI2Ml19
+eyJoaXN0b3J5IjpbMTYxMjkzOTc4Ml19
 -->
