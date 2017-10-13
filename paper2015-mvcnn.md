@@ -305,6 +305,12 @@ We illustrate this capability of MVCNNs in the context of sketch recognition in 
 ## 4. Experiments
 
 
+## 5. Conclusion
+
+While the world is full of 3D shapes, as humans at least, we understand that world is mostly through 2D images. 
+
+We
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk5Mjc2NzQ4XX0=
+eyJoaXN0b3J5IjpbNzI1OTE1ODI1XX0=
 -->
