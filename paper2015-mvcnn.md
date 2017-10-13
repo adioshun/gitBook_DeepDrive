@@ -34,8 +34,8 @@ Native 3D formats인 Voxel grid를 사용 하는 방법이 ShapeNet을 통해 �
 ### 2.1 Shape descriptors
 
 
-#### B
+#### B. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTU5ODAzMzhdfQ==
+eyJoaXN0b3J5IjpbMTk4Mjk5NDc4MF19
 -->
