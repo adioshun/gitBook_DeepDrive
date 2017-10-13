@@ -28,6 +28,7 @@
 - The panoramic view is a **cylinder projection** of a 3-D model around its principle axis.
 - Therefore, the panoramic views are in the **form of 2-D images**,
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDkxOTU5Ml19
+eyJoaXN0b3J5IjpbLTEwMjk5NTk4MDJdfQ==
 -->
