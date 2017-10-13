@@ -21,7 +21,7 @@ Representation of 3D shapes for recognition에 대한 학계의 오래된 질문
 
 Native 3D formats인 Voxel grid를 사용 하는 방법이 ShapeNet을 통해 제안 되었다[37]. 
 
-3D를 
+ View-based도 좋은 성능을 보인다. 실험 결과 여러 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MjIxNDU4Ml19
+eyJoaXN0b3J5IjpbLTIzNDcxMzg1MV19
 -->
