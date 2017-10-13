@@ -292,7 +292,7 @@ We implement this design through an architecture shown in Fig 3.
 #### B. Layer 4 :  둘로 나누어짐 
 - At the fourth layer, the network branches into two.
 	- **The lower branch** takes the whole object as input for traditional classification.
-	- **The upper branch** is a novel branch for auxiliary tasks. 
+	- **The upper branch** is a novel branch for **auxiliary tasks**. 
 
 - It slices the 512 × 2 × 2 × 2 4D tensor (2 grids along x, y, z axes and 512 channels) into 2×2×2 = 8 vectors of dimension 512.
 
@@ -371,5 +371,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEyMjQwMDk0XX0=
+eyJoaXN0b3J5IjpbMTA1NTQyNjkxMF19
 -->
