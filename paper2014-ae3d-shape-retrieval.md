@@ -131,10 +131,8 @@ Prior to that, they also proposed a shape descriptor named Geodesic Sphere based
 Recently, Bai et al. [17] adopted contour fragments as the input features for learning a BoW model, which is general and efficient for both 2D and 3D shape matching.
 
 ```
-[17] Bai, X., Rao, C., Wang, X.: Shape Vocabulary: A Robust and Efficient
-Shape Representation for Shape Matching. IEEE Transactions on Image
-Processing 29 (2014) 3935–3949
+[17] Bai, X., Rao, C., Wang, X.: Shape Vocabulary: A Robust and Efficient Shape Representation for Shape Matching. IEEE Transactions on Image Processing 29 (2014) 3935–3949
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMjYwODY4OF19
+eyJoaXN0b3J5IjpbLTIxMTYzMTkwNDRdfQ==
 -->
