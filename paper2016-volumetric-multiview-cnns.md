@@ -21,7 +21,7 @@ In this paper, we aim to improve both `volumetric CNNs` and `multi-view CNNs` ac
 
 목표 : object classification task on 3D data obtained from both `CAD models` and commodity `RGB-D` sensors.
 
-2D -&gt; 3D 확장시 고려 사항
+2D $$\rightarrow$$ 3D 확장시 고려 사항
 
 * the additional computational complexity \(volumetric domain\)
 * data sparsity

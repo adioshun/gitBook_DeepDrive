@@ -2,12 +2,10 @@
 | --- | --- |
 | 저자\(소속\) | Daniel Maturana \(CMU\) |
 | 학회/년도 | IROS 2015, [논문](http://ieeexplore.ieee.org/document/7353481/) |
-| 키워드 | Volumetric Occupancy Grid + 3D CNN, LiDAR와 비교 실험(결과는?) |
-| 데이터셋/모델 | Sydney Urban Objects(차량 고려), NYUv2, ModelNet40  |
+| 키워드 | Voxnet2015, Volumetric Occupancy Grid + 3D CNN, LiDAR와 비교 실험\(결과는?\) |
+| 데이터셋/모델 | Sydney Urban Objects\(차량 고려\), NYUv2, ModelNet40 |
 | 참고 | 이전연구: 3D convolutional neural networks for landing zone detection from lidar,” in ICRA, 2015. |
 | 코드 | [Theano+Lasagne](https://github.com/dimatura/voxnet) |
-
-
 
 # VoxNet
 
@@ -128,275 +126,304 @@ We also study different representations of occupancy and propose techniques to i
 
 ## 3. Approach
 
-- 입력 : The input to our algorithm is a **point cloud segment**, 
-  - which can originate from segmentation methods such as [12], [29],or a “sliding box” if performing detection. 
-  
-> The **segment** is usually given by the **intersection of a point cloud** with a **bounding box** and may include **background clutter**. 
+* 입력 : The input to our algorithm is a **point cloud segment**, 
+  * which can originate from segmentation methods such as \[12\], \[29\],or a “sliding box” if performing detection. 
 
-- 본 제안 기능 : 물체 분류 예측 `Our task is to predict an object class label for the segment. `
+> The **segment** is usually given by the **intersection of a point cloud** with a **bounding box** and may include **background clutter**.
 
-- 본 제안 요소(2가지) `Our system for this task has two main components:`
-  - A **volumetric grid representing** our estimate of spatial occupancy, 
-  - A **3DCNN** that predicts a class label directly from the occupancy grid. 
+* 본 제안 기능 : 물체 분류 예측 `Our task is to predict an object class label for the segment.`
 
+* 본 제안 요소\(2가지\) `Our system for this task has two main components:`
+
+  * A **volumetric grid representing** our estimate of spatial occupancy, 
+  * A **3DCNN** that predicts a class label directly from the occupancy grid. 
 
 ### 3.1 Volumetric Occupancy Grid
 
-#### A. Occupancy grids ([30], [31]) 
-  - **Represent** the state of the environment as a 3D lattice(격차) of random variables (each corresponding to a voxel) 
-  - **Maintain** a probabilistic estimate of their occupancy as a function of incoming sensor data and prior knowledge.
+#### A. Occupancy grids \(\[30\], \[31\]\)
 
-#### B. occupancy grids를 사용하는 이유(2가지) 
+* **Represent** the state of the environment as a 3D lattice\(격차\) of random variables \(each corresponding to a voxel\) 
+* **Maintain** a probabilistic estimate of their occupancy as a function of incoming sensor data and prior knowledge.
+
+#### B. occupancy grids를 사용하는 이유\(2가지\)
 
 1번째 이유
-- they allow us to efficiently estimate **free**, **occupied** and **unknown space** from range measurements, even for measurements coming from different viewpoints and time instants. 
 
-- 제안 방식은 포인트 클라우드 처럼 `occupied space VS. free space`만 고려 하는 방식 보다 정보량이 풍부하다. 왜냐 하면 free and unknown space를 구분하는 것은 향후 중요한 정보가 될수 있기 때문이다. 
-  - `This representation is richer than those which only consider occupied space versus free space such as point clouds, as the distinction between free and unknown space can potentially be a valuable shape cue. `
+* they allow us to efficiently estimate **free**, **occupied** and **unknown space** from range measurements, even for measurements coming from different viewpoints and time instants.
+
+* 제안 방식은 포인트 클라우드 처럼 `occupied space VS. free space`만 고려 하는 방식 보다 정보량이 풍부하다. 왜냐 하면 free and unknown space를 구분하는 것은 향후 중요한 정보가 될수 있기 때문이다.
+
+  * `This representation is richer than those which only consider occupied space versus free space such as point clouds, as the distinction between free and unknown space can potentially be a valuable shape cue.`
 
 2번째 이유
-- they can be stored and manipulated with simple and efficient data structures. 
+
+* they can be stored and manipulated with simple and efficient data structures. 
 
 ### 3.2 Reference frame and resolution
 
-- In our volumetric representation, **each point (x, y, z)** is mapped to **discrete voxel coordinates (i, j, k)**. 
+* In our volumetric representation, **each point \(x, y, z\)** is mapped to **discrete voxel coordinates \(i, j, k\)**.
 
-  - 맵핑은 아래 3가지 요소에 Depend하다. The mapping is a uniform discretization but depends on the **origin**, **orientation** and **resolution **of the voxel grid in space. 
+  * 맵핑은 아래 3가지 요소에 Depend하다. The mapping is a uniform discretization but depends on the **origin**, **orientation** and **resolution **of the voxel grid in space.
 
-  - 복셀화된 물체의 외관은 위 3가지가 중요한 요소를 끼치기 때문이다. . `The appearance of the voxelized objects depends heavily on these parameters.`
+  * 복셀화된 물체의 외관은 위 3가지가 중요한 요소를 끼치기 때문이다. . `The appearance of the voxelized objects depends heavily on these parameters.`
 
-###### [For the origin] 
+###### \[For the origin\]
 
-- we assume it is given as an input, e.g.obtained by a segmentation algorithm or given by a sliding box.
+* we assume it is given as an input, e.g.obtained by a segmentation algorithm or given by a sliding box.
 
-###### [For the orientation] 
-- we assume that the z axis of the grid frame is approximately aligned with the direction of gravity.
+###### \[For the orientation\]
 
-- This can be achieved with an IMU or simply keeping the sensor upright. 
+* we assume that the z axis of the grid frame is approximately aligned with the direction of gravity.
 
-- This still leaves a degree of freedom, the rotation around the z axis (yaw). 
+* This can be achieved with an IMU or simply keeping the sensor upright.
 
-- If we defined a canonical orientation for each object and were capable of detecting this orientation automatically, it would be reasonable to always align the grid to this orientation. 
+* This still leaves a degree of freedom, the rotation around the z axis \(yaw\).
 
-- However, it is often non-trivial in practice to detect this orientation from sparse and noisy point clouds. 
+* If we defined a canonical orientation for each object and were capable of detecting this orientation automatically, it would be reasonable to always align the grid to this orientation.
 
-- In this paper we propose a simple alternative based on data augmentation, discussed in III-F.
+* However, it is often non-trivial in practice to detect this orientation from sparse and noisy point clouds.
 
-###### [For the resolution] 
+* In this paper we propose a simple alternative based on data augmentation, discussed in III-F.
 
-we adopt two strategies, depending on the dataset. 
+###### \[For the resolution\]
 
-- For our LiDAR dataset: we use a fixed spatial resolution, `e.g. a voxels of (0.1 m)^3`. 
+we adopt two strategies, depending on the dataset.
 
-- For the other datasets: the resolution is chosen so the object of interest occupies a subvolume of `24 × 24 × 24` voxels. 
+* For our LiDAR dataset: we use a fixed spatial resolution, `e.g. a voxels of (0.1 m)^3`.
+
+* For the other datasets: the resolution is chosen so the object of interest occupies a subvolume of `24 × 24 × 24` voxels.
 
 > In all experiments we use a fixed occupancy grid of size `32 × 32 × 32` voxels.
 
+The trade-off between these two strategies is that
 
-The trade-off between these two strategies is that 
-  - **in the first case**, we maintain the information given by the relative scale of objects `(e.g., cars and persons tend to have a consistent physical size)`; 
-  - **in the second case**, we avoid loss of shape information when the voxels are too small `(so that the object is larger than the grid)` or when the voxels are too large `(so that details are lost by aliasing)`.
+* **in the first case**, we maintain the information given by the relative scale of objects `(e.g., cars and persons tend to have a consistent physical size)`; 
+* **in the second case**, we avoid loss of shape information when the voxels are too small `(so that the object is larger than the grid)` or when the voxels are too large `(so that details are lost by aliasing)`.
 
 ### 3.3 Occupancy model
 
-- Let $$\{z^t\}^T_{t=1}$$ be a sequence of range measurements that either hit ($$z^t = 1$$) or pass through ($$z^t = 0$$) a given voxel with coordinates (i, j, k). 
+* Let $$\{z^t\}^T_{t=1}$$ be a sequence of range measurements that either hit \($$z^t = 1$$\) or pass through \($$z^t = 0$$\) a given voxel with coordinates \(i, j, k\).
 
-- Assuming an ideal beam sensor model, we use 3D ray tracing [32] to calculate the number of hits and pass-throughs for each voxel. 
+* Assuming an ideal beam sensor model, we use 3D ray tracing \[32\] to calculate the number of hits and pass-throughs for each voxel.
 
-- 3가지의 **occupancy grid models** 정의 `Given this information, we consider three different occupancy grid models to estimate occupancy:`
+* 3가지의 **occupancy grid models** 정의 `Given this information, we consider three different occupancy grid models to estimate occupancy:`
 
 #### A. Binary occupancy grid
 
 In this model, each voxel is assumed to have a binary state, occupied or unoccupied.
 
-The probabilistic estimate of occupancy for each voxel is computed with log odds for numerical stability. 
+The probabilistic estimate of occupancy for each voxel is computed with log odds for numerical stability.
 
-Using the formulation from [31], we update each voxel traversed by the beam as
+Using the formulation from \[31\], we update each voxel traversed by the beam as
+
+
 $$
 l^t_{ijk} = l^{t-1}_{ijk} + z^tl_{occ} + (1-z^t)l_{free}
 $$
 
-- $$l_{occ}$$: the log odds of the cell being occupied, [33]참고하여 1.38 설정 
-- $$l_{free}$$: free given that the measurement hit or missed the cell, [33]참고하여 -1.38설정
 
-Empirically we found that within reasonable ranges these parameters had little effect on the final outcome. 
+* $$l_{occ}$$: the log odds of the cell being occupied, \[33\]참고하여 1.38 설정 
+* $$l_{free}$$: free given that the measurement hit or missed the cell, \[33\]참고하여 -1.38설정
 
-- The initial probability of occupancy is set to 0.5, or $$l^0_{ijk}=0$$
+Empirically we found that within reasonable ranges these parameters had little effect on the final outcome.
 
-- In this case, the network acts on the log odd values $$l_{ijk}=0$$
+* The initial probability of occupancy is set to 0.5, or $$l^0_{ijk}=0$$
+
+* In this case, the network acts on the log odd values $$l_{ijk}=0$$
 
 #### B. Density grid
 
 In this model each voxel is assumed to have a continuous density, corresponding to the probability the voxel would block a sensor beam.
 
-> 자세한 내용 생략 
+> 자세한 내용 생략
 
 #### C. Hit grid
 
-This model only consider hits, and ignores the difference between unknown and free space. 
+This model only consider hits, and ignores the difference between unknown and free space.
 
-> 자세한 내용 생략 
+> 자세한 내용 생략
 
 ### 3.4 3D Convolutional Network Layers
 
-CNN을 사용한 3가지 이유 `There are three main reasons CNNs are an attractive option for our task. `
+CNN을 사용한 3가지 이유 `There are three main reasons CNNs are an attractive option for our task.`
 
-###### [1번째 이유] 
+###### \[1번째 이유\]
 
-- First, they can explicitly make use of the spatial structure of our problem. 
+* First, they can explicitly make use of the spatial structure of our problem.
 
-- In particular, they can learn local spatial filters useful to the classification task. 
+* In particular, they can learn local spatial filters useful to the classification task.
 
-- In our case, we expect the filters at the input level to encode spatial structures such as planes and corners at different orientations. 
+* In our case, we expect the filters at the input level to encode spatial structures such as planes and corners at different orientations.
 
-###### [2번째 이유] 
+###### \[2번째 이유\]
 
-- Second, by stacking multiple layers the network can construct a hierarchy of more complex features representing larger regions of space, eventually leading to a global label for the input occupancy grid. 
+* Second, by stacking multiple layers the network can construct a hierarchy of more complex features representing larger regions of space, eventually leading to a global label for the input occupancy grid. 
 
-###### [3번째 이유] 
+###### \[3번째 이유\]
 
-- Finally, inference is purely feed-foward and can be performed efficiently with commodity graphics hardware.
-
+* Finally, inference is purely feed-foward and can be performed efficiently with commodity graphics hardware.
 
 ![](http://i.imgur.com/yXb89IB.png)
 
-###### [Input Layer] 
+###### \[Input Layer\]
 
-- This layer accepts a fixed-size grid of I×J×K voxels. In this work, we use I = J = K = 32. 
+* This layer accepts a fixed-size grid of I×J×K voxels. In this work, we use I = J = K = 32.
 
-- Depending on the occupancy model, each value for each grid cell is updated from Equation 1, Equation 2 or Equation 3. 
+* Depending on the occupancy model, each value for each grid cell is updated from Equation 1\(Binary Occupancy grid model\), Equation 2\(Density Grid Model\) or Equation 3\(Hit Grid Model\).
 
-- In all three cases we subtract 0.5 and multiply by 2, so the input is in the(−1, 1) range; no further preprocessing is done. 
+* In all three cases we subtract 0.5 and multiply by 2, so the input is in the\(−1, 1\) range; no further preprocessing is done.
 
-- While this work only considers scalar-valued inputs, our implementation can trivially accept additional values per cell, such as LiDAR intensity values or RGB information from cameras.
+* While this work only considers scalar-valued inputs, our implementation can trivially accept additional values per cell, such as LiDAR intensity values or RGB information from cameras.
 
-###### [Convolutional Layers $$C(f, d, s)$$] 
+###### \[Convolutional Layers $$C(f, d, s)$$\]
 
-- These layers accept four dimensional input volumes in which three of the dimensions are spatial, and the fourth contains the feature maps. 
+* These layers accept four dimensional input volumes in which three of the dimensions are spatial, and the fourth contains the feature maps.
 
-- The layer creates $$f$$ feature maps by convolving the input with $$f$$ learned filters of shape `d × d × d × f'`, where d are the spatial dimensions and `f'`is the number of input feature maps.
+* The layer creates $$f$$ feature maps by convolving the input with $$f$$ learned filters of shape `d × d × d × f'`, where d are the spatial dimensions and `f'`is the number of input feature maps.
 
-- Convolution can also be applied at a spatial stride `s`. 
+* Convolution can also be applied at a spatial stride `s`.
 
-- The output is passed through a leaky rectified nonlinearity unit(ReLU) [35] with parameter 0.1.
+* The output is passed through a leaky rectified nonlinearity unit\(ReLU\) \[35\] with parameter 0.1.
 
-###### [Pooling Layers $$P(m)$$] 
+###### \[Pooling Layers $$P(m)$$\]
 
-- These layers down-sample the input volume by a factor of by m along the spatial dimensions by replacing each m × m × m non-overlapping block of voxel swith their maximum.
+* These layers down-sample the input volume by a factor of by m along the spatial dimensions by replacing each m × m × m non-overlapping block of voxel swith their maximum.
 
-###### [Fully Connected Layer $$FC(n)$$] 
+###### \[Fully Connected Layer $$FC(n)$$\]
 
-- Fully connected layers haven output neurons. 
+* Fully connected layers haven output neurons.
 
-- The output of each neuron is a learned linear combination of all the outputs from the previous layer,passed through a nonlinearity. 
+* The output of each neuron is a learned linear combination of all the outputs from the previous layer,passed through a nonlinearity.
 
-- We use ReLUs save for the final output layer, where the number of outputs corresponds to the number of class labels and a softmax nonlinearity is used to provide a probabilistic output.
+* We use ReLUs save for the final output layer, where the number of outputs corresponds to the number of class labels and a softmax nonlinearity is used to provide a probabilistic output.
 
 ### 3.5 Proposed architecture
 
-- 이전 연구에서 LiDAR데이터를 가지고 적합한 모델을 찾기 위해 수백번의 실험을 진행 하였다. `in our previous work [28] we performed extensive stochastic search over hundreds of 3D CNN architectures on a simple classification task on simulated LiDAR data.` 
+* 이전 연구에서 LiDAR데이터를 가지고 적합한 모델을 찾기 위해 수백번의 실험을 진행 하였다. `in our previous work [28] we performed extensive stochastic search over hundreds of 3D CNN architectures on a simple classification task on simulated LiDAR data.`
 
-- Several of the best-performing networks had a small number of parameters in comparison to state of the art networks used for imagedata;
+```
+[28] D. Maturana and S. Scherer, “3D convolutional neural networks for
+landing zone detection from lidar,” in ICRA, 2015.
+```
 
-- [7] has around 60 million parameters, while the majority of our best models used less than 2 million.
+* Several of the best-performing networks had a small number of parameters in comparison to state of the art networks used for imagedata;
 
-- While it is difficult to compare these numbers meaningfully, given the vast differences in tasks and datasets, we speculate that volumetric classification for point clouds is in some sense a simpler task, as many of the factors of variation in image data (perspective, illumination, viewpoint effects) are diminished or not present.
+* \[7\] has around 60 million parameters, while the majority of our best models used less than 2 million.
 
-- Guided by this precedent, our base model, VoxNet, is **C(32, 5, 2)−C(32, 3, 1)−P(2)−F C(128)−F C(K)**, 
-  - K is number of classes. 
+* While it is difficult to compare these numbers meaningfully, given the vast differences in tasks and datasets, we speculate that volumetric classification for point clouds is in some sense a simpler task, as many of the factors of variation in image data \(perspective, illumination, viewpoint effects\) are diminished or not present.
 
-- VoxNet is essentially a simpler version of the two-stage model reported in [28].
+* Guided by this precedent, our base model, VoxNet, is **C\(32, 5, 2\)−C\(32, 3, 1\)−P\(2\)−F C\(128\)−F C\(K\)**,
 
-- The changes aimed to reduce the number of parameters and increase computational efficiency, making the network easier and faster to learn. 
+  * K is number of classes. 
 
-- The model has 921736 parameters, most of them from inputs to the first dense layer.
+* VoxNet is essentially a simpler version of the two-stage model reported in \[28\].
 
+* The changes aimed to reduce the number of parameters and increase computational efficiency, making the network easier and faster to learn.
+
+* The model has 921736 parameters, most of them from inputs to the first dense layer.
 
 ### 3.6 Rotation Augmentation and Voting
 
-- 일관된 **orientation** 을 유지 하는것은 중요하다. `it is nontrivial(중대한) to maintain a consistent orientation of objects around their z axis. `
+* 일관된 **orientation** 을 유지 하는것은 중요하다. `it is nontrivial(중대한) to maintain a consistent orientation of objects around their z axis.`
 
-- 문제 해결을 위해 기존에는 **rotationally invariant**하도록 설게 되었다. `To counter this problem, many features for point clouds are designed to be rotationally invariant (e.g. [36], [37]). `
+* 문제 해결을 위해 기존에는 **rotationally invariant**하도록 설게 되었다. `To counter this problem, many features for point clouds are designed to be rotationally invariant (e.g. [36], [37]).`
 
-- 문제 해결을 위해 본 논문은 built-in된 대처 알고리즘은 없지만 다른 방법으로 문제를 해결 하였다. `Our representation has no built-in invariance to large rotations;`
-  - **At training time**, we augment the dataset with by creating `n` copies of each input instance, each rotated 360◦/n intervals around the z axis. 
-  - **At testing time**, we pool the activations of the output layer over all `n` copies. 
-  - 본 논문에서 `n`값은 12 or 18. 
+* 문제 해결을 위해 본 논문은 built-in된 대처 알고리즘은 없지만 다른 방법으로 문제를 해결 하였다. `Our representation has no built-in invariance to large rotations;`
 
-- 보팅방법과 비슷 : This can be seen as a **voting approach**, similar to how networks such as [7] average predictions over random crops and flips of the input image; 
-  - 다른점 : however, it is performed over an exhaustive sampling of rotations, not a random selection
+  * **At training time**, we augment the dataset with by creating `n` copies of each input instance, each rotated 360◦/n intervals around the z axis. 
+  * **At testing time**, we pool the activations of the output layer over all `n` copies. 
+  * 본 논문에서 `n`값은 12 or 18. 
 
-- 제안 방식은 아래에서 영감을 받았다. This approach is inspired by the interpretation of convolution as weight sharing across translations; implicitly, we are sharing weights across rotations. 
+* 보팅방법과 비슷 : This can be seen as a **voting approach**, similar to how networks such as \[7\] average predictions over random crops and flips of the input image;
 
-- 초반에는 Initial versions of this approach were implemented by max-pooling or mean-pooling the dense layers of the network during training in the same way as during test time. 
+  * 다른점 : however, it is performed over an exhaustive sampling of rotations, not a random selection
 
-- 추후 수정 하였다. However, we found that the approach described above yielded comparable results while converging noticeably faster.
+* 제안 방식은 아래에서 영감을 받았다. This approach is inspired by the interpretation of convolution as weight sharing across translations; implicitly, we are sharing weights across rotations.
+
+* 초반에는 Initial versions of this approach were implemented by max-pooling or mean-pooling the dense layers of the network during training in the same way as during test time.
+
+* 추후 수정 하였다. However, we found that the approach described above yielded comparable results while converging noticeably faster.
 
 ### 3.7 Multiresolution Input
 
-- LiDAR 데이터에서 탐지를 위해서는 $$0.2 m^3$$정도 Resolution가 필요 하다고 제안되고 있다. `Visual inspection of the LiDAR dataset suggested a(0.2 m^3) resolution preserves all necessary information for the classification, while allowing sufficient spatial context for most larger objects such as trucks and trees. `
+* LiDAR 데이터에서 탐지를 위해서는 $$0.2 m^3$$정도 Resolution가 필요 하다고 제안되고 있다. `Visual inspection of the LiDAR dataset suggested a(0.2 m^3) resolution preserves all necessary information for the classification, while allowing sufficient spatial context for most larger objects such as trucks and trees.`
 
-- 우리가 세운 가설은 **좋은 해상도**는 판별력을 더 좋게 할수 있다. `However, we hypothesized that a finer resolution would help in discriminating other classes such as traffic signs and traffic lights, especially for sparser data. `
+* 우리가 세운 가설은 **좋은 해상도**는 판별력을 더 좋게 할수 있다. `However, we hypothesized that a finer resolution would help in discriminating other classes such as traffic signs and traffic lights, especially for sparser data.`
 
-- 따라서 **Foveal **구조[24]를 참고 삼아 **multiresolution VoxNet**를 구현 하였다. `Therefore, we implemented a multiresolution VoxNet, inspired by the “foveal” architecture of [24] for video analysis. ` 
-  - 이 모델에서는 두개의 동일한 VoxNet 네트워크에 서로 다른 해상도의 occupancy grids를 입력으로 하였다. `In this model we use two networks with an identical VoxNet architectures, each receiving occupancy grids at different resolutions`: $$0.1m^3$$and $$0.2m^3$$. 
-  - 두 입력의 중심점은 같지만 ` Both inputs are centered on the same location`, 
-    - but the **coarser network** covers a **larger area** at low resolution 
-    - while the **finer network** covers a **smaller area** at high resolution. 
-  - 두 출력을 합치는 법 : `To fuse the information from both networks,` 
-    - we concatenate the outputs of their respective FC(128) layers 
-    - and connect them to a softmax output layer.
-    
+* 따라서 **Foveal **구조\[24\]를 참고 삼아 **multiresolution VoxNet**를 구현 하였다. `Therefore, we implemented a multiresolution VoxNet, inspired by the “foveal” architecture of [24] for video analysis.`
+
+  * 이 모델에서는 두개의 동일한 VoxNet 네트워크에 서로 다른 해상도의 occupancy grids를 입력으로 하였다. `In this model we use two networks with an identical VoxNet architectures, each receiving occupancy grids at different resolutions`: $$0.1m^3$$and $$0.2m^3$$. 
+  * 두 입력의 중심점은 같지만 `Both inputs are centered on the same location`, 
+    * but the **coarser network** covers a **larger area** at low resolution 
+    * while the **finer network** covers a **smaller area** at high resolution. 
+  * 두 출력을 합치는 법 : `To fuse the information from both networks,` 
+    * we concatenate the outputs of their respective FC\(128\) layers 
+    * and connect them to a softmax output layer.
+
+ \[24\] A. Karpathy, G. Toderici, S. Shetty, T. Leung, R. Sukthankar, and L. Fei-Fei, “Large-scale video classification with convolutional neural networks,” in CVPR, 2014.
+
+
+
 ### 3.8 Network training details
 
-- Training of the network parameters is performed by **Stochastic Gradient Descent (SGD)** with momentum. 
+* Training of the network parameters is performed by **Stochastic Gradient Descent \(SGD\)** with momentum.
 
-- The objective is the multinomial negative log-likelihood plus 0.001 times the L2 weight norm for regularization. 
+* The objective is the multinomial negative log-likelihood plus 0.001 times the L2 weight norm for regularization.
 
-- SGD is initialized with a learning rate of 
-  - 0.01 for the LiDAR dataset 
-  - 0.001 in the the other datasets. 
-  
-- The momentum parameter was 0.9. 
-- Batch size is 32. 
-- The learning rate was decreased by a factor of 10 each 8000 batches for the LiDAR dataset and each 40000 batches in the other datasets.
-- Dropout regularization is added after the output of each layer. 
-- Convolutional layers were **initialized** with the method proposed by [38], whereas dense layers were initialized from a zero-mean Gaussian with σ = 0.01.
+* SGD is initialized with a learning rate of
 
-- Following common practices for CNN training, we augment the data by adding randomly perturbed copies of each instance. 
-  - The perturbed(교란) copies are generated dynamically during training and consist of randomly mirrored and shifted instances. 
-  
-- Mirroring is done by along the x and y axes; shifting is done between −2 to 2 voxels along all axes.
+  * 0.01 for the LiDAR dataset 
+  * 0.001 in the the other datasets. 
 
-- 구현 언어 :  Our implementation uses a combination of C++ and Python.
+* The momentum parameter was 0.9.
 
-- 라이브러리 : The Lasagne library was used to compute gradients and accelerate computations on the GPU. 
+* Batch size is 32.
 
-- 학습 소요 시간 : The training process takes around 6 to 12 hours on our K40 GPU, depending on the complexity of the network.
+* The learning rate was decreased by a factor of 10 each 8000 batches for the LiDAR dataset and each 40000 batches in the other datasets.
+
+* Dropout regularization is added after the output of each layer.
+
+* Convolutional layers were **initialized** with the method proposed by \[38\], whereas dense layers were initialized from a zero-mean Gaussian with σ = 0.01.
+
+* Following common practices for CNN training, we augment the data by adding randomly perturbed copies of each instance.
+
+  * The perturbed\(교란\) copies are generated dynamically during training and consist of randomly mirrored and shifted instances. 
+
+* Mirroring is done by along the x and y axes; shifting is done between −2 to 2 voxels along all axes.
+
+* 구현 언어 :  Our implementation uses a combination of C++ and Python.
+
+* 라이브러리 : The Lasagne library was used to compute gradients and accelerate computations on the GPU.
+
+* 학습 소요 시간 : The training process takes around 6 to 12 hours on our K40 GPU, depending on the complexity of the network.
 
 ## 4. EXPERIMENTS
 
-To evaluate VoxNet we consider benchmarks with data from three different domains: 
-- LiDAR point clouds : Sydney Objects Dataset
-- RGBD point clouds : NYUv2
-- CAD models : ModelNet40
+To evaluate VoxNet we consider benchmarks with data from three different domains:
 
-### 4.1 LiDAR 
-- Sydney데이터셋 설명 : labeled Velodyne LiDAR scans of 631 urban objects in 26 categories. 
+* LiDAR point clouds : Sydney Objects Dataset
+* RGBD point clouds : NYUv2
+* CAD models : ModelNet40
 
-- Sydney데이터셋 선택 이유: We chose this dataset for evaluation as it provides labeled object instances and the LiDAR viewpoint, which is used to compute occupancy. 
+### 4.1 LiDAR
 
-- When voxelizing the point cloud we use all points in a bounding box around the object, including background clutter. 
+* Sydney데이터셋 설명 : labeled Velodyne LiDAR scans of 631 urban objects in 26 categories.
 
-- 평가 요소 : F1 값 `We report the average F1 score, weighted by class support, for a subset of 14 classes over four standard training/testing splits. `
+* Sydney데이터셋 선택 이유: We chose this dataset for evaluation as it provides labeled object instances and the LiDAR viewpoint, which is used to compute occupancy.
 
-- 데이터 증가 및 보팅 실시 : For this dataset we perform augmentation and voting with 18 rotations per instance.
+* When voxelizing the point cloud we use all points in a bounding box around the object, including background clutter.
+
+* 평가 요소 : F1 값 `We report the average F1 score, weighted by class support, for a subset of 14 classes over four standard training/testing splits.`
+
+* 데이터 증가 및 보팅 실시 : For this dataset we perform augmentation and voting with 18 rotations per instance.
 
 ### 4.2 CAD data
 
-> 제외 
+> 제외
 
 ### 4.3 RGBD data
 
-> 제외 
+> 제외
+
+
 

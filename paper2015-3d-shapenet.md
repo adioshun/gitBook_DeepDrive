@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Zhirong Wu \(Princeton University\) |
 | 학회/년도 | CVPR 2015, [논문](https://arxiv.org/abs/1406.5670) |
-| 키워드 |  |
+| 키워드 | Shapenet2015,  |
 | 데이터셋/모델 | ModelNet10 |
 | 참고 | [홈페이지](http://3dshapenets.cs.princeton.edu/), [ppt](http://vision.princeton.edu/talks/2015_CVPR/2015_3DshapeNets_CVPR.pptx) |
 | 코드 | [Matlab](https://github.com/zhirongw/3DShapeNets) |
@@ -127,8 +127,8 @@ In ECCV. 2014.
 
 > \[21\] The model is precisely a convolutional DBM where all the connections are undirected, while ours is a convolutional DBN
 
-```    
-[21] H. Lee, R. Grosse, R. Ranganath, and A. Y. Ng. Unsupervised learning of hierarchical representations with convolutional deep belief networks. Communications of the ACM,    
+```            
+[21] H. Lee, R. Grosse, R. Ranganath, and A. Y. Ng. Unsupervised learning of hierarchical representations with convolutional deep belief networks. Communications of the ACM,            
 2011.``
 
 ### 2.7 active object recognition
