@@ -289,11 +289,10 @@ We implement this design through an architecture shown in Fig 3.
 
 -  mlpconv은 입력층-은닉층-출력층으로 구성된 뉴런 네트워크로 **Feature Extraction**에 좋은 성능을 보임 : `mlpconv has a three-layer structure and is thus a universal function approximator if enough neurons are provided in its intermediate layers. Therefore, mlpconv is a powerful filter for feature extraction of local patches, enhancing approximation of more abstract representations. In addition, mlpconv has been validated to be more discriminative with fewer parameters than ordinary convolution with pooling [23].`
 
+#### B. Layer 4 :  둘로 나누어짐 
 - At the fourth layer, the network branches into two.
-
-- The lower branch takes the whole object as input for traditional classification.
-
-- The upper branch is a novel branch for auxiliary tasks.
+	- **The lower branch** takes the whole object as input for traditional classification.
+	- **The upper branch** is a novel branch for auxiliary tasks. 
 
 - It slices the 512 × 2 × 2 × 2 4D tensor (2 grids along x, y, z axes and 512 channels) into 2×2×2 = 8 vectors of dimension 512.
 
@@ -372,5 +371,5 @@ Compared to 3DShapeNets [33] which only augments data by rotating around vertica
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NzA1MzcwM119
+eyJoaXN0b3J5IjpbNDEyMjQwMDk0XX0=
 -->
