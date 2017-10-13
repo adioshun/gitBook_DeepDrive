@@ -297,6 +297,14 @@ Perhaps more importantly, the aggregated descriptoris readily available for a va
 An MVCNN can also be used as a general frame work to integrate perturbed image samples (also known as datajittering). 
 
 We illustrate this capability of MVCNNs in the context of sketch recognition in Sect. 4.2.
+
+###### [Low-rank Mahalanobis metric]
+
+> 성능 향상 방법 
+
+## 4. Experiments
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTg1NTI1NzZdfQ==
+eyJoaXN0b3J5IjpbODk5Mjc2NzQ4XX0=
 -->
