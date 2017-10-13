@@ -14,7 +14,9 @@
 
 ## 1. INTRODUCTION
 
-
+. Currently, in the context of 3D shape recognition,
+shape descriptors are mainly hand-crafted and deep learning
+representation has not been widely applied.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5OTkyODM3OF19
+eyJoaXN0b3J5IjpbLTIwNzI0NTkyNTddfQ==
 -->
