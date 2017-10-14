@@ -126,7 +126,7 @@ The projection process is illustrated in Fig. 2.
 
 ```
 [Fig. 3. The network for learning and extracting shape representation]
-0The network
+- The network
 takes the padded panoramic view as the input. On the top it outputs a
 probability vector representing class probabilities. The 3-D shape representation
 can be extracted from the highlighted layers, namely RWMP, fc1 or fc2. (fc
@@ -150,5 +150,5 @@ The network is trained on a dataset consisting of pairs of panoramic views and c
 
 Finally, the representation can be extractedfrom the RWMP layer, or any fully-connected layer after it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM3ODAyNjg5XX0=
+eyJoaXN0b3J5IjpbNjI5NTYwMDcyXX0=
 -->
