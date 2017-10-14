@@ -117,7 +117,7 @@ The projection process is illustrated in Fig. 2.
 
 하지만, 3D Shape가 회전하면 View가 변하게 된다. 이 변화를 막기 위하여 작업이 필요 하다. `  However, the view shifts when the 3-D shape rotates. This shift will greatly affect the representation produced by the CNN, although the CNN providessome form of translation invariance. `
 
-또한 파노라마로 펼치게 되면 두개의 경계가 오른쪽과 나타난다.  Moreover, unfolding the lateral surface creates two boundaries on the left and right sides of the panoramic view. 
+또한 파노라마로 펼치게 되면 두개의 경계가 오른쪽나타난다.  Moreover, unfolding the lateral surface creates two boundaries on the left and right sides of the panoramic view. 
 
 The boundaries cause artifacts in the convolutional feature maps, thus affecting the representationextracted.In our approach, a variant of CNN is created to learn andextract the representation, handling the issues mentioned above.As illustrated in Fig. 3, firstly, to avoid boundary artifacts, thepanoramic view is padded on one side. 
 
@@ -135,5 +135,5 @@ The network is trained on a dataset consisting of pairs of panoramic views and c
 
 Finally, the representation can be extractedfrom the RWMP layer, or any fully-connected layer after it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MTQ5NDk1NF19
+eyJoaXN0b3J5IjpbMTQ2MzI2NzM0XX0=
 -->
