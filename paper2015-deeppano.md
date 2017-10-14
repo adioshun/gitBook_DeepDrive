@@ -170,7 +170,9 @@ Since each 3-D shape is represented by a fixed-length vector and Euclidean dista
 
 ## 4. CONCLUSION
 
-In this letter, we have introduced DeepPano, a rotation-invariantdeep representation for 3-D shape classification and retrieval.Panoramic views are constructed from 3-D shapes andrepresentations are learned and extracted from them. 
+In this letter, we have introduced DeepPano, a rotation-invariantdeep representation for 3-D shape classification and retrieval.
+
+Panoramic views are constructed from 3-D shapes andrepresentations are learned and extracted from them. 
 
 DeepPanooutperforms previous methods by a large margin, on both classificationand retrieval tasks. 
 
@@ -180,5 +182,5 @@ The limitationof our method is similar to many previous view-based approaches,re
 
 In addition, to establish the robust alignments/correspondence[23], [24] between different panoramicviews is another direction that is worthy of being studied.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjA5NDQ5NTFdfQ==
+eyJoaXN0b3J5IjpbLTIzNTM4NjAwM119
 -->
