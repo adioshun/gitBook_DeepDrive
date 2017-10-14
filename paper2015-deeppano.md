@@ -161,9 +161,9 @@ The projection process is illustrated in Fig. 2.
 
 #### B. retrieval
 
-For retrieval tasks, we define the similarity between a pair of 3-D shapes as the Euclideandistance between their -normalized descriptors. 
+- Retrieval을 위하여 For retrieval tasks, we define the similarity between a pair of 3-D shapes as the Euclidean distance between their $$l-normalized descriptors. 
 
-Sinceeach 3-D shape is represented by a fixed-length vector and Euclideandistance is used for retrieval, we can perform fast retrievalon large-scale datasets, particularly when adopting someapproximate nearest neighbor search schemes, e.g.[17].
+Since each 3-D shape is represented by a fixed-length vector and Euclideandistance is used for retrieval, we can perform fast retrievalon large-scale datasets, particularly when adopting someapproximate nearest neighbor search schemes, e.g.[17].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2ODkzNjYzNV19
+eyJoaXN0b3J5IjpbLTk0NDk2MzkzNF19
 -->
