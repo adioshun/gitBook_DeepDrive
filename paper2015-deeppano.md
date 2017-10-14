@@ -116,7 +116,7 @@ The projection process is illustrated in Fig. 2.
 간단한 방법은 CNN에 파노라믹뷰를 학습 시키는 것이다. `A straightforward method is to train a CNN on the panoramic views of all training data, and extract the representation from it. `
 
 간단한 방법의 문제점 
-
+- 
 하지만, 3D Shape가 회전하면 View가 변하게 된다. 이 변화를 막기 위하여 작업이 필요 하다. `  However, the view shifts when the 3-D shape rotates. This shift will greatly affect the representation produced by the CNN, although the CNN providessome form of translation invariance. `
 
 또한 파노라마로 펼치게 되면 두개의 경계가 양쪽끝에 나타난다.  이 경계가 CNN Featrue map에 영향을 미치게 된다. `Moreover, unfolding the lateral surface creates two boundaries on the left and right sides of the panoramic view. The boundaries cause artifacts in the convolutional feature maps, thus affecting the representation extracted.`
@@ -137,5 +137,5 @@ The network is trained on a dataset consisting of pairs of panoramic views and c
 
 Finally, the representation can be extractedfrom the RWMP layer, or any fully-connected layer after it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NTM0OTMwOF19
+eyJoaXN0b3J5IjpbLTEzMjgzMzU3ODVdfQ==
 -->
