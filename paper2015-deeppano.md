@@ -141,7 +141,7 @@ The projection process is illustrated in Fig. 2.
 - To obtain rotation-invariance,  the representation has to be shift-invariant to the input panoramic view. 
 
 - **RWMP** 적용 : row-wise max-pooling layer(RWMP), 
-- which takes the maximum value of each row in theinput map and concatenate them into the output vector. 
+	- which takes the maximum value of each row in theinput map and concatenate them into the output vector. 
 
 Theoutput of the RWMP layer is not affected by the shift of theinput map, thus its output is invariant to the rotation of the 3-Dshape. 
 
@@ -149,5 +149,5 @@ The network is trained on a dataset consisting of pairs of panoramic views and c
 
 Finally, the representation can be extractedfrom the RWMP layer, or any fully-connected layer after it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjUzMjc5NTFdfQ==
+eyJoaXN0b3J5IjpbLTQ0OTgwNjcxMV19
 -->
