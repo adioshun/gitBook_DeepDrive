@@ -70,6 +70,8 @@ Panoramoc view의 큰 문제점 : However,the panoramic view shifts when the 3-D
 
 기존 연구에서는 **normalization**으로 해결 `In [6], this problem is alleviated by pose normalization.`
 
+
+
 ![](https://i.imgur.com/daQ7b8F.png)
 ```
 [Fig. 1. Rotation invariance of DeepPano]
@@ -83,10 +85,9 @@ As illustrated in Fig. 1, the convolutional feature maps extracted from panorami
 
 We pool the the responses of each row so that the resulting representation is not affected by this kind of shift. 
 
-As a result,the representation is invariant to the 3-D shape rotation.To summarize, the key contribution of this letter is the deeppanoramic representation that is rotation-invariant to the principleaxis. 
+As a result, the representation is invariant to the 3-D shape rotation. 
 
-The experiments on large-scale 3-D shape datasetsshow that this representation is effective in both classificationand retrieval tasks, outperforming previous methods by a largemargin.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUyODU1MTc5XX0=
+eyJoaXN0b3J5IjpbMTczMzA1OTg5N119
 -->
