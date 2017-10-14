@@ -113,11 +113,11 @@ The projection process is illustrated in Fig. 2.
 
 ### 2.2 Representation Learning and Extraction
 
-간단한 방법은 CNN에 파노라믹뷰를 A straightforward method is to train a CNN on the panoramic views of all training data, and extract the representation from it. 
+간단한 방법은 CNN에 파노라믹뷰를 학습 시키는 것이다. `A straightforward method is to train a CNN on the panoramic views of all training data, and extract the representation from it. `
 
-However, the views hifts when the 3-D shape rotates. 
+하지만, 3D Shape가 회전하면 View가 변하게 된다. 이 변화는   However, the view shifts when the 3-D shape rotates. 
 
-This shift will greatly affectthe representation produced by the CNN, although the CNN providessome form of translation invariance. 
+This shift will greatly affect the representation produced by the CNN, although the CNN providessome form of translation invariance. 
 
 Moreover, unfoldingthe lateral surface creates two boundaries on the left and rightsides of the panoramic view. 
 
@@ -137,5 +137,5 @@ The network is trained on a dataset consisting of pairs of panoramic views and c
 
 Finally, the representation can be extractedfrom the RWMP layer, or any fully-connected layer after it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDc4ODc1MjVdfQ==
+eyJoaXN0b3J5IjpbNTUyMjE1NjEzXX0=
 -->
