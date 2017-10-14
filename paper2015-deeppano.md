@@ -95,11 +95,9 @@ Our method consists of two main steps:
 
 The representation is used for both classification and retrieval tasks (Section II-C). 
 
-본 논문의 가정사항 : 물체는 Throughout this letter, we assume that 3-D models are upright oriented, so that the rotation is along a
-axis that is also upright oriented. 
-
-This assumption is satisfied in many real-world model repositories, such as the 3-D Warehouse[15].
+본 논문의 가정(Assumption)사항 : 물체는 upright로 회전되어 있다. 대부분의 Datasets(3-D Warehouse)이 이렇게 되어 있다. ` Throughout this letter, we assume that 3-D models are upright oriented, so that the rotation is along a
+axis that is also upright oriented. This assumption is satisfied in many real-world model repositories, such as the 3-D Warehouse[15].`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ3NDE2NzIxXX0=
+eyJoaXN0b3J5IjpbMjAzOTgxMTY1Ml19
 -->
