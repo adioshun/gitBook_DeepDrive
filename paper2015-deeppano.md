@@ -113,13 +113,9 @@ The projection process is illustrated in Fig. 2.
 
 ### 2.2 Representation Learning and Extraction
 
-The panoramic view keeps most of the information of the 3-D shape. 
+간단한 방법은 CNN에 파A straightforward method is to train a CNN on the panoramic views of all training data, and extract the representation from it. 
 
-Therefore, a 3-D shape can be described by the 2-D descriptorextracted from its panoramic view. 
-
-A straightforwardmethod is to train a CNN on the panoramic views of all trainingdata, and extract the representation from it. 
-
-However, the viewshifts when the 3-D shape rotates. 
+However, the views hifts when the 3-D shape rotates. 
 
 This shift will greatly affectthe representation produced by the CNN, although the CNN providessome form of translation invariance. 
 
@@ -141,5 +137,5 @@ The network is trained on a dataset consisting of pairs of panoramic views and c
 
 Finally, the representation can be extractedfrom the RWMP layer, or any fully-connected layer after it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MDY4OTI2Ml19
+eyJoaXN0b3J5IjpbMTUzMTcyOTM3Ml19
 -->
