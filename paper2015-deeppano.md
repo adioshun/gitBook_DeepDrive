@@ -144,11 +144,13 @@ The projection process is illustrated in Fig. 2.
 	- which takes the maximum value of each row in the input map and concatenate them into the output vector. 
 	- The output of the RWMP layer is not affected by the shift of th einput map, thus its output is invariant to the rotation of the 3-D shape. 
 
-######
 
-The network is trained on a dataset consisting of **pairs of panoramic views** and class labels, using the back propagation algorithm [16]. 
 
-Finally, the representation can be extractedfrom the RWMP layer, or any fully-connected layer after it.
+학습 입력값 : The network is trained on a dataset consisting of **pairs of panoramic views** and class labels, using the back propagation algorithm [16]. 
+
+학습 출력값 : Finally, the representation can be extracted from the RWMP layer, or any fully-connected layer after it.
+
+### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQyMTAyNDA0XX0=
+eyJoaXN0b3J5IjpbMTU0MjUwNDE1Ml19
 -->
