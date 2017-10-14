@@ -175,9 +175,11 @@ Panoramic views are constructed from 3-D shapes and representations are learned 
 제약 사항 `The limitation of our method is similar to many previous view-based approaches, `
 - requiring the **principle axes of 3-D models**, which may fail to recognize the 3-D models with serious non-rigid deformation.
 
-In the future, some sequence prediction techniques[21], [22] might be used for exploring more contextual information,in order to further improve the performance of shaperecognition, as a panoramic view can be considered as a mapof feature sequence. 
+In the future, some sequence prediction techniques[21], [22] might be used for exploring more contextual information, 
 
-In addition, to establish the robust alignments/correspondence[23], [24] between different panoramicviews is another direction that is worthy of being studied.
+in order to further improve the performance of shape recognition, as a panoramic view can be considered as a map of feature sequence. 
+
+In addition, to establish the robust alignments/correspondence[23], [24] between different panoramic views is another direction that is worthy of being studied.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDk2NjMwMDFdfQ==
+eyJoaXN0b3J5IjpbNjQ4MzcwMzY1XX0=
 -->
