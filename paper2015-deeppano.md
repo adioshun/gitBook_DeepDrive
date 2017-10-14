@@ -89,8 +89,17 @@ As a result, the representation is invariant to the 3-D shape rotation.
 
 ## 2. METHODOLOGY
 
+Our method consists of two main steps: 
+1. Generate the panoramic views (Section II-A); 
+2. Learn and extract the rotation-invariant representation from the views (Section II-B).
 
+The representation is used for both classification and retrieval tasks (Section II-C). 
+
+본 논문의 가정사항 : 물체는 Throughout this letter, we assume that 3-D models are upright oriented, so that the rotation is along a
+axis that is also upright oriented. 
+
+This assumption is satisfied in many real-world model repositories, such as the 3-D Warehouse[15].
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NjgwMzIyNV19
+eyJoaXN0b3J5IjpbNDQ3NDE2NzIxXX0=
 -->
