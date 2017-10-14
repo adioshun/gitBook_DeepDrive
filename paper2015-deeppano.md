@@ -111,19 +111,8 @@ The projection process is illustrated in Fig. 2.
 
 ```
 
-We discretize
-the lateral surface of the cylinder by a dense grid of points, represented
-by their coordinates , where is the polar
-angle and is the height. For each grid point ,
-a corresponding point is found by the Cartesian coordinate
-( ), which is the point on the cylinder axis with the
-same height as . A ray is cast from to , intersecting with
-none, one or several triangles of the 3-D shape. The distances
-between and the intersection points are recorded as
-For each grid point, we assign
-a value that is the max value in , or zero when is an empty
-set:
+### 2.2 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MTQzNjk5Nl19
+eyJoaXN0b3J5IjpbMTUxNTkxMzgwOF19
 -->
