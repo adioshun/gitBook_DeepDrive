@@ -150,7 +150,19 @@ The projection process is illustrated in Fig. 2.
 
 학습 출력값 : Finally, the representation can be extracted from the RWMP layer, or any fully-connected layer after it.
 
-### 
+### 2.3 Recognition with the Representation
+
+- 출력값인 representation은 **classification**과 **retrieval tasks**에 모두 사용 가능 하다. 
+
+Since the network for learning the representation is itself a classifier, we direct adopt it for classification tasks. 
+
+The softmax layer on the top of the network outputs classprobabilities, and the class with the highest probability is takenas the prediction (as illustrated in Fig. 
+
+3). 
+
+For retrieval tasks,we define the similarity between a pair of 3-D shapes as the Euclideandistance between their -normalized descriptors. 
+
+Sinceeach 3-D shape is represented by a fixed-length vector and Euclideandistance is used for retrieval, we can perform fast retrievalon large-scale datasets, particularly when adopting someapproximate nearest neighbor search schemes, e.g.[17].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MjUwNDE1Ml19
+eyJoaXN0b3J5IjpbODI5MTEyMTI4XX0=
 -->
