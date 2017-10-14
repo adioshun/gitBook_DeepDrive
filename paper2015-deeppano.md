@@ -133,13 +133,12 @@ The projection process is illustrated in Fig. 2.
 
 ######  가.  경계 
 
-- 경계면에 **pad**
+- 경계면에 **pad** 수행 : `To avoid boundary artifacts, the panoramic view is padded on one side. The padded area is cloned from the other side of the map. `
+	- Specifically, we adopt a padding size where is the height of the view.
 
-- To avoid boundary artifacts, the panoramic view is padded on one side. 
+######  나.  회전에 대한 대응 
 
-The padded area is cloned from the other side of the map. 
-
-Specifically, we adopt apadding size where is the height of the view.To obtain rotation-invariance, the representation has to beshift-invariant to the input panoramic view. 
+- To obtain rotation-invariance,  the representation has to be shift-invariant to the input panoramic view. 
 
 The first few layersof a typical CNN, namely the convolution layers and the maxpoolinglayers produce feature maps that shift together withthe input view. 
 
@@ -151,5 +150,5 @@ The network is trained on a dataset consisting of pairs of panoramic views and c
 
 Finally, the representation can be extractedfrom the RWMP layer, or any fully-connected layer after it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzgxMzQ0MjldfQ==
+eyJoaXN0b3J5IjpbLTEyNDg4NzU0NjBdfQ==
 -->
