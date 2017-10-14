@@ -99,8 +99,27 @@ axis that is also upright oriented. This assumption is satisfied in many real-wo
 
 ### 2.1 Panoramic View Construction
 
-
+To construct the panoramic view, the 3-D shape is projected
+onto the lateral surface of a cylinder whose axis is parallel to
+the principle axis of the 3-D shape. With the upright-orientation
+assumption, we simply set as the origin point and
+take z-direction as the orientation to obtain the principle axis.
+In our approach, is calculated by the weighted average of
+all triangles on the model mesh, where the weights are triangle
+areas.
+The projection process is illustrated in Fig. 2. We discretize
+the lateral surface of the cylinder by a dense grid of points, represented
+by their coordinates , where is the polar
+angle and is the height. For each grid point ,
+a corresponding point is found by the Cartesian coordinate
+( ), which is the point on the cylinder axis with the
+same height as . A ray is cast from to , intersecting with
+none, one or several triangles of the 3-D shape. The distances
+between and the intersection points are recorded as
+For each grid point, we assign
+a value that is the max value in , or zero when is an empty
+set:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMDM5NTI2NF19
+eyJoaXN0b3J5IjpbNzk1Mzg0MTc4XX0=
 -->
