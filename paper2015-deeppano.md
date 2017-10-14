@@ -156,11 +156,11 @@ The projection process is illustrated in Fig. 2.
 
 - representation을 출력하는데 사용한 네트워크 자체가 분류기를 활용한것이므로 바로 분류 작업을 할수 있다. `Since the network for learning the representation is itself a classifier, we direct adopt it for classification tasks. `
 
-- 네트워크 상다The softmax layer on the top of the network outputs class probabilities, and the class with the highest probability is taken as the prediction (as illustrated in Fig. 3). 
+- 네트워크 상단의 The softmax layer on the top of the network outputs class probabilities, and the class with the highest probability is taken as the prediction (as illustrated in Fig. 3). 
 
 For retrieval tasks,we define the similarity between a pair of 3-D shapes as the Euclideandistance between their -normalized descriptors. 
 
 Sinceeach 3-D shape is represented by a fixed-length vector and Euclideandistance is used for retrieval, we can perform fast retrievalon large-scale datasets, particularly when adopting someapproximate nearest neighbor search schemes, e.g.[17].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTkwNDk5NjBdfQ==
+eyJoaXN0b3J5IjpbOTk3NjgyMjEyXX0=
 -->
