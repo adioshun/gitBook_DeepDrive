@@ -113,7 +113,7 @@ The projection process is illustrated in Fig. 2.
 
 ### 2.2 Representation Learning and Extraction
 
-간단한 방법은 CNN에 파A straightforward method is to train a CNN on the panoramic views of all training data, and extract the representation from it. 
+간단한 방법은 CNN에 파노라미A straightforward method is to train a CNN on the panoramic views of all training data, and extract the representation from it. 
 
 However, the views hifts when the 3-D shape rotates. 
 
@@ -137,5 +137,5 @@ The network is trained on a dataset consisting of pairs of panoramic views and c
 
 Finally, the representation can be extractedfrom the RWMP layer, or any fully-connected layer after it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMTcyOTM3Ml19
+eyJoaXN0b3J5IjpbLTEzMDQ2MDQzODRdfQ==
 -->
