@@ -111,8 +111,35 @@ The projection process is illustrated in Fig. 2.
 
 ```
 
-### 2.2 
+### 2.2 Representation Learning and Extraction
 
+The panoramic view keeps most of the information of the 3-D shape. 
+
+Therefore, a 3-D shape can be described by the 2-D descriptorextracted from its panoramic view. 
+
+A straightforwardmethod is to train a CNN on the panoramic views of all trainingdata, and extract the representation from it. 
+
+However, the viewshifts when the 3-D shape rotates. 
+
+This shift will greatly affectthe representation produced by the CNN, although the CNN providessome form of translation invariance. 
+
+Moreover, unfoldingthe lateral surface creates two boundaries on the left and rightsides of the panoramic view. 
+
+The boundaries cause artifacts inthe convolutional feature maps, thus affecting the representationextracted.In our approach, a variant of CNN is created to learn andextract the representation, handling the issues mentioned above.As illustrated in Fig. 3, firstly, to avoid boundary artifacts, thepanoramic view is padded on one side. 
+
+The padded area iscloned from the other side of the map. 
+
+Specifically, we adopt apadding size where is the height of the view.To obtain rotation-invariance, the representation has to beshift-invariant to the input panoramic view. 
+
+The first few layersof a typical CNN, namely the convolution layers and the maxpoolinglayers produce feature maps that shift together withthe input view. 
+
+Between these layers and the fully-connectedlayers, we insert a layer called the row-wise max-pooling layer(RWMP), which takes the maximum value of each row in theinput map and concatenate them into the output vector. 
+
+Theoutput of the RWMP layer is not affected by the shift of theinput map, thus its output is invariant to the rotation of the 3-Dshape. 
+
+The network is trained on a dataset consisting of pairs of panoramic views and class labels, using the back propagationalgorithm [16]. 
+
+Finally, the representation can be extractedfrom the RWMP layer, or any fully-connected layer after it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNTkxMzgwOF19
+eyJoaXN0b3J5IjpbMTk0MDY4OTI2Ml19
 -->
