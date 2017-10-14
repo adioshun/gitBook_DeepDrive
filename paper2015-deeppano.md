@@ -99,7 +99,20 @@ axis that is also upright oriented. This assumption is satisfied in many real-wo
 
 ### 2.1 Panoramic View Construction
 
-The projection process is illustrated in Fig. 2. We discretize
+The projection process is illustrated in Fig. 2. 
+
+![](https://i.imgur.com/UUM0hjq.png)
+```
+[Fig. 2. Panoramic view construction]
+- (a) Illustration of the panoramic view construction process. , and are respectively the grid point, the
+corresponding point on the axis and the value assigned to that grid point;
+(b) 3-D shapes and their corresponding panoramic views (with some padding
+as describe in Section II-B).
+
+```
+
+
+We discretize
 the lateral surface of the cylinder by a dense grid of points, represented
 by their coordinates , where is the polar
 angle and is the height. For each grid point ,
@@ -113,5 +126,5 @@ a value that is the max value in , or zero when is an empty
 set:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTM1Njk0MzJdfQ==
+eyJoaXN0b3J5IjpbMTkxOTQ4Mjc5Nl19
 -->
