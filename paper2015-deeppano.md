@@ -120,7 +120,19 @@ The projection process is illustrated in Fig. 2.
 2. 또한 파노라마로 펼치게 되면 두개의 경계가 양쪽끝에 나타난다.  이 경계가 CNN Featrue map에 영향을 미치게 된다. `Moreover, unfolding the lateral surface creates two boundaries on the left and right sides of the panoramic view. The boundaries cause artifacts in the convolutional feature maps, thus affecting the representation extracted.`
 
 
-#### B. 
+#### B. 해결방법 
+
+![](https://i.imgur.com/kJDdwhg.png)
+
+```
+[Fig. 3. The network for learning and extracting shape representation]
+The network
+takes the padded panoramic view as the input. On the top it outputs a
+probability vector representing class probabilities. The 3-D shape representation
+can be extracted from the highlighted layers, namely RWMP, fc1 or fc2. (fc
+means fully-connected layer, conv means convolution layer).
+
+```
 
 As illustrated in Fig. 3, firstly, to avoid boundary artifacts, thepanoramic view is padded on one side. 
 
@@ -138,5 +150,5 @@ The network is trained on a dataset consisting of pairs of panoramic views and c
 
 Finally, the representation can be extractedfrom the RWMP layer, or any fully-connected layer after it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMTMxNjExNF19
+eyJoaXN0b3J5IjpbLTU5NTY5Njk2NV19
 -->
