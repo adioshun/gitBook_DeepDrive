@@ -59,10 +59,10 @@ This is often presented as a Next-Best-View (NBV) prediction, where the mutual i
 
 However, this typically requires learning a generative model of the object and synthesising new views as an intermediate step. 
 
-We propose to learn NBV prediction with a more powerful discriminativemodel, training a second CNN to map directly from anobserved image to the rotation angle over which the camerashould subsequently move.
+We propose to learn NBV prediction with a more powerful discriminative model, training a second CNN to map directly from an observed image to the rotation angle over which the camera should subsequently move.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NzA0OTMzN119
+eyJoaXN0b3J5IjpbLTMxMTk2MjkwMV19
 -->
