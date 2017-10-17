@@ -53,10 +53,16 @@ a given trajectory length.
 - Given this decomposition, a CNN is then trained on a fixed length input consisting of the image pair, together with the relative pose between the associated viewpoints. 
 - To achieve classification of the full sequence, an **ensemble framework is adopted**, with weighting to increase the contribution of those image pairs which cover a more informative set of poses.
 
+이후의 문제는 **active recognition**이다. The problem then shifts to active recognition, with the aim of determining along which trajectory the camera should move, in order to achieve the best recognition accuracy in a given number of images. 
 
+This is often presented as a Next-Best-View (NBV) prediction, where the mutual information is determined between the class probability distribution and each potential next view. 
+
+However, this typically requires learning a generative model of the object and synthesising new views as an intermediate step. 
+
+We propose to learn NBV prediction with a more powerful discriminativemodel, training a second CNN to map directly from anobserved image to the rotation angle over which the camerashould subsequently move.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzY0MDI5NDFdfQ==
+eyJoaXN0b3J5IjpbLTM0NzA0OTMzN119
 -->
