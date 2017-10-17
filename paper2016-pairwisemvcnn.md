@@ -53,11 +53,8 @@ a given trajectory length.
 - Given this decomposition, a CNN is then trained on a fixed length input consisting of the image pair, together with the relative pose between the associated viewpoints. 
 - To achieve classification of the full sequence, an **ensemble framework is adopted**, with weighting to increase the contribution of those image pairs which cover a more informative set of poses.
 
-이후의 문제는 **active recognition**이다. The problem then shifts to active recognition, with the aim of determining along which trajectory the camera should move, in order to achieve the best recognition accuracy in a given number of images. 
-가장 좋은 예측 정확도를 가지기 위해 카메라가 이동해야 하는 지점 지정하는 문제. 
-
-
-This is often presented as a Next-Best-View (NBV) prediction, where the mutual information is determined between the **class probability distribution** and **each potential next view**. 
+이후 문제는 가장 좋은 예측 정확도를 가지기 위해 카메라가 이동해야 하는 지점 지정하는 문제를 목적으로 하는 active recognition으로 변하게 된다. `The problem then shifts to active recognition, with the aim of determining along which trajectory the camera should move, in order to achieve the best recognition accuracy in a given number of images. `
+- 이러한 문제는 NBV라고 불리운다. `This is often presented as a Next-Best-View (NBV) prediction, where the mutual information is determined between the __class probability distribution__ and __each potential next view__. `
 
 However, this typically requires learning a generative model of the object and synthesising new views as an intermediate step. 
 
@@ -76,5 +73,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTMxNjM5MTJdfQ==
+eyJoaXN0b3J5IjpbLTIwNDg3Mzg5ODNdfQ==
 -->
