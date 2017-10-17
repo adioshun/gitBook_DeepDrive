@@ -38,6 +38,14 @@ For practical tasks, recognition from a multi-view image sequence is a more real
 recognition tasks typically addressed in computer vision, and controlling a camera actively for efficient recognition
 has great significance in real-world applications, where time or power constraints become realities. 
 
+
+It was subsequently shown that rendering these meshes as synthetic greyscale images, and classifying objects in a view-based manner with a CNN architecture acting over a fixed trajectory, achieved stateof-the-art results for multi-view recognition [35].
+```
+[35] H. Su, S. Maji, E. Kalogerakis, and E. G. Learned-Miller.
+Multi-view Convolutional Neural Networks for 3D Shape
+Recognition. In Proceedings of the International Conference
+on Computer Vision (ICCV), 2015.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTk0MzUxNThdfQ==
+eyJoaXN0b3J5IjpbLTE0MTk2Mjg3MzJdfQ==
 -->
