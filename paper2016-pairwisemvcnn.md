@@ -80,7 +80,16 @@ All three contributions achieve state-of-the-art results in their respective ben
 
 ### 2.1 View-Based Multi-View Recognition
 
+In its simplest form, the view-based approach aims to add viewpoint tolerance to a 2D image of an object, 
+- such as with view point invariant local descriptors [27, 29] or deformation-tolerant global descriptors [6]. 
 
+Given training images across multiple viewpoints, a more stable set of features can be found by tracking those which are shared across multiple views and clustering images accordingly [23], or by learning theirrelative 2D displacements as the viewpoint changes, bothwith hard constraints for rigid bodies [17, 18] and flexibleconstraints for deformable bodies [11, 10]. 
+
+To add furtherfidelity to the true underlying object geometry, these 2D imageelements can also be embedded within an implicit 3Dmodel [36, 22, 28]. 
+
+If multiple views are available at testing,images can be combined and treated as a single, larger image[31], an approach which can also be addressed in twostages, by processing the individual images first to reducethe search space [5].Recently, CNN architectures have been extended to allowfor recognition from image sequences using a singlenetwork, by max pooling across all viewpoints [35], or byunwrapping an object shape into a panorama and max poolingacross each row [33]. 
+
+However, both these methods assumethat a fixed-length image sequence is provided duringboth training and testing, and hence are unsuitable for generalisedmulti-view recognition.
 
 
 ---
@@ -92,5 +101,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTk3MTkxMDZdfQ==
+eyJoaXN0b3J5IjpbNzk5MDg5MTIwXX0=
 -->
