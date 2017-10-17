@@ -47,9 +47,15 @@ a given trajectory length.
 
 ### 1.1 CNNs for Generalised Multi-View Recognition
 
+One solution to multi-view recognition with CNNs would be to simply concatenate all observed images into a single input to a network. 
 
+However, this would requireintractable training due to the large size of each input, butmore importantly, due to the need to train over every possiblepath of all possible lengths, which is of potentially infi-nite scale. 
+
+We propose to address this by relaxing the jointmodel over images and decomposing an image sequenceinto a set of pairs, one for every pair of images across the sequence.Pairwise representations of full distributions havebeen popular in computer vision for learning distributionsof local features [19] and parts [10], and we migrate thisidea from the image space domain to the temporal domain.Given this decomposition, a CNN is then trained on a fixedlengthinput consisting of the image pair, together with therelative pose between the associated viewpoints. 
+
+To achieveclassification of the full sequence, an ensemble frameworkis adopted, with weighting to increase the contribution ofthose image pairs which cover a more informative set ofposes
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3OTMwMjA5XX0=
+eyJoaXN0b3J5IjpbLTEwODkzMTExNjldfQ==
 -->
