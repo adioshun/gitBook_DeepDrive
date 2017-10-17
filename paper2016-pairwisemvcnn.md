@@ -23,10 +23,12 @@ Building these pairwise relationships then naturally extends to the **next-best-
 Finally, we incorporate this into a trajectory optimisation task, whereby the best recognition confidence is sought for
 a given trajectory length.
 
+## 1. Introduction
+
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTAxMDk2NDhdfQ==
+eyJoaXN0b3J5IjpbMjA0NzkzNTQzOV19
 -->
