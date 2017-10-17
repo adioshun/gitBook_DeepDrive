@@ -43,10 +43,7 @@ Recognition. In Proceedings of the International Conference
 on Computer Vision (ICCV), 2015.
 ```
 
-However,
-extending this to generalised recognition over trajectories of arbitrary paths and lengths is not readily adopted by traditional
-CNN architectures, due to the need for fixed-length
-input data.
+However, extending this to generalised recognition over trajectories of arbitrary paths and lengths is not readily adopted by traditional CNN architectures, due to the need for fixed-length input data.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDE2OTk3NDhdfQ==
+eyJoaXN0b3J5IjpbNzU3MDg3ODBdfQ==
 -->
