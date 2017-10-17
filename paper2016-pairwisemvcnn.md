@@ -55,7 +55,7 @@ a given trajectory length.
 
 이후 문제는 가장 좋은 예측 정확도를 가지기 위해 카메라가 이동해야 하는 지점 지정하는 문제를 목적으로 하는 active recognition으로 변하게 된다. `The problem then shifts to active recognition, with the aim of determining along which trajectory the camera should move, in order to achieve the best recognition accuracy in a given number of images. `
 - 이러한 문제는 NBV라고 불리운다. `This is often presented as a Next-Best-View (NBV) prediction, where the mutual information is determined between the __class probability distribution__ and __each potential next view__. `
-- 하지만 이를 위해However, this typically requires learning a generative model of the object and synthesising new views as an intermediate step. 
+- 하지만 이를 위해서는 However, this typically requires learning a generative model of the object and synthesising new views as an intermediate step. 
 
 제안 방식에서는 NBV도 포함 하고 있다. `We propose to learn NBV prediction with a more powerful discriminative model, training a second CNN to map directly from an observed image to the rotation angle over which the camera should subsequently move.`
 
@@ -72,5 +72,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUwMzc2Njg4XX0=
+eyJoaXN0b3J5IjpbLTg5OTk1MDk0OF19
 -->
