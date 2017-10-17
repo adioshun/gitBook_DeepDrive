@@ -37,7 +37,7 @@ a given trajectory length.
 
 학계에서는 3D 메쉬를 인조 회색 이미지`(synthetic greyscale images)`로 렌더링 하여 분류 하는게 좋은 성능을 보이는 것으로 알려져 있다. `It was subsequently shown that rendering these meshes as synthetic greyscale images, and classifying objects in a view-based manner with a CNN architecture acting over a fixed trajectory, achieved state of-the-art results for multi-view recognition [35].`
 
-하지만 이 방식을 However, extending this to generalised recognition over trajectories of arbitrary paths and lengths is not readily adopted by traditional CNN architectures, due to the need for fixed-length input data.
+하지만 이 방식을 입력 이미지의 fixed-length가 필요 하기 때문에 일반적으로 사용하기는 어렵다. `However, extending this to generalised recognition over trajectories of arbitrary paths and lengths is not readily adopted by traditional CNN architectures, due to the need for fixed-length input data.`
 
 
 ```
@@ -46,5 +46,5 @@ a given trajectory length.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MjY4ODMyOF19
+eyJoaXN0b3J5IjpbLTU3MzA2NDY2NF19
 -->
