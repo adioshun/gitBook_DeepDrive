@@ -33,11 +33,11 @@ a given trajectory length.
 ```
 
 그림 1을 예로 볼때 카메라를 어느 위치에 두는게 가장 좋은 결과를 가져 올까? Consider the scenario in Figure 1. What trajectory should the camera move around the object in order to achieve the highest recognition confidence in a given time?
-- 실생활ㅇ
+- 실생활에서는 
 For practical tasks, recognition from a multi-view image sequence is a more realistic setting than the single-image
 recognition tasks typically addressed in computer vision, and controlling a camera actively for efficient recognition
 has great significance in real-world applications, where time or power constraints become realities. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDM3MDQ5NTVdfQ==
+eyJoaXN0b3J5IjpbLTExNTQ2MTY0ODJdfQ==
 -->
