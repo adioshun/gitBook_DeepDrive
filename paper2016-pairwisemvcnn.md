@@ -65,6 +65,11 @@ We propose to learn NBV prediction with a more powerful discriminative model, tr
 
 
 
+
+
+---
+
+The next best view problem (NBV) seeks a single additional sensor placement in order to improve an existing scene reconstruction derived from the current imaging configuration. Depending on the context, NBV can be seen as an incremental approach to building a camera network, designing a sensing strategy for autonomous exploration or selecting an input image dataset for multiview reconstruction.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MTAxNzE4Nl19
+eyJoaXN0b3J5IjpbNjQ4ODg2NjddfQ==
 -->
