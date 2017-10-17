@@ -35,13 +35,18 @@ a given trajectory length.
 그림 1을 예로 볼때 카메라를 어느 위치에 두는게 가장 좋은 결과를 가져 올까? `Consider the scenario in Figure 1. What trajectory should the camera move around the object in order to achieve the highest recognition confidence in a given time?`
 - 실생활에서는 multi-view image sequence에서 물체를 인식하는게 single-image에서 인식하는것보다 더 realistic setting이다. `For practical tasks, recognition from a multi-view image sequence is a more realistic setting than the single-image recognition tasks typically addressed in computer vision, and controlling a camera actively for efficient recognition has great significance in real-world applications, where time or power constraints become realities. `
 
-It was subsequently shown that rendering these meshes as synthetic greyscale images, and classifying objects in a view-based manner with a CNN architecture acting over a fixed trajectory, achieved stateof-the-art results for multi-view recognition [35].
+It was subsequently shown that rendering these meshes as synthetic greyscale images, and classifying objects in a view-based manner with a CNN architecture acting over a fixed trajectory, achieved state of-the-art results for multi-view recognition [35].
 ```
 [35] H. Su, S. Maji, E. Kalogerakis, and E. G. Learned-Miller.
 Multi-view Convolutional Neural Networks for 3D Shape
 Recognition. In Proceedings of the International Conference
 on Computer Vision (ICCV), 2015.
 ```
+
+However,
+extending this to generalised recognition over trajectories of arbitrary paths and lengths is not readily adopted by traditional
+CNN architectures, due to the need for fixed-length
+input data.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU2Mjc5ODE4XX0=
+eyJoaXN0b3J5IjpbLTE1NDE2OTk3NDhdfQ==
 -->
