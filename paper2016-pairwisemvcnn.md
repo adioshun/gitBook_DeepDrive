@@ -61,7 +61,7 @@ This is often presented as a Next-Best-View (NBV) prediction, where the mutual i
 
 However, this typically requires learning a generative model of the object and synthesising new views as an intermediate step. 
 
-We propose to learn NBV prediction with a more powerful discriminative model, training a second CNN to map directly from an observed image to the rotation angle over which the camera should subsequently move.
+제안 방식에서는 NBV도 포함 하고 있다. `We propose to learn NBV prediction with a more powerful discriminative model, training a second CNN to map directly from an observed image to the rotation angle over which the camera should subsequently move.`
 
 
 
@@ -76,5 +76,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NTI2NjU4XX0=
+eyJoaXN0b3J5IjpbLTE3OTMxNjM5MTJdfQ==
 -->
