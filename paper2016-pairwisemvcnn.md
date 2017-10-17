@@ -18,8 +18,7 @@ We propose to bring Convolutional Neural Networks to generic multi-view recognit
 제안 방식의 장점 : This allows for recognition over arbitrary(임의) camera trajectories(궤도), without requiring explicit training over the potentially infinite number of camera paths and lengths. 
 
 Building these pairwise relationships then naturally extends to the **next-best-view problem** in an active recognition framework. 
-
-To achieve this, we train a second Convolutional Neural Network to map directly from an observed image to next viewpoint.
+- To achieve this, we train a second Convolutional Neural Network to map directly from an observed image to next viewpoint.
 
 Finally, we incorporate this into a trajectory optimisation task, whereby the best recognition confidence is sought for
 a given trajectory length.
@@ -29,5 +28,5 @@ a given trajectory length.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NjQyMjA2M119
+eyJoaXN0b3J5IjpbLTE2NTAxMDk2NDhdfQ==
 -->
