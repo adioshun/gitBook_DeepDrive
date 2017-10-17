@@ -3,7 +3,7 @@
 | 저자\(소속\) | Edward Johns (Imperial College London, UK) |
 | 학회/년도 | May 2016, [논문](https://arxiv.org/abs/1605.08359) |
 | 키워드 |  |
-| 데이터셋(센서)/모델 |  |
+| 데이터셋(센서)/모델 | ModelNet |
 | 참고 |[CVPR2016](https://www.youtube.com/watch?v=7Bw0HGlidtg)  |
 | 코드 |  |
 
@@ -63,7 +63,18 @@ Finally, we extend our NBV prediction to a full trajectory-optimisation framewor
 
 To achieve this, we train a third CNN in a similar manner to the above NBV CNN, but training for regression to a recognition confidence score for all possible next viewpoints, rather then classification for the overall best viewpoint. 
 
-As the image sequence evolves,all un-visited viewpoints accumulate scores based on the newly-observed images, and the optimum trajectory is chosen as the one which maximises the summation of these scores.
+As the image sequence evolves, all un-visited viewpoints accumulate scores based on the newly-observed images, and the optimum trajectory is chosen as the one which maximises the summation of these scores.
+
+
+### 1.2 Contributions
+
+In this paper, we present three key technical contributions all based on powerful CNN learning:
+
+1. Multi-view object recognition over arbitrary camera trajectories by training only on image pairs,
+2. Discriminatively-trained Next-Best-View prediction directly from an input image to the next viewpoint, 
+3. Trajectory optimisation by considering the impact of all observable images along the sequence.
+
+All three contributions achieve state-of-the-art results in their respective benchmarks on the ModelNet dataset
 
 
 
@@ -77,5 +88,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDA0MTM5MF19
+eyJoaXN0b3J5IjpbLTIwMTU3NDEyMDddfQ==
 -->
