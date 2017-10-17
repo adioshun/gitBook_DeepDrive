@@ -31,11 +31,10 @@ a given trajectory length.
 - We propose a method for multi-view object recognition, by decomposing an image sequence into a set of image pairs. 
 - Training on these pairs then allows for recognition and trajectory planning, without the need to train directly over the infinite possible number of camera paths that may exist.
 ```
-Consider the scenario in Figure 1. What trajectory
-should the camera move around the object in order to
-achieve the highest recognition confidence in a given time?
+
+그림 1을 예로 볼때 카메라를 어느 위치에 두는게 가장 좋은 결과를 가져 올까? Consider the scenario in Figure 1. What trajectory should the camera move around the object in order to achieve the highest recognition confidence in a given time?
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYxMTUyNTI0XX0=
+eyJoaXN0b3J5IjpbNjYxOTk5Nzg4XX0=
 -->
