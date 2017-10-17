@@ -160,7 +160,7 @@ As illustrated in Figure2,
 
 #### A. 입력
 
-- The input point map, output objectness map and bounding box map are of the same width and height, to provide point-wise prediction. 
+- 픽셀단위 prediction을 위해 입력(point map)과 출력(Bounding box/Objectness map)의 가로/세로 크기는 동일하다. `The input point map, output objectness map and bounding box map are of the same width and height, to provide point-wise prediction. `
 
 - Each element of the objectness map predicts whether its corresponding point is on a vehicle. 
 
@@ -168,7 +168,7 @@ As illustrated in Figure2,
 
 - Section III-C explains how the objectness and bounding box is encoded.
 
-#### B.
+#### B. Down/Up sampling
 
 - In conv1, the point map is down-sampled by 4 horizontally and 2 vertically. 
  - This is because for a point map captured by Velodyne 64E, we have approximately
@@ -188,19 +188,103 @@ As illustrated in Figure2,
 
 - This follows the idea of Long et al. [18]. 
 
-- Combining features from lower layers and higher layers improves the prediction of small objects and object edges.
+> 저층과 고층의 Feature을 합치면 작은 물체와 물건의 가장자리를 탐지할수 있는 능력이 커진다. `Combining features from lower layers and higher layers improves the prediction of small objects and object edges.`
+
+```
+[18] Jonathan Long, Evan Shelhamer, and Trevor Darrell. Fully convolutional networks for semantic segmentation. arXiv preprint arXiv:1411.4038, 2014.
+```
 
 
 ### 3.3 Prediction Encoding
 
+feature maps 결과물에 대한 설명 `We now describe how the output feature maps are defined.`
+
+- The objectness map deconv6a consists of 2 channels corresponding to foreground, 
+ - i.e. the point is on a vehicle, and background. 
+
+- The 2 channels are normalized by softmax to denote the confidence.
+ - The encoding of the bounding box map requires some extra conversion. 
+ - Consider a lidar point p = (x, y, z) on a vehicle.
+
+Its observation angle is (θ, φ) by (식 1). 
+
+We first denote a rotation matrix R as $$ R = R_z(\theta)R_y(\phi) .... (식 2)$$
+- $$R_z(\theta), R_y(\phi)$$ : denotes rotations around z and y axes respectively.
+- If denote $$R$$ as $$(r_x, r_y, r_z)$$, 
+ - $$r_x$$ is of the same direction as $$p$$ and $$r_y$$ is parallel with the horizontal plane.
+ 
+
+![](https://i.imgur.com/rp4LYjx.png)
+```
+[Fig. 3. (a) Illustration of (식 3). ]
+- For each vehicle point p, we define a specific coordinate system which is centered at p. 
+- The x axis (rx) of the coordinate system is along with the ray from Velodyne origin to p(dashed line).
+```
+  
+   
+Figure 3a illustrate an example on how $$R$$ is formed. 
+
+A bounding box corner $$c_p = (x_c, y_c, z_c)$$ is thus transformed as: $$c\prime_p = R^T (c_p - p) ... (식 3) $$
+
+Our proposed approach uses $$c\prime_p$$ to encode the bounding box corner of the vehicle which $$p$$ belongs to. 
+
+The full bounding box is thus encoded by concatenating 8 corners in a 24d vector as $$b\prime_P = (c\prime^T_{p,1},c\prime^T_{p,2},...,c\prime^T_{p,8})^T ... (식 4)$$
+
+
+Corresponding to this 24d vector, deconv6b outputs a 24-channel feature map accordingly.
+
+
+###### 식 (3)을 이용하여 변형 하는 2가지 이유 `The transform (3) is designed due to the following two reasons`
+ - Translation part : 
+ - Rotation part
+
+
 
 ### 3.4 Training Phase
 
+
 #### A. Data Augmentation
+
+2D이미지와 비슷하게 3D도 데이터 증강을 하면 성능이 좋아 진다. 
+- 2D 이미지 증강법 : `For the case of images, training data are usually augmented by randomly zooming or rotating the original images to synthesis more training samples`
+- 3D의 이미지 증강 법은 ∆θ와 ∆φ에 변화를 주는 것이다. `For the case of range scans, simply applying these operations results in variable ∆θ and ∆φ in (1), which violates the geometry property of the lidar device. `
+
+To synthesis(인조, 합성) geometrically correct 3D range scans, we randomly generate a 3D transform near identity.
+
+Before projecting point cloud by (1), the random transform is applied the point cloud. 
+
+The translation component of the transform results in zooming effect of the synthesized range scan. 
+
+The rotation component results in rotation effect of the range scan.
 
 
 #### B. Multi-Task Training
 
+the proposed network consists of 
+- one objectness classification branch 
+- one bounding box regression branch. 
+
+We respectively denote the losses of the two branches in the training phase. 
+
+As notation, denote $$o^a_p$$ and $$o^b_p$$ as the feature map output of deconv6a and deconv6b corresponding to point p respectively. 
+
+Also denote $$p$$ as the point cloud and $$V \subset P$$ as all points on all vehicles.
+
+The loss of the objectness classification branch corresponding to a point $$p$$ is denoted as a softmax loss
+
+![](https://i.imgur.com/iEmeWBP.png)
+
+- $$l_p \in \{0, 1\}$$ denotes the groundtruth objectness label of p
+ - i.e. 0 as background and 1 as a point on vechicles.
+- $$ o^a_{P,\star}$$ denotes the deconv6a feature map output of channel $$\star$$ for point p.
+
+
+The loss of the bounding box regression branch corresponding to a point p is denoted as a L2-norm loss
+
+![](https://i.imgur.com/vi4ysTO.png)
+- $$b\prime_P$$: a 24d vector denoted in (4). 
+
+Note that $$L_{box}$$ is only computed for those points on vehicles. For non-vehicle points, the bounding box loss is omitted.
 
 #### C. Training strategies
 
