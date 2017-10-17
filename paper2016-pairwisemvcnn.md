@@ -76,6 +76,10 @@ In this paper, we present three key technical contributions all based on powerfu
 
 All three contributions achieve state-of-the-art results in their respective benchmarks on the ModelNet dataset
 
+## 2. Related Work
+
+### 2.1 View-Based Multi-View Recognition
+
 
 
 
@@ -88,5 +92,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTU3NDEyMDddfQ==
+eyJoaXN0b3J5IjpbLTE1NTk3MTkxMDZdfQ==
 -->
