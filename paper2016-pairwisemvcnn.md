@@ -55,9 +55,11 @@ Pairwise representations of full distributions have been popular in computer vis
 
 Given this decomposition, a CNN is then trained on a fixed length input consisting of the image pair, together with the relative pose between the associated viewpoints. 
 
-To achieve classification of the full sequence, an ensemble framework is adopted, with weighting to increase the contribution of those image pairs which cover a more informative set of poses
+To achieve classification of the full sequence, an ensemble framework is adopted, with weighting to increase the contribution of those image pairs which cover a more informative set of poses.
+
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMTM3MzE3N119
+eyJoaXN0b3J5IjpbLTUyODU0NzUwMV19
 -->
