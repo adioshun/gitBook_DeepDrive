@@ -1,7 +1,7 @@
-| 논문명 |  |
+| 논문명 | Pairwise Decomposition of Image Sequences for Active Multi-View Recognition |
 | --- | --- |
 | 저자\(소속\) | \(\) |
-| 학회/년도 | IROS 2015, [논문]() |
+| 학회/년도 | May 2016, [논문](https://arxiv.org/abs/1605.08359) |
 | 키워드 |  |
 | 데이터셋(센서)/모델 |  |
 | 참고 |  |
@@ -12,5 +12,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA3NTU5MTcxXX0=
+eyJoaXN0b3J5IjpbLTQ2NTMxNDA2MF19
 -->
