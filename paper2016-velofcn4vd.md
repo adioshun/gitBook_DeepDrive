@@ -3,6 +3,7 @@
 |저자(소속)|Bo Li (Baidu)|
 |학회/년도|29 Aug 2016, [논문](https://arxiv.org/abs/1608.07916)|
 |키워드|It is able to predict full 3D bounding boxes even using a 2D CNN|
+| 데이터셋(센서)/모델 | KITTI(Velodyne 64E) |
 |참고||
 |코드||
 
@@ -104,5 +105,119 @@ The frameworks of Huang et al. [11], Sermanet et al. [25] are transplanted to pr
 
 ## 3. 제안 방식 
 
+### 3.1 Data Preparation
+
+센서 : Velodyne 64E lidar. 
+
+아래 투영(projection)함수를 이용하여 2D pointmap으로 변경 ` points from a Velodyne scan can be roughly projected and discretized into a 2D point map, using the following projection function.`
+
+![](https://i.imgur.com/XePouFV.png)
+
+- $$ P = (x,y,z)^T$$: Denotes 3D Point
+- $$ (r, c) $$ : Denotes the 2D map position of its projection
+- $$ \theta, \phi $$ : denote the azimuth and elevation angle when observing the point
+- $$ \Delta\theta, \Delta\phi$$ : the average horizontal and vertical angle resolution between consecutive beam emitters, respectively
+
+The projected point map is analogous to cylindral images. 
+
+We fill the element at $$(r, c)$$ in the 2D point map with 2-channel data $$(d, z)$$
+- $$d = \sqrt{x^2+y^2} $$
+- Note that $$x$$ and $$y$$ are coupled as $$d$$ for rotation invariance around $$z$$
+ 
+ 
+![](https://i.imgur.com/oCCHDwo.png)
+
+An example of the $$d$$ channel of the 2D point map is shown in Figure 1a. 
+
+Rarely some points might be projected into a same 2D position, in which case the point
+nearer to the observer is kept. 
+
+Elements in 2D positions where no 3D points are projected into are filled with $$(d, z) = (0, 0)$$
 
 
+
+### 3.2 Network Architecture
+
+제안된 방식의 큰 흐름은 [11],[18]과 비슷하다. `The trunk part of the proposed CNN architecture is similar to Huang et al. [11], Long et al. [18]. `
+
+
+```
+[11] Lichao Huang, Yi Yang, Yafeng Deng, and Yinan Yu. DenseBox: Unifying Landmark Localization with End to End Object Detection. pages 1–13, 2015.
+[18] Jonathan Long, Evan Shelhamer, and Trevor Darrell. Fully convolutional networks for semantic segmentation. arXiv preprint arXiv:1411.4038, 2014.
+```
+
+![](https://i.imgur.com/XDiMdhP.png)
+```
+[Fig. 2. The proposed FCN structure to predict vehicle objectness and bounding box simultaneously.]
+- The output feature map of conv1/deconv5a, conv1/deconv5b and conv2/deconv4 are first concatenated and 
+- then ported to their consecutive layers, respectively.
+```
+
+As illustrated in Figure2, 
+1. the CNN feature map is down-sampled consecutively in the first 3 convolutional layers 
+2. and up-sampled consecutively in deconvolutional layers. 
+3. Then the trunk splits at the 4th layer into a objectness classification branch and a 3D bounding box regression branch. 
+
+#### A. 입력
+
+- The input point map, output objectness map and bounding box map are of the same width and height, to provide point-wise prediction. 
+
+- Each element of the objectness map predicts whether its corresponding point is on a vehicle. 
+
+- If the corresponding point is on a vehicle, its corresponding element in the bounding box map predicts the 3D bounding box of the belonging vehicle. 
+
+- Section III-C explains how the objectness and bounding box is encoded.
+
+#### B.
+
+- In conv1, the point map is down-sampled by 4 horizontally and 2 vertically. 
+ - This is because for a point map captured by Velodyne 64E, we have approximately
+∆φ = 2∆θ, 
+ - i.e. points are denser on horizotal direction.
+
+- Similarly, the feature map is up-sampled by this factor of (4, 2) in deconv6a and deconv6b, respectively. 
+
+- The rest conv/deconv layers all have equal horizontal and vertical resolution, respectively, and use squared strides of (2, 2) when up-sampling or down-sampling.
+
+
+#### C.
+
+- The output feature map pairs of conv3/deconv4, conv2/deconv5a, conv2/deconv5b are of the same sizes, respectively. 
+
+- We concatenate these output feature map pairs before passing them to the subsequent layers. 
+
+- This follows the idea of Long et al. [18]. 
+
+- Combining features from lower layers and higher layers improves the prediction of small objects and object edges.
+
+
+### 3.3 Prediction Encoding
+
+
+### 3.4 Training Phase
+
+#### A. Data Augmentation
+
+
+#### B. Multi-Task Training
+
+
+#### C. Training strategies
+
+
+
+
+### 3.5 Testing Phase
+
+
+## 4. EXPERIMENTS
+
+### 4.1 Performane Analysis on Offline Evaluation
+
+### 4.2 Related Work Comparison on the Online Evaluation
+
+사실 3D보다 이미지 기반이 성능이 좋다 그 이유는 크게 아래와 같다. 
+-  First, the image data have much higher resolution which significantly enhance the detection performance for far and occluded objects. 
+- Second, the image space based criterion does not reflect the advantage of range scan methods in localizing objects in full 3D world space
+
+> Related explanation can also be found from Wang and Posner [31].
