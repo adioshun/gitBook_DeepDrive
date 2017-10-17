@@ -10,11 +10,15 @@
 
 # Pairwise MVCNN
 
-
+We propose to bring Convolutional Neural Networks
+to generic multi-view recognition, by decomposing
+an image sequence into a set of image pairs, classifying
+each pair independently, and then learning an object classi-
+fier by weighting the contribution of each pair
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTI3NDYxNzZdfQ==
+eyJoaXN0b3J5IjpbLTU5MjM5MDAzNF19
 -->
