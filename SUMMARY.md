@@ -9,6 +9,7 @@
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 * [Paper\_2015\_MVCNN](paper2015-mvcnn.md)
 * [Paper\_2015\_DeepPano](paper2015-deeppano.md)
+* [Paper\_2016\_pairwiseMVCNN](paper2016-pairwisemvcnn.md)
 
 ## 2D CNN
 
@@ -44,7 +45,7 @@
 * [Paper\_2016\_V\_M CNNs \(50%\)](paper2016-volumetric-multiview-cnns.md)
 * [Paper\_2014\_AE3D shape Retrieval \(30%\)](paper2014-ae3d-shape-retrieval.md)
 * [Paper\_2016\_Vote3Deep \(10%\)](papervote3deep.md)
-* [Paper\_2016\_VeloFCN\_Bo Li \(30%\)](paper2016-velofcn4vd.md)
+* [Paper\_2016\_VeloFCN\_Bo Li \(70%\)](paper2016-velofcn4vd.md)
 * [Paper\_2017\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 * [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
