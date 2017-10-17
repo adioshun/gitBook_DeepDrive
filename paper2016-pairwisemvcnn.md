@@ -61,9 +61,9 @@ a given trajectory length.
 
 Finally, we extend our NBV prediction to a full trajectory-optimisation framework, where we consider all possible images that can acquired along a trajectory as contributions, rather than simply following a sequence of NBV images as is often employed. 
 
-To achieve this, we train athird CNN in a similar manner to the above NBV CNN, buttraining for regression to a recognition confidence score forall possible next viewpoints, rather then classification forthe overall best viewpoint. 
+To achieve this, we train a third CNN in a similar manner to the above NBV CNN, but training for regression to a recognition confidence score for all possible next viewpoints, rather then classification for the overall best viewpoint. 
 
-As the image sequence evolves,all unvisited viewpoints accumulate scores based on thenewly-observed images, and the optimum trajectory is chosenas the one which maximises the summation of thesescores.
+As the image sequence evolves,all un-visited viewpoints accumulate scores based on the newly-observed images, and the optimum trajectory is chosen as the one which maximises the summation of these scores.
 
 
 
@@ -77,5 +77,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2MDgxMjgxXX0=
+eyJoaXN0b3J5IjpbMTI2NDA0MTM5MF19
 -->
