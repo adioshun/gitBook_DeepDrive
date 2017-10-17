@@ -54,7 +54,7 @@ a given trajectory length.
 - To achieve classification of the full sequence, an **ensemble framework is adopted**, with weighting to increase the contribution of those image pairs which cover a more informative set of poses.
 
 이후의 문제는 **active recognition**이다. The problem then shifts to active recognition, with the aim of determining along which trajectory the camera should move, in order to achieve the best recognition accuracy in a given number of images. 
-가장 좋은 옟카메라가 이동해야 하는 지점 지정 
+가장 좋은 예측 정확카메라가 이동해야 하는 지점 지정 
 
 
 This is often presented as a Next-Best-View (NBV) prediction, where the mutual information is determined between the class probability distribution and each potential next view. 
@@ -66,5 +66,5 @@ We propose to learn NBV prediction with a more powerful discriminative model, tr
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MDg0NjY2NF19
+eyJoaXN0b3J5IjpbMTA0MjQ3NDAxNl19
 -->
