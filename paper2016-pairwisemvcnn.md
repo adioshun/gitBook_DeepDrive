@@ -78,6 +78,11 @@ All three contributions achieve state-of-the-art results in their respective ben
 
 ## 2. Related Work
 
+- View-Based Multi-View Recognition : MVCNN, DeepPano
+- Shape-Based Multi-View Recognition : ShapeNet, VoxNet
+
+> View-Based방식이 Shape-Based보다 성능이 더 좋음 
+
 ### 2.1 View-Based Multi-View Recognition
 
 In its simplest form, the view-based approach aims to add viewpoint tolerance to a 2D image of an object, 
@@ -168,5 +173,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTUxMDY3ODNdfQ==
+eyJoaXN0b3J5IjpbLTkxMDM1NzI1OF19
 -->
