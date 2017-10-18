@@ -97,13 +97,15 @@ We think they are constrained by the representation power of the features extrac
 
 ### 2.3 Deep Learning on Unordered Sets
 
-From a data structure point of view, a point cloud is an unordered set of vectors.
+* 구조적 관점에서 보면 포인트 클라우드는 **Unordered**이다. `From a data structure point of view, a point cloud is an unordered set of vectors.`
 
-While most works in deep learning focus on regular input representations like sequences \(in speech and language processing\), images and volumes \(video or 3D data\), not much work has been done in deep learning on point sets.
+* 대화, 언어, 비디오, 3D\(Volumes\)들에 대하여서는 연구 되었지만, 포인트 클라우드에 대해서는 연구 되지 않았다. `While most works in deep learning focus on regular input representations like sequences (in speech and language processing), images and volumes (video or 3D data), not much work has been done in deep learning on point sets.`
 
-One recent work from Oriol Vinyals et al \[25\] looks into this problem.
+> 저자는 3D를 `volumes 과 unordered로 나누어서 보고있음 `
 
-They use a read-process-write network with attention mechanism to consume unordered input sets and show that their network has the ability to sort numbers.
+* 그나마 최근 연구는 \[25\]이다. `One recent work from Oriol Vinyals et al [25] looks into this problem.`
+
+* They use a read-process-write network with attention mechanism to consume unordered input sets and show that their network has the ability to sort numbers.
 
 However, since their work focuses on generic sets and NLP applications, there lacks the role of geometry in the sets.
 
