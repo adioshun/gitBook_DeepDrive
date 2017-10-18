@@ -32,7 +32,11 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 
 문제점 : 도메인 지식 필요, 완벽하지 않음 `handcrafting feature descriptors requires domain expertise and remarkable engineering and theoretical skills, and even fulfilling both requirements they are still far from perfection. `
 
+본 논문의 기여도  `Its contribution is twofold:` 
+- a novel way for representing the input data, which is based on **point density occupancy grids**, 
+- its integration into a **CNN specifically** tuned for the aforementioned purpose.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4ODk3NDk4MF19
+eyJoaXN0b3J5IjpbNjc4NjM2OTM2XX0=
 -->
