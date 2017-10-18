@@ -127,9 +127,21 @@ on Computer Vision (ICCV), 2015.
 
 ### 2.2 Shape-Based Multi-View Recognition 
 
-Rather than modelling an object as a set of views with 2D features, an explicit 3D shape can be learned from reconstruction[37] or provided by CAD models [39], and subsequently matched to from depth images [13], 3D reconstructions [1],or partial reconstructions with shape completion [12, 39].
+Rather than modelling an object as a set of views with 2D features, an explicit 3D shape can be learned from reconstruction[37-PASCAL VOC] or provided by CAD models [39-ShapeNET], and subsequently matched to from depth images [13], 3D reconstructions [1],or partial reconstructions with shape completion [12, 39].
 
 ```
+[13] S. Gupta, R. Girshick, P. Arbelaez, and J. Malik. Learning
+Rich Features from RGB-D Images for Object Detection and
+Segmentation. In Proceedings of the European Conference
+on Computer Vision (ECCV), 2014
+[1] S. Bai, X. Bai, Z. Zhou, Z. Zhang, and L. J. Latecki. GIFT:
+A Real-time and Scalable 3D Shape Search Engine. In Proceedings
+of the IEEE Conference on Computer Vision and
+Pattern Recognition (CVPR), 2016.
+[12] M. Firman, O. M. Aodha, S. Julier, and G. J. Brostow. Structured
+Prediction of Unobserved Voxels From a Single Depth
+Image. In Proceedings of the IEEE Conference on Computer
+Vision and Pattern Recognition (CVPR), 2016
 
 ```
 
@@ -151,5 +163,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc4MDg5NzY2XX0=
+eyJoaXN0b3J5IjpbLTIwNzMwMTY3MzddfQ==
 -->
