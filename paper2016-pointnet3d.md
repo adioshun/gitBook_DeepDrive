@@ -18,15 +18,17 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 
 ## I. INTRODUCTION
 
-The vast majority of 3D object recognition methods [2] are typically based on hand-crafted local feature descriptors
-[3]. 
+대부분의 연구는 Handcrafted Local Feature 를 사용 하였따. `The vast majority of 3D object recognition methods [2] are typically based on hand-crafted local feature descriptors[3]. `
 
-These kinds of approaches rely on specific pipelines [4] consisting of a keypoint detection phase, followed by
-the computation of descriptors at those characteristic regions, finally they are classified to determine the possible object represented
-by those descriptors. That classification is performed
+기존 방식의 Pipe-line `These kinds of approaches rely on specific pipelines [4] consisting of `
+- a keypoint detection phase, 
+- followed by the computation of descriptors at those characteristic regions, 
+- finally they are classified to determine the possible object represented by those descriptors. 
+
+That classification is performed
 by using distance metrics or machine learning algorithms, e.g.,
 Support Vector Machines (SVMs) [5], random forests [6],
 or neural networks, which are trained with object datasets.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDUwMjcyNThdfQ==
+eyJoaXN0b3J5IjpbMTcwNzkyOTA5Ml19
 -->
