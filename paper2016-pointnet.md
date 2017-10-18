@@ -13,10 +13,9 @@ PointNet : End-to-end learning for scattered, unordered point data, Unified fram
 
 > Point Cloud : 가장 직관적이고 정보를 잘 표현할 수 있으면서도 다른 방법에서 변환하기도 쉽고 역으로 돌아가기도 쉬우며 얻기도 편하므로 이를 많이 사용한다.
 
-
-고려 할점
-- data의 order에 invariant해야한다는 점 \(Unordered point set as input\)
-- point clouds에 geometric transformation을 가한다고 물체가 다른 것으로 분류되어서도 안된다는 점 \(Invariance under geometric transformations\)
+Two Challenges
+- Unordered point set as input : data의 order에 invariant해야한다는 점 
+- Invariance under geometric transformations : point clouds에 geometric transformation을 가한다고 물체가 다른 것으로 분류되어서도 안된다는 점 
 
 본 논문은
 - 첫번쨰(permutation invariance)는 symmetric function을 도입하여 해결
