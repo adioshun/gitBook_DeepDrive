@@ -8,14 +8,14 @@
 | 코드 |  |
 
 
-PointNet제안 : A new approach inspired by VoxNet and 3D ShapeNets, 
+PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`, 
 
 개선 방법 :  
-- using density occupancy grids representations for the input data,
-- integrating them into a supervised Convolutional Neural Network architecture.
+- Using density **occupancy grids representations** for the input data,
+- Integrating them into a supervised **Convolutional Neural Network architecture**.
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYzNTE2NTAxXX0=
+eyJoaXN0b3J5IjpbNDI5ODAzMTM3XX0=
 -->
