@@ -7,6 +7,7 @@
 | 참고 |  |
 | 코드 |  |
 
+# PointNet3Deep
 
 PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`, 
 
@@ -15,7 +16,9 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 - Integrating them into a supervised **Convolutional Neural Network architecture**.
 
 
-> Written with [StackEdit](https://stackedit.io/).
+## I. INTRODUCTION
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI5ODAzMTM3XX0=
+eyJoaXN0b3J5IjpbNjAwNDc2MjE3XX0=
 -->
