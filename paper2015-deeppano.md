@@ -4,7 +4,7 @@
 | --- | --- |
 | 저자\(소속\) | Baoguang Shi \(\) |
 | 학회/년도 | 2015, [논문](http://ieeexplore.ieee.org/document/7273863/) |
-| 키워드 |  |
+| 키워드 |DeepPano2015,  |
 | 데이터셋/모델 | ModelNet-10, ModelNet-40 |
 | 참고 |  |
 | 코드 |[Matlab](https://github.com/bgshih/deeppano) |
