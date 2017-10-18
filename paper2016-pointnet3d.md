@@ -8,10 +8,14 @@
 | 코드 |  |
 
 
-
+In this work, we propose PointNet, a new approach inspired by
+VoxNet and 3D ShapeNets, as an improvement over the existing
+methods by using density occupancy grids representations for the
+input data, and integrating them into a supervised Convolutional
+Neural Network architecture.
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM1NzQwMDU3XX0=
+eyJoaXN0b3J5IjpbMTYwMjAwODQ2Nl19
 -->
