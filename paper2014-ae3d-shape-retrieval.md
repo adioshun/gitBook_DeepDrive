@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자(소속) | Zhuotun Zhu () |
 | 학회/년도 | 2014, 논문 |
-| 키워드 |depth images, autoencoder  |
+| 키워드 |AE3D2014, depth images, autoencoder  |
 | 데이터셋/모델 |Princeton Shape Benchmark, Engineering Shape Benchmark / RBM |
 | 참고 | |
 | 코드 | |
