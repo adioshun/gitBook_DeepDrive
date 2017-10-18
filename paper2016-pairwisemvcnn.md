@@ -150,8 +150,7 @@ Recently CNNs have been applied to 3D shapes by representing them as 3D occupanc
 [26] D. Maturana and S. Scherer. VoxNet: A 3D Convolutional Neural Network for Real-Time Object Recognition. In Proceedings of the IEEE/RSJ Conference on Intelligent Robots and Systems (IROS), 2015.
 ```
 
-
-As of now however, CNNs with 2D view-based methods[35] have outperformed their counterpart 3D voxel-based methods [39, 26], and we therefore adopt the 2D approach in our work. 
+As of now however, CNNs with 2D view-based methods[35] have outperformed their counterpart 3D voxel-based methods [39-ShapeNet, 26-VoxNet], and we therefore adopt the 2D approach in our work. 
 
 However, it is not yet clear whether this greater performance arises from the superior abundance of 2D image data for pre-training deep networks, or the naturally more efficient representation of 2D than 3D in standard CNN architectures.
 
@@ -165,5 +164,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NDgyNjk0Nl19
+eyJoaXN0b3J5IjpbLTE4MzE0OTc3MjZdfQ==
 -->
