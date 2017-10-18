@@ -7,6 +7,24 @@
 | 참고 | [TFKR](https://www.facebook.com/thinking.factory/posts/1408857052524274), [홈페이지](http://stanford.edu/~rqi/pointnet/),[CVPR2017](https://www.youtube.com/watch?v=Cge-hot0Oc0) |
 | 코드 | [TF](https://github.com/charlesq34/pointnet), [pyTorch](https://github.com/fxia22/pointnet.pytorch) |
 
+
+
+PointNet : End-to-end learning for scattered, unordered point data, Unified framework for various tasks
+
+> Point Cloud : 가장 직관적이고 정보를 잘 표현할 수 있으면서도 다른 방법에서 변환하기도 쉽고 역으로 돌아가기도 쉬우며 얻기도 편하므로 이를 많이 사용한다.
+
+
+고려 할점
+- data의 order에 invariant해야한다는 점 \(Unordered point set as input\)
+- point clouds에 geometric transformation을 가한다고 물체가 다른 것으로 분류되어서도 안된다는 점 \(Invariance under geometric transformations\)
+
+본 논문은
+- 첫번쨰(permutation invariance)는 symmetric function을 도입하여 해결
+- 두번째는 transformer network를 하나 모듈로 붙여서 해결하였다.
+
+PointNet은 max pooling을 기준으로 앞부분의 local feature단과 뒷부분의 global feature단을 보는 것으로 나눌 수 있는데, 논문에서는 critical point로 불리는 global feature에 영향을 주는 point set은 매우 적고 주요 경계마다만 있고 대다수의 point들은 영향을 주지 않기 떄문에 전에 point clouds에서 50%까지 data loss가 있더라도 전혀 성능에 문제가 발생하지 않는다. \(robustness to missing data\)
+
+
 # PointNet
 
 Due to Point cloud's irregular format, most researchers transform such data to
@@ -15,6 +33,7 @@ Due to Point cloud's irregular format, most researchers transform such data to
 * collections of images
 
 we design a novel type of neural network that directly consumes point clouds
+
 
 ## 1. Introduction
 
@@ -200,27 +219,61 @@ Our network has three key modules:
 
 #### A. Symmetry Function for Unordered Input
 
-In orderto make a model invariant to input permutation, threestrategies exist: 1) sort input into a canonical order; 2) treatthe input as a sequence to train an RNN, but augment thetraining data by all kinds of permutations; 3) use a simplesymmetric function to aggregate the information from eachpoint. 
+입력 순서에 영향받지 않는 모델 만드는 3가지 방법 `In order to make a model invariant to input permutation, three strategies exist:` 
+1. sort input into a canonical order
+2. treat the input as a sequence to train an RNN, but augment the training data by all kinds of permutations;
+3. use a simple symmetric function to aggregate the information from each point. 
 
-Here, a symmetric function takes n vectors as inputand outputs a new vector that is invariant to the inputorder. 
+##### 가. symmetric function (3번)
 
-For example, + and ∗ operators are symmetric binaryfunctions.While sorting sounds like a simple solution, in highdimensional space there in fact does not exist an orderingthat is stable w.r.t. point perturbations in the generalsense. 
+Here, a symmetric function takes n vectors as input and outputs a new vector that is invariant to the input order. 
 
-This can be easily shown by contradiction. 
+- For example, `+` and `∗` operators are **symmetric binary functions**.
 
-Ifsuch an ordering strategy exists, it defines a bijection mapbetween a high-dimensional space and a 1d real line. 
+##### 나. sorting (1번)
 
-Itis not hard to see, to require an ordering to be stable w.r.tpoint perturbations is equivalent to requiring that this mappreserves spatial proximity as the dimension reduces, a taskthat cannot be achieved in the general case. 
+- 정렬이 간단한 방법 같지만 고차원에서는 정렬방법은 없다. `While sorting sounds like a simple solution, in high dimensional space there in fact does not exist an ordering that is stable w.r.t. point perturbations in the general sense. This can be easily shown by contradiction. `
 
-Therefore,sorting does not fully resolve the ordering issue, and it’shard for a network to learn a consistent mapping frominput to output as the ordering issue persists. 
+- 비록 있다고 하더라도 고차원 공간과 1d real line간의 bijection map을 정의한것이다. `If such an ordering strategy exists, it defines a bijection map between a high-dimensional space and a 1d real line. `
 
-As shown inexperiments (Fig 5), we find that applying a MLP directlyon the sorted point set performs poorly, though slightlybetter than directly processing an unsorted input.The idea to use RNN considers the point set as asequential signal and hopes that by training the RNN with randomly permuted sequences, the RNN will becomeinvariant to input order. 
+It is not hard to see, to require an ordering to be stable w.r.t point perturbations is equivalent to requiring that this map preserves spatial proximity as the dimension reduces, a task that cannot be achieved in the general case. 
 
-However in “OrderMatters” [25]the authors have shown that order does matter and cannot betotally omitted. 
+Therefore,sorting does not fully resolve the ordering issue, and it’s hard for a network to learn a consistent mapping from input to output as the ordering issue persists. 
 
-While RNN has relatively good robustnessto input ordering for sequences with small length (dozens),it’s hard to scale to thousands of input elements, which isthe common size for point sets. 
+As shown in experiments (Fig 5), we find that applying a MLP directly on the sorted point set performs poorly, though slightly better than directly processing an unsorted input.
 
-Empirically, we have alsoshown that model based on RNN does not perform as wellas our proposed method (Fig 5).
+##### 다. RNN (2번)
+
+The idea to use RNN considers the point set as a sequential signal and hopes that by training the RNN with randomly permuted sequences, the RNN will become invariant to input order. 
+
+However in “Order Matters” [25]the authors have shown that order does matter and cannot be totally omitted. 
+
+While RNN has relatively good robustness to input ordering for sequences with small length (dozens), it’s hard to scale to thousands of input elements, which is the common size for point sets. 
+
+Empirically, we have also shown that model based on RNN does not perform as well as our proposed method (Fig 5).
+
+
+##### 라. 제안 방식 
+
+Our idea is to approximate a general function defined on a point set by applying a symmetric function on transformed elements in the set:
+
+![](https://i.imgur.com/RxCawYT.png)
+
+- we approximate $$h$$ by a multi-layer perceptron network and $$g$$ by a composition of a single variable function and a max pooling function. 
+
+- This is found to work well by experiments. 
+
+- Through a collection of $$h$$, we can learn a number of $$f’s$$ to capture different properties of the set. 
+
+
+
+
+![](https://i.imgur.com/aFUsYsC.png)
+```
+[Figure 5. Three approaches to achieve order invariance.] 
+- Multilayer perceptron (MLP) applied on points consists of 5 hidden layers with neuron sizes 64,64,64,128,1024, all points share a single copy of MLP. 
+- The MLP close to the output consists of two layers with sizes 512,256.
+```
 
 
 
@@ -238,21 +291,4 @@ Empirically, we have alsoshown that model based on RNN does not perform as wella
 
 ---
 
-\[요약\]  
-"Research Question: Point clouds에서 바로 feature learning을 효과적으로 하는 방법이 무엇이 있을까?"
-
-3D로 물체를 표현할 때,
-
-* Point Cloud : 가장 직관적이고 정보를 잘 표현할 수 있으면서도 다른 방법에서 변환하기도 쉽고 역으로 돌아가기도 쉬우며 얻기도 편하므로 이를 많이 사용한다.
-* Mesh
-* Volumetric
-* Projected View 등등의 방법
-
-대부분의 point cloud features는 각각의 특정한 task들에 대해 handcrafted 된 경우가 많은데 이런 방식이 아니라 point clouds에서 바로 feature learning을 효과적으로 하는 방법이 무엇이 있을까?  
--&gt; PointNet : End-to-end learning for scattered, unordered point data, Unified framework for various tasks
-
-그런데 point clouds의 특성상 data의 order에 invariant해야한다는  
-점 \(Unordered point set as input\) 그리고 이 point clouds에 geometric transformation을 가한다고 물체가 다른 것으로 분류되어서도 안된다는 점 \(Invariance under geometric transformations\) 이렇게 두가지 특성들을 어떻게 네트워크에 녹여낼 것인가에 대한 고민이 필요하다.
-
-이 연구에서는 permutation invariance는 symmetric function을 도입하여 해결하고 두번째 문제는 transformer network를 하나 모듈로 붙여서 해결하였다. PointNet은 max pooling을 기준으로 앞부분의 local feature단과 뒷부분의 global feature단을 보는 것으로 나눌 수 있는데, 논문에서는 critical point로 불리는 global feature에 영향을 주는 point set은 매우 적고 주요 경계마다만 있고 대다수의 point들은 영향을 주지 않기 떄문에 전에 point clouds에서 50%까지 data loss가 있더라도 전혀 성능에 문제가 발생하지 않는다. \(robustness to missing data\)
 
