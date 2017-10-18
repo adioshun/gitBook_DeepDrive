@@ -213,7 +213,7 @@ Bounding boxes are selected from the highest score and candidates overlapping wi
 
 Figure 3 shows an example of the detection intermediate results.
 
-Bounding box predictions from objectness pointsare plotted as green boxes.
+Bounding box predictions from objectness points are plotted as green boxes.
 
 Note that for severely occluded vehicles, the bounding boxes shape are distorted and not clustered.
 
