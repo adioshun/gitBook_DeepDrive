@@ -3,7 +3,7 @@
 | 저자\(소속\) |A. Garcia-Garcia \(\) |
 | 학회/년도 | IJCNN 2016, [논문](http://ieeexplore.ieee.org/document/7727386/) |
 | 키워드 | PointNet3D2016,  |
-| 데이터셋(센서)/모델 |ModelNet(RGB-D  |
+| 데이터셋(센서)/모델 |ModelNet(RGB-D)  |
 | 참고 |  |
 | 코드 |  |
 
@@ -20,5 +20,5 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMzMTY2MDVdfQ==
+eyJoaXN0b3J5IjpbLTE4ODQwNjIyNjZdfQ==
 -->
