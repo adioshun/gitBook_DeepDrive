@@ -83,7 +83,9 @@ All three contributions achieve state-of-the-art results in their respective ben
 In its simplest form, the view-based approach aims to add viewpoint tolerance to a 2D image of an object, 
 - such as with view point invariant local descriptors [27, 29] or deformation-tolerant global descriptors [6]. 
 
-Given training images across multiple viewpoints, a more stable set of features can be found by tracking those which are shared across multiple views and clustering images accordingly [23], or by learning their relative 2D displacements as the viewpoint changes, both with hard constraints for rigid bodies [17, 18] and flexible constraints for deformable bodies [11, 10]. 
+Given training images across multiple viewpoints, a more stable set of features can be found 
+- by tracking those which are shared across multiple views and clustering images accordingly [23], or 
+- by learning their relative 2D displacements as the viewpoint changes, both with hard constraints for rigid bodies [17, 18] and flexible constraints for deformable bodies [11, 10]. 
 
 To add further fidelity to the true underlying object geometry, these 2D image elements can also be embedded within an implicit 3D model [36, 22, 28]. 
 
@@ -115,5 +117,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODExMjM2NDVdfQ==
+eyJoaXN0b3J5IjpbLTk2NjAyMTM2M119
 -->
