@@ -1,7 +1,7 @@
 | 논문명 | Deep Learning Representation using Autoencoder for 3D Shape Retrieval |
 | --- | --- |
 | 저자(소속) | Zhuotun Zhu () |
-| 학회/년도 | 2014, 논문 |
+| 학회/년도 | 2014, [논문](https://arxiv.org/abs/1409.7164) |
 | 키워드 |AE3D2014, depth images, autoencoder  |
 | 데이터셋/모델 |Princeton Shape Benchmark, Engineering Shape Benchmark / RBM |
 | 참고 | |
@@ -134,5 +134,5 @@ Recently, Bai et al. [17] adopted contour fragments as the input features for le
 [17] Bai, X., Rao, C., Wang, X.: Shape Vocabulary: A Robust and Efficient Shape Representation for Shape Matching. IEEE Transactions on Image Processing 29 (2014) 3935–3949
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgzMjgzNzUwXX0=
+eyJoaXN0b3J5IjpbMTAxNTc2ODk0NF19
 -->
