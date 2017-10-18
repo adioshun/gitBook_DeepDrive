@@ -3,6 +3,7 @@
 | 저자\(소속\) | Charles R. Qi, Hao Su, Kaichun Mo, Leonidas J. Guibas \(Stanford University\) |
 | 학회/년도 | Dec 2016 ~ Apr 2017, CVPR 2017,  [논문](https://arxiv.org/abs/1612.00593) |
 | 키워드 |  |
+| 데이터셋(센서)/모델| ModelNet40|
 | 참고 | [TFKR](https://www.facebook.com/thinking.factory/posts/1408857052524274), [홈페이지](http://stanford.edu/~rqi/pointnet/),[CVPR2017](https://www.youtube.com/watch?v=Cge-hot0Oc0) |
 | 코드 | [TF](https://github.com/charlesq34/pointnet), [pyTorch](https://github.com/fxia22/pointnet.pytorch) |
 
@@ -105,13 +106,135 @@ We think they are constrained by the representation power of the features extrac
 
 * 그나마 최근 연구는 \[25\]이다. `One recent work from Oriol Vinyals et al [25] looks into this problem.`
 
-* They use a read-process-write network with attention mechanism to consume unordered input sets and show that their network has the ability to sort numbers.
+    * They use a read-process-write network with attention mechanism to consume unordered input sets and show that their network has the ability to sort numbers.
 
-However, since their work focuses on generic sets and NLP applications, there lacks the role of geometry in the sets.
+    - 그러나 이 연구 역시 NLP에 초점을 두고 있어서 Geo정보처리는 안한다. `However, since their work focuses on generic sets and NLP applications, there lacks the role of geometry in the sets.`
 
 ```
 [25] O. Vinyals, S. Bengio, and M. Kudlur. Order matters: Sequence to sequence for sets. arXiv preprint arXiv:1511.06391, 2015.
 ```
+
+
+## 3. Problem Statement
+
+
+We design a deep learning framework that directly consumes unordered point sets as inputs. 
+
+A point cloud is represented as a set of 3D points $$\{P_i \mid i = 1, ..., n \} 
+- each point $$P_i$$ is a vector of its $$(x, y, z)$$ coordinate plus extra feature channels such as color, normal etc. 
+
+For simplicity and clarity, unless otherwise noted, we only use the (x, y, z) coordinate as our point’s channels.
+
+### 3.1 classification
+
+For the object classification task, the **input **point cloud is 
+    - either directly sampled from a shape 
+    - or pre-segmented from a scene point cloud. 
+
+Our proposed deep network outputs k scores for all the k candidate classes. 
+
+### 3.2 semantic segmentation
+
+For semantic segmentation, the **input** can be 
+    - a single object for part region segmentation, 
+    - or a sub-volume from a 3D scene for object region segmentation. 
+
+Our model will output $$n × m$$ scores for each of the $$n$$ points and each of the $$m$$ semantic subcategories.
+
+
+## 4. Deep Learning on Point Sets
+
+
+The architecture of our network (Sec 4.2) is inspired by the properties of point sets in $$\Re^n$$ (Sec 4.1).
+
+
+
+### 4.1 Properties of Point Sets in $$\Re^n$$ 
+
+Our input is a subset of points from an **Euclidean space**.
+
+3가지 주요 특징 `It has three main properties:`
+
+#### A. Unordered
+
+- Unlike pixel arrays in images or voxel arrays in volumetric grids, point cloud is a set of points without specific order. 
+
+- In other words, a network that consumes $$N$$ 3D point sets needs to be invariant to $$N!$$ permutations of the input set in data feeding order.
+
+#### B. Interaction among points. 
+
+- The points are from a space with a distance metric. 
+
+- It means that points are not isolated, and neighboring points form a meaningful subset. 
+
+- Therefore, the model needs to be able to capture local structures from nearby points, and the combinatorial interactions among local structures.
+
+
+#### C. Invariance under transformations
+
+- As a geometric object, the learned representation of the point set should be invariant to certain transformations. 
+
+- For example, rotating and translating points all together should 
+    - not modify the global point cloud category 
+    - nor the segmentation of the points.
+
+### 4.2 PointNet Architecture
+
+![](https://i.imgur.com/LZiDf16.png)
+```
+[Figure 2. PointNet Architecture.] 
+- The classification network takes n points as input, applies input and feature transformations, and then aggregates point features by max pooling. 
+    - The output is classification scores for k classes. 
+- The segmentation network is an extension to the classification net. 
+    - It concatenates global and local features and outputs per point scores. 
+    - “mlp” stands for multi-layer perceptron, numbers in bracket are layer sizes. 
+    - Batchnorm is used for all layers with ReLU. 
+    - Dropout layers are used for the last mlp in classification net.
+```
+
+Our network has three key modules: 
+1. The max pooling layer as a **symmetric function** to aggregate information from all the points, 
+2. a local and global information combination structure, 
+3. and two joint alignment networks that align both input points and point features.
+
+
+#### A. Symmetry Function for Unordered Input
+
+In orderto make a model invariant to input permutation, threestrategies exist: 1) sort input into a canonical order; 2) treatthe input as a sequence to train an RNN, but augment thetraining data by all kinds of permutations; 3) use a simplesymmetric function to aggregate the information from eachpoint. 
+
+Here, a symmetric function takes n vectors as inputand outputs a new vector that is invariant to the inputorder. 
+
+For example, + and ∗ operators are symmetric binaryfunctions.While sorting sounds like a simple solution, in highdimensional space there in fact does not exist an orderingthat is stable w.r.t. point perturbations in the generalsense. 
+
+This can be easily shown by contradiction. 
+
+Ifsuch an ordering strategy exists, it defines a bijection mapbetween a high-dimensional space and a 1d real line. 
+
+Itis not hard to see, to require an ordering to be stable w.r.tpoint perturbations is equivalent to requiring that this mappreserves spatial proximity as the dimension reduces, a taskthat cannot be achieved in the general case. 
+
+Therefore,sorting does not fully resolve the ordering issue, and it’shard for a network to learn a consistent mapping frominput to output as the ordering issue persists. 
+
+As shown inexperiments (Fig 5), we find that applying a MLP directlyon the sorted point set performs poorly, though slightlybetter than directly processing an unsorted input.The idea to use RNN considers the point set as asequential signal and hopes that by training the RNN with randomly permuted sequences, the RNN will becomeinvariant to input order. 
+
+However in “OrderMatters” [25]the authors have shown that order does matter and cannot betotally omitted. 
+
+While RNN has relatively good robustnessto input ordering for sequences with small length (dozens),it’s hard to scale to thousands of input elements, which isthe common size for point sets. 
+
+Empirically, we have alsoshown that model based on RNN does not perform as wellas our proposed method (Fig 5).
+
+
+
+#### B. Local and Global Information Aggregation
+
+#### C. Joint Alignment Network
+
+### 4.3. Theoretical Analysis
+
+## 5. Experiment
+
+
+
+
 
 ---
 
