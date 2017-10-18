@@ -89,9 +89,19 @@ To add further fidelity to the true underlying object geometry, these 2D image e
 
 If multiple views are available at testing, images can be combined and treated as a single, larger image[31], an approach which can also be addressed in two stages, by processing the individual images first to reduce the search space [5]. 
 
-Recently, CNN architectures have been extended to allow for recognition from image sequences using a single network, by max pooling across all viewpoints [35], or by unwrapping an object shape into a panorama and max poolingacross each row [33]. 
+Recently, CNN architectures have been extended to allow for recognition from image sequences using a single network, by max pooling across all viewpoints [35], or by unwrapping an object shape into a panorama and max pooling across each row [33]. 
 
-However, both these methods assumethat a fixed-length image sequence is provided duringboth training and testing, and hence are unsuitable for generalisedmulti-view recognition.
+However, both these methods assume that a fixed-length image sequence is provided during both training and testing, and hence are unsuitable for generalised multi-view recognition.
+
+### 2.2 Shape-Based Multi-View Recognition 
+
+Rather than modelling an object as a set of views with 2D features, an explicit 3D shape can be learned from reconstruction[37] or provided by CAD models [39], and subsequently matched to from depth images [13], 3D reconstructions [1],or partial reconstructions with shape completion [12, 39].
+
+Shape descriptors include distributions of local surface properties [14, 32], spherical harmonic functions over voxelgrids [24], and 3D local invariant features [25]. 
+
+Recently CNNs have been applied to 3D shapes by representingthem as 3D occupancy grids, and building generative [39]or discriminative [26] networks.As of now however, CNNs with 2D view-based methods[35] have outperformed their counterpart 3D voxel-basedmethods [39, 26], and we therefore adopt the 2D approachin our work. 
+
+However, it is not yet clear whether this greaterperformance arises from the superior abundance of 2D imagedata for pre-training deep networks, or the naturallymore efficient representation of 2D than 3D in standardCNN architectures.
 
 
 ---
@@ -103,5 +113,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNzYzNzc4Ml19
+eyJoaXN0b3J5IjpbOTk1ODk3NDVdfQ==
 -->
