@@ -404,7 +404,7 @@ The multi-view CNN proposed by [32] is a strong alternative to volumetric repres
 	- then image features (e.g. conv5 feature in VGGor AlexNet) are extracted for each view; 
 	- lastly features are combined across views through a pooling layer, followed by fully connected layers.
 
-- Although the multi-view CNN presented by [32] produces compelling results, we are able to improve its performance through a multi-resolution extension with improved data augmentation. 
+- 성능 개선을 위해 **multi-resolution extension**와 **데이터 augmentation**을 사용 하였다. `Although the multi-view CNN presented by [32] produces compelling results, we are able to improve its performance through a multi-resolution extension with improved data augmentation. `
 
 We introduce multi-resolution 3D filtering to capture information at multiple scales. 
 
@@ -417,5 +417,5 @@ Note that our 3D multiresolutionfiltering is different from classical 2D multire
 We use AlexNet instead of VGG for efficiency.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2Njg5MTU0XX0=
+eyJoaXN0b3J5IjpbLTkwMzQxODk1Nl19
 -->
