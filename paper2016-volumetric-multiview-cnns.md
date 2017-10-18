@@ -406,11 +406,13 @@ The multi-view CNN proposed by [32] is a strong alternative to volumetric repres
 
 - 성능 개선을 위해 **multi-resolution extension**와 **데이터 augmentation**을 사용 하였다. `Although the multi-view CNN presented by [32] produces compelling results, we are able to improve its performance through a multi-resolution extension with improved data augmentation. `
 
-We introduce multi-resolution 3D filtering to capture information at multiple scales. 
+### 5.1  multi-resolution 3D filtering
 
-We performsphere rendering (see Sec 3) at different volume resolutions.
+- We introduce multi-resolution 3D filtering to capture information at multiple scales. 
 
-Note that we use spheres for this discretization asthey are view-invariant. 
+- We perform **sphere rendering** (see Sec 3) at different volume resolutions.
+
+Note that we use spheres for this discretization as they are view-invariant. 
 
 In particular, this helps regularizeout potential noise or irregularities in real-world scanneddata (relative to synthetic training data), enabling robustperformance on real-world scans. 
 
@@ -419,5 +421,5 @@ Note that our 3D multiresolutionfiltering is different from classical 2D multire
 We use AlexNet instead of VGG for efficiency.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNzgwMjk2OF19
+eyJoaXN0b3J5IjpbLTgzMzI0MjM1Nl19
 -->
