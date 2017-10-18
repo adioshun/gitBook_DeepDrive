@@ -7,9 +7,9 @@
 * [Paper\_2017\_Survey\_CV4Vehicle \(50%\)](paper2017-survey.md)
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
-* [Paper\_2015\_MVCNN ](paper2015-mvcnn.md)
-* [Paper\_2015\_DeepPano](paper2015-deeppano.md)
-* [Paper\_2016\_pairwiseMVCNN](paper2016-pairwisemvcnn.md)
+* [Paper\_2015\_MVCNN \(70%\)](paper2015-mvcnn.md)
+* [Paper\_2015\_DeepPano \(70%\)](paper2015-deeppano.md)
+* [Paper\_2016\_pMVCNN \(30%\)](paper2016-pairwisemvcnn.md)
 
 ## 2D CNN
 
