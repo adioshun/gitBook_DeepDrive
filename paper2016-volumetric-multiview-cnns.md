@@ -393,8 +393,25 @@ this is just a special case of the MO-VCNN.
 ## 5. Multi-View Convolutional Neural Networks
 
 
+The multi-view CNN proposed by [32] is a strong alternative to volumetric representations. 
 
+
+
+This multi-view representation is constructed in three steps: 
+- first, a 3D shape is rendered into multiple images using varying camera extrinsics;
+- then image features (e.g. conv5 feature in VGGor AlexNet) are extracted for each view; 
+- lastly features are combined across views through a pooling layer, followed by fully connected layers.Although the multi-view CNN presented by [32] producescompelling results, we are able to improve its performancethrough a multi-resolution extension with improveddata augmentation. 
+
+We introduce multi-resolution 3D filteringto capture information at multiple scales. 
+
+We performsphere rendering (see Sec 3) at different volume resolutions.Note that we use spheres for this discretization asthey are view-invariant. 
+
+In particular, this helps regularizeout potential noise or irregularities in real-world scanneddata (relative to synthetic training data), enabling robustperformance on real-world scans. 
+
+Note that our 3D multiresolutionfiltering is different from classical 2D multiresolutionapproaches, since the 3D filtering respects thedistance in 3D.Additionally, we also augment training data with variationsin both azimuth and elevation, as opposed to azimuthonly. 
+
+We use AlexNet instead of VGG for efficiency.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MDM2MDg3OV19
+eyJoaXN0b3J5IjpbMTQ3MTU3MTU5OF19
 -->
