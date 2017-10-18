@@ -128,13 +128,93 @@ Another method for performing sparse convolutions is introduced in \[12\] who ma
 
 - 조밀한 3D CNN을 포인트 클라우드에 적용하면 ` multiplications by zero`연산으로 인해 대부분의 시간이 소모 된다. 더구나, 3rd 공간 연산으로 인해 2D에 비하여 더 연산 부하가 걸린다. `When running a dense 3D convolution across a discretised point cloud, most of the computation time is wasted as the majority of operations are multiplications by zero. The additional third spatial dimension makes this process even more computationally expensive compared to 2D convolutions, which form the basis of image-based CNNs.`
 
-- 이점에 착안하여 3D features are non-zero인것에서만 연산을 수행하는 feature-centric voting scheme[5]가 제안 되었다. `Using the insight that meaningful computation only takes place where the 3D features are non-zero, [5] introduce a feature-centric voting scheme. `
+- 이점에 착안하여 3D features가 non-zero인것에서만 연산을 수행하는 feature-centric voting scheme[5]가 제안 되었다. `Using the insight that meaningful computation only takes place where the 3D features are non-zero, [5] introduce a feature-centric voting scheme. `
 
 
-- 
-The basis of this algorithm is the idea of letting each non-zero input feature vector cast a set of votes, weighted by the filter weights, to its surrounding cells in the output layer, as defined by the receptive field of the filter. 
-
-The voting weights are obtained by flipping the convolutional filter kernel along each spatial dimension. 
+- 이 **알고리즘의 기본**은 : The basis of this algorithm is the idea of letting each non-zero input feature vector cast a set of votes, weighted by the filter weights, to its surrounding cells in the output layer, as defined by the receptive field of the filter. 
+	- The **voting weights** are obtained by flipping the convolutional filter kernel along each spatial dimension. 
 
 The final convolution result is obtained by accumulating the votes falling into each cell of the output (Fig. 2).
+
+![](https://i.imgur.com/IHaeN8w.png)
+```
+[Fig. 2. An illustration of the voting procedure on a sparse 2D example input
+without a bias.]
+- The voting weights are obtained by flipping the convolutional weights along each dimension. 
+- Whereas a standard convolution applies the filter at every location in the input, the equivalent voting procedure only needs to be applied at each non-zero location to compute the same result.
+- Instead of a 2D grid with a single feature, Vote3Deep applies the voting procedure to 3D inputs with several feature maps. 
+- For a full mathematical justification, the reader is referred to [5]. Best viewed in colour.
+```
+
+This procedure can be formally stated as follows. 
+- Without loss of generality, assume we have one 3D convolutional filter with odd-valued kernel dimensions in network layer $$c$$, operating on a single input feature, with the filter weights denoted by $$w^c \in \Re^{(2I+1)\times(2J+1)\times(2K+1)}$$
+
+Then, for an input grid $$h^{c−1} \in \Re^{L \times M \times N}, the convolution result at location
+$$(l, m, n)$$ is given by:
+
+![](https://i.imgur.com/WIeqRi1.png)
+
+- $$b^c$$ : is a bias value applied to all cells in the grid. 
+
+This operation needs to be applied to all $$L × M × N$$ locations
+in the input grid for a regular dense convolution. 
+
+In contrast to this, given the set of cell indices for all of the non-zero
+cells $$ \Phi = \left\{\left(l,m,n\right)\forall h^{c-1}_{l,m,n} \ne 0 \right\} $$
+
+the convolution can be recast as a feature-centric voting operation, with each input
+cell casting votes to increment the values in neighbouring cell locations according to:
+
+![](https://i.imgur.com/me1dr1w.png)
+
+which is repeated for all tuples $$(l,m,n) \in \Phi $$ and where $$\{i,j,k \in Z \mid i \in \[-I,I\], j \in \[-J, J\], k \in \[-K, K\] \}$$
+
+**Voting**의 결과물은 ReLU를 통과 하여 양수가 아닌것들은 버려진다. `The voting output is passed through a ReLU non-linearity which discards non-positive features as described in the next subsection. `
+
+
+Crucially, the biases are constrained to be nonpositive as a single positive bias would return an output grid in which almost every cell is occupied with a feature vector, hence eliminating sparsity. 
+
+The bias $$b^c$$ therefore only needs to be added to each non-empty output cell.
+
+With this sparse voting scheme, the filter only needs to be applied to the occupied cells in the input grid, rather than convolved over the entire grid. 
+
+더 자세한 알고리즘 내용은 [5]에 기술 되어 있다. `The algorithm is described in more detail in [5], including formal proof that feature-centric voting is equivalent to an exhaustive convolution`
+
+
+
+### 3.2 Maintaining Sparsity with ReLUs
+
+
+> 추후 확인 
+
+## 4. TRAINING
+
+-  고정된 B.Box를 사용하기 때문에 바로 적용하기 쉽다. `Due to the use of fixed-size bounding boxes, networks can be directly trained on 3D crops of positive and negative examples whose dimensions equal the receptive field size specified by the architecture.`
+
+- Negative training examples are obtained by performing hard negative mining periodically after a fixed number of training epochs. 
+
+- 이진 분류기를 사용하며 Loss로는 **linear hinge loss**를 채택 하였다. `The class-specific networks are binary classifiers and we choose a linear hinge loss for training due to its maximum margin property.`
+
+
+### 4.1 Linear Hinge Loss
+
+
+### 4.2 L1 Sparsity Penalty
+
+## 5. EXPERIMENTS
+
+
+### 5.1 Dataset 
+
+- KITTI 사용 
+- We only use the 3D point cloud data to train and test the models.
+
+### 5.2 Evaluation
+
+### 5.3  Training
+
+
+
+
+
 
