@@ -10,6 +10,7 @@
 * [Paper\_2015\_MVCNN \(70%\)](paper2015-mvcnn.md)
 * [Paper\_2015\_DeepPano \(70%\)](paper2015-deeppano.md)
 * [Paper\_2016\_pMVCNN \(30%\)](paper2016-pairwisemvcnn.md)
+* [Paper\_2016\_FPNN](paper2016-fpnn.md)
 
 ## 2D CNN
 
