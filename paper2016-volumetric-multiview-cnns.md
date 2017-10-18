@@ -5,6 +5,7 @@
 | 저자\(소속\) | Charles R. Qi \(Standford\) |
 | 학회/년도 | 2016 , [논문](https://arxiv.org/abs/1604.03265) |
 | 키워드 | VMCNN2016, Volumetric CNN 성능향상, Multi-View CNNs 성능향상 |
+| 데이터셋(센서)/모델 | ModelNet |
 | 참고 | |
 | 코드 | |
 
@@ -395,5 +396,5 @@ this is just a special case of the MO-VCNN.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNTUxNTkzMl19
+eyJoaXN0b3J5IjpbMTY3MDM2MDg3OV19
 -->
