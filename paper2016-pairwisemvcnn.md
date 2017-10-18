@@ -176,5 +176,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2ODEwNzA0OV19
+eyJoaXN0b3J5IjpbMzYyNjA3Mjc1XX0=
 -->
