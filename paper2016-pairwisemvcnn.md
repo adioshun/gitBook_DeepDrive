@@ -88,15 +88,19 @@ Given training images across multiple viewpoints, a more stable set of features 
 - by learning their relative 2D displacements as the viewpoint changes, 
 both with hard constraints for rigid bodies [17, 18] and flexible constraints for deformable bodies [11, 10]. 
 
+```
+
 To add further fidelity to the true underlying object geometry, these 2D image elements can also be embedded within an implicit 3D model [36, 22, 28]. 
 
 If multiple views are available at testing, 
-- 하images can be combined and treated as a single, larger image[31], 
+- images can be combined and treated as a single, larger image[31], 
 - an approach which can also be addressed in two stages, by processing the individual images first to reduce the search space [5]. 
 
-Recently, CNN architectures have been extended to allow for recognition from image sequences using a single network, by max pooling across all viewpoints [35], or by unwrapping an object shape into a panorama and max pooling across each row [33]. 
+Recently, CNN architectures have been extended to allow for recognition from image sequences using a single network, 
+- by max pooling across all viewpoints [35], or 
+- by unwrapping an object shape into a panorama and max pooling across each row [33]. 
 
-However, both these methods assume that a fixed-length image sequence is provided during both training and testing, and hence are unsuitable for generalised multi-view recognition.
+However, both these methods assume that a **fixed-length image sequence** is provided during both training and testing, and hence are unsuitable for generalised multi-view recognition.
 
 ### 2.2 Shape-Based Multi-View Recognition 
 
@@ -120,5 +124,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM4OTI4MzVdfQ==
+eyJoaXN0b3J5IjpbLTg3NTU4NTI2MV19
 -->
