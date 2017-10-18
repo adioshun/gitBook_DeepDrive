@@ -89,8 +89,18 @@ Given training images across multiple viewpoints, a more stable set of features 
 both with hard constraints for rigid bodies [17, 18] and flexible constraints for deformable bodies [11, 10]. 
 
 ```
+[23] D. Lowe. Local Feature View Clustering for 3D Object Recognition. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2001.
+[17] E. Johns and G.-Z. Yang. From Images to Scenes: Compressing an Image Cluster into a Single Scene Model for Place Recognition. In Proceedings of the International Conference on Computer Vision (ICCV), 2011.
+[18] E. Johns and G.-Z. Yang. Generative Methods for LongTerm Place Recognition in Dynamic Scenes. International Journal of Computer Vision (IJCV), 106(3):297–314, 2014
+[10] P. F. Felzenszwalb, R. B. Girshick, D. McAllester, and D. Ramanan. Object detection with discriminatively trained partbased models. IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI), 32(9):1627–1645, 2010. 
+[11] R. Fergus, P. Perona, and A. Zisserman. Object Class Recognition by Unsupervised Scale-Invariant Learning. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2003
+```
 
 To add further fidelity to the true underlying object geometry, these 2D image elements can also be embedded within an implicit 3D model [36, 22, 28]. 
+
+```
+
+```
 
 If multiple views are available at testing, 
 - images can be combined and treated as a single, larger image[31], 
@@ -124,5 +134,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3NTU4NTI2MV19
+eyJoaXN0b3J5IjpbLTE5OTA4OTM0MzJdfQ==
 -->
