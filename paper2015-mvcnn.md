@@ -4,7 +4,7 @@
 | 학회/년도 | 2015, [논문](https://arxiv.org/abs/1505.00880) |
 | 키워드 | MVCNN2015, The Fisher vector + CNN feature, VGG |
 | 데이터셋/모델 | modelnet40 |
-| 참고 | [홈페이지](http://vis-www.cs.umass.edu/mvcnn/), [ppt](http://vis-www.cs.umass.edu/mvcnn/docs/1694_video.mp4) |
+| 참고 | [홈페이지](http://vis-www.cs.umass.edu/mvcnn/), [ppt](http://vis-www.cs.umass.edu/mvcnn/docs/1694_video.mp4), [Youtube](https://www.youtube.com/watch?v=QQbOy6J2PI0) |
 | 코드 | [matlab](https://github.com/suhangpro/mvcnn), [Caffe](https://github.com/suhangpro/mvcnn/tree/master/caffe), [TF](https://github.com/WeiTang114/MVCNN-TensorFlow), [Torch](https://github.com/eriche2016/mvcnn.torch) |
 
 
