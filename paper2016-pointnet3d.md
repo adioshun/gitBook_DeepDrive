@@ -30,7 +30,9 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 - random forests [6],
 - neural networks, which are trained with object datasets.
 
+문제점 : 도메인 지식 필요, 완벽하지 않음 `handcrafting feature descriptors requires domain expertise and remarkable engineering and theoretical skills, and even fulfilling both requirements they are still far from perfection. `
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NjE5NjY3NV19
+eyJoaXN0b3J5IjpbLTQ4ODk3NDk4MF19
 -->
