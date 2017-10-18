@@ -52,6 +52,7 @@
 * [Paper\_2016\_Vote3Deep \(50%\)](papervote3deep.md)
 * [Paper\_2017\_PointNet \(50%\)](paper2016-pointnet.md)
 * [Paper\_2017\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
+* --------------
 * 미진행
   * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
   * [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
