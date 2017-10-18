@@ -138,14 +138,18 @@ Rather than modelling an object as a set of views with 2D features, an explicit 
 Shape descriptors include distributions of local surface properties [14, 32], spherical harmonic functions over voxel grids [24], and 3D local invariant features [25]. 
 
 ```
-[14] B. K. P. Horn. Extended gaussian images. In Proceedings of
-the IEEE, 1984
-[32] B. C. R. Osada, T. Funkhouser and D. Dobkin. Shape distributions.
-In ACM Transactions on Graphics, 2002
-
+[14] B. K. P. Horn. Extended gaussian images. In Proceedings of the IEEE, 1984 
+[32] B. C. R. Osada, T. Funkhouser and D. Dobkin. Shape distributions. In ACM Transactions on Graphics, 2002
+[24] T. F. M. Kazhdan and S. Rusinkiewicz. Rotation invariant spherical harmonic representation of 3D shape descriptors. In Proceedings of the Symposium of Geometry Processing,2003
+[25] T. F. M. Kazhdan and S. Rusinkiewicz. Hough transform and 3D SURF for robust three dimensional classification. In Proceedings of the European Conference on Computer Vision (ECCV), 2010
 ```
 
-Recently CNNs have been applied to 3D shapes by representingthem as 3D occupancy grids, and building generative [39]or discriminative [26] networks.
+Recently CNNs have been applied to 3D shapes by representing them as 3D occupancy grids, and building generative [39-ShapeNet]or discriminative [26-VoxNet] networks.
+```
+[39] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang, and J. Xiao. 3D ShapeNets: A Deep Representation for Volumetric Shapes. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2015.
+[26] D. Maturana and S. Scherer. VoxNet: A 3D Convolutional Neural Network for Real-Time Object Recognition. In Proceedings of the IEEE/RSJ Conference on Intelligent Robots and Systems (IROS), 2015.
+```
+
 
 As of now however, CNNs with 2D view-based methods[35] have outperformed their counterpart 3D voxel-based methods [39, 26], and we therefore adopt the 2D approach in our work. 
 
@@ -161,5 +165,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMzU5NzU4Ml19
+eyJoaXN0b3J5IjpbLTY5NDgyNjk0Nl19
 -->
