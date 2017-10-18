@@ -8,7 +8,6 @@
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 
-
 ## 2D CNN
 
 * [Paper\_2017\_SqueezeDet \(50%\)](paper2016-squeezedet.md)
@@ -49,7 +48,7 @@
 * [Paper\_2016\_VeloFCN\_Bo Li \(70%\)](paper2016-velofcn4vd.md)
 * 미진행 
   * [Paper\_2016\_FPNN](paper2016-fpnn.md)
-* [Paper\_2016\_Vote3Deep \(50%\)](papervote3deep.md)
+* [Paper\_2017\_Vote3Deep \(50%\)](papervote3deep.md)
 * [Paper\_2017\_PointNet \(50%\)](paper2016-pointnet.md)
 * [Paper\_2017\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * 미진행

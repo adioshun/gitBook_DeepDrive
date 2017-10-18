@@ -7,6 +7,7 @@
 | 참고 | [ppt](https://www.facebook.com/thinking.factory/posts/1408857052524274), [홈페이지](http://stanford.edu/~rqi/pointnet/),[CVPR2017](https://www.youtube.com/watch?v=Cge-hot0Oc0) |
 | 코드 | [TF](https://github.com/charlesq34/pointnet), [pyTorch](https://github.com/fxia22/pointnet.pytorch) |
 
+> 같은 이름의 다른 논문 :  PointNet: A 3D Convolutional Neural Network for real-time object class recognition, A. Garcia-Garcia, [링크](http://ieeexplore.ieee.org/document/7727386/authors)
 
 
 PointNet : End-to-end learning for scattered, unordered point data, Unified framework for various tasks
