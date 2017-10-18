@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Edward Johns (Imperial College London, UK) |
 | 학회/년도 | May 2016, [논문](https://arxiv.org/abs/1605.08359) |
-| 키워드 |  |
+| 키워드 | pMVCNN2016 |
 | 데이터셋(센서)/모델 | ModelNet |
 | 참고 |[CVPR2016](https://www.youtube.com/watch?v=7Bw0HGlidtg)  |
 | 코드 |  |
@@ -173,5 +173,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMDM1NzI1OF19
+eyJoaXN0b3J5IjpbMTE2ODEwNzA0OV19
 -->
