@@ -412,14 +412,18 @@ The multi-view CNN proposed by [32] is a strong alternative to volumetric repres
 
 - We perform **sphere rendering** (see Sec 3) at different volume resolutions.
 
-Note that we use spheres for this discretization as they are view-invariant. 
+- Note that we use spheres for this discretization as they are view-invariant. 
 
-In particular, this helps regularizeout potential noise or irregularities in real-world scanneddata (relative to synthetic training data), enabling robustperformance on real-world scans. 
+- In particular, this helps regularize out potential noise or irregularities in real-world scanned data (relative to synthetic training data), enabling robust performance on real-world scans. 
 
-Note that our 3D multiresolutionfiltering is different from classical 2D multiresolutionapproaches, since the 3D filtering respects thedistance in 3D.Additionally, we also augment training data with variationsin both azimuth and elevation, as opposed to azimuthonly. 
+- Note that our 3D multire solution filtering is different from classical 2D multi resolution approaches, since the 3D filtering respects the distance in 3D.
+
+
+
+- Additionally, we also augment training data with variations in both azimuth and elevation, as opposed to azimuth only. 
 
 We use AlexNet instead of VGG for efficiency.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzMzI0MjM1Nl19
+eyJoaXN0b3J5IjpbLTI3NjIzNDI3Nl19
 -->
