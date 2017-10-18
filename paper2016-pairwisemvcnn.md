@@ -117,7 +117,7 @@ Recently, CNN architectures have been extended to allow for recognition from ima
 - by max pooling across all viewpoints [35-MVCNN], or 
 - by unwrapping an object shape into a panorama and max pooling across each row [33-DeepPano]. 
 
-However, both these methods assume that a **fixed-length image sequence** is provided during both training and testing, and hence are unsuitable for generalised multi-view recognition.
+단점 : However, both these methods assume that a **fixed-length image sequence** is provided during both training and testing, and hence are unsuitable for generalised multi-view recognition.
 
 ```
 [35] H. Su, S. Maji, E. Kalogerakis, and E. G. Learned-Miller. Multi-view Convolutional Neural Networks for 3D Shape Recognition. In Proceedings of the International Conference
@@ -147,5 +147,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc3OTUzOTA4XX0=
+eyJoaXN0b3J5IjpbMjc1ODE3OTU4XX0=
 -->
