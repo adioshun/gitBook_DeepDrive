@@ -4,9 +4,9 @@
 | 학회/년도 | NIPS 2016, [논문](https://arxiv.org/abs/1605.06240) |
 | 키워드 | |
 | 데이터셋(센서)/모델 | |
-| 참고 | |
-| 코드 | |
+| 참고 |[홈페이지](http://yangyanli.github.io/FPNN/),  |
+| 코드 |[caffe](https://github.com/yangyanli/FPNN) |
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDA5MTEwMjhdfQ==
+eyJoaXN0b3J5IjpbLTEzMTIyNTk4OV19
 -->
