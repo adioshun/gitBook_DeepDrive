@@ -134,5 +134,5 @@ Recently, Bai et al. [17] adopted contour fragments as the input features for le
 [17] Bai, X., Rao, C., Wang, X.: Shape Vocabulary: A Robust and Efficient Shape Representation for Shape Matching. IEEE Transactions on Image Processing 29 (2014) 3935–3949
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTYzMTkwNDRdfQ==
+eyJoaXN0b3J5IjpbODgzMjgzNzUwXX0=
 -->
