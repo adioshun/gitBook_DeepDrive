@@ -166,6 +166,9 @@ However, it is not yet clear whether this greater performance arises from the su
 
 ---
 
+###### [참고] The next best view problem
+
+
 The next best view problem (NBV) seeks a single additional sensor placement in order to improve an existing scene reconstruction derived from the current imaging configuration. Depending on the context, NBV can be seen as an incremental approach to building a camera network, designing a sensing strategy for autonomous exploration or selecting an input image dataset for multiview reconstruction.
 
 We propose a next best view (NBV) algorithm that determines each view to reconstruct an arbitrary object. 
