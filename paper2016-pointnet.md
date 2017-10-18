@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Charles R. Qi, Hao Su, Kaichun Mo, Leonidas J. Guibas \(Stanford University\) |
 | 학회/년도 | Dec 2016 ~ Apr 2017, CVPR 2017,  [논문](https://arxiv.org/abs/1612.00593) |
-| 키워드 |  |
+| 키워드 |Pointnet2017,   |
 | 데이터셋(센서)/모델| ModelNet40|
 | 참고 | [ppt](https://www.facebook.com/thinking.factory/posts/1408857052524274), [홈페이지](http://stanford.edu/~rqi/pointnet/),[CVPR2017](https://www.youtube.com/watch?v=Cge-hot0Oc0) |
 | 코드 | [TF](https://github.com/charlesq34/pointnet), [pyTorch](https://github.com/fxia22/pointnet.pytorch) |

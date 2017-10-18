@@ -54,7 +54,7 @@
 * [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
 * [Paper\_2017\_SqueezeSeg](paper2017-squeezeseg.md)
 * [Paper\_2016\_DeepSlidingShape \(30%\)](paper2016-deepslidingshape.md)
-* [Paper\_2017\_PointNet \(10%\)](paper2016-pointnet.md)
+* [Paper\_2017\_PointNet \(50%\)](paper2016-pointnet.md)
 * [Point\_Cloud\_Data](pointcloud-data.md)
   * [ROS bags-TO-Image.ipynb](https://gist.github.com/anonymous/4857f8920c9fc901121a429ead32a7db)
   * [ROS bags-TO-Point Clods.ipynb](https://gist.github.com/anonymous/e675ea14113252be321320be62248034)
