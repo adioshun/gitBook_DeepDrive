@@ -25,10 +25,12 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 - followed by the computation of descriptors at those characteristic regions, 
 - finally they are classified to determine the possible object represented by those descriptors. 
 
-That classification is performed
-by using distance metrics or machine learning algorithms, e.g.,
-Support Vector Machines (SVMs) [5], random forests [6],
-or neural networks, which are trained with object datasets.
+분류 문제 해결 법 : 거리 기반 or 머신러닝 알고리즘 `That classification is performed by using distance metrics or machine learning algorithms, e.g.,`
+- Support Vector Machines (SVMs) [5], 
+- random forests [6],
+- neural networks, which are trained with object datasets.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNzkyOTA5Ml19
+eyJoaXN0b3J5IjpbMjA1NjE5NjY3NV19
 -->
