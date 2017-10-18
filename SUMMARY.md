@@ -44,7 +44,7 @@
 * [Paper\_2015\_VoxNet \(70%\)](papervoxnet.md)
 * [Paper\_2016\_V\_M CNNs \(50%\)](paper2016-volumetric-multiview-cnns.md)
 * [Paper\_2014\_AE3D shape Retrieval \(30%\)](paper2014-ae3d-shape-retrieval.md)
-* [Paper\_2016\_Vote3Deep \(10%\)](papervote3deep.md)
+* [Paper\_2016\_Vote3Deep \(50%\)](papervote3deep.md)
 * [Paper\_2016\_VeloFCN\_Bo Li \(70%\)](paper2016-velofcn4vd.md)
 * [Paper\_2017\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
