@@ -406,7 +406,7 @@ The multi-view CNN proposed by [32] is a strong alternative to volumetric repres
 
 - 성능 개선을 위해 **multi-resolution extension**와 **데이터 augmentation**을 사용 하였다. `Although the multi-view CNN presented by [32] produces compelling results, we are able to improve its performance through a multi-resolution extension with improved data augmentation. `
 
-### 5.1  multi-resolution 3D filtering
+### 5.1  Multi-resolution 3D filtering
 
 - We introduce multi-resolution 3D filtering to capture information at multiple scales. 
 
@@ -416,14 +416,16 @@ The multi-view CNN proposed by [32] is a strong alternative to volumetric repres
 
 - In particular, this helps regularize out potential noise or irregularities in real-world scanned data (relative to synthetic training data), enabling robust performance on real-world scans. 
 
-- Note that our 3D multire solution filtering is different from classical 2D multi resolution approaches, since the 3D filtering respects the distance in 3D.
+- 기존 2D 방법과 다른점 : Note that our 3D multi resolution filtering is different from classical 2D multi resolution approaches, since the 3D filtering respects the distance in 3D.
 
-
+### 5.2 augment
 
 - Additionally, we also augment training data with variations in both azimuth and elevation, as opposed to azimuth only. 
+
+### 5.3 AlexNet
 
 We use AlexNet instead of VGG for efficiency.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NjIzNDI3Nl19
+eyJoaXN0b3J5IjpbNTcxODUwNTY3XX0=
 -->
