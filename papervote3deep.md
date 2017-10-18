@@ -1,7 +1,7 @@
 | 논문명 | Vote3Deep: Fast Object Detection in 3D Point Clouds Using Efficient Convolutional Neural Networks |
 | --- | --- |
 | 저자\(소속\) | Martin Engelcke, D. Z. Wang \(옥스포드\) |
-| 학회/년도 | 2016, [논문](https://arxiv.org/abs/1609.06666) |
+| 학회/년도 | Sep 2016~Mar 2017, [논문](https://arxiv.org/abs/1609.06666) |
 | 키워드 | Missing Point  |
 | 데이터셋(센서)/모델 | KITTI|
 | 참고 | [Youtube](https://www.youtube.com/watch?v=WUOSmAfeXIw) |
@@ -67,11 +67,11 @@ With 3D point clouds often being larger than 60m × 60m × 5m, this would result
 
 ### 2.3 Sparse 3D
 
-An alternative approach that takes advantage of sparse representations can be found in \[10\] and \[11\], in which sparse convolutions are applied to comparatively small 2D  
-and 3D crops respectively.
+> 3D 데이터의 희박한 밀도를 역으로 이용하는 논문들 
 
-While the convolutional kernels  
- are only applied at sparse feature locations, the presented algorithm still has to consider neighbouring values which take a value of either zero or a constant bias, leading to unnecessary operations and memory consumption.
+An alternative approach that **takes advantage** of sparse representations can be found in \[10\] and \[11\], in which sparse convolutions are applied to comparatively small 2D and 3D crops respectively.
+
+While the convolutional kernels are only applied at sparse feature locations, the presented algorithm still has to consider neighbouring values which take a value of either zero or a constant bias, leading to unnecessary operations and memory consumption.
 
 Another method for performing sparse convolutions is introduced in \[12\] who make use of “permutohedral lattices”, but only consider comparatively small inputs, as opposed to our work.
 
@@ -81,21 +81,60 @@ Another method for performing sparse convolutions is introduced in \[12\] who ma
 [12] V. Jampani, M. Kiefel, and P. V. Gehler, “Learning Sparse High Dimensional Filters: Image Filtering, Dense CRFs and Bilateral Neural Networks,” in IEEE Conf. on Computer Vision and Pattern Recognition (CVPR), 2016
 ```
 
-### 2.4 biomedical image analysis
+### 2.4 biomedical image analysis 
 
-CNNs have also been applied to dense 3D data in biomedical image analysis \(e.g. \[13\], \[14\], \[15\]\).
+> 의료 데이터 분석에 쓰임
 
-A 3D equivalent of residual networks \[4\] is utilised in \[13\] for brain image segmentation.
-
-A cascaded model with two stages is proposed in \[14\] for detecting cerebral microbleeds.
-
-A combination of three CNNs is suggested in \[15\].
-
-Each CNN processes a different 2D plane and the three streams are joined in the last layer.
-
-These systems run on relatively small inputs and in some cases take more than a minute for processing a single frame with GPU acceleration.
 
 ## 3. METHODS
 
+본 장에서는 sparse 3D를 입력으로 하여 물체 탐지 하는 방법에 대하여 살펴 본다. `This section describes the application of convolutionalneural networks for the prediction of detection scores from sparse 3D input grids of variable sizes. `
 
+###### [sparse 3D grid & Feature Vector]
+
+- 포인트 클라우드는 입력으로 **sparse 3D grid**를 취한다. `As the input to the network, a point cloud is discretised into a sparse 3D grid as in [5]. `
+	- 각 셀은 non-zero number를 가진다. 특징벡터는 통계처리후 값이 입력된다. `For each cell that contains a non-zero number of points, a feature vector is extracted based on the statistics of the points in the cell. `
+
+- 특징 벡터는 **이진 occupancy 값**, **반사값의 평균, 편차**, **three shape factors 값**이다. `The feature vector holds a binary occupancy value, the mean and variance of the reflectance values and three shape factors.` 
+
+- sparse representation가 되는 빈 공간은 저장 되지 않는다. `Cells in empty space are not stored which leads to a sparse representation.`
+
+###### [제안 방식의 동작 과정 Overview ]
+
+- 제안 방식은 **투표**방식을 **원래의 3D representation**에 적용하여 **새로운 sparse 3D representation**을 생성한다. `We employ the voting scheme from [5] to perform a sparse convolution across this native 3D representation, followed by a ReLU non-linearity, which returns a new sparse 3D representation. `
+
+
+- 이 절차는 반복적으로 진행되며 예측된 탐지 점수(detection scores)도 같이 누적된다. `This process can be repeated and stacked as in a traditional CNN, with the output layer predicting the detection scores.`
+
+
+- [5]와 동일하게 CNN은 N개의 다른 회전 각도에 적용된다. `Similar to [5], a CNN is applied to a point cloud at N different angular orientations in N parallel threads to handle objects at different orientations at a minimal increase in computation time. `
+
+- 중복 탐지는 NMS로 가지치기 된다. `Duplicate detections are pruned with non-maximum suppression (NMS) in 3D space. `
+	- NMS in 3D is better able to handle objects that are behind each other as the 3D bounding boxes overlap less than their 2D projections.
+
+- 가정 사항 및 제약 = **fixed-size bounding box**
+	- Based on the premise that bounding boxes in 3D spaceare similar in size for object instances of the same class, 
+    - we assume a fixed-size bounding box for each class, whiche liminates the need to regress the size of a bounding box.
+
+- We select 3D bounding box dimensions for each class of interest based on the 95th percen tile ground truth bounding box size over the training set.
+
+- The receptive field of a network should be at least as large as the bounding box of an object, but not excessively large which would waste computation time. 
+
+- We therefore employ several class-specific networks which can be run in parallel at test time, each with a different total receptive field size depending on the object class. 
+
+- In principle, it is possible to compute detection scores for multiple classes with a singlenetwork; a task left for future work.
+
+### 3.1 Sparse Convolutions via Voting
+
+- 조밀한 3D CNN을 포인트 클라우드에 적용하면 ` multiplications by zero`연산으로 인해 대부분의 시간이 소모 된다. 더구나, 3rd 공간 연산으로 인해 2D에 비하여 더 연산 부하가 걸린다. `When running a dense 3D convolution across a discretised point cloud, most of the computation time is wasted as the majority of operations are multiplications by zero. The additional third spatial dimension makes this process even more computationally expensive compared to 2D convolutions, which form the basis of image-based CNNs.`
+
+- 이점에 착안하여 3D features are non-zero인것에서만 연산을 수행하는 feature-centric voting scheme[5]가 제안 되었다. `Using the insight that meaningful computation only takes place where the 3D features are non-zero, [5] introduce a feature-centric voting scheme. `
+
+
+- 
+The basis of this algorithm is the idea of letting each non-zero input feature vector cast a set of votes, weighted by the filter weights, to its surrounding cells in the output layer, as defined by the receptive field of the filter. 
+
+The voting weights are obtained by flipping the convolutional filter kernel along each spatial dimension. 
+
+The final convolution result is obtained by accumulating the votes falling into each cell of the output (Fig. 2).
 
