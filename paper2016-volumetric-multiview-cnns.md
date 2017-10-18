@@ -395,16 +395,18 @@ this is just a special case of the MO-VCNN.
 
 The multi-view CNN proposed by [32] is a strong alternative to volumetric representations. 
 
-
+```
+[32] H. Su, S. Maji, E. Kalogerakis, and E. G. Learned-Miller. Multi-view convolutional neural networks for 3d shape recognition.
+```
 
 This multi-view representation is constructed in three steps: 
 - first, a 3D shape is rendered into multiple images using varying camera extrinsics;
 - then image features (e.g. conv5 feature in VGGor AlexNet) are extracted for each view; 
 - lastly features are combined across views through a pooling layer, followed by fully connected layers.
 
-Although the multi-view CNN presented by [32] producescompelling results, we are able to improve its performancethrough a multi-resolution extension with improveddata augmentation. 
+Although the multi-view CNN presented by [32] produces compelling results, we are able to improve its performance through a multi-resolution extension with improved data augmentation. 
 
-We introduce multi-resolution 3D filteringto capture information at multiple scales. 
+We introduce multi-resolution 3D filtering to capture information at multiple scales. 
 
 We performsphere rendering (see Sec 3) at different volume resolutions.Note that we use spheres for this discretization asthey are view-invariant. 
 
@@ -415,5 +417,5 @@ Note that our 3D multiresolutionfiltering is different from classical 2D multire
 We use AlexNet instead of VGG for efficiency.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDgxNDE5NzRdfQ==
+eyJoaXN0b3J5IjpbMTYyNDkxNDY5M119
 -->
