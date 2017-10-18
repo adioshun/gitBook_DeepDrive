@@ -97,11 +97,13 @@ However, both these methods assume that a fixed-length image sequence is provide
 
 Rather than modelling an object as a set of views with 2D features, an explicit 3D shape can be learned from reconstruction[37] or provided by CAD models [39], and subsequently matched to from depth images [13], 3D reconstructions [1],or partial reconstructions with shape completion [12, 39].
 
-Shape descriptors include distributions of local surface properties [14, 32], spherical harmonic functions over voxelgrids [24], and 3D local invariant features [25]. 
+Shape descriptors include distributions of local surface properties [14, 32], spherical harmonic functions over voxel grids [24], and 3D local invariant features [25]. 
 
-Recently CNNs have been applied to 3D shapes by representingthem as 3D occupancy grids, and building generative [39]or discriminative [26] networks.As of now however, CNNs with 2D view-based methods[35] have outperformed their counterpart 3D voxel-basedmethods [39, 26], and we therefore adopt the 2D approachin our work. 
+Recently CNNs have been applied to 3D shapes by representingthem as 3D occupancy grids, and building generative [39]or discriminative [26] networks.
 
-However, it is not yet clear whether this greaterperformance arises from the superior abundance of 2D imagedata for pre-training deep networks, or the naturallymore efficient representation of 2D than 3D in standardCNN architectures.
+As of now however, CNNs with 2D view-based methods[35] have outperformed their counterpart 3D voxel-based methods [39, 26], and we therefore adopt the 2D approach in our work. 
+
+However, it is not yet clear whether this greater performance arises from the superior abundance of 2D image data for pre-training deep networks, or the naturally more efficient representation of 2D than 3D in standard CNN architectures.
 
 
 ---
@@ -113,5 +115,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk1ODk3NDVdfQ==
+eyJoaXN0b3J5IjpbLTEyODExMjM2NDVdfQ==
 -->
