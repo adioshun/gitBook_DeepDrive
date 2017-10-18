@@ -129,6 +129,10 @@ on Computer Vision (ICCV), 2015.
 
 Rather than modelling an object as a set of views with 2D features, an explicit 3D shape can be learned from reconstruction[37] or provided by CAD models [39], and subsequently matched to from depth images [13], 3D reconstructions [1],or partial reconstructions with shape completion [12, 39].
 
+```
+
+```
+
 Shape descriptors include distributions of local surface properties [14, 32], spherical harmonic functions over voxel grids [24], and 3D local invariant features [25]. 
 
 Recently CNNs have been applied to 3D shapes by representingthem as 3D occupancy grids, and building generative [39]or discriminative [26] networks.
@@ -147,5 +151,5 @@ We propose a next best view (NBV) algorithm that determines each view to reconst
 
 The problem addressed in this paper is to plan the **next sensor's position**, called the ‘next best view'(NBV). The NBV is the best view for the reconstruction process from a set of candidate views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc1ODE3OTU4XX0=
+eyJoaXN0b3J5IjpbOTc4MDg5NzY2XX0=
 -->
