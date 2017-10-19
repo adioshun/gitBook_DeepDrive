@@ -42,7 +42,7 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 - 이건 단순히 입력으로 4채널을 받는것 뿐이다. `These methods simply extend the architecture to take four channels – matrices – as input instead of the three featured by RGB images. `
 - 이건 아직 3D의 geometric 정보를 이용하지 않는 **이미지 기반** 접근법이다. `This is still a image-based approach which does not fully exploit the geometric information of 3D shapes despite its straightforward implementation. `
 
-최근에는 3D의 정보를 이용하는 연굳Apart from 2.5D approaches, specific architectures to learn from volumetric data, which make use of pure 3D convolutions, have been recently developed. 
+최근에는 3D의 정보를 이용하는 연구도 진행 되어Apart from 2.5D approaches, specific architectures to learn from volumetric data, which make use of pure 3D convolutions, have been recently developed. 
 
 Those architectures are commonly referred as 3DCNNs and their foundations are the same as the 2D or 2.5D ones, but the
 nature of the input data is radically different. 
@@ -51,5 +51,5 @@ Since volumetric data is usually quite dense and hard to process, most of the su
 
 VoxNet [13] and 3D ShapeNets [14] make extensive use of this representation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIwNzg5MTk2XX0=
+eyJoaXN0b3J5IjpbMTI3Nzg1MTk5Nl19
 -->
