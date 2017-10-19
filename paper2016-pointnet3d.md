@@ -54,13 +54,13 @@ volumetric 데이터는 처리량이 많기 때문에 좀더 컴팩트한 표현
 
 ### 2.3 3DCNN
 
-Those 3DCNNs are slowly overtaking other approache swhen applying object recognition to complete 3D scenes [15].
+3DCNNs방식은 인기를 얻기 시작한다.  `Those 3DCNNs are slowly overtaking other approaches when applying object recognition to complete 3D scenes [15].`
 
-This progress has been mainly enabled by two factors: 
-- The substantial growth in the number of 3D models available online through repositories, 
-- The reduction of training timesthanks to frameworks and libraries which exploit the power ofmassively parallel architectures for this kind of tasks. 
+이유 두가지 `This progress has been mainly enabled by two factors: `
+- 데이터셋 증가 `The substantial growth in the number of 3D models available online through repositories, `
+- 컴퓨팅 파워 증가 `The reduction of training times thanks to frameworks and libraries which exploit the power of massively parallel architectures for this kind of tasks. `
 
-On theone hand, there exist many collections of 3D models, but theytend to be small and usually lack annotations and other usefulinformation for training this kind of deep architectures. 
+On the one hand, there exist many collections of 3D models, but they tend to be small and usually lack annotations and other usefulinformation for training this kind of deep architectures. 
 
 Incontrast, 2D approaches have taken advantage of the numerousand high-quality datasets that already exist such as ImageNet[9], LabelMe [16], and SUN [17]. 
 
@@ -71,5 +71,5 @@ On the other hand, the creationof deep learning frameworks such as Caffe [19], T
 Both facts have turned out to be crucial for thedevelopment of the field.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjI5ODQxMDldfQ==
+eyJoaXN0b3J5IjpbMzg4MTY4NjgwXX0=
 -->
