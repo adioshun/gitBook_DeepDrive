@@ -75,7 +75,7 @@ Both facts have turned out to be crucial for the development of the field.
 
 제안 방식The proposed system takes a point cloud of an object as an input and predicts its class label. 
 - 입력 : 
-- 출력 : Class la
+- 출력 : Class label
 
 In this regard, the proposal is two fold: a volumetric grid based on point density to estimatespatial occupancy inside each voxel, and a pure 3DCNNwhich is trained to predict object classes. 
 
@@ -85,5 +85,5 @@ That grid isfed to the CNN architecture, which in turn computes a labelfor that 
 
 This BSD-licensed C++ libraryallows us to design, train, and deploy CNN architecturesefficiently, mainly thanks to its drop-in integration of NVIDIAcuDNN [24] to take advantage of GPU acceleration.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDU2MzM3NjddfQ==
+eyJoaXN0b3J5IjpbLTQyNDcyODEwMF19
 -->
