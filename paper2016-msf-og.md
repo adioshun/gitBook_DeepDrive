@@ -20,7 +20,7 @@ Occupancy grids는 센서퓨전`(integration )`에 중요한 framework 이다. `
 theoretical formulation of multi-sensor fusion using only integer arithmetic.`
 
 
-## 1. 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEyMDAxNDQ0XX0=
+eyJoaXN0b3J5IjpbMTU1NzU5ODgyM119
 -->
