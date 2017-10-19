@@ -101,11 +101,17 @@ This BSD-licensed C++ libraryallows us to design, train, and deploy CNN architec
 
 At that midpoint, occupancy grids provide considerable shape cues to perform learning, while enabling an efficient processing of that information thanks to their array-like implementation.
 
-Recent 3D deep learning architectures make use of occupancy grids as a representation for the input data to belearned or classified. 
+Recent 3D deep learning architectures make use of occupancy grids as a representation for the input data to be learned or classified. 
 
-3D ShapeNets [14] is a ConvolutionalDeep Belief Network (CDBN) which represents a 3D shape as a 30 × 30 × 30 binary tensor in which a one indicatesthat a voxel intersects the mesh surface, and a zero representsempty space. 
+#### A. 3D ShapeNets
 
-VoxNet [13] introduces three different occupancygrids (32 × 32 × 32 voxels) that employ 3D ray tracing tocompute the number of beams hitting or passing each voxeland then use that information to compute the value of eachvoxel depending on the chosen model: a binary occupancygrid using probabilistic estimates, a density grid in which eachvoxel holds a value corresponding to the probability that it willblock a sensor beam, and a hit grid that only considers hitsthus ignoring empty or unknown space. 
+3D ShapeNets [14] is a Convolutional Deep Belief Network (CDBN) which represents a 3D shape as a 30 × 30 × 30 binary tensor in which a one indicates that a voxel intersects the mesh surface, and a zero represents empty space. 
+
+#### B. VoxNet 
+
+VoxNet [13] introduces three different occupancy grids (32 × 32 × 32 voxels) that employ 3D ray tracing to compute the number of beams hitting or passing each voxel and then use that information to compute the value of each voxel depending on the chosen model: 
+- a binary occupancy grid using probabilistic estimates, 
+- a density grid in which eachvoxel holds a value corresponding to the probability that it willblock a sensor beam, and a hit grid that only considers hitsthus ignoring empty or unknown space. 
 
 The binary and densitygrids proposed by Maturana et al. 
 
@@ -121,5 +127,5 @@ Each voxelwill hold a value representing the number of points mappedto itself.
 
 At last, the values held by each cell are normalized.Figure 1 shows the proposed occupancy grid representationfor a sample object.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTcyMDU4MTFdfQ==
+eyJoaXN0b3J5IjpbLTk2MTg3NjI0NF19
 -->
