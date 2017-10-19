@@ -124,9 +124,13 @@ The binary and density grids proposed by Maturana et al[13]. differentiate unkno
 [13] D. Maturana and S. Scherer, “Voxnet: A 3d convolutional neural network for real-time object recognition.” IROS, 2015.
 ```
 
-Currently, VoxNet’s occupancy grid holds the best accuracy in the ModelNet challenge for the 3D-centric approachesdescribed above. 
+최근까지는 VoxNet’s 의occupancy grid가 가장 좋은 성능을 보이고 있다. ` Currently, VoxNet’s occupancy grid holds the best accuracy in the ModelNet challenge for the 3D-centric approaches described above. `
 
-However, ray tracing grids considerablyharmed performance in terms of execution time so that otherapproaches must be considered for a real-time implementation.In that very same work, the authors show that hit gridsperformed comparably to other approaches while keeping alow complexity to achieve a reduced runtime.In this regard, we propose an occupancy grid inspired by theaforementioned successes but aiming to maintain a reasonableaccuracy while allowing a real-time implementation. 
+However, ray tracing grids considerably harmed performance in terms of execution time so that other approaches must be considered for a real-time implementation.
+
+In that very same work, the authors show that hit grids performed comparably to other approaches while keeping alow complexity to achieve a reduced runtime.
+
+In this regard, we propose an occupancy grid inspired by the aforementioned successes but aiming to maintain a reason able accuracy while allowing a real-time implementation. 
 
 In ourvolumetric representation, each point of a cloud is mapped toa voxel of a fixed-size occupancy grid. 
 
@@ -136,5 +140,5 @@ Each voxelwill hold a value representing the number of points mappedto itself.
 
 At last, the values held by each cell are normalized.Figure 1 shows the proposed occupancy grid representationfor a sample object.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxODI2NTE4Ml19
+eyJoaXN0b3J5IjpbLTg0MDUwMjQ2M119
 -->
