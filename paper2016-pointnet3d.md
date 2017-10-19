@@ -119,6 +119,7 @@ The binary and density grids proposed by Maturana et al.
 ```
 [13] D. Maturana and S. Scherer, “Voxnet: A 3d convolutional neural network
 for real-time object recognition.” IROS, 2015.
+```
 
 differentiate unknown andempty space, whilst the hit grid and the binary tensor do not.Currently, VoxNet’s occupancy grid holds the best accuracyin the ModelNet challenge for the 3D-centric approachesdescribed above. 
 
@@ -132,5 +133,5 @@ Each voxelwill hold a value representing the number of points mappedto itself.
 
 At last, the values held by each cell are normalized.Figure 1 shows the proposed occupancy grid representationfor a sample object.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NjExMTAxOF19
+eyJoaXN0b3J5IjpbLTEwODEwOTE2ODZdfQ==
 -->
