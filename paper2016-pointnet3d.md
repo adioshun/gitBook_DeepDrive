@@ -16,7 +16,7 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 - Integrating them into a supervised **Convolutional Neural Network architecture**.
 
 
-## I. INTRODUCTION
+## 1. INTRODUCTION
 
 대부분의 연구는 Handcrafted Local Feature 를 사용 하였따. `The vast majority of 3D object recognition methods [2] are typically based on hand-crafted local feature descriptors[3]. `
 
@@ -36,7 +36,9 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 - a novel way for representing the input data, which is based on **point density occupancy grids**, 
 - its integration into a **CNN specifically** tuned for the aforementioned purpose.
 
+## 2. RELATED WORK
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc4NjM2OTM2XX0=
+eyJoaXN0b3J5IjpbMTk4NTAzNjE3OF19
 -->
