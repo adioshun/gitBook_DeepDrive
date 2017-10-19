@@ -2,7 +2,8 @@
 | --- | --- |
 | 저자\(소속\) | Vishakh Hegde \(Standford\) |
 | 학회/년도 | NIPS2016, [논문](http://3ddl.cs.princeton.edu/2016/papers/Hegde_Zadeh.pdf) |
-| 키워드 | 3D CAD, Princeton ModelNet, AlexNet pre-trained on ImageNet |
+| 키워드 | 3D CAD,  |
+| 데이터셋(센서)/모델|Princeton ModelNet / AlexNet pre-trained on ImageNet |
 | 참고 | [ppt](http://3ddl.cs.princeton.edu/2016/slides/zadeh.pdf) |
 | 코드 |  |
 
