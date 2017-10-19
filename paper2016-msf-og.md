@@ -10,8 +10,7 @@
 
 # MSF-OG
 
-Occupancy grids offer a unifying framework for multiple heterogeneous sensor integration using a probabilistic representation
-of sensor data.
+Occupancy grids offer a unifying framework for multiple heterogeneous sensor integration using a probabilistic representation of sensor data.
 
 This integration is computed through Bayesian
 techniques or evidence combination approaches, both requiring
@@ -23,5 +22,5 @@ theoretical formulation of multi-sensor fusion using only integer arithmetic.
 
 ## 1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg0MjIwNjE4XX0=
+eyJoaXN0b3J5IjpbLTEwNDU0OTg1NzZdfQ==
 -->
