@@ -72,6 +72,16 @@ Both facts have turned out to be crucial for the development of the field.
 
 
 ## 3. Approach 
+
+The proposed system takes a point cloud of an object as an input and predicts its class label. 
+
+In this regard, the proposal is twofold: a volumetric grid based on point density to estimatespatial occupancy inside each voxel, and a pure 3DCNNwhich is trained to predict object classes. 
+
+The occupancygrid – inspired by VoxNet [13] occupancy models based onprobabilistic estimates – provides a compact representation ofthe object’s 3D information from the point cloud. 
+
+That grid isfed to the CNN architecture, which in turn computes a labelfor that sample, i.e., predicts the class of the object.This architecture was implemented using the Point CloudLibrary (PCL) [23] – which contains state-of-the-art algorithmsfor 3D point cloud processing – and Caffe [19], a deeplearning framework developed and maintained by the BerkeleyVision and Learning Center (BVLC) and an active communityof contributors on GitHub1. 
+
+This BSD-licensed C++ libraryallows us to design, train, and deploy CNN architecturesefficiently, mainly thanks to its drop-in integration of NVIDIAcuDNN [24] to take advantage of GPU acceleration.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzc0MDE4MV19
+eyJoaXN0b3J5IjpbLTE3NDY2NDMwNjddfQ==
 -->
