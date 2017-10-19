@@ -66,10 +66,12 @@ volumetric 데이터는 처리량이 많기 때문에 좀더 컴팩트한 표현
 
 그래서 최근 3D데이터셋 증가를 위해 많은 노력이 있었다. **ModelNet**  & **ShapeNets**  `During the last years,researchers have unified efforts to create large-scale annotated 3D datasets inspired by the success of the 2D counterparts. The most popular 3D datasets which have revamped data driven solutions – for computer vision in general, and object recognition in particular – are the Princeton ModelNet [14],and ShapeNets [18] datasets. `
 
-On the other hand, the creationof deep learning frameworks such as Caffe [19], Theano [20],Torch [21], or TensorFlow [22], which allow researchers to easily express and launch their architectures and accelerate thetraining calculations with Graphics Processing Units (GPUs)by using CUDA or OpenCL, has enabled quick prototypingand testing. 
+하드웨어와 딥러닝 프레임워크 발전도 있다. `On the other hand, the creationof deep learning frameworks such as Caffe [19], Theano [20],Torch [21], or TensorFlow [22], which allow researchers to easily express and launch their architectures and accelerate thetraining calculations with Graphics Processing Units (GPUs)by using CUDA or OpenCL, has enabled quick prototypingand testing. `
 
 Both facts have turned out to be crucial for the development of the field.
 
+
+## 3. Approach 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNjU0ODc4Ml19
+eyJoaXN0b3J5IjpbLTExMzc0MDE4MV19
 -->
