@@ -13,7 +13,13 @@
 occupancy grids offer a unifying framework for multiple heterogeneous sensor integration using a probabilistic representation
 of sensor data.
 
+This integration is computed through Bayesian
+techniques or evidence combination approaches, both requiring
+high computation workload using real number representation
+
+
+
 ## 1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTEzNTA2MTMzXX0=
+eyJoaXN0b3J5IjpbMjAwNDM0NDEwNl19
 -->
