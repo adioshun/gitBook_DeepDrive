@@ -12,15 +12,13 @@
 
 Occupancy grids는 센서퓨전`(integration )`에 중요한 framework 이다. `Occupancy grids offer a unifying framework for multiple heterogeneous sensor integration using a probabilistic representation of sensor data.`
 
-하지만 이러한 퓨젼This integration is computed through Bayesian
-techniques or evidence combination approaches, both requiring
-high computation workload using real number representation
+하지만 이러한 integration 연산은 계산 부하가 크다. `This integration is computed through Bayesian techniques or evidence combination approaches, both requiring high computation workload using real number representation`
 
-In this paper, we propose a revised
-theoretical formulation of multi-sensor fusion using only integer arithmetic.
+본 논문에서는 개선된 multi-sensor fusion의 **이론적 공식**을 제안 한다. `In this paper, we propose a revised
+theoretical formulation of multi-sensor fusion using only integer arithmetic.`
 
 
 ## 1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MjE2ODAzNF19
+eyJoaXN0b3J5IjpbLTE2NTc4ODI0NTddfQ==
 -->
