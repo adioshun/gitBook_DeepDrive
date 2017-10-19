@@ -8,6 +8,12 @@
 | 참고 | |
 | 코드 | |
 
+# MSF-OG
+
+occupancy grids offer a unifying framework for multiple heterogeneous sensor integration using a probabilistic representation
+of sensor data.
+
+## 1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTAyNTY1Ml19
+eyJoaXN0b3J5IjpbOTEzNTA2MTMzXX0=
 -->
