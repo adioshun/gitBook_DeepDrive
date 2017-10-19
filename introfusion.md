@@ -1,10 +1,19 @@
 ## Paper 
 
-Multi-Sensor Fusion of Occupancy Grids based on Integer Arithmetic
+- Multi-Sensor Fusion of Occupancy Grids based on Integer Arithmetic
 
-Fusing LIDAR and Images for Pedestrian Detection using Convolutional Neural Networks, Schlosser
+- Fusing LIDAR and Images for Pedestrian Detection using Convolutional Neural Networks, Schlosser
 
-Motion-based Detection and Tracking in 3D LiDAR Scans, Dewan
+- Motion-based Detection and Tracking in 3D LiDAR Scans, Dewan
+
+- [Learning Where to Attend Like a Human Driver](http://ieeexplore.ieee.org/document/7995833/)
+
+- [Can we unify monocular detectors for autonomous driving
+by using the pixel-wise semantic segmentation of CNNs?](https://arxiv.org/pdf/1607.00971.pdf)
+
+- [Online vehicle detection using Haar-like, LBP and HOG feature based image classifiers with stereo vision preselection](http://ieeexplore.ieee.org/abstract/document/7995810/)
+
+- [Feature-based lateral position estimation of surrounding vehicles using stereo vision](http://ieeexplore.ieee.org/document/7995811/)
 
 ---
 
@@ -77,4 +86,8 @@ Therefore, many heterogeneous sensor data can be fused for vehicle tracking [145
 [145] R. O. Chavez-Garcia and O. Aycard, “Multiple sensor fusion and classification for moving object detection and tracking,” IEEE Transactions on Intelligent Transportation Systems, pp. 1–10, 2015.
 ```
 
+---
+![](https://i.imgur.com/Nps3BBD.png)
 
+버클리대 프로젝트 : [DeepDrive](https://deepdrive.berkeley.edu/project/3d-object-detection-based-lidar-and-camera-fusion)
+RESEARCHERS : Kiwoo Shin, Zining Wang, Wei Zhan

@@ -125,6 +125,20 @@
 
 * [Awesome : Autonomous Vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles)
 
+
+
+## 8. Research Group / Conference 
+
+- [DeepDrive](https://deepdrive.berkeley.edu/project/3d-object-detection-based-lidar-and-camera-fusion): 버클리, 3D Object Detection based on Lidar and Camera Fusion
+
+- [Improving 3D Perception for Object Detection, Classification and Localization using Fused Multimodal Sensors](http://cse.msu.edu/~gonza647/proj03.html): Michigan State University
+  - Researcher : Saif Imran, Aaron Gonzalez, Mehmet Akif Alper
+
+- IEEE Intelligent Vehicles Symposium : [2017](https://its.papercept.net/conferences/conferences/IV2017/program/IV2017_ContentListWeb_3.html)
+
+
+
+
 ---
 
 | 논문명 |  |

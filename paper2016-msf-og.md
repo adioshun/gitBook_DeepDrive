@@ -19,8 +19,3 @@ Occupancy grids는 센서퓨전`(integration )`에 중요한 framework 이다. `
 본 논문에서는 개선된 multi-sensor fusion의 **이론적 공식**을 제안 한다. `In this paper, we propose a revised
 theoretical formulation of multi-sensor fusion using only integer arithmetic.`
 
-
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NzU5ODgyM119
--->
