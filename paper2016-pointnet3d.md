@@ -101,7 +101,7 @@ This BSD-licensed C++ libraryallows us to design, train, and deploy CNN architec
 
 At that midpoint, **occupancy grids** provide considerable shape cues to perform learning, while enabling an efficient processing of that information thanks to their array-like implementation.
 
-최근 3D DL구조들은 Recent 3D deep learning architectures make use of occupancy grids as a representation for the input data to be learned or classified. 
+최근 3D DL구조들은 occupancy grids를 사용하는 사례가 증가 하고 있다. `Recent 3D deep learning architectures make use of occupancy grids as a representation for the input data to be learned or classified. `
 
 ```
 [25] S. Thrun, “Learning occupancy grid maps with forward sensor models,”Autonomous robots, vol. 15, no. 2, pp. 111–127, 2003.
@@ -136,5 +136,5 @@ Each voxelwill hold a value representing the number of points mappedto itself.
 
 At last, the values held by each cell are normalized.Figure 1 shows the proposed occupancy grid representationfor a sample object.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTI0NDA0MDRdfQ==
+eyJoaXN0b3J5IjpbLTk3NTYzMzkzNl19
 -->
