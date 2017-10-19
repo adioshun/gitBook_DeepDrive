@@ -57,7 +57,7 @@ volumetric 데이터는 처리량이 많기 때문에 좀더 컴팩트한 표현
 Those 3DCNNs are slowly overtaking other approache swhen applying object recognition to complete 3D scenes [15].
 
 This progress has been mainly enabled by two factors: 
-- the substantial growth in the number of 3D models available online through repositories, 
+- The substantial growth in the number of 3D models available online through repositories, 
 - The reduction of training timesthanks to frameworks and libraries which exploit the power ofmassively parallel architectures for this kind of tasks. 
 
 On theone hand, there exist many collections of 3D models, but theytend to be small and usually lack annotations and other usefulinformation for training this kind of deep architectures. 
@@ -71,5 +71,5 @@ On the other hand, the creationof deep learning frameworks such as Caffe [19], T
 Both facts have turned out to be crucial for thedevelopment of the field.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NTM2MDI0M119
+eyJoaXN0b3J5IjpbLTE1NjI5ODQxMDldfQ==
 -->
