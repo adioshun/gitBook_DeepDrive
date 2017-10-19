@@ -74,8 +74,10 @@ Both facts have turned out to be crucial for the development of the field.
 ## 3. Approach 
 
 제안 방식The proposed system takes a point cloud of an object as an input and predicts its class label. 
-- 입력 : 
+- 입력 : Point Cloud
 - 출력 : Class label
+
+> 단순 이미지 분류는 의미 없은 전체 이미지에서 물체를 탐지하고 해당 물체를 분류 하여야 함
 
 In this regard, the proposal is two fold: a volumetric grid based on point density to estimatespatial occupancy inside each voxel, and a pure 3DCNNwhich is trained to predict object classes. 
 
@@ -85,5 +87,5 @@ That grid isfed to the CNN architecture, which in turn computes a labelfor that 
 
 This BSD-licensed C++ libraryallows us to design, train, and deploy CNN architecturesefficiently, mainly thanks to its drop-in integration of NVIDIAcuDNN [24] to take advantage of GPU acceleration.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNDcyODEwMF19
+eyJoaXN0b3J5IjpbNTYxOTU1NTAyXX0=
 -->
