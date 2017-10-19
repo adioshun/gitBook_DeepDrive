@@ -60,16 +60,18 @@ volumetric 데이터는 처리량이 많기 때문에 좀더 컴팩트한 표현
 - 데이터셋 증가 `The substantial growth in the number of 3D models available online through repositories, `
 - 컴퓨팅 파워 증가 `The reduction of training times thanks to frameworks and libraries which exploit the power of massively parallel architectures for this kind of tasks. `
 
-On the one hand, there exist many collections of 3D models, but they tend to be small and usually lack annotations and other usefulinformation for training this kind of deep architectures. 
+하지만, 3D데이터는 받지만 라벨링 된 데이터는 적다. `On the one hand, there exist many collections of 3D models, but they tend to be small and usually lack annotations and other useful information for training this kind of deep architectures. `
 
-Incontrast, 2D approaches have taken advantage of the numerousand high-quality datasets that already exist such as ImageNet[9], LabelMe [16], and SUN [17]. 
+반대로 2D 데이터는 좋은 데이터가 많다. `In contrast, 2D approaches have taken advantage of the numerous and high-quality datasets that already exist such as ImageNet[9], LabelMe [16], and SUN [17]. `
 
-During the last years,researchers have unified efforts to create large-scale annotated3D datasets inspired by the success of the 2D counterparts.The most popular 3D datasets which have revamped datadrivensolutions – for computer vision in general, and objectrecognition in particular – are the Princeton ModelNet [14],and ShapeNets [18] datasets. 
+During the last years,researchers have unified efforts to create large-scale annotated 3D datasets inspired by the success of the 2D counterparts.
+
+The most popular 3D datasets which have revamped datadrivensolutions – for computer vision in general, and objectrecognition in particular – are the Princeton ModelNet [14],and ShapeNets [18] datasets. 
 
 On the other hand, the creationof deep learning frameworks such as Caffe [19], Theano [20],Torch [21], or TensorFlow [22], which allow researchers toeasily express and launch their architectures and accelerate thetraining calculations with Graphics Processing Units (GPUs)by using CUDA or OpenCL, has enabled quick prototypingand testing. 
 
 Both facts have turned out to be crucial for thedevelopment of the field.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg4MTY4NjgwXX0=
+eyJoaXN0b3J5IjpbMTQwMjY0MzM5MV19
 -->
