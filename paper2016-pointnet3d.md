@@ -45,9 +45,9 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 최근에는 3D의 정보를 이용하는 연구도 진행 되었다. `Apart from 2.5D approaches, specific architectures to learn from volumetric data, which make use of pure 3D convolutions, have been recently developed. `
 - 이방식은 **3DCNN**라고 불리우며 근본은 2D, 2.5D방식과 같지만 **입력 데이터**의 속성이 다르다. `Those architectures are commonly referred as 3DCNNs and their foundations are the same as the 2D or 2.5D ones, but the nature of the input data is radically different. `
 
-volumetric 데이터는 처리량이 많기 때문에 좀더 컴팩트한 표현방식`(representation )`으로 바꾸어서 진행 한다. Since volumetric data is usually quite dense and hard to process, most of the successful 3DCNNs resort to a more compact representation of the 3D space: 
+volumetric 데이터는 처리량이 많기 때문에 좀더 컴팩트한 표현방식`(representation )`으로 바꾸어서 진행 한다. `Since volumetric data is usually quite dense and hard to process, most of the successful 3DCNNs resort to a more compact representation of the 3D space: 
 - the occupancy grids. 
 - VoxNet [13] and 3D ShapeNets [14] make extensive use of this representation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1ODI4MjM2Ml19
+eyJoaXN0b3J5IjpbLTExNDAzOTYwOThdfQ==
 -->
