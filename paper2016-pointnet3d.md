@@ -118,13 +118,13 @@ VoxNet [13] introduces three different occupancy grids (32 × 32 × 32 voxels) t
 - a density grid in which each voxel holds a value corresponding to the probability that it will block a sensor beam, 
 - a hit grid that only considers hits thus ignoring empty or unknown space. 
 
-The binary and density grids proposed by Maturana et al. 
+The binary and density grids proposed by Maturana et al[13]. differentiate unknown and empty space, whilst the hit grid and the binary tensor do not.
 
 ```
 [13] D. Maturana and S. Scherer, “Voxnet: A 3d convolutional neural network for real-time object recognition.” IROS, 2015.
 ```
 
-differentiate unknown andempty space, whilst the hit grid and the binary tensor do not.Currently, VoxNet’s occupancy grid holds the best accuracyin the ModelNet challenge for the 3D-centric approachesdescribed above. 
+Currently, VoxNet’s occupancy grid holds the best accuracy in the ModelNet challenge for the 3D-centric approachesdescribed above. 
 
 However, ray tracing grids considerablyharmed performance in terms of execution time so that otherapproaches must be considered for a real-time implementation.In that very same work, the authors show that hit gridsperformed comparably to other approaches while keeping alow complexity to achieve a reduced runtime.In this regard, we propose an occupancy grid inspired by theaforementioned successes but aiming to maintain a reasonableaccuracy while allowing a real-time implementation. 
 
@@ -136,5 +136,5 @@ Each voxelwill hold a value representing the number of points mappedto itself.
 
 At last, the values held by each cell are normalized.Figure 1 shows the proposed occupancy grid representationfor a sample object.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NTYzMzkzNl19
+eyJoaXN0b3J5IjpbLTcxODI2NTE4Ml19
 -->
