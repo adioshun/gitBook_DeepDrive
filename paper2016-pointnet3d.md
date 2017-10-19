@@ -52,7 +52,24 @@ volumetric 데이터는 처리량이 많기 때문에 좀더 컴팩트한 표현
 - the occupancy grids. 
 - VoxNet [13] and 3D ShapeNets [14] make extensive use of this representation.
 
+### 2.3 3DCNN
+
+Those 3DCNNs are slowly overtaking other approache swhen applying object recognition to complete 3D scenes [15].
+
+This progress has been mainly enabled by two factors: 
+- the substantial growth in the number of 3D models available online through repositories, 
+- The reduction of training timesthanks to frameworks and libraries which exploit the power ofmassively parallel architectures for this kind of tasks. 
+
+On theone hand, there exist many collections of 3D models, but theytend to be small and usually lack annotations and other usefulinformation for training this kind of deep architectures. 
+
+Incontrast, 2D approaches have taken advantage of the numerousand high-quality datasets that already exist such as ImageNet[9], LabelMe [16], and SUN [17]. 
+
+During the last years,researchers have unified efforts to create large-scale annotated3D datasets inspired by the success of the 2D counterparts.The most popular 3D datasets which have revamped datadrivensolutions – for computer vision in general, and objectrecognition in particular – are the Princeton ModelNet [14],and ShapeNets [18] datasets. 
+
+On the other hand, the creationof deep learning frameworks such as Caffe [19], Theano [20],Torch [21], or TensorFlow [22], which allow researchers toeasily express and launch their architectures and accelerate thetraining calculations with Graphics Processing Units (GPUs)by using CUDA or OpenCL, has enabled quick prototypingand testing. 
+
+Both facts have turned out to be crucial for thedevelopment of the field.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc1NzEyMTcxXX0=
+eyJoaXN0b3J5IjpbMjE0NTM2MDI0M119
 -->
