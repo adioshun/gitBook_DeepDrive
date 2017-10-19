@@ -38,9 +38,8 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 
 ## 2. RELATED WORK
 
-2DㅇDue to the successful applications of the CNNs to 2D image analysis, several researchers decided to take the same approach for 2.5D data, treating the depth channel as an additional one together with the RGB ones [10]–[12]. 
-
-These methods simply extend the architecture to take four channels – matrices – as input instead of the three featured by RGB images. 
+2.5D 데이터에 CNN을 적용하려는 연구가 시작 되었다. 깊이 정보를 또다른 채널로 인식 하는 것이다. `Due to the successful applications of the CNNs to 2D image analysis, several researchers decided to take the same approach for 2.5D data, treating the depth channel as an additional one together with the RGB ones [10]–[12]. `
+- 이건 단순히 입력으로 4채널을 받는것 뿐이다. `These methods simply extend the architecture to take four channels – matrices – as input instead of the three featured by RGB images. `
 
 This is still a image-based approach which does not fully exploit the geometric information of 3D shapes despite its straightforward implementation. 
 
@@ -53,5 +52,5 @@ Since volumetric data is usually quite dense and hard to process, most of the su
 
 VoxNet [13] and 3D ShapeNets [14] make extensive use of this representation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU0MDI4Mzg2XX0=
+eyJoaXN0b3J5IjpbOTcwMzE1NTQyXX0=
 -->
