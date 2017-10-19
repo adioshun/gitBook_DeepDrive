@@ -89,9 +89,13 @@ In this regard, the proposal is two fold:
 
 That grid is fed to the CNN architecture, which in turn computes a label for that sample, i.e., predicts the class of the object.
 
-This architecture was implemented using the Point Cloud Library (PCL) [23] – which contains state-of-the-art algorithms for 3D point cloud processing – and Caffe [19], a deeplearning framework developed and maintained by the BerkeleyVision and Learning Center (BVLC) and an active communityof contributors on GitHub 1. 
+This architecture was implemented using the Point Cloud Library (PCL) [23] – which contains state-of-the-art algorithms for 3D point cloud processing – and Caffe [19], a deeplearning framework developed and maintained by the BerkeleyVision and Learning Center (BVLC) and an active community of contributors on GitHub 1. 
 
 This BSD-licensed C++ libraryallows us to design, train, and deploy CNN architecturesefficiently, mainly thanks to its drop-in integration of NVIDIAcuDNN [24] to take advantage of GPU acceleration.
+
+### 3.1 Occupancy Grid
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNzQ3MDgzM119
+eyJoaXN0b3J5IjpbLTU5Nzg1ODk1N119
 -->
