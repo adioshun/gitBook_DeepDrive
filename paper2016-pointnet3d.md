@@ -99,9 +99,13 @@ This BSD-licensed C++ libraryallows us to design, train, and deploy CNN architec
 - Occupancy grids [25] are data structures which allow us to obtain a compact representation of the volumetric space.
 - They stand between meshes or clouds, which offer rich but large amounts of information, and voxelized representations with packed but poor information. 
 
-At that midpoint, occupancy grids provide considerable shape cues to perform learning, while enabling an efficient processing of that information thanks to their array-like implementation.
+At that midpoint, **occupancy grids** provide considerable shape cues to perform learning, while enabling an efficient processing of that information thanks to their array-like implementation.
 
-Recent 3D deep learning architectures make use of occupancy grids as a representation for the input data to be learned or classified. 
+chRecent 3D deep learning architectures make use of occupancy grids as a representation for the input data to be learned or classified. 
+
+```
+[25] S. Thrun, “Learning occupancy grid maps with forward sensor models,”Autonomous robots, vol. 15, no. 2, pp. 111–127, 2003.
+```
 
 #### A. 3D ShapeNets
 
@@ -132,5 +136,5 @@ Each voxelwill hold a value representing the number of points mappedto itself.
 
 At last, the values held by each cell are normalized.Figure 1 shows the proposed occupancy grid representationfor a sample object.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNjkzMjg4MF19
+eyJoaXN0b3J5IjpbMTMxNzYwOTYxMF19
 -->
