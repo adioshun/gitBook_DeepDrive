@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) |A. Garcia-Garcia \(\) |
 | 학회/년도 | IJCNN 2016, [논문](http://ieeexplore.ieee.org/document/7727386/) |
-| 키워드 | PointNet3D2016,  |
+| 키워드 | PointNet3D2016, 분류  |
 | 데이터셋(센서)/모델 |ModelNet(RGB-D)  |
 | 참고 |  |
 | 코드 |  |
@@ -79,7 +79,9 @@ Both facts have turned out to be crucial for the development of the field.
 
 > 단순 이미지 분류는 의미 없은 전체 이미지에서 물체를 탐지하고 해당 물체를 분류 하여야 함
 
-In this regard, the proposal is two fold: a volumetric grid based on point density to estimatespatial occupancy inside each voxel, and a pure 3DCNNwhich is trained to predict object classes. 
+In this regard, the proposal is two fold: 
+- a volumetric grid based on point density to estimate spatial occupancy inside each voxel, 
+- a pure 3DCNN which is trained to predict object classes. 
 
 The occupancygrid – inspired by VoxNet [13] occupancy models based onprobabilistic estimates – provides a compact representation ofthe object’s 3D information from the point cloud. 
 
@@ -87,5 +89,5 @@ That grid isfed to the CNN architecture, which in turn computes a labelfor that 
 
 This BSD-licensed C++ libraryallows us to design, train, and deploy CNN architecturesefficiently, mainly thanks to its drop-in integration of NVIDIAcuDNN [24] to take advantage of GPU acceleration.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYxOTU1NTAyXX0=
+eyJoaXN0b3J5IjpbLTE5MTkzMDk3MzFdfQ==
 -->
