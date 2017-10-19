@@ -95,7 +95,31 @@ This BSD-licensed C++ libraryallows us to design, train, and deploy CNN architec
 
 ### 3.1 Occupancy Grid
 
+정의 
+- Occupancy grids [25] are data structures which allow us to obtain a compact representation of the volumetric space.
+- They stand between meshes or clouds, which offer rich but large amounts of information, and voxelized representations with packed but poor information. 
 
+At that midpoint, occupancy grids provide considerable shape cues to perform learning, while enabling an efficient processing of that information thanks to their array-like implementation.
+
+Recent 3D deep learning architectures make use of occupancy grids as a representation for the input data to belearned or classified. 
+
+3D ShapeNets [14] is a ConvolutionalDeep Belief Network (CDBN) which represents a 3D shape as a 30 × 30 × 30 binary tensor in which a one indicatesthat a voxel intersects the mesh surface, and a zero representsempty space. 
+
+VoxNet [13] introduces three different occupancygrids (32 × 32 × 32 voxels) that employ 3D ray tracing tocompute the number of beams hitting or passing each voxeland then use that information to compute the value of eachvoxel depending on the chosen model: a binary occupancygrid using probabilistic estimates, a density grid in which eachvoxel holds a value corresponding to the probability that it willblock a sensor beam, and a hit grid that only considers hitsthus ignoring empty or unknown space. 
+
+The binary and densitygrids proposed by Maturana et al. 
+
+differentiate unknown andempty space, whilst the hit grid and the binary tensor do not.Currently, VoxNet’s occupancy grid holds the best accuracyin the ModelNet challenge for the 3D-centric approachesdescribed above. 
+
+However, ray tracing grids considerablyharmed performance in terms of execution time so that otherapproaches must be considered for a real-time implementation.In that very same work, the authors show that hit gridsperformed comparably to other approaches while keeping alow complexity to achieve a reduced runtime.In this regard, we propose an occupancy grid inspired by theaforementioned successes but aiming to maintain a reasonableaccuracy while allowing a real-time implementation. 
+
+In ourvolumetric representation, each point of a cloud is mapped toa voxel of a fixed-size occupancy grid. 
+
+Before performing thatmapping, the object cloud is scaled to fit the grid. 
+
+Each voxelwill hold a value representing the number of points mappedto itself. 
+
+At last, the values held by each cell are normalized.Figure 1 shows the proposed occupancy grid representationfor a sample object.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5Nzg1ODk1N119
+eyJoaXN0b3J5IjpbLTExNTcyMDU4MTFdfQ==
 -->
