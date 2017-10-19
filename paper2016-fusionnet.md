@@ -2,8 +2,8 @@
 | --- | --- |
 | 저자\(소속\) | Vishakh Hegde \(Standford\) |
 | 학회/년도 | NIPS2016, [논문](http://3ddl.cs.princeton.edu/2016/papers/Hegde_Zadeh.pdf) |
-| 키워드 | 3D CAD,  |
-| 데이터셋(센서)/모델|Princeton ModelNet / AlexNet pre-trained on ImageNet |
+| 키워드 | 3D CAD, |
+| 데이터셋\(센서\)/모델 | Princeton ModelNet / AlexNet pre-trained on ImageNet |
 | 참고 | [ppt](http://3ddl.cs.princeton.edu/2016/slides/zadeh.pdf) |
 | 코드 |  |
 
@@ -95,8 +95,8 @@ Other shape descriptors include the `Light Field Descriptor` \[3\], `Heat Kernel
 
 ### 2.2 최근
 
-최근 연구도 3D data를 표현하는 좀더 좋은 방법을 찾는데 초점이 맞추어져 있다.   
-`However, more recently, the focus of research has also included finding better  
+최근 연구도 3D data를 표현하는 좀더 좋은 방법을 찾는데 초점이 맞추어져 있다.  
+`However, more recently, the focus of research has also included finding better    
 ways to represent 3D data.`
 
 The creators of the Princeton ModelNet dataset have proposed a `volumetric representation` of the 3D model and a 3D Volumetric CNN to classify them \[27-Shapenet\].
@@ -145,7 +145,7 @@ Most state of the art methods
 * For voxel data: we use `our own neural networks` on multiple orientations of  
   all objects in the training set to learn features which are partly complementary to those learned for pixel data.
 
-* For pixel data: we use ideas from `Multi View CNN (MV-CNN) proposed by [24]` which use multiple projected views of the same 3D model and aggregate them in a way which improves the performance over a single projection.
+* For pixel data: we use ideas from `Multi View CNN (MV-CNN) proposed by [24]` which use **multiple projected views** of the same 3D model and aggregate them in a way which improves the performance over a single projection.
 
 Finally in FusionNet, we combine multiple networks in the final fully connected layer which outputs class scores in a way which improves the classification accuracy over each of its component networks.
 
