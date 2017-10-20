@@ -178,6 +178,7 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 ###### [6]
 
 - Labayrade et al. propose to work at this level to reduce the number of mis-detections that can lead to false tracks [6]. 
+
 ###### 
 
 Other works focus on data redundancy from active and passive sensors, and follow physical or learning constrains to increase the certainty of object detection[7], [8]. 
@@ -186,5 +187,5 @@ These works do not include all the available kineticand appearance information.
 
 Moreover, at this level, appearanceinformation from sensor measurements is not considered asimportant as the kinetic data to discriminate moving and staticobjects.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMTg5NDY0Ml19
+eyJoaXN0b3J5IjpbLTQ2NDA4MDczNl19
 -->
