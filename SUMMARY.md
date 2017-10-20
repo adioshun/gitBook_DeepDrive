@@ -78,7 +78,7 @@
 ## Fusion
 
 * [Intro\_Fusion](introfusion.md)
-* ---Sensorfusion(미진행)
+* [---Sensorfusion\(미진행\)](-sensorfusionbbf8-c9c4-d58929.md)
   * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
 * [Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)

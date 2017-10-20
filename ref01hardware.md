@@ -2,6 +2,9 @@
 
 ![](http://i.imgur.com/SAZPK7T.png)
 
+
+
+
 ## LiDAR
 
 ![](https://cdn-images-1.medium.com/max/2000/1*ZXWTdEZ3NYN5qz87gXWeGA.png)
@@ -38,6 +41,10 @@ SSLs currently have lower field-of-view (FOV) coverage but their lower cost prov
 
         Mobile Laser Scanning(MLS) : eg. VMX450
         Rotating Multibeam(RMB) Lidar system : eg. Velodyne HDL-64
+
+> [Tesla & Google Disagree About LIDAR — Which Is Right?](https://cleantechnica.com/2016/07/29/tesla-google-disagree-lidar-right/) : Lidar를 쓰는게 좋을까 안 쓰는게 좋은까? 
+
+
 
 ## Radar (radio direction and ranging)
 
