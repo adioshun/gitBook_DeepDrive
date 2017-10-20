@@ -74,7 +74,7 @@ different camera views.
 
 - 최근 연구는 3D 센서에 집중되어 있다. `Current research mostly focuses on sensors which provide 3-dimensional information of the environment. `
 
-###### [ZXY12]
+###### [LiDAR + Camera]
 
 - The approach combines a **LIDAR sensor** with **camera data**. 
 	- LIDAR sensor의 Distance Map에서 **RANSAC**와 **3D adjacency**를 이용하여 지면과 물체를 구분 할수 있다. `The distance map is used to classify parts of the image to ground plane or obstacles using RANSAC and 3D adjacency. `
@@ -84,17 +84,17 @@ different camera views.
 
 - The size of the object determined by the LIDAR obstacle estimation as well as labels from the image analysis are passed into a fuzzy logic frame workwhich returns three labels – environment, middle high or obstacle. 
 
-###### [VBA08]
+###### [RADAR + LiDAR]
 
-- In [VBA08] a framework for self-location and mapping is presented. 
+- In [VBA08] a framework for **self-location** and **mapping** is presented. 
 
-This approach is based on an **occupancy grid** that is used to fuse information from RADAR and LIDAR. 
+- This approach is based on an **occupancy grid** that is used to fuse information from **RADAR** and **LIDAR**. 
 
-An occupancy grid discretizes the environment space into small twodimensional grid tiles. 
+- An occupancy grid discretizes the environment space into small two dimensional grid tiles. 
 
-The LIDAR sensor is used to estimate a probability of agrid cell to be occupied. 
+- The LIDAR sensor is used to estimate a probability of a grid cell to be occupied. 
 
-A high probability means there is an obstacle in the respectivegrid cell. 
+- A high probability means there is an obstacle in the respective grid cell. 
 
 Moving objects are detected through changes in the occupancyof grid cells. 
 
@@ -122,5 +122,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA3OTk4NjI5XX0=
+eyJoaXN0b3J5IjpbNzI2NzIwNTY5XX0=
 -->
