@@ -171,9 +171,9 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 
 - This level is characterized by including classification information as complementary to the final output.
 
-#
+### 2.3 detection level
 
 ###### []
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NjQxMTExOV19
+eyJoaXN0b3J5IjpbLTE5NDk1NzI5NV19
 -->
