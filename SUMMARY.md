@@ -78,11 +78,12 @@
 ## Fusion
 
 * [Intro\_Fusion](introfusion.md)
+* ---Sensorfusion(미진행)
+  * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
 * [Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
   * [code\_MV3D\_TF](papermultiview-3d-cnn/codemv3d-tf.md)
 * [Paper\_2016\_FusionNet \(50%\)](paper2016-fusionnet.md)
-* [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
 * [Report\_2017\_cs231n\_Dempster-Shafer](report2017-cs231n-dempster-shafer.md)
 
 ## 4D \(Time, RNN\)
