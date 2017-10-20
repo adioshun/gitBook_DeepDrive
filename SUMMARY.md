@@ -82,7 +82,7 @@
 ## Fusion
 
 * [----- Sensor Fusion 이란 -----](-sensor-fusion-c774-b780-.md)
-* [Intro\_Fusion](introfusion.md)
+* [Intro Sensor fusion](introfusion.md)
 * ----- Sensor Fusion 논문 -----
 * [Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
