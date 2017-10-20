@@ -17,7 +17,7 @@ In this paper, we propose a new **object-detection and classification method** u
 
 방법 
 1. We fuse the classification outputs from independent unary classifiers, 
-	2. such as 3D point clouds and image data using a convolutional neural network (CNN). 
+	2. unary classifiers, such as 3D point clouds and image data using a convolutional neural network (CNN). 
 2. The unary classifiers for the two sensors are the CNN with five layers,
 which use more than two pre-trained convolutional layers to consider local to global features as data
 representation. To represent data using convolutional layers, we apply region of interest (ROI) pooling
@@ -31,5 +31,5 @@ Ranging (LiDAR) sensors.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkxNjY2Mzg0XX0=
+eyJoaXN0b3J5IjpbLTUxOTc4MjUzM119
 -->
