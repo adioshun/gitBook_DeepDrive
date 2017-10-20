@@ -212,11 +212,11 @@ Our method consistsof three phases:
 
 #### B. Point Cloud
 
-- In the 3D occupancy voxel space, we extract the **supervoxels** using the voxel cloud connectivity segmentation (VCCS) [6]. 
+- VCCS를 이용하여 **슈퍼복셀** 추출 `In the 3D occupancy voxel space, we extract the supervoxels using the voxel cloud connectivity segmentation (VCCS) [6]. `
 	- VCCS uses a gradient-seeding methodology to segment point clouds.
-	- The resulting supervoxels are fine-level segments with a fixed size. 
+	- 이 결과를 사용 `The resulting supervoxels are fine-level segments with a fixed size. `
 
-Subsequently, we perform regiongrowing on the supervoxels to obtain object-level segments using the occupancy connectivity because the supervoxels do not express meaningful cues. 
+Subsequently, we perform region growing on the supervoxels to obtain object-level segments using the occupancy connectivity because the supervoxels do not express meaningful cues. 
 
 These results are the object-region proposals from the3D point clouds.
 
@@ -241,5 +241,5 @@ To fuse the results from the two separate unary classifiers, we propose aCNN mod
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MTY4ODgyNl19
+eyJoaXN0b3J5IjpbLTE0Nzc5MzUzMTJdfQ==
 -->
