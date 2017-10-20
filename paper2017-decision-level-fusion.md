@@ -66,8 +66,8 @@ In this paper, we propose a new object-detection and classification method for a
 ```
 Figure 1. Overview of our work. 
 - Red arrows denote the processing of unary classifier for each sensor,
--and green arrows denote the fusion processing.
+- reen arrows denote the fusion processing.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk1NjM4MjExXX0=
+eyJoaXN0b3J5IjpbMTc2NjE4NTE1M119
 -->
