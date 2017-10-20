@@ -80,14 +80,12 @@
 
 * [----- Sensor Fusion 이란 -----](-sensor-fusion-c774-b780-.md)
 * [Intro Sensor fusion](introfusion.md)
-* [----- Sensor Fusion 논문 -----](-sensor-fusion-b17c-bb38-.md)
 * [Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
   * [code\_MV3D\_TF](papermultiview-3d-cnn/codemv3d-tf.md)
 * [Paper\_2016\_FusionNet \(50%\)](paper2016-fusionnet.md)
 * [Report\_2017\_cs231n\_Dempster-Shafer](report2017-cs231n-dempster-shafer.md)
-* [미진행](-sensorfusionbbf8-c9c4-d58929.md)
-  * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
+* [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
 
 ## 4D \(Time, RNN\)
 
