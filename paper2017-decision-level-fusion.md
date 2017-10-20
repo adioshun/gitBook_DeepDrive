@@ -25,10 +25,15 @@ In this paper, we propose a new **object-detection and classification method** u
 ## 1. Introduction
 
 
-
+The data-fusion scheme is generally categorized into two types, namely early and late fusion. The early-fusion method fuses two or more
+data by combining raw data or concatenating feature descriptors. Although the early-fusion method
+works well, it often cannot handle incomplete measurements. If one sensor modality becomes useless
+due to malfunctions, breakdown or severe weather conditions (e.g., a CCD sensor may lose confidence
+on rainy days), its measurements will be rendered ambiguous. The late-fusion method independently
+performs detection and classification from each sensor modality
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk3NTc4OTgxXX0=
+eyJoaXN0b3J5IjpbLTcxNDA3MTI2XX0=
 -->
