@@ -229,13 +229,14 @@ Our method consistsof three phases:
 - The proposed CNN models are generated with two phases consisting of **image representation** and **classification networks**. 
 	- First, to represent the input data, we extract a convolutional cube that has more than one convolutional layer of pre-trainedCNN models. 
 		- From the convolutional cube of the input data, object regions from the object-proposal generations are extracted using ROI pooling. 
-	-  Then, the convolutional cube extracted from the proposalregions is fed into a classification network that includes two convolutional layers, two fully-connectedlayers and a softmax layer. 
+	-  Then, the convolutional cube extracted from the proposalregions is fed into a classification network 
+		- that includes two convolutional layers, two fully-connectedlayers and a softmax layer. 
 
-To fuse the results from the two separate unary classifiers, we propose aCNN model that uses the convolutional cube and softmax results of the sensor modalities as input.
+결과를 Fuse하기 위해 새 CNN모델 제안 : To fuse the results from the two separate unary classifiers, we propose a CNN model that uses the **convolutional cube** and **softmax results** of the sensor modalities as input.
 
 ## 4. Pre-Processing
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg4Nzc2MTc1XX0=
+eyJoaXN0b3J5IjpbLTE1NDMxMTA2MTRdfQ==
 -->
