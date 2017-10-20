@@ -29,7 +29,7 @@
 
 - [Object Perception for Intelligent Vehicle Applications:A Multi-Sensor Fusion Approach](https://hal.inria.fr/hal-01019527/document): 2014
 
-- [Sensor Modality Fusion with CNNs for UGV Autonomous Driving in Indoor Environments](http://cims.nyu.edu/~achoroma/NonFlash/Papers/SMF_CNN.pdf): 2017
+- ~~[Sensor Modality Fusion with CNNs for UGV Autonomous Driving in Indoor Environments](http://cims.nyu.edu/~achoroma/NonFlash/Papers/SMF_CNN.pdf)~~: 2017, 모형 자동차, 카메라+라이다 연동, DNN 제안 
 
 - [Acoustic/Lidar Sensor Fusion for Car Tracking in City Traffic Scenarios](http://www.drgoehring.de/bib/tadjine15fastzero/tadjine15fastzero.pdf)
 
