@@ -125,7 +125,16 @@ different camera views.
 
 - However, this approach does only work for scenarios in which vehicles are viewed from the rear or front.
 
+---
 
+|논문명 |Multiple Sensor Fusion and Classification for Moving Object Detection and Tracking |
+| --- | --- |
+| 저자\(소속\) | Ricardo Omar Chavez-Garcia  |
+| 학회/년도 | IEEE TRANSACTIONS 2016, [논문](http://www.mi.fu-berlin.de/inf/groups/ag-ki/Theses/Completed-theses/Master_Diploma-theses/2013/Hofmann/Master-Hofmann.pdf?1381479774) |
+| 키워드 | |
+| 데이터셋(센서)/모델 |RADAR + Side Cameras, |
+| 참고 | |
+| 코드 | |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NTIzOTkyXX0=
+eyJoaXN0b3J5IjpbNDY3MDE4NzcyXX0=
 -->
