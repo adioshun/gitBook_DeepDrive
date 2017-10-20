@@ -1,6 +1,5 @@
-http://ko.kionix.com/sensor-fusion
+- Multi-Sensor Fusion of Occupancy Grids based on Integer Arithmetic
 
-http://www.sensortips.com/featured/what-is-sensor-fusion/
+- Fusing LIDAR and Images for Pedestrian Detection using Convolutional Neural Networks, Schlosser
 
-
-http://www.kionix.com/sensor-fusion
+- Motion-based Detection and Tracking in 3D LiDAR Scans, Dewan
