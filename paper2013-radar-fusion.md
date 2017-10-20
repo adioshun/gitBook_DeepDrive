@@ -191,11 +191,13 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 
 - This approach excludes discriminative data from multiple sensor views that can generate multi-class modules. 
 
-Research perspectives point-out theimprovement of the data association and tracking tasks as adirect enhancement when classification information is managedat early levels of perception [2], [5], [9].The most common approaches for multi-sensor fusion arebased on probabilistic methods [1], [2]. 
+- Research perspectives point-out the improvement of the data association and tracking tasks as a direct enhancement when classification information is managed at early levels of perception [2], [5], [9].
 
-However, methodsbased on the Evidential framework proposed an alternative notonly to multi-sensor fusion but to many modules of vehicleperception [5], [6], [9]. 
+- 가장 일반적인 접근법은 probabilistic methods 이다. `The most common approaches for multi-sensor fusion are based on probabilistic methods [1], [2]. `
 
-These methods highlight the importanceof incomplete and imprecise information which is not usuallypresent in the probabilistic approaches.An advantage of our fusion approach at the detection level isthat the description of the objects can be enhanced by addingknowledge from different sensor sources. 
+- However, methods based on the Evidential framework proposed an alternative not only to multi-sensor fusion but to many modules of vehicle perception [5], [6], [9]. 
+
+- These methods highlight the importanceof incomplete and imprecise information which is not usuallypresent in the probabilistic approaches.An advantage of our fusion approach at the detection level isthat the description of the objects can be enhanced by addingknowledge from different sensor sources. 
 
 For example, lidardata can give a good estimation of the distance to the object andits visible size. 
 
@@ -203,5 +205,5 @@ In addition, classification information, usuallyobtained from camera, allows to 
 
 An early enrichment of objects’ descriptioncould allow the reduction of the number of false detections andintegrate classification as a key element of the perception outputrather than only an add-on.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMwNzcwNDIwXX0=
+eyJoaXN0b3J5IjpbMTA2ODcwNzUyM119
 -->
