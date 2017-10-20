@@ -137,7 +137,23 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 - Some previous works proposed the extraction of moving objects from video sequences [27–30] for traffic scenes. 
 
-많은 제안들이 있지만, Because the amount of measured data in intelligent vehicle environments is larger than that in other applications, we need to design a new method to extract a smaller number of proposals than the previous methods.
+많은 제안들이 있지만, 차량 환경에서는 데이터의 양이 많기 떄문에 좀더 경량화된 후보영역 선출 방법이 필요 하다. `Because the amount of measured data in intelligent vehicle environments is larger than that in other applications, we need to design a new method to extract a smaller number of proposals than the previous methods.`
+
+### 2.2 Object detection and classification
+
+Recently, object detection and classification methods that useCNN architecture have been thoroughly researched. 
+
+AlexNet [31] won the ImageNet classificationcompetition using CNN. 
+
+Further, various works have achieved high classification performance onlarge-scale datasets [32–34], such as the ImageNet Large Scale Visual Recognition Challenge (ILSVRC)and PASCAL Visual Object Classed (VOC). 
+
+Some previous works focused on their performance, whilesome architecture designs are available in the literature that focused on reducing the computationalcosts. 
+
+“You only look once” (YOLO) [35] and faster R-CNN [34] constructed a CNN architecturethat simultaneously performs object proposal generations and class classifications to reduce thecomputational times. 
+
+Huang and Chen [28,29] proposed a variable-bandwidth network and aprobabilistic neural network for traffic monitoring systems. 
+
+However, if a model focuses on executiontimes rather than performance, the classification performance may be affected
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNjg1MDk3MV19
+eyJoaXN0b3J5IjpbMTU1MzcwMjA0XX0=
 -->
