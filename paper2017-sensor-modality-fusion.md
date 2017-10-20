@@ -49,6 +49,15 @@
 
 - 본 논문의 제안에서는 새로운 **gating mechanism**을 사용하여 성능 향상을 보임 ` Specifically, we introduce a new gating mechanism based architecture that enables modality fusion for robust end-to-end learning of autonomous corridor driving and improved training techniques that enable resiliency to sensor failure. `
 
+### 3. PROBLEM FORMULATION
+
+We address the problem of end-to-end learning of appropriate steering commands for a UGV to drive autonomously through an indoor environment using camera and LiDAR sensors. 
+
+The proposed deep learning based system is trained using data recorded under human tele-operation of the UGV.Within this context, the objective of this paper is to exploreeffective network architectures and training techniques forfusion of the camera and LiDAR modalities to obtain robustnessto a sensor failure and also to achieve performancecharacteristics superior to either what is achieved by eachsensor separately (e.g., Figure 3).The sensory inputs considered here for indoor navigationare vision (RGB image) and depth (LiDAR range image).The camera image gives information about the type of envi ronment and information regarding texture and color of theobjects present in the nearby environment whereas the depthrange image gives complementary information to RGB channelsin the form of the structure of the environment via depthmeasurements to points in the environment. 
+
+As illustratedin Figure 3, each sensor separately can have limitations inenvironment perception. 
+
+There are also other complementarysensory performance characteristics of camera and LiDAR,e.g., sensitivity of a camera to lighting conditions, limitationsof a LiDAR in detecting small objects.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4OTUxMDQ5MV19
+eyJoaXN0b3J5IjpbLTE2NTI4NzUwNTVdfQ==
 -->
