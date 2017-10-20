@@ -130,9 +130,14 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 ###### [multi-scale combinatorial grouping method]
 
-- The multi-scale combinatorial grouping method [26] segments an image in the hierarchicalscale pyramids, and all of the segmentation results are then applied into the combinatorial grouping.Some previous works proposed the extraction of moving objects from video sequences [27–30] fortraffic scenes. 
+- The multi-scale combinatorial grouping method [26] segments an image in the hierarchical scale pyramids, 
+- and all of the segmentation results are then applied into the combinatorial grouping.
 
-Because the amount of measured data in intelligent vehicle environments is larger than that in other applications, we need to design a new method to extract a smaller number of proposalsthan the previous methods.
+###### [기타 ]
+
+- Some previous works proposed the extraction of moving objects from video sequences [27–30] for traffic scenes. 
+
+Because the amount of measured data in intelligent vehicle environments is larger than that in other applications, we need to design a new method to extract a smaller number of proposals than the previous methods.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI4MTYyNjI1XX0=
+eyJoaXN0b3J5IjpbMTkwOTQ1NzU2M119
 -->
