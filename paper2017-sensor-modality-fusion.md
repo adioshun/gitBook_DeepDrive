@@ -25,9 +25,10 @@
 
 - Vision과  depth를 기반으로 한 자율 주행 로봇에 대한 연구가 많이 이루어 지고 있다. `Various aspects of robot autonomy in both indoor and outdoor environments using vision and depth based sensor processing have been extensively studied in the literature[1]–[6]. `
 
-Reinforcement learning techniques have also beenutilized to teach the mobile robot to avoid obstacles andnavigate through the corridor using sensors such as a laserrange finder [7]. 
+- 강화 학습 역시 센서 정보를 사용하여 장애물 회피에 적용되고 있다. `Reinforcement learning techniques have also been utilized to teach the mobile robot to avoid obstacles and navigate through the corridor using sensors such as a laser range finder [7]. `
 
-An online navigation framework relyingon object recognition was presented in [8]. 
+- [8]에서는 vision and depth
+Anvision and depth framework relying on object recognition was presented in [8]. 
 
 CNNs havebeen successfully used for learning driving decision rules forautonomous navigation [9] and for end-to-end navigation ofa car using a single front facing camera [10] (alternately,debugging tools were developed for these systems to understandthe visual cues the network used to produce a steeringcommand, e.g. [11]). 
 
@@ -45,5 +46,5 @@ Specifically, we introduce a new gatingmechanism based architecture that enables
 
 The efficacy of the proposed approach isdemonstrated through experimental studies (Figure 2).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODQ1ODkzMDhdfQ==
+eyJoaXN0b3J5IjpbNjAzODQxMjYwXX0=
 -->
