@@ -159,19 +159,19 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 - The fusion methods are divided into two categories, namely **early** and **late** fusion. 
 
-#### A. 
+#### A. early fusion method
 
-In the early fusion method, the measurements are fused by mapping them together,or by concatenation, or probabilistic fusion [41,44,45]. 
+- the measurements are fused by mapping them together,or by concatenation, or probabilistic fusion [41,44,45]. 
 
-However, the early fusion method suffers fromproblems of non-overlapping regions and uncertainties. 
+- 제약 : However, the early fusion method suffers from problems of **non-overlapping regions** and **uncertainties**. 
 
-To solve these problems, the decision-levelfusion method is used as a late fusion method. 
+- 해결책 : To solve these problems, the **decision-level fusion method** is used as a **late fusion** method. 
 
-Chavez-Garcia and Aycard [46] proposed an evidentialframework to improve the detection and tracking of moving objects by managing the uncertainty.Cho et al. 
+Chavez-Garcia and Aycard [46] proposed an evidential framework to improve the detection and tracking of moving objects by managing the uncertainty. 
 
-[43] independently extracted data features using target information from sensors andcombined the entire target information for movement classification and tracking of moving objects.The transferable belief model was used to combine the sensor measurements by managing theuncertainty [47]. 
+Cho et al. [43] independently extracted data features using target information from sensors andcombined the entire target information for movement classification and tracking of moving objects.The transferable belief model was used to combine the sensor measurements by managing theuncertainty [47]. 
 
 In the present study, we use the CNN framework to jointly consider the classificationperformance of each sensor modality, as well as the uncertainties.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MzQxNDAyNV19
+eyJoaXN0b3J5IjpbMzI0OTQ1MTZdfQ==
 -->
