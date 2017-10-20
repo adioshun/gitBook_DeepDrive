@@ -78,9 +78,13 @@ The architectures of **NetEmb**, **NetConEmb**, and **NetGatedare** described in
 
 #### C. NetGatedare
 
-- In NetGated, the gating network generates twoweights, used to perform a weighted sum of the two embeddingsobtained from the camera and lidar-range image.This weighted sum is then passed through two fully connectednetworks to obtain the steering command. 
+- In NetGated, the gating network generates two weights, used to perform a weighted sum of the two embeddings obtained from the camera and lidar-range image.
+- 
+- This weighted sum is then passed through two fully connectednetworks to obtain the steering command. 
 
-Each ofthe considered network architectures is an end-to-end deeplearning system that takes an RGB image and a LiDAR depthrange image as input and fuses the modalities using a deepneural network to predict the appropriate steering commandof the UGV for autonomous navigation.
+- Each of the considered network architectures is an end-to-end deeplearning system that takes an RGB image and a LiDAR depth range image as input and fuses the modalities using a deepneural network to predict the appropriate steering command of the UGV for autonomous navigation.
+
+![](https://i.imgur.com/FnFDsYn.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzMTQ2NDUzN119
+eyJoaXN0b3J5IjpbLTIwNDQ2MTQzMzVdfQ==
 -->
