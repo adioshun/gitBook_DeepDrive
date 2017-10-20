@@ -8,7 +8,9 @@
 | 코드 | |
 
 
-### 1.2 
+### 1.2 Sensor Fusion
+
+정의 : A definition of Sensor Fusion can be found in The Handbook ofMultisensor Data Fusion.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MTQ3Mzg0NF19
+eyJoaXN0b3J5IjpbLTYwODYyMTA3XX0=
 -->
