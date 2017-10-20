@@ -96,7 +96,7 @@ different camera views.
 - 이동하는 물체의 탐지는 해당 그리드값의 변화 감지를 통해 알수 있다. `Moving objects are detected through changes in the occupancy of grid cells. `
 	- Basically, if a cell is occupied at a time point, and in the next timestep, the adjacent cell is detected to be occupied, this is assumed as a motion. 
 
-AsRADAR data is relatively sparse compared to LIDAR measurements, it is used toverify or reject motion estimations based on LIDAR data.A similar method of fusing short range RADAR and laser measurements isproposed in [PVB+09]. 
+As RADAR data is relatively sparse compared to LIDAR measurements, it is used toverify or reject motion estimations based on LIDAR data.A similar method of fusing short range RADAR and laser measurements isproposed in [PVB+09]. 
 
 The system covers more performance optimizations than[VBA08]. 
 
@@ -118,5 +118,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE0OTcxNTY4XX0=
+eyJoaXN0b3J5IjpbLTE4NjY1NTQ1MjZdfQ==
 -->
