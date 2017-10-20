@@ -59,9 +59,21 @@
 
 ### 4.1 System Framework
 
+- The LiDAR measurements are encoded as a 16-bit grayscale depth range image. 
+- The depth range image and RGB image from the camera are used to generate a steering command 
+	- that is used by the onboard autopilot to send appropriate signals to the motor controllers of the ground vehicle.
 
 ### 4.2 Network Architectures
 
+The architectures of **NetEmb**, **NetConEmb**, and **NetGatedare** described in Tables I, II, and III, respectively. 
+
+In NetEmbfeature maps from RGB image and LiDAR depth rangeimage are extracted through a series of convolutional layers.Next, the features extracted from the convolutional layersin both the parallel networks are embedded into a featurevector using a fully connected network. 
+
+In NetConEmb, theconvolutional feature maps are passed into a fully connectednetwork. 
+
+In NetGated, the gating network generates twoweights, used to perform a weighted sum of the two embeddingsobtained from the camera and lidar-range image.This weighted sum is then passed through two fully connectednetworks to obtain the steering command. 
+
+Each ofthe considered network architectures is an end-to-end deeplearning system that takes an RGB image and a LiDAR depthrange image as input and fuses the modalities using a deepneural network to predict the appropriate steering commandof the UGV for autonomous navigation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTUzMjA3OTFdfQ==
+eyJoaXN0b3J5IjpbNTc5NzQwMjg5XX0=
 -->
