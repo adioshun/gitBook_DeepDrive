@@ -149,9 +149,10 @@ Fig. 2 shows the different fusion levels inside a perceptionsystem.
 - At track level, 
 	- lists of tracks from individual sensor modules are fused to produce the final list of tracks.
 
+### 2.1 
+
 Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO component. 
 
-### 2.1 
 
 ###### [Vu [1] and Wang [3]]
 
@@ -170,7 +171,9 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 
 - This level is characterized by including classification information as complementary to the final output.
 
+#
+
 ###### []
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Nzg1MDQzMjBdfQ==
+eyJoaXN0b3J5IjpbLTI5NjQxMTExOV19
 -->
