@@ -137,7 +137,7 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 - Some previous works proposed the extraction of moving objects from video sequences [27–30] for traffic scenes. 
 
-Because the amount of measured data in intelligent vehicle environments is larger than that in other applications, we need to design a new method to extract a smaller number of proposals than the previous methods.
+많은 제안들이 있지만, Because the amount of measured data in intelligent vehicle environments is larger than that in other applications, we need to design a new method to extract a smaller number of proposals than the previous methods.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwOTQ1NzU2M119
+eyJoaXN0b3J5IjpbLTczNjg1MDk3MV19
 -->
