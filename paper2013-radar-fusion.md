@@ -161,7 +161,7 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 
 ### 2.2 track level 
 
-- Multi-sensor fusion at track level requires a list of updated tracks from each sensor to fuse them into a combined list of tracks. 
+- Multi-sensor fusion at **track level** requires a list of updated tracks from each sensor to fuse them into a combined list of tracks. 
 
 ###### [2, 4, 5]
 
@@ -173,7 +173,18 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 
 ### 2.3 detection level
 
-###### []
+- Fusion at **detection level** aims at gathering and combining early data from sensor detections. 
+
+###### [6]
+
+- Labayrade et al. propose to work at this level to reduce the number of mis-detections that can lead to false tracks [6]. 
+##
+
+Other works focus on data redundancy from active and passive sensors, and follow physical or learning constrains to increase the certainty of object detection[7], [8]. 
+
+These works do not include all the available kineticand appearance information. 
+
+Moreover, at this level, appearanceinformation from sensor measurements is not considered asimportant as the kinetic data to discriminate moving and staticobjects.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDk1NzI5NV19
+eyJoaXN0b3J5IjpbMjEwMjIwOTkwMl19
 -->
