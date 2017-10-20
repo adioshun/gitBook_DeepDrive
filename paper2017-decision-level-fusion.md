@@ -48,8 +48,8 @@ In addition, the reliability and plausibility of each sensor can be considered.
 In this paper, we propose a new object-detection and classification method for a multi-layer LiDAR and a CCD sensor. 
 
 The contributions of this work are two-fold: 
-- (1) an effective object-region proposal generation method
-- (2) a decision-level fusion method for accurate object classification.
+- (1) an effective **object-region proposal generation** method
+- (2) a **decision-level fusion** method for accurate object classification.
 
 For effective generation of the object-region proposals, we develop a new method to generate a small number of meaningful object-region proposals from the LiDAR and CCD sensor data. 
 
@@ -59,9 +59,9 @@ Semantic grouping is a process in which tiny partitions extracted from segmentge
 
 Our proposed colorflattening is based on L1 norm color transform [8]. 
 
-Semantic grouping is performed using our owndissimilarity cost function between the color-flattened and original images.
+Semantic grouping is performed using our own dissimilarity cost function between the color-flattened and original images.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNTgyMDE4Nl19
+eyJoaXN0b3J5IjpbLTE0MjIwODgxNzhdfQ==
 -->
