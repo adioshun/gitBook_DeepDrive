@@ -11,6 +11,7 @@
 * [Project\_2017\_iPRoBe Lab](project2017-iprobe-lab.md)
 * [Project\_2017\_Berkeley](project2017-berkeley.md)
 * [Report\_2017\_cs231n\_Dempster-Shafer](report2017-cs231n-dempster-shafer.md)
+* [Papers\_OccupancyGridFusion](papersoccupancygridfusion.md)
 
 ## 2D CNN
 
