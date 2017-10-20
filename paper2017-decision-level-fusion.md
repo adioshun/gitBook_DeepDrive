@@ -71,9 +71,9 @@ Figure 1. Overview of our work.
 
 - 성능향상을 위해 서로 다른 센서의 unary classifiers 결과값 CNN을 이용하여 합쳤다.` For accurate object classification, we combine the results from the unary classifiers of each sensor at the decision level using a convolutional neuralnetwork (CNN). `
 
-The main objective of the unary classifiers is to accurately recognize the class ofobject proposals on each sensor modality. 
+- **unary classifiers**의 주 목적은 object proposals를 분류 하는 것이다. `The main objective of the unary classifiers is to accurately recognize the class of object proposals on each sensor modality. `
 
-Previous models of object category classification thatused CNNs fed a fixed number of output layers into the final loss layer in their task. 
+Previous models of object category classification that used CNNs fed a fixed number of output layers into the final loss layer in their task. 
 
 For example,all-passed output, which means the input is passed through all layers of networks, is widely used forfeeding into the loss layer. 
 
@@ -89,5 +89,5 @@ By fusing the multi-sensor modalities, the detection and classification failures
 
 In addition, fusing themulti-sensor in the decision level makes it more stable when information conflict occurs in eachmodality when compared to feature-level fusion schemes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg5MzIyMjc1XX0=
+eyJoaXN0b3J5IjpbMTE1NDAwNjA0Ml19
 -->
