@@ -130,11 +130,33 @@ different camera views.
 |논문명 |Multiple Sensor Fusion and Classification for Moving Object Detection and Tracking |
 | --- | --- |
 | 저자\(소속\) | Ricardo Omar Chavez-Garcia  |
-| 학회/년도 | IEEE TRANSACTIONS 2016, [논문](http://www.mi.fu-berlin.de/inf/groups/ag-ki/Theses/Completed-theses/Master_Diploma-theses/2013/Hofmann/Master-Hofmann.pdf?1381479774) |
+| 학회/년도 | IEEE TRANSACTIONS 2016, [논문](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7283636) |
 | 키워드 | |
-| 데이터셋(센서)/모델 |RADAR + Side Cameras, |
+| 데이터셋(센서)/모델 | |
 | 참고 | |
 | 코드 | |
+
+## RELATED WORK
+
+Fig. 2 shows the different fusion levels inside a perceptionsystem. 
+
+Whilst low level fusion is performed within SLAMcomponent, detection and track level fusions are performedwithin DATMO component. 
+
+At detection level, fusion is performedbetween lists of moving object detections provided byindividual sensors. 
+
+At track level, lists of tracks from individualsensor modules are fused to produce the final list of tracks.Promising SLAM results obtained in [1]–[3] motivated ourfocus on the DATMO component. 
+
+Whilst Vu [1] and Wang [3]use an almost deterministic approach to perform the associationin tracking, we use an evidential approach based on massdistributions over the set of different class hypotheses. 
+
+Ourreview focuses on the fusion methods inside DATMO that uselidar, camera and radar sensors. 
+
+This decision comes from oursensor set-up described in Section IV.Multi-sensor fusion at track level requires a list of updatedtracks from each sensor to fuse them into a combined list oftracks. 
+
+The works in [2], [4], [5] solve this problem focusingon the association problem between lists of tracks, andimplementing stochastic mechanisms to combine the relatedobjects. 
+
+By using an effective fusion strategy at this level, falsetracks can be reduced. 
+
+This level is characterized by includingclassification information as complementary to the final output.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY3MDE4NzcyXX0=
+eyJoaXN0b3J5IjpbMTAzMjk1ODc3Ml19
 -->
