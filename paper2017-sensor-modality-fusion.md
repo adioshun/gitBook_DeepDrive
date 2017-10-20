@@ -83,14 +83,20 @@ vectors (of length 512) constructed from camera and LiDAR are concatenated at la
 
 ![](https://i.imgur.com/5k3d8rE.png)
 ```
-TABLE II: NetConEmb: Fusion architecture where the convolutional
-feature maps are directly passed through a fully connected
-network instead of first converting them into feature embeddings as
-done in NetEmb. The first 20 layers are identical to NetEmb.
+TABLE II: NetConEmb: 
+- Fusion architecture where the convolutional feature maps are directly passed through a fully connected network instead of first converting them into feature embeddings as done in NetEmb. 
+- The first 20 layers are identical to NetEmb.
 ```
 - In NetConEmb, the convolutional feature maps are passed into a fully connected network. 
 
 #### C. NetGatedare
+
+![](https://i.imgur.com/u5ZtFGF.png)
+```
+TABLE III: NetGated: 
+- Fusion architecture with gating mechanism based on computing scalar weights from the feature embeddings andthen constructing a combination of the feature embeddings based on the scalar weights. 
+- The first 20 layers are identical to NetEmb.
+```
 
 - In NetGated, the gating network generates two weights, used to perform a weighted sum of the two embeddings obtained from the camera and lidar-range image.
 - 
@@ -100,5 +106,5 @@ done in NetEmb. The first 20 layers are identical to NetEmb.
 
 ![](https://i.imgur.com/FnFDsYn.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyODMyOTExMV19
+eyJoaXN0b3J5IjpbNTUxNTEyMTk5XX0=
 -->
