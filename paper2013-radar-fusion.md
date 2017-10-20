@@ -113,7 +113,7 @@ different camera views.
 - The approach proposed in [ABC07] shows a fusion of RADAR and camera 
 	- in which the camera is used to verify and optimize RADAR object tracks. 
 
-The camera is oriented to the front. 
+- The camera is oriented to the front. 
 
 The center points of RADAR objects are projectedinto the image based on the camera calibration. 
 
@@ -125,5 +125,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MjE1ODA0Ml19
+eyJoaXN0b3J5IjpbLTE5NTM4ODMwNzldfQ==
 -->
