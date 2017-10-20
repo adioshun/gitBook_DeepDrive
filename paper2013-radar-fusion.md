@@ -153,11 +153,11 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 
 ###### [Vu [1] and Wang [3]]
 
-- Whilst Vu [1] and Wang [3]use an almost deterministic approach to perform the association in tracking, we use an evidential approach based on massdistributions over the set of different class hypotheses. 
+- Whilst Vu [1] and Wang [3]use an almost deterministic approach to perform the association in tracking, we use an evidential approach based on mass distributions over the set of different class hypotheses. 
 
-Ourreview focuses on the fusion methods inside DATMO that uselidar, camera and radar sensors. 
+- Multi-sensor fusion at track level requires a list of updated tracks from each sensor to fuse them into a combined list of tracks. 
 
-This decision comes from oursensor set-up described in Section IV.Multi-sensor fusion at track level requires a list of updatedtracks from each sensor to fuse them into a combined list oftracks. 
+###### [2, 4, 5]
 
 The works in [2], [4], [5] solve this problem focusingon the association problem between lists of tracks, andimplementing stochastic mechanisms to combine the relatedobjects. 
 
@@ -165,5 +165,5 @@ By using an effective fusion strategy at this level, falsetracks can be reduced.
 
 This level is characterized by includingclassification information as complementary to the final output.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM1OTc2OTI4XX0=
+eyJoaXN0b3J5IjpbLTE0OTI3MjU0MjNdfQ==
 -->
