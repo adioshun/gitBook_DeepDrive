@@ -63,6 +63,11 @@ different camera views.
 	- The error covariance represents the trust in the state estimation, e.g. a camera image is reliable for estimating the width of objects but distance or speed measurements are very inaccurate. 
 	- In contrast a RADAR sensor provides very accurate distance and velocity measurements. 
 	- Thus, in the final state estimate, velocity information and distance will be closer to the RADAR measurements, while the size would be closer to the measurements from the camera which, in theory, should result in a better final state estimate.
+
+
+### 1.4 State of the Art
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDIxODAxNTldfQ==
+eyJoaXN0b3J5IjpbODkxNTI4NzExXX0=
 -->
