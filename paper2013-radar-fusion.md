@@ -72,13 +72,7 @@ different camera views.
 #### 1.4.2 Camera-based Approaches
 #### 1.4.3 Sensor Fusion Approaches 
 
-Sensor fusion approaches are the most recent developments in the area of environmentperception. 
-
-The fusion of several sensors allows to combine advantages ofdifferent sensors, e.g. 
-
-distance and velocity measurements of RADAR and classi-fication abilities of cameras, and reduce disadvantages at the same time. 
-
-Currentresearch mostly focuses on sensors which provide 3-dimensional information of theenvironment. 
+- Current research mostly focuses on sensors which provide 3-dimensional information of the environment. 
 
 Thus, papers that focus on camera-RADAR fusion are rather rare.One of the recent approaches which utilize sensor fusion is [ZXY12]. 
 
@@ -134,5 +128,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIzOTUyNTU1XX0=
+eyJoaXN0b3J5IjpbMTkyNjU3NDg4N119
 -->
