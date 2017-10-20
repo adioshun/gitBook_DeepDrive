@@ -107,8 +107,12 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 	- BInarized Normed Gradients (BING) [25]
 	- multi-scale combinatorial grouping (MCG) [26]. 
 
-###### []
-The objectness method [20] measures the objectness score to distinguish whether a window region belongs to a background or an object.The category-independent method [21] extracts object regions using the graph-cut segmentationmethod and then ranks them to select a well-represented object-region proposal among the overlappedproposals. 
+###### [ objectness method ]
+- The objectness method [20] measures the objectness score to distinguish whether a window region belongs to a background or an object.
+
+###### [ category-independent method ]
+- The category-independent method [21] extracts object regions using the graph-cut segmentation method and 
+- then ranks them to select a well-represented object-region proposal among the overlappedproposals. 
 
 ###### []
 
@@ -124,9 +128,11 @@ EdgeBox [24] extracts objectproposals using edge segmentations.
 
 In addition, it focuses on object boundaries for object-levelproposals. 
 
+###### []
+
 The multi-scale combinatorial grouping method [26] segments an image in the hierarchicalscale pyramids, and all of the segmentation results are then applied into the combinatorial grouping.Some previous works proposed the extraction of moving objects from video sequences [27–30] fortraffic scenes. 
 
 Because the amount of measured data in intelligent vehicle environments is larger than that in other applications, we need to design a new method to extract a smaller number of proposalsthan the previous methods.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNzUxNDI4XX0=
+eyJoaXN0b3J5IjpbLTExMzcwMDk5Nl19
 -->
