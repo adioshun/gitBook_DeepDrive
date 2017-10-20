@@ -76,15 +76,9 @@ different camera views.
 
 ###### [ZXY12]
 
-The approach combines a LIDAR sensor with camera data. 
+- The approach combines a LIDAR sensor with camera data. 
 
-LIDAR sensors measure the time light travels to a certain object point tomeasure its distance. 
-
-This allows high resolution distance maps. 
-
-These mapsprovide good information for obstacle detection but less for classification. 
-
-Thedistance map is used to classify parts of the image to ground plane or obstaclesusing RANSAC and 3D adjacency. 
+- Distance MapThe distance map is used to classify parts of the image to ground plane or obstacles using RANSAC and 3D adjacency. 
 
 At the same time the image patches are classifiedto different classes by evaluating color histograms, texture descriptors fromGaussian and Garbor filtered images as well as local binary patterns. 
 
@@ -128,5 +122,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4ODkzMTEzNl19
+eyJoaXN0b3J5IjpbLTE0MzEwMzAzODRdfQ==
 -->
