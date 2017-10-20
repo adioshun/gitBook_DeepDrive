@@ -64,10 +64,16 @@ different camera views.
 	- In contrast a RADAR sensor provides very accurate distance and velocity measurements. 
 	- Thus, in the final state estimate, velocity information and distance will be closer to the RADAR measurements, while the size would be closer to the measurements from the camera which, in theory, should result in a better final state estimate.
 
+---
 
 ### 1.4 State of the Art
 
+#### 1.4.1 RADAR-based Tracking Approaches
+#### 1.4.2 Camera-based Approaches
+#### 1.4.3 Sensor Fusion Approaches 
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkxNTI4NzExXX0=
+eyJoaXN0b3J5IjpbOTI2ODkyODc3XX0=
 -->
