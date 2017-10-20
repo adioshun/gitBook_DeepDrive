@@ -22,6 +22,28 @@
 > 각센서를 위해 다른 CNN네트워크가 존재 하며 추후 **gating mechanism**을 이용하여 Fuse 됨 
 
 ## 2. RELATED WORK
+
+Various aspects of robot autonomy in both indoor andoutdoor environments using vision and depth based sensorprocessing have been extensively studied in the literature[1]–[6]. 
+
+Reinforcement learning techniques have also beenutilized to teach the mobile robot to avoid obstacles andnavigate through the corridor using sensors such as a laserrange finder [7]. 
+
+An online navigation framework relyingon object recognition was presented in [8]. 
+
+CNNs havebeen successfully used for learning driving decision rules forautonomous navigation [9] and for end-to-end navigation ofa car using a single front facing camera [10] (alternately,debugging tools were developed for these systems to understandthe visual cues the network used to produce a steeringcommand, e.g. [11]). 
+
+Neural network based indoor navigationhas also been studied in multiple works including [12]–[16].In the deep learning literature, fusion of different modalitieshas been studied for various applications in recent yearssuch as in [17] for object detection using images and depthmaps. 
+
+Deep learning for a recurrent neural network [18] wasapplied to implicitly learn the dependencies between RGBimages and depth map to perform semantic segmentation.In [19], RGB image and its corresponding 3D point cloudare used as inputs for 3D object detection. 
+
+RGB image,optical flow, and LiDAR range images are combined to forma six channel input to a deep neural network [20] for objectdetection. 
+
+The same network can also be used for different modalities to learn a joint representation [21]. 
+
+RGB imagesand depth maps (HHA images) were fused in [22] for anindoor scene recognition application using a multi-modallearning framework and the learned features were classifiedusing a support vector machine.Compared to the prior works summarized above, the proposedsystem introduces several novel aspects as summarizedin the introduction. 
+
+Specifically, we introduce a new gatingmechanism based architecture that enables modality fusionfor robust end-to-end learning of autonomous corridor drivingand improved training techniques that enable resiliencyto sensor failure. 
+
+The efficacy of the proposed approach isdemonstrated through experimental studies (Figure 2).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzkyMjYxNzNdfQ==
+eyJoaXN0b3J5IjpbLTEzMjUzMTAwNDZdfQ==
 -->
