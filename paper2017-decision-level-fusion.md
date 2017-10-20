@@ -26,14 +26,22 @@ In this paper, we propose a new **object-detection and classification method** u
 
 
 The data-fusion scheme is generally categorized into two types, namely early and late fusion. 
-- The early-fusion method 
+
+###### The early-fusion method 
 	- fuses two or more data by combining raw data or concatenating feature descriptors. 
 	- it often cannot handle incomplete measurements. 
-	- If one sensor modality becomes useless due to malfunctions, breakdown or severe weather conditions (e.g., a CCD sensor may lose confidence on rainy days), its measurements will be rendered ambiguous. 
-- The late-fusion method independently performs detection and classification from each sensor modality
+	- If one sensor modality becomes useless due to malfunctions, breakdown or severe weather conditions, its measurements will be rendered ambiguous. 
+- The late-fusion method 
+	- independently performs detection and classification from each sensor modality
 
+
+Subsequently, the classified outputs
+are fused at the decision level for final classification. By using the decision-level fusion scheme for the
+object detection and classification task, we can prevent the autonomous driving system from becoming
+non-functional when information conflicts are introduced to more than one sensor. In addition,
+the reliability and plausibility of each sensor can be considered.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MjUxNDY2NV19
+eyJoaXN0b3J5IjpbLTEyNTM3ODM5NzBdfQ==
 -->
