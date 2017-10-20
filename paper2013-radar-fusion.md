@@ -35,15 +35,16 @@ Data fusion techniques combine data from multiple sensors and related informatio
 
 ![](https://i.imgur.com/VISRuZz.png)
 
-- Data Level Fusion or Low Level Sensor Fusion (Figure 1.1) describes a method of combining raw data from different sensors with each other, e.g. having a calibrated camera and a calibrated Time-of-Flight (ToF) depth-sensor which creates
-a depth map of the environment, each camera pixel can be mapped to a distance measurement of the ToF sensor and vice versa.
+- Data Level Fusion or Low Level Sensor Fusion (Figure 1.1) describes 
+- a method of combining raw data from different sensors with each other,
+- e.g. having a calibrated camera and a calibrated Time-of-Flight (ToF) depth-sensor which creates a depth map of the environment, each camera pixel can be mapped to a distance measurement of the ToF sensor and vice versa.
 
 #### B. Feature Level Fusion
 
 ![](https://i.imgur.com/NQv8AFk.png)
 
-In Feature Level Fusion (Figure 1.2) or Mid-Level Fusion, the sensor data is
-presented via feature vectors which describe meaningful data extracted from the
+- In Feature Level Fusion (Figure 1.2) or Mid-Level Fusion, 
+- the sensor data is presented via feature vectors which describe meaningful data extracted from the
 raw data. These feature vectors build the base for fusion. This method can be
 found in 3D-reconstruction for example. In this approach image features from
 different cameras are extracted to identify corresponding points in each image of
@@ -67,5 +68,5 @@ velocity information and distance will be closer to the RADAR measurements,
 while the size would be closer to the measurements from the camera which, in
 theory, should result in a better final state estimate.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1OTg2MTk1NV19
+eyJoaXN0b3J5IjpbOTg5MDE2ODgxXX0=
 -->
