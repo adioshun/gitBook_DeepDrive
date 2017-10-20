@@ -66,8 +66,27 @@ In this paper, we propose a new object-detection and classification method for a
 ```
 Figure 1. Overview of our work. 
 - Red arrows denote the processing of unary classifier for each sensor,
-- reen arrows denote the fusion processing.
+- Green arrows denote the fusion processing.
 ```
+For accurate object classification, we combine the results from the unary classifiers of each sensor at the decision level using a convolutional neuralnetwork (CNN). 
+
+The main objective of the unary classifiers is to accurately recognize the class ofobject proposals on each sensor modality. 
+
+Previous models of object category classification thatused CNNs fed a fixed number of output layers into the final loss layer in their task. 
+
+For example,all-passed output, which means the input is passed through all layers of networks, is widely used forfeeding into the loss layer. 
+
+For this output, however, little information loss might occur through thepassing of several pooling layers. 
+
+In contrast, the proposed CNN model, similar to unary classifiers,generates a convolutional cube from more than one convolutional layer of a pre-trained CNN modelas image representations. 
+
+From the extracted object proposals obtained from the proposal generations,ROI pooling is applied on the convolutional cube to feed them into a fine-tuned classification networkcomprising two convolutional layers, two fully-connected layers and a softmax layer. 
+
+Subsequently,to fuse the two detection and classification results of the LiDAR and CCD sensors, we feed the finalsoftmax result vectors and their convolutional cube into the fusion CNN. 
+
+By fusing the multi-sensor modalities, the detection and classification failures can be compensated. 
+
+In addition, fusing themulti-sensor in the decision level makes it more stable when information conflict occurs in eachmodality when compared to feature-level fusion schemes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NjE4NTE1M119
+eyJoaXN0b3J5IjpbLTIxMzA3NjMzNzhdfQ==
 -->
