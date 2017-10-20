@@ -62,7 +62,12 @@ In this paper, we propose a new object-detection and classification method for a
 	-  Our proposed color flattening is based on L1 norm color transform [8]. 
 	- Semantic grouping is performed using our own dissimilarity cost function between the color-flattened and original images.
 
-
+![](https://i.imgur.com/DlIqQnW.png)
+```
+Figure 1. Overview of our work. 
+- Red arrows denote the processing of unary classifier for each sensor,
+-and green arrows denote the fusion processing.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NTU3MThdfQ==
+eyJoaXN0b3J5IjpbMzk1NjM4MjExXX0=
 -->
