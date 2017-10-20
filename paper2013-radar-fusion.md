@@ -80,13 +80,15 @@ different camera views.
 	- LIDAR sensor의 Distance Map에서 **RANSAC**와 **3D adjacency**를 이용하여 지면과 물체를 구분 할수 있다. `The distance map is used to classify parts of the image to ground plane or obstacles using RANSAC and 3D adjacency. `
 	- image patches are classified to different classes by evaluating color histograms, texture descriptors from **Gaussian** and **Garbor filtered** images as well as local binary patterns. 
 
-Resulting in 107 features, each patch is classified by a Multi-Layer-Perceptron to different categories. 
+- Resulting in 107 features, each patch is classified by a Multi-Layer-Perceptron to different categories. 
 
-The size of the object determined by the LIDAR obstacle estimationas well as labels from the image analysis are passed into a fuzzy logic frameworkwhich returns three labels – environment, middle high or obstacle. 
+- The size of the object determined by the LIDAR obstacle estimation as well as labels from the image analysis are passed into a fuzzy logic frame workwhich returns three labels – environment, middle high or obstacle. 
 
-The fusionapproach reaches better classification results than the individual sensors.In [VBA08] a framework for self-location and mapping is presented. 
+###### [VBA08]
 
-This approachis based on an occupancy grid that is used to fuse information from RADARand LIDAR. 
+- In [VBA08] a framework for self-location and mapping is presented. 
+
+This approach is based on an **occupancy grid** that is used to fuse information from RADAR and LIDAR. 
 
 An occupancy grid discretizes the environment space into small twodimensional grid tiles. 
 
@@ -120,5 +122,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg5MzIxMzc1XX0=
+eyJoaXN0b3J5IjpbMzA3OTk4NjI5XX0=
 -->
