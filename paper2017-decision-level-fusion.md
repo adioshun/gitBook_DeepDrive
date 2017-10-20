@@ -190,7 +190,12 @@ Our method consistsof three phases:
 
 ### 3.1 Pre-processing
 
-For the CCD image input, color flattening is performed, which makes the imageassume a monotonous color and is useful in obtaining desirable segmentation results.For the point-cloud input, we transform the 3D point clouds into 3D occupancy voxel spaces.This transformation reduces the noise in the point clouds, i.e., only the obviously reflected pointmeasurements are acquired.Object-region proposal generation: We perform segmentation of the color-flattened image.However, the initial segmentation results are not satisfactory with respect to the detection of meaningfulobjects. 
+- For the CCD image input, color flattening is performed, which makes the image assume a monotonous color and is useful in obtaining desirable segmentation results.For the point-cloud input, we transform the 3D point clouds into 3D occupancy voxel spaces.This transformation reduces the noise in the point clouds, i.e., only the obviously reflected pointmeasurements are acquired.
+
+
+### 3.2 Object-region proposal generation
+
+We perform segmentation of the color-flattened image.However, the initial segmentation results are not satisfactory with respect to the detection of meaningfulobjects. 
 
 Therefore, we perform semantic grouping using a dissimilarity cost function from the pixelvalues of both the color-flattened and original images. 
 
@@ -200,7 +205,12 @@ VCCS uses a gradient-seeding methodology to segment point clouds.The resulting s
 
 Subsequently, we perform regiongrowing on the supervoxels to obtain object-level segments using the occupancy connectivity because the supervoxels do not express meaningful cues. 
 
-These results are the object-region proposals from the3D point clouds.Classifying object proposals: To classify the object proposals, we fuse the classification results fromthe unary classifiers of the LiDAR and CCD sensors using CNN. 
+These results are the object-region proposals from the3D point clouds.
+
+
+### 3.3 Classifying object proposals
+
+To classify the object proposals, we fuse the classification results fromthe unary classifiers of the LiDAR and CCD sensors using CNN. 
 
 The unary classifiers are modeledusing CNN models with the same network architecture. 
 
@@ -218,5 +228,5 @@ To fuse the results from the two separate unary classifiers, we propose aCNN mod
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NzQ4NTkzOV19
+eyJoaXN0b3J5IjpbMTQ4OTAxNTMzN119
 -->
