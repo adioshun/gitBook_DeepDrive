@@ -208,7 +208,7 @@ Our method consistsof three phases:
 	- 결과가 만족 스럽지 않음 `However, the initial segmentation results are not satisfactory with respect to the detection of meaningful objects. `
 
 - 그래서 추가 작업 실시 : Therefore, we perform **semantic grouping** using a dissimilarity cost function from the pixel values of both the color-flattened and original images. 
-	- 이 결과를 사용 `These results are the object-region proposals from the CCD sensor data.`
+	- 이 결과는 **object-region proposals**이다.  `These results are the object-region proposals from the CCD sensor data.`
 
 #### B. Point Cloud
 
@@ -216,16 +216,15 @@ Our method consistsof three phases:
 	- VCCS uses a gradient-seeding methodology to segment point clouds.
 	- 이 결과는 fine-level 세그먼트 이다.  `The resulting supervoxels are fine-level segments with a fixed size. `
 
-- 추가적으로 region growing을 실시 하여 object-level 세그먼트 획득 Subsequently, we perform region growing on the supervoxels to obtain object-level segments using the occupancy connectivity because the supervoxels do not express meaningful cues. 
-
-These results are the object-region proposals from the3D point clouds.
+- 추가적으로 region growing을 실시 하여 object-level 세그먼트 획득 `Subsequently, we perform region growing on the supervoxels to obtain object-level segments using the occupancy connectivity because the supervoxels do not express meaningful cues. `
+	- 이결과는 **object-region proposals** 이다. `These results are the object-region proposals from the 3D point clouds.`
 
 
 ### 3.3 Classifying object proposals
 
-To classify the object proposals, we fuse the classification results fromthe unary classifiers of the LiDAR and CCD sensors using CNN. 
+- To classify the object proposals, we fuse the classification results from the unary classifiers of the LiDAR and CCD sensors using CNN. 
 
-The unary classifiers are modeledusing CNN models with the same network architecture. 
+- The unary classifiers are modeled using CNN models with the same network architecture. 
 
 The proposed CNN models are generatedwith two phases consisting of image representation and classification networks. 
 
@@ -241,5 +240,5 @@ To fuse the results from the two separate unary classifiers, we propose aCNN mod
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MTc4NjkzN119
+eyJoaXN0b3J5IjpbLTEyMTAwMzIzNTNdfQ==
 -->
