@@ -8,7 +8,7 @@
 | 코드 | |
 
 
-
+### 1.2 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMjgyNzY1Ml19
+eyJoaXN0b3J5IjpbMTE1MTQ3Mzg0NF19
 -->
