@@ -89,12 +89,9 @@ different camera views.
 - In [VBA08] a framework for **self-location** and **mapping** is presented. 
 
 - This approach is based on an **occupancy grid** that is used to fuse information from **RADAR** and **LIDAR**. 
-
-- An occupancy grid discretizes the environment space into small two dimensional grid tiles. 
-
-- The LIDAR sensor is used to estimate a probability of a grid cell to be occupied. 
-
-- A high probability means there is an obstacle in the respective grid cell. 
+	- An occupancy grid discretizes the environment space into small two dimensional grid tiles. 
+	- The **LIDAR sensor** is used to estimate a probability of a grid cell to be occupied. 
+	- A **high probability** means there is an **obstacle** in the respective grid cell. 
 
 Moving objects are detected through changes in the occupancyof grid cells. 
 
@@ -122,5 +119,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI2NzIwNTY5XX0=
+eyJoaXN0b3J5IjpbLTE2Nzg5MTkxNjldfQ==
 -->
