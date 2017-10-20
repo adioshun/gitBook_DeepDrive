@@ -24,7 +24,7 @@ Data fusion techniques combine data from multiple sensors and related informatio
 - State estimation : the current state based on the given input, 
 	- e.g. the position of a tracked vehicle
 
-##### C. 분류 
+###### [ 분류 ]
 
 - In [HL01] these are referenced as 
 	- Data Level Fusion, 
@@ -33,5 +33,5 @@ Data fusion techniques combine data from multiple sensors and related informatio
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxOTE2NDYxNV19
+eyJoaXN0b3J5IjpbLTM5ODA5MjkzM119
 -->
