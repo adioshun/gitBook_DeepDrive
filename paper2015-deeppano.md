@@ -181,5 +181,5 @@ in order to further improve the performance of shape recognition, as a panoramic
 
 In addition, to establish the robust alignments/correspondence[23], [24] between different panoramic views is another direction that is worthy of being studied.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ4MzcwMzY1XX0=
+eyJoaXN0b3J5IjpbLTEyODA0ODkzMTVdfQ==
 -->
