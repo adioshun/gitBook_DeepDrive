@@ -10,7 +10,23 @@
 
 ### 1.2 Sensor Fusion
 
-정의 : A definition of Sensor Fusion can be found in The Handbook ofMultisensor Data Fusion.
+정의 : A definition of Sensor Fusion can be found in The Handbook of Multisensor Data Fusion.
+
+```
+Data fusion techniques combine data from multiple sensors and related information to achieve more specific inferences than could be achieved by using a single, independent sensor. [HL01]
+```
+
+Abstractly, one can define three main methods of sensor fusion that are used and adopted in a widerange of applications. 
+
+In [HL01] these are referenced as Data Level Fusion, FeatureLevel Fusion and Declaration Level Fusion. 
+
+In this context, a few terms have tobe defined. 
+
+A sensor is a device which provides information of the environment inany form of raw data. 
+
+Feature extraction is defined as the process of extractingmeaningful information from the raw data of a sensor, e.g. points that representcorners in a camera image. 
+
+State estimation describes the current state based onthe given input, e.g. the position of a tracked vehicle
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwODYyMTA3XX0=
+eyJoaXN0b3J5IjpbLTE3MDA4MjYyMjhdfQ==
 -->
