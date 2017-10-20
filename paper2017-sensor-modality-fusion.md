@@ -31,7 +31,10 @@
 
 - CNN기반 자율 주행 차량 연구들 `CNNs have been successfully used for learning driving decision rules for autonomous navigation [9] and for end-to-end navigation of a car using a single front facing camera [10] (alternately,debugging tools were developed for these systems to understandthe visual cues the network used to produce a steeringcommand, e.g. [11]). `
 
-Neural network based indoor navigationhas also been studied in multiple works including [12]–[16].In the deep learning literature, fusion of different modalitieshas been studied for various applications in recent yearssuch as in [17] for object detection using images and depthmaps. 
+- NN기반 indoor navigation 연구들 `Neural network based indoor navigation has also been studied in multiple works including [12]–[16].`
+
+- 센서퓨전 기반 연구들 `In the deep learning literature, fusion of different modalities has been studied for various applications in recent year ssuch as in [17] for object detection using images and depth maps. `
+
 
 Deep learning for a recurrent neural network [18] wasapplied to implicitly learn the dependencies between RGBimages and depth map to perform semantic segmentation.In [19], RGB image and its corresponding 3D point cloudare used as inputs for 3D object detection. 
 
@@ -45,5 +48,5 @@ Specifically, we introduce a new gatingmechanism based architecture that enables
 
 The efficacy of the proposed approach isdemonstrated through experimental studies (Figure 2).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgwNjMxNDg3XX0=
+eyJoaXN0b3J5IjpbLTE1MjA2MDA0MzZdfQ==
 -->
