@@ -9,7 +9,17 @@
 
 # SMF_CNN
 
-> Written with [StackEdit](https://stackedit.io/).
+- We present a novel end-to-end learning framework by fusing **raw pixels** from cameras and depth measurements from a **LiDAR**. 
+
+- A deep neural network architecture is introduced to effectively perform modality fusion and reliably predict steering commands even in the presence of sensor failures. 
+
+The proposed network is trained on our owndataset, from LiDAR and a camera mounted on a UGV taken inan indoor corridor environment. 
+
+Comprehensive experimentalevaluation to demonstrate the robustness of our network architectureis performed to show that the proposed deep learningneural network is able to autonomously navigate in the corridorenvironment. 
+
+Furthermore, we demonstrate that the fusion ofthe camera and LiDAR modalities provides further benefitsbeyond robustness to sensor failures. 
+
+Specifically, the multimodalfused system shows a potential to navigate around staticand dynamic obstacles and to handle changes in environmentgeometry without being trained for these tasks.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDIxMzk2NTFdfQ==
+eyJoaXN0b3J5IjpbMTcxNjI1Mzc3NF19
 -->
