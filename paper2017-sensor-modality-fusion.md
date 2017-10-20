@@ -41,13 +41,16 @@
 - [19]에서는 RGB와 라이다 정보를 활용하여 3D 물체 탐지를 한다. `In [19], RGB image and its corresponding 3D point cloud are used as inputs for 3D object detection. `
 
 - 이미지 +  optical flow + LiDAR가 함꺼번에 합쳐져서 DNN에 입력으로 이용 `RGB image,optical flow, and LiDAR range images are combined to forma six channel input to a deep neural network [20] for object detection. `
-	- The same network can also be used for different modalities to learn a joint representation [21]. 
+	- 동일 모델을 이용하여 joint representation학습에도 활용 `The same network can also be used for different modalities to learn a joint representation [21]. `
 
-RGB imagesand depth maps (HHA images) were fused in [22] for anindoor scene recognition application using a multi-modallearning framework and the learned features were classifiedusing a support vector machine.Compared to the prior works summarized above, the proposedsystem introduces several novel aspects as summarizedin the introduction. 
+- RGB images and depth maps (HHA images)를 퓨젼후 SVM을 이용하여 학습 하는 연구 `RGB images and depth maps (HHA images) were fused in [22] for an indoor scene recognition application using a multi-modal learning framework and the learned features were classified using a support vector machine.`
+
+
+Compared to the prior works summarized above, the proposedsystem introduces several novel aspects as summarizedin the introduction. 
 
 Specifically, we introduce a new gatingmechanism based architecture that enables modality fusionfor robust end-to-end learning of autonomous corridor drivingand improved training techniques that enable resiliencyto sensor failure. 
 
 The efficacy of the proposed approach isdemonstrated through experimental studies (Figure 2).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1OTkyODcxOF19
+eyJoaXN0b3J5IjpbLTc3OTE0Mjg0OF19
 -->
