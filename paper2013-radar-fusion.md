@@ -186,6 +186,22 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 - These works do not include all the available kinetic and appearance information. 
 
 - Moreover, at this level, appearance information from sensor measurements is not considered as important as the kinetic data to discriminate moving and static objects.
+
+- When classification is considered as an independent module inside the perception solution, this is often implemented as a single-class (e.g., only classifies pedestrians) or single-sensor based classification process [2], [5]. 
+
+- This approach excludes discriminative data from multiple sensor views that can generate multi-class modules. 
+
+Research perspectives point-out theimprovement of the data association and tracking tasks as adirect enhancement when classification information is managedat early levels of perception [2], [5], [9].The most common approaches for multi-sensor fusion arebased on probabilistic methods [1], [2]. 
+
+However, methodsbased on the Evidential framework proposed an alternative notonly to multi-sensor fusion but to many modules of vehicleperception [5], [6], [9]. 
+
+These methods highlight the importanceof incomplete and imprecise information which is not usuallypresent in the probabilistic approaches.An advantage of our fusion approach at the detection level isthat the description of the objects can be enhanced by addingknowledge from different sensor sources. 
+
+For example, lidardata can give a good estimation of the distance to the object andits visible size. 
+
+In addition, classification information, usuallyobtained from camera, allows to make assumptions about thedetected objects. 
+
+An early enrichment of objects’ descriptioncould allow the reduction of the number of false detections andintegrate classification as a key element of the perception outputrather than only an add-on.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzAxNDg0NDBdfQ==
+eyJoaXN0b3J5IjpbNDMwNzcwNDIwXX0=
 -->
