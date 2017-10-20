@@ -4,4 +4,5 @@
 
 - [Feature-based lateral position estimation of surrounding vehicles using stereo vision](http://ieeexplore.ieee.org/document/7995811/)
 
+
 - [3D Object Proposals using Stereo Imagery for Accurate Object Class Detection.](https://www.ncbi.nlm.nih.gov/pubmed/28541196)
