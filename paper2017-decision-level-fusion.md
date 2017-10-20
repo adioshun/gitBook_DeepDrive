@@ -154,6 +154,28 @@ Some previous works focused on their performance, whilesome architecture designs
 Huang and Chen [28,29] proposed a variable-bandwidth network and aprobabilistic neural network for traffic monitoring systems. 
 
 However, if a model focuses on executiontimes rather than performance, the classification performance may be affected
+
+### 2.3 Detection on multi-sensor modality
+
+ In particular, for the scene-level detection and classificationtasks, various sensor modalities are used. 
+
+The RGB-depth sensor is widely used for indoor scenerecognition [36–38], whereas LiDAR-stereo vision [39,40], LiDAR-CCD [41], LiDAR-radar [42] andLiDAR-radar-stereo vision [43] are used for outdoor scenes. 
+
+For accurate classification, two or moreinput measurements are combined. 
+
+The fusion methods are divided into two categories, namely earlyand late fusion. 
+
+In the early fusion method, the measurements are fused by mapping them together,or by concatenation, or probabilistic fusion [41,44,45]. 
+
+However, the early fusion method suffers fromproblems of non-overlapping regions and uncertainties. 
+
+To solve these problems, the decision-levelfusion method is used as a late fusion method. 
+
+Chavez-Garcia and Aycard [46] proposed an evidentialframework to improve the detection and tracking of moving objects by managing the uncertainty.Cho et al. 
+
+[43] independently extracted data features using target information from sensors andcombined the entire target information for movement classification and tracking of moving objects.The transferable belief model was used to combine the sensor measurements by managing theuncertainty [47]. 
+
+In the present study, we use the CNN framework to jointly consider the classificationperformance of each sensor modality, as well as the uncertainties.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MzcwMjA0XX0=
+eyJoaXN0b3J5IjpbMzMzNDU4NjY2XX0=
 -->
