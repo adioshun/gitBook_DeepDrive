@@ -1,4 +1,6 @@
-	
+![](https://i.imgur.com/8Le2eVF.png)
+[RADAR + LIDAR Sensor Fusion Processing Pipeline]
+		
 ## NANODEGREE COURSE (Self-Driving Car Engineer - Sensor Fusion)
 
 
@@ -6,6 +8,8 @@
 Meet the team at Mercedes who will help you track objects in real-time with Sensor Fusion.
 
 - [Intuition of Kalman Filter for Self-Driving-Car Applications](https://medium.com/towards-data-science/intuition-of-kalman-filter-for-self-driving-car-applications-749b356e19db)
+
+
 
 ###  LESSON 2 : Kalman Filters
 Learn from the best! Sebastian Thrun will walk you through the usage and concepts of a Kalman Filter using Python.
@@ -48,3 +52,15 @@ While Extended Kalman Filters work great for linear motion, real objects rarely 
 Put your skills to the test! Use C++ to code an Unscented Kalman Filter capable of tracking non-linear motion.
 
 - [Udacity Self-Driving Car Nanodegree Project 7 — Unscented Kalman Filter](https://medium.com/@jeremyeshannon/udacity-self-driving-car-nanodegree-project-7-unscented-kalman-filter-ea8bef72a5c7)
+
+
+
+---
+
+[Particle Filter Implementation](https://medium.com/@andrew.d.wilkie/self-driving-car-engineer-diary-9-898f075e888c): 하단 
+
+---
+
+- 추천 : [Tracking pedestrians for self driving cars](https://medium.com/towards-data-science/tracking-pedestrians-for-self-driving-cars-ccf588acd170)
+- 추천 : [Tracking a self-driving car with high precision](https://medium.com/@priya.dwivedi/latest)
+
