@@ -203,7 +203,7 @@ Our method consistsof three phases:
 ### 3.2 Object-region proposal generation
 
 - We perform segmentation of the color-flattened image.
-	- 결However, the initial segmentation results are not satisfactory with respect to the detection of meaningful objects. 
+	- 결과가 만족 스럽지 않음 However, the initial segmentation results are not satisfactory with respect to the detection of meaningful objects. 
 
 - Therefore, we perform semantic grouping using a dissimilarity cost function from the pixelvalues of both the color-flattened and original images. 
 
@@ -236,5 +236,5 @@ To fuse the results from the two separate unary classifiers, we propose aCNN mod
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NzE4NDY5M119
+eyJoaXN0b3J5IjpbLTEzMzk5MTI4ODVdfQ==
 -->
