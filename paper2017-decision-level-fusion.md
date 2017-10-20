@@ -183,13 +183,14 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 ## 3. Overview
 
-In this section, we describe the algorithm used in our proposed method, as shown in Figure 1.The inputs of our method consist of a CCD sensor and 3D point clouds from a multi-layer LiDAR,which are taken from a KITTI benchmark dataset [9]. 
+Our method consistsof three phases: 
+- (1) pre-processing; 
+- (2) object-region proposal generation; 
+- (3) classification of theobject-region proposals.
 
-The KITTI benchmark dataset also providessynchronized and calibrated data. 
+### 3.1 Pre-processing
 
-Table 1 lists the notations used in our method. 
-
-Our method consistsof three phases: (1) pre-processing; (2) object-region proposal generation; and (3) classification of theobject-region proposals.Pre-processing: For the CCD image input, color flattening is performed, which makes the imageassume a monotonous color and is useful in obtaining desirable segmentation results.For the point-cloud input, we transform the 3D point clouds into 3D occupancy voxel spaces.This transformation reduces the noise in the point clouds, i.e., only the obviously reflected pointmeasurements are acquired.Object-region proposal generation: We perform segmentation of the color-flattened image.However, the initial segmentation results are not satisfactory with respect to the detection of meaningfulobjects. 
+For the CCD image input, color flattening is performed, which makes the imageassume a monotonous color and is useful in obtaining desirable segmentation results.For the point-cloud input, we transform the 3D point clouds into 3D occupancy voxel spaces.This transformation reduces the noise in the point clouds, i.e., only the obviously reflected pointmeasurements are acquired.Object-region proposal generation: We perform segmentation of the color-flattened image.However, the initial segmentation results are not satisfactory with respect to the detection of meaningfulobjects. 
 
 Therefore, we perform semantic grouping using a dissimilarity cost function from the pixelvalues of both the color-flattened and original images. 
 
@@ -217,5 +218,5 @@ To fuse the results from the two separate unary classifiers, we propose aCNN mod
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2ODUzOTk1M119
+eyJoaXN0b3J5IjpbMTA0NzQ4NTkzOV19
 -->
