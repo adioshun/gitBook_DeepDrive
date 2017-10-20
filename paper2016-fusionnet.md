@@ -9,6 +9,8 @@
 
 > 동명의 논문 : FusionNet: A deep fully residual convolutional neural network for image segmentation in connectomics
 
+FuseNet: Incorporating Depth into Semantic Segmentation via Fusion-Based CNN Architecture
+
 ![](https://i.imgur.com/Pog63M8.png)
 
 # FusionNet

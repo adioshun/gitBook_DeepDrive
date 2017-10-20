@@ -14,6 +14,10 @@
 
 - ~~[A Survey of ADAS Technologies for the Future Perspective of Sensor Fusion](https://link.springer.com/chapter/10.1007/978-3-319-45246-3_13)~~: 2016, 일반적 설명
 
+- FusionNet: A deep fully residual convolutional neural network for image segmentation in connectomics: 2016
+
+- FuseNet: Incorporating Depth into Semantic Segmentation via Fusion-Based CNN Architecture: 2016, Depth Information, Semantic Segmentation, Depth Image, CNN, RGB
+
 
 
 
