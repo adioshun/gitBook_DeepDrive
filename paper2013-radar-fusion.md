@@ -35,11 +35,8 @@ Data fusion techniques combine data from multiple sensors and related informatio
 
 ![](https://i.imgur.com/VISRuZz.png)
 
-Data Level Fusion or Low Level Sensor Fusion (Figure 1.1) describes a method
-of combining raw data from different sensors with each other, e.g. having a calibrated
-camera and a calibrated Time-of-Flight (ToF) depth-sensor which creates
-a depth map of the environment, each camera pixel can be mapped to a distance
-measurement of the ToF sensor and vice versa.
+- Data Level Fusion or Low Level Sensor Fusion (Figure 1.1) describes a method of combining raw data from different sensors with each other, e.g. having a calibrated camera and a calibrated Time-of-Flight (ToF) depth-sensor which creates
+a depth map of the environment, each camera pixel can be mapped to a distance measurement of the ToF sensor and vice versa.
 
 #### B. Feature Level Fusion
 
@@ -53,6 +50,22 @@ different cameras are extracted to identify corresponding points in each image o
 different camera views.
 
 #### A. Declaration Level Fusion
+
+![](https://i.imgur.com/ezCh0VE.png)
+
+Declaration Level Fusion or High Level Fusion (Figure 1.3) is the combination
+of independent state hypotheses from different sensors. All sensors estimate the
+state individually. The final state is a fusion of all state hypotheses from the
+different sensors. The most famous implementation of this approach is probably
+the Kalman Filter [KB61]. Each state from the individual sensors with their
+respective error covariance is used for correcting the state estimate in the Kalman
+Filter. The error covariance represents the trust in the state estimation, e.g. a
+camera image is reliable for estimating the width of objects but distance or speed
+measurements are very inaccurate. In contrast a RADAR sensor provides very
+accurate distance and velocity measurements. Thus, in the final state estimate,
+velocity information and distance will be closer to the RADAR measurements,
+while the size would be closer to the measurements from the camera which, in
+theory, should result in a better final state estimate.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NjQzMzk1MF19
+eyJoaXN0b3J5IjpbLTg1OTg2MTk1NV19
 -->
