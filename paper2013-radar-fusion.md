@@ -136,7 +136,7 @@ different camera views.
 | 참고 | |
 | 코드 | |
 
-## RELATED WORK
+## 2. RELATED WORK
 ![](https://i.imgur.com/X0UK5vK.png)
 Fig. 2 shows the different fusion levels inside a perceptionsystem. 
 
@@ -151,9 +151,14 @@ Fig. 2 shows the different fusion levels inside a perceptionsystem.
 
 Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO component. 
 
+### 2.1 
+
 ###### [Vu [1] and Wang [3]]
 
 - Whilst Vu [1] and Wang [3]use an almost deterministic approach to perform the association in tracking, we use an evidential approach based on mass distributions over the set of different class hypotheses. 
+
+
+### 2.2 track level 
 
 - Multi-sensor fusion at track level requires a list of updated tracks from each sensor to fuse them into a combined list of tracks. 
 
@@ -167,5 +172,5 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 
 ###### []
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU0MzAzNzgyXX0=
+eyJoaXN0b3J5IjpbLTE1Nzg1MDQzMjBdfQ==
 -->
