@@ -196,14 +196,16 @@ Our method consistsof three phases:
 
 - For the point-cloud input, 
 	- we transform the 3D point clouds into **3D occupancy voxel** spaces.
-	- This transformation reduces the noise in the point clouds, i.e., only the obviously reflected pointmeasurements are acquired.
+	- 노이즈 제거 `This transformation reduces the noise in the point clouds, `
+	- i.e., only the obviously reflected point measurements are acquired.
 
 
 ### 3.2 Object-region proposal generation
 
-We perform segmentation of the color-flattened image.However, the initial segmentation results are not satisfactory with respect to the detection of meaningfulobjects. 
+- We perform segmentation of the color-flattened image.
+	- 결However, the initial segmentation results are not satisfactory with respect to the detection of meaningful objects. 
 
-Therefore, we perform semantic grouping using a dissimilarity cost function from the pixelvalues of both the color-flattened and original images. 
+- Therefore, we perform semantic grouping using a dissimilarity cost function from the pixelvalues of both the color-flattened and original images. 
 
 These results are the object-region proposalsfrom the CCD sensor data.In the 3D occupancy voxel space, we extract the supervoxels using the voxel cloud connectivitysegmentation (VCCS) [6]. 
 
@@ -234,5 +236,5 @@ To fuse the results from the two separate unary classifiers, we propose aCNN mod
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNzIxNjEzN119
+eyJoaXN0b3J5IjpbLTI2NzE4NDY5M119
 -->
