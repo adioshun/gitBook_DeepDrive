@@ -57,16 +57,12 @@ different camera views.
 - Declaration Level Fusion or High Level Fusion (Figure 1.3) is 
 - the combination of independent state hypotheses from different sensors. 
 - All sensors estimate the state individually. 
-- The final state is a fusion of all state hypotheses from the different sensors. The most famous implementation of this approach is probably
-the Kalman Filter [KB61]. Each state from the individual sensors with their
-respective error covariance is used for correcting the state estimate in the Kalman
-Filter. The error covariance represents the trust in the state estimation, e.g. a
-camera image is reliable for estimating the width of objects but distance or speed
-measurements are very inaccurate. In contrast a RADAR sensor provides very
-accurate distance and velocity measurements. Thus, in the final state estimate,
-velocity information and distance will be closer to the RADAR measurements,
-while the size would be closer to the measurements from the camera which, in
-theory, should result in a better final state estimate.
+- The final state is a fusion of all state hypotheses from the different sensors. 
+- The most famous implementation of this approach is probably the **Kalman Filter** [KB61]. 
+	- Each state from the individual sensors with their respective error covariance is used for correcting the state estimate in the Kalman Filter. 
+	- The error covariance represents the trust in the state estimation, e.g. a camera image is reliable for estimating the width of objects but distance or speed measurements are very inaccurate. 
+	- In contrast a RADAR sensor provides very accurate distance and velocity measurements. 
+	- Thus, in the final state estimate, velocity information and distance will be closer to the RADAR measurements, while the size would be closer to the measurements from the camera which, in theory, should result in a better final state estimate.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzA5NjQwMzJdfQ==
+eyJoaXN0b3J5IjpbLTE2NDIxODAxNTldfQ==
 -->
