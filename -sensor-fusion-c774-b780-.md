@@ -1,3 +1,73 @@
+# Sensor Fusion 
+
+## 1. List
+
+## 2. Paper
+
+- [Object Detection and Tracking with Side Cameras and RADAR in an Automotive Context](http://www.mi.fu-berlin.de/inf/groups/ag-ki/Theses/Completed-theses/Master_Diploma-theses/2013/Hofmann/Master-Hofmann.pdf?1381479774): 2013, 3장이 센서 퓨전 
+
+- [Object Detection and Classification by Decision-Level Fusion for Intelligent Vehicle Systems](): 2017, KITTI, 21p
+
+- [FUSION OF LIDAR 3D POINTS CLOUD WITH 2D DIGITAL CAMERA IMAGE](http://www.secs.oakland.edu/~li4/research/student/JuanLi2015.pdf): 2015, 석사학위, 90p
+
+- [Survey on Object Detection and Tracking Using Fusion Approach](https://www.ijircce.com/upload/2016/march/98_24_Survey.pdf): 2007, 8P
+
+- [A Survey of ADAS Technologies for the Future Perspective of Sensor Fusion](https://link.springer.com/chapter/10.1007/978-3-319-45246-3_13): 2016
+
+- Multi-Sensor Fusion of Occupancy Grids based on Integer Arithmetic
+
+- Fusing LIDAR and Images for Pedestrian Detection using Convolutional Neural Networks, Schlosser
+
+- Motion-based Detection and Tracking in 3D LiDAR Scans, Dewan
+
+
+- [Multiple Sensor Fusion and Classification for Moving Object Detection and Tracking](http://ieeexplore.ieee.org/document/7283636/): 2015
+
+- [Object Perception for Intelligent Vehicle Applications:
+A Multi-Sensor Fusion Approach](https://hal.inria.fr/hal-01019527/document): 2014
+
+- [Sensor Modality Fusion with CNNs for UGV Autonomous Driving in Indoor Environments](http://cims.nyu.edu/~achoroma/NonFlash/Papers/SMF_CNN.pdf)
+
+- [Acoustic/Lidar Sensor Fusion for Car Tracking in City Traffic Scenarios](http://www.drgoehring.de/bib/tadjine15fastzero/tadjine15fastzero.pdf)
+
+- [Trends in Sensor and Data Fusion](http://www.ifp.uni-stuttgart.de/publications/phowo05/300roth.pdf): 2005
+
+## 3. Article (Post, blog, etc.)
+
+- [Expert Advice: Sensor Fusion for Highly Automated Driving](http://gpsworld.com/expert-advice-sensor-fusion-for-highly-automated-driving/)
+
+- [Particle Filter Implementation](https://medium.com/@andrew.d.wilkie/self-driving-car-engineer-diary-9-898f075e888c): 하단 
+
+- 추천 : [Tracking pedestrians for self driving cars](https://medium.com/towards-data-science/tracking-pedestrians-for-self-driving-cars-ccf588acd170)
+- 추천 : [Tracking a self-driving car with high precision](https://medium.com/@priya.dwivedi/latest)
+
+
+
+## 3. Tutorial (Series, )
+
+
+
+## 4. Youtube
+
+- [Vehicle Detection using LiDAR and Camera sensor Fusion](https://www.youtube.com/watch?v=V3cN5LrPr4M)
+
+## 6. Material (Pdf, ppt)
+
+- [Sensor Fusion and Calibration of Velodyne LiDAR and RGB Camera ](https://www.it4i.cz/wp-content/uploads/2014/11/RP7_Velas.pdf): ppt
+
+- [Sensor Fusion for Automotive Applications](http://users.isy.liu.se/en/rt/lundquist/Publications/Lundquist2011.pdf): 2011, 331p 
+
+## 7. Implementation (Project)
+
+- [Object Tracking with Sensor Fusion-based Extended Kalman Filter](https://github.com/JunshengFu/tracking-with-Extended-Kalman-Filter)
+
+
+## 8. Research Group / Conference 
+
+
+- [Sensor Fusion and Calibration of Velodyne LiDAR and RGB Camera ](https://www.it4i.cz/wp-content/uploads/2014/11/RP7_Velas.pdf): ppt
+
+---
 ![](https://i.imgur.com/8Le2eVF.png)
 [RADAR + LIDAR Sensor Fusion Processing Pipeline]
 		
@@ -55,12 +125,5 @@ Put your skills to the test! Use C++ to code an Unscented Kalman Filter capable 
 
 
 
----
 
-[Particle Filter Implementation](https://medium.com/@andrew.d.wilkie/self-driving-car-engineer-diary-9-898f075e888c): 하단 
-
----
-
-- 추천 : [Tracking pedestrians for self driving cars](https://medium.com/towards-data-science/tracking-pedestrians-for-self-driving-cars-ccf588acd170)
-- 추천 : [Tracking a self-driving car with high precision](https://medium.com/@priya.dwivedi/latest)
 
