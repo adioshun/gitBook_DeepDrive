@@ -180,6 +180,42 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 - The transferable belief model was used to combine the sensor measurements by managing the uncertainty [47]. 
 
 최근 연구에서 저자는**performance**과 **uncertainties**를 모두 고려 하였다. `In the present study, we use the CNN framework to jointly consider the classification performance of each sensor modality, as well as the uncertainties.`
+
+## 3. Overview
+
+In this section, we describe the algorithm used in our proposed method, as shown in Figure 1.The inputs of our method consist of a CCD sensor and 3D point clouds from a multi-layer LiDAR,which are taken from a KITTI benchmark dataset [9]. 
+
+The KITTI benchmark dataset also providessynchronized and calibrated data. 
+
+Table 1 lists the notations used in our method. 
+
+Our method consistsof three phases: (1) pre-processing; (2) object-region proposal generation; and (3) classification of theobject-region proposals.Pre-processing: For the CCD image input, color flattening is performed, which makes the imageassume a monotonous color and is useful in obtaining desirable segmentation results.For the point-cloud input, we transform the 3D point clouds into 3D occupancy voxel spaces.This transformation reduces the noise in the point clouds, i.e., only the obviously reflected pointmeasurements are acquired.Object-region proposal generation: We perform segmentation of the color-flattened image.However, the initial segmentation results are not satisfactory with respect to the detection of meaningfulobjects. 
+
+Therefore, we perform semantic grouping using a dissimilarity cost function from the pixelvalues of both the color-flattened and original images. 
+
+These results are the object-region proposalsfrom the CCD sensor data.In the 3D occupancy voxel space, we extract the supervoxels using the voxel cloud connectivitysegmentation (VCCS) [6]. 
+
+VCCS uses a gradient-seeding methodology to segment point clouds.The resulting supervoxels are fine-level segments with a fixed size. 
+
+Subsequently, we perform regiongrowing on the supervoxels to obtain object-level segments using the occupancy connectivity because the supervoxels do not express meaningful cues. 
+
+These results are the object-region proposals from the3D point clouds.Classifying object proposals: To classify the object proposals, we fuse the classification results fromthe unary classifiers of the LiDAR and CCD sensors using CNN. 
+
+The unary classifiers are modeledusing CNN models with the same network architecture. 
+
+The proposed CNN models are generatedwith two phases consisting of image representation and classification networks. 
+
+First, to represent theinput data, we extract a convolutional cube that has more than one convolutional layer of pre-trainedCNN models. 
+
+From the convolutional cube of the input data, object regions from the object-proposalgenerations are extracted using ROI pooling. 
+
+Then, the convolutional cube extracted from the proposalregions is fed into a classification network that includes two convolutional layers, two fully-connectedlayers and a softmax layer. 
+
+To fuse the results from the two separate unary classifiers, we propose aCNN model that uses the convolutional cube and softmax results of the sensor modalities as input.
+
+## 4. Pre-Processing
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2MDk1NzA3N119
+eyJoaXN0b3J5IjpbMTQ2ODUzOTk1M119
 -->
