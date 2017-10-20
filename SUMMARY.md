@@ -20,22 +20,24 @@
 ## 2.3D 2D to 3D Back-Projection
 
 * [Intro\_Back\_projection](introback-projection.md)
-* [미진행\(Monocular\)](bbf8-c9c4-d58928-monocular.md)
+* ----- Monocular Vision -----
+* [Papers\_국내 논문\_단일카메라 \(100%\)](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0.md)
+* [미진행](bbf8-c9c4-d58928-monocular.md)
   * [Paper\_2016\_Monocular Depth /w 2Camera \(0%\)](paper2016-monocular-depth.md)
-* [Papers\_국내 논문\_단일카메라 \(100%\)](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0.md)
-* [미진행\(Stereo\)](bbf8-c9c4-d58928-stereo.md)
-  * [Paper\_2017\_Deep3DBox \(15%\)](paper2017-3d-bbox.md)
-  * [Paper\_2017\_Depth dilated DNN \(50%\)](paperdepth-from-single-image.md)
-  * [Report\_2017\_Monocular 3 CNN Methods \(70%\)](report2017-monocular-3-cnnmethods.md)
-  * [Paper\_2016\_Depth Fusion \(0%\)](paper2016-depth-fusion.md)
-  * [Paper\_2017\_Semi\_MDE \(0%\)](paper2017-semi-mde.md)
-* [Papers\_국내 논문\_단일카메라 \(100%\)](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0.md)
+* ----- Stereo Vision -----
 * [Paper\_2017\_3DOP\_X Chen \(70%\)](paper2017-3d-object-proposals.md)
   * [Paper\_2014\_SPS-Stereo \(30%\)](paper2014-sps-stereo.md)
 * [Paper\_2016\_Mono3D2016 \(70%\)](papermonocular-3d.md)
 * [Paper\_2017\_J-MOD \(30%\)](paper2017-j-mod.md)
   * [Paper\_2017\_Domain Independent MDE  \(30%\)](paper2017-domain-independent-mde.md)
 * [Lab\_Depth Map from Stereo Images](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0/labdepth-map-from-stereo-images.md)
+* [미진행](bbf8-c9c4-d58928-stereo.md)
+  * [Paper\_2017\_Deep3DBox \(15%\)](paper2017-3d-bbox.md)
+  * [Paper\_2017\_Depth dilated DNN \(50%\)](paperdepth-from-single-image.md)
+  * [Report\_2017\_Monocular 3 CNN Methods \(70%\)](report2017-monocular-3-cnnmethods.md)
+  * [Paper\_2016\_Depth Fusion \(0%\)](paper2016-depth-fusion.md)
+  * [Paper\_2017\_Semi\_MDE \(0%\)](paper2017-semi-mde.md)
+
 
 ## 3D PointCloud
 
@@ -46,27 +48,29 @@
 * [Paper\_2015\_DeepSD \(70%\)](paper2016-deep-learning-representation/paper2015-3d-deep-shape-descriptor.md)
   * [Paper\_2015\_DL Representation ](paper2016-deep-learning-representation/paper2015-dl-representation.md)
 * [Paper\_2015\_3DMesh\_Laveling](paper2016-deep-learning-representation/paper2015-3dmesh-laveling.md)
+* ----- Volumetic based -----
 * [Paper\_2015\_3D\_ShapeNet \(50%\)](paper2015-3d-shapenet.md)
 * [Paper\_2015\_VoxNet \(70%\)](papervoxnet.md)
 * [Paper\_2016\_V\_M CNNs \(70%\)](paper2016-volumetric-multiview-cnns.md)
+* ----- Multiview based -----
 * [Paper\_2015\_MVCNN \(70%\)](paper2015-mvcnn.md)
 * [Paper\_2015\_DeepPano \(70%\)](paper2015-deeppano.md)
 * [Paper\_2016\_pMVCNN \(30%\)](paper2016-pairwisemvcnn.md)
 * [Paper\_2014\_AE3D shape Retrieval \(30%\)](paper2014-ae3d-shape-retrieval.md)
 * [Paper\_2016\_VeloFCN\_Bo Li \(70%\)](paper2016-velofcn4vd.md)
-* [미진행 ](bbf8-c9c4-d589.md)
-  * [Paper\_2016\_FPNN](paper2016-fpnn.md)
 * [Paper\_2017\_Vote3Deep \(50%\)](papervote3deep.md)
 * [Paper\_2016\_PointNetDeep \(50%\)](paper2016-pointnet.md)
 * [Paper\_2016\_PointNet3D \(50%\)](paper2016-pointnet3d.md)
 * [Paper\_2016\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
-* [미진행](bbf8-c9c4-d589.md)
+* [----- 미진행](bbf8-c9c4-d589.md)
   * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
   * [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
   * [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
   * [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
   * [Paper\_2017\_SqueezeSeg](paper2017-squeezeseg.md)
+  * [Paper\_2016\_FPNN](paper2016-fpnn.md)
   * [Paper\_2016\_DeepSlidingShape \(30%\)](paper2016-deepslidingshape.md)
+* ----- Pointcloud based -----
 * [Point\_Cloud\_Data](pointcloud-data.md)
   * [ROS bags-TO-Image.ipynb](https://gist.github.com/anonymous/4857f8920c9fc901121a429ead32a7db)
   * [ROS bags-TO-Point Clods.ipynb](https://gist.github.com/anonymous/e675ea14113252be321320be62248034)
@@ -78,14 +82,17 @@
 
 ## Fusion
 
+* ----- Sensor Fusion 이란 -----
 * [Intro\_Fusion](introfusion.md)
-* [----- Sensorfusion](-sensorfusionbbf8-c9c4-d58929.md)
-  * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
+* ----- Sensor Fusion 논문 -----
 * [Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
   * [code\_MV3D\_TF](papermultiview-3d-cnn/codemv3d-tf.md)
 * [Paper\_2016\_FusionNet \(50%\)](paper2016-fusionnet.md)
 * [Report\_2017\_cs231n\_Dempster-Shafer](report2017-cs231n-dempster-shafer.md)
+* [미진행](-sensorfusionbbf8-c9c4-d58929.md)
+  * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
+
 
 ## 4D \(Time, RNN\)
 
