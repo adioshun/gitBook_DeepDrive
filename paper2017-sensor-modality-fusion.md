@@ -40,12 +40,24 @@
 
 - [19]에서는 RGB와 라이다 정보를 활용하여 3D 물체 탐지를 한다. `In [19], RGB image and its corresponding 3D point cloud are used as inputs for 3D object detection. `
 
+```
+
+```
+
 - 이미지 +  optical flow + LiDAR가 함꺼번에 합쳐져서 DNN에 입력으로 이용 `RGB image,optical flow, and LiDAR range images are combined to forma six channel input to a deep neural network [20] for object detection. `
 	- 동일 모델을 이용하여 joint representation학습에도 활용 `The same network can also be used for different modalities to learn a joint representation [21]. `
 
+```
+[20] M. Giering, V. Venugopalan, and K. Reddy, “Multi-modal sensor registration for vehicle perception via deep neural networks,” in High Performance Extreme Computing Conference (HPEC), 2015 IEEE,Sept 2015, pp. 1–6.
+[21] L. Castrejon, Y. Aytar, C. Vondrick, H. Pirsiavash, and A. Torralba,“Learning aligned cross-modal representations from weakly aligned data,” in 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2016, pp. 2940–2949.
+```
+
 - 이미지 + depth maps `(HHA)`를 퓨젼후 SVM을 이용하여 학습 하는 연구 `RGB images and depth maps (HHA images) were fused in [22] for an indoor scene recognition application using a multi-modal learning framework and the learned features were classified using a support vector machine.`
 
-
+```
+[22] H. Zhu, J.-B. Weibel, and S. Lu, “Discriminative multi-modal feature fusion for rgbd indoor scene recognition,” in 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2016, pp.
+2969–2976.
+```
 
 - 본 논문의 제안에서는 새로운 **gating mechanism**을 사용하여 성능 향상을 보임 ` Specifically, we introduce a new gating mechanism based architecture that enables modality fusion for robust end-to-end learning of autonomous corridor driving and improved training techniques that enable resiliency to sensor failure. `
 
@@ -107,5 +119,5 @@ TABLE III: NetGated:
 
 ![](https://i.imgur.com/FnFDsYn.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2OTc1MTk1XX0=
+eyJoaXN0b3J5IjpbMTIxNTUzNDc5XX0=
 -->
