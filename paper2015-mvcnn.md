@@ -312,5 +312,5 @@ We illustrate this capability of MVCNNs in the context of sketch recognition in 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2MTM1ODM5OV19
+eyJoaXN0b3J5IjpbODYwODg3MzYyXX0=
 -->
