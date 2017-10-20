@@ -53,11 +53,15 @@
 
 We address the problem of end-to-end learning of appropriate steering commands for a UGV to drive autonomously through an indoor environment using camera and LiDAR sensors. 
 
-The proposed deep learning based system is trained using data recorded under human tele-operation of the UGV.Within this context, the objective of this paper is to exploreeffective network architectures and training techniques forfusion of the camera and LiDAR modalities to obtain robustnessto a sensor failure and also to achieve performancecharacteristics superior to either what is achieved by eachsensor separately (e.g., Figure 3).The sensory inputs considered here for indoor navigationare vision (RGB image) and depth (LiDAR range image).The camera image gives information about the type of envi ronment and information regarding texture and color of theobjects present in the nearby environment whereas the depthrange image gives complementary information to RGB channelsin the form of the structure of the environment via depthmeasurements to points in the environment. 
+The proposed deep learning based system is trained using data recorded under human teleoperation of the UGV.
+
+Within this context, the objective of this paper is to explore effective network architectures and training techniques for fusion of the camera and LiDAR modalities to obtain robust nessto a sensor failure and also to achieve performance characteristics superior to either what is achieved by each sensor separately (e.g., Figure 3).
+
+The sensory inputs considered here for indoor navigationare vision (RGB image) and depth (LiDAR range image).The camera image gives information about the type of envi ronment and information regarding texture and color of theobjects present in the nearby environment whereas the depthrange image gives complementary information to RGB channelsin the form of the structure of the environment via depthmeasurements to points in the environment. 
 
 As illustratedin Figure 3, each sensor separately can have limitations inenvironment perception. 
 
 There are also other complementarysensory performance characteristics of camera and LiDAR,e.g., sensitivity of a camera to lighting conditions, limitationsof a LiDAR in detecting small objects.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTI4NzUwNTVdfQ==
+eyJoaXN0b3J5IjpbMTYyMjEyNjUxMF19
 -->
