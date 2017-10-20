@@ -1,4 +1,4 @@
-## Kalman Filters
+## 1. Kalman Filters
 
 > 출처 : [UDACITY SDCE Nanodegree Term 2: Kalman Filters for Sensor Fusion](https://medium.com/@ckyrkou/udacity-sdce-nanodegree-term-2-kalman-filters-for-sensor-fusion-1dde97ea628b)
 
@@ -21,19 +21,44 @@
 - 멀티 센서여도 The belief about the state of the unkown variables is updated asynchronously each time the measurement is received regardless of the sources sensor.
 
 
-### Extended Kalman Filters (EKF)
+### 1.2 Extended Kalman Filters (EKF)
 
-While the traditional Kalman Filter has many applications its main drawback is that it assumes a linear measurement model and state prediction model. 
+- 기본 칼만필터의 단점(drawback)은 it assumes a linear measurement model and state prediction model. 
+ - 라이다(LiDar) 센서 has a linear measurement update model
+ - 레이더(Radar) 센서 has a non-linear update model. 
 
-This may be a fair assumption under specific conditions but in general real-word systems are non-linear. 
-
-For example. the lidar sensor has a linear measurement update model, whereas, the radar sensor has a non-linear update model. 
-
-The Extended Kalman Filter attempts to solve such problems by linearizing the non-linear state transition functions using Taylor Expansion around the mean location of the original function. 
-
-In addition, the linearization requires that the Jacobian of the state transition is computed.
+- 확장 칼만필터로 해결 가능 `The Extended Kalman Filter attempts to solve such problems `
+ - by linearizing the non-linear state transition functions using Taylor Expansion around the mean location of the original function. 
+ - In addition, the linearization requires that the **Jacobian** of the state transition is computed.
 
 
+### 1.3 Unscented Kalman Filters (UKF, 분산점칼만필터)
+
+- 분산점 칼만필터를 이용하여서 **non-linear**현상을 좀더 정확히 모델링 할수 있다. `With Unscented Kalman Filters we are able to accurately model non-linear phenomena. `
+
+- EKF의 **linearizing** 방법 대신, UKF는 **unscented transformatio**를 사용 한다. `Instead of linearizing a non-linear function, UKF uses the unscented transformation to approximate the belief probability distribution.`
+
+- UKF방법은 linearization 보다 성능도 좋고, **Jacobians**연산도 안하게 된다. `In this way it performs better than linearization and does not require to compute Jacobians.`
+
+#### A. 개요 
+
+- UKF의 핵심은 **다변량 가우스 분포**`(Multivariate Gaussian distribution)`를 찾는 것이다. `The main jist(point) of UKF is to find the multivariate Gaussian distribution that approximated the real belief distribution. `
+
+- predicted states가 정규분포`(normaly distributed)`가 아닐수 있지만 UKF는 그렇다고 가정한다. `The predicted states may not be normaly distributed but the UKF assumes that they are.`
+
+- Specifically, the Gaussian distribution approximated the real distribution as close as possible with respect to its mean and covariance matrix.
+
+#### B.  pipeline
+
+- The pipeline for UKF is to 
+ - first generate some **samples sigma points** that define the Gaussian. 
+ - Then to predict **new sigma points** based on the system model (e.g., motion model). 
+ - Using the new sigma points we then **predict the mean and covariance of the Gaussian**. 
+
+- These three steps constitute the **Prediction Step** for the UKF. 
+
+- The **Measurements Update** follows next, 
+ - which includes Predicting the new measurements and updating the state belief.
 
 
 
