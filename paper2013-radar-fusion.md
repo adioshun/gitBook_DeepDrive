@@ -197,13 +197,17 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 
 - However, methods based on the Evidential framework proposed an alternative not only to multi-sensor fusion but to many modules of vehicle perception [5], [6], [9]. 
 
-- These methods highlight the importanceof incomplete and imprecise information which is not usuallypresent in the probabilistic approaches.An advantage of our fusion approach at the detection level isthat the description of the objects can be enhanced by addingknowledge from different sensor sources. 
+- These methods highlight the importance of incomplete and imprecise information which is not usually present in the probabilistic approaches.
 
-For example, lidardata can give a good estimation of the distance to the object andits visible size. 
+### 제안 논문의 장점 
 
-In addition, classification information, usuallyobtained from camera, allows to make assumptions about thedetected objects. 
+- An advantage of our fusion approach at the **detection level** is that the description of the objects can be enhanced by adding knowledge from different sensor sources. 
 
-An early enrichment of objects’ descriptioncould allow the reduction of the number of false detections andintegrate classification as a key element of the perception outputrather than only an add-on.
+- For example, lidar data can give a good estimation of the distance to the object and its visible size. 
+
+- In addition, classification information, usually obtained from camera, allows to make assumptions about the detected objects. 
+
+- An early enrichment of objects’ description could allow the reduction of the number of false detections and integrate classification as a key element of the perception outputrather than only an add-on.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2ODcwNzUyM119
+eyJoaXN0b3J5IjpbLTM5NzUwMDI0NV19
 -->
