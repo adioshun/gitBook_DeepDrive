@@ -35,9 +35,12 @@
 
 - 센서퓨전 기반 연구[17]들 `In the deep learning literature, fusion of different modalities has been studied for various applications in recent year ssuch as in [17] for object detection using images and depth maps. `
 
+```
+[17] S. Gupta, R. Girshick, P. Arbelaez, and J. Malik, “Learning rich ´features from rgb-d images for object detection and segmentation,” in European Conference on Computer Vision, Sept. 2014, pp. 345–360
+```
+
 
 - RNN기반 images & depth map의 연관관계 학습을 통한 semantic segmentation `Deep learning for a recurrent neural network [18] was applied to implicitly learn the dependencies between RGB images and depth map to perform semantic segmentation.`
-
 
 ```
 [18] C. Hazirbas, L. Ma, C. Domokos, and D. Cremers, “Fusenet: Incorporating depth into semantic segmentation via fusion-based cnn architecture,” in Proc. ACCV, vol. 2, Nov. 2016, pp. 213–228.
@@ -124,5 +127,5 @@ TABLE III: NetGated:
 
 ![](https://i.imgur.com/FnFDsYn.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgyODQ2OTc2XX0=
+eyJoaXN0b3J5IjpbNzc1MDA5NTI0XX0=
 -->
