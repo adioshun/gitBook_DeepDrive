@@ -72,7 +72,7 @@ different camera views.
 #### 1.4.2 Camera-based Approaches
 #### 1.4.3 Sensor Fusion Approaches 
 
-- Current research mostly focuses on sensors which provide 3-dimensional information of the environment. 
+- 최근 연구는 3D 센서에 집중되어 있다. `Current research mostly focuses on sensors which provide 3-dimensional information of the environment. `
 
 Thus, papers that focus on camera-RADAR fusion are rather rare.One of the recent approaches which utilize sensor fusion is [ZXY12]. 
 
@@ -128,5 +128,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNjU3NDg4N119
+eyJoaXN0b3J5IjpbLTIwMzMzNzQ0NDJdfQ==
 -->
