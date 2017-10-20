@@ -18,6 +18,8 @@
 
 * [Awesome : Autonomous Vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles)
 
+- [Learning where to attend like a human driver](http://ieeexplore.ieee.org/document/7995833/): Intelligent Vehicles Symposium (IV), 2017 IEEE
+
 ### 1.1 2D CNN
 
 ### 1.2 Point Cloud

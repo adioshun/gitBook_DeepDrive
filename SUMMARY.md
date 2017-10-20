@@ -13,18 +13,17 @@
 * [Papers\_OccupancyGridFusion](papersoccupancygridfusion.md)
   * [Paper\_2016\_MSF-OG \(5%\)](paper2016-msf-og.md)
 
-
 ## 2D CNN
 
 * [Paper\_2017\_SqueezeDet \(50%\)](paper2016-squeezedet.md)
 
 ## 2.3D 2D to 3D Back-Projection
+
 * [Intro\_Back\_projection](introback-projection.md)
-* 미진행(Monocular)
-  * [Paper\_2016\_Monocular Depth /w 2Camera \(0%\)](paper2016-monocular-depth.md)  
-* [Papers\_국내 논문\_단일카메라 \(100%\)](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0.md)  
- 
-* 미진행(Stereo)
+* [미진행\(Monocular\)](bbf8-c9c4-d58928-monocular.md)
+  * [Paper\_2016\_Monocular Depth /w 2Camera \(0%\)](paper2016-monocular-depth.md)
+* [Papers\_국내 논문\_단일카메라 \(100%\)](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0.md)
+* [미진행\(Stereo\)](bbf8-c9c4-d58928-stereo.md)
   * [Paper\_2017\_Deep3DBox \(15%\)](paper2017-3d-bbox.md)
   * [Paper\_2017\_Depth dilated DNN \(50%\)](paperdepth-from-single-image.md)
   * [Report\_2017\_Monocular 3 CNN Methods \(70%\)](report2017-monocular-3-cnnmethods.md)
@@ -36,7 +35,6 @@
 * [Paper\_2016\_Mono3D2016 \(70%\)](papermonocular-3d.md)
 * [Paper\_2017\_J-MOD \(30%\)](paper2017-j-mod.md)
   * [Paper\_2017\_Domain Independent MDE  \(30%\)](paper2017-domain-independent-mde.md)
-
 * [Lab\_Depth Map from Stereo Images](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0/labdepth-map-from-stereo-images.md)
 
 ## 3D PointCloud
@@ -55,13 +53,13 @@
 * [Paper\_2016\_pMVCNN \(30%\)](paper2016-pairwisemvcnn.md)
 * [Paper\_2014\_AE3D shape Retrieval \(30%\)](paper2014-ae3d-shape-retrieval.md)
 * [Paper\_2016\_VeloFCN\_Bo Li \(70%\)](paper2016-velofcn4vd.md)
-* 미진행 
+* [미진행 ](bbf8-c9c4-d589.md)
   * [Paper\_2016\_FPNN](paper2016-fpnn.md)
 * [Paper\_2017\_Vote3Deep \(50%\)](papervote3deep.md)
 * [Paper\_2016\_PointNetDeep \(50%\)](paper2016-pointnet.md)
 * [Paper\_2016\_PointNet3D \(50%\)](paper2016-pointnet3d.md)
 * [Paper\_2016\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
-* 미진행
+* [미진행](bbf8-c9c4-d589.md)
   * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
   * [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
   * [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
@@ -87,8 +85,6 @@
 * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
 * [Report\_2017\_cs231n\_Dempster-Shafer](report2017-cs231n-dempster-shafer.md)
 
-
-
 ## 4D \(Time, RNN\)
 
 * [Paper\_2016\_3D-R2N2](paper2016-3d-r2n2.md)
@@ -104,5 +100,4 @@
 
 * [Project\_2017\_iPRoBe Lab](project2017-iprobe-lab.md)
 * [Project\_2017\_Berkeley](project2017-berkeley.md)
-
 
