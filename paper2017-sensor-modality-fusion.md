@@ -38,6 +38,11 @@
 
 - RNN기반 images & depth map의 연관관계 학습을 통한 semantic segmentation `Deep learning for a recurrent neural network [18] was applied to implicitly learn the dependencies between RGB images and depth map to perform semantic segmentation.`
 
+
+```
+[18] C. Hazirbas, L. Ma, C. Domokos, and D. Cremers, “Fusenet: Incorporating depth into semantic segmentation via fusion-based cnn architecture,” in Proc. ACCV, vol. 2, Nov. 2016, pp. 213–228.
+```
+
 - [19]에서는 RGB와 라이다 정보를 활용하여 3D 물체 탐지를 한다. `In [19], RGB image and its corresponding 3D point cloud are used as inputs for 3D object detection. `
 
 ```
@@ -119,5 +124,5 @@ TABLE III: NetGated:
 
 ![](https://i.imgur.com/FnFDsYn.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc1NzQ0MTZdfQ==
+eyJoaXN0b3J5IjpbMzgyODQ2OTc2XX0=
 -->
