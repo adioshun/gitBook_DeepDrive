@@ -21,7 +21,7 @@ Data fusion techniques combine data from multiple sensors and related informatio
 	- Feature Level Fusion 
 	- Declaration Level Fusion. 
 
-In this context, a few terms have tobe defined. 
+In this context, a few terms have to be defined. 
 
 A sensor is a device which provides information of the environment inany form of raw data. 
 
@@ -29,5 +29,5 @@ Feature extraction is defined as the process of extractingmeaningful information
 
 State estimation describes the current state based onthe given input, e.g. the position of a tracked vehicle
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyMTg2NjAwMl19
+eyJoaXN0b3J5IjpbMTMwOTEzODA3OF19
 -->
