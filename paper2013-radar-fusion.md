@@ -115,15 +115,17 @@ different camera views.
 
 - The camera is oriented to the front. 
 
-- The center points of RADAR objects are projectedinto the image based on the camera calibration. 
+- The center points of RADAR objects are projected into the image based on the camera calibration. 
 
-The symmetry of imagesections around the projected point is estimated. 
+- The symmetry of image sections around the projected point is estimated. 
 
-Ideally, the symmetry is largearound the RADAR hypothesis as front views and rear views of vehicles are symmetric.Searching for higher symmetry values in a predefined environment aroundthe RADAR hypothesis is used to correct the position estimate. 
+- Ideally, the symmetry is large around the RADAR hypothesis as front views and rear views of vehicles are symmetric.
 
-However, this approach does only work for scenarios in which vehicles are viewed from the rearor front.
+- Searching for higher symmetry values in a predefined environment around the RADAR hypothesis is used to correct the position estimate. 
+
+- However, this approach does only work for scenarios in which vehicles are viewed from the rear or front.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTcyNDYzOTRdfQ==
+eyJoaXN0b3J5IjpbLTY2NTIzOTkyXX0=
 -->
