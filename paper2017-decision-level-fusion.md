@@ -226,7 +226,7 @@ Our method consistsof three phases:
 
 - The unary classifiers are modeled using CNN models with the same network architecture. 
 
-The proposed CNN models are generatedwith two phases consisting of image representation and classification networks. 
+- The proposed CNN models are generated with two phases consisting of image representation and classification networks. 
 
 First, to represent theinput data, we extract a convolutional cube that has more than one convolutional layer of pre-trainedCNN models. 
 
@@ -240,5 +240,5 @@ To fuse the results from the two separate unary classifiers, we propose aCNN mod
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTAwMzIzNTNdfQ==
+eyJoaXN0b3J5IjpbLTE3OTAyMTA1OF19
 -->
