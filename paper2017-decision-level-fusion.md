@@ -92,11 +92,11 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 ### 2.1 Object-proposal generation
 
-- The object detection and classification tasks can be divided into object-region proposal generation and proposal region classification. 
+- The object detection and classification tasks can be divided into **object-region proposal generation** and **proposal region classification**. 
 
-- 대안 중 하나는 슬라이딩 윈도우 방식 이다. `To extract the object-region proposals, one possible approach is to use the sliding-window method. `
-	- The sliding window has been used in a wide range of detection tasks for faces [5,10–12], pedestrians [13–17] and cars [18,19].
-	- Although the sliding window can search whole image regions (i.e., the recall rate is 100%), it generates a very large number of proposals (e.g., approximately 100,000 from a 640×480 image).
+- 대안 중 하나는 **슬라이딩 윈도우** 방식 이다. `To extract the object-region proposals, one possible approach is to use the sliding-window method. `
+	- 많은 분야에서 사용 되어 왔다. `The sliding window has been used in a wide range of detection tasks for faces [5,10–12], pedestrians [13–17] and cars [18,19].`
+	- 단점은 너무 많은 후보 영역을 생성 한다. `Although the sliding window can search whole image regions (i.e., the recall rate is 100%), it generates a very large number of proposals (e.g., approximately 100,000 from a 640×480 image).`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NjI5MTg2MV19
+eyJoaXN0b3J5IjpbMTMxNjQ2NjQ4Nl19
 -->
