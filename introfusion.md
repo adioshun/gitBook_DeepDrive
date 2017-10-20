@@ -16,6 +16,8 @@ by using the pixel-wise semantic segmentation of CNNs?](https://arxiv.org/pdf/16
 - [Feature-based lateral position estimation of surrounding vehicles using stereo vision](http://ieeexplore.ieee.org/document/7995811/)
 
 
+---
+Preferred: A doctorate degree in an above discipline with specialization in estimation theory or sensor fusion (some common topics include Kalman filters, Particle filters, Multiple Hypothesis Tracking, other Bayesian approaches more generally, …)
 
 ---
 
