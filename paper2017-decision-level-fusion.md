@@ -175,11 +175,11 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 Cho et al. [43] independently extracted data features using target information from sensors and combined the entire target information for movement classification and tracking of moving objects.
 
-
+###### [
 
 The transferable belief model was used to combine the sensor measurements by managing the uncertainty [47]. 
 
 In the present study, we use the CNN framework to jointly consider the classification performance of each sensor modality, as well as the uncertainties.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMDQ3OTA1OV19
+eyJoaXN0b3J5IjpbLTExOTc4Mzg5MjZdfQ==
 -->
