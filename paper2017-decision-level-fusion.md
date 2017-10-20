@@ -202,12 +202,13 @@ Our method consistsof three phases:
 
 ### 3.2 Object-region proposal generation
 
-- We perform segmentation of the color-flattened image.
-	- 결과가 만족 스럽지 않음 However, the initial segmentation results are not satisfactory with respect to the detection of meaningful objects. 
+- 평탄화한 모노톤 이미지에 대하여 세그멘테이션 실시 `We perform segmentation of the color-flattened image.`
+	- 결과가 만족 스럽지 않음 `However, the initial segmentation results are not satisfactory with respect to the detection of meaningful objects. `
 
-- Therefore, we perform semantic grouping using a dissimilarity cost function from the pixelvalues of both the color-flattened and original images. 
+- Therefore, we perform **semantic grouping** using a dissimilarity cost function from the pixel values of both the color-flattened and original images. 
+	- These results are the object-region proposals from the CCD sensor data.
 
-These results are the object-region proposalsfrom the CCD sensor data.In the 3D occupancy voxel space, we extract the supervoxels using the voxel cloud connectivitysegmentation (VCCS) [6]. 
+In the 3D occupancy voxel space, we extract the supervoxels using the voxel cloud connectivitysegmentation (VCCS) [6]. 
 
 VCCS uses a gradient-seeding methodology to segment point clouds.The resulting supervoxels are fine-level segments with a fixed size. 
 
@@ -236,5 +237,5 @@ To fuse the results from the two separate unary classifiers, we propose aCNN mod
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzk5MTI4ODVdfQ==
+eyJoaXN0b3J5IjpbLTE5NTM1MzA0ODldfQ==
 -->
