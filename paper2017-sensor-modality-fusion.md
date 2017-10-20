@@ -55,9 +55,11 @@
 
 각 센서는 단점이 있다. `As illustratedin Figure 3, each sensor separately can have limitations in environment perception. There are also other complementary sensory performance characteristics of camera and LiDAR,e.g., sensitivity of a camera to lighting conditions, limitations of a LiDAR in detecting small objects.`
 
-### 4. PROPOSED SENSOR FUSION FRAMEWORK
+## 4. PROPOSED SENSOR FUSION FRAMEWORK
+
+### 4.1 System Framework
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NzY2MjYzMl19
+eyJoaXN0b3J5IjpbLTIwODgwNTczNDJdfQ==
 -->
