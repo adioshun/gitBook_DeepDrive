@@ -159,7 +159,7 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 - The fusion methods are divided into two categories, namely **early** and **late** fusion. 
 
-#### A. early fusion method
+###### [ early fusion method]
 
 - the measurements are fused by mapping them together,or by concatenation, or probabilistic fusion [41,44,45]. 
 
@@ -167,11 +167,15 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 - 해결책 : To solve these problems, the **decision-level fusion method** is used as a **late fusion** method. 
 
-Chavez-Garcia and Aycard [46] proposed an evidential framework to improve the detection and tracking of moving objects by managing the uncertainty. 
+###### [Chavez-Garcia and Aycard]
 
-Cho et al. [43] independently extracted data features using target information from sensors andcombined the entire target information for movement classification and tracking of moving objects.The transferable belief model was used to combine the sensor measurements by managing theuncertainty [47]. 
+- Chavez-Garcia and Aycard [46] proposed an evidential framework to improve the detection and tracking of moving objects by managing the uncertainty. 
 
-In the present study, we use the CNN framework to jointly consider the classificationperformance of each sensor modality, as well as the uncertainties.
+Cho et al. [43] independently extracted data features using target information from sensors and combined the entire target information for movement classification and tracking of moving objects.
+
+The transferable belief model was used to combine the sensor measurements by managing the uncertainty [47]. 
+
+In the present study, we use the CNN framework to jointly consider the classification performance of each sensor modality, as well as the uncertainties.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI0OTQ1MTZdfQ==
+eyJoaXN0b3J5IjpbLTE0NDE4NjE0NTZdfQ==
 -->
