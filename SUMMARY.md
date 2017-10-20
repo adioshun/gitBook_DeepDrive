@@ -9,6 +9,7 @@
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 * [Paper\_2016\_MSF-OG \(5%\)](paper2016-msf-og.md)
 * [Project\_2017\_iPRoBe Lab](project2017-iprobe-lab.md)
+* [Project\_2017\_Berkeley](project2017-berkeley.md)
 
 ## 2D CNN
 
