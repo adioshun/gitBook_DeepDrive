@@ -98,13 +98,27 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 	- 많은 분야에서 사용 되어 왔다. `The sliding window has been used in a wide range of detection tasks for faces [5,10–12], pedestrians [13–17] and cars [18,19].`
 	- 단점은 너무 많은 후보 영역을 생성 한다. `Although the sliding window can search whole image regions (i.e., the recall rate is 100%), it generates a very large number of proposals (e.g., approximately 100,000 from a 640×480 image).`
 
-단점 해결을 위해 다양한 방법들이 제안 되었다. `To reduce the number of object-region proposals, new approaches have been proposed,namely objectness [20], category-independent object proposals (CIOP) [21], constrained parametricmin-cuts (CPMC) [22], selective search [23], EdgeBox [24], BInarized Normed Gradients (BING) [25]and multi-scale combinatorial grouping (MCG) [26]. 
+- 단점`(많은 후보영역)` 해결을 위해 다양한 방법들이 제안 되었다. `To reduce the number of object-region proposals, new approaches have been proposed,namely` 
+	- objectness [20], 
+	- category-independent object proposals (CIOP) [21], 
+	- constrained parametricmin-cuts (CPMC) [22], 
+	- selective search [23], 
+	- EdgeBox [24], 
+	- BInarized Normed Gradients (BING) [25]
+	- multi-scale combinatorial grouping (MCG) [26]. 
 
-The objectness method [20] measures theobjectness score to distinguish whether a window region belongs to a background or an object.The category-independent method [21] extracts object regions using the graph-cut segmentationmethod and then ranks them to select a well-represented object-region proposal among the overlappedproposals. 
+###### []
+The objectness method [20] measures the objectness score to distinguish whether a window region belongs to a background or an object.The category-independent method [21] extracts object regions using the graph-cut segmentationmethod and then ranks them to select a well-represented object-region proposal among the overlappedproposals. 
+
+###### []
 
 The CPMC method [22] ranks the plausibility of each segment to determine whether theforeground segments follow good object hypotheses or not. 
 
+###### []
+
 The selective search [23] hierarchicallysegments an image using the color, texture and size of each segment. 
+
+###### []
 
 EdgeBox [24] extracts objectproposals using edge segmentations. 
 
@@ -114,5 +128,5 @@ The multi-scale combinatorial grouping method [26] segments an image in the hier
 
 Because the amount of measured data in intelligent vehicle environments is larger than that in other applications, we need to design a new method to extract a smaller number of proposalsthan the previous methods.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNDMxMjY1Nl19
+eyJoaXN0b3J5IjpbMTIxNzUxNDI4XX0=
 -->
