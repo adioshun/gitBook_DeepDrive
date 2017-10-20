@@ -53,11 +53,11 @@
 
 - 사람의 원격 조정 값을 학습시 사용한다. `The proposed deep learning based system is trained using data recorded under human teleoperation of the UGV.`
 
-The camera image gives information about the type of environment and information regarding texture and color of the objects present in the nearby environment whereas the depth range image gives complementary information to RGB channelsin the form of the structure of the environment via depthmeasurements to points in the environment. 
+The camera image gives information about the type of environment and information regarding texture and color of the objects present in the nearby environment whereas the depth range image gives complementary information to RGB channels in the form of the structure of the environment via depthmeasurements to points in the environment. 
 
 As illustratedin Figure 3, each sensor separately can have limitations inenvironment perception. 
 
 There are also other complementarysensory performance characteristics of camera and LiDAR,e.g., sensitivity of a camera to lighting conditions, limitationsof a LiDAR in detecting small objects.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3OTU0NjM4N119
+eyJoaXN0b3J5IjpbNTU3ODk5MTgxXX0=
 -->
