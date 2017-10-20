@@ -42,6 +42,7 @@
 * [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
 * [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
 * [Paper\_2013\_Survey\_2D\_3DShape Descriptor \(30%\)](paper2016-deep-learning-representation.md)
+* [----- Feature based]
 * [Paper\_2015\_DeepSD \(70%\)](paper2016-deep-learning-representation/paper2015-3d-deep-shape-descriptor.md)
   * [Paper\_2015\_DL Representation ](paper2016-deep-learning-representation/paper2015-dl-representation.md)
 * [Paper\_2015\_3DMesh\_Laveling](paper2016-deep-learning-representation/paper2015-3dmesh-laveling.md)
@@ -78,7 +79,7 @@
 ## Fusion
 
 * [Intro\_Fusion](introfusion.md)
-* [---Sensorfusion\(미진행\)](-sensorfusionbbf8-c9c4-d58929.md)
+* [----- Sensorfusion](-sensorfusionbbf8-c9c4-d58929.md)
   * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
 * [Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
