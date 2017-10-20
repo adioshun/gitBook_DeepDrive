@@ -141,13 +141,16 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 ### 2.2 Object detection and classification
 
-AlexNet [31] won the ImageNet classificationcompetition using CNN. 
+###### [AlexNet ]
+- AlexNet [31] won the ImageNet classificationcompetition using CNN. 
 
-“You only look once” (YOLO) [35] and faster R-CNN [34] constructed a CNN architecturethat simultaneously performs object proposal generations and class classifications to reduce thecomputational times. 
+###### [YOLO & faster R-CNN ]
+- “You only look once” (YOLO) [35] and faster R-CNN [34] constructed a CNN architecture that simultaneously performs object proposal generations and class classifications to reduce the computational times. 
 
-Huang and Chen [28,29] proposed a variable-bandwidth network and aprobabilistic neural network for traffic monitoring systems. 
+###### [Huang and Chen]
+- Huang and Chen [28,29] proposed a variable-bandwidth network and a probabilistic neural network for traffic monitoring systems. 
 
-However, if a model focuses on executiontimes rather than performance, the classification performance may be affected
+However, if a model focuses on execution times rather than performance, the classification performance may be affected
 
 ### 2.3 Detection on multi-sensor modality
 
@@ -171,5 +174,5 @@ Chavez-Garcia and Aycard [46] proposed an evidentialframework to improve the det
 
 In the present study, we use the CNN framework to jointly consider the classificationperformance of each sensor modality, as well as the uncertainties.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NTc4MjcxN119
+eyJoaXN0b3J5IjpbLTE3Mzg3NjYyMTddfQ==
 -->
