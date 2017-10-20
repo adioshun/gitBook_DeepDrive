@@ -41,7 +41,7 @@
 - [19]에서는 RGB와 라이다 정보를 활용하여 3D 물체 탐지를 한다. `In [19], RGB image and its corresponding 3D point cloud are used as inputs for 3D object detection. `
 
 ```
-
+[19] S. Song and J. Xiao, “Deep sliding shapes for amodal 3D object detection in RGB-D images,” in 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2016, pp. 808–816.
 ```
 
 - 이미지 +  optical flow + LiDAR가 함꺼번에 합쳐져서 DNN에 입력으로 이용 `RGB image,optical flow, and LiDAR range images are combined to forma six channel input to a deep neural network [20] for object detection. `
@@ -119,5 +119,5 @@ TABLE III: NetGated:
 
 ![](https://i.imgur.com/FnFDsYn.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNTUzNDc5XX0=
+eyJoaXN0b3J5IjpbNDc1NzQ0MTZdfQ==
 -->
