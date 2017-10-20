@@ -13,13 +13,15 @@
 
 - **A deep neural network** architecture is introduced to effectively perform **modality fusion** and reliably **predict steering commands** even in the presence of sensor failures. 
 
-## I. INTRODUCTION
+## 1. INTRODUCTION
 
 - Our work focuses on the problem of **navigating** of an autonomous UGV using **vision** and **depth** measurements in an indoor environment. 
 
 - We propose a **deep learning architecture** for the **sensor fusion** problem that consists of two convolutional neural networks (CNNs), each consisting of a different input modality, which are fused with a **gating mechanism**. 
 
-> 각센서를 위해 
+> 각센서를 위해 다른 CNN네트워크가 존재 하며 추후 **gating mechanism**을 이용하여 Fuse 됨 
+
+## 2. RELATED WORK
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjI2MTM1MjddfQ==
+eyJoaXN0b3J5IjpbLTIwNzkyMjYxNzNdfQ==
 -->
