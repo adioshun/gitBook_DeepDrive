@@ -16,13 +16,12 @@
 ## I. INTRODUCTION
 
 Our work focuses on the problem of navigating of an autonomous unmanned ground vehicle (UGV) using vision
-and depth measurements in an indoor environment. We
-propose a deep learning architecture for the sensor fusion
-problem that consists of two convolutional neural networks
-(CNNs), each consisting of a different input modality, which
-are fused with a gating mechanism. 
+and depth measurements in an indoor environment. 
+
+We propose a deep learning architecture for the sensor fusion problem that consists of two convolutional neural networks
+(CNNs), each consisting of a different input modality, which are fused with a gating mechanism. 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDk2NjI5MjhdfQ==
+eyJoaXN0b3J5IjpbMjAzMTkxMzI2OF19
 -->
