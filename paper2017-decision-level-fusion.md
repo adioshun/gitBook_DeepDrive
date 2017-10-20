@@ -171,15 +171,15 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 - Chavez-Garcia and Aycard [46] proposed an evidential framework to improve the detection and tracking of moving objects by managing the uncertainty. 
 
-###### [
+###### [Cho et al]
 
-Cho et al. [43] independently extracted data features using target information from sensors and combined the entire target information for movement classification and tracking of moving objects.
+- Cho et al. [43] independently extracted data features using target information from sensors and combined the entire target information for movement classification and tracking of moving objects.
 
-###### [
+###### [transferable belief model ]
 
-The transferable belief model was used to combine the sensor measurements by managing the uncertainty [47]. 
+- The transferable belief model was used to combine the sensor measurements by managing the uncertainty [47]. 
 
-In the present study, we use the CNN framework to jointly consider the classification performance of each sensor modality, as well as the uncertainties.
+최근 연구에서 저자는**performance**과 **uncertainties**를 모두 고려 하였다. `In the present study, we use the CNN framework to jointly consider the classification performance of each sensor modality, as well as the uncertainties.`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTc4Mzg5MjZdfQ==
+eyJoaXN0b3J5IjpbLTU2MDk1NzA3N119
 -->
