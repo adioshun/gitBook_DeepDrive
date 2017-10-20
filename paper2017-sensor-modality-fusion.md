@@ -23,7 +23,7 @@
 
 ## 2. RELATED WORK
 
-Various aspects of robot autonomy in both indoor andoutdoor environments using vision and depth based sensorprocessing have been extensively studied in the literature[1]–[6]. 
+- Vision과  depth를 기반으로 한 자율 주행 로봇에 대한 연구가 많이 이루어 지고 있다. `Various aspects of robot autonomy in both indoor and outdoor environments using vision and depth based sensor processing have been extensively studied in the literature[1]–[6]. `
 
 Reinforcement learning techniques have also beenutilized to teach the mobile robot to avoid obstacles andnavigate through the corridor using sensors such as a laserrange finder [7]. 
 
@@ -45,5 +45,5 @@ Specifically, we introduce a new gatingmechanism based architecture that enables
 
 The efficacy of the proposed approach isdemonstrated through experimental studies (Figure 2).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjUzMTAwNDZdfQ==
+eyJoaXN0b3J5IjpbLTE3ODQ1ODkzMDhdfQ==
 -->
