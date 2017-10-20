@@ -36,6 +36,7 @@
 - 센서퓨전 기반 연구들 `In the deep learning literature, fusion of different modalities has been studied for various applications in recent year ssuch as in [17] for object detection using images and depth maps. `
 
 
+
 Deep learning for a recurrent neural network [18] wasapplied to implicitly learn the dependencies between RGBimages and depth map to perform semantic segmentation.In [19], RGB image and its corresponding 3D point cloudare used as inputs for 3D object detection. 
 
 RGB image,optical flow, and LiDAR range images are combined to forma six channel input to a deep neural network [20] for objectdetection. 
@@ -48,5 +49,5 @@ Specifically, we introduce a new gatingmechanism based architecture that enables
 
 The efficacy of the proposed approach isdemonstrated through experimental studies (Figure 2).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjA2MDA0MzZdfQ==
+eyJoaXN0b3J5IjpbMTUzMTU1MDUyMl19
 -->
