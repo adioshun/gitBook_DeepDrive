@@ -141,13 +141,7 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 ### 2.2 Object detection and classification
 
-Recently, object detection and classification methods that useCNN architecture have been thoroughly researched. 
-
 AlexNet [31] won the ImageNet classificationcompetition using CNN. 
-
-Further, various works have achieved high classification performance onlarge-scale datasets [32–34], such as the ImageNet Large Scale Visual Recognition Challenge (ILSVRC)and PASCAL Visual Object Classed (VOC). 
-
-Some previous works focused on their performance, whilesome architecture designs are available in the literature that focused on reducing the computationalcosts. 
 
 “You only look once” (YOLO) [35] and faster R-CNN [34] constructed a CNN architecturethat simultaneously performs object proposal generations and class classifications to reduce thecomputational times. 
 
@@ -177,5 +171,5 @@ Chavez-Garcia and Aycard [46] proposed an evidentialframework to improve the det
 
 In the present study, we use the CNN framework to jointly consider the classificationperformance of each sensor modality, as well as the uncertainties.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMzNDU4NjY2XX0=
+eyJoaXN0b3J5IjpbMTQ4NTc4MjcxN119
 -->
