@@ -9,11 +9,27 @@
 
 # Decision-Level Fusion
 
+목적 
+- Object detection :  performed for the localization of objects,
+- Object classification : recognizes object classes from detected object regions.
+
+In this paper, we propose a new object-detection and classification method using decision-level fusion. 
+
+방법 
+We fuse the classification outputs from
+independent unary classifiers, such as 3D point clouds and image data using a convolutional
+neural network (CNN). The unary classifiers for the two sensors are the CNN with five layers,
+which use more than two pre-trained convolutional layers to consider local to global features as data
+representation. To represent data using convolutional layers, we apply region of interest (ROI) pooling
+to the outputs of each layer on the object candidate regions generated using object proposal generation
+to realize color flattening and semantic grouping for charge-coupled device and Light Detection And
+Ranging (LiDAR) sensors.
+
 ## 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4OTAwOTU5NV19
+eyJoaXN0b3J5IjpbMTUxNDg3ODM5MV19
 -->
