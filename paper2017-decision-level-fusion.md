@@ -76,9 +76,9 @@ Figure 1. Overview of our work.
 - 네트워크를 통과한 결과물은 Loss layer에 입력으로 사용된다. `Previous models of object category classification that used CNNs fed a fixed number of output layers into the final loss layer in their task. `
 	- For example, all-passed output, which means the input is passed through all layers of networks, is widely used for feeding into the loss layer. 
 
-- 이 결과물은 일련의 풀링레이어를 통과 하면서 For this output, however, little information loss might occur through the passing of several pooling layers. 
+- 이 결과물은 일련의 풀링레이어를 통과 하면서 일부 정보를 잃게 된다. `For this output, however, little information loss might occur through the passing of several pooling layers. `
 
-In contrast, the proposed CNN model, similar to unary classifiers,generates a convolutional cube from more than one convolutional layer of a pre-trained CNN modelas image representations. 
+- 반대로, In contrast, the proposed CNN model, similar to unary classifiers,generates a convolutional cube from more than one convolutional layer of a pre-trained CNN modelas image representations. 
 
 From the extracted object proposals obtained from the proposal generations,ROI pooling is applied on the convolutional cube to feed them into a fine-tuned classification networkcomprising two convolutional layers, two fully-connected layers and a softmax layer. 
 
@@ -88,5 +88,5 @@ By fusing the multi-sensor modalities, the detection and classification failures
 
 In addition, fusing themulti-sensor in the decision level makes it more stable when information conflict occurs in eachmodality when compared to feature-level fusion schemes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzQyMzEyNzVdfQ==
+eyJoaXN0b3J5IjpbNzE0OTA0NzM0XX0=
 -->
