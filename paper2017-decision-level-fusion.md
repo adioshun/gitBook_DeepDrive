@@ -31,7 +31,7 @@ The data-fusion scheme is generally categorized into two types, namely early and
 	- fuses two or more data by combining raw data or concatenating feature descriptors. 
 	- it often cannot handle incomplete measurements. 
 	- If one sensor modality becomes useless due to malfunctions, breakdown or severe weather conditions, its measurements will be rendered ambiguous. 
-- The late-fusion method 
+###### The late-fusion method 
 	- independently performs detection and classification from each sensor modality
 
 
@@ -43,5 +43,5 @@ the reliability and plausibility of each sensor can be considered.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTM3ODM5NzBdfQ==
+eyJoaXN0b3J5IjpbMTQxMzQ2OTAzOV19
 -->
