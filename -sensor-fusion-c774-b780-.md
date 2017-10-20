@@ -6,7 +6,7 @@
 
 - [Object Detection and Tracking with Side Cameras and RADAR in an Automotive Context](http://www.mi.fu-berlin.de/inf/groups/ag-ki/Theses/Completed-theses/Master_Diploma-theses/2013/Hofmann/Master-Hofmann.pdf?1381479774): 2013, 3장이 센서 퓨전 
 
-- [Object Detection and Classification by Decision-Level Fusion for Intelligent Vehicle Systems](): 2017, KITTI, 21p
+- [Object Detection and Classification by Decision-Level Fusion for Intelligent Vehicle Systems](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/): 2017, KITTI, 21p
 
 - [FUSION OF LIDAR 3D POINTS CLOUD WITH 2D DIGITAL CAMERA IMAGE](http://www.secs.oakland.edu/~li4/research/student/JuanLi2015.pdf): 2015, 석사학위, 90p
 
