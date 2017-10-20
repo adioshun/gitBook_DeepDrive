@@ -47,8 +47,8 @@
 
 
 
-Specifically, we introduce a new gating mechanism based architecture that enables modality fusion for robust end-to-end learning of autonomous corridor driving and improved training techniques that enable resiliency to sensor failure. 
+- 본 논문의 제안에서는 새로운 **gating mechanism**을 사용하여 성능 향상을 보임 ` Specifically, we introduce a new gating mechanism based architecture that enables modality fusion for robust end-to-end learning of autonomous corridor driving and improved training techniques that enable resiliency to sensor failure. `
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU3MTA0MDE4XX0=
+eyJoaXN0b3J5IjpbMTM4OTUxMDQ5MV19
 -->
