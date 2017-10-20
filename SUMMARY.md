@@ -42,7 +42,7 @@
 * [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
 * [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
 * [Paper\_2013\_Survey\_2D\_3DShape Descriptor \(30%\)](paper2016-deep-learning-representation.md)
-* [----- Feature based]
+* ----- Feature based -----
 * [Paper\_2015\_DeepSD \(70%\)](paper2016-deep-learning-representation/paper2015-3d-deep-shape-descriptor.md)
   * [Paper\_2015\_DL Representation ](paper2016-deep-learning-representation/paper2015-dl-representation.md)
 * [Paper\_2015\_3DMesh\_Laveling](paper2016-deep-learning-representation/paper2015-3dmesh-laveling.md)
