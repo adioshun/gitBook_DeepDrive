@@ -207,7 +207,7 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 
 - In addition, classification information, usually obtained from camera, allows to make assumptions about the detected objects. 
 
-- An early enrichment of objects’ description could allow the reduction of the number of false detections and integrate classification as a key element of the perception outputrather than only an add-on.
+- An early enrichment of objects’ description could allow the reduction of the number of false detections and integrate classification as a key element of the perception output rather than only an add-on.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NzUwMDI0NV19
+eyJoaXN0b3J5IjpbMTI2ODI0NDU3NV19
 -->
