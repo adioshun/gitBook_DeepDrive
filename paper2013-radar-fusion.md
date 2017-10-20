@@ -72,8 +72,67 @@ different camera views.
 #### 1.4.2 Camera-based Approaches
 #### 1.4.3 Sensor Fusion Approaches 
 
+Sensor fusion approaches are the most recent developments in the area of environmentperception. 
+
+The fusion of several sensors allows to combine advantages ofdifferent sensors, e.g. 
+
+distance and velocity measurements of RADAR and classi-fication abilities of cameras, and reduce disadvantages at the same time. 
+
+Currentresearch mostly focuses on sensors which provide 3-dimensional information of theenvironment. 
+
+Thus, papers that focus on camera-RADAR fusion are rather rare.One of the recent approaches which utilize sensor fusion is [ZXY12]. 
+
+The approachcombines a Light Detection And Ranging (LIDAR) sensor with camera data. 
+
+LIDAR sensors measure the time light travels to a certain object point tomeasure its distance. 
+
+This allows high resolution distance maps. 
+
+These mapsprovide good information for obstacle detection but less for classification. 
+
+Thedistance map is used to classify parts of the image to ground plane or obstaclesusing RANSAC and 3D adjacency. 
+
+At the same time the image patches are classifiedto different classes by evaluating color histograms, texture descriptors fromGaussian and Garbor filtered images as well as local binary patterns. 
+
+Resultingin 107 features, each patch is classified by a Multi-Layer-Perceptron to differentcategories. 
+
+The size of the object determined by the LIDAR obstacle estimationas well as labels from the image analysis are passed into a fuzzy logic frameworkwhich returns three labels – environment, middle high or obstacle. 
+
+The fusionapproach reaches better classification results than the individual sensors.In [VBA08] a framework for self-location and mapping is presented. 
+
+This approachis based on an occupancy grid that is used to fuse information from RADARand LIDAR. 
+
+An occupancy grid discretizes the environment space into small twodimensional grid tiles. 
+
+The LIDAR sensor is used to estimate a probability of agrid cell to be occupied. 
+
+A high probability means there is an obstacle in the respectivegrid cell. 
+
+Moving objects are detected through changes in the occupancyof grid cells. 
+
+Basically, if a cell is occupied at a time point, and in the next timestep, the adjacent cell is detected to be occupied, this is assumed as a motion. 
+
+AsRADAR data is relatively sparse compared to LIDAR measurements, it is used toverify or reject motion estimations based on LIDAR data.A similar method of fusing short range RADAR and laser measurements isproposed in [PVB+09]. 
+
+The system covers more performance optimizations than[VBA08]. 
+
+Instead of estimating a probability representation, the grid cells areeither occupied or empty based on the number of measurements of the laser scannerfor the respective cell. 
+
+Adjacent cells that are occupied are merged to an object.A Kalman filter [KB61] is used to track the detected objects. 
+
+Unfortunately thefusion process of RADAR and laser data is not described in detail.The approach proposed in [ABC07] shows a fusion of RADAR and camerain which the camera is used to verify and optimize RADAR object tracks. 
+
+Thecamera is oriented to the front. 
+
+The center points of RADAR objects are projectedinto the image based on the camera calibration. 
+
+The symmetry of imagesections around the projected point is estimated. 
+
+Ideally, the symmetry is largearound the RADAR hypothesis as front views and rear views of vehicles are symmetric.Searching for higher symmetry values in a predefined environment aroundthe RADAR hypothesis is used to correct the position estimate. 
+
+However, this approach does only work for scenarios in which vehicles are viewed from the rearor front.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI2ODkyODc3XX0=
+eyJoaXN0b3J5IjpbNDIzOTUyNTU1XX0=
 -->
