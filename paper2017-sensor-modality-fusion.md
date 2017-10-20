@@ -11,11 +11,11 @@
 
 - We present a novel end-to-end learning framework by fusing **raw pixels** from cameras and depth measurements from a **LiDAR**. 
 
-- **A deep neural network** architecture is introduced to effectively **perform** **modality fusion** and reliably **predict steering commands** even in the presence of sensor failures. 
+- **A deep neural network** architecture is introduced to effectively perform **modality fusion** and reliably **predict steering commands** even in the presence of sensor failures. 
 
-Furthermore, we demonstrate that the fusion ofthe camera and LiDAR modalities provides further benefitsbeyond robustness to sensor failures. 
+## I. INTRODUCTION
 
-Specifically, the multimodalfused system shows a potential to navigate around staticand dynamic obstacles and to handle changes in environmentgeometry without being trained for these tasks.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDg1NzEyMzVdfQ==
+eyJoaXN0b3J5IjpbLTk0OTE5NDMwMV19
 -->
