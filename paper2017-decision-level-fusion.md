@@ -154,11 +154,12 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 ### 2.3 Detection on multi-sensor modality
 
 - scene-level탐지 및 분류를 위해서 다양한 센서 정보가 사용된다. ` In particular, for the scene-level detection and classification tasks, various sensor modalities are used. `
-- indoor scene recognition : The RGB-depth sensor is widely used for indoor scene recognition [36–38], whereas LiDAR-stereo vision [39,40], LiDAR-CCD [41], LiDAR-radar [42] andLiDAR-radar-stereo vision [43] are used for outdoor scenes. 
+	- 실내용 : The RGB-depth sensor is widely used for **indoor scene** recognition [36–38]
+	- 실외용: LiDAR-stereo vision [39,40], LiDAR-CCD [41], LiDAR-radar [42] and LiDAR-radar-stereo vision [43] are used for **outdoor scenes**. 
 
-For accurate classification, two or moreinput measurements are combined. 
+- The fusion methods are divided into two categories, namely **early** and **late** fusion. 
 
-The fusion methods are divided into two categories, namely earlyand late fusion. 
+####
 
 In the early fusion method, the measurements are fused by mapping them together,or by concatenation, or probabilistic fusion [41,44,45]. 
 
@@ -172,5 +173,5 @@ Chavez-Garcia and Aycard [46] proposed an evidentialframework to improve the det
 
 In the present study, we use the CNN framework to jointly consider the classificationperformance of each sensor modality, as well as the uncertainties.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTAwNDI4MzBdfQ==
+eyJoaXN0b3J5IjpbMTkyOTI3MDA1OF19
 -->
