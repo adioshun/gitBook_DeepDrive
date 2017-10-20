@@ -112,27 +112,27 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 ###### [ category-independent method ]
 - The category-independent method [21] extracts object regions using the graph-cut segmentation method and 
-- then ranks them to select a well-represented object-region proposal among the overlappedproposals. 
+- then ranks them to select a well-represented object-region proposal among the overlapped proposals. 
 
-###### []
+###### [CPMC method]
 
-The CPMC method [22] ranks the plausibility of each segment to determine whether theforeground segments follow good object hypotheses or not. 
+- The CPMC method [22] ranks the plausibility of each segment to determine whether the foreground segments follow good object hypotheses or not. 
 
-###### []
+###### [selective search]
 
-The selective search [23] hierarchicallysegments an image using the color, texture and size of each segment. 
+- The selective search [23] hierarchically segments an image using the color, texture and size of each segment. 
 
-###### []
+###### [EdgeBox]
 
-EdgeBox [24] extracts objectproposals using edge segmentations. 
+- EdgeBox [24] extracts object proposals using edge segmentations. 
 
-In addition, it focuses on object boundaries for object-levelproposals. 
+- In addition, it focuses on object boundaries for object-level proposals. 
 
-###### []
+###### [multi-scale combinatorial grouping method]
 
-The multi-scale combinatorial grouping method [26] segments an image in the hierarchicalscale pyramids, and all of the segmentation results are then applied into the combinatorial grouping.Some previous works proposed the extraction of moving objects from video sequences [27–30] fortraffic scenes. 
+- The multi-scale combinatorial grouping method [26] segments an image in the hierarchicalscale pyramids, and all of the segmentation results are then applied into the combinatorial grouping.Some previous works proposed the extraction of moving objects from video sequences [27–30] fortraffic scenes. 
 
 Because the amount of measured data in intelligent vehicle environments is larger than that in other applications, we need to design a new method to extract a smaller number of proposalsthan the previous methods.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzcwMDk5Nl19
+eyJoaXN0b3J5IjpbNDI4MTYyNjI1XX0=
 -->
