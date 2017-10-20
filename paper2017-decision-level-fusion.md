@@ -3,7 +3,7 @@
 | 저자\(소속\) | Sang-Il Oh\(Catholic University\) |
 | 학회/년도 | 2017, [논문](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/) |
 | 키워드 |  object-detection, classification, decision-level fusion |
-| 데이터셋(센서)/모델 |  |
+| 데이터셋(센서)/모델 | KITTI |
 | 참고 |  |
 | 코드 |  |
 
@@ -20,9 +20,7 @@ In this paper, we propose a new **object-detection and classification method** u
 	- unary classifiers, such as 3D point clouds and image data using a convolutional neural network (CNN). 
 2. The unary classifiers for the two sensors are the CNN with five layers, 
 	- which use more than two pre-trained convolutional layers to consider local to global features as data representation. 
-3. To represent data using convolutional layers, we apply region of interest (ROI) pooling to the outputs of each layer on the object candidate regions generated using object proposal generation
-to realize color flattening and semantic grouping for charge-coupled device and Light Detection And
-Ranging (LiDAR) sensors.
+3. To represent data using convolutional layers, we apply region of interest (ROI) pooling to the outputs of each layer on the object candidate regions generated using object proposal generation to realize color flattening and semantic grouping for charge-coupled device and Light Detection And Ranging (LiDAR) sensors.
 
 ## 
 
@@ -30,5 +28,5 @@ Ranging (LiDAR) sensors.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNTYwNzU3NF19
+eyJoaXN0b3J5IjpbNzIxMjI5NDczXX0=
 -->
