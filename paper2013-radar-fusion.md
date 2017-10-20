@@ -159,11 +159,13 @@ Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO co
 
 ###### [2, 4, 5]
 
-The works in [2], [4], [5] solve this problem focusingon the association problem between lists of tracks, andimplementing stochastic mechanisms to combine the relatedobjects. 
+- The works in [2], [4], [5] solve this problem focusing on the association problem between lists of tracks, and implementing stochastic mechanisms to combine the related objects. 
 
-By using an effective fusion strategy at this level, falsetracks can be reduced. 
+- By using an effective fusion strategy at this level, false tracks can be reduced. 
 
-This level is characterized by includingclassification information as complementary to the final output.
+- This level is characterized by including classification information as complementary to the final output.
+
+###### []
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTI3MjU0MjNdfQ==
+eyJoaXN0b3J5IjpbMzU0MzAzNzgyXX0=
 -->
