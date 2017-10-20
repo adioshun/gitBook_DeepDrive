@@ -1,7 +1,7 @@
 | 논문명 | Object Detection and Classification by Decision-Level Fusion for Intelligent Vehicle Systems |
 | --- | --- |
 | 저자\(소속\) | Sang-Il Oh\(Catholic University\) |
-| 학회/년도 | 2017, [논문](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/), [g]() |
+| 학회/년도 | 2017, [논문](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/), [한글]() |
 | 키워드 |  object-detection, classification, decision-level fusion |
 | 데이터셋(센서)/모델 | KITTI |
 | 참고 |  |
@@ -28,5 +28,5 @@ In this paper, we propose a new **object-detection and classification method** u
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzI3OTQzNjVdfQ==
+eyJoaXN0b3J5IjpbLTEzMzI3OTM1ODZdfQ==
 -->
