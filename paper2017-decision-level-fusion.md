@@ -45,8 +45,23 @@ In addition, the reliability and plausibility of each sensor can be considered.
 
 ### 1.2  본 논문의 제안 
 
+In this paper, we propose a new object-detection and classification method for a multi-layer LiDAR and a CCD sensor. 
+
+The contributions of this work are two-fold: 
+- (1) an effective object-region proposal generation method
+- (2) a decision-level fusion method for accurate object classification.
+
+For effective generation of the object-region proposals, we develop a new method to generate a small number of meaningful object-region proposals from the LiDAR and CCD sensor data. 
+
+For the 3D pointcloud data from the LiDAR sensor, supervoxel segmentation and region-growing methods are used [6],whereas color-flattening image segmentation and semantic grouping methods are proposed for theCCD sensor data. 
+
+Semantic grouping is a process in which tiny partitions extracted from segmentgeneration agglomerate with one another to form meaningful object regions. 
+
+Our proposed colorflattening is based on L1 norm color transform [8]. 
+
+Semantic grouping is performed using our owndissimilarity cost function between the color-flattened and original images.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzIyMzE0ODldfQ==
+eyJoaXN0b3J5IjpbMTkwNTgyMDE4Nl19
 -->
