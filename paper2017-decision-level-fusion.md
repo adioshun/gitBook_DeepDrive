@@ -1,7 +1,7 @@
 | 논문명 | Object Detection and Classification by Decision-Level Fusion for Intelligent Vehicle Systems |
 | --- | --- |
 | 저자\(소속\) | Sang-Il Oh\(Catholic University\) |
-| 학회/년도 | 2017, [논문](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/), [한글](http://academic.naver.com/article.naver?doc_id=195223326) |
+| 학회/년도 | 2017, [논문](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/), [석사학위논문](http://academic.naver.com/article.naver?doc_id=195223326) |
 | 키워드 |  object-detection, classification, decision-level fusion |
 | 데이터셋(센서)/모델 | KITTI |
 | 참고 |  |
@@ -22,11 +22,13 @@ In this paper, we propose a new **object-detection and classification method** u
 	- which use more than two pre-trained convolutional layers to consider local to global features as data representation. 
 3. To represent data using convolutional layers, we apply region of interest (ROI) pooling to the outputs of each layer on the object candidate regions generated using object proposal generation to realize color flattening and semantic grouping for charge-coupled device and Light Detection And Ranging (LiDAR) sensors.
 
-## 
+## 1. Introduction
+
+
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1Mzc1MTQwNF19
+eyJoaXN0b3J5IjpbNjk3NTc4OTgxXX0=
 -->
