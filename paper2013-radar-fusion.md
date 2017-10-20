@@ -115,7 +115,7 @@ different camera views.
 
 - The camera is oriented to the front. 
 
-The center points of RADAR objects are projectedinto the image based on the camera calibration. 
+- The center points of RADAR objects are projectedinto the image based on the camera calibration. 
 
 The symmetry of imagesections around the projected point is estimated. 
 
@@ -125,5 +125,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTM4ODMwNzldfQ==
+eyJoaXN0b3J5IjpbLTE5MTcyNDYzOTRdfQ==
 -->
