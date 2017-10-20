@@ -78,7 +78,7 @@ different camera views.
 
 - The approach combines a LIDAR sensor with camera data. 
 
-- Distance Map은 **RANSAC and 3D adjacency**를 이용하여 The distance map is used to classify parts of the image to ground plane or obstacles using RANSAC and 3D adjacency. 
+- Distance Map에서 **RANSAC**와 **3D adjacency**를 이용하여 지면과 물체를 구분 할수 있다. `The distance map is used to classify parts of the image to ground plane or obstacles using RANSAC and 3D adjacency. `
 
 At the same time the image patches are classifiedto different classes by evaluating color histograms, texture descriptors fromGaussian and Garbor filtered images as well as local binary patterns. 
 
@@ -122,5 +122,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMTkwMzg5NV19
+eyJoaXN0b3J5IjpbOTY1NjU5MzRdfQ==
 -->
