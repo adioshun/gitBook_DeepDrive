@@ -78,15 +78,15 @@ Figure 1. Overview of our work.
 
 - 이 결과물은 일련의 풀링레이어를 통과 하면서 일부 정보를 잃게 된다. `For this output, however, little information loss might occur through the passing of several pooling layers. `
 
-- 반대로, In contrast, the proposed CNN model, similar to unary classifiers,generates a convolutional cube from more than one convolutional layer of a pre-trained CNN modelas image representations. 
+- 반대로, In contrast, the proposed CNN model, similar to unary classifiers, generates a convolutional cube from more than one convolutional layer of a pre-trained CNN model as image representations. 
 
-From the extracted object proposals obtained from the proposal generations,ROI pooling is applied on the convolutional cube to feed them into a fine-tuned classification networkcomprising two convolutional layers, two fully-connected layers and a softmax layer. 
+- From the extracted object proposals obtained from the proposal generations, ROI pooling is applied on the convolutional cube to feed them into a fine-tuned classification network comprising two convolutional layers, two fully-connected layers and a softmax layer. 
 
-Subsequently,to fuse the two detection and classification results of the LiDAR and CCD sensors, we feed the finalsoftmax result vectors and their convolutional cube into the fusion CNN. 
+- 이후 작업으로 결과값 Fuse를 위해 Subsequently,to fuse the two detection and classification results of the LiDAR and CCD sensors, we feed the final softmax result vectors and their convolutional cube into the fusion CNN. 
 
 By fusing the multi-sensor modalities, the detection and classification failures can be compensated. 
 
 In addition, fusing themulti-sensor in the decision level makes it more stable when information conflict occurs in eachmodality when compared to feature-level fusion schemes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE0OTA0NzM0XX0=
+eyJoaXN0b3J5IjpbOTk2MzE1MjM5XX0=
 -->
