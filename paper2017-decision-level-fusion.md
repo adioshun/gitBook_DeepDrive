@@ -190,7 +190,13 @@ Our method consistsof three phases:
 
 ### 3.1 Pre-processing
 
-- For the CCD image input, color flattening is performed, which makes the image assume a monotonous color and is useful in obtaining desirable segmentation results.For the point-cloud input, we transform the 3D point clouds into 3D occupancy voxel spaces.This transformation reduces the noise in the point clouds, i.e., only the obviously reflected pointmeasurements are acquired.
+- For the CCD image input, 
+	- **color flattening** is performed,
+	- 모노톤이 유용함 `which makes the image assume a monotonous color and is useful in obtaining desirable segmentation results.`
+
+- For the point-cloud input, 
+	- we transform the 3D point clouds into **3D occupancy voxel** spaces.
+	- This transformation reduces the noise in the point clouds, i.e., only the obviously reflected pointmeasurements are acquired.
 
 
 ### 3.2 Object-region proposal generation
@@ -228,5 +234,5 @@ To fuse the results from the two separate unary classifiers, we propose aCNN mod
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4OTAxNTMzN119
+eyJoaXN0b3J5IjpbLTkyNzIxNjEzN119
 -->
