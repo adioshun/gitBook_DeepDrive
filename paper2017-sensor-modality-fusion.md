@@ -53,9 +53,11 @@
 
 - 사람의 원격 조정 값을 학습시 사용한다. `The proposed deep learning based system is trained using data recorded under human teleoperation of the UGV.`
 
-각 센서는 As illustratedin Figure 3, each sensor separately can have limitations in environment perception. 
+각 센서는 단점이 있다. `As illustratedin Figure 3, each sensor separately can have limitations in environment perception. There are also other complementary sensory performance characteristics of camera and LiDAR,e.g., sensitivity of a camera to lighting conditions, limitations of a LiDAR in detecting small objects.`
 
-There are also other complementary sensory performance characteristics of camera and LiDAR,e.g., sensitivity of a camera to lighting conditions, limitations of a LiDAR in detecting small objects.
+### 4. PROPOSED SENSOR FUSION FRAMEWORK
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMjI4ODY1N119
+eyJoaXN0b3J5IjpbMTI0NzY2MjYzMl19
 -->
