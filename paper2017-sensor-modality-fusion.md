@@ -27,10 +27,9 @@
 
 - 강화 학습 역시 센서 정보를 사용하여 장애물 회피에 적용되고 있다. `Reinforcement learning techniques have also been utilized to teach the mobile robot to avoid obstacles and navigate through the corridor using sensors such as a laser range finder [7]. `
 
+- [8]에서는 An online navigation 프레임워크를 제안 하였다. `An online navigation framework relying on object recognition was presented in [8]. `
 
-An online navigation framework relying on object recognition was presented in [8]. 
-
-CNNs havebeen successfully used for learning driving decision rules forautonomous navigation [9] and for end-to-end navigation ofa car using a single front facing camera [10] (alternately,debugging tools were developed for these systems to understandthe visual cues the network used to produce a steeringcommand, e.g. [11]). 
+- CNN기반 자율 주행 차량 연구들 `CNNs have been successfully used for learning driving decision rules for autonomous navigation [9] and for end-to-end navigation of a car using a single front facing camera [10] (alternately,debugging tools were developed for these systems to understandthe visual cues the network used to produce a steeringcommand, e.g. [11]). `
 
 Neural network based indoor navigationhas also been studied in multiple works including [12]–[16].In the deep learning literature, fusion of different modalitieshas been studied for various applications in recent yearssuch as in [17] for object detection using images and depthmaps. 
 
@@ -46,5 +45,5 @@ Specifically, we introduce a new gatingmechanism based architecture that enables
 
 The efficacy of the proposed approach isdemonstrated through experimental studies (Figure 2).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzczOTIwOThdfQ==
+eyJoaXN0b3J5IjpbNzgwNjMxNDg3XX0=
 -->
