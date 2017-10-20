@@ -137,10 +137,11 @@ different camera views.
 | 코드 | |
 
 ## RELATED WORK
-
+![](https://i.imgur.com/X0UK5vK.png)
 Fig. 2 shows the different fusion levels inside a perceptionsystem. 
 
-Whilst low level fusion is performed within SLAMcomponent, detection and track level fusions are performedwithin DATMO component. 
+- **low level** fusion is performed within **SLAM component**, 
+- **detection** and **track level** fusions are performed within **DATMO component**. 
 
 At detection level, fusion is performedbetween lists of moving object detections provided byindividual sensors. 
 
@@ -158,5 +159,5 @@ By using an effective fusion strategy at this level, falsetracks can be reduced.
 
 This level is characterized by includingclassification information as complementary to the final output.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMjk1ODc3Ml19
+eyJoaXN0b3J5IjpbNzU1ODIzNTIwXX0=
 -->
