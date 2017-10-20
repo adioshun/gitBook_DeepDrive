@@ -9,6 +9,7 @@
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 * [Paper\_2017\_Decision-Level Fusion](paper2017-decision-level-fusion.md)
 * [Paper\_2013\_RADAR\_Fusion](paper2013-radar-fusion.md)
+* [Paper\_2017\_Sensor Modality Fusion](paper2017-sensor-modality-fusion.md)
 
 ## Related Works
 

@@ -4,7 +4,7 @@
 
 ## 2. Paper
 
-- [Object Detection and Tracking with Side Cameras and RADAR in an Automotive Context](http://www.mi.fu-berlin.de/inf/groups/ag-ki/Theses/Completed-theses/Master_Diploma-theses/2013/Hofmann/Master-Hofmann.pdf?1381479774): 2013, 3장이 센서 퓨전 
+- ~~[Object Detection and Tracking with Side Cameras and RADAR in an Automotive Context](http://www.mi.fu-berlin.de/inf/groups/ag-ki/Theses/Completed-theses/Master_Diploma-theses/2013/Hofmann/Master-Hofmann.pdf?1381479774)~~: 2013, 3장이 센서 퓨전 
 
 - ~~[Object Detection and Classification by Decision-Level Fusion for Intelligent Vehicle Systems](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/)~~: 2017, KITTI, 21p
 
@@ -25,12 +25,11 @@
 - Motion-based Detection and Tracking in 3D LiDAR Scans, Dewan
 
 
-- [Multiple Sensor Fusion and Classification for Moving Object Detection and Tracking](http://ieeexplore.ieee.org/document/7283636/): 2015
+- ~~[Multiple Sensor Fusion and Classification for Moving Object Detection and Tracking](http://ieeexplore.ieee.org/document/7283636/)~~: 2015, 관련연구의 퓨전 레벨 부분만 참고 함
 
-- [Object Perception for Intelligent Vehicle Applications:
-A Multi-Sensor Fusion Approach](https://hal.inria.fr/hal-01019527/document): 2014
+- [Object Perception for Intelligent Vehicle Applications:A Multi-Sensor Fusion Approach](https://hal.inria.fr/hal-01019527/document): 2014
 
-- [Sensor Modality Fusion with CNNs for UGV Autonomous Driving in Indoor Environments](http://cims.nyu.edu/~achoroma/NonFlash/Papers/SMF_CNN.pdf)
+- [Sensor Modality Fusion with CNNs for UGV Autonomous Driving in Indoor Environments](http://cims.nyu.edu/~achoroma/NonFlash/Papers/SMF_CNN.pdf): 2017
 
 - [Acoustic/Lidar Sensor Fusion for Car Tracking in City Traffic Scenarios](http://www.drgoehring.de/bib/tadjine15fastzero/tadjine15fastzero.pdf)
 
