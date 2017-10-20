@@ -104,11 +104,16 @@ different camera views.
 
 - Instead of estimating a **probability representation**, the grid cells are either occupied or empty based on the number of measurements of the laser scanner for the respective cell. 
 
-Adjacent cells that are occupied are merged to an object.A Kalman filter [KB61] is used to track the detected objects. 
+- Adjacent cells that are occupied are merged to an object. 
 
-Unfortunately thefusion process of RADAR and laser data is not described in detail.The approach proposed in [ABC07] shows a fusion of RADAR and camerain which the camera is used to verify and optimize RADAR object tracks. 
+- A Kalman filter [KB61] is used to track the detected objects. 
 
-Thecamera is oriented to the front. 
+###### [ RADAR+camera ]
+
+- The approach proposed in [ABC07] shows a fusion of RADAR and camera 
+	- in which the camera is used to verify and optimize RADAR object tracks. 
+
+The camera is oriented to the front. 
 
 The center points of RADAR objects are projectedinto the image based on the camera calibration. 
 
@@ -120,5 +125,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTAyNzQwNjldfQ==
+eyJoaXN0b3J5IjpbLTM0MjE1ODA0Ml19
 -->
