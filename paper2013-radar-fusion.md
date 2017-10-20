@@ -143,11 +143,17 @@ Fig. 2 shows the different fusion levels inside a perceptionsystem.
 - **low level** fusion is performed within **SLAM component**, 
 - **detection** and **track level** fusions are performed within **DATMO component**. 
 
-At detection level, fusion is performedbetween lists of moving object detections provided byindividual sensors. 
+- At detection level, 
+	- fusion is performed between lists of moving object detections provided by individual sensors. 
 
-At track level, lists of tracks from individualsensor modules are fused to produce the final list of tracks.Promising SLAM results obtained in [1]–[3] motivated ourfocus on the DATMO component. 
+- At track level, 
+	- lists of tracks from individual sensor modules are fused to produce the final list of tracks.
 
-Whilst Vu [1] and Wang [3]use an almost deterministic approach to perform the associationin tracking, we use an evidential approach based on massdistributions over the set of different class hypotheses. 
+Promising SLAM results obtained in [1]–[3] motivated our focus on the DATMO component. 
+
+###### [Vu [1] and Wang [3]]
+
+- Whilst Vu [1] and Wang [3]use an almost deterministic approach to perform the association in tracking, we use an evidential approach based on massdistributions over the set of different class hypotheses. 
 
 Ourreview focuses on the fusion methods inside DATMO that uselidar, camera and radar sensors. 
 
@@ -159,5 +165,5 @@ By using an effective fusion strategy at this level, falsetracks can be reduced.
 
 This level is characterized by includingclassification information as complementary to the final output.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU1ODIzNTIwXX0=
+eyJoaXN0b3J5IjpbMjM1OTc2OTI4XX0=
 -->
