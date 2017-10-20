@@ -24,7 +24,7 @@ In this paper, we propose a new **object-detection and classification method** u
 
 ## 1. Introduction
 
-
+### 1.1 Two data-fusion scheme
 The data-fusion scheme is generally categorized into two types, namely early and late fusion. 
 
 ###### The early-fusion method 
@@ -43,7 +43,10 @@ By using the decision-level fusion scheme for the object detection and classific
 
 In addition, the reliability and plausibility of each sensor can be considered.
 
+### 1.2  본 논문의 제안 
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMzMDkzMDU2XX0=
+eyJoaXN0b3J5IjpbLTEyMzIyMzE0ODldfQ==
 -->
