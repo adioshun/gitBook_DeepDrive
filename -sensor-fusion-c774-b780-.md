@@ -6,15 +6,19 @@
 
 - [Object Detection and Tracking with Side Cameras and RADAR in an Automotive Context](http://www.mi.fu-berlin.de/inf/groups/ag-ki/Theses/Completed-theses/Master_Diploma-theses/2013/Hofmann/Master-Hofmann.pdf?1381479774): 2013, 3장이 센서 퓨전 
 
-- [Object Detection and Classification by Decision-Level Fusion for Intelligent Vehicle Systems](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/): 2017, KITTI, 21p
+- ~~[Object Detection and Classification by Decision-Level Fusion for Intelligent Vehicle Systems](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/)~~: 2017, KITTI, 21p
 
-- [FUSION OF LIDAR 3D POINTS CLOUD WITH 2D DIGITAL CAMERA IMAGE](http://www.secs.oakland.edu/~li4/research/student/JuanLi2015.pdf): 2015, 석사학위, 90p
+- ~~[FUSION OF LIDAR 3D POINTS CLOUD WITH 2D DIGITAL CAMERA IMAGE](http://www.secs.oakland.edu/~li4/research/student/JuanLi2015.pdf)~~: 2015, 석사학위, 90p, 라이다+카메라 -> RGB-D 정보 획득하기, transformatio 논문
 
-- [Survey on Object Detection and Tracking Using Fusion Approach](https://www.ijircce.com/upload/2016/march/98_24_Survey.pdf): 2007, 8P
+- ~~[Survey on Object Detection and Tracking Using Fusion Approach](https://www.ijircce.com/upload/2016/march/98_24_Survey.pdf)~~: 2016, 8P, 일반적 설명 
 
-- [A Survey of ADAS Technologies for the Future Perspective of Sensor Fusion](https://link.springer.com/chapter/10.1007/978-3-319-45246-3_13): 2016
+- ~~[A Survey of ADAS Technologies for the Future Perspective of Sensor Fusion](https://link.springer.com/chapter/10.1007/978-3-319-45246-3_13)~~: 2016, 일반적 설명
 
-- Multi-Sensor Fusion of Occupancy Grids based on Integer Arithmetic
+
+
+
+
+- ~~Multi-Sensor Fusion of Occupancy Grids based on Integer Arithmetic~~: Fusion 프레임워크 제안, 기본 익힌후 살펴 보기 
 
 - Fusing LIDAR and Images for Pedestrian Detection using Convolutional Neural Networks, Schlosser
 
@@ -34,7 +38,7 @@ A Multi-Sensor Fusion Approach](https://hal.inria.fr/hal-01019527/document): 201
 
 ## 3. Article (Post, blog, etc.)
 
-- [Expert Advice: Sensor Fusion for Highly Automated Driving](http://gpsworld.com/expert-advice-sensor-fusion-for-highly-automated-driving/)
+- ~~[Expert Advice: Sensor Fusion for Highly Automated Driving](http://gpsworld.com/expert-advice-sensor-fusion-for-highly-automated-driving/)~~: GNSS관련, 구체적 내용 없음 
 
 - [Particle Filter Implementation](https://medium.com/@andrew.d.wilkie/self-driving-car-engineer-diary-9-898f075e888c): 하단 
 
@@ -53,7 +57,7 @@ A Multi-Sensor Fusion Approach](https://hal.inria.fr/hal-01019527/document): 201
 
 ## 6. Material (Pdf, ppt)
 
-- [Sensor Fusion and Calibration of Velodyne LiDAR and RGB Camera ](https://www.it4i.cz/wp-content/uploads/2014/11/RP7_Velas.pdf): ppt
+- ~~[Sensor Fusion and Calibration of Velodyne LiDAR and RGB Camera ](https://www.it4i.cz/wp-content/uploads/2014/11/RP7_Velas.pdf)~~: ppt
 
 - [Sensor Fusion for Automotive Applications](http://users.isy.liu.se/en/rt/lundquist/Publications/Lundquist2011.pdf): 2011, 331p 
 
@@ -63,9 +67,6 @@ A Multi-Sensor Fusion Approach](https://hal.inria.fr/hal-01019527/document): 201
 
 
 ## 8. Research Group / Conference 
-
-
-- [Sensor Fusion and Calibration of Velodyne LiDAR and RGB Camera ](https://www.it4i.cz/wp-content/uploads/2014/11/RP7_Velas.pdf): ppt
 
 ---
 ![](https://i.imgur.com/8Le2eVF.png)
