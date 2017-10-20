@@ -69,11 +69,25 @@ The architectures of **NetEmb**, **NetConEmb**, and **NetGatedare** described in
 
 #### A. NetEmb
 
+![](https://i.imgur.com/0LPYU7q.png)
+```
+TABLE I: NetEmb: Deep learning based modality fusion architecture using embeddings. The left side of the table is for processing of
+the RGB image from the camera and the right side of the table is for processing of the depth range image from the LiDAR. The feature
+vectors (of length 512) constructed from camera and LiDAR are concatenated at layer 24.
+```
+
 - In NetEmbfeature maps from RGB image and LiDAR depth range image are extracted through a series of convolutional layers.
 - Next, the features extracted from the convolutional layers in both the parallel networks are embedded into a feature vector using a fully connected network. 
 
 #### B. NetConEmb
 
+![](https://i.imgur.com/5k3d8rE.png)
+```
+TABLE II: NetConEmb: Fusion architecture where the convolutional
+feature maps are directly passed through a fully connected
+network instead of first converting them into feature embeddings as
+done in NetEmb. The first 20 layers are identical to NetEmb.
+```
 - In NetConEmb, the convolutional feature maps are passed into a fully connected network. 
 
 #### C. NetGatedare
@@ -86,5 +100,5 @@ The architectures of **NetEmb**, **NetConEmb**, and **NetGatedare** described in
 
 ![](https://i.imgur.com/FnFDsYn.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDQ2MTQzMzVdfQ==
+eyJoaXN0b3J5IjpbLTIyODMyOTExMV19
 -->
