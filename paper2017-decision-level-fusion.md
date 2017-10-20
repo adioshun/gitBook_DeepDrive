@@ -159,7 +159,7 @@ In addition, fusing the multi-sensor in the decision level makes it more stable 
 
 - The fusion methods are divided into two categories, namely **early** and **late** fusion. 
 
-####
+#### A. 
 
 In the early fusion method, the measurements are fused by mapping them together,or by concatenation, or probabilistic fusion [41,44,45]. 
 
@@ -173,5 +173,5 @@ Chavez-Garcia and Aycard [46] proposed an evidentialframework to improve the det
 
 In the present study, we use the CNN framework to jointly consider the classificationperformance of each sensor modality, as well as the uncertainties.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyOTI3MDA1OF19
+eyJoaXN0b3J5IjpbLTc5MzQxNDAyNV19
 -->
