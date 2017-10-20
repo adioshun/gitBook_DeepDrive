@@ -74,9 +74,9 @@ different camera views.
 
 - 최근 연구는 3D 센서에 집중되어 있다. `Current research mostly focuses on sensors which provide 3-dimensional information of the environment. `
 
-Thus, papers that focus on camera-RADAR fusion are rather rare.One of the recent approaches which utilize sensor fusion is [ZXY12]. 
+###### [ZXY12]
 
-The approachcombines a Light Detection And Ranging (LIDAR) sensor with camera data. 
+The approach combines a LIDAR sensor with camera data. 
 
 LIDAR sensors measure the time light travels to a certain object point tomeasure its distance. 
 
@@ -128,5 +128,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzMzNzQ0NDJdfQ==
+eyJoaXN0b3J5IjpbMTk4ODkzMTEzNl19
 -->
