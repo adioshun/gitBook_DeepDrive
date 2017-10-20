@@ -66,7 +66,6 @@
 * [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
 * [Paper\_2017\_SqueezeSeg](paper2017-squeezeseg.md)
 * [Paper\_2016\_FPNN](paper2016-fpnn.md)
-* [Paper\_2016\_DeepSlidingShape \(30%\)](paper2016-deepslidingshape.md)
 * ----- Pointcloud based -----
 * [Paper\_2016\_PointNetDeep \(50%\)](paper2016-pointnet.md)
 * [Paper\_2016\_PointNet3D \(50%\)](paper2016-pointnet3d.md)
@@ -90,6 +89,7 @@
 * [Paper\_2016\_FusionNet \(50%\)](paper2016-fusionnet.md)
 * [Report\_2017\_cs231n\_Dempster-Shafer](report2017-cs231n-dempster-shafer.md)
 * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
+* [Paper\_2016\_DeepSlidingShape \(30%\)](paper2016-deepslidingshape.md)
 
 ## 4D \(Time, RNN\)
 
