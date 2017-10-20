@@ -51,9 +51,10 @@ The contributions of this work are two-fold:
 - (1) an effective **object-region proposal generation** method
 - (2) a **decision-level fusion** method for accurate object classification.
 
-For effective generation of the object-region proposals, we develop a new method to generate a small number of meaningful object-region proposals from the LiDAR and CCD sensor data. 
 
-For the 3D pointcloud data from the LiDAR sensor, supervoxel segmentation and region-growing methods are used [6],whereas color-flattening image segmentation and semantic grouping methods are proposed for theCCD sensor data. 
+기존 **object-region proposals**방법 
+- For the 3D pointcloud data from the LiDAR sensor : **supervoxel segmentation** and **region-growing methods** are used [6],
+- for the CCD sensor data : **color-flattening image segmentation** and semantic grouping methods are proposed  
 
 Semantic grouping is a process in which tiny partitions extracted from segmentgeneration agglomerate with one another to form meaningful object regions. 
 
@@ -63,5 +64,5 @@ Semantic grouping is performed using our own dissimilarity cost function between
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjIwODgxNzhdfQ==
+eyJoaXN0b3J5IjpbLTQ2MDAwNzg3XX0=
 -->
