@@ -7,9 +7,7 @@
 * [Paper\_2017\_Survey\_CV4Vehicle \(50%\)](paper2017-survey.md)
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
-* [Paper\_2017\_Decision-Level Fusion](paper2017-decision-level-fusion.md)
-* [Paper\_2013\_RADAR\_Fusion](paper2013-radar-fusion.md)
-* [Paper\_2017\_Sensor Modality Fusion](paper2017-sensor-modality-fusion.md)
+
 
 ## Related Works
 
@@ -90,6 +88,11 @@
 * [Report\_2017\_cs231n\_Dempster-Shafer](report2017-cs231n-dempster-shafer.md)
 * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
 * [Paper\_2016\_DeepSlidingShape \(30%\)](paper2016-deepslidingshape.md)
+* [Paper\_2017\_Decision-Level Fusion](paper2017-decision-level-fusion.md)
+* [Paper\_2013\_RADAR\_Fusion](paper2013-radar-fusion.md)
+* [Paper\_2017\_Sensor Modality Fusion](paper2017-sensor-modality-fusion.md)
+
+
 
 ## 4D \(Time, RNN\)
 
