@@ -10,18 +10,11 @@
 
 ### 1.2 Sensor Fusion
 
-#### A. 정의 
+###### [ 정의 ]
 
 Data fusion techniques combine data from multiple sensors and related information to achieve more specific inferences than could be achieved by using a single, independent sensor. [HL01]
 
-#### B. 분류 
-
-- In [HL01] these are referenced as 
-	- Data Level Fusion, 
-	- Feature Level Fusion 
-	- Declaration Level Fusion. 
-
-#### C. 용어
+###### [ 용어 ]
 
 - A sensor : a device which provides information of the environment in any form of raw data. 
 
@@ -30,6 +23,15 @@ Data fusion techniques combine data from multiple sensors and related informatio
 
 - State estimation : the current state based on the given input, 
 	- e.g. the position of a tracked vehicle
+
+##### C. 분류 
+
+- In [HL01] these are referenced as 
+	- Data Level Fusion, 
+	- Feature Level Fusion 
+	- Declaration Level Fusion. 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MzcwNzgxNV19
+eyJoaXN0b3J5IjpbMjAxOTE2NDYxNV19
 -->
