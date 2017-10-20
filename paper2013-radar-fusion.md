@@ -31,7 +31,18 @@ Data fusion techniques combine data from multiple sensors and related informatio
 	- Feature Level Fusion 
 	- Declaration Level Fusion. 
 
+#### A. Data Level Fusion
 
+Data Level Fusion or Low Level Sensor Fusion (Figure 1.1) describes a method
+of combining raw data from different sensors with each other, e.g. having a calibrated
+camera and a calibrated Time-of-Flight (ToF) depth-sensor which creates
+a depth map of the environment, each camera pixel can be mapped to a distance
+measurement of the ToF sensor and vice versa.
+
+#### A. Feature Level Fusion
+
+
+#### A. Declaration Level Fusion
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5ODA5MjkzM119
+eyJoaXN0b3J5IjpbMzI2MTA4NTg5XX0=
 -->
