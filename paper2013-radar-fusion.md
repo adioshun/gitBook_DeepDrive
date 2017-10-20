@@ -76,13 +76,11 @@ different camera views.
 
 ###### [ZXY12]
 
-- The approach combines a LIDAR sensor with camera data. 
+- The approach combines a **LIDAR sensor** with **camera data**. 
+	- LIDAR sensor의 Distance Map에서 **RANSAC**와 **3D adjacency**를 이용하여 지면과 물체를 구분 할수 있다. `The distance map is used to classify parts of the image to ground plane or obstacles using RANSAC and 3D adjacency. `
+	- image patches are classified to different classes by evaluating color histograms, texture descriptors from **Gaussian** and **Garbor filtered** images as well as local binary patterns. 
 
-- Distance Map에서 **RANSAC**와 **3D adjacency**를 이용하여 지면과 물체를 구분 할수 있다. `The distance map is used to classify parts of the image to ground plane or obstacles using RANSAC and 3D adjacency. `
-
-At the same time the image patches are classifiedto different classes by evaluating color histograms, texture descriptors fromGaussian and Garbor filtered images as well as local binary patterns. 
-
-Resultingin 107 features, each patch is classified by a Multi-Layer-Perceptron to differentcategories. 
+Resulting in 107 features, each patch is classified by a Multi-Layer-Perceptron to different categories. 
 
 The size of the object determined by the LIDAR obstacle estimationas well as labels from the image analysis are passed into a fuzzy logic frameworkwhich returns three labels – environment, middle high or obstacle. 
 
@@ -122,5 +120,5 @@ However, this approach does only work for scenarios in which vehicles are viewed
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY1NjU5MzRdfQ==
+eyJoaXN0b3J5IjpbNDg5MzIxMzc1XX0=
 -->
