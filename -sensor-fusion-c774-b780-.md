@@ -58,6 +58,8 @@
 
 - [Vehicle Detection using LiDAR and Camera sensor Fusion](https://www.youtube.com/watch?v=V3cN5LrPr4M)
 
+- [Why You Should Use The Kalman Filter Tutorial - Pokemon Example](https://www.youtube.com/watch?v=bm3cwEP2nUo)
+
 ## 6. Material (Pdf, ppt)
 
 - ~~[Sensor Fusion and Calibration of Velodyne LiDAR and RGB Camera ](https://www.it4i.cz/wp-content/uploads/2014/11/RP7_Velas.pdf)~~: ppt
@@ -81,7 +83,7 @@
 ### LESSON 1 : Introduction and Sensors
 Meet the team at Mercedes who will help you track objects in real-time with Sensor Fusion.
 
-- [Intuition of Kalman Filter for Self-Driving-Car Applications](https://medium.com/towards-data-science/intuition-of-kalman-filter-for-self-driving-car-applications-749b356e19db)
+- ~~[Intuition of Kalman Filter for Self-Driving-Car Applications](https://medium.com/towards-data-science/intuition-of-kalman-filter-for-self-driving-car-applications-749b356e19db)~~ 
 
 
 
