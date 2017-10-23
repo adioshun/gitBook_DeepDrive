@@ -36,7 +36,59 @@ In order to integrate different cues we use
 	- **Histogram of oriented gradients (HOG)** [9], that provides a good description of the object contours 
 	- **Local binary pattern (LBP)** [10] as texture-based feature. 
 
+These two types of features providecomplementary information and the fusion of bothtypes of features has been seen to boost the performance ofeither feature separately [11]–[13]. 
 
+From the seminal workof Dalal and Triggs [9], it has been seen that using differenttypes of gradient-based features and their spatial distribution,such as in the HOG descriptor [9] provides a distinctive representationof both humans and other objects classes. 
+
+However,there exist in the literature other approaches such the integralchannel features proposed by Dollár et al. [14] that allowsintegrating multiple kinds of low-level features such as the gradientorientation over the intensity and LUV images, extractedfrom a large number of local windows of different sizes andat multiple positions, allowing for a flexible representation ofthe spatial distribution. 
+
+In [15] and [16], it has been seen thatincluding color boosts the performance significantly, being thistype of feature complementary to the ones we used in thispaper. 
+
+Context features have also been seen to aid [17], [18]and could be easily integrated as well. 
+
+Exploring alternativetypes of spatial pooling of the local features is also beneficialas shown in [6] and is also complementary to the approachused in this paper.In order to integrate multiple image modalities, we consideredthe fusion of dense depth maps with visible spectrumimages. 
+
+The use of depth information has gained attention,thanks to the appearance of cheap sensors such as the one inKinect, which provides a dense depth map registered with anRGB image (RGB-D). 
+
+However, the sensor of Kinect has amaximum range of approximately 4 m and is not very reliablein outdoor scenes, thus having limited applicability for objectsdetection in on-board sequences. 
+
+On the other hand, lightdetection and ranging (LIDAR) sensors such as the VelodyneHDL-64E have a maximum range of up to 50 m and areappropriate for outdoor scenarios. 
+
+In this paper, we explorethe fusion of dense depth maps (obtained based on the sparsecloud of points) with RGB images. 
+
+Following [19], the informationprovided by each modality can be fused using eitheran early-fusion scheme, i.e., at the feature level, or a latefusionscheme, i.e., at the decision level. 
+
+In this paper, usingan early fusion scheme, where descriptors from each modalityare concatenated, provided the best results.Object detection based on data coming from multiplemodalities has been a relatively active topic of study [1],and in particular the use of 2-D laser scanners and visiblespectrum images has been studied in several works, forinstance [20] and [21]. 
+
+Only recently authors are starting tostudy the impact of high-definition 3-D LIDAR [20]–[26].Most of these works propose specific descriptors forextracting information directly from the 3-D cloud ofpoints [20], [22]–[26]. 
+
+A common approach is to detect objectsindependently in the 3-D cloud of points and in the visiblespectrum images, and then combining the detections usingan appropriate strategy [22], [23], [26]. 
+
+Following the stepsof [21], dense depth maps are obtained by first registering the3-D cloud of points captured by a Velodyne sensor with theRGB image captured with the camera, and then interpolatingthe resulting sparse set of pixels to obtain a dense map where each pixel has an associated depth value. 
+
+Given this map, 2-Ddescriptors in the literature can be extracted in order to obtaina highly distinctive object representation. 
+
+This paper differsfrom [21] in that we use multiple descriptors and adapt themto have a good performance in dense depth images. 
+
+While [21]employs a late fusion scheme, in our experimental analysiswe evaluate both early and late fusion approaches in the givenmulticue and multimodality framework.Learning a model flexible enough for dealing with multipleviews and multiple positions of an articulated object is a hardtask for a holistic classifier. 
+
+In order to fulfill this aspect wemake use of random forests (RFs) of local experts [27], whichhas a similar expressive power than the popular deformablepart models (DPMs) [28] and less computational complexity.In this method, each tree of the forest provides a differentconfiguration of local experts, where each local expert takesthe role of a part model. 
+
+At learning time, each tree learnsone of the characteristic configurations of local patches, thusaccommodating for different flexible articulations occurring inthe training set. 
+
+In [27], the RF approach consistently outperformedDPM. 
+
+An advantage of the RF method is that only asingle descriptor needs to be extracted for the whole window,and each local expert reuses the part of the descriptor thatcorresponds to the spatial region assigned to it. 
+
+Its computationalcost is further significantly reduced by applying a softcascade, operating in close to real time. 
+
+Contrary to the DPM,the original RF method learns a single model, thus not consideringdifferent viewpoints separately. 
+
+In this paper, we extendthis method to learn multiple models, one for each 3-D pose,and evaluate both the original single model approach and themultimodel approach. 
+
+Several authors have proposed methodsfor combining local detectors [28], [29] and multiple localpatches [30]–[32]. 
+
+The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0ODgyMTYwNl19
+eyJoaXN0b3J5IjpbLTEzNTUxNzE4MDBdfQ==
 -->
