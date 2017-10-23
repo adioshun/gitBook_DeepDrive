@@ -76,7 +76,7 @@ we mainly discuss two closely-related lines:
 
 - 평균`(averaging )`을 이용한 방식은 각 네트워크를 독립적으로 학습 한다. `The averaging approach learns each network separately, which is equivalent to learn the network jointly that averages the loss functions. `
 
-Our approach, in contrast, performs the feature fusion deeply over several intermediatelayers and simultaneously learns the representations of the (base) networks.
+- 반면 제안 방식은 Our approach, in contrast, performs the feature fusion deeply over several intermediate layers and simultaneously learns the representations of the (base) networks.
 
 The inception module in GoogLeNet [20] can be viewed as a fusion stage: concatenatethe outputs of several subnetworks with different lengths. 
 
@@ -96,5 +96,5 @@ Net2Net [18] also uses a teachernet to help train a (wider or deeper) student ne
 
 Our approach, in our suggested choice: includingone deep base network and one shallow (but could still be deep) network, alsouses the shallow network to help train the deep base network, meanwhile thedeep base network also helps train the shallow network, i.e., they benefit fromeach other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MTY4NjA2OF19
+eyJoaXN0b3J5IjpbMTc1MjQ3NjA3N119
 -->
