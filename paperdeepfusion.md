@@ -55,6 +55,16 @@
 
 - 또 다른 장점은 정보의 흐름이 개선(`칼만필터 효과??`) 된다는 것이다. `There is one more benefit from deep fusion: the flow of information is improved.`
 	- Consider the case where one base network is very deep but the other base network is not deep, which is the choice we suggest. 
+
+The earlier intermediate layer in the deeper base network might have a shorter path through the other base network to the output, which implies that the supervision can be fast transformed to the earlier intermediate layer. 
+
+On the other hand, the later intermediatelayer might also have a shorter path from the input, which indicatesthat the input can be fast flowed to the later intermediate layer. 
+
+As a result,training the fused net composed from a very deep base network is less difficultthan training the very deep base network itself. 
+
+Furthermore, the deep and shallowbase networks are jointly learnt and can benefit from each other. 
+
+## 2 Related Work
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTgzODc5OTVdfQ==
+eyJoaXN0b3J5IjpbMTUwNTc1NzgzOV19
 -->
