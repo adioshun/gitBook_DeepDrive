@@ -75,10 +75,8 @@ we mainly discuss two closely-related lines:
 ```
 1. Krizhevsky, A., Sutskever, I., Hinton, G.E.: Imagenet classification with deep convolutional neural networks. In: Advances in Neural Information Processing Systems 25: 26th Annual Conference on Neural Information Processing Systems 2012. Proceedings of a meeting held December 3-6, 2012, Lake Tahoe, Nevada, United States. (2012) 1106–1114
 16. He, K., Zhang, X., Ren, S., Sun, J.: Deep residual learning for image recognition. CoRR abs/1512.03385 (2015)
-
-
-
-
+19. Simonyan, K., Zisserman, A.: Very deep convolutional networks for large-scale image recognition. CoRR abs/1409.1556 (2014)
+20. Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S., Anguelov, D., Erhan, D.,Vanhoucke, V., Rabinovich, A.: Going deeper with convolutions. In: IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2015, Boston, MA, USA, June 7-12, 2015. (2015) 1–9
 ```
 
 - 입력에 따라 **평균 가중치(weighted averaging)**를 고려하는 방식이 이후 제안 되었다. `Multi-column deep neural networks [21] presents an empirical study about decision fusion, later extended to an adaptive version, weighted averaging with the weights depending on the input [22]. `
@@ -87,6 +85,10 @@ we mainly discuss two closely-related lines:
 
 - 반면 제안 방식은 특징들을 fusion한 후에 동시에 학습하는 방법이다. `Our approach, in contrast, performs the feature fusion deeply over several intermediate layers and simultaneously learns the representations of the (base) networks.`
 
+```
+21. Ciresan, D.C., Meier, U., Schmidhuber, J.: Multi-column deep neural networks for image classification. In: 2012 IEEE n, Providence, RI, USA, June 16-21, 2012. (2012) 3642–3649
+22. Agostinelli, F., Anderson, M.R., Lee, H.: Robust image denoising with multicolumn deep neural networks. In: Advances in Neural Information Processing Systems 26: 27th Annual Conference on Neural Information Processing Systems 2013. Proceedings of a meeting held December 5-8, 2013, Lake Tahoe, Nevada, United States. (2013) 1493–1501
+```
 
 ###### [GooLeNet과의 비교]
 
@@ -130,5 +132,5 @@ For instance,
 ```
 제안 방식은 Our approach, in our suggested choice: including one deep base network and one shallow (but could still be deep) network, also uses the shallow network to help train the deep base network, meanwhile the deep base network also helps train the shallow network, i.e., they benefit from each other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNTk5NTg0NV19
+eyJoaXN0b3J5IjpbMjgwNzk4NTgyXX0=
 -->
