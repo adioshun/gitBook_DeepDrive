@@ -133,3 +133,6 @@ For instance,
 제안 방식은 Our approach, in our suggested choice: including one deep base network and one shallow (but could still be deep) network, also uses the shallow network to help train the deep base network, meanwhile the deep base network also helps train the shallow network, i.e., they benefit from each other and are trained simultaneously.
 
 ## 3. 제안 방식 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTg3MTAyOTUzNV19
+-->
