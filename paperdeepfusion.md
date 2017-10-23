@@ -44,7 +44,11 @@
 본 논문의 제안 
 - **Base networks 그룹**으로 구성된 deeply-fused neural net 제안`we introduce a deep fusion approach and present a deeply-fused neural net formed by combining a group of base networks`
 
+The main idea is toperform fusion over the intermediate representations of the base networks, wherethe fused output serves as the input of the remaining part of each base network,rather than only over the final representations or the final classification scores,and such fusions are performed several times at different intermediate layers.There is a block-exchangeable property (the block is the subnetwork betweentwo successive fusions in a base network): switch blocks from one base networkto another one within one fusion, resulting in two different base networks withpossibly different depth from the originals (e.g., deep network being less deep andshallow network being less shallow), but the fused net is not changed. 
 
+In otherwords, a fused net can be formed by different groups of base networks. 
+
+Thus,the deeply-fused net is able to learn multi-scale representations from much morebase networks, and even same-scale representations can be different and learntfrom different base networks.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjEwNTYzODBdfQ==
+eyJoaXN0b3J5IjpbLTE2NTk1ODg3NDNdfQ==
 -->
