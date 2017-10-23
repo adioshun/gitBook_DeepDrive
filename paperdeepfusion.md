@@ -80,11 +80,15 @@ we mainly discuss two closely-related lines:
 
 - GooLeNet의 Inception도 퓨전 방식으로 볼수 있다. `The inception module in GoogLeNet [20] can be viewed as a fusion stage: concatenate the outputs of several subnetworks with different lengths. `
 	- 다른점은 제안 방식은 퓨전의 합(sum)을 이용하는 것이다. `It is different from our approach using the summation for fusion. `
-	- The GoogLeNet architecture,consisting of a sequence of inception modules, is also a kind of deep fusion, i.e.,deep concatenation fusion. 
+	- The GoogLeNet architecture, `consisting of a sequence of inception modules`, is also a kind of deep fusion, 
+		- i.e.,deep concatenation fusion. 
 
-But it is not as direct as our deep summation fusion.The output of each subnetwork in an inception module is narrower than theinput of the subsequent inception module. 
+But it is not as direct as our deep summation fusion.
 
-Hence it is necessary to append manychannels with all 0 entries in the output to match the size with the input of thesubsequent inception module or add more convolution operations to form thefused network. 
+The output of each subnetwork in an inception module is narrower than the input of the subsequent inception module. 
+
+Hence it is necessary to append many channels with all 0 entries in the output to match the size with the input of the subsequent inception module or add more convolution operations to form the fused network. 
+
 
 Skip-layer connection, such as deeply-supervised nets [14] and itsvariant [7], Highway [15], ResNet [16], as we will show, resembles our approachand can be regarded as special examples of our approach.The teacher-student framework suggests that learning a hard-trained networkcan benefit from an easily-trained network. 
 
@@ -94,5 +98,5 @@ Net2Net [18] also uses a teachernet to help train a (wider or deeper) student ne
 
 Our approach, in our suggested choice: includingone deep base network and one shallow (but could still be deep) network, alsouses the shallow network to help train the deep base network, meanwhile thedeep base network also helps train the shallow network, i.e., they benefit fromeach other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMwMzg3NTQyXX0=
+eyJoaXN0b3J5IjpbLTEzMTY5MTA2NTldfQ==
 -->
