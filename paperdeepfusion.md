@@ -33,8 +33,9 @@
 - over-fitting 예방 :  Dropout [8] and other regularization techniques, such as weight decay and path regularization [9]
 - vanishing gradient problem : Normalized variance-preserving weight initialization, such as [10–12], 
 - both the training speed and the recognition performance : Batch normalization [13] is shown to improve
+- improve the flow of information and accordingly help train a very deep network. : Skip-layer connections between layers (including the output layer) and other network structure modifications, such as deeply-supervised nets [14] and its variant [7], Highway [15], ResNet [16], inception-v4 [3]
 
-Skip-layer connections between layers (including the output layer) and other network structure modifications, such as deeply-supervised nets [14] and its variant [7], Highway [15], ResNet [16], inception-v4 [3], are able to improve the flow of information and accordingly help train a very deep network. 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMyNTQ1MjExXX0=
+eyJoaXN0b3J5IjpbMTE3ODk0MjUxMV19
 -->
