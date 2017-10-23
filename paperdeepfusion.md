@@ -30,12 +30,18 @@
 
 딥러닝은 최근 많은 발전을 보였지만 아직 효율성은 부족하다. 효율성 증대를 위한 다양한 연구가 있따. 
 
-- over-fitting 예방 :  Dropout [8] and other regularization techniques, such as weight decay and path regularization [9]
-- vanishing gradient problem : Normalized variance-preserving weight initialization, such as [10–12], 
-- both the training speed and the recognition performance : Batch normalization [13] is shown to improve
-- improve the flow of information and accordingly help train a very deep network. : Skip-layer connections between layers (including the output layer) and other network structure modifications, such as deeply-supervised nets [14] and its variant [7], Highway [15], ResNet [16], inception-v4 [3]
+- over-fitting 예방 :  
+	- Dropout [8] and 
+	- other regularization techniques, such as **weight decay** and **path regularization** [9]
+- vanishing gradient problem : 
+	- Normalized variance-preserving weight initialization, such as [10–12], 
+- both the training speed and the recognition performance :
+	-  Batch normalization [13] 
+- improve the flow of information and accordingly help train a very deep network. : 
+	- Skip-layer connections between layers (including the output layer) and 
+	- other network structure modifications, such as **deeply-supervised nets** [14] and its variant [7], Highway [15], ResNet [16], inception-v4 [3]
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3ODk0MjUxMV19
+eyJoaXN0b3J5IjpbLTE4MjIxMzYzMjNdfQ==
 -->
