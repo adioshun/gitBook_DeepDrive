@@ -108,7 +108,14 @@ For instance,
 
 - Net2Net [18] also uses a teacher-net to help train a (wider or deeper) student net, through a function-preserving transform to initialize the parameters of the student net according to the parameters of the teacher net. 
 
-제안 방식은 Our approach, in our suggested choice: including one deep base network and one shallow (but could still be deep) network, also uses the shallow network to help train the deep base network, meanwhile the deep base network also helps train the shallow network, i.e., they benefit from each other and are trained simultaneously.
+```
+17. Romero, A., Ballas, N., Kahou, S.E., Chassang, A., Gatta, C., Bengio, Y.: Fitnets:
+Hints for thin deep nets. CoRR abs/1412.6550 (2014)
+18. Chen, T., Goodfellow, I.J., Shlens, J.: Net2net: Accelerating learning via knowledge
+transfer. CoRR abs/1511.05641 (2015)
+
+제안
+ 방식은 Our approach, in our suggested choice: including one deep base network and one shallow (but could still be deep) network, also uses the shallow network to help train the deep base network, meanwhile the deep base network also helps train the shallow network, i.e., they benefit from each other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAyMTkzMjg5XX0=
+eyJoaXN0b3J5IjpbLTkwNDY5NTYzNV19
 -->
