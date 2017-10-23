@@ -42,7 +42,9 @@
 	- other network structure modifications, such as **deeply-supervised nets** [14] and its variant [7], Highway [15], ResNet [16], inception-v4 [3]
 
 본 논문의 제안 
-- base networks 그룹으로 구성된 deeply-fused neural net 제안 combining a group of base networks
+- **Base networks 그룹**으로 구성된 deeply-fused neural net 제안`we introduce a deep fusion approach and present a deeply-fused neural net formed by combining a group of base networks`
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyOTQ5NDYwMl19
+eyJoaXN0b3J5IjpbLTE4NjEwNTYzODBdfQ==
 -->
