@@ -15,10 +15,11 @@
 
 ## 1. Introducion 
 
-현실세계에서 Detector의 성능 향상을 위해서는 다음이 중요하다. exploit sources of information along three orthogonal axis: 
+현실세계에서 Detector의 성능 향상을 위해서는 다음이 중요하다. `In order to obtain a detector that successfully operates under realistic conditions, it becomes critical to exploit sources of information along three orthogonal axis`
 - 1) the integration of multiple feature cues (contours, texture, etc.); 
 - 2) the fusion of multiple image modalities (color, depth, etc.); 
--  3) the use of multiple views (frontal, lateral, etc.) of the object by learning a strong classifier that accommodates for both different 3-D points of view and multiple flexible articulations.
+- 3) the use of multiple views (frontal, lateral, etc.) of the object 
+by learning a strong classifier that accommodates for both different 3-D points of view and multiple flexible articulations.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzODQwMzg3OF19
+eyJoaXN0b3J5IjpbLTkwNjQ4NjY3Ml19
 -->
