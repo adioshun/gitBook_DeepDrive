@@ -86,8 +86,8 @@ we mainly discuss two closely-related lines:
 - 반면 제안 방식은 특징들을 fusion한 후에 동시에 학습하는 방법이다. `Our approach, in contrast, performs the feature fusion deeply over several intermediate layers and simultaneously learns the representations of the (base) networks.`
 
 ```
-21. Ciresan, D.C., Meier, U., Schmidhuber, J.: Multi-column deep neural networks for image classification. In: 2012 IEEE cvprn, Providence, RI, USA, June 16-21, 2012. (2012) 3642–3649
-22. Agostinelli, F., Anderson, M.R., Lee, H.: Robust image denoising with multicolumn deep neural networks. In: Advances in Neural Information Processing Systems 26: 27th Annual Conference on Neural Information Processing Systems 2013. Proceedings of a meeting held December 5-8, 2013, Lake Tahoe, Nevada, United States. (2013) 1493–1501
+21. Ciresan, D.C., Meier, U., Schmidhuber, J.: Multi-column deep neural networks for image classification. In: 2012 IEEE CVPR
+22. Agostinelli, F., Anderson, M.R., Lee, H.: Robust image denoising with multicolumn deep neural networks. 2013.
 ```
 
 ###### [GooLeNet과의 비교]
@@ -132,5 +132,5 @@ For instance,
 ```
 제안 방식은 Our approach, in our suggested choice: including one deep base network and one shallow (but could still be deep) network, also uses the shallow network to help train the deep base network, meanwhile the deep base network also helps train the shallow network, i.e., they benefit from each other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTgxMjUxNDFdfQ==
+eyJoaXN0b3J5IjpbMTI1NzAxODYxMl19
 -->
