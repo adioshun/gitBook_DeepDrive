@@ -3,7 +3,7 @@
 | 저자\(소속\) | Jingdong Wang \(MS\) |
 | 학회/년도 | May 2016, [논문](https://arxiv.org/abs/1605.07716) |
 | 키워드 |DeeplyFusion2016, MV3D에 영향줌 |
-| 데이터셋(센서)/모델 | |
+| 데이터셋(센서)/모델 | CIFAR-10,100 |
 | 참고 | |
 | 코드 | |
 
@@ -132,5 +132,5 @@ For instance,
 ```
 제안 방식은 Our approach, in our suggested choice: including one deep base network and one shallow (but could still be deep) network, also uses the shallow network to help train the deep base network, meanwhile the deep base network also helps train the shallow network, i.e., they benefit from each other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NzAxODYxMl19
+eyJoaXN0b3J5IjpbMTE0NjQyMTc5Ml19
 -->
