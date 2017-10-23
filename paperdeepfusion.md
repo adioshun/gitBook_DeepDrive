@@ -9,7 +9,10 @@
 
 #  DeeplyFusion
 
-- 중간 representations 을 합치는 기능 수행, 합쳐진 결과는 네트워크의 나머지 부분의 입력으로 작용 Combine the intermediate representations of base networks, where the fused output serves as the input of the remaining part of each base network, and perform such combinations deeply over several intermediate representations
+- 중간 representations 을 합치는 기능 수행, 합쳐진 결과는 네트워크의 나머지 부분의 입력으로 작용 
+	- **Combine** the **intermediate representations** of base networks, 
+		- where the **fused output** serves as the **input** of the remaining part of each base network, 
+		- and perform such combinations deeply over **several intermediate representations**
 
 
 First, it is able to learn multi-scale representations as it enjoys the benefits
@@ -27,5 +30,5 @@ the fused net is less difficult than training the initial deep base network.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwOTQyNjU2MV19
+eyJoaXN0b3J5IjpbNjIxNTQ5MzE0XX0=
 -->
