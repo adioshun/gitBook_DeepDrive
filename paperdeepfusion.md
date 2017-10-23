@@ -109,9 +109,6 @@ Conference on Computer Vision, ICCV 2015, Santiago, Chile, December 7-13, 2015.
 abs/1507.06228 (2015)
 16. He, K., Zhang, X., Ren, S., Sun, J.: Deep residual learning for image recognition.
 CoRR abs/1512.03385 (2015)
-
-
-
 ```
 
 ###### [teacher-student framework와의 비교]
@@ -130,5 +127,5 @@ For instance,
 ```
 제안 방식은 Our approach, in our suggested choice: including one deep base network and one shallow (but could still be deep) network, also uses the shallow network to help train the deep base network, meanwhile the deep base network also helps train the shallow network, i.e., they benefit from each other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc4OTQyODU0XX0=
+eyJoaXN0b3J5IjpbMTgwNzMyNjY1Ml19
 -->
