@@ -26,7 +26,7 @@
 - 왜냐 하면.. because the fused net could be composed from a less deep base network, 
 - 덕분에 ....and thus training the fused net is less difficult than training the initial deep base network.
 
-
+## 1 Introduction
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTEwMTE5NTBdfQ==
+eyJoaXN0b3J5IjpbNTA0MzQ0MzQ1XX0=
 -->
