@@ -30,7 +30,9 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 - MV detection of different objects.
 ```
 
-제안 방식은 그림1에서 보는 바와 같이 성능 평가 할것이다. The proposed method (general scheme in Fig. 1) will be evaluated in key objects for autonomous and semi-autonomous vehicles such as pedestrians, cyclists, and cars.
+제안 방식은 그림1에서 보는 바와 같이 성능 평가 할것이다. `The proposed method (general scheme in Fig. 1) will be evaluated in key objects for autonomous and semi-autonomous vehicles such as pedestrians, cyclists, and cars.`
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzUyODg3OV19
+eyJoaXN0b3J5IjpbNjc4MTI3MTc5XX0=
 -->
