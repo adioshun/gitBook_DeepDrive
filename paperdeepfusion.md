@@ -27,6 +27,7 @@
 - 덕분에 ....and thus training the fused net is less difficult than training the initial deep base network.
 
 ## 1 Introduction
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA0MzQ0MzQ1XX0=
+eyJoaXN0b3J5IjpbMTM3NzE5NjgwN119
 -->
