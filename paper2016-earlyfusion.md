@@ -3,11 +3,11 @@
 | 저자\(소속\) | \(\) |
 | 학회/년도 | IEEE Transactions on Cybernetics 2016, [논문](http://ieeexplore.ieee.org/document/7533479/) |
 | 키워드 |EarlyFusopn |
-| 데이터셋(센서)/모델 | |
+| 데이터셋(센서)/모델 |KITTI |
 | 참고 | |
 | 코드 | |
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NzQ5NDM5XX0=
+eyJoaXN0b3J5IjpbLTE2OTU2Mjc5OF19
 -->
