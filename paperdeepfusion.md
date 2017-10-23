@@ -94,9 +94,13 @@ Hence it is necessary to append many channels with all 0 entries in the output t
 
 ###### []
 
-Skip-layer connection, such as deeply-supervised nets [14] and itsvariant [7], Highway [15], ResNet [16], as we will show, resembles our approachand can be regarded as special examples of our approach.The teacher-student framework suggests that learning a hard-trained networkcan benefit from an easily-trained network. 
+Skip-layer connection resembles our approach and can be regarded as special examples of our approach.
 
-> Skip-layer connection = deeply-supervised nets [14] and itsvariant [7], Highway [15], ResNet [16], 
+> Skip-layer connection = deeply-supervised nets [14],  its variant [7], Highway [15], ResNet [16], 
+
+The teacher-student framework suggests that learning a hard-trained networkcan benefit from an easily-trained network. 
+
+
 
 For instance, FitNets [17] usesthe intermediate representation of a wider and shallower (but still deep) teachernet that is relatively easy to be trained, as the target of the intermediate representationof a thinner and deeper student net. 
 
@@ -104,5 +108,5 @@ Net2Net [18] also uses a teachernet to help train a (wider or deeper) student ne
 
 Our approach, in our suggested choice: includingone deep base network and one shallow (but could still be deep) network, alsouses the shallow network to help train the deep base network, meanwhile thedeep base network also helps train the shallow network, i.e., they benefit fromeach other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM4MTM1Mjk1XX0=
+eyJoaXN0b3J5IjpbLTg1MDE1NzYwNV19
 -->
