@@ -190,7 +190,7 @@ In this work, we encode 3D point cloud with multi-view feature maps, enabling re
 
 2D와 유사한 방법으로 3D에서는 Object Proposals 을 수행 한다.
 
-* generate a smallset of 3D candidate boxes in order to cover most of the objects in 3D space. 
+* generate a smallset of 3D candidate boxes in order to cover most of the objects in 3D space.
 
 * 3DOP \[4\] designs some depth features in stereo point cloud to score a large set of 3D candidate boxes.
 
@@ -261,6 +261,7 @@ We discretize the projected point cloud into a 2D grid with resolution of 0.1m.
 ##### 라. 3개의 Feature 처리 방법
 
 * To normalize the feature, it is computed as $$min(1.0, \frac{log(N+1)}{log(54)})$$
+
   * $$N$$ = the number of points in the cell. 
 
 * Note that the **intensity** and **density** features are computed for the whole point cloud while the **height** feature is computed for M slices, thus in total the bird’s eye view map is encoded as \(M +2\)-channel features.
@@ -303,6 +304,7 @@ In 3D object detection에서 `bird’s eye view map`이 `front view/image plane`
 Given a bird’s eye view map. the network generates 3D box proposals from a set of 3D prior boxes.
 
 * Each 3D box is parameterized by $$(x, y, z, l, w, h)$$
+
   * \(x, y\) is the varying positions in the bird’s eye view feature map
   * z can be computed based on the camera height and object height. 
 
@@ -343,7 +345,7 @@ Therefore, combined with the 2x deconvolution, the feature map fed to the propos
 We do 3D box regression by regressing to $$t = (\Delta x, \Delta y, \Delta z, \Delta l, \Delta w, \Delta h)$$, similarly to RPN \[19\].
 
 * $$(\Delta x, \Delta y, \Delta z)$$ are the center offsets normalized byanchor sizes
-* $$(\Delta l, \Delta w, \Delta h)$$ are computed as$$∆s = log\frac{S_{GT}}{S_{Anchor}},s \in \{l,w,h\}  $$ . 
+* $$(\Delta l, \Delta w, \Delta h)$$ are computed as$$∆s = log\frac{S_{GT}}{S_{Anchor}},s \in \{l,w,h\}  $$ .
 
 * Loss계산 : we use a multi-task loss to simultaneously classify object/background and do 3D box regression.
 
@@ -378,7 +380,7 @@ The top 2000 boxes are kept during training, while in testing, we only use 300 b
 
 #### A. Multi-View ROI Pooling.
 
-목적 : 여러 view에서 오는 데이터들을 same length로 맞추기   
+목적 : 여러 view에서 오는 데이터들을 same length로 맞추기  
 Since features from different views/modalities usually have different resolutions, we employ ROI pooling \[10\] for each view to obtain feature vectors of the same length.
 
 Given the generated 3D proposals,we can project them to _any views_ in the 3D space.
