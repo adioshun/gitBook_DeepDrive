@@ -7,6 +7,9 @@
 | 참고 | |
 | 코드 | |
 
+# EarlyFusion 
+
+we provide an extensive evaluation that gives **insight** into how each of these aspects (multicue, multimodality, and strong MV classifier) affect accuracy both individually and when integrated together
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjUxOTUyMjhdfQ==
+eyJoaXN0b3J5IjpbLTEzNjM2MTQ3NDZdfQ==
 -->
