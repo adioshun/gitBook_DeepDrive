@@ -30,15 +30,13 @@
 
 딥러닝은 최근 많은 발전을 보였지만 아직 효율성은 부족하다. 효율성 증대를 위한 다양한 연구가 있따. 
 
-Dropout [8] and other regularization techniques, such as
-weight decay and path regularization [9], have been developed to prevent neural
-network from over-fitting. Normalized variance-preserving weight initialization, such as [10–12], has been shown to be helpful for handling the vanishing gradient
-problem and thus boosts the performance. Batch normalization [13] is shown
-to improve both the training speed and the recognition performance. Skip-layer
-connections between layers (including the output layer) and other network structure
-modifications, such as deeply-supervised nets [14] and its variant [7], Highway
-[15], ResNet [16], inception-v4 [3], are able to improve the flow of information
-and accordingly help train a very deep network. 
+Dropout [8] and other regularization techniques, such as weight decay and path regularization [9], have been developed to prevent neural network from over-fitting. 
+
+Normalized variance-preserving weight initialization, such as [10–12], has been shown to be helpful for handling the vanishing gradient problem and thus boosts the performance. 
+
+Batch normalization [13] is shown to improve both the training speed and the recognition performance. 
+
+Skip-layer connections between layers (including the output layer) and other network structure modifications, such as deeply-supervised nets [14] and its variant [7], Highway [15], ResNet [16], inception-v4 [3], are able to improve the flow of information and accordingly help train a very deep network. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODk5NzQ4NzVdfQ==
+eyJoaXN0b3J5IjpbLTQxODM5ODA4M119
 -->
