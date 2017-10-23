@@ -28,6 +28,7 @@
 
 ## 1 Introduction
 
+딥러닝은 최근 많은 발전을 보였지만 아직 성능적으로는 부족하다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NzE5NjgwN119
+eyJoaXN0b3J5IjpbLTIxNDcyMDQ5NzZdfQ==
 -->
