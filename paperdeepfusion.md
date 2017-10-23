@@ -72,7 +72,7 @@ we mainly discuss two closely-related lines:
 
 - 예측치의 **평균값**을 쓰는것은 일반화된 정확도의 향상을 가져 오고 많이 사용 되었다. `Averaging over a set of network predictors, (which we call decision fusion), is able to improve the generalization accuracy and has been widely used, e.g., to boost the ImageNet recognition performance [1, 16, 19, 20]. `
 
-- 입력에 따라 가중치를 고려하는 방식이 이후 제안 되었다. Multi-column deep neural networks [21] presents an empirical study about decision fusion, later extended to an adaptive version, weighted averaging with the weights depending on the input [22]. 
+- 입력에 따라 **평균 가중치(weighted averaging)**를 고려하는 방식이 이후 제안 되었다. `Multi-column deep neural networks [21] presents an empirical study about decision fusion, later extended to an adaptive version, weighted averaging with the weights depending on the input [22]. `
 
 The averaging approach learns each network separately, which isequivalent to learn the network jointly that averages the loss functions. 
 
@@ -94,5 +94,5 @@ Net2Net [18] also uses a teachernet to help train a (wider or deeper) student ne
 
 Our approach, in our suggested choice: includingone deep base network and one shallow (but could still be deep) network, alsouses the shallow network to help train the deep base network, meanwhile thedeep base network also helps train the shallow network, i.e., they benefit fromeach other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODA1MzQ2MzldfQ==
+eyJoaXN0b3J5IjpbMTg1MjA5MjU0XX0=
 -->
