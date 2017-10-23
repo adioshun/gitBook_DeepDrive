@@ -51,7 +51,9 @@
 	- resulting in two different base networks with possibly different depth from the originals `(e.g., deep network being less deep and shallow network being less shallow)`, but the fused net is not changed. 
 
 - 다르게 보면 **fused net**은 서로 다른 기초 네트워크의 그룹으로 구성 할수 있다. `In other words, a fused net can be formed by different groups of base networks. `
-	- 덕분에 Thus,the deeply-fused net is able to learn multi-scale representations from much morebase networks, and even same-scale representations can be different and learntfrom different base networks.
+	- 덕분에 Thus,the deeply-fused net is able to learn multi-scale representations from much more base networks, and even same-scale representations can be different and learnt from different base networks.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDIzNDU4NjZdfQ==
+eyJoaXN0b3J5IjpbNTQxNDE0OTQwXX0=
 -->
