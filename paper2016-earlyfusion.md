@@ -9,7 +9,9 @@
 
 # EarlyFusion 
 
-we provide an extensive evaluation that gives **insight** into how each of these aspects (multicue, multimodality, and strong MV classifier) affect accuracy both individually and when integrated together
+여러 정보`(multicue, multimodality, and strong MV classifier)`들이 합쳐 졌을때 어떤 영향을 미치는지 살펴 보겠다 `we provide an extensive evaluation that gives insight into how each of these aspects (multicue, multimodality, and strong MV classifier) affect accuracy both individually and when integrated together`
+
+사용 센서 :  fusion of RGB and depth maps
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjM2MTQ3NDZdfQ==
+eyJoaXN0b3J5IjpbNzM1NzgxODk3XX0=
 -->
