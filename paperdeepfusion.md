@@ -70,7 +70,29 @@ we mainly discuss two closely-related lines:
 - network structure design 
 - network optimization with the aid of another already trained network.
 
+- 예측치의 평균값을 쓰는것은 성능 향Averaging over a set of network predictors, `which we call decision fusion`, is able to improve the generalization accuracy and has been widely used, e.g., to boost the ImageNet recognition performance [1, 16, 19, 20]. 
 
+Multi-column deepneural networks [21] presents an empirical study about decision fusion, later extendedto an adaptive version, weighted averaging with the weights depending onthe input [22]. 
+
+The averaging approach learns each network separately, which isequivalent to learn the network jointly that averages the loss functions. 
+
+Our approach,in contrast, performs the feature fusion deeply over several intermediatelayers and simultaneously learns the representations of the (base) networks.The inception module in GoogLeNet [20] can be viewed as a fusion stage: concatenatethe outputs of several subnetworks with different lengths. 
+
+It is differentfrom our approach using the summation for fusion. 
+
+The GoogLeNet architecture,consisting of a sequence of inception modules, is also a kind of deep fusion, i.e.,deep concatenation fusion. 
+
+But it is not as direct as our deep summation fusion.The output of each subnetwork in an inception module is narrower than theinput of the subsequent inception module. 
+
+Hence it is necessary to append manychannels with all 0 entries in the output to match the size with the input of thesubsequent inception module or add more convolution operations to form thefused network. 
+
+Skip-layer connection, such as deeply-supervised nets [14] and itsvariant [7], Highway [15], ResNet [16], as we will show, resembles our approachand can be regarded as special examples of our approach.The teacher-student framework suggests that learning a hard-trained networkcan benefit from an easily-trained network. 
+
+For instance, FitNets [17] usesthe intermediate representation of a wider and shallower (but still deep) teachernet that is relatively easy to be trained, as the target of the intermediate representationof a thinner and deeper student net. 
+
+Net2Net [18] also uses a teachernet to help train a (wider or deeper) student net, through a function-preservingtransform to initialize the parameters of the student net according to the parametersof the teacher net. 
+
+Our approach, in our suggested choice: includingone deep base network and one shallow (but could still be deep) network, alsouses the shallow network to help train the deep base network, meanwhile thedeep base network also helps train the shallow network, i.e., they benefit fromeach other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU1MDUxOTM3XX0=
+eyJoaXN0b3J5IjpbMTYyNzEyMDY0NF19
 -->
