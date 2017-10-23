@@ -20,6 +20,15 @@
 - 2) the fusion of multiple image modalities (color, depth, etc.); 
 - 3) the use of multiple views (frontal, lateral, etc.) of the object 
 by learning a strong classifier that accommodates for both different 3-D points of view and multiple flexible articulations.
+
+![](https://i.imgur.com/Kqp3Cl6.png)
+```
+Fig. 1. General scheme: from RGB images and LIDAR data to object detection. 
+- RGB images and LIDAR data synchronized for multimodal representation.
+- Multimodal representation based on RGB images and dense depth
+maps (obtained from LIDAR sparse data). Multicue feature extraction over
+the multimodal representation. MV detection of different objects.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNjQ4NjY3Ml19
+eyJoaXN0b3J5IjpbLTEwNzE3OTAzNTZdfQ==
 -->
