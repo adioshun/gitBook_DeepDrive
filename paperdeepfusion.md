@@ -103,11 +103,12 @@ Hence it is necessary to append many channels with all 0 entries in the output t
 - The teacher-student framework suggests that 
 	- learning a hard-trained network can benefit from an easily-trained network. 
 
-For instance, FitNets [17] uses the intermediate representation of a wider and shallower (but still deep) teacher-net that is relatively easy to be trained, as the target of the intermediate representationof a thinner and deeper student net. 
+For instance, 
+- FitNets [17] uses the intermediate representation of a wider and shallower (but still deep) teacher-net that is relatively easy to be trained, as the target of the intermediate representation of a thinner and deeper student net. 
 
-Net2Net [18] also uses a teachernet to help train a (wider or deeper) student net, through a function-preservingtransform to initialize the parameters of the student net according to the parametersof the teacher net. 
+- Net2Net [18] also uses a teacher-net to help train a (wider or deeper) student net, through a function-preserving transform to initialize the parameters of the student net according to the parameters of the teacher net. 
 
-Our approach, in our suggested choice: includingone deep base network and one shallow (but could still be deep) network, alsouses the shallow network to help train the deep base network, meanwhile thedeep base network also helps train the shallow network, i.e., they benefit fromeach other and are trained simultaneously.
+제안 방식은 Our approach, in our suggested choice: including one deep base network and one shallow (but could still be deep) network, also uses the shallow network to help train the deep base network, meanwhile the deep base network also helps train the shallow network, i.e., they benefit from each other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4ODQxNDIxMF19
+eyJoaXN0b3J5IjpbODAyMTkzMjg5XX0=
 -->
