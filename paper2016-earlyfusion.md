@@ -11,7 +11,15 @@
 
 여러 정보`(multicue, multimodality, and strong MV classifier)`들이 합쳐 졌을때 어떤 영향을 미치는지 살펴 보겠다 `we provide an extensive evaluation that gives insight into how each of these aspects (multicue, multimodality, and strong MV classifier) affect accuracy both individually and when integrated together`
 
-사용 센서 :  fusion of RGB and depth maps
+사용 센서 :  fusion of RGB and depth maps(Lidar)
+
+## 1. Introducion 
+
+In order to obtain a detector that successfully operates under realistic conditions, it becomes critical to exploit sources
+of information along three orthogonal axis: 1) the integration
+of multiple feature cues (contours, texture, etc.); 2) the fusion
+of multiple image modalities (color, depth, etc.); and 3) the
+use of multiple views (frontal, lateral, etc.) of the object by
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM1NzgxODk3XX0=
+eyJoaXN0b3J5IjpbMTI5ODI1MDUwNV19
 -->
