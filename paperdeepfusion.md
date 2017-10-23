@@ -65,6 +65,12 @@ As a result,training the fused net composed from a very deep base network is les
 Furthermore, the deep and shallowbase networks are jointly learnt and can benefit from each other. 
 
 ## 2 Related Work
+
+we mainly discuss two closely-related lines: 
+- network structure design 
+- network optimization with the aid of another already trained network.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNTc1NzgzOV19
+eyJoaXN0b3J5IjpbODU1MDUxOTM3XX0=
 -->
