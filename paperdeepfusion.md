@@ -47,11 +47,12 @@
 - 핵심은 기초 네트워크의 중간 representations 들을 퓨전 하는 것이다. 이때의 결과물은 다음 기초 네트워크의 입력으로 활용된다. `The main idea is to perform fusion over the intermediate representations of the base networks, where the fused output serves as the input of the remaining part of each base network, rather than only over the final representations or the final classification scores,and such fusions are performed several times at different intermediate layers.`
 
 - There is a block-exchangeable property `(the block is the subnetwork between two successive fusions in a base network)`:
-	-  switch blocks from one base network to another one within one fusion, resulting in two different base networks with possibly different depth from the originals (e.g., deep network being less deep and shallow network being less shallow), but the fused net is not changed. 
+	-  switch blocks from one base network to another one within one fusion, 
+	- resulting in two different base networks with possibly different depth from the originals `(e.g., deep network being less deep and shallow network being less shallow)`, but the fused net is not changed. 
 
-In otherwords, a fused net can be formed by different groups of base networks. 
+- 다르게 보면 **fused net**은 서로 다른 기초 네트워크의 그룹으로 구성 할수 있다In other words, a fused net can be formed by different groups of base networks. 
 
-Thus,the deeply-fused net is able to learn multi-scale representations from much morebase networks, and even same-scale representations can be different and learntfrom different base networks.
+- Thus,the deeply-fused net is able to learn multi-scale representations from much morebase networks, and even same-scale representations can be different and learntfrom different base networks.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MTY4MDIyOF19
+eyJoaXN0b3J5IjpbMzM0MjE1NjA5XX0=
 -->
