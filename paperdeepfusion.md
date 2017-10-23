@@ -70,7 +70,7 @@ we mainly discuss two closely-related lines:
 - network structure design 
 - network optimization with the aid of another already trained network.
 
-- 예측치의 평균값을 쓰는것은 성능 향Averaging over a set of network predictors, `which we call decision fusion`, is able to improve the generalization accuracy and has been widely used, e.g., to boost the ImageNet recognition performance [1, 16, 19, 20]. 
+- 예측치의 평균값을 쓰는것은 Averaging over a set of network predictors, `which we call decision fusion`, is able to improve the generalization accuracy and has been widely used, e.g., to boost the ImageNet recognition performance [1, 16, 19, 20]. 
 
 Multi-column deepneural networks [21] presents an empirical study about decision fusion, later extendedto an adaptive version, weighted averaging with the weights depending onthe input [22]. 
 
@@ -94,5 +94,5 @@ Net2Net [18] also uses a teachernet to help train a (wider or deeper) student ne
 
 Our approach, in our suggested choice: includingone deep base network and one shallow (but could still be deep) network, alsouses the shallow network to help train the deep base network, meanwhile thedeep base network also helps train the shallow network, i.e., they benefit fromeach other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNzEyMDY0NF19
+eyJoaXN0b3J5IjpbMTM3MDI5OTE3OV19
 -->
