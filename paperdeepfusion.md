@@ -21,13 +21,12 @@
 	- the flows of the information from the earlier intermediate layer of the deep base network to the output and from the input to the later intermediate layer of the deep base network are **both improved**. 
 - Last, the deep and shallow base networks are **jointly learnt** and can **benefit from each other**. 
 
-특징 :More
-interestingly, the essential depth of a fused net composed from a deep
-base network and a shallow base network is reduced because the fused
-net could be composed from a less deep base network, and thus training
-the fused net is less difficult than training the initial deep base network.
+특징 
+- the essential depth of a fused net composed from a deep base network and a shallow base network is **reduced**
+- because the fused net could be composed from a less deep base network, 
+- and thus training the fused net is less difficult than training the initial deep base network.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTUxNzEyNDVdfQ==
+eyJoaXN0b3J5IjpbLTEzNjUzOTY3NDRdfQ==
 -->
