@@ -25,10 +25,9 @@ by learning a strong classifier that accommodates for both different 3-D points 
 ```
 Fig. 1. General scheme: from RGB images and LIDAR data to object detection. 
 - RGB images and LIDAR data synchronized for multimodal representation.
-- Multimodal representation based on RGB images and dense depth
-maps (obtained from LIDAR sparse data). Multicue feature extraction over
+- Multimodal representation based on RGB images and dense depth maps (obtained from LIDAR sparse data). Multicue feature extraction over
 the multimodal representation. MV detection of different objects.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzE3OTAzNTZdfQ==
+eyJoaXN0b3J5IjpbMTAyMTE0NDU0NF19
 -->
