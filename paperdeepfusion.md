@@ -98,6 +98,22 @@ Hence it is necessary to append many channels with all 0 entries in the output t
 
 > Skip-layer connection = deeply-supervised nets [14],  its variant [7], Highway [15], ResNet [16], 
 
+```
+14. Lee, C., Xie, S., Gallagher, P.W., Zhang, Z., Tu, Z.: Deeply-supervised nets. In:
+Proceedings of the Eighteenth International Conference on Artificial Intelligence
+and Statistics, AISTATS 2015, San Diego, California, USA, May 9-12, 2015. (2015)
+7. Xie, S., Tu, Z.: Holistically-nested edge detection. In: 2015 IEEE International
+Conference on Computer Vision, ICCV 2015, Santiago, Chile, December 7-13, 2015.
+(2015) 1395–1403
+15. Srivastava, R.K., Greff, K., Schmidhuber, J.: Training very deep networks. CoRR
+abs/1507.06228 (2015)
+16. He, K., Zhang, X., Ren, S., Sun, J.: Deep residual learning for image recognition.
+CoRR abs/1512.03385 (2015)
+
+
+
+```
+
 ###### [teacher-student framework와의 비교]
 
 - The teacher-student framework suggests that 
@@ -109,13 +125,10 @@ For instance,
 - Net2Net [18] also uses a teacher-net to help train a (wider or deeper) student net, through a function-preserving transform to initialize the parameters of the student net according to the parameters of the teacher net. 
 
 ```
-17. Romero, A., Ballas, N., Kahou, S.E., Chassang, A., Gatta, C., Bengio, Y.: Fitnets:
-Hints for thin deep nets. CoRR abs/1412.6550 (2014)
-18. Chen, T., Goodfellow, I.J., Shlens, J.: Net2net: Accelerating learning via knowledge
-transfer. CoRR abs/1511.05641 (2015)
-
-제안
- 방식은 Our approach, in our suggested choice: including one deep base network and one shallow (but could still be deep) network, also uses the shallow network to help train the deep base network, meanwhile the deep base network also helps train the shallow network, i.e., they benefit from each other and are trained simultaneously.
+17. Romero, A., Ballas, N., Kahou, S.E., Chassang, A., Gatta, C., Bengio, Y.: Fitnets: Hints for thin deep nets. CoRR abs/1412.6550 (2014)
+18. Chen, T., Goodfellow, I.J., Shlens, J.: Net2net: Accelerating learning via knowledge transfer. CoRR abs/1511.05641 (2015)
+```
+제안 방식은 Our approach, in our suggested choice: including one deep base network and one shallow (but could still be deep) network, also uses the shallow network to help train the deep base network, meanwhile the deep base network also helps train the shallow network, i.e., they benefit from each other and are trained simultaneously.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNDY5NTYzNV19
+eyJoaXN0b3J5IjpbMjc4OTQyODU0XX0=
 -->
