@@ -15,11 +15,10 @@
 
 ## 1. Introducion 
 
-In order to obtain a detector that successfully operates under realistic conditions, it becomes critical to exploit sources
-of information along three orthogonal axis: 1) the integration
-of multiple feature cues (contours, texture, etc.); 2) the fusion
-of multiple image modalities (color, depth, etc.); and 3) the
-use of multiple views (frontal, lateral, etc.) of the object by
+현실세계에서 Detector의 성능 향상을 위해서는 다음이 중요하다. exploit sources of information along three orthogonal axis: 
+- 1) the integration of multiple feature cues (contours, texture, etc.); 
+- 2) the fusion of multiple image modalities (color, depth, etc.); 
+-  3) the use of multiple views (frontal, lateral, etc.) of the object by
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5ODI1MDUwNV19
+eyJoaXN0b3J5IjpbMTMxNDQ3NTk1Nl19
 -->
