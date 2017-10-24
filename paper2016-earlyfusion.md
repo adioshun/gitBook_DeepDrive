@@ -47,9 +47,9 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 -  In [15] and [16], it has been seen that including color boosts the performance significantly, being this type of feature complementary to the ones we used in this paper. 
 
-Context features have also been seen to aid [17], [18]and could be easily integrated as well. 
+- **Context features**를 사용하는 방법도 제안 되었다. `Context features have also been seen to aid [17], [18]and could be easily integrated as well. `
 
-Exploring alternativetypes of spatial pooling of the local features is also beneficialas shown in [6] and is also complementary to the approachused in this paper.
+Exploring alternative types of spatial pooling of the local features is also beneficialas shown in [6] and is also complementary to the approachused in this paper.
 
 ### 1.2 integrate multiple image modalities,
 
@@ -97,5 +97,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MTE1NzczNl19
+eyJoaXN0b3J5IjpbMjQ2MjAyNzM0XX0=
 -->
