@@ -94,7 +94,7 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 - flexible한 모델을 만드는건 어려운 일이다. `Learning a model flexible enough for dealing with multiple views and multiple positions of an articulated object is a hard task for a holistic classifier. `
 	- 이를 위해 **random forests (RFs) of local experts **를 이용하였다. `In order to fulfill this aspect we make use of random forests (RFs) of local experts [27], which has a similar expressive power than the popular DPMs [28] and less computational complexity.`
-	- In this method, each tree of the forest provides a differentconfiguration of local experts, where each local expert takesthe role of a part model. 
+	- 이 방법에서는 각 Tree는 local experts에 대한 서로다른 설정을 제공하며 각 local expert이 part model.의 역할을 수행 한다. `In this method, each tree of the forest provides a different configuration of local experts, where each local expert takes the role of a part model. `
 
 At learning time, each tree learnsone of the characteristic configurations of local patches, thusaccommodating for different flexible articulations occurring inthe training set. 
 
@@ -112,5 +112,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMzM2Njk0OV19
+eyJoaXN0b3J5IjpbLTc3MDI4MTYzMF19
 -->
