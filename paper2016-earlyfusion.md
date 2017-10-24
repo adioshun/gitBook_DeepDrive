@@ -36,7 +36,7 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 	- **Histogram of oriented gradients (HOG)** [9], that provides a good description of the object contours 
 	- **Local binary pattern (LBP)** [10] as texture-based feature. 
 
-[11]-[13]에 따르면 위 두 특징들은 **상호 보안적**인 요소로 **Fusion시** 좋은 효과가 난다. `These two types of features provide complementary information and the fusion of both types of features has been seen to boost the performance of either feature separately [11]–[13]. `
+- [11]-[13]에 따르면 위 두 특징들은 **상호 보안적**인 요소로 **Fusion시** 좋은 효과가 난다. `These two types of features provide complementary information and the fusion of both types of features has been seen to boost the performance of either feature separately [11]–[13]. `
 
 [9]에 따르면 다른 종류의 **gradient-based features**와 그 **특징의 spatial distribution**을 쓰는것은 좋은 표현력을 가지게 된다. `From the seminal work of Dalal and Triggs [9], it has been seen that using different types of gradient-based features and their spatial distribution,such as in the HOG descriptor [9] provides a distinctive representation of both humans and other objects classes. `
 
@@ -90,5 +90,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU2Njc4MTk2XX0=
+eyJoaXN0b3J5IjpbLTQ3MDE1NjYwMV19
 -->
