@@ -69,9 +69,9 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 [19] D. L. Hall and J. Llinas, “An introduction to multisensor data fusion,” Proc. IEEE, vol. 85, no. 1, pp. 6–23, Jan. 1997.
 ```
 
-- 본 논문에서는  early fusion`(, where descriptors from each modality are concatenated, )`을 사용 하여 성능 향상을 보였다. `In this paper, using an early fusion schemeprovided the best results.`
+- 본 논문에서는  early fusion`(where descriptors from each modality are concatenated)`을 사용 하여 성능 향상을 보였다. `In this paper, using an early fusion scheme provided the best results.`
 
-Object detection based on data coming from multiplemodalities has been a relatively active topic of study [1],and in particular the use of 2-D laser scanners and visiblespectrum images has been studied in several works, forinstance [20] and [21]. 
+Object detection based on data coming from multiple modalities has been a relatively active topic of study [1], and in particular the use of 2-D laser scanners and visible spectrum images has been studied in several works, for instance [20] and [21]. 
 
 Only recently authors are starting tostudy the impact of high-definition 3-D LIDAR [20]–[26].Most of these works propose specific descriptors forextracting information directly from the 3-D cloud ofpoints [20], [22]–[26]. 
 
@@ -103,5 +103,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTkxNjEwODddfQ==
+eyJoaXN0b3J5IjpbLTE3NTIzNDkwN119
 -->
