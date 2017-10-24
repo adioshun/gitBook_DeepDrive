@@ -97,8 +97,7 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 	- 이 방법에서는 각 Tree는 local experts에 대한 서로다른 설정을 제공하며 각 local expert이 part model.의 역할을 수행 한다. `In this method, each tree of the forest provides a different configuration of local experts, where each local expert takes the role of a part model. `
 	- At learning time, each tree learns one of the characteristic configurations of local patches, thus accommodating for different flexible articulations occurring in the training set. 
 	- In [27], the RF approach consistently outperformed DPM. 
-	- RF의 장점은 : `
-An advantage of the RF method is that only a single descriptor needs to be extracted for the whole window,and each local expert reuses the part of the descriptor tha tcorresponds to the spatial region assigned to it. 
+	- RF의 장점은 : `An advantage of the RF method is that only a single descriptor needs to be extracted for the whole window,and each local expert reuses the part of the descriptor tha tcorresponds to the spatial region assigned to it. `
 
 Its computational cost is further significantly reduced by applying a softcascade, operating in close to real time. 
 
@@ -110,5 +109,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNzk4MzM5NF19
+eyJoaXN0b3J5IjpbLTE0MjYxODQ1NjJdfQ==
 -->
