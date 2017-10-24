@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | \(\) |
 | 학회/년도 | IEEE Transactions on Cybernetics 2016, [논문](http://ieeexplore.ieee.org/document/7533479/) |
-| 키워드 |EarlyFusopn |
+| 키워드 |EarlyFusion,  SVM & 랜덤포레스트 이용(딥러닝 기반X) |
 | 데이터셋(센서)/모델 |KITTI |
 | 참고 | |
 | 코드 | |
@@ -119,6 +119,12 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 	- 2) While [13] makes use of an **holistic classifier**, we make use of a more expressive **patch-based model**.
 	- 3) In [13], multiples cues are combined following **late fusion** style, while we consider also **early-fusion**, which,in fact, gives better results in our framework.
 
+```
+[13] M. Enzweiler and D. M. Gavrila, “A multilevel mixture-of-experts
+framework for pedestrian classification,” IEEE Trans. Image Process.,
+vol. 20, no. 10, pp. 2967–2979, Oct. 2011.
+``
+
 - Our analysis reveals that, although all the aforementioned components `[the use of multiple feature cues, multiple modalities and a strong multiview (MV) classifier] `are important, 
 	- the fusion of **visible spectrum** and **depth information** allows to boost the accuracy significantly by a large margin. 
 
@@ -147,5 +153,5 @@ This model learns the max-margin hyper plane that better splits the positive and
 #### B.  patch-based
 - As patch-based model we use our **RF of local experts**.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ5MjM4MTE4XX0=
+eyJoaXN0b3J5IjpbLTE3MTY4NDMxNV19
 -->
