@@ -137,7 +137,8 @@ To summarize, in this part of the lecture we have reviewed a number of existing 
 - [Semantic3D.net: A new Large-scale Point Cloud Classification Benchmark](https://arxiv.org/abs/1704.03847): 2017.04, Datasets, 도시, four billion~
 
 
-
+![](https://i.imgur.com/hAfHmk1.png)
+메모리 사용량 
 
 ---
 

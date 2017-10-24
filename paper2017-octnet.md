@@ -3,12 +3,14 @@
 |저자(소속)| Gernot Riegler (Graz University)|
 |학회/년도| CVPR 2017, [논문](https://arxiv.org/abs/1611.05009)|
 |키워드| 고해상도 처리를 위한 계산 효율화 |
-|참고|[CVPR 2017](https://www.youtube.com/watch?v=qYyephF2BBw)|
+|참고|[CVPR 2017](https://www.youtube.com/watch?v=qYyephF2BBw), [Slide](https://griegler.github.io/papers/octnet_slides.pdf)|
 |코드|[Torch](https://github.com/griegler/octnet)|
 
 
 
 # OctNet
+
+
 
 ```
 Riegler et al. (2017) propose OctNets,a 3D convolutional network, that allows for training deep architectures at significantly higher resolutions. 
@@ -192,3 +194,7 @@ Jampani et al. [23] introduced bilateral convolution layers(BCL) which map spars
 
 
 ## 3. Octree Networks
+
+
+![](https://i.imgur.com/PKBLnEC.png)
+
