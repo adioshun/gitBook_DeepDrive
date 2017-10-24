@@ -61,7 +61,7 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 - In this paper, we explore the fusion of **dense depth maps** `(obtained based on the sparse cloud of points)` with **RGB images.** 
 
-Following [19], the informationprovided by each modality can be fused using eitheran early-fusion scheme, i.e., at the feature level, or a latefusionscheme, i.e., at the decision level. 
+Following [19], the information provided by each modality can be fused using eitheran early-fusion scheme, i.e., at the feature level, or a latefusionscheme, i.e., at the decision level. 
 
 In this paper, usingan early fusion scheme, where descriptors from each modalityare concatenated, provided the best results.Object detection based on data coming from multiplemodalities has been a relatively active topic of study [1],and in particular the use of 2-D laser scanners and visiblespectrum images has been studied in several works, forinstance [20] and [21]. 
 
@@ -95,5 +95,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0OTEwNTUxNV19
+eyJoaXN0b3J5IjpbMTQwMTk1OTYyMV19
 -->
