@@ -101,11 +101,11 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 	- 연삭부하도 적다 .`Its computational cost is further significantly reduced by applying a soft cascade, operating in close to real time. `
 	- DPM과 반대로 오리지널 RF는 Contrary to the DPM,the original RF method learns a single model, thus not considering different viewpoints separately. 
 
-- 본 논문에서는 위 방식을 채택 하였다. In this paper, we extend this method to learn multiple models, one for each 3-D pose,and evaluate both the original single model approach and themultimodel approach. 
+- 본 논문에서는 위 방식을 확장 하였따. In this paper, we extend this method to learn multiple models, one for each 3-D pose,and evaluate both the original single model approach and themultimodel approach. 
 
 Several authors have proposed methodsfor combining local detectors [28], [29] and multiple localpatches [30]–[32]. 
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNjU4MjUzM119
+eyJoaXN0b3J5IjpbMTQzOTE5MjAwMl19
 -->
