@@ -9,8 +9,7 @@
 | 70% | 제안 방식 깊은 파악 |  |
 | 100% | 완료 |  |
 
-![](https://i.imgur.com/HAZ3yiE.png)  
-[https://mind42.com/public/df5a7bc7-0e97-4807-b550-a21ed9e6699d](https://mind42.com/public/df5a7bc7-0e97-4807-b550-a21ed9e6699d)
+[MindMap- Trend](https://mind42.com/public/df5a7bc7-0e97-4807-b550-a21ed9e6699d)
 
 <iframe width='640' height='480' frameborder='0' src='https://mind42.com/mindmap/df5a7bc7-0e97-4807-b550-a21ed9e6699d?rel=embed'></iframe>
 
