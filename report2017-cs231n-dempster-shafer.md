@@ -1,6 +1,5 @@
-| 논문명 | Convolutional Neural Network Information Fusion based on Dempster-Shafer  
-Theory for Urban Scene Understanding |  
-| --- | --- |  
+|논문명|Convolutional Neural Network Information Fusion based on Dempster-Shafer Theory for Urban Scene Understanding |
+|-|-|  
 | 저자\(소속\) | Masha \(Mikhal\) Itkina\(스탠포\) |  
 | 학회/년도 | cs231n 2017, [리포트](http://cs231n.stanford.edu/reports/2017/pdfs/632.pdf) |  
 | 키워드 |  |  
