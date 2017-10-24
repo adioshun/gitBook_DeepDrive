@@ -94,7 +94,7 @@
 * [Paper\_2011\_LateFusion](paper2011latefusion.md)
 
 ## 4D \(Time, RNN\)
-
+* ----- RNN based -----
 * [Paper\_2016\_3D-R2N2](paper2016-3d-r2n2.md)
 
 ## 참고
