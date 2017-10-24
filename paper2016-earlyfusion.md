@@ -131,7 +131,17 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 ### 2.3 Multiview Classifier
 
-### 2.4 
+### 2.4 Object Model
+
+- In this paper, we focus on two different models: 
+	- 1) holistic, where the object descriptor takes into account the candidatedetection window as a whole and 
+	- 2) a patch-based one where random subsets of patches are used for generating differentobject configurations which are further assembled to form the overall object model. 
+
+As holistic model we use thelinear SVM (linSVM) classifier which has a good compromisebetween computation time and accuracy. 
+
+This model learnsthe max-margin hyperplane that better splits the positive andnegative samples in the descriptor space (either HOG, LBP, or HOGLBP in our case). 
+
+As patch-based model we use our RFof local experts.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU1NzQ0NTgyXX0=
+eyJoaXN0b3J5IjpbMTE0NTc4ODk1OV19
 -->
