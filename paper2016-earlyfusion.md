@@ -81,7 +81,7 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 - 대부분의 연구는 3D 포인트 클라우드에서 정보 추출을 위한 **descriptors** 제안에 초점을 두었다. ` Most of these works propose specific descriptors for extracting information directly from the 3-D cloud of points [20], [22]–[26]. `
 
-- 일반적인 접근법은 물체 탐지를 3D 포인트 클라우드와 visible spectrum images에서 독립적으로 시행한후 이를 합치는 방법 이다. . A common approach is to detect objects independently in the 3-D cloud of points and in the visible spectrum images, and then combining the detections using an appropriate strategy [22], [23], [26]. 
+- 일반적인 접근법은 물체 탐지를 3D 포인트 클라우드와 visible spectrum images에서 독립적으로 시행한후 이를 합치는 방법 이다.  A common approach is to detect objects independently in the 3-D cloud of points and in the visible spectrum images, and then combining the detections using an appropriate strategy [22], [23], [26]. 
 
 Following the stepsof [21], dense depth maps are obtained by first registering the3-D cloud of points captured by a Velodyne sensor with theRGB image captured with the camera, and then interpolatingthe resulting sparse set of pixels to obtain a dense map where each pixel has an associated depth value. 
 
@@ -109,5 +109,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTM4NDk3NTBdfQ==
+eyJoaXN0b3J5IjpbMTI3MjA5NDkzMl19
 -->
