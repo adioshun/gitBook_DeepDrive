@@ -82,10 +82,7 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 - 대부분의 연구는 3D 포인트 클라우드에서 정보 추출을 위한 **descriptors** 제안에 초점을 두었다. ` Most of these works propose specific descriptors for extracting information directly from the 3-D cloud of points [20], [22]–[26]. `
 
 ```
-[20] L. Spinello, K. O. Arras, R. Triebel, and R. Siegwart, “A layered
-approach to people detection in 3D range data,” in Proc. AAAI, Atlanta,
-GA, USA, 2010, pp. 1625–1630.
-
+[20] L. Spinello, K. O. Arras, R. Triebel, and R. Siegwart, “A layered approach to people detection in 3D range data,” in Proc. AAAI, Atlanta, GA, USA, 2010, pp. 1625–1630.
 ```
 
 - 일반적인 접근법은 물체 탐지를 **3D 포인트 클라우드**와 **visible spectrum images**에서 독립적으로 시행한후 이를 적절한 알고리즘으로 합치는 방법 이다.  `A common approach is to detect objects independently in the 3-D cloud of points and in the visible spectrum images, and then combining the detections using an appropriate strategy [22], [23], [26]. `
@@ -173,5 +170,5 @@ This model learns the max-margin hyper plane that better splits the positive and
 #### B.  patch-based
 - As patch-based model we use our **RF of local experts**.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg0NjMyMjI1XX0=
+eyJoaXN0b3J5IjpbNjM4ODUxNDU3XX0=
 -->
