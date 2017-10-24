@@ -62,14 +62,16 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 - In this paper, we explore the fusion of **dense depth maps** `(obtained based on the sparse cloud of points)` with **RGB images.** 
 
 [19]에 따르면 각 모달리티는 아래 두 방법으로 퓨전 가능 하다. `Following [19], the information provided by each modality can be fused using `
-- either an early-fusion scheme, i.e., at the feature level, 
-- or a late fusions cheme, i.e., at the decision level. 
+- either an **early-fusion scheme**, i.e., at the **feature level**, 
+- or a **late fusion scheme**, i.e., at the **decision level**. 
 
 ```
 [19] D. L. Hall and J. Llinas, “An introduction to multisensor data fusion,” Proc. IEEE, vol. 85, no. 1, pp. 6–23, Jan. 1997.
 ```
 
-In this paper, usingan early fusion scheme, where descriptors from each modalityare concatenated, provided the best results.Object detection based on data coming from multiplemodalities has been a relatively active topic of study [1],and in particular the use of 2-D laser scanners and visiblespectrum images has been studied in several works, forinstance [20] and [21]. 
+In this paper, using an early fusion scheme, where descriptors from each modality are concatenated, provided the best results.
+
+Object detection based on data coming from multiplemodalities has been a relatively active topic of study [1],and in particular the use of 2-D laser scanners and visiblespectrum images has been studied in several works, forinstance [20] and [21]. 
 
 Only recently authors are starting tostudy the impact of high-definition 3-D LIDAR [20]–[26].Most of these works propose specific descriptors forextracting information directly from the 3-D cloud ofpoints [20], [22]–[26]. 
 
@@ -101,5 +103,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTY3MDgwMzNdfQ==
+eyJoaXN0b3J5IjpbLTExNDg1NTQzMjddfQ==
 -->
