@@ -92,9 +92,11 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 	- This paper differs from [21] in that we use **multiple descriptors** and adapt them to have a good performance in dense depth images. 
 	- [21]은 late fusion을 쓰지만, 본 논문은 두개 모두 테스트 하였다. `While [21]employs a late fusion scheme, in our experimental analysis we evaluate both early and late fusion approaches in the given multicue and multimodality framework.`
 
-Learning a model flexible enough for dealing with multipleviews and multiple positions of an articulated object is a hardtask for a holistic classifier. 
+- Learning a model flexible enough for dealing with multiple views and multiple positions of an articulated object is a hard task for a holistic classifier. 
 
-In order to fulfill this aspect wemake use of random forests (RFs) of local experts [27], whichhas a similar expressive power than the popular deformablepart models (DPMs) [28] and less computational complexity.In this method, each tree of the forest provides a differentconfiguration of local experts, where each local expert takesthe role of a part model. 
+In order to fulfill this aspect we make use of random forests (RFs) of local experts [27], which has a similar expressive power than the popular deformable part models (DPMs) [28] and less computational complexity.
+
+In this method, each tree of the forest provides a differentconfiguration of local experts, where each local expert takesthe role of a part model. 
 
 At learning time, each tree learnsone of the characteristic configurations of local patches, thusaccommodating for different flexible articulations occurring inthe training set. 
 
@@ -112,5 +114,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTE2OTY4ODVdfQ==
+eyJoaXN0b3J5IjpbNjgwMDY5NDkyXX0=
 -->
