@@ -35,7 +35,7 @@ Data fusion techniques combine data from multiple sensors and related informatio
 
 ![](https://i.imgur.com/VISRuZz.png)
 
-- Data Level Fusion or Low Level Sensor Fusion (Figure 1.1) describes 
+**Data Level** Fusion or **Low Level** Sensor Fusion (Figure 1.1) describes 
 - a method of combining raw data from different sensors with each other,
 - e.g. having a calibrated camera and a calibrated Time-of-Flight (ToF) depth-sensor which creates a depth map of the environment, each camera pixel can be mapped to a distance measurement of the ToF sensor and vice versa.
 
@@ -43,7 +43,7 @@ Data fusion techniques combine data from multiple sensors and related informatio
 
 ![](https://i.imgur.com/NQv8AFk.png)
 
-- In Feature Level Fusion (Figure 1.2) or Mid-Level Fusion, 
+In **Feature Level** Fusion (Figure 1.2) or **Mid-Level** Fusion, 
 - the sensor data is presented via feature vectors which describe meaningful data extracted from the raw data. 
 - These feature vectors build the base for fusion. 
 - This method can be found in 3D-reconstruction for example. 
@@ -54,15 +54,17 @@ different camera views.
 
 ![](https://i.imgur.com/ezCh0VE.png)
 
-- Declaration Level Fusion or High Level Fusion (Figure 1.3) is 
-- the combination of independent state hypotheses from different sensors. 
-- All sensors estimate the state individually. 
+**Declaration Level** Fusion or **High Level** Fusion (Figure 1.3) is 
+- the combination of independent **state hypotheses** from different sensors. 
+- All sensors estimate the state **individually**. 
 - The final state is a fusion of all state hypotheses from the different sensors. 
-- The most famous implementation of this approach is probably the **Kalman Filter** [KB61]. 
-	- Each state from the individual sensors with their respective error covariance is used for correcting the state estimate in the Kalman Filter. 
-	- The error covariance represents the trust in the state estimation, e.g. a camera image is reliable for estimating the width of objects but distance or speed measurements are very inaccurate. 
-	- In contrast a RADAR sensor provides very accurate distance and velocity measurements. 
-	- Thus, in the final state estimate, velocity information and distance will be closer to the RADAR measurements, while the size would be closer to the measurements from the camera which, in theory, should result in a better final state estimate.
+- 칼만필터가 대표적 구현예임`The most famous implementation of this approach is probably the Kalman Filter [KB61]. `
+
+###### [칼만필터 ]
+- Each state from the individual sensors with their respective error covariance is used for correcting the state estimate in the Kalman Filter. 
+- The error covariance represents the trust in the state estimation, e.g. a camera image is reliable for estimating the width of objects but distance or speed measurements are very inaccurate. 
+- In contrast a RADAR sensor provides very accurate distance and velocity measurements. 
+- Thus, in the final state estimate, velocity information and distance will be closer to the RADAR measurements, while the size would be closer to the measurements from the camera which, in theory, should result in a better final state estimate.
 
 ---
 
@@ -76,6 +78,7 @@ different camera views.
 
 ###### [LiDAR + Camera]
 
+- One of the recent approaches which utilize sensor fusion is [ZXY12].
 - The approach combines a **LIDAR sensor** with **camera data**. 
 	- LIDAR sensor의 Distance Map에서 **RANSAC**와 **3D adjacency**를 이용하여 지면과 물체를 구분 할수 있다. `The distance map is used to classify parts of the image to ground plane or obstacles using RANSAC and 3D adjacency. `
 	- image patches are classified to different classes by evaluating color histograms, texture descriptors from **Gaussian** and **Garbor filtered** images as well as local binary patterns. 
@@ -83,6 +86,10 @@ different camera views.
 - Resulting in 107 features, each patch is classified by a Multi-Layer-Perceptron to different categories. 
 
 - The size of the object determined by the LIDAR obstacle estimation as well as labels from the image analysis are passed into a fuzzy logic frame workwhich returns three labels – environment, middle high or obstacle. 
+
+```
+[ZXY12] Gangqiang Zhao, Xuhong Xiao, and Junsong Yuan. Fusion of velodyne and camera data for scene parsing. In Information Fusion (FUSION), 2012 15th International Conference on, page 1172–1179, 2012
+```
 
 ###### [RADAR + LiDAR]
 
@@ -96,6 +103,10 @@ different camera views.
 - 이동하는 물체의 탐지는 해당 그리드값의 변화 감지를 통해 알수 있다. `Moving objects are detected through changes in the occupancy of grid cells. `
 	- Basically, if a cell is occupied at a time point, and in the next timestep, the adjacent cell is detected to be occupied, this is assumed as a motion. 
 
+```
+[VBA08] Trung-Dung Vu, Julien Burlet, and Olivier Aycard. Grid-based localization and online mapping with moving objects detection and tracking: new results. In Intelligent Vehicles Symposium, 2008 IEEE, page 684–689, 2008.
+```
+
 ###### [RADAR + Laser ]
 
 - A similar method of fusing short range RADAR and laser measurements is proposed in [PVB+09]. 
@@ -107,6 +118,11 @@ different camera views.
 - Adjacent cells that are occupied are merged to an object. 
 
 - A Kalman filter [KB61] is used to track the detected objects. 
+
+```
+[KB61] Rudolph E. Kalman and Richard S. Bucy. New results in linear filtering
+and prediction theory. Journal of Basic Engineering, 83(3):95–108, 1961
+```
 
 ###### [ RADAR+camera ]
 
@@ -124,6 +140,10 @@ different camera views.
 - Searching for higher symmetry values in a predefined environment around the RADAR hypothesis is used to correct the position estimate. 
 
 - However, this approach does only work for scenarios in which vehicles are viewed from the rear or front.
+
+```
+[ABC07] Giancarlo Alessandretti, Alberto Broggi, and Pietro Cerri. Vehicle and guard rail detection using radar and vision data fusion. IEEE Transactions on Intelligent Transportation Systems, 8(1):95–105, March 2007.
+```
 
 ---
 

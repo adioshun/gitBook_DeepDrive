@@ -10,3 +10,7 @@ Depth image와 비슷한 일명 `시차이미지`
 
 ## face alignment
 얼굴 정합
+
+## RANSAC
+
+http://darkpgmr.tistory.com/61
