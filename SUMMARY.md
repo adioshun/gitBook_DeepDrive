@@ -8,7 +8,7 @@
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 * [Paper\_2016\_DeeplyFusion \(30%\)](paperdeepfusion.md)
-* [Paper\_2016\_EarlyFusion](paper2016-earlyfusion.md)
+* [Paper\_2016\_EarlyFusion \(30%\)](paper2016-earlyfusion.md)
 * [Paper\_2011\_LateFusion](paper2011latefusion.md)
 
 ## Related Works
