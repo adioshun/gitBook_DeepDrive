@@ -55,7 +55,7 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 여러 이미지 모딜라티의 결합을 위해 본 논문에서는 **depth maps**과 **visible spectrum images**를 퓨젼 하였다. ` In order to integrate multiple image modalities, we considered the fusion of dense depth maps with visible spectrum images. `
 
-The use of depth information has gained attention,thanks to the appearance of cheap sensors such as the one inKinect, which provides a dense depth map registered with anRGB image (RGB-D). 
+- 저가의 키넥트등의 보급으로 Depth 정보 사용이 주목 받고 있다. `The use of depth information has gained attention, thanks to the appearance of cheap sensors such as the one inKinect, which provides a dense depth map registered with an RGB image (RGB-D). `
 
 However, the sensor of Kinect has amaximum range of approximately 4 m and is not very reliablein outdoor scenes, thus having limited applicability for objectsdetection in on-board sequences. 
 
@@ -97,5 +97,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDMyMzA1ODFdfQ==
+eyJoaXN0b3J5IjpbODMyNjU0MTQ2XX0=
 -->
