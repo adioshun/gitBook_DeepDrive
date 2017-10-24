@@ -109,7 +109,17 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 #### 1.4 본 논문과 유사한 연구 
 
+Most relevant to this paper is the approach whereEnzweiler and Gavrila [13] combined multiple views (front,left, back, and right), modalities (luminance, depth based onstereo, and optical flow), and features (HOG and LBP). 
 
+Themain differences between [13] and this paper are as follows.1) In order to complement RGB information, we makeuse of a sensor modality, high-definition 3-D LIDAR,which has received relatively little attention in pedestriandetection until now, but it is being used for autonomousdriving.2) While [13] makes use of an holistic classifier, we makeuse of a more expressive patch-based model.3) In [13], multiples cues are combined following latefusionstyle, while we consider also early-fusion, which,in fact, gives better results in our framework.Our analysis reveals that, although all the aforementionedcomponents [the use of multiple feature cues, multiple modalitiesand a strong multiview (MV) classifier] are important, thefusion of visible spectrum and depth information allows toboost the accuracy significantly by a large margin. 
+
+The resultingdetector not only ranks among the top best performers inthe challenging KITTI benchmark but also it is built upon very simple blocks that are easy to implement and computationallyefficient.The rest of this paper is organized as follows. 
+
+In Section IIwe develop our proposal. 
+
+Section III presents the experimentscarried out to assess our proposal step by step, and discussthe obtained results. 
+
+Finally, Section IV draws our mainconclusions.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODY5NDc5OF19
+eyJoaXN0b3J5IjpbLTE5MjQ2ODY4ODJdfQ==
 -->
