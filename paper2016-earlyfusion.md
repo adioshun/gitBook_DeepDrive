@@ -79,9 +79,9 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 - 최근에 들어서야 LiDAR를 이용한 연구가 진행 되었따. `Only recently authors are starting to study the impact of high-definition 3-D LIDAR [20]–[26].`
 
 
-- 대부분의 연구는 Most of these works propose specific descriptors for extracting information directly from the 3-D cloud of points [20], [22]–[26]. 
+- 대부분의 연구는 3D 포인트 클라우드에서 정보 추출을 위한 **descriptors** 제안에 초점을 두었다. ` Most of these works propose specific descriptors for extracting information directly from the 3-D cloud of points [20], [22]–[26]. `
 
-A common approach is to detect objectsindependently in the 3-D cloud of points and in the visiblespectrum images, and then combining the detections usingan appropriate strategy [22], [23], [26]. 
+- A common approach is to detect objectsindependently in the 3-D cloud of points and in the visiblespectrum images, and then combining the detections usingan appropriate strategy [22], [23], [26]. 
 
 Following the stepsof [21], dense depth maps are obtained by first registering the3-D cloud of points captured by a Velodyne sensor with theRGB image captured with the camera, and then interpolatingthe resulting sparse set of pixels to obtain a dense map where each pixel has an associated depth value. 
 
@@ -109,5 +109,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTkzMzY3MjFdfQ==
+eyJoaXN0b3J5IjpbNjE5NzQ3NzUyXX0=
 -->
