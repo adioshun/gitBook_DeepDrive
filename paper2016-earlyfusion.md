@@ -71,9 +71,15 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 - 본 논문에서는  early fusion`(where descriptors from each modality are concatenated)`을 사용 하여 성능 향상을 보였다. `In this paper, using an early fusion scheme provided the best results.`
 
+
+### 1.3 관련 연구 논문들 
+
 - 멀티 모달을 이용한 Object detection은 [1]에서 연구가 많이 되었으며, 특히 2D 레이져 스캐너를 이용를 이용한 연구는 [20][21]에서 많이 연구 되었다. `Object detection based on data coming from multiple modalities has been a relatively active topic of study [1], and in particular the use of 2-D laser scanners and visible spectrum images has been studied in several works, for instance [20] and [21]. `
 
-Only recently authors are starting tostudy the impact of high-definition 3-D LIDAR [20]–[26].Most of these works propose specific descriptors forextracting information directly from the 3-D cloud ofpoints [20], [22]–[26]. 
+- 최근에 들어서야 LiDAR를 이용한 연구가 진행 되었따. `Only recently authors are starting to study the impact of high-definition 3-D LIDAR [20]–[26].`
+
+
+- 대부분의 연구는 Most of these works propose specific descriptors for extracting information directly from the 3-D cloud of points [20], [22]–[26]. 
 
 A common approach is to detect objectsindependently in the 3-D cloud of points and in the visiblespectrum images, and then combining the detections usingan appropriate strategy [22], [23], [26]. 
 
@@ -103,5 +109,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYyMTEyMDY4XX0=
+eyJoaXN0b3J5IjpbLTE1MTkzMzY3MjFdfQ==
 -->
