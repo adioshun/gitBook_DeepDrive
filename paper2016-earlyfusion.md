@@ -105,7 +105,11 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 - 많은 논문들이  **local detectors**나 **multiple local patches**를 합치는 방법을 제안 하였다. `Several authors have proposed methods for combining local detectors [28], [29] and multiple local patches [30]–[32]. `
 
-The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
+- [33]역시 RF를 이용하였다. `The method in [33] also makes use of RF with local classifiers at the node level, although it requires to extract many complex region-based descriptors, making it computationally more demanding than [27].`
+
+#### 1.4 본 논문과 유사한 연구 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMzMyNTAxMF19
+eyJoaXN0b3J5IjpbLTIwODY5NDc5OF19
 -->
