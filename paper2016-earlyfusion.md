@@ -120,10 +120,8 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 	- 3) In [13], multiples cues are combined following **late fusion** style, while we consider also **early-fusion**, which,in fact, gives better results in our framework.
 
 ```
-[13] M. Enzweiler and D. M. Gavrila, “A multilevel mixture-of-experts
-framework for pedestrian classification,” IEEE Trans. Image Process.,
-vol. 20, no. 10, pp. 2967–2979, Oct. 2011.
-``
+[13] M. Enzweiler and D. M. Gavrila, “A multilevel mixture-of-experts framework for pedestrian classification,” IEEE Trans. Image Process., vol. 20, no. 10, pp. 2967–2979, Oct. 2011.
+```
 
 - Our analysis reveals that, although all the aforementioned components `[the use of multiple feature cues, multiple modalities and a strong multiview (MV) classifier] `are important, 
 	- the fusion of **visible spectrum** and **depth information** allows to boost the accuracy significantly by a large margin. 
@@ -153,5 +151,5 @@ This model learns the max-margin hyper plane that better splits the positive and
 #### B.  patch-based
 - As patch-based model we use our **RF of local experts**.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTY4NDMxNV19
+eyJoaXN0b3J5IjpbLTE3MjA2OTc3XX0=
 -->
