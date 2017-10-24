@@ -32,6 +32,8 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 - 제안 방식은 그림1에서 보는 바와 같이 성능 평가 할것이다. `The proposed method (general scheme in Fig. 1) will be evaluated in key objects for autonomous and semi-autonomous vehicles such as pedestrians, cyclists, and cars.`
 
+### 1.1 integrate different cues
+
 - In order to integrate different cues we use 
 	- **Histogram of oriented gradients (HOG)** [9], that provides a good description of the object contours 
 	- **Local binary pattern (LBP)** [10] as texture-based feature. 
@@ -47,7 +49,11 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 Context features have also been seen to aid [17], [18]and could be easily integrated as well. 
 
-Exploring alternativetypes of spatial pooling of the local features is also beneficialas shown in [6] and is also complementary to the approachused in this paper.In order to integrate multiple image modalities, we consideredthe fusion of dense depth maps with visible spectrumimages. 
+Exploring alternativetypes of spatial pooling of the local features is also beneficialas shown in [6] and is also complementary to the approachused in this paper.
+
+### 1.2 integrate multiple image modalities,
+
+In order to integrate multiple image modalities, we consideredthe fusion of dense depth maps with visible spectrumimages. 
 
 The use of depth information has gained attention,thanks to the appearance of cheap sensors such as the one inKinect, which provides a dense depth map registered with anRGB image (RGB-D). 
 
@@ -91,5 +97,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjcyNzU5MzJdfQ==
+eyJoaXN0b3J5IjpbLTM4MTE1NzczNl19
 -->
