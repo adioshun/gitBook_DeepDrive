@@ -8,9 +8,9 @@
 
 # Fusing LIDAR and Images for Pedestrian Detection
 
-1. We incorporate LIDAR by `up-sampling` the point cloud to a `dense depth map` 
-2. We extracting three features representing different aspects of the 3D scene
-3. We use those features as extra image channels
+1. 라이다를 Depthmap으로 변경 `We incorporate LIDAR by up-sampling the point cloud to a dense depth map`
+2. 3개의 특징들을 추출 `We extracting three features representing different aspects of the 3D scene`
+3. 이 특징들을 이미지의 새로운 channel로 적용 `We use those features as extra image channels`
 
 Specifically, we leverage recent work on HHA representations, adapting the code to work on up-sampled LIDAR rather than Microsoft Kinect depth maps.
 
