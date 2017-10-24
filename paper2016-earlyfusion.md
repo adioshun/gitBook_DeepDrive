@@ -83,6 +83,12 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 - 일반적인 접근법은 물체 탐지를 **3D 포인트 클라우드**와 **visible spectrum images**에서 독립적으로 시행한후 이를 적절한 알고리즘으로 합치는 방법 이다.  `A common approach is to detect objects independently in the 3-D cloud of points and in the visible spectrum images, and then combining the detections using an appropriate strategy [22], [23], [26]. `
 
+```
+
+
+```
+
+
 - [21]에서 제안한 방법은 Following the steps of [21], 
 	- **dense depth maps** are obtained by first registering the 3-D cloud of points captured by a Velodyne sensor with the RGB image captured with the camera, 
 	- and then **interpolating** the resulting sparse set of pixels to obtain a dense map where each pixel has an associated depth value. 
@@ -91,6 +97,10 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 - 본 논문과 [21]의 다른점 
 	- This paper differs from [21] in that we use **multiple descriptors** and adapt them to have a good performance in dense depth images. 
 	- [21]은 late fusion을 쓰지만, 본 논문은 두개 모두 테스트 하였다. `While [21]employs a late fusion scheme, in our experimental analysis we evaluate both early and late fusion approaches in the given multicue and multimodality framework.`
+
+```
+[21] C. Premebida, J. Carreira, J. Batista, and U. Nunes, “Pedestrian detection combining RGB and dense LIDAR data,” in Proc. IROS, Chicago, IL, USA, 2014, pp. 4112–4117
+```
 
 - flexible한 모델을 만드는건 어려운 일이다. `Learning a model flexible enough for dealing with multiple views and multiple positions of an articulated object is a hard task for a holistic classifier. `
 	- 이를 위해 **random forests (RFs) of local experts **를 이용하였다. `In order to fulfill this aspect we make use of random forests (RFs) of local experts [27], which has a similar expressive power than the popular DPMs [28] and less computational complexity.`
@@ -106,6 +116,10 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 - 많은 논문들이  **local detectors**나 **multiple local patches**를 합치는 방법을 제안 하였다. `Several authors have proposed methods for combining local detectors [28], [29] and multiple local patches [30]–[32]. `
 
 - [33]역시 RF를 이용하였다. `The method in [33] also makes use of RF with local classifiers at the node level, although it requires to extract many complex region-based descriptors, making it computationally more demanding than [27].`
+
+```
+[33] B. Yao, A. Khosla, and L. Fei-Fei, “Combining randomization and discrimination for fine-grained image categorization,” in Proc. CVPR, Providence, RI, USA, 2011, pp. 1577–1584
+```
 
 #### 1.4 본 논문과 유사한 연구 
 
@@ -151,5 +165,5 @@ This model learns the max-margin hyper plane that better splits the positive and
 #### B.  patch-based
 - As patch-based model we use our **RF of local experts**.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjA2OTc3XX0=
+eyJoaXN0b3J5IjpbLTE5MTU0NDI2NTVdfQ==
 -->
