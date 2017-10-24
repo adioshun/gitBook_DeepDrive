@@ -115,15 +115,16 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 	- features (HOG and LBP). 
 
 - 본 논문과 [13]의 차이는 아래와 같다. `The main differences between [13] and this paper are as follows.`
-	- 1) In order to complement RGB information, we make use of a sensor modality, high-definition 3-D LIDAR, which has received relatively little attention in pedestrian detection until now, but it is being used for autonomous driving.
-	- 2) While [13] makes use of an holistic classifier, we make use of a more expressive patch-based model.
+	- 1) In order to complement RGB information, we make use of a **sensor modality**, **high-definition 3-D LIDAR**, which has received relatively little attention in pedestrian detection until now, but it is being used for autonomous driving.
+	- 2) While [13] makes use of an **holistic classifier**, we make use of a more expressive **patch-based model**.
 	- 3) In [13], multiples cues are combined following **late fusion** style, while we consider also **early-fusion**, which,in fact, gives better results in our framework.
 
-Our analysis reveals that, although all the aforementioned components [the use of multiple feature cues, multiple modalities and a strong multiview (MV) classifier] are important, the fusion of visible spectrum and depth information allows to boost the accuracy significantly by a large margin. 
+- Our analysis reveals that, although all the aforementioned components `[the use of multiple feature cues, multiple modalities and a strong multiview (MV) classifier] `are important, 
+	- the fusion of **visible spectrum** and **depth information** allows to boost the accuracy significantly by a large margin. 
 
-The resulting detector not only ranks among the top best performers inthe challenging KITTI benchmark but also it is built upon very simple blocks that are easy to implement and computationallyefficient.
+- The resulting detector not only ranks among the top best performers in the challenging KITTI benchmark but also it is built upon very simple blocks that are easy to implement and computationallyefficient.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcxMzQzMjIyXX0=
+eyJoaXN0b3J5IjpbMTMzMTgyODMxMV19
 -->
