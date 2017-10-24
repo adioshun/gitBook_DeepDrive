@@ -122,9 +122,16 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 - Our analysis reveals that, although all the aforementioned components `[the use of multiple feature cues, multiple modalities and a strong multiview (MV) classifier] `are important, 
 	- the fusion of **visible spectrum** and **depth information** allows to boost the accuracy significantly by a large margin. 
 
-- The resulting detector not only ranks among the top best performers in the challenging KITTI benchmark but also it is built upon very simple blocks that are easy to implement and computationallyefficient.
+## 2. MULTIVIEW RGBD-RF FOR OBJECT DETECTION
 
 
+### 2.1  Multicue Feature Representation
+
+### 2.2 Multimodal Image Fusion
+
+### 2.3 Multiview Classifier
+
+### 2.4 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMTgyODMxMV19
+eyJoaXN0b3J5IjpbNzU1NzQ0NTgyXX0=
 -->
