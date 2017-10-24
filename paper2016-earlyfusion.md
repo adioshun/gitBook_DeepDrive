@@ -83,15 +83,14 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 - 일반적인 접근법은 물체 탐지를 **3D 포인트 클라우드**와 **visible spectrum images**에서 독립적으로 시행한후 이를 적절한 알고리즘으로 합치는 방법 이다.  `A common approach is to detect objects independently in the 3-D cloud of points and in the visible spectrum images, and then combining the detections using an appropriate strategy [22], [23], [26]. `
 
-[21]에서 제안한 방법은 Following the steps of [21], 
-- **dense depth maps** are obtained by first registering the 3-D cloud of points captured by a Velodyne sensor with the RGB image captured with the camera, 
-- and then **interpolating** the resulting sparse set of pixels to obtain a dense map where each pixel has an associated depth value. 
+- [21]에서 제안한 방법은 Following the steps of [21], 
+	- **dense depth maps** are obtained by first registering the 3-D cloud of points captured by a Velodyne sensor with the RGB image captured with the camera, 
+	- and then **interpolating** the resulting sparse set of pixels to obtain a dense map where each pixel has an associated depth value. 
+- Given this map, 2-D descriptors in the literature can be extracted in order to obtain a highly distinctive object representation. 
 
-Given this map, 2-D descriptors in the literature can be extracted in order to obtain a highly distinctive object representation. 
+- 본 논문과 [21]의 다른점 : This paper differs from [21] in that we use **multiple descriptors** and adapt them to have a good performance in dense depth images. 
 
-This paper differsfrom [21] in that we use multiple descriptors and adapt themto have a good performance in dense depth images. 
-
-While [21]employs a late fusion scheme, in our experimental analysiswe evaluate both early and late fusion approaches in the givenmulticue and multimodality framework.Learning a model flexible enough for dealing with multipleviews and multiple positions of an articulated object is a hardtask for a holistic classifier. 
+While [21]employs a late fusion scheme, in our experimental analysis we evaluate both early and late fusion approaches in the given multicue and multimodality framework.Learning a model flexible enough for dealing with multipleviews and multiple positions of an articulated object is a hardtask for a holistic classifier. 
 
 In order to fulfill this aspect wemake use of random forests (RFs) of local experts [27], whichhas a similar expressive power than the popular deformablepart models (DPMs) [28] and less computational complexity.In this method, each tree of the forest provides a differentconfiguration of local experts, where each local expert takesthe role of a part model. 
 
@@ -111,5 +110,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkxMjQzODYyXX0=
+eyJoaXN0b3J5IjpbLTEwNzM4NDkxODJdfQ==
 -->
