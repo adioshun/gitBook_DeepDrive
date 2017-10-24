@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Joel Schlosser \(Georgia Tech\) |
 | 학회/년도 | ICRA 2016, [논문](http://ieeexplore.ieee.org/abstract/document/7487370/) |
-| 키워드 | KITTI, up-sampling, RGB + HHA, caffe |
+| 키워드 | KITTI, RGB + HHA, caffe |
 | 참고 |  |
 | 코드 |  |
 
@@ -69,9 +69,7 @@ We chose to retain the HHA representation described in \[9\] and focused on an e
 As a result, there are many different documented approaches \(see \[1\]\) on pedestrian specific datasets such as the Caltech Pedestrian dataset.
 
 ```
-[1] R. Benenson et al. “Ten Years of Pedestrian Detection,
-What Have We Learned?” In: ArXiv e-prints (Nov.
-2014). arXiv: 1411.4304
+[1] R. Benenson et al. “Ten Years of Pedestrian Detection,What Have We Learned?” In: ArXiv e-prints (Nov.2014). arXiv: 1411.4304
 ```
 
 후보영역 추천을 위해서 DPM을 이용하였다. `The region proposal mechanism we chose to utilize for our R-CNNs is a Deformable Parts Model (DPM) proposal method [5].`
