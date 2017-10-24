@@ -43,7 +43,7 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 - [14]의 연구에 따러면 제안한 **integral channel features**여러 종류의  low-level features들을 합치게 되면 spatial distribution에 대한 유연성 있는 representation 이 된다. `However, there exist in the literature other approaches such the integral channel features proposed by Dollár et al. [14] that allows integrating multiple kinds of low-level features (such as the gradient orientation over the intensity and LUV images, extracted from a large number of local windows of different sizes and at multiple positions), allowing for a flexible representation of the spatial distribution. `
 	- low-level features  = gradient orientation over the intensity and LUV images, extracted from a large number of local windows of different sizes and at multiple positions
 
-In [15] and [16], it has been seen thatincluding color boosts the performance significantly, being thistype of feature complementary to the ones we used in thispaper. 
+-  In [15] and [16], it has been seen that including color boosts the performance significantly, being this type of feature complementary to the ones we used in this paper. 
 
 Context features have also been seen to aid [17], [18]and could be easily integrated as well. 
 
@@ -91,5 +91,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NzMzNDI3MV19
+eyJoaXN0b3J5IjpbLTExMjcyNzU5MzJdfQ==
 -->
