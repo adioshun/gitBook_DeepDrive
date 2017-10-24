@@ -92,7 +92,8 @@
 * [Report\_2017\_cs231n\_Dempster-Shafer \(50%\)](report2017-cs231n-dempster-shafer.md)
 
 ## 4D \(Time, RNN\)
-* ----- RNN based -----
+
+* [----- RNN based -----](-rnn-based-.md)
 * [Paper\_2016\_3D-R2N2](paper2016-3d-r2n2.md)
 
 ## 참고

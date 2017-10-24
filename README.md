@@ -39,6 +39,8 @@
 
 ### 2.2 Point Cloud
 
+- [Object Classification using 3D Convolutional Neural Networks](http://publications.lib.chalmers.se/records/fulltext/249371/249371.pdf): 2016
+
 * [OctNet: Learning Deep 3D Representations at High Resolutions](https://arxiv.org/abs/1611.05009v4): 2016~2017
 * [Deep Semantic Classification for 3D LiDAR Data](https://arxiv.org/abs/1706.08355v1): 물체를 고정된, 움직이는, 움직일수 있는 것으로 3분류 
 * Unsupervised Depth Estimation. [\[Garg, ECCV '16\]](http://arxiv.org/abs/1603.04992)
