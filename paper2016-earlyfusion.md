@@ -36,9 +36,11 @@ In order to integrate different cues we use
 	- **Histogram of oriented gradients (HOG)** [9], that provides a good description of the object contours 
 	- **Local binary pattern (LBP)** [10] as texture-based feature. 
 
-These two types of features providecomplementary information and the fusion of bothtypes of features has been seen to boost the performance ofeither feature separately [11]–[13]. 
+위 두 특징들은 상호 보안적인 요소로 Fusion시 좋은 효과가 난다. `These two types of features provide complementary information and the fusion of both types of features has been seen to boost the performance of either feature separately [11]–[13]. `
 
-From the seminal workof Dalal and Triggs [9], it has been seen that using differenttypes of gradient-based features and their spatial distribution,such as in the HOG descriptor [9] provides a distinctive representationof both humans and other objects classes. 
+[9]에 따르면 
+
+From the seminal work of Dalal and Triggs [9], it has been seen that using different types of gradient-based features and their spatial distribution,such as in the HOG descriptor [9] provides a distinctive representation of both humans and other objects classes. 
 
 However,there exist in the literature other approaches such the integralchannel features proposed by Dollár et al. [14] that allowsintegrating multiple kinds of low-level features such as the gradientorientation over the intensity and LUV images, extractedfrom a large number of local windows of different sizes andat multiple positions, allowing for a flexible representation ofthe spatial distribution. 
 
@@ -90,5 +92,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTUxNzE4MDBdfQ==
+eyJoaXN0b3J5IjpbNDYxNTI4MjEwXX0=
 -->
