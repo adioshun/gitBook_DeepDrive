@@ -38,14 +38,14 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 	- **Histogram of oriented gradients (HOG)** [9], that provides a good description of the object contours 
 	- **Local binary pattern (LBP)** [10] as texture-based feature. 
 
-- [11]-[13]에 따르면 위 두 특징들은 **상호 보안적**인 요소로 **Fusion시** 좋은 효과가 난다. `These two types of features provide complementary information and the fusion of both types of features has been seen to boost the performance of either feature separately [11]–[13]. `
+- [11-2009]-[13-2011]에 따르면 위 두 특징들은 **상호 보안적**인 요소로 **Fusion시** 좋은 효과가 난다. `These two types of features provide complementary information and the fusion of both types of features has been seen to boost the performance of either feature separately [11]–[13]. `
 
-- [9]에 따르면 다른 종류의 **gradient-based features**와 그 **특징의 spatial distribution**을 쓰는것은 좋은 표현력을 가지게 된다. `From the seminal work of Dalal and Triggs [9], it has been seen that using different types of gradient-based features and their spatial distribution,such as in the HOG descriptor [9] provides a distinctive representation of both humans and other objects classes. `
+- [9-2005]에 따르면 다른 종류의 **gradient-based features**와 그 **특징의 spatial distribution**을 쓰는것은 좋은 표현력을 가지게 된다. `From the seminal work of Dalal and Triggs [9], it has been seen that using different types of gradient-based features and their spatial distribution,such as in the HOG descriptor [9] provides a distinctive representation of both humans and other objects classes. `
 
-- [14]의 연구에 따러면 제안한 **integral channel features**여러 종류의  low-level features들을 합치게 되면 spatial distribution에 대한 유연성 있는 representation 이 된다. `However, there exist in the literature other approaches such the integral channel features proposed by Dollár et al. [14] that allows integrating multiple kinds of low-level features (such as the gradient orientation over the intensity and LUV images, extracted from a large number of local windows of different sizes and at multiple positions), allowing for a flexible representation of the spatial distribution. `
+- [14-2009]의 연구에 따러면 제안한 **integral channel features**여러 종류의  low-level features들을 합치게 되면 spatial distribution에 대한 유연성 있는 representation 이 된다. `However, there exist in the literature other approaches such the integral channel features proposed by Dollár et al. [14] that allows integrating multiple kinds of low-level features (such as the gradient orientation over the intensity and LUV images, extracted from a large number of local windows of different sizes and at multiple positions), allowing for a flexible representation of the spatial distribution. `
 	- low-level features  = gradient orientation over the intensity and LUV images, extracted from a large number of local windows of different sizes and at multiple positions
 
--  In [15] and [16], it has been seen that including color boosts the performance significantly, being this type of feature complementary to the ones we used in this paper. 
+-  In [15-2013] and [16-2011], it has been seen that including color boosts the performance significantly, being this type of feature complementary to the ones we used in this paper. 
 
 - **Context features**를 사용하는 방법도 제안 되었다. `Context features have also been seen to aid [17], [18]and could be easily integrated as well. `
 
@@ -170,5 +170,5 @@ This model learns the max-margin hyper plane that better splits the positive and
 #### B.  patch-based
 - As patch-based model we use our **RF of local experts**.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM4ODUxNDU3XX0=
+eyJoaXN0b3J5IjpbLTIzMjUzNjk2Nl19
 -->
