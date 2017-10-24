@@ -46,6 +46,7 @@
   * [Paper\_2015\_DL Representation ](paper2016-deep-learning-representation/paper2015-dl-representation.md)
 * [Paper\_2015\_3DMesh\_Laveling](paper2016-deep-learning-representation/paper2015-3dmesh-laveling.md)
 * [----- Octree based -----](-octree-based-.md)
+* [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
 * ----- Volumetic based -----
 * [Paper\_2015\_3D\_ShapeNet \(50%\)](paper2015-3d-shapenet.md)
 * [Paper\_2015\_VoxNet \(70%\)](papervoxnet.md)
@@ -59,7 +60,6 @@
 * [Paper\_2017\_Vote3Deep \(50%\)](papervote3deep.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 * [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
-* [Paper\_2017\_Instant Object Detection \(30%\)](paper2017-instant-object-detection.md)
 * [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
 * [Paper\_2017\_SqueezeSeg](paper2017-squeezeseg.md)
 * [Paper\_2016\_FPNN](paper2016-fpnn.md)
