@@ -83,9 +83,11 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 - 일반적인 접근법은 물체 탐지를 **3D 포인트 클라우드**와 **visible spectrum images**에서 독립적으로 시행한후 이를 적절한 알고리즘으로 합치는 방법 이다.  `A common approach is to detect objects independently in the 3-D cloud of points and in the visible spectrum images, and then combining the detections using an appropriate strategy [22], [23], [26]. `
 
-Following the steps of [21], dense depth maps are obtained by first registering the 3-D cloud of points captured by a Velodyne sensor with the RGB image captured with the camera, and then interpolating the resulting sparse set of pixels to obtain a dense map where each pixel has an associated depth value. 
+[21]에서 제안한 방법은 Following the steps of [21], 
+- **dense depth maps** are obtained by first registering the 3-D cloud of points captured by a Velodyne sensor with the RGB image captured with the camera, 
+- and then **interpolating** the resulting sparse set of pixels to obtain a dense map where each pixel has an associated depth value. 
 
-Given this map, 2-Ddescriptors in the literature can be extracted in order to obtaina highly distinctive object representation. 
+Given this map, 2-D descriptors in the literature can be extracted in order to obtain a highly distinctive object representation. 
 
 This paper differsfrom [21] in that we use multiple descriptors and adapt themto have a good performance in dense depth images. 
 
@@ -109,5 +111,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTMyMzU3MTNdfQ==
+eyJoaXN0b3J5IjpbNzkxMjQzODYyXX0=
 -->
