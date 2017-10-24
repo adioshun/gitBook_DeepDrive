@@ -40,7 +40,8 @@ Fig. 1. General scheme: from RGB images and LIDAR data to object detection.
 
 - [9]에 따르면 다른 종류의 **gradient-based features**와 그 **특징의 spatial distribution**을 쓰는것은 좋은 표현력을 가지게 된다. `From the seminal work of Dalal and Triggs [9], it has been seen that using different types of gradient-based features and their spatial distribution,such as in the HOG descriptor [9] provides a distinctive representation of both humans and other objects classes. `
 
-- [14]의 연구에 따러면 제안한 **integral channel features**여러 종류의  low-level features들을 합치게 되면 However, there exist in the literature other approaches such the integral channel features proposed by Dollár et al. [14] that allows integrating multiple kinds of low-level features such as the gradient orientation over the intensity and LUV images, extracted from a large number of local windows of different sizes and at multiple positions, allowing for a flexible representation of the spatial distribution. 
+- [14]의 연구에 따러면 제안한 **integral channel features**여러 종류의  low-level features들을 합치게 되면 spatial distribution에 대한 유연성 있는 representation 이 된다. `However, there exist in the literature other approaches such the integral channel features proposed by Dollár et al. [14] that allows integrating multiple kinds of low-level features (such as the gradient orientation over the intensity and LUV images, extracted from a large number of local windows of different sizes and at multiple positions), allowing for a flexible representation of the spatial distribution. `
+	- low-level features  = gradient orientation over the intensity and LUV images, extracted from a large number of local windows of different sizes and at multiple positions
 
 In [15] and [16], it has been seen thatincluding color boosts the performance significantly, being thistype of feature complementary to the ones we used in thispaper. 
 
@@ -90,5 +91,5 @@ Several authors have proposed methodsfor combining local detectors [28], [29] an
 
 The method in [33] also makes use of RFwith local classifiers at the node level, although it requiresto extract many complex region-based descriptors, making itcomputationally more demanding than [27].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk3MjE5MzkyXX0=
+eyJoaXN0b3J5IjpbMTI4NzMzNDI3MV19
 -->
