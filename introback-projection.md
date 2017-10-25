@@ -4,37 +4,9 @@
 |학회/년도| 2008. 12, [논문](http://terms.naver.com/entry.nhn?docId=3473050&cid=58468&categoryId=58468)|
 |키워드|단일 카메라, 연속된 2장의 사진, SIFT[5] 특징점, 삼각측량|
 
-## 양안 카메라
+> 최근 스테레오보다는 단안 카메라에 집중하는 분위기(eg. 컨티넨탈)
+> 거리 측정값은 정확하진 않지만 레이더가 있으니 융합해서 쓰면 스테레오보다 나은 성능. 스테레오 역시 일정거리를 넘어서면 거리값도 신뢰하기 힘듬
 
-- 정의 : 두 개의 일반 카메라를 병렬적으로 설치하고, 두 카메라에 투영된 영상 간의 시각에 따른 차이를 분석함으로써 대상까지의 거리를 인지하는 방식이다. 사람이 두 눈을 가지고 거리 정보를 파악하는 것과 같은 방식이다.
-
-- 단점 : 스테레오 카메라를 이용하는 방식은 카메라 간의 거리나 방향 등이 정확하게 고정되어야 하는 등 설치상 번잡스러운 문제도 있지만, 영상의 분석에 상당한 리소스를 소비해야 한다는 점이 문제가 된다.
-
-- 단점 : stereo vision is fundamentally limited by the baseline distance between the two cameras. Specifically, the depth estimates tend to be inaccurate when the distances
-considered are large
-
-```
-- Ashutosh Saxena, Jamie Schulte and Andrew Y. Ng, "Depth Estimation using Monocular and Stereo Cues", IJCAI-2007
-- 리뷰논문 : A Taxonomy and Evaluation of Dense Two-Frame Stereo Correspondence Algorithms, 2002
-```
-There is a distance limit. It depends on the baseline, the focal length and the pixel pitch.
-
-
-```
-
-        Baseline * Focal length
-Depth = ----------------------
-        Pixel disparity * Pixel size
-
-Baseline (b) = 8 cm (80 mm)
-Focal length (f) = 6.3 mm
-Pixel size (p) = 14 um (0.014 mm)
-
-
-Depth = (80*6.3)/(1*0.014) = 36,000 mm = 36 m
-```
-
-출처 : [stackoverflow](https://stackoverflow.com/questions/19421003/how-field-of-view-changes-depth-estimation-in-stereo-vision), [Stereo Accuracy Chart](https://www.ptgrey.com/KB/10022) (Microsoft Excel format), [Depth Estimation using Monocular and Stereo Cues](https://pdfs.semanticscholar.org/4953/1103099c8d17ea34eb09433688e84de4f35f.pdf)
 
 ## 단안 카메라 
 
