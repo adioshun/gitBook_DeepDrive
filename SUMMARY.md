@@ -7,7 +7,7 @@
 * [Paper\_2017\_Survey\_CV4Vehicle \(50%\)](paper2017-survey.md)
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
-* [Paper\_2016\_Unify monocular detectors](paper2017-unify-monocular-detectors.md)
+* [Paper\_2016\_Unify monocular detectors \(5%\)](paper2017-unify-monocular-detectors.md)
 
 ## Related Works
 
