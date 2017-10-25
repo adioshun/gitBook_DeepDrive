@@ -23,6 +23,7 @@
 * [Intro\_MonocularVision](introback-projection.md)
 * [Papers\_국내 논문\_단일카메라 \(100%\)](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0.md)
 * [Paper\_2016\_Unify monocular detectors \(5%\)](paper2017-unify-monocular-detectors.md)
+* [Paper\_2014\_DepthMap Prediction \(0%\)](paper2014-depthmap-prediction.md)
 * [Paper\_2016\_Mono3D2016 \(70%\)](papermonocular-3d.md)
 * [Paper\_2016\_Monocular Depth /w 2Camera \(0%\)](paper2016-monocular-depth.md)
 * [Paper\_2017\_Semi\_MDE \(0%\)](paper2017-semi-mde.md)
@@ -34,8 +35,6 @@
 * [Intro\_StereoVision](introstereovision.md)
 * [Paper\_2017\_3DOP\_X Chen \(70%\)](paper2017-3d-object-proposals.md)
   * [Paper\_2014\_SPS-Stereo \(30%\)](paper2014-sps-stereo.md)
-
-
 
 ## 3D PointCloud
 
