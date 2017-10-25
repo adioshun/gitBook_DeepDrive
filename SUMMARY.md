@@ -33,7 +33,6 @@
   * [Paper\_2014\_SPS-Stereo \(30%\)](paper2014-sps-stereo.md)
 * [Lab\_Depth Map from Stereo Images](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0/labdepth-map-from-stereo-images.md)
 * [Paper\_2017\_Deep3DBox \(15%\)](paper2017-3d-bbox.md)
-* [Report\_2017\_Monocular 3 CNN Methods \(70%\)](report2017-monocular-3-cnnmethods.md)
 * [Paper\_2016\_Depth Fusion \(0%\)](paper2016-depth-fusion.md)
 * [Paper\_2017\_Semi\_MDE \(0%\)](paper2017-semi-mde.md)
 
