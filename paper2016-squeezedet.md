@@ -1,7 +1,7 @@
 |논문명|SqueezeDet: Unified, Small, Low Power Fully Convolutional Neural Networks for Real-Time Object Detection for Autonomous Driving|
 |-|-|
 |저자(소속)|Bichen Wu(버클리)|
-|학회/년도|CVPR 2017, [논문](https://arxiv.org/abs/1612.01051)|
+|학회/년도|Bichen2016, CVPR 2017, [논문](https://arxiv.org/abs/1612.01051)|
 |키워드|KITTI, [YOLO](https://adioshun.gitbooks.io/semantic-segmentation/content/2015yolo.html) + [SqueezeNet](https://adioshun.gitbooks.io/semantic-segmentation/content/2017squeezenet.html)|
 |참고|[정리](https://theintelligenceofinformation.wordpress.com/2017/03/02/introducing-squeezedet-low-power-fully-convolutional-neural-network-framework-for-autonomous-driving/)|
 |Code|[TF](https://github.com/BichenWuUCB/squeezeDet), [TF /wKITTI](https://github.com/fregu856/2D_detection/blob/master/README.md),  [Docker](https://hub.docker.com/r/lorenagdl/squeezedet/)|
