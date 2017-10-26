@@ -8,6 +8,8 @@
 
 > LSTM이 어떻게 **global scale** 측정 문제를 해결 하였나??
 
+> 기존 연구 : [12] M. Mancini, G. Costante, P. Valigi, and T. A. Ciarfuglia, “Fast robust monocular depth estimation for obstacle detection with fully convolutional networks,” in Intelligent Robots and Systems (IROS), 2016 IEEE/RSJ International Conference on, 2016.
+
 # Towards Domain Independence for Learning-based Monocular Depth Estimation
 
 
@@ -50,6 +52,13 @@ Stereo 카메라 방식의 단점
 - 머신러닝 방식의 단점 : 학습에 사용된 환경만 적용 가능하다. `On the downside, these systems rely on the quality and variety of the training set and ground truth provided, and often are not able to adapt to unseen environments`
 
 
+```
+[7] D. Eigen, C. Puhrsch, and R. Fergus, “Depth map prediction from a single image using a multi-scale deep network,” in Advances in neural information processing systems, 2014, pp. 2366–2374.
+[8] F. Liu, C. Shen, G. Lin, and I. Reid, “Learning depth from single monocular images using deep convolutional neural fields,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 38, no. 10, pp. 2024–2039, Oct 2016.
+[9] A. Roy and S. Todorovic, “Monocular depth estimation using neural regression forest,” 2016.
+[10] A. Saxena, M. Sun, and A. Y. Ng, “Make3d: Learning 3d scene structure from a single still image,” Pattern Analysis and Machine Intelligence, IEEE Transactions on, vol. 31, no. 5, pp. 824–840, 2009.
+[11] R. Garg and I. Reid, “Unsupervised cnn for single view depth estimation: Geometry to the rescue,” arXiv preprint arXiv:1603.04992, 2016.
+```
 ### 1.3 Domain independence
 
 domain independence는 중요한 도전 과제 이다. 
@@ -77,6 +86,10 @@ domain independence는 중요한 도전 과제 이다.
 
 - 부가적으로 : weight and power consumption minimization is highly desirable. 
 
+```
+[13] D. Scharstein and R. Szeliski, “A taxonomy and evaluation of dense two-frame stereo correspondence algorithms,” International journal of computer vision, vol. 47, no. 1-3, pp. 7–42, 2002.
+```
+
 ###### Monocular camera /w geometric methods 제약
 
 - Monocular depth estimation based on geometric methods is grounded on the **triangulation of consecutive frames**.
@@ -84,6 +97,12 @@ domain independence는 중요한 도전 과제 이다.
 - 일부 좋은 성과를 보이지만[14], [15], [16],고속 이동시 성능이 떨어 진다. `the performance of their reconstruction routines drops during high-speed motion, as dense alignment becomes extremely challenging. `
 
 - 또한, **absolute scal** 구하는게 불가능 하다. `In addition, it is not possible to recover the absolute scale of the object distances.`
+
+```
+[14] M. Pizzoli, C. Forster, and D. Scaramuzza, “Remode: Probabilistic, monocular dense reconstruction in real time,” in 2014 IEEE International Conference on Robotics and Automation (ICRA). IEEE, 2014, pp. 2609–2616.
+[15] J. Engel, T. Schops, and D. Cremers, “Lsd-slam: Large-scale direct monocular slam,” in European Conference on Computer Vision. Springer, 2014, pp. 834–849.
+[16] R. A. Newcombe, S. J. Lovegrove, and A. J. Davison, “Dtam: Dense tracking and mapping in real-time,” in 2011 international conference on computer vision. IEEE, 2011, pp. 2320–2327
+```
 
 
 > 본 연구에서는 compute the **scene depth** and the associated **absolute scale** from a single image (i.e., `without processing multiple frames`) 방법을 제안 한다. 
@@ -99,9 +118,19 @@ domain independence는 중요한 도전 과제 이다.
 
 - 문제점 : This method tends to suffer in uncontrolled settings, especially when the horizontal alignment condition does not hold. 
 
+```
+[17] A. Saxena, S. H. Chung, and A. Y. Ng, “Learning depth from single monocular images,” in Advances in Neural Information Processing Systems, 2005, pp. 1161–1168
+```
+
 ###### 깊이 측정에 CNN을 적용한 최초의 논문 
 
 - Eigen et al. ([7], [18],exploit for the first time in their work the emergence of Deep Learning solutions for this kind of problems, training a multi scale CNN to estimate depth. 
+
+```
+[7] D. Eigen, C. Puhrsch, and R. Fergus, “Depth map prediction from a single image using a multi-scale deep network,” in Advances in neural information processing systems, 2014, pp. 2366–2374.
+[18] D. Eigen and R. Fergus, “Predicting depth, surface normals and semanticlabels with a common multi-scale convolutional architecture,” in Proceedings of the IEEE International Conference on Computer Vision, 2015, pp. 2650–2658.
+```
+
 
 ###### CNN + Conditional Random Field
 
