@@ -217,7 +217,7 @@ A new 3D descriptor learning method combining the strengths of CNNs, AEs, and EL
   * in the last part of the network, all descriptors extracted from the AEs were concatenated into a vector that was used for predicting the current 3D shape’s label.
 
 ```
-Y. Wang, Z. Xie, K. Xu, Y. Dou, and Y. Lei. 2016. An efficient and effective convolutional auto-encoder extreme learning machine network for 3D feature learning.Neurocomputing 174 (2016), 988–998. 
+Y. Wang, Z. Xie, K. Xu, Y. Dou, and Y. Lei. 2016. An efficient and effective convolutional auto-encoder extreme learning machine network for 3D feature learning. Neurocomputing 174 (2016), 988–998. 
 ```
 
 
