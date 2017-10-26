@@ -4,6 +4,10 @@
 
 ## 2. Paper
 
+-  C. Lundquist, “Sensor fusion for automotive applications,” Ph.D. dissertation, Linkoping University, Link ¨ oping, 2011. ¨
+
+-  N.-E. E. Faouzi, H. Leung, and A. Kurian, “Data fusion in intelligent transportation systems: Progress and challenges : A survey,” Information Fusion, vol. 12, no. 1, pp. 4 – 10, 2011.
+
 - ~~[Object Detection and Tracking with Side Cameras and RADAR in an Automotive Context](http://www.mi.fu-berlin.de/inf/groups/ag-ki/Theses/Completed-theses/Master_Diploma-theses/2013/Hofmann/Master-Hofmann.pdf?1381479774)~~: 2013, 3장이 센서 퓨전 
 
 - ~~[Object Detection and Classification by Decision-Level Fusion for Intelligent Vehicle Systems](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/)~~: 2017, KITTI, 21p
