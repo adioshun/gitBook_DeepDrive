@@ -117,36 +117,22 @@ To summarize, in this part of the lecture we have reviewed a number of existing 
 
 > https://www.slideshare.net/secret/Ls3Y0t8O7jat80
 
-### RNN/RL
-
-[3DCNN-DQN-RNN: A Deep Reinforcement Learning Framework for Semantic Parsing of Large-scale 3D Point Clouds](https://arxiv.org/abs/1707.06783): 2017.07, 3D CNN + RNN + DQN
 
 ---
 
-# Datasets
-- Princeton Shape Benchmark (PSB) [Shilane et al. 2004] 
-
-- Engineering Shape Benchmark (ESB) [Jayanti et al. 2006]
-
-- PSB [Shilane et al. 2004]
-
-- National Taiwan University (NTU) dataset [Chen et al. 2003] 
-
-- SHREC’09 [Godil et al. 2009]
-
-- [Semantic3D.net: A new Large-scale Point Cloud Classification Benchmark](https://arxiv.org/abs/1704.03847): 2017.04, Datasets, 도시, four billion~
 
 
 ![](https://i.imgur.com/hAfHmk1.png)
+
 메모리 사용량 
 
 ---
 
 ## Workshop
 
-[3D DeepLearning at NIPS2016](http://3ddl.cs.princeton.edu/2016/): 발표 자료 목록/자료 포
+- [3D DeepLearning at NIPS2016](http://3ddl.cs.princeton.edu/2016/): 발표 자료 목록/자료 포
 
-[Geometry Meets Deep Learning ECCV 2016 Workshop](https://sites.google.com/site/deepgeometry/)
+- [Geometry Meets Deep Learning ECCV 2016 Workshop](https://sites.google.com/site/deepgeometry/)
 
 ---
 
