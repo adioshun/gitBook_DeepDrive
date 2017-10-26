@@ -422,7 +422,8 @@ The depth map representation typically consists of
 
 This representationis usually preferred in scene analysis due to its flexibility and scalability to large scenes. 
 
-```
+
+
 - Plane Sweeping Stereo algorithm(Collins (1996)) : 
     - It sweeps a family of parallel planes in a scene, projects images onto a plane via planar homographies, then evaluates photo-consistency values on each plane. 
 
@@ -430,7 +431,7 @@ In largescenes, one of the challenges is to handle massive amount ofdata in real
 
 - Pollefeys (2008) propose a large scale, realtime3D reconstruction system based on depth map representation.
     - The real-time performance is achieved by incorporating a set of components which are particularly efficient on typical urban scenes such as a 2D feature tracker with automatic gain adaptation for handling large dynamic range in natural scenes, and parallel implementations of plane sweeping stereo and depth map fusion on GPU.
-```
+
 
 ###### Point cloud
 
