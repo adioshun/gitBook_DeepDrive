@@ -136,9 +136,17 @@ domain independence는 중요한 도전 과제 이다.
 
 - Liu et al. [8] combine a CNN with a Conditional Random Field to improve smoothness. 
 
+```
+[8] F. Liu, C. Shen, G. Lin, and I. Reid, “Learning depth from single monocular images using deep convolutional neural fields,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 38, no. 10, pp. 2024–2039, Oct 2016
+```
+
 ###### Neural Regression Forest
 
 - Roy et al. [9] recently proposed a novel depth estimation method based on Neural Regression Forest. 
+
+```
+[9] A. Roy and S. Todorovic, “Monocular depth estimation using neural regression forest,” 2016.
+```
 
 > 위 논문들은 not domain independent
 
