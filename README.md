@@ -1,18 +1,5 @@
 # Deep Drive
 
-| % | 진행도 | 기타 |
-| --- | --- | --- |
-| 0% | 미 진행 | 읽을 논문으로 선택 |
-| 10% | 개요 및 논문 목적 파악 | 관련성 낮을 경우 향후 미 진행 가능 |
-| 30% | 관련 연구 파악 |  |
-| 50% | 제안 방식 간략한 파악 |  |
-| 70% | 제안 방식 깊은 파악 |  |
-| 100% | 완료 |  |
-
-[MindMap- Trend](https://mind42.com/public/df5a7bc7-0e97-4807-b550-a21ed9e6699d)
-
-<iframe width='640' height='480' frameborder='0' src='https://mind42.com/mindmap/df5a7bc7-0e97-4807-b550-a21ed9e6699d?rel=embed'></iframe>
-
 ## 1. List
 
 * [Awesome : Autonomous Vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles)
