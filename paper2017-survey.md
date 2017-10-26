@@ -378,8 +378,11 @@ The proposed OctNet exploits this sparsity property by hierarchically partitioni
 
 This leads to a reduction in computational and memory requirements as the convolutional network operations are defined on the structure of these trees and thus can dynamically allocate resources depending on the structure of the input.
 
+
 ```
+
 Riegler, G., Ulusoy, A. O., & Geiger, A. (2017). Octnet: Learning deep 3d representations at high resolutions. In Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR).
+
 ```
 
 
