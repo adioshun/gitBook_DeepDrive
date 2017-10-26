@@ -85,6 +85,14 @@ Specifically, we propose the following contributions:
 
 * It has also been shown that posing this binocular correspondence search as a multi-class classification problem has advantages both in terms of quality of results and speed\[38\].
 
+```
+[54] J. Zbontar and Y. LeCun. Stereo matching by training a ˇconvolutional neural network to compare image patches. JMLR, 2016
+[31] L. Ladicky, C. H ` ane, and M. Pollefeys. Learning the matching function. arXiv preprint arXiv:1502.00652, 2015.
+[38] W. Luo, A. Schwing, and R. Urtasun. Efficient deep learning for stereo matching. In CVPR, 2016
+
+```
+
+
 ###### \[DispNet\]
 
 DispNet\[39\]에서는 FCN을 이용하여 두 이미지에서 correspondence field를 계산 하도록 하였다.
