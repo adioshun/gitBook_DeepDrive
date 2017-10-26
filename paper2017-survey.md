@@ -423,16 +423,13 @@ The depth map representation typically consists of
 - a depth map for each input view estimated 
 - with a 3D modeling pipeline which starts with image matching followed by pose estimation and dense stereo. 
 
-This representationis usually preferred in scene analysis due to its flexibility and scalability to large scenes. 
+This representation is usually preferred in scene analysis due to its flexibility and scalability to large scenes. 
 
+- Plane Sweeping Stereo algorithm(Collins (1996)) : It sweeps a family of parallel planes in a scene, projects images onto a plane via planar homographies, then evaluates photo-consistency values on each plane. 
 
+- In large scenes, one of the challenges is to handle massive amount ofdata in real-time. 
 
-- Plane Sweeping Stereo algorithm(Collins (1996)) : 
-    - It sweeps a family of parallel planes in a scene, projects images onto a plane via planar homographies, then evaluates photo-consistency values on each plane. 
-
-In largescenes, one of the challenges is to handle massive amount ofdata in real-time. 
-
-- Pollefeys (2008) propose a large scale, realtime3D reconstruction system based on depth map representation.
+- Pollefeys (2008) propose a large scale, realtime3D reconstruction system based on depth map representation. 
     - The real-time performance is achieved by incorporating a set of components which are particularly efficient on typical urban scenes such as a 2D feature tracker with automatic gain adaptation for handling large dynamic range in natural scenes, and parallel implementations of plane sweeping stereo and depth map fusion on GPU.
 
 
@@ -440,13 +437,11 @@ In largescenes, one of the challenges is to handle massive amount ofdata in real
 
 In contrast to a partial depthmap for each view, point-cloud or patch based surface representations reconstruct a single 3D point-cloud model using all the input images. 
 
-Under spatial consistency assumptions, the pointcloudon the surface of the scene can grow or expand whichprovides easy model manipulation such as merging and splitting.
+Under spatial consistency assumptions, the pointcloud on the surface of the scene can grow or expand which provides easy model manipulation such as merging and splitting.
 
-```
 - Patch-based Multi-View Stereo (PMVS) by Furukawa & Ponce(2010). 
 
-PMVS starts with a feature matching step to generate a sparse set of patches and then iterate between a greedy expansion step and a filtering step to make patches dense and remove erroneous matches.
-```
+    - PMVS starts with a feature matching step to generate a sparse set of patches and then iterate between a greedy expansion step and a filtering step to make patches dense and remove erroneous matches.
 
 ###### Volumetric
 
@@ -454,7 +449,7 @@ Volumetric approaches represent geometry on a regularly `sampled 3D grid`, i.e. 
 - either as a discrete occupancy function (Kutulakos & Seitz (2000)) 
 - or a function encoding distance to the closest surface (level-set)(Faugeras & Keriven (1998)). 
 
-More recent approaches use aprobability map defined at regular voxel locations to encodethe probability of occupancy (Bhotika et al. (2002); Pollard &Mundy (2007); Ulusoy et al. (2015)). 
+More recent approaches use a probability map defined at regular voxel locations to encode the probability of occupancy (Bhotika et al. (2002); Pollard &Mundy (2007); Ulusoy et al. (2015)). 
 
 The amount of memory required is the main limitation for volumetric approaches.
 
