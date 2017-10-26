@@ -6,7 +6,7 @@
 |데이터셋/모델|KITTI|
 | 참고 | [홈페이지](http://www.cs.toronto.edu/objprop3d/), [보충자료](http://www.cs.toronto.edu/objprop3d/3DOP_journal_suppl.pdf), [이전버젼\(2015\)](http://www.cs.toronto.edu/objprop3d/3dopNIPS15.pdf) |
 | 코드 | [Download](http://www.cs.toronto.edu/objprop3d/downloads.php) |
-|이전연구|3D Object Proposals for Accurate Object Class Detection|
+|이전연구|3D Object Proposals for Accurate Object Class Detection(NIPS, 2015.)|
 
 
 # 3DOP
