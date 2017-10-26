@@ -7,6 +7,7 @@
 * [Paper\_2017\_Survey\_CV4Vehicle \(50%\)](paper2017-survey.md)
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
+* [Paper\_2014\_Know\_limit\_stereo](paper2014-know-limit-stereo.md)
 
 ## Related Works
 
@@ -26,7 +27,7 @@
 * [Paper\_2014\_DepthMap Prediction \(0%\)](paper2014-depthmap-prediction.md)
 * [Paper\_2016\_Mono3D2016 \(70%\)](papermonocular-3d.md)
 * [Paper\_2017\_Monocular Depth /w 2Camera \(0%\)](paper2016-monocular-depth.md)
-* [Report\_2017\_Monocular 3 CNN Methods \(70%\)](report2017-monocular-3-cnnmethods.md)
+* [Report\_2017\_Study\_Monocular \(70%\)](report2017-monocular-3-cnnmethods.md)
 * [Paper\_2017\_Deep3DBox \(15%\)](paper2017-3d-bbox.md)
 * [Paper\_2017\_J-MOD \(30%\)](paper2017-j-mod.md)
   * [Paper\_2017\_Domain Independent MDE  \(30%\)](paper2017-domain-independent-mde.md)

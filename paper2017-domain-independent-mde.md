@@ -36,6 +36,11 @@ Stereo 카메라 방식의 단점
 
 - 단점 해결 방법 : Exploiting geometric constraints on camera motion and planarity, obstacle detection and navigable ground space estimation can be extended far beyond the normal range ([5], [6]). 
 
+```
+[3] P. Pinggera, D. Pfeiffer, U. Franke, and R. Mester, “Know your limits: Accuracy of long range stereoscopic object measurements in practice,” in Computer Vision–ECCV 2014. Springer, 2014, pp. 96–111.
+[4] E. R. Davies, Machine vision: theory, algorithms, practicalities. Elsevier,2004.
+```
+
 ### 1.2 단안 카메라 
 
 최근 머신러닝을 이용한 깊이측정 측정 방법이 양안 카메라 용으로 제안 되었다. ([7], [8], [9], [10], [11]). 
