@@ -380,7 +380,7 @@ This leads to a reduction in computational and memory requirements as the convol
 
 ```
 Riegler, G., Ulusoy, A. O., & Geiger, A. (2017). Octnet: Learning deep 3d representations at high resolutions. In Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR).
-``
+```
 
 
 ### 6.5. Semantic Segmentation of Street Side Views
