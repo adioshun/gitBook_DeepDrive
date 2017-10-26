@@ -1,8 +1,5 @@
-## TEST
-this is test terms
-
 ## Disparity image
-Depth image와 비슷한 일명 `시차이미지`
+Depth image와 비슷한 일명 `시차이미지`, 두 이미지의 거리 차
 ![](https://i.imgur.com/5hox3Bm.png)
 
 ## image retrieval
@@ -12,5 +9,4 @@ Depth image와 비슷한 일명 `시차이미지`
 얼굴 정합
 
 ## RANSAC
-
 http://darkpgmr.tistory.com/61

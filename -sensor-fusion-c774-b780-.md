@@ -26,6 +26,7 @@ vol. 33, no. 12, pp. 2477–2491, 2011.
 
 ## 2. Paper
 
+- A comparative study of data fusion for RGB-D based visual recognition : A study of data fusion methods for RGB-D visual recognition can be found in Sanchez-Riera et al. [2016].
 
 
 -  C. Lundquist, “Sensor fusion for automotive applications,” Ph.D. dissertation, Linkoping University, Link ¨ oping, 2011. ¨
