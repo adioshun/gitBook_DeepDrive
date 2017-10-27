@@ -10,6 +10,8 @@
 * [Paper\_2014\_Know\_limit\_stereo](paper2014-know-limit-stereo.md)
 * [Paper\_2017\_3DCNN\_DQN\_RNN](paper20173dcnndqn-rnn.md)
 * [Paper\_2016\_DL4SM](paper2016-dl4sm.md)
+* [Paper\_2015\_DispNet](paper2015-dispnet.md)
+* [Paper\_2017\_FlowNet2](paper2017-flownet2.md)
 
 ## Related Works
 
