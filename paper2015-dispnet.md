@@ -125,7 +125,7 @@ Recent applications of convolutional networks include also
 
 - Commonly, **scene flow** is considered as the underlying **3D motion field** that can be computed from **stereo videos** or **RGBD** videos. 
 
-- Assume two successive time frames $$t$$ and $$t+ 1$$ of a stereo pair, yielding four images (ItL, ItR, It+1L, It+1R ). 
+- Assume two successive time frames $$t$$ and $$t+ 1$$ of a stereo pair, yielding four images ($$I^t_L, I^t_R, I^{t+1}_L, I^{t+1}_R$$). 
 
 Scene flow provides for eachvisible point in one of these four images the point’s 3D positionand its 3D motion vector [24].These 3D quantities can be computed only in the caseof known camera intrinsics and extrinsics. 
 
