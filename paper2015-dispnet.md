@@ -135,6 +135,8 @@ Fig.
 
 2. 
 
+$$\frac{1}{2}$$ 
+
 This representation is completein the sense that the visible 3D points and their 3D motionvectors can be computed from the components if the cameraparameters are known.Given the disparities at t and t+1, the disparity changeis almost redundant. 
 
 Thus, in the KITTI 2015 scene flowbenchmark [17], only optical flow and disparities are evaluated.In this case, scene flow can be reconstructed only forsurface points that are visible in both the left and the rightframe. 
