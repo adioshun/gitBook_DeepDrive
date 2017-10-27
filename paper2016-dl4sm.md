@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Wenjie Luo \(\toronto Uni.) |
 | 학회/년도 | CVPPR2016, [논문](http://ieeexplore.ieee.org/document/7780983/) |
-| 키워드 | |
+| 키워드 | Luo2016,  |
 | 데이터셋(센서)/모델 | KITTI |
 | 관련연구|Stereo Matching by Training a Convolutional Neural Network to Compare Image Patches [2015](https://arxiv.org/abs/1510.05970), [code](https://github.com/jzbontar/mc-cnn)|
 | 참고 |[홈페이지](http://www.cs.toronto.edu/deepLowLevelVision/), [CVPR2016](https://www.youtube.com/watch?v=EEqCf_eno5c), [KITTI_LB](http://www.cvlibs.net/datasets/kitti/eval_scene_flow_detail.php?benchmark=stereo&result=b54624a9eed52b4c8e6c76b411179dce4bd7d4d8) |
