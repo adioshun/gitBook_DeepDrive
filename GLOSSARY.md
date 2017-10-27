@@ -10,3 +10,6 @@ Depth image와 비슷한 일명 `시차이미지`, 두 이미지의 거리 차
 
 ## RANSAC
 http://darkpgmr.tistory.com/61
+
+## binocular
+two concatenated views
