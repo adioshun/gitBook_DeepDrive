@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Nikolaus Mayer \(uni-freiburg.de\) |
 | 학회/년도 | CVPPR 2016, [논문](https://arxiv.org/abs/1512.02134) |
-| 키워드 | Nikolaus2016,  |
+| 키워드 | Nikolaus2016, $$scene flow \in \{disparity estimation, optical flow estimation\}$$  |
 | 데이터셋(센서)/모델 |KITTI,   |
 | 관련연구| FlowNet1 |
 | 참고 |[홈페이지](https://lmb.informatik.uni-freiburg.de/Publications/2016/MIFDB16/), [Youtube](https://www.youtube.com/watch?v=1iAQp6KmhE4) |
@@ -75,9 +75,13 @@ Finally,we also present a network for **scene flow estimation** and provide the 
 ### 2.2 CNN
 
 Recent applications of convolutional networks include also 
-- depth estima-tion from single images [6], 
-- stereo matching [28]
+- depth estima-tion from single images [6-Eigen2014a], 
+- stereo matching [28-Zbontar2015]
 - optical flow estimation [4-FlowNet#1].
+
+```
+[6] D. Eigen, C. Puhrsch, and R. Fergus. Depth map prediction from a single image using a multi-scale deep network. NIPS,2014.
+```
 
 
 #### A. FlowNet #1
@@ -100,6 +104,11 @@ Recent applications of convolutional networks include also
 
 > [28]이후에 나온 [DL4SM]에서 속도 문제 해결 
 
+```
+[28] J. Zbontar and Y. LeCun. Stereo matching by training a convolutional neural network to compare image patches. arXiv preprint arXiv:1510.05970, 2015. 
+```
+
+
 #### C. Scene flow. 
 
 - disparity estimation와 optical flow estimation에 대한 연구는 많지만, scene flow연구는 별로 없다. 
@@ -109,41 +118,69 @@ Recent applications of convolutional networks include also
 - Scene flow연구는 [23]을 시초로 시작 되었다. `Scene flow estimation was popularized for the first time by the work of Vedula et al. [23] who analyzed different possible problem settings. `
 
 - 다음은 [23]연구의 확장 버젼 들이다. `Later works were dominated by variational methods. `
-    - Huguet and Devernay [12] formulatedscene flow estimation in a joint variational approach. 
-    - Wedelet al. [26] followed the variational framework but decoupledthe disparity estimation for larger efficiency and accuracy.
-    - Vogel et al. [25] combined the task of scene flow estimationwith superpixel segmentation using a piecewise rigid modelfor regularization. 
-    - Quiroga et al. [19] extended the regularizer further to a smooth field of rigid motion. 
-    - Like Wedelet al. [26] they decoupled the disparity estimation and replaced it by the depth values of RGBD videos.
+    - Huguet and Devernay [12-2007] formulatedscene flow estimation in a joint variational approach. 
+    - Wedelet al. [26-2008] followed the variational framework but decoupledthe disparity estimation for larger efficiency and accuracy.
+    - Vogel et al. [25-2013] combined the task of scene flow estimationwith superpixel segmentation using a piecewise rigid modelfor regularization. 
+    - Quiroga et al. [19-2012] extended the regularizer further to a smooth field of rigid motion. 
+    - Like Wedelet al. [26-2008] they decoupled the disparity estimation and replaced it by the depth values of RGBD videos.
+
+```
+[23] S. Vedula, S. Baker, P. Rander, R. Collins, and T. Kanade. Three-dimensional scene flow. IEEE Transactions on Pattern Analysis and Machine Intelligence, 27(3):475–480, 2005
+```
 
 
 - KITTI를 이용한 가장 빠른(2.3초) 논문은 [3]이다. `The fastest method in KITTI’s scene flow top 7 is from Cech et al. [3] with a runtime of 2.4 seconds. `
     - The method employs a seed growing algorithm for simultaneous **disparity** and **optical flow** estimation.
             
+```
+[3] J. Cech, J. Sanchez-Riera, and R. P. Horaud. Scene flow estimation by growing correspondence seeds. In CVPR, 2011
+```            
+            
 ## 3. Definition of Scene Flow
 
 - **Optical flow**정의 : a **projection** of the world’s **3D motion** onto the **image plane**. 
 
-- Commonly, **scene flow** is considered as the underlying **3D motion field** that can be computed from **stereo videos** or **RGBD** videos. 
+- 일반적으로 **scene flow**는 3D를 기반으로 한다. 
+    - Commonly, **scene flow** is considered as the underlying **3D motion field** that can be computed from **stereo videos** or **RGBD** videos. 
 
-- Assume two successive time frames $$t$$ and $$t+ 1$$ of a stereo pair, yielding four images ($$I^t_L, I^t_R, I^{t+1}_L, I^{t+1}_R$$). 
+- 스테레오 비전의 t+1시간후에는 4개의 사진이 있다고 가정하다. Assume two successive time frames $$t$$ and $$t+ 1$$ of a stereo pair, yielding four images ($$I^t_L, I^t_R, I^{t+1}_L, I^{t+1}_R$$). 
+    - Scene flow는 **3D position**와 **3D motion vector**를 만들수 있다. `Scene flow provides for each visible point in one of these four images the point’s 3D position and its 3D motion vector [24].`
 
-Scene flow provides for eachvisible point in one of these four images the point’s 3D positionand its 3D motion vector [24].These 3D quantities can be computed only in the caseof known camera intrinsics and extrinsics. 
 
-A cameraindependentdefinition of scene flow is obtained by the separatecomponents optical flow, the disparity, and the dispar ity change [12], cf. 
 
-Fig. 
+- 이런 3D 정보는 카메라의 **intrinsics** 와 **extrinsics**정보를 알경우에만 계산된다. `These 3D quantities can be computed only in the case of known camera intrinsics and extrinsics. `
 
-2. 
+-  A camera independent definition of scene flow is obtained by the separate components optical flow, the disparity, and the disparity change [12], cf. Fig. 2. 
 
-$$\frac{1}{2}$$ 
+```
+[24] S. Vedula, S. Baker, P. Rander, R. T. Collins, and T. Kanade. Three-dimensional scene flow. In ICCV, pages 722–729, 1999.
+[12] F. Huguet and F. Deverney. A variational method for scene flow estimation from stereo sequences. In ICCV, 2007.
+```
 
-This representation is completein the sense that the visible 3D points and their 3D motionvectors can be computed from the components if the cameraparameters are known.Given the disparities at t and t+1, the disparity changeis almost redundant. 
 
-Thus, in the KITTI 2015 scene flowbenchmark [17], only optical flow and disparities are evaluated.In this case, scene flow can be reconstructed only forsurface points that are visible in both the left and the rightframe. 
+![](https://i.imgur.com/JxPrtDT.png)
+```
+Figure 2. Given stereo images at times t−1, t and t+1, the arrows indicate disparity and flow relations between them. 
+The red components are commonly used to estimate scene flow. 
+In our datasets we provide all relations including the blue arrows.
+```
 
-Especially in the context of convolutional networks,it is particularly interesting to estimate also depth and motionin partially occluded areas. 
+- This representation is complete in the sense that the visible 3D points and their 3D motion vectors can be computed from the components if the camera parameters are known.
 
-Moreover, reconstructionof the 3D motions from flow and disparities is more sensitiveto noise, because a small error in the optical flow canlead to a large error in the 3D motion vector.
+- Given the disparities at t and t+1, the disparity change is almost redundant. 
+
+- Thus, in the KITTI 2015 scene flow benchmark [17], only optical flow and disparities are evaluated.
+
+- In this case, scene flow can be reconstructed only for surface points that are visible in both the left and the right frame. 
+
+- Especially in the context of convolutional networks,it is particularly interesting to estimate also depth and motion in partially occluded areas. 
+
+- Moreover, reconstruction of the 3D motions from flow and disparities is more sensitive to noise, because a small error in the optical flow can lead to a large error in the 3D motion vector.
+
+```
+[17] M. Menze and A. Geiger. Object scene flow for autonomous vehicles. In Conference on Computer Vision and Pattern Recognition (CVPR), 2015.
+```
+
 
 ## 4. Three Rendered Datasets
 
