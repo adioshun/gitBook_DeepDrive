@@ -13,6 +13,8 @@
 * [Paper\_2015\_DispNet](paper2015-dispnet.md)
 * [Paper\_2017\_FlowNet2](paper2017-flownet2.md)
 * [Paper\_2016\_StereoFusion \(0%\)](paper2016-stereofusion.md)
+* [ref00\_Terms](ref00terms.md)
+* [Paper\_2015\_FlowNet1](paper2015-flownet1.md)
 
 ## Related Works
 
