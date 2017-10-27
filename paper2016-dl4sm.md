@@ -93,15 +93,26 @@ Figure 1: To learn informative image patch representations we employ a siamese n
 
 - They have a long history, dating back to [2] and were shown to be very successful on the Middleburry benchmark [22, 15,3, 24] as well as on KITTI [25, 26, 27].
 
+```
+[2] S. Birchfield and C. Tomasi. Multiway cut for stereo and motion with slanted surfaces. In CVPR, 1999. 
+[25] K. Yamaguchi, T. Hazan, D. McAllester, and R. Urtasun. Continuous markov random fields for robust stereo estimation. In ECCV, 2012. 
+[26] K. Yamaguchi, D. McAllester, and R. Urtasun. Robust monocular epipolar flow estimation. In CVPR, 2013. 2, 
+[27] K. Yamaguchi, D. McAllester, and R. Urtasun. Efficient joint segmentation, occlusion labeling, stereo and flow estimation. In ECCV. 2014.
+```
+
 ### 2.3 Holistic models
 
 - Holistic models which solve jointly many tasks have also been explored. 
 
 - 장점 : many tasks in **low-level** and **high level-vision** are related, and thus one can benefit from solving them together. 
 
-- For example[5, 6, 4, 18, 13] jointly solved for stereo and semantic segmentation.
+- For example[5-2010, 6-2011, 4-2012, 18-2014, 13-2015] jointly solved for stereo and semantic segmentation.
 
 - Guney and Geiger [12] investigated the utility of high-level vision tasks such as object recognition and semantic segmentation for stereo matching.
+
+```
+[12] F. Guney and A. Geiger. Displets: Resolving stereo ambiguities using object knowledge. In CVPR, 2015.
+```
 
 
 ### 2.4 Estimating the confidence
@@ -112,34 +123,58 @@ Figure 1: To learn informative image patch representations we employ a siamese n
     - by combining several confidence measures via a random forest classifier [14], 
     - by incorporating random forest predictions into a Markov random field [23].
 
+```
+[14] R. Haeusler, R. Nair, and D. Kondermann. Ensemble learning for confidence measures in stereo vision. In CVPR, 2013
+[23] A. Spyropoulos, N. Komodakis, and P. Mordohai. Learning to detect ground control points for improving the accuracy of stereo matching. In CVPR, 2014.
+```
 
-### 2.1 
-
-
-CNN은 high-level에 좋은 성능을 보였으며 최근에는 low-level에도 좋은 성능 보임 `Convolutional neural networks(CNN) have been shown to perform very well on `
-- **high-level vision** tasks such as `image classification`, `object detection` and `semantic segmentation`
-- **low-level vision** tasks such as `optical flow prediction` [10]. 
-
-In the context of stereo estimation, [29] utilize CNN to compute thematching cost between two image patches. 
-
-In particular,they used a siamese network which takes the same sizedleft and right image patches with a few fully-connected layerson top to predict the matching cost. 
-
-They trained themodel to minimize a binary cross-entropy loss. 
-
-In similarspirit to [29], [28] investigated different CNN based architecturesfor comparing image patches. 
-
-They found concatenating left and right image patches as different channelsworks best, at the cost of being very slow.
+### 2.5 Zbontar2015
 
 
-### 2.1 
+- CNN은 high-level에 좋은 성능을 보였으며 최근에는 low-level에도 좋은 성능 보임 `Convolutional neural networks(CNN) have been shown to perform very well on `
+    - **high-level vision** tasks such as `image classification`, `object detection` and `semantic segmentation`
+    - **low-level vision** tasks such as `optical flow prediction` [10]. 
+
+```
+[10] P. Fischer, A. Dosovitskiy, E. Ilg, P. Hausser, C. Hazirbas ¨ and V. Golkov. FlowNet: Learning Optical Flow with Convolutional Networks. In ICCV, 2015.
+```
+
+- 기존 연구 : In the context of **stereo estimation**, [29-Zbontar2015] utilize CNN to **compute the matching cost** between two image patches. 
+    - they used a `siamese network` which takes the **same sized left and right image** patches with a few fully-connected layers on top to predict the matching cost. 
+    - They trained the model to minimize a binary cross-entropy loss. 
+
+- 유사 연구 `In similar spirit to [29],`
+    - [28] investigated different CNN based architectures for comparing image patches. 
+    - They found concatenating left and right image patches as different channels works best, at the cost of being very slow.
+
+```
+[29-Zbontar2015] J. Zbontar and Y. LeCun. Computing the stereo matching cost with a convolutional neural network. In CVPR, 2015
+[28] S. Zagoruyko and N. Komodakis. Learning to compare image patches via convolutional neural networks. In CVPR, 2015.
+```
+
+### 2.6 제안 방식과의 다른점 
 
 
-Our work is most similar to [29, 28] with two main differences.First, we propose to learn a probability distributionover all disparity values using a smooth target distribution.As a consequence we are able to capture correlationsbetween the different disparities implicitly. 
+Our work is most similar to [29, 28] with two main differences.
 
-This contrastsa [29] which performs independent binary predictions onimage patches. 
+###### [First]
 
-Second, on top of the convolution layerswe use a simple dot-product layer to join the two branchesof the network. 
+- we propose to learn a probability distribution over all disparity values using a smooth target distribution.
 
-This allows us to do a orders of magnitudefaster computation. 
+- As a consequence we are able to capture correlations between the different disparities implicitly. 
 
-We note that in concurrent workunpublished at the time of submission of our paper [30, 7]also introduced a dot-product layer.
+- This contrasts a [29] which performs independent binary predictions on image patches. 
+
+###### [Second]
+
+- on top of the convolution layers we use a simple dot-product layer to join the two branches of the network. 
+
+- This allows us to do a orders of magnitude **faster** computation. 
+
+> 저자의 다른 연구 [30, 7]도 dot-product layer를 사용 `We note that in concurrent work unpublished at the time of submission of our paper [30, 7] also introduced a dot-product layer.`
+
+```
+[30] J. Zbontar and Y. LeCun. Stereo matching by training a convolutional neural network to compare image patches. arXiv preprint arXiv:1510.05970, 2015
+[7] Z. Chen, X. Sun, L. Wang, Y. Yu, and C. Huang. A deep visual correspondence embedding model for stereo matching costs. In ICCV, 2015
+
+```
