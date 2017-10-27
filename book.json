@@ -1,20 +1,6 @@
 {
-    "plugins": [ "theme-api","latex-codecogs"],
-    "pluginsConfig": {
-        "theme-api": {
-            "languages": [
-                {
-                    "lang": "js",
-                    "name": "JavaScript",
-                    "default": true
-                },
-                {
-                    "lang": "go",
-                    "name": "Go"
-                }
-            ]
-        }
-    }
+    "plugins": [ "latex-codecogs"],
+
 }
 
 
