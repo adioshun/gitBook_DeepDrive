@@ -7,6 +7,7 @@
 | 키워드 |DeepPano2015,  |
 | 데이터셋/모델 | ModelNet-10, ModelNet-40 |
 | 참고 |  |
+|기존/확장/관련 연구|PANORAMA: A 3d shape descriptor based on panoramic views for unsupervised 3d object retrieval(2010)|
 | 코드 |[Matlab](https://github.com/bgshih/deeppano) |
 
 # DeepPano
@@ -55,6 +56,10 @@ Row-Wise Max-Pooling (RWMP) layer  제안
 - 비슷한 기존 연구로 **3-D ShapeNets**가 있다. 이와 다른점은 
 	- Different from [14] which performs 3-D convolutionson the **voxels**, we extract the representation of a 3-D shapefrom **2-D images**. 
 	- 성능도 좋다. Compared with [14], our method achieves better performances on both classification and retrieval tasks(refer to Section III), and is simpler to implement using any open source framework.
+	
+```
+[14] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang, and J. Xiao, “3d shapenets: A deep representation for volumetric shapes,” in Proc. CVPR, 2015, pp. 1912–1920.
+```
 
 ### 1.2 기존 연구  PANORAMA와 rotates문제 해결법
 
