@@ -73,23 +73,50 @@ Figure 1: To learn informative image patch representations we employ a siamese n
 
 ## 2. Related Work
 
-Over the past decades many stereo algorithms have beendeveloped. 
+### 2.1 tune the hyper-parameters
 
-Since a discussion of all existing approacheswould exceed the scope of this paper, we restrict ourselvesmostly to a subset of recent methods that exploit learningand can mostly be formulated as energy minimization.Early learning based approaches focused on correctingan initially computed matching cost [16, 17]. 
+- 초반기 학습 기반 방식들은 initially computed matching cost 보정에 초점을 맞추었다. `Early learning based approaches focused on correcting an initially computed matching cost [16, 17]. `
 
-Learninghas been also utilized to tune the hyper-parameters of theenergy-minimization task. 
+```
+[16] D. Kong and H. Tao. A method for learning matching errors for stereo computation. In BMVC, 2004. 
+[17] D. Kong and H. Tao. Stereo matching via learning multiple experts behaviors. In BMVC, 2006
+```
 
-Among the first to train thesehyper-parameters were [31, 21, 19], which investigated differentforms of probabilistic graphical models.Slanted plane models model groups of pixels withslanted 3D planes. 
+- 이후 파라미터 보정을 위한 학습도 진행 되었되다. `Learning has been also utilized to tune the hyper-parameters of the energy-minimization task. `
+    - Among the first to train these hyper-parameters were [31, 21, 19], which investigated different forms of probabilistic graphical models.
+    
+### 2.2 Slanted plane models
 
-They are very competitive in autonomousdriving scenarios, where robustness is key. 
+- Slanted plane models model groups of pixels with slanted 3D planes. 
 
-Theyhave a long history, dating back to [2] and were shown tobe very successful on the Middleburry benchmark [22, 15,3, 24] as well as on KITTI [25, 26, 27].Holistic models which solve jointly many tasks havealso been explored. 
+- **강건함**이 주 목적이어서 **자율주행차**에 많이 사용된 `They are very competitive in autonomous driving scenarios, where robustness is key. `
 
-The advantage being that many tasksin low-level and high level-vision are related, and thusone can benefit from solving them together. 
+- They have a long history, dating back to [2] and were shown to be very successful on the Middleburry benchmark [22, 15,3, 24] as well as on KITTI [25, 26, 27].
 
-For example[5, 6, 4, 18, 13] jointly solved for stereo and semantic segmentation.Guney and Geiger [12] investigated the utilityof high-level vision tasks such as object recognition and semanticsegmentation for stereo matching.Estimating the confidence of each match is key whenemploying stereo estimates as a part of a pipeline. 
+### 2.3 Holistic models
 
-Learningmethods were successfully applied to this task, e.g., bycombining several confidence measures via a random forestclassifier [14], or by incorporating random forest predictionsinto a Markov random field [23].Convolutional neural networks(CNN) have been shownto perform very well on high-level vision tasks such as imageclassification, object detection and semantic segmentation.More recently, CNNs have been applied to low-levelvision tasks such as optical flow prediction [10]. 
+- Holistic models which solve jointly many tasks have also been explored. 
+
+- 장점 : many tasks in **low-level** and **high level-vision** are related, and thus one can benefit from solving them together. 
+
+- For example[5, 6, 4, 18, 13] jointly solved for stereo and semantic segmentation.
+
+- Guney and Geiger [12] investigated the utility of high-level vision tasks such as object recognition and semantic segmentation for stereo matching.
+
+
+### 2.4 Estimating the confidence
+
+- 각 match의 **신뢰도**를 측정하는것은 중요한 요소이다. `Estimating the confidence of each match is key when employing stereo estimates as a part of a pipeline. `
+
+- 학습 기반 신뢰도 측정 방법 `Learning methods were successfully applied to this task, e.g., `
+    - by combining several confidence measures via a random forest classifier [14], 
+    - by incorporating random forest predictions into a Markov random field [23].
+
+
+### 2.1 
+
+
+Convolutional neural networks(CNN) have been shownto perform very well on high-level vision tasks such as imageclassification, object detection and semantic segmentation.More recently, CNNs have been applied to low-levelvision tasks such as optical flow prediction [10]. 
 
 In the contextof stereo estimation, [29] utilize CNN to compute thematching cost between two image patches. 
 
@@ -99,7 +126,13 @@ They trained themodel to minimize a binary cross-entropy loss.
 
 In similarspirit to [29], [28] investigated different CNN based architecturesfor comparing image patches. 
 
-They found concatenating left and right image patches as different channelsworks best, at the cost of being very slow.Our work is most similar to [29, 28] with two main differences.First, we propose to learn a probability distributionover all disparity values using a smooth target distribution.As a consequence we are able to capture correlationsbetween the different disparities implicitly. 
+They found concatenating left and right image patches as different channelsworks best, at the cost of being very slow.
+
+
+### 2.1 
+
+
+Our work is most similar to [29, 28] with two main differences.First, we propose to learn a probability distributionover all disparity values using a smooth target distribution.As a consequence we are able to capture correlationsbetween the different disparities implicitly. 
 
 This contrastsa [29] which performs independent binary predictions onimage patches. 
 
