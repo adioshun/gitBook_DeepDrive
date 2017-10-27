@@ -9,6 +9,7 @@
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 * [Paper\_2014\_Know\_limit\_stereo](paper2014-know-limit-stereo.md)
 * [Paper\_2017\_3DCNN\_DQN\_RNN](paper20173dcnndqn-rnn.md)
+* [Paper\_2016\_DL4SM](paper2016-dl4sm.md)
 
 ## Related Works
 
