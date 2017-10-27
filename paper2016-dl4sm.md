@@ -116,9 +116,11 @@ Figure 1: To learn informative image patch representations we employ a siamese n
 ### 2.1 
 
 
-Convolutional neural networks(CNN) have been shownto perform very well on high-level vision tasks such as imageclassification, object detection and semantic segmentation.More recently, CNNs have been applied to low-levelvision tasks such as optical flow prediction [10]. 
+CNN은 high-level에 좋은 성능을 보였으며 최근에는 low-level에도 좋은 성능 보임 `Convolutional neural networks(CNN) have been shown to perform very well on `
+- **high-level vision** tasks such as `image classification`, `object detection` and `semantic segmentation`
+- **low-level vision** tasks such as `optical flow prediction` [10]. 
 
-In the contextof stereo estimation, [29] utilize CNN to compute thematching cost between two image patches. 
+In the context of stereo estimation, [29] utilize CNN to compute thematching cost between two image patches. 
 
 In particular,they used a siamese network which takes the same sizedleft and right image patches with a few fully-connected layerson top to predict the matching cost. 
 

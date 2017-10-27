@@ -13,3 +13,8 @@ http://darkpgmr.tistory.com/61
 
 ## binocular
 two concatenated views
+
+## optical flow
+물체가 어떻게 움직이고 있는지 판단
+http://lueseypid.tistory.com/98
+http://hs36.tistory.com/47
