@@ -12,12 +12,23 @@ vol. 33, no. 12, pp. 2477–2491, 2011.
 [141] Z. Li, S. Chen, H. Leung, and E. Bosse, “Joint data association, registration, and fusion using EM-KF,” IEEE Transactions on Aerospace and Electronic Systems, vol. 46, no. 2, pp. 496–507, 2010.
 
 ### 나. decentralized fusion architecture
-
+```
 [142] N. N. Okello and S. Challa, “Joint sensor registration and track-to-track fusion for distributed trackers,” IEEE Transactions on Aerospace and Electronic Systems, vol. 40, no. 3, pp. 808–823, 2004.
 [143] H. Zhu, H. Leung, and K. V. Yuen, “A joint data association, registration, and fusion approach for distributed tracking,” Information Sciences, vol. 324, pp. 186–196, 2015.
 [144] M. Aeberhard, S. Schlichtharle, N. Kaempchen, and T. Bertram, ¨“Track-to-track fusion with asynchronous sensors using information matrix fusion for surround environment perception,” IEEE Transactions on Intelligent Transportation Systems, vol. 13, no. 4, pp. 1717–1726,
 2012.
 [145] R. O. Chavez-Garcia and O. Aycard, “Multiple sensor fusion and classification for moving object detection and tracking,” IEEE Transactions on Intelligent Transportation Systems, pp. 1–10, 2015.
+```
+
+---
+이미지 + optical flow + LiDAR가 함꺼번에 합쳐져서 DNN에 입력으로 이용 RGB image,optical flow, and LiDAR range images are combined to forma six channel input to a deep neural network [20] for object detection.
+동일 모델을 이용하여 joint representation학습에도 활용 The same network can also be used for different modalities to learn a joint representation [21].
+```
+[20] M. Giering, V. Venugopalan, and K. Reddy, “Multi-modal sensor registration for vehicle perception via deep neural networks,” in High Performance Extreme Computing Conference (HPEC), 2015 IEEE,Sept 2015, pp. 1–6.
+[21] L. Castrejon, Y. Aytar, C. Vondrick, H. Pirsiavash, and A. Torralba,“Learning aligned cross-modal representations from weakly aligned data,” in 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2016, pp. 2940–2949.
+```
+
+
 ---
 
 # Sensor Fusion 
