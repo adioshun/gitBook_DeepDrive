@@ -43,6 +43,12 @@ PointNet제안 : A new approach inspired by `VoxNet` and `3D ShapeNets`,
 - 이건 단순히 입력으로 4채널을 받는것 뿐이다. `These methods simply extend the architecture to take four channels – matrices – as input instead of the three featured by RGB images. `
 - 이건 아직 3D의 geometric 정보를 이용하지 않는 **이미지 기반** 접근법이다. `This is still a image-based approach which does not fully exploit the geometric information of 3D shapes despite its straightforward implementation. `
 
+```
+[10] R. Socher, B. Huval, B. Bath, C. D. Manning, and A. Y. Ng, “Convolutional-recursive deep learning for 3d object classification,” in Advances in Neural Information Processing Systems, 2012, pp. 665–673.
+[11] L. A. Alexandre, “3d object recognition using convolutional neural networks with transfer learning between input channels,” in Proc. the 13th International Conference on Intelligent Autonomous Systems, 2014.
+[12] I. Lenz, H. Lee, and A. Saxena, “Deep learning for detecting robotic grasps,” The International Journal of Robotics Research, vol. 34, no. 4-5, pp. 705–724, 2015.
+```
+
 ### 2.2 3D 연구 
 
 최근에는 3D의 정보를 이용하는 연구도 진행 되었다. `Apart from 2.5D approaches, specific architectures to learn from volumetric data, which make use of pure 3D convolutions, have been recently developed. `
@@ -54,7 +60,7 @@ volumetric 데이터는 처리량이 많기 때문에 좀더 컴팩트한 표현
 
 ### 2.3 3DCNN
 
-3DCNNs방식은 인기를 얻기 시작한다.  `Those 3DCNNs are slowly overtaking other approaches when applying object recognition to complete 3D scenes [15].`
+3DCNNs방식은 인기를 얻기 시작한다.  `Those 3DCNNs are slowly overtaking other approaches when applying object recognition to complete 3D scenes [15-DeepSlidingShape].`
 
 이유 두가지 `This progress has been mainly enabled by two factors: `
 - 데이터셋 증가 `The substantial growth in the number of 3D models available online through repositories, `
@@ -69,6 +75,10 @@ volumetric 데이터는 처리량이 많기 때문에 좀더 컴팩트한 표현
 하드웨어와 딥러닝 프레임워크 발전도 있다. `On the other hand, the creationof deep learning frameworks such as Caffe [19], Theano [20],Torch [21], or TensorFlow [22], which allow researchers to easily express and launch their architectures and accelerate thetraining calculations with Graphics Processing Units (GPUs)by using CUDA or OpenCL, has enabled quick prototypingand testing. `
 
 Both facts have turned out to be crucial for the development of the field.
+
+```
+[15] S. Song and J. Xiao, “Deep sliding shapes for amodal 3d object detection in rgb-d images,” arXiv preprint arXiv:1511.02300, 2015.
+```
 
 
 ## 3. Approach 
