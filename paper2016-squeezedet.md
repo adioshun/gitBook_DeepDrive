@@ -245,11 +245,32 @@ The comparison between ConvDet and FcDet is illustrated in Fig. 3.
 | is a 1x1 convolution with K × (4 + 1) outputs. <BR>4 is the number of relative coordinates, and 1 is the confidence score. <BR>It’s only responsible for generating region proposals. | is a Fw × Fh convolution with output size of K × (5 + C). <BR>It’s responsible for both computing bounding boxes and classifying the object within. | contains 2 fully connected layers. |
 |The parameter size for this layer is $$Ch_f × K × 5$$ |The parameter size for this layer is $$F_wF_hCh_fK(5 + C)$$|The first one is of size $$W_fH_fCh_fF_{fc1}$$ <BR> The second one is of size $$F_{fc1}W_oH_oK(5 + C)$$|
 ```
-[Figure 3. Comparing RPN, ConvDet and the detection layer of YOLO [21]. Activations are represented as blue cubes and layers
-(and their parameters) are represented as orange ones. Activation
-and parameter dimensions are also annotated.
+[Figure 3. Comparing RPN, ConvDet and the detection layer of YOLO [21].]
+- Activations are represented as blue cubes and layers (and their parameters) are represented as orange ones. 
+- Activation and parameter dimensions are also annotated.
 ```
 
+Assume that the input feature map is of size
+(Wf , Hf , Chf ), Wf is the width of the feature map, Hf
+is the height, and Chf is the number of input channels to
+the detection layer. Denote ConvDet’s filter width as Fw
+and height as Fh. With proper padding/striding strategy,
+the output of ConvDet keeps the same spatial dimension as
+the feature map. To compute K × (4 + 1 + C) outputs for
+each reference grid, the number of parameters required by
+the ConvDet layer is FwFhChfK(5 + C).
+The FcDet layer described in [21] is comprised of two
+fully connected layers. Using the same notation for the input
+feature map and assuming the number of outputs of the
+f c1 layer is Ff c1, then the number of parameters in the f c1
+layer is WfHfChfFf c1. The second fully connected layer
+in [21] generates C class probabilities as well as K×(4+1)
+bounding box coordinates and confidence scores for each
+of the Wo × Ho grids. Thus, the number of parameters
+in the f c2 layer is Ff c1WoHo(5K + C). The total number
+of parameters in these two fully connected layers is
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQxMjE1NzJdfQ==
+eyJoaXN0b3J5IjpbLTExMDYzMTczODddfQ==
 -->
