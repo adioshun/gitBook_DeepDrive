@@ -222,7 +222,17 @@ Following [12], the transformation is described by
 
 -  $$ x^P_i, y^P_j, w^P_k, h^P_k $$  : predicted bounding box coordinates.
 
-- As explained in the previous section, the other C + 1 outputs for each anchor encode the confidence score for this prediction and conditional class probabilities
+- the other **C + 1** outputs for each anchor encode the **confidence score**
+	- for this prediction and conditional class probabilities.
+
+ConvDet is similar to the last layer of RPN in Faster RCNN
+[22]. The major difference is that, RPN is regarded
+as a “weak” detector that is only responsible for detecting whether an object exists and generating bounding box proposals
+for the object. The classification is handed over to
+fully connected layers, which are regarded as a “strong”
+classifier. But in fact, convolutional layers are “strong”
+enough to detect, localize, and classify objects at the same
+time.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjcyMTkxNjZdfQ==
+eyJoaXN0b3J5IjpbMTE0OTk3MjA0Nl19
 -->
