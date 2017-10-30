@@ -220,11 +220,9 @@ $$max_c Pr (Class_c \mid Object) \times Pr(Object) \times IOU^{Pred}_{truth} $$
 Following [12], the transformation is described by
 ![](https://i.imgur.com/IKyjIB6.png)
 
-where $$ x^P_i, x^P_i, x^P_i, x^P_i, 
-are predicted bounding box coordinates.
-As explained in the previous section, the other C + 1
-outputs for each anchor encode the confidence score for this
-prediction and conditional class probabilities
+-  $$ x^P_i, y^P_j, w^P_k, h^P_k $$  : predicted bounding box coordinates.
+
+- As explained in the previous section, the other C + 1 outputs for each anchor encode the confidence score for this prediction and conditional class probabilities
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzgyMTA0MjZdfQ==
+eyJoaXN0b3J5IjpbLTEzMjcyMTkxNjZdfQ==
 -->
