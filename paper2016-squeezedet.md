@@ -232,17 +232,14 @@ Following [12], the transformation is described by
 	- The classification is handed over to **fully connected layers**, which are regarded as a **“strong” classifier**. 
 	- But in fact, **convolutional layers** are “**strong**” enough to detect, localize, and classify objects at the same time.
 
+> For simplicity, we denote the **detection layers of YOLO** [21] as **FcDet** `(only counting the last two fully connected layers)`. 
 
-
-For simplicity, we denote the detection layers of YOLO [21] as FcDet (only counting the last two fully connected
-layers). 
-
-Compared with FcDet, the ConvDet layer has orders of magnitude fewer parameters and is still able
+- Compared with FcDet, the ConvDet layer has orders of magnitude fewer parameters and is still able
 to generate more region proposals with higher spatial resolution.
 
 The comparison between ConvDet and FcDet is illustrated in Fig. 3.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMjMxNTMwMV19
+eyJoaXN0b3J5IjpbLTI1MTQxNjMyMl19
 -->
