@@ -212,3 +212,6 @@ $$max_c Pr (Class_c \mid Object) \times Pr(Object) \times IOU^{Pred}_{truth} $$
 
 Following [12], the transformation is described by
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTU4NTc1MDYyMl19
+-->
