@@ -255,34 +255,23 @@ The comparison between ConvDet and FcDet is illustrated in Fig. 3.
 	- Hf is the height, 
 	- Chf is the number of input channels to the detection layer. 
 
-- Denote ConvDet’s filter width as Fw and height as Fh. With proper padding/striding strategy,
-the output of ConvDet keeps the same spatial dimension as
-the feature map. To compute K × (4 + 1 + C) outputs for
-each reference grid, the number of parameters required by
+- Denote ConvDet’s filter width as Fw and height as Fh. 
+- With proper padding/striding strategy, the output of ConvDet keeps the same spatial dimension as the feature map. 
+- To compute K × (4 + 1 + C) outputs for each reference grid, the number of parameters required by
 the ConvDet layer is FwFhChfK(5 + C).
-The FcDet layer described in [21] is comprised of two
-fully connected layers. Using the same notation for the input
-feature map and assuming the number of outputs of the
-f c1 layer is Ff c1, then the number of parameters in the f c1
-layer is WfHfChfFf c1. The second fully connected layer
-in [21] generates C class probabilities as well as K×(4+1)
-bounding box coordinates and confidence scores for each
-of the Wo × Ho grids. Thus, the number of parameters
-in the f c2 layer is Ff c1WoHo(5K + C). The total number
-of parameters in these two fully connected layers is Ff c1(WfHfChf + WoHo(5K + C)).
-In [21], the input feature map is of size 7x7x1024.
-Ff c1 = 4096, K = 2, C = 20, Wo = Ho = 7, thus the
-total number of parameters required by the two fully connected
-layers is approximately 212 × 106
-. If we keep the
-feature map sizes, number of output grid centers, classes,
-and anchors the same, and use 3x3 ConvDet, it would only
-require 3×3×1024×2×25 ≈ 0.46×106 parameters, which
-is 460X smaller than FcDet. The comparison of RPN, ConvDet
+- The FcDet layer described in [21] is comprised of two fully connected layers. 
+- Using the same notation for the input feature map and assuming the number of outputs of the f c1 layer is Ff c1, then the number of parameters in the f c1 layer is WfHfChfFf c1. 
+- The second fully connected layer in [21] generates C class probabilities as well as K×(4+1) bounding box coordinates and confidence scores for each of the Wo × Ho grids. 
+- Thus, the number of parameters in the f c2 layer is Ff c1WoHo(5K + C). 
+- The total number of parameters in these two fully connected layers is Ff c1(WfHfChf + WoHo(5K + C)).
+
+In [21], the input feature map is of size 7x7x1024. Ff c1 = 4096, K = 2, C = 20, Wo = Ho = 7, thus the total number of parameters required by the two fully connected layers is approximately 212 × 106 . 
+
+If we keep the feature map sizes, number of output grid centers, classes, and anchors the same, and use 3x3 ConvDet, it would only require 3×3×1024×2×25 ≈ 0.46×106 parameters, which is 460X smaller than FcDet. The comparison of RPN, ConvDet
 and FcDet is illustrated in Fig. 3 and summarized in
 Table 1.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MDYzOTgyNl19
+eyJoaXN0b3J5IjpbMTcwMzk3MzMzN119
 -->
