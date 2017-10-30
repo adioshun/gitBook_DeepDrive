@@ -94,7 +94,7 @@ R-CNN, but R-FCN is fully-convolutional which allows it to amortize more computa
 
 - Region proposals are a **cornerstone** in all of the object detection methods that we have discussed so far. 
 
-However, in YOLO (You Only Look Once) [21], region proposition and classification are integrated into one single stage. 
+- However, in YOLO (You Only Look Once) [21], region proposition and classification are integrated into one single stage. 
 
 ### 2.2. Small CNN models
 
@@ -361,5 +361,5 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 ### 3.4. Neural Network Design
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNDM5NzI1MF19
+eyJoaXN0b3J5IjpbOTE4OTYxMjkxXX0=
 -->
