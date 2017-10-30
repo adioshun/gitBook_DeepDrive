@@ -250,6 +250,12 @@ The comparison between ConvDet and FcDet is illustrated in Fig. 3.
 - Activation and parameter dimensions are also annotated.
 ```
 
+![](https://i.imgur.com/e6k6rHe.png)
+```
+Table 1. Comparison between RPN, ConvDet and FcDet. 
+- RP stands for region proposition. cls stands for classification.
+```
+
 - Assume that the input feature map is of size (Wf , Hf , Chf ), 
 	- Wf is the width of the feature map, 
 	- Hf is the height, 
@@ -273,5 +279,5 @@ The comparison of RPN, ConvDet and FcDet is illustrated in Fig. 3 and summarized
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNTM1OTQ5MV19
+eyJoaXN0b3J5IjpbLTQxNzIzMl19
 -->
