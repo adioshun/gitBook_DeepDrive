@@ -255,10 +255,10 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 - RP stands for region proposition. cls stands for classification.
 ```
 
-- Assume that the input feature map is of size ($$W_f , Hf , Chf$$ ), 
-	- Wf is the width of the feature map, 
-	- Hf is the height, 
-	- Chf is the number of input channels to the detection layer. 
+- Assume that the input feature map is of size ($$W_f , H_f , Ch_f$$ ), 
+	- $$W_f$$ is the width of the feature map, 
+	- $$H_f$$ is the height, 
+	- $$Ch_f$$ is the number of input channels to the detection layer. 
 
 - Denote ConvDet’s filter width as Fw and height as Fh. 
 - With proper padding/striding strategy, the output of ConvDet keeps the same spatial dimension as the feature map. 
@@ -278,5 +278,5 @@ The comparison of RPN, ConvDet and FcDet is illustrated in Fig. 3 and summarized
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3OTQyNTEyMV19
+eyJoaXN0b3J5IjpbLTEyOTM5NTEwNzRdfQ==
 -->
