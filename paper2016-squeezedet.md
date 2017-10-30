@@ -332,16 +332,16 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 - Usually, there are much more anchors that are not assigned to any object. 
 
-- In order to balance their influence, we use $$λ+conf$$ and $$λ−conf$$ to adjust theweight of these two loss components. 
+- In order to balance their influence, we use $\lambda^+_{conf}$ and $\lambda^−_{conf}$ to adjust the weight of these two loss components. 
 
-By definition, theconfidence score’s range is [0, 1]. 
+- By definition, the confidence score’s range is [0, 1]. 
 
-To guarantee that γijkfalls into that range, we feed the corresponding ConvDetoutput into a sigmoid function to normalize it.
+- To guarantee that $\gammaijkfalls into that range, we feed the corresponding ConvDetoutput into a sigmoid function to normalize it.
 
 
 #### C. The last part
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTU3OTcxOTVdfQ==
+eyJoaXN0b3J5IjpbLTE4ODk5MjM3MjVdfQ==
 -->
