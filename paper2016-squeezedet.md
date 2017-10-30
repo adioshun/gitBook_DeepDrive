@@ -86,13 +86,13 @@ R-CNN, but R-FCN is fully-convolutional which allows it to amortize more computa
 [3, 26] on the other hand focused on generating better region proposals. 
 
 ```
-[2] K. Ashraf, B. Wu, F. N. Iandola, M. W. Moskewicz, and
-K. Keutzer. Shallow networks for high-accuracy road objectdetection.
-arXiv:1606.01561, 2016.
-
+[2] K. Ashraf, B. Wu, F. N. Iandola, M. W. Moskewicz, and K. Keutzer. Shallow networks for high-accuracy road objectdetection. arXiv:1606.01561, 2016.
+[3] Z. Cai, Q. Fan, R. Feris, and N. Vasconcelos. A unified multi-scale deep convolutional neural network for fast object detection. In ECCV, 2016.
+[26] Y. Xiang, W. Choi, Y. Lin, and S. Savarese. Subcategoryaware convolutional neural networks for object proposals and detection. arXiv:1604.04693, 2016.
+```
 #### E. YOLO : real-time speed
 
-Region proposals are a **cornerstone** in all of the object detection methods that we have discussed so far. 
+- Region proposals are a **cornerstone** in all of the object detection methods that we have discussed so far. 
 
 However, in YOLO (You Only Look Once) [21], region proposition and classification are integrated into one single stage. 
 
@@ -361,5 +361,5 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 ### 3.4. Neural Network Design
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI1ODYyOTUyXX0=
+eyJoaXN0b3J5IjpbLTcxNDM5NzI1MF19
 -->
