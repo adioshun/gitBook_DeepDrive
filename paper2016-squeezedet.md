@@ -277,15 +277,21 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 - The total number of parameters in these two fully connected layers is $F_{fc1}(W_fH_fCh_f + W_oH_o(5K + C))$.
 
-In [21], the input feature map is of size 7x7x1024.
+- In [21], the input feature map is of size 7x7x1024.
 
-$F_{fc1}$ = 4096, K = 2, C = 20, $W_o$ = $H_o$ = 7, thus the total number of parameters required by the two fully connected layers is approximately 212 × 106 . 
+- $F_{fc1}$ = 4096, K = 2, C = 20, $W_o$ = $H_o$ = 7, thus the total number of parameters required by the two fully connected layers is approximately 212 × 106 . 
 
-If we keep the feature map sizes, number of output grid centers, classes, and anchors the same, and use 3x3 ConvDet, it would only require 3×3×1024×2×25 ≈ 0.46×106 parameters, which is 460X smaller than $FcDet$. 
+- If we keep the feature map sizes, number of output grid centers, classes, and anchors the same, and use 3x3 ConvDet, it would only require 3×3×1024×2×25 ≈ 0.46×106 parameters, which is 460X smaller than $FcDet$. 
 
-The comparison of RPN, ConvDet and FcDet is illustrated in Fig. 3 and summarized in Table 1.
+- The comparison of RPN, ConvDet and FcDet is illustrated in Fig. 3 and summarized in Table 1.
+
+### 3.3. Training protocol
+
+- Unlike Faster R-CNN [22], which deploys a (4-step) alternating training strategy to train RPN and detector network, our SqueezeDet detection network can be trained end-to-end, similarly to YOLO [21].
+
+- To train the ConvDet layer to learn detection, localization and classification, we define a multi-task loss function:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNTMxNzE4N119
+eyJoaXN0b3J5IjpbMTk3ODI5NzQxMV19
 -->
