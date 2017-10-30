@@ -139,7 +139,7 @@ Given the **same level of accuracy**, it is often beneficial to **develop smalle
 
 - YOLO의 SSD`(single-stage detection)` pipeline을 채택 하였다. `Inspired by YOLO [21], we also adopt a single-stage detection pipeline : region proposition and classification is performed by one single network simultaneously. `
 
-![](https://i.imgur.com/enbAgkK.png)
+
 
 ###### [1단계]
 - 입력된 이미지에서 low-resolution, high dimensional **feature map** 추출
@@ -151,25 +151,35 @@ Given the **same level of accuracy**, it is often beneficial to **develop smalle
 - Compute **bounding boxes** centered around W × H uniformly distributed spatial grids. 
   - Here, `W` and `H` are number of grid centers along horizontal and vertical axes.
 
+![](https://i.imgur.com/enbAgkK.png)
+```
+[Figure 1. SqueezeDet detection pipeline.]
+- A convolutional neural network extracts a feature map from the input image and feeds it into the ConvDet layer. 
+- The ConvDet layer then computes bounding boxes centered around W × H uniformly distributed grid centers.
+- Each bounding box is associated with 1 confidence score and C conditional class probabilities. 
+- Then, we keep the top N bouding boxes with highest confidence and use NMS to filter them to
+get the final detections.
+```
+
+
 - Each bounding box is associated with `C + 1` values
  - `C` : **number of classes** to distinguish, 
  - `extra 1`: for the **confidence score**
 
+### 3.2 confidence score
 
+- how likely does the bounding box actually contain an object
+- A high confidence score = a high probability that an object of interest does exist and that the overlap between the predicted bounding box and the ground truth is high. 
 
-- confidence score
-   - how likely does the bounding box actually contain an object
-   - A high confidence score = a high probability that an object of interest does exist and that the overlap between the predicted bounding box and the ground truth is high. 
-
-
-- Similarly to YOLO [21], we define the confidence score as $$Pr(Object) \times IOU^{pred}_{truth}$$
-
+- YOLO같은 confidence score 사용 : $$Pr(Object) \times IOU^{Pred}_{truth}$$
 
 - The other `C` scalars represents the conditional class probability distribution given that the object exists within the bounding box.
 
 - More formally, we denote the conditional probabilities as $$Pr(class_c \mid Object), c \in [1,C]$$
 
 - We assign the label with the highest conditional probability to this bounding box and we use
+
+$$max_c Pr (Class_c \mid Object) \times Pr(Object) \times IOU^{Pred}_{truth} $$
 
 ![](https://i.imgur.com/wMT0Fjg.png)
 
