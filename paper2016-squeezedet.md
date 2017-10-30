@@ -208,7 +208,7 @@ $$max_c Pr (Class_c \mid Object) \times Pr(Object) \times IOU^{Pred}_{truth} $$
 
 - We used the method described by [2] to select reference bounding box shapes to match the data distribution.
 
-- For each anchor (i, j, k), we compute 4 relative coordinates $$(\delta x_{ijk}, \delta y_{ijk}, \delta w_{ijk}, \delta h_{ijk})$$ to transform the anchor into a predicted bounding box, as shown in Fig. 2. 
+- For each anchor (i, j, k), we compute 4 relative coordinates $(\delta x_{ijk}, \delta y_{ijk}, \delta w_{ijk}, \delta h_{ijk})$ to transform the anchor into a predicted bounding box, as shown in Fig. 2. 
 
 ![](https://i.imgur.com/ZqiWmfJ.png)
 ```
@@ -291,7 +291,10 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 - To train the ConvDet layer to learn detection, localization and classification, we define a multi-task loss function:
 
+![](https://i.imgur.com/6w12vTT.png)
 
+- The first part of the loss function is the bounding box regression.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3ODI5NzQxMV19
+eyJoaXN0b3J5IjpbLTE1ODMyMjg2NDBdfQ==
 -->
