@@ -241,10 +241,16 @@ The comparison between ConvDet and FcDet is illustrated in Fig. 3.
 
 |![](https://i.imgur.com/TRRVSzl.png)|![](https://i.imgur.com/UWKNLm1.png)|![](https://i.imgur.com/jLNUGZ8.png)|
 |-|-|-|
-|(a) Last layer of Region Proposal Network (RPN) is a 1x1 convolution with K × (4 + 1) outputs. <BR>4 is the number of relative coordinates, and 1 is the confidence score. <BR>It’s only responsible for generating region proposals. |(b) The ConvDet layer is a Fw × Fh convolution with output size of K × (5 + C). <BR>It’s responsible for both computing bounding boxes and classifying the object within. |(c) The detection layer of YOLO [21] contains 2 fully connected layers. |
+|Last layer of Region Proposal Network (RPN)|The ConvDet layer|The detection layer of YOLO [21]|
+| is a 1x1 convolution with K × (4 + 1) outputs. <BR>4 is the number of relative coordinates, and 1 is the confidence score. <BR>It’s only responsible for generating region proposals. | is a Fw × Fh convolution with output size of K × (5 + C). <BR>It’s responsible for both computing bounding boxes and classifying the object within. | contains 2 fully connected layers. |
 |The parameter size for this layer is $$Ch_f × K × 5$$ |The parameter size for this layer is $$F_wF_hCh_fK(5 + C)$$|The first one is of size $$W_fH_fCh_fF_{fc1}$$ <BR> The second one is of size $$F_{fc1}W_oH_oK(5 + C)$$|
-
+```
+Figure 3. Comparing RPN, ConvDet and the detection layer of
+YOLO [21]. Activations are represented as blue cubes and layers
+(and their parameters) are represented as orange ones. Activation
+and parameter dimensions are also annotated.
+``
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NTQ1MjU4Ml19
+eyJoaXN0b3J5IjpbLTE5NTcyMjI5MzddfQ==
 -->
