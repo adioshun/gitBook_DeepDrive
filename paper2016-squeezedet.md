@@ -249,8 +249,8 @@ Figure 3. Comparing RPN, ConvDet and the detection layer of
 YOLO [21]. Activations are represented as blue cubes and layers
 (and their parameters) are represented as orange ones. Activation
 and parameter dimensions are also annotated.
-``
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTcyMjI5MzddfQ==
+eyJoaXN0b3J5IjpbNjMxMDIyMjE3XX0=
 -->
