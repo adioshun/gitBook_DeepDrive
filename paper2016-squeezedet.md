@@ -241,9 +241,9 @@ The comparison between ConvDet and FcDet is illustrated in Fig. 3.
 
 |![](https://i.imgur.com/TRRVSzl.png)|![](https://i.imgur.com/UWKNLm1.png)|![](https://i.imgur.com/jLNUGZ8.png)|
 |-|-|-|
-|(a) Last layer of Region Proposal Network (RPN) is a 1x1 convolution with K × (4 + 1) outputs. 4 is the number of relative coordinates, and 1 is the confidence score. It’s only responsible for generating region proposals. The parameter size for this layer is $$Ch_f × K × 5.$$|(b) The ConvDet layer is a Fw × Fh convolution with output size of K × (5 + C). It’s responsible for both computing bounding boxes and classifying the object within. The parameter size for this layer is $$F_wF_hCh_fK(5 + C)$$.|(c) The detection layer of YOLO [21] contains 2 fully connected layers. The first one is of size Wf HfChfFf c1. The second one is of size F_{fc}1WoHoK(5 + C).|
+|(a) Last layer of Region Proposal Network (RPN) is a 1x1 convolution with K × (4 + 1) outputs. 4 is the number of relative coordinates, and 1 is the confidence score. <BR>It’s only responsible for generating region proposals. <BR>The parameter size for this layer is $$Ch_f × K × 5.$$|(b) The ConvDet layer is a Fw × Fh convolution with output size of K × (5 + C). It’s responsible for both computing bounding boxes and classifying the object within. <BR>The parameter size for this layer is $$F_wF_hCh_fK(5 + C)$$.|(c) The detection layer of YOLO [21] contains 2 fully connected layers. <BR>The first one is of size Wf HfChfFf c1. The second one is of size F_{fc1}W_oH_oK(5 + C).|
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY3MzMxNjk0XX0=
+eyJoaXN0b3J5IjpbMjAyOTM2NTQ3Nl19
 -->
