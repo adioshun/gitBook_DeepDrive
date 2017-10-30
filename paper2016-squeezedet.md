@@ -351,9 +351,9 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 - The hyper-parameters in Equation 2 are selected empirically. 
 
-- In our experiments, we set $\lambda_{bbox}$ = 5, λ+ conf = 75, λ− conf = 100. 
+- In our experiments, we set $\lambda_{bbox}$ = 5, $\lambda^+_{conf}% = 75, $\lambda^-_{conf}$ = 100. 
 
 - This loss function can be optimized directly using back-propagation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzk2OTg4NDhdfQ==
+eyJoaXN0b3J5IjpbMTI4NzY4NDYwOF19
 -->
