@@ -239,7 +239,11 @@ to generate more region proposals with higher spatial resolution.
 
 The comparison between ConvDet and FcDet is illustrated in Fig. 3.
 
+|||![](https://i.imgur.com/jLNUGZ8.png)|
+|-|-|-|
+||||
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MTQxNjMyMl19
+eyJoaXN0b3J5IjpbLTExMDA4MzEwNzBdfQ==
 -->
