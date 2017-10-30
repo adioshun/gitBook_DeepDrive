@@ -343,11 +343,11 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 - The last part of the loss function is just cross-entropy loss for classification. 
 	- $ l^G_c \in \{0, 1\}$ is the ground truth label 
-	- $p_c \in \[0, 1], c ∈ [1, C] is the probability distribution
+	- $p_c \in \[0, 1\], c ∈ [1, C] is the probability distribution
 predicted by the neural net. We used softmax to normalize
 the corresponding ConvDet output to make sure that pc is
 ranged between [0, 1].
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NDY4OTEzNF19
+eyJoaXN0b3J5IjpbLTE5MTI5MzEyNDZdfQ==
 -->
