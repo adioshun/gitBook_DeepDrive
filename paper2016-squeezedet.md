@@ -137,19 +137,23 @@ Given the **same level of accuracy**, it is often beneficial to **develop smalle
 
 ### 3.1. Detection Pipeline
 
-Inspired by YOLO [21], we also adopt a **single-stage detection pipeline** : **region proposition** and **classification** is performed by one single network simultaneously. 
+- YOLO의 SSD`(single-stage detection)` pipeline을 채택 하였다. `Inspired by YOLO [21], we also adopt a single-stage detection pipeline : region proposition and classification is performed by one single network simultaneously. `
 
 ![](https://i.imgur.com/enbAgkK.png)
 
-- 1: 입력된 이미지에서 low-resolution, high dimensional feature map 추출
+###### [1단계]
+- 입력된 이미지에서 low-resolution, high dimensional **feature map** 추출
 
-- 2: Feature map을 ConvDet layer에 입력 & Compute bounding boxes centered around W × H uniformly distributed spatial grids. 
+###### [2단계]
+
+- Feature map을 **ConvDet layer**에 입력 
+
+- Compute **bounding boxes** centered around W × H uniformly distributed spatial grids. 
   - Here, `W` and `H` are number of grid centers along horizontal and vertical axes.
 
-
 - Each bounding box is associated with `C + 1` values
- - where `C` is the number of classes to distinguish, 
- - the extra `1` is for the confidence score
+ - `C` : **number of classes** to distinguish, 
+ - `extra 1`: for the **confidence score**
 
 
 
