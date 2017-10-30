@@ -104,80 +104,93 @@ Given the **same level of accuracy**, it is often beneficial to **develop smalle
 
 ### 2.3 Fully convolutional networks
 
-Fully-convolutional networks (FCN) were popularizedby Long et al., who applied them to the **semantic segmentation** domain [20]. 
+- Fully-convolutional networks (FCN) were popularized by Long et al., who applied them to the **semantic segmentation** domain [20]. 
 
-FCN defines a broad class of CNNs, where the output of the final parameterized layer is a grid rather than a vector.
+```
+[20] J. Long, E. Shelhamer, and T. Darrell. Fully convolutional networks for semantic segmentation. In CVPR, 2015.
+```
 
-This is useful in semantic segmentation, where each location in the grid corresponds to the predicted class of a pixel.
+- FCN의 마지막 레이어는 **Vector**방식이 아니라 **그리드** 방식이다. `FCN defines a broad class of CNNs, where the output of the final parameterized layer is a grid rather than a vector.`
 
-FCN models have been applied in other areas as well.
+- 그리드 방식은 픽셀단위 예측시 사용할수 있으므로 세그멘테이션에 유용한다. `This is useful in semantic segmentation, where each location in the grid corresponds to the predicted class of a pixel.`
 
-To address the image classification problem, a CNN needs to output a 1-dimensional vector of class probabilities.
+- FCN은 다른 분야에도 사용 된다. `FCN models have been applied in other areas as well.`
 
-One common approach is to have one or more fully connected layers, which by definition output a 1D vector– 1×1×Channels (e.g. [18, 23]). 
+- 예를 들어 분류 문제에서 기존에는 **Fully Connected Layer**를 써서  **1차원 벡터**로 Class의 확률을 표현 하였ㅏ. `To address the image classification problem, a CNN needs to output a 1-dimensional vector of class probabilities. One common approach is to have one or more fully connected layers, which by definition output a 1D vector– 1×1×Channels (e.g. [18, 23]). `
 
-However, an alternative approach is to have the final parameterized layer be a convolutional layer that outputs a grid (H×W×Channels), and to then use average-pooling to downsample the grid to 1×1×Channels to a vector of produce class probabilities(e.g. [16, 19]). 
+```
+[18] A. Krizhevsky, I. Sutskever, and G. E. Hinton. ImageNet Classification with Deep Convolutional Neural Networks. In NIPS, 2012.
+[23] K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. arXiv:1409.1556, 2014.
+```
 
-Finally, the R-FCN method that we mentioned earlier in this section is a fully-convolutional network.
+- 하지만, 새 방법은 **Convolutional Layer**를 써서** Grid형태**의 아웃을을 생성하고 average-pooling으로 **다운 샘플링** 하여 **1차원 벡터**로 Class의 확률로 표현 할수 있다. `However, an alternative approach is to have the final parameterized layer be a convolutional layer that outputs a grid (H×W×Channels), and to then use average-pooling to downsample the grid to 1×1×Channels to a vector of produce class probabilities(e.g. [16, 19]). `
+
+```
+[16] F. N. Iandola, S. Han, M. W. Moskewicz, K. Ashraf, W. J. Dally, and K. Keutzer. SqueezeNet: Alexnet-level accuracy with 50x fewer parameters and <0.5mb model size. arXiv:1602.07360, 2016.
+[19] M. Lin, Q. Chen, and S. Yan. Network in network. In ICLR, 2014.
+```
+
+- R-FCN 방법이 Fully convolutional networks을 사용한것이다. `Finally, the R-FCN method that we mentioned earlier in this section is a fully-convolutional network.`
+
 
 ## 3. Method Description
 
 ### 3.1. Detection Pipeline
 
-Inspired by YOLO [21], we also adopt a **single-stage detection pipeline** : region proposition and classification is performed by one single network simultaneously. 
+Inspired by YOLO [21], we also adopt a **single-stage detection pipeline** : **region proposition** and **classification** is performed by one single network simultaneously. 
 
 ![](https://i.imgur.com/enbAgkK.png)
 
-1. 입력된 이미지에서 low-resolution, high dimensional feature map 추출
+- 1: 입력된 이미지에서 low-resolution, high dimensional feature map 추출
 
-2. Feature map을 ConvDet layer에 입력 & Compute bounding boxes centered around W × H uniformly distributed spatial grids. 
- - Here, `W` and `H` are number of grid centers along horizontal and vertical axes.
-
-Each bounding box is associated with `C + 1` values
-- where `C` is the number of classes to distinguish, 
-- the extra `1` is for the confidence score
+- 2: Feature map을 ConvDet layer에 입력 & Compute bounding boxes centered around W × H uniformly distributed spatial grids. 
+  - Here, `W` and `H` are number of grid centers along horizontal and vertical axes.
 
 
+- Each bounding box is associated with `C + 1` values
+ - where `C` is the number of classes to distinguish, 
+ - the extra `1` is for the confidence score
 
-   confidence score
+
+
+- confidence score
    - how likely does the bounding box actually contain an object
-   - A high confidence score = a high probability that an object of interest does exist and
-   that the overlap between the predicted bounding box and the ground truth is high. 
+   - A high confidence score = a high probability that an object of interest does exist and that the overlap between the predicted bounding box and the ground truth is high. 
 
 
-Similarly to YOLO [21], we define the confidence score as $$Pr(Object) \times IOU^{pred}_{truth}$$
+- Similarly to YOLO [21], we define the confidence score as $$Pr(Object) \times IOU^{pred}_{truth}$$
 
 
-The other `C` scalars represents the conditional class probability distribution given that the object exists within the bounding box.
+- The other `C` scalars represents the conditional class probability distribution given that the object exists within the bounding box.
 
-More formally, we denote the conditional probabilities as $$Pr(class_c \mid Object), c \in [1,C]$$
+- More formally, we denote the conditional probabilities as $$Pr(class_c \mid Object), c \in [1,C]$$
 
-We assign the label with the highest conditional probability to this bounding box and we use
+- We assign the label with the highest conditional probability to this bounding box and we use
 
 ![](https://i.imgur.com/wMT0Fjg.png)
 
-as the metric to estimate the confidence of the bounding box prediction.
+- as the metric to estimate the confidence of the bounding box prediction.
 
-Finally, we keep the top `N` bounding boxes with the highest confidence and use Non-Maximum Suppression (NMS) to filter redundant bounding boxes to obtain the final detections. 
+- Finally, we keep the top `N` bounding boxes with the highest confidence and use Non-Maximum Suppression (NMS) to filter redundant bounding boxes to obtain the final detections. 
 
-During inference, the entire detection pipeline consists of only **one forward pass** of one neural network with minimal post-processing.
+- During inference, the entire detection pipeline consists of only **one forward pass** of one neural network with minimal post-processing.
 
 
 ### 3.2. ConvDet
 
-SqueezeDet의 기본 방법은 YOLO에서 가져 왔지만, `ConvDet layer`을 사용함으로써 YOLO보다 적은 model parameters를 가지고도 tens-of-thousands of region proposals을 생성 할수 있다. 
+- SqueezeDet의 기본 방법은 YOLO에서 가져 왔지만, `ConvDet layer`을 사용함으로써 YOLO보다 적은 model parameters를 가지고도 tens-of-thousands of region proposals을 생성 할수 있다. 
 
-ConvDet은 학습을 통해 **bounding box 좌표** 와 **class probabilities** 출력하는 중요한 합성곱 레이어이다. 
+- ConvDet은 학습을 통해 **bounding box 좌표** 와 **class probabilities** 출력하는 중요한 합성곱 레이어이다. 
 
-**sliding window**처럼 Feature Map에 동작한다. `It works as a sliding window that moves through each spatial position on the feature map.`
-- At each position, it computes $$K × (4 + 1 + C)$$ values that encode the bounding box predictions. 
+- **sliding window**처럼 Feature Map에 동작한다. `It works as a sliding window that moves through each spatial position on the feature map.`
+ - At each position, it computes $$K × (4 + 1 + C)$$ values that encode the bounding box predictions. 
  - Here, K is the number of reference bounding boxes with pre-selected shapes. 
 
-Using the notation from [22], we call these reference bounding boxes as `anchor`. 
+- Using the notation from [22], we call these reference bounding boxes as `anchor`. 
 
-Each position on the feature map corresponds to a grid center in the original image, so each anchor can be described by `4 scalars` as $$(\hat{x}_i, \hat{y}_j, \hat{w}_k, \hat{h}_k), i \in [1,W], j \in [1,H], k \in [1,K]$$. 
-- $$\hat{x}_i, \hat{y}_j$$ are spatial coordinates of the reference grid center (i, j).
-- $$\hat{w}_k, \hat{h}_k$$ are the width and height of the `k-th` reference bounding box
+- Each position on the feature map corresponds to a grid center in the original image, so each anchor can be described by `4 scalars` as $$(\hat{x}_i, \hat{y}_j, \hat{w}_k, \hat{h}_k), i \in [1,W], j \in [1,H], k \in [1,K]$$. 
+ - $$\hat{x}_i, \hat{y}_j$$ are spatial coordinates of the reference grid center (i, j).
+ - $$\hat{w}_k, \hat{h}_k$$ are the width and height of the `k-th` reference bounding box
 
-We used the method described by [2] to select reference bounding box shapes to match the data distribution.
+- We used the method described by [2] to select reference bounding box shapes to match the data distribution.
 
