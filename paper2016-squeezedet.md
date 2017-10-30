@@ -297,7 +297,13 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 - $(\delta x_{ijk}, \delta y_{ijk}, \delta w_{ijk}, \delta h_{ijk})$ corresponds to the relative coordinates of anchor-k located at grid center-(i, j).
 - They are outputs of the ConvDet layer. 
 
-The ground truth bounding box $\delta G_{ijk}$ or $(\delta G_{ijk}, \delta G_{ijk}, \delta G_{ijk}, \delta G_{ijk})$ is 
+The ground truth bounding box $\delta G_{ijk}$ or $(\delta G_{ijk}, \delta G_{ijk}, \delta G_{ijk}, \delta G_{ijk})$ is computed as:
+
+![](https://i.imgur.com/tKgW0Rk.png)
+
+- Note that Equation 3 is essentially the inverse transformation of Equation 1.
+
+- $(x^G, y^G. w^G, h^G) 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NTc4MDIwXX0=
+eyJoaXN0b3J5IjpbLTEwMzY0NTM2NzJdfQ==
 -->
