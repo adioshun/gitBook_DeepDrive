@@ -303,7 +303,14 @@ The ground truth bounding box $\delta G_{ijk}$ or $(\delta G_{ijk}, \delta G_{ij
 
 - Note that Equation 3 is essentially the inverse transformation of Equation 1.
 
-- $(x^G, y^G. w^G, h^G) 
+- $(x^G, y^G. w^G, h^G) are coordinates of a ground truth bounding box. During training, we compare
+ground truth bounding boxes with all anchors and assign them to the anchors that have the largest overlap (IOU)
+with each of them. 
+
+- The reason is that we want to select the “closest” anchor to match the ground truth box such that the
+transformation needed is reduced to minimum.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzY0NTM2NzJdfQ==
+eyJoaXN0b3J5IjpbLTEwODExNjk1MzVdfQ==
 -->
