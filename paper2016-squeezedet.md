@@ -303,14 +303,12 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 - Note that Equation 3 is essentially the inverse transformation of Equation 1.
 
-- $(x^G, y^G. w^G, h^G) are coordinates of a ground truth bounding box. During training, we compare
-ground truth bounding boxes with all anchors and assign them to the anchors that have the largest overlap (IOU)
-with each of them. 
+- $(x^G, y^G. w^G, h^G) are coordinates of a ground truth bounding box. 
 
-- The reason is that we want to select the “closest” anchor to match the ground truth box such that the
-transformation needed is reduced to minimum.
+- 학습시, During training, we compare ground truth bounding boxes with all anchors and assign them to the anchors that have the largest overlap (IOU) with each of them. 
+	- 그 이유는, The reason is that we want to select the “closest” anchor to match the ground truth box such that the transformation needed is reduced to minimum.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5ODQ2MTY0NV19
+eyJoaXN0b3J5IjpbLTE1MjkwOTg4MzBdfQ==
 -->
