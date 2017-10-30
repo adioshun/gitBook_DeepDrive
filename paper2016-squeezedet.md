@@ -261,7 +261,8 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 	- $Ch_f$ is the number of input **channels** to the detection layer. 
 
 - Denote ConvDet’s filter **width** as $F_w$ and **height** as $F_h$. 
-- With proper padding/striding strategy, the output of ConvDet keeps the **same spatial dimension** as the feature map. 
+
+- 적절한 패팅과/Striding을 사용하여 ConvDet의 출력은 Feature Map과 같도록 유지 된다. `With proper padding/striding strategy, the output of ConvDet keeps the **same spatial dimension** as the feature map. `
 - To compute K × (4 + 1 + C) outputs for each reference grid, the number of parameters required by the ConvDet layer is  $F_wF_hCh_fK(5 + C).$
 - The FcDet layer described in [21-YOLO] is comprised of two fully connected layers. 
 - Using the same notation for the input feature map and assuming the number of outputs of the $fc1$ layer is $F|{fc1|$, then the number of parameters in the $fc1$ layer is $W_fH_fCh_fF_{fc1}$. 
@@ -279,5 +280,5 @@ The comparison of RPN, ConvDet and FcDet is illustrated in Fig. 3 and summarized
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk3MjcwMDgxXX0=
+eyJoaXN0b3J5IjpbNDAyNDQ5NDgxXX0=
 -->
