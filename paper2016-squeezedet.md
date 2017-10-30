@@ -265,7 +265,7 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 - To compute K × (4 + 1 + C) outputs for each reference grid, the number of parameters required by the ConvDet layer is  $F_wF_hCh_fK(5 + C).$
 - The FcDet layer described in [21-YOLO] is comprised of two fully connected layers. 
 - Using the same notation for the input feature map and assuming the number of outputs of the fc1 layer is Ffc1, then the number of parameters in the fc1 layer is WfHfChfFf c1. 
-- The second fully connected layer in [21] generates C class probabilities as well as K×(4+1) bounding box coordinates and confidence scores for each of the $Wo × Ho$ grids. 
+- The second fully connected layer in [21] generates C class probabilities as well as K×(4+1) bounding box coordinates and confidence scores for each of the $W_o × Ho$ grids. 
 - Thus, the number of parameters in the f c2 layer is Ff c1WoHo(5K + C). 
 - The total number of parameters in these two fully connected layers is Ff c1(WfHfChf + WoHo(5K + C)).
 
@@ -277,5 +277,5 @@ The comparison of RPN, ConvDet and FcDet is illustrated in Fig. 3 and summarized
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NTkwMjAxN119
+eyJoaXN0b3J5IjpbNzM1NTM0NDM4XX0=
 -->
