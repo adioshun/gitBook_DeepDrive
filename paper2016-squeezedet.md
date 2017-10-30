@@ -289,7 +289,7 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 - Faster R-CNN은 4단계 학습이 필요 하지만, SqueezeDet은 YOLO처럼 End-to-End 학습이 가능하다. `Unlike Faster R-CNN [22], which deploys a (4-step) alternating training strategy to train RPN and detector network, our SqueezeDet detection network can be trained end-to-end, similarly to YOLO [21].`
 
-- To train the ConvDet layer to learn detection, localization and classification, we define a multi-task loss function:
+-  Detection + Localization + Classification을 위한 **multi-task loss function**을 정의 하였다. `To train the ConvDet layer to learn detection, localization and classification, we define a multi-task loss function:`
 
 ![](https://i.imgur.com/6w12vTT.png)
 
@@ -312,5 +312,5 @@ transformation needed is reduced to minimum.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDA0MzMwMTBdfQ==
+eyJoaXN0b3J5IjpbLTEyMzM4ODgzMTVdfQ==
 -->
