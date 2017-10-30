@@ -321,7 +321,8 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 - The second part of the loss function is confidence scorere gression. 
 
-- $\gamma_{ijk}$ is the output from the ConvDet layer, representing the predicted confidence score for anchor-k at position-(i, j). 
+- $\gamma_{ijk}$ is the output from the ConvDet layer, 
+	- representing the predicted confidence score for anchor-k at position-(i, j). 
 
 γGijk is obtained by computing the IOU ofthe predicted bounding box with the ground truth boundingbox. 
 
@@ -342,5 +343,5 @@ To guarantee that γijkfalls into that range, we feed the corresponding ConvDeto
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MjU3NjUwMV19
+eyJoaXN0b3J5IjpbMjUwNjEzNDAwXX0=
 -->
