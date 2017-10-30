@@ -208,3 +208,7 @@ $$max_c Pr (Class_c \mid Object) \times Pr(Object) \times IOU^{Pred}_{truth} $$
 
 - We used the method described by [2] to select reference bounding box shapes to match the data distribution.
 
+- For each anchor (i, j, k), we compute 4 relative coordinates $$(\delta x_{ijk}, \delta y_{ijk}, \delta w_{ijk}, \delta h_{ijk})$$ to transform the anchor into a predicted bounding box, as shown in Fig. 2. 
+
+Following [12], the transformation is described by
+
