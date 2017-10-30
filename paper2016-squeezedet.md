@@ -85,6 +85,10 @@ R-CNN, but R-FCN is fully-convolutional which allows it to amortize more computa
  
 [3, 26] on the other hand focused on generating better region proposals. 
 
+```
+[2] K. Ashraf, B. Wu, F. N. Iandola, M. W. Moskewicz, and
+K. Keutzer. Shallow networks for high-accuracy road objectdetection.
+arXiv:1606.01561, 2016.
 
 #### E. YOLO : real-time speed
 
@@ -357,5 +361,5 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 ### 3.4. Neural Network Design
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNjc3MDE3N119
+eyJoaXN0b3J5IjpbNzI1ODYyOTUyXX0=
 -->
