@@ -265,10 +265,16 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 - 적절한 패팅과/Striding을 사용하여 ConvDet의 출력은 Feature Map과 같도록 유지 된다. `With proper padding/striding strategy, the output of ConvDet keeps the **same spatial dimension** as the feature map. `
 - 각 reference grid의 출력을 계산하기 위해 필요한 파라미터수 `To compute K × (4 + 1 + C) outputs for each reference grid, the number of parameters required by the ConvDet layer is` 
 	- $F_wF_hCh_fK(5 + C).$
-- The FcDet layer described in [21-YOLO] is comprised of two fully connected layers. 
+
+#### FcDet layer
+- FcDet layer구성 : 2개의 FCL `The FcDet layer described in [21-YOLO] is comprised of two fully connected layers. `
+
 - Using the same notation for the input feature map and assuming the number of outputs of the $fc1$ layer is $F|{fc1|$, then the number of parameters in the $fc1$ layer is $W_fH_fCh_fF_{fc1}$. 
+
 - The second fully connected layer in [21] generates C class probabilities as well as K×(4+1) bounding box coordinates and confidence scores for each of the $W_o × H_o$ grids. 
+
 - Thus, the number of parameters in the f c2 layer is Ff c1WoHo(5K + C). 
+
 - The total number of parameters in these two fully connected layers is $F_{fc1}(W_fH_fCh_f + W_oH_o(5K + C)).
 
 In [21], the input feature map is of size 7x7x1024.
@@ -281,5 +287,5 @@ The comparison of RPN, ConvDet and FcDet is illustrated in Fig. 3 and summarized
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDQzODM1MTldfQ==
+eyJoaXN0b3J5IjpbLTcxMTE3Nzk1N119
 -->
