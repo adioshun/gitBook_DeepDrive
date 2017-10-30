@@ -267,11 +267,11 @@ the ConvDet layer is FwFhChfK(5 + C).
 
 In [21], the input feature map is of size 7x7x1024. Ff c1 = 4096, K = 2, C = 20, Wo = Ho = 7, thus the total number of parameters required by the two fully connected layers is approximately 212 × 106 . 
 
-If we keep the feature map sizes, number of output grid centers, classes, and anchors the same, and use 3x3 ConvDet, it would only require 3×3×1024×2×25 ≈ 0.46×106 parameters, which is 460X smaller than FcDet. The comparison of RPN, ConvDet
-and FcDet is illustrated in Fig. 3 and summarized in
-Table 1.
+If we keep the feature map sizes, number of output grid centers, classes, and anchors the same, and use 3x3 ConvDet, it would only require 3×3×1024×2×25 ≈ 0.46×106 parameters, which is 460X smaller than FcDet. 
+
+The comparison of RPN, ConvDet and FcDet is illustrated in Fig. 3 and summarized in Table 1.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMzk3MzMzN119
+eyJoaXN0b3J5IjpbMTQxNTM1OTQ5MV19
 -->
