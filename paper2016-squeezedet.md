@@ -267,15 +267,17 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 - Using the same notation for the input feature map and assuming the number of outputs of the $fc1$ layer is $F|{fc1|$, then the number of parameters in the $fc1$ layer is $W_fH_fCh_fF_{fc1}$. 
 - The second fully connected layer in [21] generates C class probabilities as well as K×(4+1) bounding box coordinates and confidence scores for each of the $W_o × H_o$ grids. 
 - Thus, the number of parameters in the f c2 layer is Ff c1WoHo(5K + C). 
-- The total number of parameters in these two fully connected layers is $F_{fc1(WfHfChf + WoHo(5K + C)).
+- The total number of parameters in these two fully connected layers is $F_{fc1}(W_fH_fCh_f + W_oH_o(5K + C)).
 
-In [21], the input feature map is of size 7x7x1024. Ff c1 = 4096, K = 2, C = 20, Wo = Ho = 7, thus the total number of parameters required by the two fully connected layers is approximately 212 × 106 . 
+In [21], the input feature map is of size 7x7x1024.
 
-If we keep the feature map sizes, number of output grid centers, classes, and anchors the same, and use 3x3 ConvDet, it would only require 3×3×1024×2×25 ≈ 0.46×106 parameters, which is 460X smaller than FcDet. 
+$F_{fc1}$ = 4096, K = 2, C = 20, $W_o$ = $H_o$ = 7, thus the total number of parameters required by the two fully connected layers is approximately 212 × 106 . 
+
+If we keep the feature map sizes, number of output grid centers, classes, and anchors the same, and use 3x3 ConvDet, it would only require 3×3×1024×2×25 ≈ 0.46×106 parameters, which is 460X smaller than $FcDet$. 
 
 The comparison of RPN, ConvDet and FcDet is illustrated in Fig. 3 and summarized in Table 1.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMTQ0OTAxMF19
+eyJoaXN0b3J5IjpbNzk3MjcwMDgxXX0=
 -->
