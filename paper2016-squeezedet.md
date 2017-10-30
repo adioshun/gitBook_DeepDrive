@@ -185,8 +185,6 @@ get the final detections.
 
 $$max_c Pr (Class_c \mid Object) \times Pr(Object) \times IOU^{Pred}_{truth} $$
 
-![](https://i.imgur.com/wMT0Fjg.png)
-
 - as the metric to estimate the confidence of the bounding box prediction.
 
 - Finally, we keep the top `N` bounding boxes with the highest confidence and use Non-Maximum Suppression (NMS) to filter redundant bounding boxes to obtain the final detections. 
@@ -361,5 +359,5 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 ### 3.4. Neural Network Design
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE4OTYxMjkxXX0=
+eyJoaXN0b3J5IjpbMTEyNjE2Mzg2MV19
 -->
