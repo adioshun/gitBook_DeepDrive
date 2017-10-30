@@ -293,11 +293,11 @@ Table 1. Comparison between RPN, ConvDet and FcDet.
 
 ![](https://i.imgur.com/6w12vTT.png)
 
-- The first part of the loss function is the bounding box regression.
-- $(\delta x_{ijk}, \delta y_{ijk}, \delta w_{ijk}, \delta h_{ijk})$ corresponds to the relative coordinates of anchor-k located at grid center-(i, j).
+- 첫 부분은 BBox 리그레이션 관련 부분이다. `The first part of the loss function is the bounding box regression.`
+- $(\delta x_{ijk}, \delta y_{ijk}, \delta w_{ijk}, \delta h_{ijk})$ corresponds to the relative coordinates of **anchor-k** located at grid center-(i, j).
 - They are outputs of the ConvDet layer. 
 
-The ground truth bounding box $\delta G_{ijk}$ or $(\delta G_{ijk}, \delta G_{ijk}, \delta G_{ijk}, \delta G_{ijk})$ is computed as:
+- ground truth bounding box계산 : The ground truth bounding box $\delta G_{ijk}$ or $(\delta G_{ijk}, \delta G_{ijk}, \delta G_{ijk}, \delta G_{ijk})$ is computed as:
 
 ![](https://i.imgur.com/tKgW0Rk.png)
 
@@ -312,5 +312,5 @@ transformation needed is reduced to minimum.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzM4ODgzMTVdfQ==
+eyJoaXN0b3J5IjpbMTE5ODQ2MTY0NV19
 -->
