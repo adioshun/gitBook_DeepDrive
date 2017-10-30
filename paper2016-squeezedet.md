@@ -210,8 +210,17 @@ $$max_c Pr (Class_c \mid Object) \times Pr(Object) \times IOU^{Pred}_{truth} $$
 
 - For each anchor (i, j, k), we compute 4 relative coordinates $$(\delta x_{ijk}, \delta y_{ijk}, \delta w_{ijk}, \delta h_{ijk})$$ to transform the anchor into a predicted bounding box, as shown in Fig. 2. 
 
+![](https://i.imgur.com/ZqiWmfJ.png)
+```
+Figure 2. Bounding box transformation. Each grid center has K
+anchors with pre-selected shapes. Each anchor is transformed to
+its new position and shape using the relative coordinates computed
+by the ConvDet layer. Each anchor is associated with a confidence
+score and class probabilities to predict the category of the object
+within the bounding box
+```
 Following [12], the transformation is described by
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NTc1MDYyMl19
+eyJoaXN0b3J5IjpbLTE0NTEwNDQzODNdfQ==
 -->
