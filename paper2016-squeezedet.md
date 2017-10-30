@@ -1,36 +1,33 @@
-
-
-
 |논문명|SqueezeDet: Unified, Small, Low Power Fully Convolutional Neural Networks for Real-Time Object Detection for Autonomous Driving|
 |-|-|
 |저자(소속)|Bichen Wu(버클리)|
 |학회/년도|Bichen2016, CVPR 2017, [논문](https://arxiv.org/abs/1612.01051)|
 |키워드|KITTI, [YOLO](https://adioshun.gitbooks.io/semantic-segmentation/content/2015yolo.html) + [SqueezeNet](https://adioshun.gitbooks.io/semantic-segmentation/content/2017squeezenet.html)|
 |참고|[정리](https://theintelligenceofinformation.wordpress.com/2017/03/02/introducing-squeezedet-low-power-fully-convolutional-neural-network-framework-for-autonomous-driving/)|
-|Code|[TF](https://github.com/BichenWuUCB/squeezeDet), [TF /wKITTI](https://github.com/fregu856/2D_detection/blob/master/README.md), [Docker](https://hub.docker.com/r/lorenagdl/squeezedet/)|
+|Code|[TF](https://github.com/BichenWuUCB/squeezeDet), [TF /wKITTI](https://github.com/fregu856/2D_detection/blob/master/README.md),  [Docker](https://hub.docker.com/r/lorenagdl/squeezedet/)|
 
 
 # SqueezeDet
 
-자율주행용 물체 탐지 요구 사항
+자율주행용 물체 탐지 요구 사항 
 - realtime inference speed to guarantee prompt vehicle control
-- small model size
+- small model size 
 - energy efficiency to enable embedded system deployment
 
-차별점 : In our network we use convolutional layers not only to extract feature maps, but also as the output layer to compute bounding boxes and class probabilities.
+차별점 : In our network we use convolutional layers not only to extract feature maps, but also as the output layer to compute bounding boxes and class probabilities. 
 
 빠른 이유 : The detection pipeline of our model only contains a **single forward pass** of a neural network, thus it is extremely fast.
 
-## 1. Introduction
+## 1. Introduction 
 
 
 이미지 데이터는 중요한 요소중 하나이다.
 
-### 1.1 자율주행용 물체 탐지 요구 사항
+### 1.1 자율주행용 물체 탐지 요구 사항 
 
-Autonomous driving some **basic requirements** for image object detectors
-- Accuracy: the detector ideally should achieve **100% recall** with **high precision** on objects of interest.
-- Speed: The detector should have real-time or faster inference speed to reduce the latency of the vehicle control loop.
+Autonomous driving some **basic requirements** for image object detectors 
+- Accuracy:  the detector ideally should achieve **100% recall** with **high precision** on objects of interest. 
+- Speed: The detector should have real-time or faster inference speed to reduce the latency of the vehicle control loop. 
 - Small model size: As discussed in [16], smaller model size brings benefits of more efficient distributed training, less communication overhead to export new models to clients through wireless update, less energy consumption and more feasible embedded system deployment.
 - Energy efficiency: Desktop and rack systems may have the luxury of burning 250W of power for neural network computation, but embedded processors targeting automotive market must fit within a much smaller power and energy envelope.
 
@@ -39,12 +36,12 @@ Autonomous driving some **basic requirements** for image object detectors
 
 > The detection pipeline of SqueezeDet is inspired by [21]
 
-1. first, we use stacked convolution filters to extract a high dimensional, low resolution feature map for the input image.
-2. Then, we use ConvDet, a convolutional layer to take the feature map as input and compute a large amount of object bounding boxes and predict their categories.
-3. Finally, we filter these bounding boxes to obtain final detections.
+1. first, we use stacked convolution filters to extract a high dimensional, low resolution feature map for the input image. 
+2. Then, we use ConvDet, a convolutional layer to take the feature map as input and compute a large amount of object bounding boxes and predict their categories. 
+3. Finally, we filter these bounding boxes to obtain final detections. 
 
-기본 구조는 SqueezeNet [16]에서 따왔다.
-- SqueezeNet = AlexNet level imageNet accuracy with a model size of < 5MB that can be further compressed to 0.5MB
+기본 구조는  SqueezeNet [16]에서 따왔다. 
+- SqueezeNet  = AlexNet level imageNet accuracy with a model size of < 5MB that can be further compressed to 0.5MB
 
 ```
 [21] J. Redmon, S. K. Divvala, R. B. Girshick, and A. Farhadi. You only look once: Unified, real-time object detection. In CVPR, 2016.
@@ -54,7 +51,7 @@ Autonomous driving some **basic requirements** for image object detectors
 - Small model size: Model size : ~ 8MB
 - Speed: Inference속도는 57.2 FPS이다. (입력: 1242x375)
 - Energy efficiency(전력 소모) : 1.4J of energy per image (TITAN X GPU, Faster RCNN보다 84배 적음)
-- Accuracy: cyclist detection에서는 최고 성능 보임 (차량 탐지는??)
+- Accuracy: cyclist detection에서는 최고 성능 보임 (차량 탐지는??) 
 
 ## 2. Related Work
 
@@ -66,12 +63,13 @@ From 2005 to 2013, various techniques were applied to advance the accuracy of ob
 
 #### B. R-CNN
 
-However, in 2013, Girshick et al. proposed Region-based Convolutional Neural Networks (RCNN)[11], which led to substantial gains in object detection accuracy.
-The R-CNN approach begins
-- by identifying region proposals (i.e. regions of interest that are likely to contain objects) and
-- then classifying these regions using a CNN.
+However, in 2013, Girshick et al. proposed Region-based Convolutional Neural Networks (RCNN)[11], which led to substantial gains in object detection accuracy. 
+    
+The R-CNN approach begins 
+- by identifying region proposals (i.e. regions of interest that are likely to contain objects) and 
+- then classifying these regions using a CNN. 
 
-단점 : One disadvantage of R-CNN is that it computes the CNN independently on each region proposal, leading to time-consuming (≤ 1 fps) and energy-inefficient (≥ 200 J/frame) computation.
+단점 : One disadvantage of R-CNN is that it computes the CNN independently on each region proposal, leading to time-consuming (≤ 1 fps) and energy-inefficient (≥ 200 J/frame) computation. 
 
 해결책 : To remedy this, Girshick et al. experimented with a number of strategies to amortize computation across the region proposals [13, 17, 10], culminating in Faster R-CNN [22].
 
@@ -81,31 +79,32 @@ The R-CNN approach begins
 An other model, R-FCN, is fullyconvolutional and delivers accuracy that is competitive with
 R-CNN, but R-FCN is fully-convolutional which allows it to amortize more computation across the region proposals
 
-#### D. Vehicle Detection
+#### D. Vehicle Detection 
 
-[2] modified the CNN architecture to use shallower networks to improve accuracy.
-[3, 26] on the other hand focused on generating better region proposals.
+[2] modified the CNN architecture to use shallower networks to improve accuracy. 
+ 
+[3, 26] on the other hand focused on generating better region proposals. 
 
 
 #### E. YOLO : real-time speed
 
-Region proposals are a **cornerstone** in all of the object detection methods that we have discussed so far.
+Region proposals are a **cornerstone** in all of the object detection methods that we have discussed so far. 
 
-However, in YOLO (You Only Look Once) [21], region proposition and classification are integrated into one single stage.
+However, in YOLO (You Only Look Once) [21], region proposition and classification are integrated into one single stage. 
 
 ### 2.2. Small CNN models
 
-Given the **same level of accuracy**, it is often beneficial to **develop smaller CNNs** (i.e. CNNs with fewer model parameters), as discussed in [16].
+Given the **same level of accuracy**, it is often beneficial to **develop smaller CNNs** (i.e. CNNs with fewer model parameters), as discussed in [16]. 
 
 - AlexNet model : 240MB of parameters, 80% top-5 accuracy on ImageNet.
-- VGG-19 model :575MB of parameters, 87% top-5 accuracy on ImageNet.
-- SqueezeNet [16] model : 4.8MB of parameters, **AlexNet-level** accuracy on ImageNet.
+- VGG-19 model :575MB of parameters, 87% top-5 accuracy on ImageNet. 
+- SqueezeNet [16] model : 4.8MB of parameters, **AlexNet-level** accuracy on ImageNet. 
 - GoogLeNetv[25] model : 53MB of parameters, **VGG-19-level** accuracy on ImageNet
 
 
 ### 2.3 Fully convolutional networks
 
-- Fully-convolutional networks (FCN) were popularized by Long et al., who applied them to the **semantic segmentation** domain [20].
+- Fully-convolutional networks (FCN) were popularized by Long et al., who applied them to the **semantic segmentation** domain [20]. 
 
 ```
 [20] J. Long, E. Shelhamer, and T. Darrell. Fully convolutional networks for semantic segmentation. In CVPR, 2015.
@@ -117,7 +116,7 @@ Given the **same level of accuracy**, it is often beneficial to **develop smalle
 
 - FCN은 다른 분야에도 사용 된다. `FCN models have been applied in other areas as well.`
 
-- 예를 들어 분류 문제에서 기존에는 **Fully Connected Layer**를 써서 **1차원 벡터**로 Class의 확률을 표현 하였ㅏ. `To address the image classification problem, a CNN needs to output a 1-dimensional vector of class probabilities. One common approach is to have one or more fully connected layers, which by definition output a 1D vector– 1×1×Channels (e.g. [18, 23]). `
+- 예를 들어 분류 문제에서 기존에는 **Fully Connected Layer**를 써서  **1차원 벡터**로 Class의 확률을 표현 하였ㅏ. `To address the image classification problem, a CNN needs to output a 1-dimensional vector of class probabilities. One common approach is to have one or more fully connected layers, which by definition output a 1D vector– 1×1×Channels (e.g. [18, 23]). `
 
 ```
 [18] A. Krizhevsky, I. Sutskever, and G. E. Hinton. ImageNet Classification with Deep Convolutional Neural Networks. In NIPS, 2012.
@@ -147,30 +146,30 @@ Given the **same level of accuracy**, it is often beneficial to **develop smalle
 
 ###### [2단계]
 
-- Feature map을 **ConvDet layer**에 입력
+- Feature map을 **ConvDet layer**에 입력 
 
-- Compute **bounding boxes** centered around W × H uniformly distributed spatial grids.
-- Here, `W` and `H` are number of grid centers along horizontal and vertical axes.
+- Compute **bounding boxes** centered around W × H uniformly distributed spatial grids. 
+  - Here, `W` and `H` are number of grid centers along horizontal and vertical axes.
 
 ![](https://i.imgur.com/enbAgkK.png)
 ```
 [Figure 1. SqueezeDet detection pipeline.]
-- A convolutional neural network extracts a feature map from the input image and feeds it into the ConvDet layer.
+- A convolutional neural network extracts a feature map from the input image and feeds it into the ConvDet layer. 
 - The ConvDet layer then computes bounding boxes centered around W × H uniformly distributed grid centers.
-- Each bounding box is associated with 1 confidence score and C conditional class probabilities.
+- Each bounding box is associated with 1 confidence score and C conditional class probabilities. 
 - Then, we keep the top N bouding boxes with highest confidence and use NMS to filter them to
 get the final detections.
 ```
 
 
 - Each bounding box is associated with `C + 1` values
-- `C` : **number of classes** to distinguish,
-- `extra 1`: for the **confidence score**
+ - `C` : **number of classes** to distinguish, 
+ - `extra 1`: for the **confidence score**
 
 ### 3.2 confidence score
 
 - how likely does the bounding box actually contain an object
-- A high confidence score = a high probability that an object of interest does exist and that the overlap between the predicted bounding box and the ground truth is high.
+- A high confidence score = a high probability that an object of interest does exist and that the overlap between the predicted bounding box and the ground truth is high. 
 
 - YOLO같은 confidence score 사용 : $$Pr(Object) \times IOU^{Pred}_{truth}$$
 
@@ -186,30 +185,30 @@ $$max_c Pr (Class_c \mid Object) \times Pr(Object) \times IOU^{Pred}_{truth} $$
 
 - as the metric to estimate the confidence of the bounding box prediction.
 
-- Finally, we keep the top `N` bounding boxes with the highest confidence and use Non-Maximum Suppression (NMS) to filter redundant bounding boxes to obtain the final detections.
+- Finally, we keep the top `N` bounding boxes with the highest confidence and use Non-Maximum Suppression (NMS) to filter redundant bounding boxes to obtain the final detections. 
 
 - During inference, the entire detection pipeline consists of only **one forward pass** of one neural network with minimal post-processing.
 
 
 ### 3.2. ConvDet
 
-- SqueezeDet의 기본 방법은 YOLO에서 가져 왔지만, `ConvDet layer`을 사용함으로써 YOLO보다 적은 model parameters를 가지고도 tens-of-thousands of region proposals을 생성 할수 있다.
+- SqueezeDet의 기본 방법은 YOLO에서 가져 왔지만, `ConvDet layer`을 사용함으로써 YOLO보다 적은 model parameters를 가지고도 tens-of-thousands of region proposals을 생성 할수 있다. 
 
-- ConvDet은 학습을 통해 **bounding box 좌표** 와 **class probabilities** 출력하는 중요한 합성곱 레이어이다.
+- ConvDet은 학습을 통해 **bounding box 좌표** 와 **class probabilities** 출력하는 중요한 합성곱 레이어이다. 
 
 - **sliding window**처럼 Feature Map에 동작한다. `It works as a sliding window that moves through each spatial position on the feature map.`
-- At each position, it computes $$K × (4 + 1 + C)$$ values that encode the bounding box predictions.
-- Here, K is the number of reference bounding boxes with pre-selected shapes.
+ - At each position, it computes $$K × (4 + 1 + C)$$ values that encode the bounding box predictions. 
+ - Here, K is the number of reference bounding boxes with pre-selected shapes. 
 
-- Using the notation from [22], we call these reference bounding boxes as `anchor`.
+- Using the notation from [22], we call these reference bounding boxes as `anchor`. 
 
-- Each position on the feature map corresponds to a grid center in the original image, so each anchor can be described by `4 scalars` as $$(\hat{x}_i, \hat{y}_j, \hat{w}_k, \hat{h}_k), i \in [1,W], j \in [1,H], k \in [1,K]$$.
-- $$\hat{x}_i, \hat{y}_j$$ are spatial coordinates of the reference grid center (i, j).
-- $$\hat{w}_k, \hat{h}_k$$ are the width and height of the `k-th` reference bounding box
+- Each position on the feature map corresponds to a grid center in the original image, so each anchor can be described by `4 scalars` as $$(\hat{x}_i, \hat{y}_j, \hat{w}_k, \hat{h}_k), i \in [1,W], j \in [1,H], k \in [1,K]$$. 
+ - $$\hat{x}_i, \hat{y}_j$$ are spatial coordinates of the reference grid center (i, j).
+ - $$\hat{w}_k, \hat{h}_k$$ are the width and height of the `k-th` reference bounding box
 
 - We used the method described by [2] to select reference bounding box shapes to match the data distribution.
 
+- For each anchor (i, j, k), we compute 4 relative coordinates $$(\delta x_{ijk}, \delta y_{ijk}, \delta w_{ijk}, \delta h_{ijk})$$ to transform the anchor into a predicted bounding box, as shown in Fig. 2. 
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODE2MzUyNjVdfQ==
--->
+Following [12], the transformation is described by
+
