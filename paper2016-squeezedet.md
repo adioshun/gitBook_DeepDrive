@@ -227,9 +227,9 @@ Following [12], the transformation is described by
 
 - ConvDet은 Faster-RCNN RPN의 마지막 레이어와 비슷 하다. `ConvDet is similar to the last layer of RPN in Faster RCNN [22].`
 
--  다른점은 RPN은 Weak Detector이다. `The major difference is that, RPN is regarded as a `
+-  다른점은 RPN은 Weak Detector이다. `The major difference is that, RPN is regarded as a “weak” detector`
 	- “weak” detector is **only responsible** for detecting whether an object exists and generating bounding box proposals for the object. 
 	- The classification is handed over to fully connected layers, which are regarded as a “strong” classifier. But in fact, convolutional layers are “strong” enough to detect, localize, and classify objects at the same time.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM2NTAyMjU5XX0=
+eyJoaXN0b3J5IjpbMTA1MTA0MjI0Nl19
 -->
