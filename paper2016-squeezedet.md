@@ -229,7 +229,20 @@ Following [12], the transformation is described by
 
 -  다른점은 RPN은 Weak Detector이다. `The major difference is that, RPN is regarded as a “weak” detector`
 	- “weak” detector is **only responsible** for detecting whether an object exists and generating bounding box proposals for the object. 
-	- The classification is handed over to **fully connected layers**, which are regarded as a “strong” classifier. But in fact, convolutional layers are “strong” enough to detect, localize, and classify objects at the same time.
+	- The classification is handed over to **fully connected layers**, which are regarded as a **“strong” classifier**. 
+	- But in fact, **convolutional layers** are “**strong**” enough to detect, localize, and classify objects at the same time.
+
+
+
+For simplicity, we denote the detection layers of YOLO [21] as FcDet (only counting the last two fully connected
+layers). 
+
+Compared with FcDet, the ConvDet layer has orders of magnitude fewer parameters and is still able
+to generate more region proposals with higher spatial resolution.
+
+The comparison between ConvDet and FcDet is illustrated in Fig. 3.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MTM2ODU4Ml19
+eyJoaXN0b3J5IjpbMTQxMjMxNTMwMV19
 -->
