@@ -229,7 +229,7 @@ Following [12], the transformation is described by
 
 -  다른점은 RPN은 Weak Detector이다. `The major difference is that, RPN is regarded as a “weak” detector`
 	- “weak” detector is **only responsible** for detecting whether an object exists and generating bounding box proposals for the object. 
-	- The classification is handed over to fully connected layers, which are regarded as a “strong” classifier. But in fact, convolutional layers are “strong” enough to detect, localize, and classify objects at the same time.
+	- The classification is handed over to **fully connected layers**, which are regarded as a “strong” classifier. But in fact, convolutional layers are “strong” enough to detect, localize, and classify objects at the same time.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MTA0MjI0Nl19
+eyJoaXN0b3J5IjpbMTY4MTM2ODU4Ml19
 -->
