@@ -52,18 +52,29 @@
 
 * [Deep Semantic Classification for 3D LiDAR Data](https://arxiv.org/abs/1706.08355v1): 물체를 고정된, 움직이는, 움직일수 있는 것으로 3분류 
 
-
 * [Generalized Convolutional Neural Networks for Point Cloud Data](https://arxiv.org/abs/1707.06719v1): 2017
 
 * [~~Instant Object Detection in Lidar Point Clouds~~](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7927715&tag=1)
 
 * [Fast LIDAR-based Road Detection Using Fully Convolutional Neural Networks](https://arxiv.org/abs/1703.03613): 2017.03
 
+
+
+
+###### [sparse convolutional neural networks]
+
+- Alexandr Notchenko, Ermek Kapushev, Evgeny Burnaev. Sparse 3D Convolutional Neural Networks for Large-Scale Shape Retrieval. CoRR, 2016.
+
+- M. Engelcke, D. Rao, D. Zeng Wang, C. H. Tong, I. Posner. Vote3Deep: Fast Object Detection in 3D Point Clouds Using Efficient Convolutional Neural Networks. CoRR, 2016.
+
+- Ben Graham. Sparse 3D convolutional neural networks. BMVC, 2015.
+
 * [CNN-Based Object Segmentation in Urban LIDAR with Missing Points](http://ieeexplore.ieee.org/document/7785116/): 2016
 
 * LIDAR point upsampling. [\[Schneider, Arxiv '16\]](https://arxiv.org/abs/1608.00753)
 
-* Voting for Voting in Online Point Cloud Object Detection [\[Wang, RSS '15\]](http://www.roboticsproceedings.org/rss11/p35.pdf) [\[Project\]](http://mrg.robots.ox.ac.uk/vote3d/)
+
+
 
 
 ### 2.4 Fusion
