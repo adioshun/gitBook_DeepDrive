@@ -33,15 +33,13 @@
 	- While **early fusion** approaches integrate data from different modalities **before being passed to a classifier**, 
 	- **late fusion** approaches integrate, at the last stage, of the responses obtained **after individual features learning** the model for each descriptor.
 
-In addition, although deep learning methods have recently reported promising results when applied to various multimedia applications [11,23,27,31], there is no explicit comparison between the deep architectures and traditional classifiers to explore which is the most suitable classification paradigm for visualrecognition with RGB-D data. 
+Typically, in RGB-D applications a depth image is used to segment better the object of interest and then some features are computed for depth and RGB images to afterwardst rain a classifier [8,9,12]. 
 
-Typically, in RGB-D applicationsa depth image is used to segment better the object of interest andthen some features are computed for depth and RGB images to afterwardstrain a classifier [8,9,12]. 
+In contrast, we want to focus on different levels of feature fusion and deep learning classifiers,where an object itself is already localized and segmented from the image, and no pre-processing steps or other machine learning techniques are needed.
 
-In contrast, we want to focuson different levels of feature fusion and deep learning classifiers,where an object itself is already localized and segmented from the image, and no pre-processing steps or other machine learningtechniques are needed.Therefore, in this work we conduct a comparative evaluationstudy of RGB-D visual recognition tasks by assessing the effectivenessof various settings, which include different fusion schemes(e.g., early fusion vs. 
+Therefore, in this work we conduct a comparative evaluation study of RGB-D visual recognition tasks by assessing the effectiveness of various settings, which include different fusion schemes(e.g., early fusion vs. late fusion) and two state-of-the-art learning mechanisms (e.g., SVM vs. deep learning). 
 
-late fusion) and two state-of-the-art learningmechanisms (e.g., SVM vs. deep learning). 
-
-To the best of ourknowledge, this work is the first to explicitly address the fusionevaluation for RGB-D data with deep learning classifiers.
+To the best of our knowledge, this work is the first to explicitly address the fusionevaluation for RGB-D data with deep learning classifiers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwOTYxNjM2N119
+eyJoaXN0b3J5IjpbMTg5MDc4NjM5MF19
 -->
