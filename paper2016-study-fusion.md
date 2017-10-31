@@ -44,13 +44,13 @@
 
 - A comparison between two different fusion methods, **early and late fusion**, using RGB-D data is evaluated in this paper. 
 
-- First, early fusion is the most effective approach to combine datafrom different modalities regardless of which classification methodor the application is employed. 
+- **early fusion** 방식이 효과가 좋다. `First, early fusion is the most effective approach to combine data from different modalities regardless of which classification method or the application is employed. `
 
-Second, CNN classification algorithmis superior to the other classification algorithms no matterwhich application is considered. 
+- CNN 분류기가 성능이 좋다. `Second, CNN classification algorithm is superior to the other classification algorithms no matter which application is considered. `
 
-Third, classifiers using manuallytuned features have similar performance, as in the cases of SVMS,SAE, DBN and RBM. 
+- Third, classifiers using manually tuned features have similar performance, as in the cases of SVMS, SAE, DBN and RBM. 
 
 In the future, the evaluation can be furtherextended by including more advanced learning algorithms (like FRCNNin our study), specific fusion mechanisms, and other technicalcomponents of visual recognition tasks.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDI4MTAwMzRdfQ==
+eyJoaXN0b3J5IjpbMTczNDgwNTA2XX0=
 -->
