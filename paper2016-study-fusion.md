@@ -27,9 +27,12 @@
 - Does the design of the fusion method depend on the corresponding applications? 
 - Does the employed classification algorithm have an impact on the fusion method and the resultant accuracy?
 
-- 퓨젼의 큰 분류는 2가지 이다. early fusion & late fusion `In the literature, early fusion and late fusion are the two most popular fusion schemes. `
+- 퓨젼의 큰 분류는 2가지 이다. **early fusion & late fusion** `In the literature, early fusion and late fusion are the two most popular fusion schemes. `
 
-While early fusion approaches integratedata from different modalities before being passed to a classifier,late fusion approaches integrate, at the last stage, of the responsesobtained after individual features learning the model for each descriptor.Although the employment of fusion schemes is a commontechnique in audio-visual domains [6,22,25], the works using RGBDdata [13,18,21,30] are still developed through a unimodal fashion,lacking of studies on how to effectively integrate color and depthmodalities [2,3,20,30]. 
+- 둘의 차이 
+	- While early fusion approaches integrate data from different modalities before being passed to a classifier, late fusion approaches integrate, at the last stage, of the responses obtained after individual features learning the model for each descriptor.
+
+Although the employment of fusion schemes is a commontechnique in audio-visual domains [6,22,25], the works using RGBDdata [13,18,21,30] are still developed through a unimodal fashion,lacking of studies on how to effectively integrate color and depthmodalities [2,3,20,30]. 
 
 In addition, although deep learning methodshave recently reported promising results when applied to variousmultimedia applications [11,23,27,31], there is no explicit comparisonbetween the deep architectures and traditional classifiers toexplore which is the most suitable classification paradigm for visualrecognition with RGB-D data. 
 
@@ -41,5 +44,5 @@ late fusion) and two state-of-the-art learningmechanisms (e.g., SVM vs. deep lea
 
 To the best of ourknowledge, this work is the first to explicitly address the fusionevaluation for RGB-D data with deep learning classifiers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg3NDkyNTZdfQ==
+eyJoaXN0b3J5IjpbLTg0MzgyMjU4OF19
 -->
