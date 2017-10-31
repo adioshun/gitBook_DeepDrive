@@ -9,7 +9,6 @@
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
-* [Paper\_2016\_FuseNet \(5%\)](paper2016-fusenet.md)
 
 ## Related Works
 
@@ -92,6 +91,7 @@
 * [Papers\_RADAR\_Fusion](paper2013-radar-fusion.md)
 * [Paper\_2011\_LateFusion \(0%\)](paper2011latefusion.md)
 * [Paper\_2016\_FusionNet \(50%\)](paper2016-fusionnet.md)
+* [Paper\_2016\_FuseNet \(5%\)](paper2016-fusenet.md)
 * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
 * [Paper\_2016\_DeepSlidingShape \(30%\)](paper2016-deepslidingshape.md)
 * [Paper\_2017\_Decision-Level Fusion \(50%\)](paper2017-decision-level-fusion.md)
