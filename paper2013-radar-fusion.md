@@ -56,6 +56,46 @@
 
 ---
 
+| 논문명 | Multi-View 3D Object Detection Network for Autonomous Driving |
+| --- | --- |
+| 저자\(소속\) | Xiaozhi Chen \(칭화대\), Bo Li \(Baidu\) |
+| 학회/년도 | 2017, [논문](https://arxiv.org/pdf/1611.07759.pdf) |
+
+
+
+#### B. Deep Fusion.
+
+![](http://i.imgur.com/1XqvE4Q.png)
+
+서로 다른 Feature의 정보를 합치는 방법
+
+* 기존 : usually use early fusion \[1\] or late fusion \[23, 13\]. 
+* 제안 : Inspired by \[15, 27\], we employ a deep fusion approach, which fuses multi-view features hierarchically. 
+
+##### 가. early fusion
+
+For a network that has L layers, early fusion combines features $$\{f_v\}$$ from multiple views in the input stage:  
+![](http://i.imgur.com/6BRrT0N.png)
+
+* $$\{H_l, l = 1, ..., L\} $$ : feature transformation functions 
+* $$\oplus$$ : a join operation \(e.g., concatenation, summation\)
+
+##### 나. late fusion
+
+In contrast, late fusion uses seperate subnetworks to learn feature transformation independently and combines their outputs in the prediction stage:
+
+![](http://i.imgur.com/YL74QSz.png)
+
+##### 다. deep fusion
+
+To enable more interactions among features of the intermediate layers from different views, we design the following deep fusion process:
+
+![](http://i.imgur.com/CWqcudp.png)
+
+We use element-wise mean for the join operation for deep fusion since it is more flexible when combined with droppath training \[15\].
+
+
+
 ### 
 
 
