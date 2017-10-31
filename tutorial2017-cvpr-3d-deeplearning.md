@@ -88,3 +88,49 @@ camera in a scene?
  angle, yet surfaces across different viewpoints may not be consistent.
 
 ## 2. Volumetric Representation
+
+- Information loss in voxelization
+
+### 2.1 Deep Learning on Volumetric Representation
+
+#### A. 3D Classification 
+
+- 3DShapeNets from Princeton CVPR 2015 
+
+- VoxNet from CMU Robotics IEEE/RSJ 2015
+
+#### B. 3D reconstruction 
+
+- Depth based methods [Eigen et al., Saxena et al., etc]
+- Model based methods [Su et al., Kar et al., Aubry et al., Choy et al., etc]
+
+### 2.2 Key challenges for Volumetric Representation
+
+- The sparsity characteristic of volumetric data
+
+해결책 
+- Store only the occupied grids  
+    - Octree
+
+- Skip the computation of empty cells
+    - “OctNet: Learning Deep 3D Representations at High Resolutions” CVPR2017
+    - “O-CNN: Octree-based Convolutional Neural Network for Understanding 3D Shapes” SIGGRAPH2017
+
+---
+
+# Deep learning on point cloud and other 3D forms [[PDF]](http://3ddl.stanford.edu/CVPR17_Tutorial_PointCloud.pdf)
+
+
+
+## 1. Point cloud analysis
+
+- PointNet : Deep Learning on Point Sets for 3D Classification and segmentation, CVPR 2017, Charles R. Qi
+
+- POintNet++ : Deep Hierarchical Feature Learning on Point Sets in a Metric Space, Charles R. Qi
+
+
+## 2. Point cloud synthesis
+
+- Task : 3D reconstruction from a single image
+
+## 3. Primitive-based shapes
