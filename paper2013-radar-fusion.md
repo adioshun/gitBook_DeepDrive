@@ -1,3 +1,61 @@
+## 2. FUSION SCHEMES
+
+- 앞단/뒷단 퓨전의 다른점은 데이터를 합치는 방법의 차이로 발생 한다. `Early fusion and late fusion differ in the way they **integrate the results from feature extraction** on the various modalities. `
+
+### 2.1 Early Fusion
+
+![](https://i.imgur.com/U1BUskU.png)
+
+- 우선 unimodal 특징을 먼저 추출 한다. `Indexing approaches that rely on early fusion first extract unimodal features. `
+
+- 여러 unimodal을 분석후 추출된 특징은 하나의 Representation으로 합쳐 진다. `After analysis of the various unimodal streams, the extracted features are combined into a single representation. `
+
+- In [6] unimodal 특징 백터를 연결 하여서 합쳐진 멀티모달 representation을 얻었다. `for example, we used concatenation of unimodal feature vectors to obtain a fused multimedia representation. `
+	- 그 이후 지도기반 분류기 적용 After combination of unimodal features in a multimodal representation, early fusion methods rely on supervised learning to classify semantic concepts. 
+
+> Early Fusion : 학습전에 unimodal 특징을 합침 `Fusion scheme that integrates unimodal features before learning concepts.`
+
+- 특징이 시작 단계부터 합쳐졌기 때문에 **truly multimedia feature representation**를 사용 하게 된다. `Early fusion yields a truly multimedia feature representation, since the features are integrated from the start. `
+
+- An added advantage is the requirement of one learning phaseonly. 
+
+- Disadvantage of the approach is the difficulty to combine features into a common representation. 
+
+- The general scheme for early fusion is illustrated in Figure 1.
+
+### 2.2 Late Fusion 
+
+![](https://i.imgur.com/QFR8Xpp.png)
+
+- Indexing approaches that rely on late fusion also start with extraction of unimodal features. 
+
+- In contrast to early fusion, where features are then combined into a multimodal representation, approaches for late fusion learn semantic concepts directly from unimodal features. 
+
+- In [9] for example,separate generative probabilistic models are learned for the visual and textual modality. 
+
+- These scores are combined afterwards to yield a final detection score. 
+
+- In general, late fusion schemes combine learned unimodal scores into a multimodal representation. 
+
+- Then late fusion methods rely on supervised learning to classify semantic concepts. 
+
+> Late Fusion : Fusion scheme that firstreduces unimodal features to separately learned concept scores,then these scores are integrated to learn concepts.
+
+- Late fusion focuses on the individual strength of modalities.
+
+- Unimodal concept detection scores are fused into a multimodal semantic representation rather than a feature representation.
+
+- A big disadvantage of late fusion schemes is its expensiveness in terms of the learning effort, as every modality requires a separate supervised learning stage. 
+
+- Moreover,the combined representation requires an additional learningstage. 
+
+- Another disadvantage of the late fusion approach isthe potential loss of correlation in mixed feature space. 
+
+- A general scheme for late fusion is illustrated in Figure 2.
+
+
+---
+
 |논문명 |Object Detection and Tracking with Side Cameras and RADAR in an Automotive Context |
 | --- | --- |
 | 저자\(소속\) | Peter Hofmann\(Hella Aglaia Mobile Vision\) |
