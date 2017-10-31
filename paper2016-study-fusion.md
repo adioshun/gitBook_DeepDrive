@@ -37,7 +37,9 @@
 	- which include **different fusion schemes**(e.g., early fusion vs. late fusion) and 
 	- two state-of-the-art **learning mechanisms** (e.g., SVM vs. deep learning). 
 
+## 2. Fusion schemes
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk5OTc3MDIwXX0=
+eyJoaXN0b3J5IjpbLTg2NTY0NjE0Ml19
 -->
