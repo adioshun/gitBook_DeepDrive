@@ -1,3 +1,8 @@
+|논문명 | Early versus Late Fusion in Semantic Video Analysis|
+|-|-|
+| 저자\(소속\) | Cees G.M. Snoek\(University of Amsterdam) |
+
+
 ## 2. FUSION SCHEMES
 
 - 앞단/뒷단 퓨전의 다른점은 데이터를 합치는 방법의 차이로 발생 한다. `Early fusion and late fusion differ in the way they **integrate the results from feature extraction** on the various modalities. `
@@ -27,29 +32,31 @@
 
 - unimodal 특징을 추출 하는 단계 부터 시작한다 `Indexing approaches that rely on late fusion also start with extraction of unimodal features. `
 
-- In contrast to early fusion, where features are then combined into a multimodal representation, approaches for late fusion learn semantic concepts directly from unimodal features. 
+- 앞단 퓨전과 다르게 뒷단 퓨전은 unimodal 특징에서 바로 학습을 진행 한다. `In contrast to early fusion, (where features are then combined into a multimodal representation), approaches for late fusion learn semantic concepts directly from unimodal features. `
 
 - In [9] for example,separate generative probabilistic models are learned for the visual and textual modality. 
 
-- These scores are combined afterwards to yield a final detection score. 
+	- 각 점수들은 합쳐져서 최종 탐지 점수 떄 사용 된다. `These scores are combined afterwards to yield a final detection score. `
 
-- In general, late fusion schemes combine learned unimodal scores into a multimodal representation. 
+	- 일반적으로 뒷단 퓨전은 학습된 unimodal 점수를 multimodal representation로 합친다. `In general, late fusion schemes combine learned unimodal scores into a multimodal representation. `
 
-- Then late fusion methods rely on supervised learning to classify semantic concepts. 
+	- Then late fusion methods rely on supervised learning to classify semantic concepts. 
 
-> Late Fusion : Fusion scheme that firstreduces unimodal features to separately learned concept scores,then these scores are integrated to learn concepts.
+> Late Fusion : 먼저 unimodal 을 각각의 학습된 결과로 reduece시킨후 이 결과를 합쳐서 활용함. Fusion scheme that first reduces unimodal features to separately learned concept scores, then these scores are integrated to learn concepts.
 
-- Late fusion focuses on the individual strength of modalities.
+- 뒷단 합습은 **각 modalities의 강점(strength)**에 중점을 둔다.  `Late fusion focuses on the individual strength of modalities.`
 
 - Unimodal concept detection scores are fused into a multimodal semantic representation rather than a feature representation.
 
-- A big disadvantage of late fusion schemes is its expensiveness in terms of the learning effort, as every modality requires a separate supervised learning stage. 
+- 단점 #1 : 각 modality 마다 학습이 되어야 함으로 자원 소모가 크다. ` A big disadvantage of late fusion schemes is its expensiveness in terms of the learning effort, as every modality requires a separate supervised learning stage. `
+	- Moreover,the combined representation requires an additional learning stage. 
 
-- Moreover,the combined representation requires an additional learningstage. 
+- 단점 #2 : Another disadvantage of the late fusion approach is the **potential loss of correlation** in mixed feature space. 
 
-- Another disadvantage of the late fusion approach isthe potential loss of correlation in mixed feature space. 
 
-- A general scheme for late fusion is illustrated in Figure 2.
+---
+
+### 
 
 
 ---
