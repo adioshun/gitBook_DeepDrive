@@ -51,15 +51,40 @@
 
 - Similarly to humans, analyze what can be seen: combine surface information from multiple views 
 
+
+
 ### 1.1 Deep Learning on Multi-view Representation
 
-- 3D Classification 
-    - Hang Su, Multi-view Convolutional Neural Networks for 3D Shape Recognition: Feature + Linear Classification 
-    - 
-    
+#### A. 3D Classification 
 
-- Segmentation 
+- Hang Su, Multi-view Convolutional Neural Networks for 3D Shape Recognition: Feature + Linear Classification 
 
-- Reconstruction 
+- Issues:
+    - What viewpoints to select? In particular, where shall we place the
+camera in a scene?
+    - What if the input is noisy and incomplete? e.g., point cloud
+   
+
+#### B. Segmentation 
+
+- Evangelos Kalogerakis, 3D Shape Segmentation with Projective Convolutional Networks, CVPR 2017
+
+- Challenges:
+    - View-based network does not process invisible points
+    - View-based representations have redundancy
+    - Slow to train (~week for a few hundreds of shapes)
+    - Aggregating view representations via max-pooling may lose information
+
+#### C. Reconstruction 
+
+- 3D Shape Reconstruction from Sketches via Multi-view Convolutional Networks”, arxiv 2017
+
+
+### 1.2 Key challenges for multi-view representation
+
+- Fusing information across viewpoints is not incorporated in the network (not trivial)
+- “Cannot see through the surface”
+- Less redundancy than producing a surface for every possible continuous viewing
+ angle, yet surfaces across different viewpoints may not be consistent.
 
 ## 2. Volumetric Representation
