@@ -16,28 +16,49 @@
 * \[Computer Vision for Autonomous Vehicles: Problems, Datasets and State-of-the-Art\]
 * [Deep Semantic Segmentation for Automated Driving: Taxonomy, Roadmap and Challenges](https://arxiv.org/abs/1707.02432v2)
 
-### 2.1 2D DNN2
+### 2.1 2D CNN
 
 * [MultiNet: Real-time Joint Semantic Reasoning for Autonomous Driving](https://arxiv.org/abs/1612.07695v1): classifi-
   cation, detection and semantic segmentation Task수행시 값을 공유 하여 `속도 향상`에 초점, 2016 
+
 * [Deep convolutional neural networks for pedestrian detection](https://arxiv.org/abs/1510.03608v5): 보행자 탐지, 2016
 
-### 2.2 Point Cloud
+* Unified multi-scale CNN. \(KITTI: 8th car, 1st ped\) [\[Cai, ECCV '16\]](http://arxiv.org/abs/1607.07155) [\[Home\]](https://sites.google.com/site/zhaoweicai1989/) [\[Code\]](https://github.com/zhaoweicai/mscnn) [\[Video\]](https://www.youtube.com/watch?v=NQFCURgv_cY&feature=youtu.be)
+
+* Subcategory-aware CNN. \(KITTI: 7th car, 3rd ped\)\) [\[Xiang, Arxiv '16\]](http://arxiv.org/abs/1604.04693) [\[Home\]](https://yuxng.github.io/)
+
+
+* Exploit all layers. \(KITTI: 10th car, 5th ped\) [\[Yang, CVPR '16\]](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Exploit_All_the_CVPR_2016_paper.pdf) [\[Home\]](http://www.umiacs.umd.edu/~fyang/)
+
+### 2.2 Multiview
+
+* \[A Comparative Analysis and Study of Multiview CNN Models for Joint Object
+  Categorization and Pose Estimation\]\([http://proceedings.mlr.press/v48/elhoseiny16.pdf](http://proceedings.mlr.press/v48/elhoseiny16.pdf)\): [추가자료](http://proceedings.mlr.press/v48/elhoseiny16-supp.pdf), 3D 데이터 관련 내용인지 재 확인 필요 
+
+* ~~Vehicle Detection from 3D Lidar Using Fully Convolutional Network ~~[~~\[Li, RSS '16\]~~](http://www.roboticsproceedings.org/rss12/p42.pdf)
+
+
+### 2.3 Point Cloud
 
 - [Object Classification using 3D Convolutional Neural Networks](http://publications.lib.chalmers.se/records/fulltext/249371/249371.pdf): 2016
 
 * [OctNet: Learning Deep 3D Representations at High Resolutions](https://arxiv.org/abs/1611.05009v4): 2016~2017
+
 * [Deep Semantic Classification for 3D LiDAR Data](https://arxiv.org/abs/1706.08355v1): 물체를 고정된, 움직이는, 움직일수 있는 것으로 3분류 
-* Unsupervised Depth Estimation. [\[Garg, ECCV '16\]](http://arxiv.org/abs/1603.04992)
-* Unified multi-scale CNN. \(KITTI: 8th car, 1st ped\) [\[Cai, ECCV '16\]](http://arxiv.org/abs/1607.07155) [\[Home\]](https://sites.google.com/site/zhaoweicai1989/) [\[Code\]](https://github.com/zhaoweicai/mscnn) [\[Video\]](https://www.youtube.com/watch?v=NQFCURgv_cY&feature=youtu.be)
-* Subcategory-aware CNN. \(KITTI: 7th car, 3rd ped\)\) [\[Xiang, Arxiv '16\]](http://arxiv.org/abs/1604.04693) [\[Home\]](https://yuxng.github.io/)
-* Exploit all layers. \(KITTI: 10th car, 5th ped\) [\[Yang, CVPR '16\]](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Exploit_All_the_CVPR_2016_paper.pdf) [\[Home\]](http://www.umiacs.umd.edu/~fyang/)
+
+
 * 2D/3D Sensor Exploitation and Fusion for Enhanced Object Detection \(Similar to ours\) [\[Xu, CVPRW '14\]](http://www.cv-foundation.org/openaccess/content_cvpr_workshops_2014/W19/papers/Xu_2D3D_Sensor_Exploitation_2014_CVPR_paper.pdf)
+
 * [3D Bounding Box Estimation Using Deep Learning and Geometry](https://arxiv.org/abs/1612.00496): \(Submitted on 1 Dec 2016 \(v1\), last revised 10 Apr 2017 \(this version, v2\)\)
+
 * 3D Object Proposals for Accurate Object Class Detection [\[Chen, NIPS 15\]](http://papers.nips.cc/paper/5644-3d-object-proposals-for-accurate-object-class-detection) [\[Project\]](http://www.cs.toronto.edu/objprop3d/) [\[Code\]](http://www.cs.toronto.edu/objprop3d/downloads.php)
+
 * Visual Object Recognition with 3D-Aware Features in KITTI Urban Scenes [\[Yebes, Sensors '15\]](http://www.mdpi.com/1424-8220/15/4/9228/htm)
+
 * [Generalized Convolutional Neural Networks for Point Cloud Data](https://arxiv.org/abs/1707.06719v1): 2017
+
 * [~~Instant Object Detection in Lidar Point Clouds~~](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7927715&tag=1)
+
 * [Fast LIDAR-based Road Detection Using Fully Convolutional Neural Networks](https://arxiv.org/abs/1703.03613): 2017.03
 
 #### A. Missing points
@@ -46,16 +67,9 @@
 * LIDAR point upsampling. [\[Schneider, Arxiv '16\]](https://arxiv.org/abs/1608.00753)
 * Voting for Voting in Online Point Cloud Object Detection [\[Wang, RSS '15\]](http://www.roboticsproceedings.org/rss11/p35.pdf) [\[Project\]](http://mrg.robots.ox.ac.uk/vote3d/)
 
-#### B. 3D point cloud to 2D
 
-* ~~Vehicle Detection from 3D Lidar Using Fully Convolutional Network ~~[~~\[Li, RSS '16\]~~](http://www.roboticsproceedings.org/rss12/p42.pdf)
 
-#### C. Multiview
 
-* \[A Comparative Analysis and Study of Multiview CNN Models for Joint Object
-  Categorization and Pose Estimation\]\([http://proceedings.mlr.press/v48/elhoseiny16.pdf](http://proceedings.mlr.press/v48/elhoseiny16.pdf)\): [추가자료](http://proceedings.mlr.press/v48/elhoseiny16-supp.pdf), 3D 데이터 관련 내용인지 재 확인 필요 
-
-### 2.3 RGB-D
 
 ### 2.4 Fusion
 
