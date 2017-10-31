@@ -97,6 +97,7 @@
 * [Paper\_2017\_Decision-Level Fusion \(50%\)](paper2017-decision-level-fusion.md)
 * [Paper\_2017\_Sensor Modality Fusion \(50%\)](paper2017-sensor-modality-fusion.md)
 * [Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)
+  * [Paper\_2016\_Deeply\_Fused\_Nets](paper2016-deeply-fused-nets.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
   * [code\_MV3D\_TF](papermultiview-3d-cnn/codemv3d-tf.md)
 * [Report\_2017\_cs231n\_Dempster-Shafer \(50%\)](report2017-cs231n-dempster-shafer.md)
