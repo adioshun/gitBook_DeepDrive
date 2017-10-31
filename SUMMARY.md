@@ -10,6 +10,7 @@
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
 * [Paper\_2016\_FuseNet \(5%\)](paper2016-fusenet.md)
+* [Paper\_2016\_Deeply\_Fused\_Nets](paper2016-deeply-fused-nets.md)
 
 ## Related Works
 
