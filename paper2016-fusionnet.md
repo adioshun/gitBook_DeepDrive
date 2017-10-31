@@ -9,8 +9,6 @@
 
 - [FusionNet: A deep fully residual convolutional neural network for image segmentation in connectomics](https://arxiv.org/abs/1612.05360): 2016, 메디컬 데이터 
 
-- [FuseNet: Incorporating Depth into Semantic Segmentation via Fusion-Based CNN Architecture](https://pdfs.semanticscholar.org/9360/ce51ec055c05fd0384343792c58363383952.pdf): RGB + Depth, SUN RGB-D benchmark 데이터셋
-
 ![](https://i.imgur.com/Pog63M8.png)
 
 # FusionNet
