@@ -6,7 +6,7 @@
 
 ![](https://i.imgur.com/U1BUskU.png)
 
-- 우선 unimodal 특징을 먼저 추출 한다. `Indexing approaches that rely on early fusion first extract unimodal features. `
+- unimodal 특징을 추출 하는 단계 부터 시작한다. `Indexing approaches that rely on early fusion first extract unimodal features. `
 
 - 여러 unimodal을 분석후 추출된 특징은 하나의 Representation으로 합쳐 진다. `After analysis of the various unimodal streams, the extracted features are combined into a single representation. `
 
@@ -25,7 +25,7 @@
 
 ![](https://i.imgur.com/QFR8Xpp.png)
 
-- Indexing approaches that rely on late fusion also start with extraction of unimodal features. 
+- unimodal 특징을 추출 하는 단계 부터 시작한다 `Indexing approaches that rely on late fusion also start with extraction of unimodal features. `
 
 - In contrast to early fusion, where features are then combined into a multimodal representation, approaches for late fusion learn semantic concepts directly from unimodal features. 
 
