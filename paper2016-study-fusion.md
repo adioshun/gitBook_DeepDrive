@@ -46,11 +46,11 @@
 
 - **early fusion** 방식이 효과가 좋다. `First, early fusion is the most effective approach to combine data from different modalities regardless of which classification method or the application is employed. `
 
-- CNN 분류기가 성능이 좋다. `Second, CNN classification algorithm is superior to the other classification algorithms no matter which application is considered. `
+- CNN 분류기가 가장 성능이 좋다. `Second, CNN classification algorithm is superior to the other classification algorithms no matter which application is considered. `
 
-- Third, classifiers using manually tuned features have similar performance, as in the cases of SVMS, SAE, DBN and RBM. 
+- 튜닝후 나머지 분류기들은 성능이 비슷하다. `Third, classifiers using manually tuned features have similar performance, as in the cases of SVMS, SAE, DBN and RBM. `
 
-In the future, the evaluation can be furtherextended by including more advanced learning algorithms (like FRCNNin our study), specific fusion mechanisms, and other technicalcomponents of visual recognition tasks.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNDgwNTA2XX0=
+eyJoaXN0b3J5IjpbMjQ4Nzc1MTFdfQ==
 -->
