@@ -9,6 +9,7 @@
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
+* [Intro\_Early\_Late\_Deep\_Fusion](introearly-late-deep-fusion.md)
 
 ## Related Works
 
@@ -87,7 +88,7 @@
 ## Fusion
 
 * [----- Sensor Fusion 이란 -----](-sensor-fusion-c774-b780-.md)
-* [Intro Sensor fusion](introfusion.md)
+* [Intro\_KalmanFilter](introfusion.md)
 * [Papers\_RADAR\_Fusion](paper2013-radar-fusion.md)
 * [Paper\_2011\_LateFusion \(0%\)](paper2011latefusion.md)
 * [Paper\_2016\_FusionNet \(50%\)](paper2016-fusionnet.md)
