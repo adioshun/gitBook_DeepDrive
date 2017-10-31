@@ -21,6 +21,13 @@
 	- 딥러닝을 이용한 early & late fusion비교 ` we present a comparative study for evaluating early and late fusion schemes with several types of SVM and deep learning classifiers on two challenging RGB-D based visual recognition tasks: hand gesture recognition and generic object recognition. `
 
 ## 1. Introduction
+
+- 다음 질문들에 대한 답을 본 논문에서 살펴봄 
+- What is the most effective way to integrate heterogeneous information from multimodal sensors? 
+- Does the design of the fusion method depend on the corresponding applications? 
+- Does the employed classification algorithm have an impact on the fusion method and the resultant accuracy?
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzQ4ODM0MzRdfQ==
+eyJoaXN0b3J5IjpbLTExMzAwODE2NTBdfQ==
 -->
