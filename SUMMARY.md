@@ -17,7 +17,7 @@
 
 ## 2D CNN
 
-* [Paper\_2016\_MultiNet](paper2016-multinet.md)
+* [Paper\_2016\_MultiNet \(0%\)](paper2016-multinet.md)
 * [Paper\_2017\_SqueezeDet \(50%\)](paper2016-squeezedet.md)
 
 ## 2.3D 2D to 3D Back-Projection
@@ -50,17 +50,17 @@
 * [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
 * [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
 * [Paper\_2013\_Survey\_2D\_3DShape Descriptor \(30%\)](paper2016-deep-learning-representation.md)
-* ----- Feature based -----
+* [----- Feature based -----](-feature-based-.md)
 * [Paper\_2015\_DeepSD \(70%\)](paper2016-deep-learning-representation/paper2015-3d-deep-shape-descriptor.md)
   * [Paper\_2015\_DL Representation ](paper2016-deep-learning-representation/paper2015-dl-representation.md)
 * [Paper\_2015\_3DMesh\_Laveling](paper2016-deep-learning-representation/paper2015-3dmesh-laveling.md)
 * [----- Octree based -----](-octree-based-.md)
 * [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
-* ----- Volumetic based -----
+* [----- Volumetic based -----](-volumetic-based-.md)
 * [Paper\_2015\_3D\_ShapeNet \(50%\)](paper2015-3d-shapenet.md)
 * [Paper\_2015\_VoxNet \(70%\)](papervoxnet.md)
 * [Paper\_2016\_V\_M CNNs \(70%\)](paper2016-volumetric-multiview-cnns.md)
-* ----- Multiview based -----
+* [----- Multiview based -----](-multiview-based-.md)
 * [Paper\_2015\_MVCNN \(70%\)](paper2015-mvcnn.md)
 * [Paper\_2015\_DeepPano \(70%\)](paper2015-deeppano.md)
 * [Paper\_2016\_pMVCNN \(30%\)](paper2016-pairwisemvcnn.md)
