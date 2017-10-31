@@ -8,7 +8,7 @@
 | 코드 | |
 
 
-### 1.2 Sensor Fusion
+### 1.2 Sensor Fusion 
 
 ###### [ 정의 ]
 
@@ -46,9 +46,9 @@ Data fusion techniques combine data from multiple sensors and related informatio
 In **Feature Level** Fusion (Figure 1.2) or **Mid-Level** Fusion, 
 - the sensor data is presented via feature vectors which describe meaningful data extracted from the raw data. 
 - These feature vectors build the base for fusion. 
-- This method can be found in 3D-reconstruction for example. 
-- In this approach image features from different cameras are extracted to identify corresponding points in each image of
-different camera views.
+- 3D reconstructio서 사용 `This method can be found in 3D-reconstruction for example. `
+- 여러 카메라에서 찍은 사진을 활용 하는 방법 `In this approach image features from different cameras are extracted to identify corresponding points in each image of
+different camera views.`
 
 #### A. Declaration Level Fusion
 
@@ -60,11 +60,6 @@ different camera views.
 - The final state is a fusion of all state hypotheses from the different sensors. 
 - 칼만필터가 대표적 구현예임`The most famous implementation of this approach is probably the Kalman Filter [KB61]. `
 
-###### [칼만필터 ]
-- Each state from the individual sensors with their respective error covariance is used for correcting the state estimate in the Kalman Filter. 
-- The error covariance represents the trust in the state estimation, e.g. a camera image is reliable for estimating the width of objects but distance or speed measurements are very inaccurate. 
-- In contrast a RADAR sensor provides very accurate distance and velocity measurements. 
-- Thus, in the final state estimate, velocity information and distance will be closer to the RADAR measurements, while the size would be closer to the measurements from the camera which, in theory, should result in a better final state estimate.
 
 ---
 

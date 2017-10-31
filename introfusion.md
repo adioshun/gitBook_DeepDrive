@@ -1,4 +1,11 @@
+###### [칼만필터 ]
+- Each state from the individual sensors with their respective error covariance is used for correcting the state estimate in the Kalman Filter. 
+- The error covariance represents the trust in the state estimation, e.g. a camera image is reliable for estimating the width of objects but distance or speed measurements are very inaccurate. 
+- In contrast a RADAR sensor provides very accurate distance and velocity measurements. 
+- Thus, in the final state estimate, velocity information and distance will be closer to the RADAR measurements, while the size would be closer to the measurements from the camera which, in theory, should result in a better final state estimate.
 
+
+---
 ## 1. 정의 
 -  Kalman filter is a scheme of estimation of signals`(=position of an Vehicle)` by combining multiple sources of **measurements** or **estimation** with uncertainties.
 	- The first, primary **measurements** is the position of the object from lidar or radar. 
