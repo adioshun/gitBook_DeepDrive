@@ -17,11 +17,9 @@
 
 - 특징이 시작 단계부터 합쳐졌기 때문에 **truly multimedia feature representation**를 사용 하게 된다. `Early fusion yields a truly multimedia feature representation, since the features are integrated from the start. `
 
-- An added advantage is the requirement of one learning phaseonly. 
+- 장점 : 한번의 학습 Phase만 필요 `An added advantage is the requirement of one learning phase only.` 
 
-- Disadvantage of the approach is the difficulty to combine features into a common representation. 
-
-- The general scheme for early fusion is illustrated in Figure 1.
+- 단점 : common representation로 합치기가 어려움(??) `Disadvantage of the approach is the difficulty to combine features into a common representation. `
 
 ### 2.2 Late Fusion 
 
