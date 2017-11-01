@@ -181,6 +181,7 @@ In one of the networks, we concatenate the output from kernels of various sizes,
 - 따라서, 회전등의 방법으로 이미지 Augmentation가 필요 하다. `Therefore, it is necessary to augment training data with multiple rotations of voxelized models. `
 
 - 수행한 여러 방법들 
+
 ```
 We input multiple azimuth and polar rotations of the model to the VolumetricCNN, apart from another non-standard data augmentation method explained in 5.2.1.
 
