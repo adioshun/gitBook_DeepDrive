@@ -3,7 +3,7 @@
 |저자(소속)|Shuran Song (Princeton)|
 |학회/년도| CVPR 2016, [논문](http://dss.cs.princeton.edu/paper.pdf)|
 |키워드|Detection(가려진 물체 탐지),  RPN+ORN, TSDF Representation, Raw 3D 이용,   |
-|데이터셋/모델|NYUv2, SUN RGB-D |
+|데이터셋/모델|NYUv2, SUN RGB-D / ORN의 2D Network = VGGnet pre-trained on ImageNet |
 |참고|[CVPR2016](https://www.youtube.com/watch?v=D-lDbS9NQ_0), [Youtube](https://www.youtube.com/watch?v=zzcipxzZP9E), [Homepage](http://dss.cs.princeton.edu/) |
 |코드|[matlab](https://github.com/shurans/DeepSlidingShape)|
 
@@ -304,13 +304,13 @@ We desire to learn 3D objectness for general scenes from the data using ConvNets
 
 ### 4.2 2D object recognition network
 
-- 깊이The 3D network only makes use of the depth map, but not the color. 
+- Color정보 없이 depth map만 사용한다. The 3D network only makes use of the depth map, but not the color. 
 
-For certainobject categories, color is a very discriminative feature,and existing ConvNets provide very powerful features forimage-based recognition that could be useful. 
+- 물체 분류에서 색상 정보는 중요하며, 기존 네트워크 중 이미지 기반 물체 분류기를 사용하면 좋다. `For certain object categories, color is a very discriminative feature, and existing ConvNets provide very powerful features for image-based recognition that could be useful. `
 
-For each ofthe 3D proposal box, we project the 3D points inside theproposal box to 2D image plane, and get the 2D box thatcontains all these 2D point projections. 
+- For each ofthe 3D proposal box, we project the 3D points inside the proposal box to 2D image plane, and get the 2D box thatcontains all these 2D point projections. 
 
-We use the state-ofthe-artVGGnet [22] pre-trained on ImageNet [19] (withoutfine-tuning) to extract color features from the image. 
+- We use the state-of the-art VGGnet [22] pre-trained on ImageNet [19] (without fine-tuning) to extract color features from the image. 
 
 Weuse a Region-of-Interest Pooling Layer from Fast RCNN[7] to uniformly sample 7⇥7 points from conv5 3 layer usingthe 2D window with one more fully connected layer togenerate 4096-dimensional features as the feature from 2Dimages.We also tried the alternative to encode color on 3D voxels,but it performs much worse than the pre-trained VGGnet(Table 2 [dxdydz+rgb] vs. 
 
