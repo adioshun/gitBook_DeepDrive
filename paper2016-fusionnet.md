@@ -201,6 +201,7 @@ We perform random sampling of angles to break any symmetry present along the gra
 ### 5.2 V-CNN I
 
 ![](https://i.imgur.com/Bn0wuCZ.png)
+
 ```
 [Figure 2: Network architecture of V-CNN I.]
 - It has three 2D convolution layers, all with kernels of size 3 × 3 and two fully connected layers. 
