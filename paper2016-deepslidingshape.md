@@ -304,7 +304,7 @@ We desire to learn 3D objectness for general scenes from the data using ConvNets
 
 ### 4.2 2D object recognition network
 
-- Color정보 없이 depth map만 사용한다. The 3D network only makes use of the depth map, but not the color. 
+- 위에서 살펴본 3D network는 Color정보 없이 depth map만 사용한다. The 3D network only makes use of the depth map, but not the color. 
 
 - 물체 분류에서 색상 정보는 중요하며, 기존 네트워크 중 이미지 기반 물체 분류기를 사용하면 좋다. `For certain object categories, color is a very discriminative feature, and existing ConvNets provide very powerful features for image-based recognition that could be useful. `
 
