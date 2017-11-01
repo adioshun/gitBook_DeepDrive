@@ -2,7 +2,7 @@
 |-|-|
 |저자(소속)|Shuran Song (Princeton)|
 |학회/년도| CVPR 2016, [논문](http://dss.cs.princeton.edu/paper.pdf)|
-|키워드|Detection, object retrieval분야, RPN+ORN |
+|키워드|Detection,  RPN+ORN |
 |데이터셋/모델|NYUv2, SUN RGB-D |
 |참고|[CVPR2016](https://www.youtube.com/watch?v=D-lDbS9NQ_0), [Youtube](https://www.youtube.com/watch?v=zzcipxzZP9E), [Homepage](http://dss.cs.princeton.edu/) |
 |코드|[matlab](https://github.com/shurans/DeepSlidingShape)|
@@ -28,7 +28,7 @@ We focus on the task of amodal 3D object detection in RGB-D images,
 
 - However naively converting 2D detection results to 3D does not work well (see Table 3 and [10]).
 
-###### sliding shapes
+###### [sliding shapes]
 
 깊이 정보 활용을 위해 저자는 `sliding shapes`를 제안 하였으나 `hand-crafted` feature로 인해 제약이 있다. 
 To make good use of the depth information, Sliding Shapes [25] was proposed to slide a 3D detection window in 3D space.
@@ -38,7 +38,7 @@ To make good use of the depth information, Sliding Shapes [25] was proposed to s
 [25] S. Song and J. Xiao. Sliding Shapes for 3D object detection in depth images. In ECCV, 2014.
 ```
 
-###### Depth RCNN 
+###### [Depth RCNN ]
 
 Depth RCNN [10] takes a 2D approach: detect objects in the 2D image plane by treating depth as extra channels of a color image, then fit a 3D model to the points inside the 2D detected window by using ICP alignment.
 
@@ -47,7 +47,7 @@ Depth RCNN [10] takes a 2D approach: detect objects in the 2D image plane by tre
 ```
 
 
-###### which representation is better for 3D amodal object detection, 2D or 3D? 
+###### [which representation is better for 3D amodal object detection, 2D or 3D?] 
 
 현재는 2D-Centric D-RCNN이 성능이 더 좋다. 하지만 이건 `2D representation`가 좋은게 아니라 2D Network 설계가 잘되어서 그런건 아닐까? `Currently, the 2D-centric Depth RCNN outperforms the 3D-centric Sliding Shapes. But perhaps Depth RCNN’s strength comes from using a well-designed deep network pre-trained with ImageNet, rather than its 2D representation.` 
 
@@ -55,13 +55,28 @@ Depth RCNN [10] takes a 2D approach: detect objects in the 2D image plane by tre
 
 ---
 
-![](https://i.imgur.com/7oMAaGv.png)
+- 따라서, 본 논문에서는 we introduce **Deep Sliding Shapes**, 
+    - a complete 3D formulation to learn **object proposals** and **classifiers** using 3D convolutional neural networks (ConvNets)
 
-따라서, 본 논문에서는 we introduce Deep Sliding Shapes, a complete 3D formulation to learn object proposals and classifiers using 3D convolutional neural networks (ConvNets)
+![](https://i.imgur.com/ov9Wu0a.png)
+
+```
+[Figure 1. 3D Amodal Region Proposal Network:]
+- Taking a 3D volume from depth as input, 
+- our fully convolutional 3D network extracts 3D proposals at two scales with different receptive fields.
+```
 
 제안 1 : 3D Region Proposal Network (RPN) 
 - RPN takes a 3D volumetric scene as input and outputs 3D object proposals (Figure 1).
 - It is designed to generate amodal proposals for whole objects at two different scales for objects with different sizes
+
+![](https://i.imgur.com/iopicsj.png)
+
+```
+[Figure 2. Joint Object Recognition Network:]
+- For each 3D proposal, we feed the 3D volume from depth to a 3D ConvNet, and 
+- feed the 2D color patch (2D projection of the 3D proposal) to a 2D ConvNet, to jointly learn object category and 3D box regression.
+```
 
 제안 2 : joint Object Recognition Network (ORN) 
 - ORN to use a 2D ConvNet to extract image features from color, and a 3D ConvNet to extract geometric features from depth (Figure 2). 
