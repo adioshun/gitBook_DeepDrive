@@ -1,3 +1,30 @@
+| 논문명 | Object Detection and Classification by Decision-Level Fusion for Intelligent Vehicle Systems |
+| --- | --- |
+| 저자\(소속\) | Sang-Il Oh\(Catholic University\) |
+
+
+
+
+
+### 1.1 Two data-fusion scheme
+The data-fusion scheme is generally categorized into two types, namely early and late fusion. 
+
+###### The early-fusion method 
+- fuses two or more data by combining raw data or concatenating feature descriptors. 
+- it often cannot handle incomplete measurements. 
+- If one sensor modality becomes useless due to malfunctions, breakdown or severe weather conditions, its measurements will be rendered ambiguous. 
+
+###### The late-fusion method 
+- independently performs detection and classification from each sensor modality
+
+
+- Subsequently, the classified outputs are fused at the decision level for final classification.
+
+- decision-level 퓨전 장점 `By using the decision-level fusion scheme for the object detection and classification task, `
+	- 센서가 제대로 동작 하지 않는 상황에 대처 가능 `we can prevent the autonomous driving system from becoming non-functional when information conflicts are introduced to more than one sensor. `
+	- In addition, the reliability and plausibility of each sensor can be considered.
+
+---
 |논문명 | Early versus Late Fusion in Semantic Video Analysis|
 |-|-|
 | 저자\(소속\) | Cees G.M. Snoek\(University of Amsterdam) |
