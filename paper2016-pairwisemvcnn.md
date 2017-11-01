@@ -4,6 +4,7 @@
 | 학회/년도 | May 2016, [논문](https://arxiv.org/abs/1605.08359) |
 | 키워드 | pMVCNN2016 |
 | 데이터셋(센서)/모델 | ModelNet |
+| 관련연구 | MV-CNN|
 | 참고 |[CVPR2016](https://www.youtube.com/watch?v=7Bw0HGlidtg)  |
 | 코드 |  |
 

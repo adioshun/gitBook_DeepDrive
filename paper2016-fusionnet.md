@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Vishakh Hegde \(Standford\) |
 | 학회/년도 | NIPS2016, [논문](http://3ddl.cs.princeton.edu/2016/papers/Hegde_Zadeh.pdf) |
-| 키워드 | 3D CAD, classification |
+| 키워드 | Hegde2016, 3D CAD + Image = classification |
 | 데이터셋\(센서\)/모델 | ModelNet / AlexNet pre-trained on ImageNet |
 | 참고 | [ppt](http://3ddl.cs.princeton.edu/2016/slides/zadeh.pdf) |
 | 코드 |  |
@@ -172,5 +172,209 @@ In one of the networks, we concatenate the output from kernels of various sizes,
 [25] C. Szegedy, W. Liu, Y. Jia, P. Sermanet, S. E. Reed, D. Anguelov, D. Erhan, V. Vanhoucke, and A. Rabinovich. Going deeper with convolutions. CoRR, abs/1409.4842, 2014. URL http://arxiv.org/abs/1409.4842.
 ```
 
+### 5.1 Data Augmentation
+
+- ModelNet 의 데이터 양음 많지 않다. `3D Unlike large scale 2D RGB image datasets like ImageNet, there are relatively fewer number of CAD models in ModelNet benchmark datasets. `
+
+- 결국 Volumetric CNN에 입력 값이 충분 하지 않다. `This translates to having fewer number of voxelized input which can be fed to a Volumetric CNN. This will result in features that are not as efficient as those learned for 2D images. `
+
+- 따라서, 회전등의 방법으로 이미지 Augmentation가 필요 하다. `Therefore, it is necessary to augment training data with multiple rotations of voxelized models. `
+
+- 수행한 여러 방법들 
+```
+We input multiple azimuth and polar rotations of the model to the VolumetricCNN, apart from another non-standard data augmentation method explained in 5.2.1.
+
+We work under the assumption that all CAD models in the dataset are aligned along the gravity axis.
+
+We produce voxels of size 30 × 30 × 30 from polygon meshes after rendering them in 60 different orientations about the gravity axis, where each rendering is defined by θ, the polar angle and φ, the azimuth angle. 
+
+To obtain these 60 orientations, we uniformly sample 60 polar angles from [0, π] and60 azimuth angles from [0, 2π] and use each pair of polar and azimuth angles for rendering voxels.
+
+We perform random sampling of angles to break any symmetry present along the gravity axis.Otherwise, no new information is added for objects which are symmetric about the gravity axis(for example, symmetric objects like vase and bowl). 
+```
+
+- rotational invariance 강한 장점이 된다. 
+  - We hope that inputting multiple such random rotations will help the neural network learn rotational invariance, both in the polar angle space and in the azimuth angle space. 
+  - This is especially important if the polygon mesh being tested on does not have the same polar angle as most meshes belonging to that class in the training set. 
+  - This is also important for classifying models constructed from real world data like RGB-D and LiDAR data,where rotational invariance is necessary for good performance
+
+### 5.2 V-CNN I
+
+![](https://i.imgur.com/Bn0wuCZ.png)
+```
+[Figure 2: Network architecture of V-CNN I.]
+- It has three 2D convolution layers, all with kernels of size 3 × 3 and two fully connected layers. 
+- The first convolutional layer assumes the number of channels to be 30. 
+- A Softmax Loss function is used while training the network.
+```
+
+#### A. 네트워크 구조 
+
+- This Volumetric CNN consists of 
+  - three 3D **convolution** layers 
+  - two **fully connected** layers, 
+    - where the **final fully connected** layer is used as a **classifier** as depicted in figure 2. 
+
+- 합성곱 레이어에서 사용된 커널의 목적은 입력 OBJECT에서 Full Depth간 voxel 연관성을 찾는다. `The kernels used in the convolution layer find voxel correlations along the full depth of the object. `
+
+- When trained on different orientations for all models, the hope is to be able to learn long range spatial correlations in the object along all directions while using sparse locally connecting kernels in order to reduce computational complexity. 
+
+- This is difficult to achieve in 2D images where kernels only adapt to spatially local pixel distributions and depend on the kernel-size used for the convolution.
+
+- The **ReLU layer** [17] following the convolution layer introduces non-linearity in the model necessary for class discrimination. 
+
+- The **pooling layer** following ReLU ensures that neurons learning redundant information from a spatially local set of voxels do not contribute to the size of the model. 
+
+- The **kernels** used in all convolution layers in this network are of size `3 × 3`. 
+  - While CNNs for 2D image classifiation like AlexNet use kernels of size 11 × 11, we believe that 3 × 3 kernels are sufficient to capture correlations for voxelized data. 
+  - The reason is that a single cross-section has a resolution of 30 × 30 (in comparison to a resolutions of 227 × 227 for images used in AlexNet [13]). 
+
+- **Dropout **[23]is used to reduce any over-fitting. 
+
+- A **fully connected layer** 
+  - with 40 neurons is used as the **classifier** for ModelNet40 dataset 
+  - with 10 neurons as the **classifier** for ModelNet10 dataset. 
 
 
+#### B. 60번 회전 정보 사용 
+
+- 학습시 60번 회전된 정보 사용 `We use all **60 orientations** of all objects in the training set to train the network. `
+
+- 테스트시 During test time, these 60 orientations of each object is passed through the network till the first fully connected layer. 
+
+- A **max-pooling layer** `aggregates` the activations from all 60 orientations before sending it to the final fully connected layer, which is our classifier. 
+
+- 가중치는 공유되어서 모델 크기 증가 없이 성능 향상 가능 `In other words, we use weight sharing across all 60 orientations, helping us achieve better classification performance without any increase in the model size.`
+
+#### C. Data Augmentation
+
+- ModelNet의 데이터들은 polygon mesh형태로 저장 되어 있다. `The 3D CAD models in both ModelNet40 and ModelNet10 datasets are in the form of polygon mesh,`
+  - containing **coordinates of all the vertices** in the mesh and the **ID of each node** forming a polygon. 
+
+- invariance에 대한 학습을 위해서 vertices을 randomly displaced하게 하는 Augmentation을 하였다. `In order to help the Volumetric CNN learn invariance to small deformations, we augment the dataset with meshes whose vertices have been randomly displaced from its original position. `
+  - We choose this random displacement from a centered **Gaussian distribution **with a standard deviation of 5. 
+  - This standard deviation was chosen after manually inspecting several CAD model files. 
+
+- We use this noisy dataset along with the original dataset to train V-CNN I.
+
+
+### 5.3 V-CNN II
+
+![](https://i.imgur.com/AQl16vD.png)
+```
+[Figure 3: Network architecture of V-CNN II.]
+It has 2 inception modules. 
+- The first inception module is a concatenation of three convolution outputs (of kernel sizes 1×1, 3×3, 5×5). 
+  . The convolutional layers in the first inception module assumes the number of channels to be 30. '
+- The second inception module is a concatenation of two convolution outputs (of kernel sizes 1 × 1 and 3 × 3). 
+- Softmax loss function is used while training the network.
+```
+
+#### A. 네트워크 구조 
+
+- GoogLeNet과 같이 본 논문도 인셉션 모둘 사용 `Inspired by the inception module in GoogLeNet [25], we use an inception module for volumetric data to concatenate outputs from filters of size 1×1, 3×3 and 5×5 as depicted in figure 3. `
+
+> inception module in GoogLeNet : concatenates outputs from kernels of different size to capture features across **multiple scales(다양한 크기에 대한 대응)**
+
+- 1×1 kernel은 NIN 아이디어에서 가져 온것이다. `The usage of 1×1 kernel is based on the Network in Network (NIN) [15] idea which abstracts information in the receptive field and encodes a higher representational power without much additional computational cost. `
+
+- These voxels would otherwise have been processed directly by a convolution kernel. 
+
+- 인셉셥 모듈은 계산 복잡도를 줄이기 위해 1 × 1 filter를 이용하지만, `While the inception module uses 1 × 1 filter before applying 3 × 3 or 5 × 5 filters in order to reduce computational complexity,` 
+  - 본 논문에서는 하지 않았다. `we do no such thing since the model by itself is very small compared to many state of the art 2D image classification models. `
+
+- 두 군곳에 인셉션 모듈 적용 : We use two such inception modules in our network, followed by a **convolution layer** and **two fully connected layers**. 
+
+- We use **dropout** to reduce any **over-fitting**. 
+
+- As in V-CNN I, a fully connected layer 
+  - with 40 neurons is used as the classifier for ModelNet40 dataset 
+  - with 10 neurons as the classifier for ModelNet10 dataset. 
+
+
+- 가중치 공유함 `Similar to V-CNN I, we use weight sharing across all 60 orientations. `
+
+- We aggregate activations from all 60 orientations of the voxelized model from the first fully connected layer using a max-pool.
+
+#### B. Classification 
+
+- 60개의 회전된 정보들은 두 네트워크에서 따로 학습된다. `All 60 randomly generated orientations are used to separately train both networks end to end using Caffe [9]. `
+
+- Each of these orientations are treated as different objects while training.
+
+- The loss function used is Softmax loss, which is a generalization of logistic loss for more than two classes. 
+
+- The weights are updated using Stochastic Gradient Descent with momentum and weight decay. 
+
+- During test time, the 60 views are passed through the network to obtain features from the first fully connected layer after which, a max-pooling layer pools these features across all 60 views before sending it to the final fully connected layer which performs the classification. 
+
+###### [학습시]
+
+- ModelNet40은 처음 부터 학습 `For ModelNet40, we train both V-CNN I and V-CNN II from **scratch**. i.e. using random weight initialization. `
+
+- ModelNet10은 ModelNet40의 가중치 사용 `For ModelNet10 dataset we **finetune** the weights obtained after training the networks on **ModelNet40**. `
+
+- 위 방식은 MV-CNN의 방식을 따라 한것임 `This method is similar to MV-CNN proposed in [24] which uses weights from VGG-M network pre-trained on ImageNet. `
+
+- 위 방식은 성능상으로도 좋음 `This gives a superior performance than using random weight initialization,demonstrating the power of transferring features learned on a big dataset. `
+
+- This also makes a case for building bigger 3D model repositories, perhaps on the scale of ImageNet.
+
+
+## 6 Multi-View CNN
+
+#### A. 네트워크 구조 
+
+- Multi-View CNN (MV-CNN), introduced in [24] aggregates **2D projections** of the polygon mesh using a standard **VGG-M** network. 
+
+```
+[24] H. Su, S. Maji, E. Kalogerakis, and E. Learned-Miller. Multi-view convolutional neural networks for 3d shape recognition. In Proceedings of the IEEE International Conference on Computer Vision, pages 945–953, 2015.
+```
+
+- 위 방법은 ModelNet 리더 보드에서 좋은 결과를 보였다. ` This achieved state of the art classification accuracy as seen on the Princeton ModelNet leader-board. `
+
+- MV-CNN과는 달리 Alexnet을 사용하고 20개의 View만 사용 
+  - We use** AlexNet** instead of VGG-M and obtain accuracies far better than our Volumetric CNNs explained in section 5 using **only 20 views**, 
+  - unlike in [24] where for each of the 20 views, the camera is rotated 0, 90, 180 and 270 degrees along the axis passing through the camera into the centroid of the object, giving 80 views per object. 
+
+- 최근 연구인 [10-pMV-CNN]은 NBV를 예측 한다. `Recent work on Active Multi-View Recognition [10] predicts the Next Best View (NBV) `
+  - which is most likely to give the highest extra information about the object, needing a smaller number of image sequences during test-time to predict the model class. 
+
+```
+[10] E. Johns, S. Leutenegger, and A. J. Davison. Pairwise decomposition of image sequences for active multi-view recognition. CoRR, abs/1605.08359, 2016. URL
+http://arxiv.org/abs/1605.08359.
+```
+
+- 가중치 공유 한다. Similar to our V-CNN, we use weight sharing across all 20 viewsto keep the model size intact, while achieving a superior performance.
+
+
+
+#### B. Classification 
+
+- We render **multiple 2D projections** of a polygon mesh using cameras **placed on the 20 corners** of an icosahedron(20면체) and use all 20 views for training and testing. 
+
+- 원래 데이터셋에 색정보가 없기 때문에 투영후 얻은 이미지는 Grey-scale이다. `The projections obtained are **grey-scale images** since the original polygon mesh dataset does not have any color information init. `
+
+- We use an **AlexNet** model pre-trained on **ImageNet** before fine-tuning it for 2D projections. 
+
+- Since the 2D projections we obtain are gray-scale, we **replicate pixel values** so that we obtain a **3-channel image** which can be used in AlexNet. 
+
+- We use the **Softmax Loss function** for training, which is a generalization of logistic loss for multiple target classes. 
+
+- While training the network, we used a base** learning rate** of 0.001 and a **momentum value** of 0.9. 
+
+- One of the reasons for superior performance of Multi-View CNN compared to Volumetric CNN is that we use **transfer learning** to warm start the weights learned from ImageNet. 
+
+- We know that weights learned in the initial layers of a neural network on one dataset generalize well to a different dataset [28]. 
+
+- This is not true for Volumetric CNNs due to the absence of very large datasets for 3D models. 
+
+- Since earlier layers in a CNN learn very basic features (for example, the first layer learns features similar to Gabor filter) [28] which are not specific to the dataset, we only fine-tune later fully connected layers, starting from fc6 onward in AlexNet while keeping the remaining layers frozen. 
+
+- While **finetuning**, we consider all 20 views to bedistinct images and train AlexNet end to end. 
+
+- While** testing**, we pass all the 20 views of a 3D object through to the second fully connected layer, fc7 . 
+
+- At this point a **max-pool layer** finds the maxima for each neuron across all 20 views. 
+
+- This aggregate of the 20 views are sent to fc8 for classification,similar to what was done in [24]
