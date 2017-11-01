@@ -75,18 +75,25 @@ Figure 1. Overview of our work.
 - Green arrows denote the fusion processing.
 ```
 
-- 성능향상을 위해 서로 다른 센서의 unary classifiers 결과값 CNN을 이용하여 합쳤다.` For accurate object classification, we combine the results from the unary classifiers of each sensor at the decision level using a convolutional neuralnetwork (CNN). `
+- 성능향상을 위해 서로 다른 센서의 unary classifiers 결과값을 decision level에서 CNN을 이용하여 합쳤다.` For accurate object classification, we combine the results from the unary classifiers of each sensor at the decision level using a convolutional neuralnetwork (CNN). `
 
 - **unary classifiers**의 주 목적은 object proposals를 분류 하는 것이다. `The main objective of the unary classifiers is to accurately recognize the class of object proposals on each sensor modality. `
 
-- 네트워크를 통과한 결과물은 Loss layer에 입력으로 사용된다. `Previous models of object category classification that used CNNs fed a fixed number of output layers into the final loss layer in their task. `
+###### [기존 방식과의 비교]
+
+- 기존의 물체 분류기들은 CNN 이용시 고정된 수의 출력 레이어를 마지막 Loss 레이어에 입력으로 사용하였다.  `Previous models of object category classification that used CNNs fed a fixed number of output layers into the final loss layer in their task. `
 	- For example, all-passed output, which means the input is passed through all layers of networks, is widely used for feeding into the loss layer. 
+	- 이 결과물은 일련의 풀링레이어를 통과 하면서 일부 정보를 잃게 된다. `For this output, however, little information loss might occur through the passing of several pooling layers. `
 
-- 이 결과물은 일련의 풀링레이어를 통과 하면서 일부 정보를 잃게 된다. `For this output, however, little information loss might occur through the passing of several pooling layers. `
+- 하지만 제안하는 CNN 모델은 convolutional layer에서 convolutional cube를 image representations로 생성한다. 
+	- In contrast, the proposed CNN model, `(similar to unary classifiers)`, generates a **convolutional cube** from more than one **convolutional layer** of a pre-trained CNN model as **image representations**. 
 
-- 반대로, In contrast, the proposed CNN model, similar to unary classifiers, generates a convolutional cube from more than one convolutional layer of a pre-trained CNN model as image representations. 
+- 후보영역 추출 후에 `From the extracted object proposals obtained from the proposal generations,`
+	- convolutional cube에 ROI Pooling을 적용하여 분류기 네트워크에 입력 한다. 
+    - 분류기 네트워크는 Fully-connected layers + a softmax layer로 구성되어 있따. 
+    - **ROI pooling** is applied on the **convolutional cube** to feed them into a fine-tuned **classification network** comprising two convolutional layers, **two fully-connected layers** and a **softmax layer**.
 
-- From the extracted object proposals obtained from the proposal generations, ROI pooling is applied on the convolutional cube to feed them into a fine-tuned classification network comprising two convolutional layers, two fully-connected layers and a softmax layer. 
+##### [Fuse 방법]
 
 - 이후 작업으로 결과값 Fuse를 위해 Fusion CNN에 입력 한다. `Subsequently,to fuse the two detection and classification results of the LiDAR and CCD sensors, we feed the final softmax result vectors and their convolutional cube into the fusion CNN. `
 
