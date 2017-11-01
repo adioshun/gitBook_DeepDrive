@@ -2,7 +2,7 @@
 |-|-|
 |저자(소속)|Shuran Song (Princeton)|
 |학회/년도| CVPR 2016, [논문](http://dss.cs.princeton.edu/paper.pdf)|
-|키워드|Detection,  RPN+ORN, TSDF Representation, Raw 3D 이용   |
+|키워드|Detection(가려진 물체 탐지),  RPN+ORN, TSDF Representation, Raw 3D 이용,   |
 |데이터셋/모델|NYUv2, SUN RGB-D |
 |참고|[CVPR2016](https://www.youtube.com/watch?v=D-lDbS9NQ_0), [Youtube](https://www.youtube.com/watch?v=zzcipxzZP9E), [Homepage](http://dss.cs.princeton.edu/) |
 |코드|[matlab](https://github.com/shurans/DeepSlidingShape)|
@@ -268,4 +268,87 @@ We desire to learn 3D objectness for general scenes from the data using ConvNets
 
 ## 4. Joint Amodal Object Recognition Network
 
+- 주어진 3D 후보영역을 ORN에 입력으로 준다. `Given the 3D proposal boxes, we feed the 3D space within each box to the Object Recognition Network (ORN).`
 
+- In this way, the final proposal feed to ORN could be the actual bounding box for the object, which allows the ORN to look at the full object to increase recognition performance, while still being computationally efficient. 
+
+- 후보 영역이 **amodal boxes**이므로 제안 방식은 가려진 물건이나 Missing 데이터에 좀더 invariant하다. `Furthermore, because our proposals are amodal boxes containing the whole objects at their full extent, the ORN can align objects in 3D meaningfully to be more invariant to occlusion or missing data for recognition.`
+
+
+### 4.1 3D object recognition network
+
+#### A. 전처리 
+
+- 주어진 후보 영역 크기의 12.5%정도를 추가로 pad하여 contextual information용 공간을 확보 한다. `For each proposal box, we pad the proposal bounding box by 12.5% of the sizes in each direction to encode some contextual information.`
+
+- 다음, Space를 $$30 \tiems 30 \tiems 30$$ voxel grid로 나누고 TSDF를 이용하여 도형적 모양을 encode한다. `Then, we divide the space into a 30 x 30 x 30 voxel grid and use TSDF (Section 2) to encode the geometric shape of the object. `
+
+#### B. 네트워크 구조 
+
+- All the **max pooling layers** are 23 with stride 2. 
+
+- For the **three convolution layers**, the window sizes are 53, 33, and 33, all with stride 1. 
+
+- Between the fully connected layers are **ReLU** and **dropout layers** (dropout ratio 0.5). 
+
+
+![](https://i.imgur.com/Ksz1CEG.png)
+
+```
+[Figure 5. 2D t-SNE embedding of the last layer features learned from the 3D ConvNet. Color encodes object category]
+```
+
+- Figure5 visualizes the 2D t-SNE embedding of 5,000 foreground volumes using their the last layer features learned from the3D ConvNet. 
+    - Color encodes object category.
+
+
+### 4.2 2D object recognition network
+
+- 깊이The 3D network only makes use of the depth map, but not the color. 
+
+For certainobject categories, color is a very discriminative feature,and existing ConvNets provide very powerful features forimage-based recognition that could be useful. 
+
+For each ofthe 3D proposal box, we project the 3D points inside theproposal box to 2D image plane, and get the 2D box thatcontains all these 2D point projections. 
+
+We use the state-ofthe-artVGGnet [22] pre-trained on ImageNet [19] (withoutfine-tuning) to extract color features from the image. 
+
+Weuse a Region-of-Interest Pooling Layer from Fast RCNN[7] to uniformly sample 7⇥7 points from conv5 3 layer usingthe 2D window with one more fully connected layer togenerate 4096-dimensional features as the feature from 2Dimages.We also tried the alternative to encode color on 3D voxels,but it performs much worse than the pre-trained VGGnet(Table 2 [dxdydz+rgb] vs. 
+
+[dxdydz+img]). 
+
+This mightbe because encoding color in 3D voxel grid significantlylowers the resolution compared to the original image, andhence high frequency signal in the image get lost. 
+
+In addition,by using the pre-trained model of VGG, we are able toleverage the large amount of training data from ImageNet, and the well engineered network architecture.
+
+
+### 4.3 2D and 3D joint recognition 
+
+
+We construct a joint 2D and3D network to make use of both color and depth. 
+
+The featurefrom both 2D VGG Net and our 3D ORN (each has4096 dimensions) are concatenated into one feature vector,and fed into a fully connected layer , which reduces the dimensionto 1000. 
+
+Another two fully connected layer takethis feature as input and predict the object label and 3D box.
+
+
+
+### 4.4. Multi-task loss 
+
+Similarly to RPN, the loss function consistsof a classification loss and a 3D box regression loss:where the p is the predicted probability over 20 object categories(negative non-objects is labeled as class 0). 
+
+For eachmini-batch, we sample 384 examples from different images,with a positive to negative ratio of 1:3. 
+
+For the box regression,each target offset t⇤ is normalized element-wise withthe object category specific mean and standard deviation.During testing, we 0.1 asthe 3D NMS threshold. 
+
+For boxregressions, we directly use the results from the network.
+
+
+
+
+#### 4.5 Object size pruning 
+
+When we use amodal boundingboxes to represent objects, the bounding box sizes provideuseful information about the object categories. 
+
+To make useof this information, for each of the detected box, we checkthe box size in each direction, aspect ratio of each pair ofbox edge. 
+
+We then compare these numbers with the distributioncollected from training examples of the same category.If any of these values falls outside 1st to 99th percentileof the distribution, which indicates this box has avery different size, we decrease its score by 2.
