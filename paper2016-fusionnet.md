@@ -378,3 +378,4 @@ http://arxiv.org/abs/1605.08359.
 - At this point a **max-pool layer** finds the maxima for each neuron across all 20 views. 
 
 - This aggregate of the 20 views are sent to fc8 for classification,similar to what was done in [24]
+
