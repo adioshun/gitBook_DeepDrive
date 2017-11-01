@@ -170,6 +170,20 @@ Figure 1. Overview of our work.
 
 - The fusion methods are divided into two categories, namely **early** and **late** fusion. 
 
+```
+36. Henry P., Krainin M., Herbst E., Ren X., Fox D. RGB-D mapping: Using depth cameras for dense 3D modeling of indoor environments; Proceedings of the 12th International Symposium on Experimental Robotics (ISER. Citeseer); New Delhi and Agra, India. 18–21 December 2010.
+37. Gupta S., Arbelaez P., Malik J. Perceptual organization and recognition of indoor scenes from RGB-D images; Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition; Portland, OR, USA. 23–28 June 2013; pp. 564–571.
+38. Munera E., Poza-Lujan J.L., Posadas-Yagüe J.L., Simó-Ten J.E., Noguera J.F.B. Dynamic reconfiguration of a rgbd sensor based on qos and qoc requirements in distributed systems. Sensors. 2015
+
+39. Adarve J.D., Perrollaz M., Makris A., Laugier C. Computing occupancy grids from multiple sensors using linear opinion pools; Proceedings of the 2012 IEEE International Conference on Robotics and Automation (ICRA); St. Paul, MN, USA. 14–18 May 2012; pp. 4074–4079.
+40. Oh S.I., Kang H.B. Fast Occupancy Grid Filtering Using Grid Cell Clusters From LiDAR and Stereo Vision Sensor Data. IEEE Sens. J. 2016;16:7258–7266. doi: 10.1109/JSEN.2016.2598600. [Cross Ref]
+
+41. González A., Villalonga G., Xu J., Vázquez D., Amores J., López A.M. Multiview random forest of local experts combining rgb and LiDAR data for pedestrian detection; Proceedings of the 2015 IEEE Intelligent Vehicles Symposium (IV); Seoul, Korea. 28 June–1 July 2015; pp. 356–361.
+
+42. Nuss D., Yuan T., Krehl G., Stuebler M., Reuter S., Dietmayer K. Fusion of laser and radar sensor data with a sequential Monte Carlo Bayesian occupancy filter; Proceedings of the 2015 IEEE Intelligent Vehicles Symposium (IV); Seoul, Korea. 28 June–1 July 2015; pp. 1074–1081.
+43. Cho H., Seo Y.W., Kumar B.V., Rajkumar R.R. A multi-sensor fusion system for moving object detection and tracking in urban driving environments; Proceedings of the 2014 IEEE International Conference on Robotics and Automation (ICRA); Hong Kong, China. 31 May–7 June 2014; pp. 1836–1843.
+```
+
 ###### [ early fusion method]
 
 - the measurements are fused by mapping them together,or by concatenation, or probabilistic fusion [41,44,45]. 
@@ -177,6 +191,12 @@ Figure 1. Overview of our work.
 - 제약 : However, the early fusion method suffers from problems of **non-overlapping regions** and **uncertainties**. 
 
 - 해결책 : To solve these problems, the **decision-level fusion method** is used as a **late fusion** method. 
+
+```
+41. González A., Villalonga G., Xu J., Vázquez D., Amores J., López A.M. Multiview random forest of local experts combining rgb and LiDAR data for pedestrian detection; Proceedings of the 2015 IEEE Intelligent Vehicles Symposium (IV); Seoul, Korea. 28 June–1 July 2015; pp. 356–361.
+44. Cadena C., Košecká J. Semantic segmentation with heterogeneous sensor coverages; Proceedings of the 2014 IEEE International Conference on Robotics and Automation (ICRA); Hong Kong, China. 31 May–7 June 2014; pp. 2639–2645.
+45. Russell C., Kohli P., Torr P.H., Torr P.H.S. Associative hierarchical crfs for object class image segmentation; Proceedings of the 2009 IEEE 12th International Conference on Computer Vision; Kyoto, Japan. 27 September–4 October 2009; pp. 739–746.
+```
 
 ###### [Chavez-Garcia and Aycard]
 
@@ -213,6 +233,8 @@ Our method consistsof three phases:
 
 ### 3.2 Object-region proposal generation
 
+> 2D`(color-flattened image)`, 3D`(supervoxels)` 입력 결과는 후보 영역들의 집합이다. 
+
 #### A. Image
 
 - 평탄화한 모노톤 이미지에 대하여 세그멘테이션 실시 `We perform segmentation of the color-flattened image.`
@@ -233,15 +255,22 @@ Our method consistsof three phases:
 
 ### 3.3 Classifying object proposals
 
-- To classify the object proposals, we fuse the classification results from the unary classifiers of the LiDAR and CCD sensors using CNN. 
+- 여러 후보영역중에서 분류하기 위하여 unary classifiers를 통과한 결과들을 CNN을 이용하여 Fuse하였다. `To classify the object proposals, we fuse the classification results from the unary classifiers of the LiDAR and CCD sensors using CNN. `
 
-- The unary classifiers are modeled using CNN models with the same network architecture. 
+- unary classifiers은 CNN으로 모델링 하였다. `The unary classifiers are modeled using CNN models with the same network architecture. `
 
-- The proposed CNN models are generated with two phases consisting of **image representation** and **classification networks**. 
-	- First, to represent the input data, we extract a convolutional cube that has more than one convolutional layer of pre-trainedCNN models. 
+- 제안된 CNN은 두 절차(**image representation** + **classification networks**)로 진행 된다. `The proposed CNN models are generated with two phases consisting of image representation and classification networks. `
+
+###### [절차 1 : image representation]
+
+- First, to represent the input data, we extract a convolutional cube that has more than one convolutional layer of pre-trainedCNN models. 
 		- From the convolutional cube of the input data, object regions from the object-proposal generations are extracted using ROI pooling. 
-	-  Then, the convolutional cube extracted from the proposalregions is fed into a classification network 
+
+###### [절차 2 : classification networks]
+
+- Then, the convolutional cube extracted from the proposalregions is fed into a classification network 
 		- that includes two convolutional layers, two fully-connectedlayers and a softmax layer. 
+
 
 결과를 Fuse하기 위해 새 CNN모델 제안 : To fuse the results from the two separate unary classifiers, we propose a CNN model that uses the **convolutional cube** and **softmax results** of the sensor modalities as input.
 
