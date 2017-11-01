@@ -324,11 +324,11 @@ Our method consistsof three phases:
 
 - 자율 주행 부분에서 다양한 크기의 물체들이 존재 한다. Scale variations은 자차와의 거리에 영향을 받는다. `The objects of the driving scenes contain large variations in their scales. Scale variations can be introduced by distances from the ego-vehicle and/or inter (or intra) types of objects in driving scenes. `
 
-However, previous CNN models for detecting and classifying objects used the fixed output from the final layers of a model as a data representation. 
+- 그러나 이전의 CNN모델들은 마지막 레이어의 fixed output을 data representation으로 사용 하였다. `However, previous CNN models for detecting and classifying objects used the fixed output from the final layers of a model as a data representation. `
 
-At this point, the fine features can be gradually ignored according to a passing layer, which includes some types of operations, such as convolution and pooling. 
+- 이런점 때문에 중요한 특징들이 convolution/pooling같은 레이어를 지나면서 사라졌다. `At this point, the fine features can be gradually ignored according to a passing layer, which includes some types of operations, such as convolution and pooling. `
 
-In particular, if a small bounding box has passed entire layers, feature losses may be introduced owing to its low resolution. 
+- In particular, if a small bounding box has passed entire layers, feature losses may be introduced owing to its low resolution. 
 
 Therefore, to use the features of small objects, as well as objects with moderate sizes, we construct a convolutional cube from each input data as a data representation. 
 
