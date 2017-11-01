@@ -255,6 +255,8 @@ Our method consistsof three phases:
 
 ### 3.3 Classifying object proposals
 
+> convolutional cube - ROI pooling - 물체 영역정보
+
 - 여러 후보영역중에서 분류하기 위하여 unary classifiers를 통과한 결과들을 CNN을 이용하여 Fuse하였다. `To classify the object proposals, we fuse the classification results from the unary classifiers of the LiDAR and CCD sensors using CNN. `
 
 - unary classifiers은 CNN으로 모델링 하였다. `The unary classifiers are modeled using CNN models with the same network architecture. `
@@ -263,16 +265,19 @@ Our method consistsof three phases:
 
 ###### [절차 1 : image representation]
 
-- First, to represent the input data, we extract a convolutional cube that has more than one convolutional layer of pre-trainedCNN models. 
-		- From the convolutional cube of the input data, object regions from the object-proposal generations are extracted using ROI pooling. 
+- 입력 데이터를 Represent 하기 위하여 convolutional cube`(onvolutional layer로 구성됨)`를 추출 한다. `To represent the input data, we extract a convolutional cube that has more than one convolutional layer of pre-trainedCNN models. `
+
+- 입력데이터의 convolutional cube에서 **ROI pooling**을 이용하여 물체 영역정보를 추출 한다. `From the convolutional cube of the input data, object regions from the object-proposal generations are extracted using ROI pooling. `
 
 ###### [절차 2 : classification networks]
 
-- Then, the convolutional cube extracted from the proposalregions is fed into a classification network 
-		- that includes two convolutional layers, two fully-connectedlayers and a softmax layer. 
+-  후보 영역들에서 추출된 convolutional cube를 classification network로 입력 `the convolutional cube extracted from the proposal regions is fed into a classification network `
+
+- classification network = two convolutional layers + two fully-connectedlayers + a softmax layer. 
 
 
-결과를 Fuse하기 위해 새 CNN모델 제안 : To fuse the results from the two separate unary classifiers, we propose a CNN model that uses the **convolutional cube** and **softmax results** of the sensor modalities as input.
+- 결과를 Fuse하기 위해 새 CNN모델 제안 `To fuse the results from the two separate unary classifiers, we propose a CNN model `
+	- that uses the **convolutional cube** and **softmax results** of the sensor modalities as input.
 
 ## 4. Pre-Processing
 
