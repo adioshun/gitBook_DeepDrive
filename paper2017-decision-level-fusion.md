@@ -243,6 +243,22 @@ Our method consistsof three phases:
 ## 4. Pre-Processing
 
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDMxMTA2MTRdfQ==
--->
+---
+- Unary classification(=one-class classification) :여러 object중에서 특정 class에 속하는 object만 선택 `tries to identify objects of a specific class amongst all objects, `
+	- by learning from a training set containing only the objects of that class. 
+
+- Multi classification : 여러 class중에서 어느 class에 속하는지 선택 `tries to distinguish between two or more classes `
+	- by training set containing objects from all the classes. 
+
+- "One-class learning, or unsupervised SVM, aims at separating data from the origin......."
+
+- An example is the classification of the operational status of a nuclear plant as 'normal':[1] In this scenario, there are few, if any, examples of catastrophic system states; only the statistics of normal operation are known. 
+
+- 단일 분류는 오직 하나의 타겟 클래스 만을 이용해 분류기를 만들며, 
+
+- 분류 결과가 해당 클래스에 속하는지 아닌지에 따라 양(positive) 또는 음(negative)으로 판별한다.
+
+- 일반적으로 단일 분류 문제는 비교할 수 있는 다른 클래스가 없어서 타겟 클래스의 고유 특성을 알기가 모호하다는 점 때문에 다중 분류 문제보다 어렵다.
+
+> 정인교, Hyper-Rectangles를 이용한 단일 분류기 설계, 2015
+
