@@ -92,7 +92,7 @@
 * [Paper\_2011\_LateFusion \(0%\)](paper2011latefusion.md)
 * [Paper\_2016\_FusionNet \(100%\)](paper2016-fusionnet.md)
 * [Paper\_2016\_DeepSlidingShape \(70%\)](paper2016-deepslidingshape.md)
-* [Paper\_2016\_FuseNet \(5%\)](paper2016-fusenet.md)
+* [Paper\_2016\_FuseNet \(50%\)](paper2016-fusenet.md)
 * [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
 * [Paper\_2017\_Decision-Level Fusion \(50%\)](paper2017-decision-level-fusion.md)
 * [Paper\_2017\_Sensor Modality Fusion \(50%\)](paper2017-sensor-modality-fusion.md)
