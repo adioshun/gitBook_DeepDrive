@@ -3,7 +3,7 @@
 | 저자\(소속\) | Caner Hazirbas\(Munich\) |
 | 학회/년도 | ACCV 2016, [논문](https://link.springer.com/chapter/10.1007/978-3-319-54181-5_14) |
 | 키워드 | RGB+Depth map -> Segmentation, |
-| 데이터셋(센서)/모델 |NYU,SUN-RGBD  |
+| 데이터셋(센서)/모델 |NYU,SUN-RGBD / VGG 16-layer model pre-trained on the ImageNet dataset  |
 | 관련연구||
 | 참고 | |
 | 코드 |[Caffe](https://github.com/tum-vision/fusenet) |
@@ -189,8 +189,52 @@ RCNN-based approaches are known to be difficult to train, in particular, with la
 
 #### C. Fusion Block
 
-The key ingredient of the FuseNet architecture is the fusion block, which combines the feature maps of the depth branch and the RGB branch. The fusion layer is implemented as element-wise summation. In FuseNet, we always insert the fusion layer after the CBR block. By making use of fusion the discontinuities of the features maps computed on the depth image are added into the RGB branch in order to enhance the RGB feature maps. As it can be observed in many cases, the features in the color domain and in the geometric domain complement each other. Based on this observation, we propose two fusion strategies: (a) dense fusion (DF), where the fusion layer is added after each CBR block of the RGB branch. (b) sparse fusion (SF), where the fusion layer is only inserted before each pooling. These two strategies are illustrated in Fig. 3.
+- 가장 중요한건 **fusion block**이다. `The key ingredient of the FuseNet architecture is the fusion block, `
+	- 두개의 Branch를 합친다. `which combines the feature maps of the depth branch and the RGB branch. `
+    
+- 퓨젼 레이어는 **element-wise summation**로 구현 하였다. `The fusion layer is implemented as **element-wise summation**. `
+
+- CBR block다음에는 항상 fusion layer를 삽입하였다. `In FuseNet, we always insert the fusion layer after the CBR block. `
+
+- By making use of fusion the discontinuities of the features maps computed on the depth image are added into the RGB branch in order to enhance the RGB feature maps. 
+
+- 여러 예에서 봤듯이 Color 도메인과 geometric 도메인은 상호 보완적이다. `As it can be observed in many cases, the features in **the color domain** and in **the geometric domain** complement each other. `
 
 
+![](https://i.imgur.com/dJXLm2S.png)
+```
+[Fig. 3. Illustration of different fusion strategies at the second (CBR2) and third (CBR3) convolution blocks of VGG 16-layer net.]
+- (a) The fusion layer is only inserted before each pooling layer. 
+- (b) The fusion layer is inserted after each CBR block. (Color figure online)
+```
 
+
+- 두 가지 Fusion 전략 제안 Based on this observation, we propose two fusion strategies: 
+	- (a) **dense fusion (DF)**, where the fusion layer is added **after each CBR block** of the RGB branch. 
+    - (b) **sparse fusion (SF)**, where the fusion layer is only inserted **before each pooling**. 
+    
+These two strategies are illustrated in Fig. 3.
+
+### 3.2 Fusion of Feature Maps
+
+> In this section, we reason the fusion of the feature maps between the RGB and the depth branches.
+
+## 4. Experimental Evaluation
+
+![](https://i.imgur.com/rQhjCqJ.png)
+
+
+### 4.1  we compare the FuseNet to network trained with different representation of depth
+
+![](https://i.imgur.com/nEX5KLw.png)
+```
+[Table 2. Segmentation results of FuseNet in comparison to the networks trained with RGB, depth, HHA and their combinations.] 
+- The second part of the table provides the results of variations of FuseNet. 
+- We show that FuseNet obtained significant improvements by extracting more informative features from depth.
+```
+
+- Depth만 : 42.80(Mean)
+- RGB만 : 47.14(Mean)
+- FusetNet-SF5 : 48.30(Mean)
+- FusetNet-DF5 : 49.86(Mean)
 
