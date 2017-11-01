@@ -1,3 +1,24 @@
+- scene-level탐지 및 분류를 위해서 다양한 센서 정보가 사용된다. ` In particular, for the scene-level detection and classification tasks, various sensor modalities are used. `
+	- 실내용 : The RGB-depth sensor is widely used for **indoor scene** recognition [36–38]
+	- 실외용: LiDAR-stereo vision [39,40], LiDAR-CCD [41], LiDAR-radar [42] and LiDAR-radar-stereo vision [43] are used for **outdoor scenes**. 
+
+- The fusion methods are divided into two categories, namely **early** and **late** fusion. 
+
+```
+36. Henry P., Krainin M., Herbst E., Ren X., Fox D. RGB-D mapping: Using depth cameras for dense 3D modeling of indoor environments; Proceedings of the 12th International Symposium on Experimental Robotics (ISER. Citeseer); New Delhi and Agra, India. 18–21 December 2010.
+37. Gupta S., Arbelaez P., Malik J. Perceptual organization and recognition of indoor scenes from RGB-D images; Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition; Portland, OR, USA. 23–28 June 2013; pp. 564–571.
+38. Munera E., Poza-Lujan J.L., Posadas-Yagüe J.L., Simó-Ten J.E., Noguera J.F.B. Dynamic reconfiguration of a rgbd sensor based on qos and qoc requirements in distributed systems. Sensors. 2015
+
+39. Adarve J.D., Perrollaz M., Makris A., Laugier C. Computing occupancy grids from multiple sensors using linear opinion pools; Proceedings of the 2012 IEEE International Conference on Robotics and Automation (ICRA); St. Paul, MN, USA. 14–18 May 2012; pp. 4074–4079.
+40. Oh S.I., Kang H.B. Fast Occupancy Grid Filtering Using Grid Cell Clusters From LiDAR and Stereo Vision Sensor Data. IEEE Sens. J. 2016;16:7258–7266. doi: 10.1109/JSEN.2016.2598600. [Cross Ref]
+
+41. González A., Villalonga G., Xu J., Vázquez D., Amores J., López A.M. Multiview random forest of local experts combining rgb and LiDAR data for pedestrian detection; Proceedings of the 2015 IEEE Intelligent Vehicles Symposium (IV); Seoul, Korea. 28 June–1 July 2015; pp. 356–361.
+
+42. Nuss D., Yuan T., Krehl G., Stuebler M., Reuter S., Dietmayer K. Fusion of laser and radar sensor data with a sequential Monte Carlo Bayesian occupancy filter; Proceedings of the 2015 IEEE Intelligent Vehicles Symposium (IV); Seoul, Korea. 28 June–1 July 2015; pp. 1074–1081.
+43. Cho H., Seo Y.W., Kumar B.V., Rajkumar R.R. A multi-sensor fusion system for moving object detection and tracking in urban driving environments; Proceedings of the 2014 IEEE International Conference on Robotics and Automation (ICRA); Hong Kong, China. 31 May–7 June 2014; pp. 1836–1843.
+```
+---
+
 C. Fusion
 
 The architectures for sensor data fusion can be divided into centralized and decentralized fusion.

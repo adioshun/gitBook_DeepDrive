@@ -2,7 +2,13 @@
 | --- | --- |
 | 저자\(소속\) | Sang-Il Oh\(Catholic University\) |
 
+###### [ early fusion method]
 
+- the measurements are fused by mapping them together,or by concatenation, or probabilistic fusion [41,44,45]. 
+
+- 제약 : However, the early fusion method suffers from problems of **non-overlapping regions** and **uncertainties**. 
+
+- 해결책 : To solve these problems, the **decision-level fusion method** is used as a **late fusion** method. 
 
 
 

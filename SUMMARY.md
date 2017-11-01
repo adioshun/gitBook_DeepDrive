@@ -88,7 +88,7 @@
 
 * [----- Sensor Fusion 이란 -----](-sensor-fusion-c774-b780-.md)
 * [Intro\_KalmanFilter](introfusion.md)
-* [Papers\_RADAR\_Fusion](paper2013-radar-fusion.md)
+* [Intro\_Early\_Late\_Deep\_Fusion](paper2013-radar-fusion.md)
 * [Paper\_2011\_LateFusion \(0%\)](paper2011latefusion.md)
 * [Paper\_2016\_FusionNet \(100%\)](paper2016-fusionnet.md)
 * [Paper\_2016\_DeepSlidingShape \(70%\)](paper2016-deepslidingshape.md)
