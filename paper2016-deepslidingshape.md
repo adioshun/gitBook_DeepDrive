@@ -324,11 +324,12 @@ We desire to learn 3D objectness for general scenes from the data using ConvNets
 
 ### 4.3 2D and 3D joint recognition 
 
-- We construct a joint 2D and3D network to make use of both color and depth. 
+- Color와 Depth정보를 모두 사용하기 위하여 Joint Network를 구성 하였다. `We construct a joint 2D and3D network to make use of both color and depth. `
 
-The featurefrom both 2D VGG Net and our 3D ORN (each has4096 dimensions) are concatenated into one feature vector,and fed into a fully connected layer , which reduces the dimensionto 1000. 
+- 2D VGG Net(4,096 dimensions) + 3D ORN(4,096 dimensions) -> one feature vector -> FC3_fully connected layer(1,000 dimensionto )
+	- `The feature from both 2D VGG Net and our 3D ORN (each has 4,096 dimensions) are concatenated into one feature vector, and fed into a fully connected layer , which reduces the dimensionto 1000. `
 
-Another two fully connected layer takethis feature as input and predict the object label and 3D box.
+- 이후 FC 3D Box & FC CLass에서 이를 입력으로 받아 Label과 3D box를 생성 한다. `Another two fully connected layer(FC 3D Box & FC CLass) take this feature as input and predict the object label and 3D box.`
 
 
 
