@@ -95,11 +95,9 @@ Figure 1. Overview of our work.
 
 ##### [Fuse 방법]
 
-- 이후 작업으로 결과값 Fuse를 위해 Fusion CNN에 입력 한다. `Subsequently,to fuse the two detection and classification results of the LiDAR and CCD sensors, we feed the final softmax result vectors and their convolutional cube into the fusion CNN. `
+- 이후 작업으로 결과`(Softmax result vectors +  their convolutional cube)`값 Fuse를 위해 Fusion CNN에 입력 한다. `Subsequently,to fuse the two detection and classification results of the LiDAR and CCD sensors, we feed the final softmax result vectors and their convolutional cube into the fusion CNN. `
 
-By fusing the multi-sensor modalities, the detection and classification failures can be compensated. 
-
-In addition, fusing the multi-sensor in the decision level makes it more stable when information conflict occurs in each modality when compared to feature-level fusion schemes.
+- fusing the multi-sensor in the **decision level** makes it more **stable** when information **conflict occurs** in each modality when compared to **feature-level fusion **schemes.
 
 ## 2. Related Work
 
