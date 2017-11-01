@@ -16,16 +16,20 @@
 In this paper, we propose a new **object-detection and classification method** using **decision-level fusion**. 
 
 방법 
-1. We fuse the classification outputs from independent unary classifiers, 
-	- unary classifiers, such as 3D point clouds and image data using a convolutional neural network (CNN). 
+
+1. We fuse the classification outputs from independent unary classifiers(단항 분류기), 
+	- unary classifiers, such as **3D point clouds** and **image data** using a convolutional neural network (CNN). 
+
 2. The unary classifiers for the two sensors are the CNN with five layers, 
 	- which use more than two pre-trained convolutional layers to consider local to global features as data representation. 
+
 3. To represent data using convolutional layers, we apply region of interest (ROI) pooling to the outputs of each layer on the object candidate regions generated using object proposal generation to realize color flattening and semantic grouping for charge-coupled device and Light Detection And Ranging (LiDAR) sensors.
 
 ## 1. Introduction
 
 ### 1.1 Two data-fusion scheme
-The data-fusion scheme is generally categorized into two types, namely early and late fusion. 
+
+- 데이터 퓨전은 크게 두 분류로 나누어 진다. 앞단 퓨젼 & 뒷단 퓨젼 `The data-fusion scheme is generally categorized into two types, namely early and late fusion. `
 
 ###### The early-fusion method 
 - fuses two or more data by combining raw data or concatenating feature descriptors. 
