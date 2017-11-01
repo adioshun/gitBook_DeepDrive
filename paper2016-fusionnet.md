@@ -379,3 +379,10 @@ http://arxiv.org/abs/1605.08359.
 
 - This aggregate of the 20 views are sent to fc8 for classification,similar to what was done in [24]
 
+## 7 Experiments
+
+![](https://i.imgur.com/9V8wW8z.png)
+
+- V-CNN 1 + V-CNN 2 = 91.95%(ModelNet10), 83.78(MedelNet40)
+- MV -CNN = 92.69(ModelNet10), 86.92$(MedelNet40)
+- Fusion = 92.11%(ModelNet10), 90.80%(MedelNet40)
