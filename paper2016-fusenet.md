@@ -99,12 +99,98 @@ RCNN-based approaches are known to be difficult to train, in particular, with la
 
 #### A. HHA (Depth RCNN)
 
-- 새로운 representation 이 제안 되었따. `A new representation of the depth information has been presented by Gupta et al. [1-Saurabh2014]. `
+- 새로운 **representation** 이 제안 되었따. `A new representation of the depth information has been presented by Gupta et al. [1-Saurabh2014]. `
 
-- This representation, referred to as HHA, consists of three channels: 
+- This representation, referred to as **HHA**, consists of three channels: 
     - disparity, 
     - height of the pixels 
     - angle between of normals and the gravity vector based on the estimated ground floor, respectively. 
     
-    By making use of the HHA representation, a superficial improvement was achieved in terms of segmentation accuracy [1]. On the other hand, the information retrieved only from the RGB channels still dominates the HHA representation. As we shall see in Sect. 4, the HHA representation does not hold more information than the depth itself. Furthermore, computing HHA representation requires high computational cost. In this paper we investigate a better way of exploiting depth information with less computational burden.
+- By making use of the HHA representation, a superficial improvement was achieved in terms of segmentation accuracy [1]. 
+
+- On the other hand, the information retrieved only from the RGB channels still dominates the HHA representation. 
+
+- 살펴본 봐로는 HHA representation는 깊이 정보를 가지고 있는것 빼고는 추가적 정보를 가지고 있지 않다. `As we shall see in Sect. 4, the HHA representation does not hold more information than the depth itself. `
+
+- 더구나 HHA는 계산 부하가 크다. `Furthermore, computing HHA representation requires high computational cost.`
+
+- 본 논문에서는 적은 계산 부하로 Depth정보를 이용하는 법을 살펴 보겠다. `In this paper we investigate a better way of exploiting depth information with less computational burden.`
+  
+ #### B. novel LSTM Fusion (LSTM-F)
+ 
+ - [7]은 contextual information을 획득할수 있는 Fuse방법을 제안 하였따. `Li et al. [17] have introduced a novel LSTM Fusion (LSTM-F) model that `
+     - captures and fuses **contextual information** from **photometric** and **depth channels** by stacking several convolutional layers and an LSTM layer. 
+ 
+ - The memory layer encodes both short - and long-range spatial dependencies in an image along vertical direction. 
+ 
+ - Moreover, another LSTM-F layer integrates the contexts from different channels and performs bi-directional propagation of the fused vertical contexts. 
+ 
+ - 일반적으로 이런 종류의 아키텍쳐는 복잡하고 학습 시키기가 어렵다. `In general, these kinds of architectures are rather complicated and hence more difficult to train. `
+ 
+ 
+ ## 3. FuseNet: Unified CNN Framework for Fusing RGB and Depth Channels
+ 
+ ![](https://i.imgur.com/fZMldvd.png)
+```
+[Fig. 2. The architecture of the proposed FuseNet.] 
+- Colors indicate the layer type. 
+- The network contains two branches to extract features from RGB and depth images, and the feature maps from depth is constantly fused into the RGB branch, denoted with the red arrows. 
+- In our architecture, the fusion layer is implemented as an element-wise summation, demonstrated in the dashed box. (Color figure online)
+```
+
+- The network extracts features from the input layer and through filtering provides classification score for each label as an output at each pixel. 
+
+### 3.1 FuseNet Architecture
+
+- 인코더-디코더 방식의 아키텍쳐 설계 `We propose an encoder-decoder type network architecture as shown in Fig. 2. `
+
+- 주요 구성 요소 `The proposed network has two major parts: `
+    - (1) the encoder part **extracts features** 
+    - (2) the decoder part **upsamples the feature** maps back to **the original input resolution**. 
     
+- 인코더-디코더 방식은 DeconvNet [6] and SegNet [13]에서 사용했던 방식으로 segmentation에 좋은 결과를 보임 `This encoder-decoder style has been already introduced in several previous works such as DeconvNet [6] and SegNet [13] and has achieved good segmentation performance.`
+
+- 제안 네트워크는 두개의 encoder branches로 되어 있는 특징이 있따. `Although our proposed network is based on this type of architecture, we further consider to have two encoder branches. `
+    - 이 두개의 branch는 RGB & depth images에서 각각 특징을 추출 한다. `These two branches extract features from RGB and depth images. `
+
+- Depth image도 Color이미지 처럼 0~255사이의 값을 가지게 하였다. `We note that the depth image is normalized to have the same value range as color images, i.e. into the interval of [0,255]. `
+
+- 두 입력 정보를 합치기 위해서 **FuseNet**을 제안 한다. `In order to combine information from both input modules,`
+    -  depth branch를 feature maps로 Fuse한다. we fuse the feature maps from the **depth branch** into the **feature maps** of the RGB branch. We refer to this architecture as FuseNet (see Fig. 2).
+
+
+
+#### A. The encoder part
+
+- 인코더 부분은 VGG를 활용함 `The encoder part of FuseNet resembles the 16-layer VGG net [11], `
+    - 단, FCL은 도입 안함 `except of the fully connected layers fc6, fc7 and fc8, `
+    - 왜냐 하면 since the fully connected layers reduce the resolution with a factor of 49, which increases the difficulty of the upsampling part. 
+
+- In our network, we always use **batch normalization** (BN) after convolution (Conv) and before rectified linear unit1 (ReLU) to **reduce the internal covariate shift** [18]. 
+
+- CBR Block은 **Conv + BN + ReLU**를 의미한다.  `We refer to the combination of **convolution**, **batch normalization** and **ReLU** as **CBR block**, respectively. `
+
+- BN레이어는 먼저 특징지도를 normalizes하여 zero-mean & unit-variance하게 만든다. 이후 scales & shifts한다. `The BN layer first normalizes the feature maps to have zero-mean and unit-variance, and then scales and shifts them afterwards. `
+    - scale/shift파라미터는 학습을 통해 파악한다. `In particular, the scale and shift parameters are learned during training. `
+
+- 결과적으로 Color특징은 Depth 특징에 overwritten 되지 않는다. 하지만 어떻게 둘을 합칠지는 배우게 된다. `As a result, color features are not overwritten by depth features, but the network learns how to combine them in an optimal way.`
+
+#### B. The decoder part
+
+- 디코더 부분은 unpooling을 기억하고 있다가 feature maps을 업샘플링 한다. `The decoder part is a counterpart of the encoder part, where memorized unpooling is applied to upsample the feature maps. `
+
+- 디코더 부분에서도 CBR Block를 사용한다. `In the decoder part, we again use the CBR blocks. `
+
+- 실험삼아 convolution대신 deconvolution를 사ㅇ하였는데 비슷한 성능을 보였다. `We also did experiments with deconvolution instead of convolution, and observed very similar performance. `
+
+- As proposed in [14], we also apply **dropout** in both the encoder and the decoder parts to further boost the performance. 
+    - However, we do not use dropout during test time.
+
+
+#### C. Fusion Block
+
+The key ingredient of the FuseNet architecture is the fusion block, which combines the feature maps of the depth branch and the RGB branch. The fusion layer is implemented as element-wise summation. In FuseNet, we always insert the fusion layer after the CBR block. By making use of fusion the discontinuities of the features maps computed on the depth image are added into the RGB branch in order to enhance the RGB feature maps. As it can be observed in many cases, the features in the color domain and in the geometric domain complement each other. Based on this observation, we propose two fusion strategies: (a) dense fusion (DF), where the fusion layer is added after each CBR block of the RGB branch. (b) sparse fusion (SF), where the fusion layer is only inserted before each pooling. These two strategies are illustrated in Fig. 3.
+
+
+
+
