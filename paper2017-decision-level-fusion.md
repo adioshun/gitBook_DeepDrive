@@ -252,6 +252,8 @@ Our method consistsof three phases:
 
 - "One-class learning, or unsupervised SVM, aims at separating data from the origin......."
 
+- To build a callsifier only with the knowledge of a target class
+
 - An example is the classification of the operational status of a nuclear plant as 'normal':[1] In this scenario, there are few, if any, examples of catastrophic system states; only the statistics of normal operation are known. 
 
 - 단일 분류는 오직 하나의 타겟 클래스 만을 이용해 분류기를 만들며, 
@@ -262,3 +264,4 @@ Our method consistsof three phases:
 
 > 정인교, Hyper-Rectangles를 이용한 단일 분류기 설계, 2015
 
+> A Survey of Recent Trends in One Class Classification, 2010 [[다운로드]](https://cs.uwaterloo.ca/~s255khan/files/occ_survey09.pdf)
