@@ -2,7 +2,7 @@
 |-|-|
 |저자(소속)|Shuran Song (Princeton)|
 |학회/년도| CVPR 2016, [논문](http://dss.cs.princeton.edu/paper.pdf)|
-|키워드|Detection,  RPN+ORN |
+|키워드|Detection,  RPN+ORN, TSDF Representation, Raw 3D 이용   |
 |데이터셋/모델|NYUv2, SUN RGB-D |
 |참고|[CVPR2016](https://www.youtube.com/watch?v=D-lDbS9NQ_0), [Youtube](https://www.youtube.com/watch?v=zzcipxzZP9E), [Homepage](http://dss.cs.princeton.edu/) |
 |코드|[matlab](https://github.com/shurans/DeepSlidingShape)|
@@ -82,7 +82,7 @@ Depth RCNN [10] takes a 2D approach: detect objects in the 2D image plane by tre
 - ORN to use a 2D ConvNet to extract image features from color, and a 3D ConvNet to extract geometric features from depth (Figure 2). 
 - This network is also the first to regress 3D bounding boxes for objects directly from 3D proposals.
 
-제안 방식은 3D의 정보를 Fully 이용하기 때문에 아래 `5가지 장점`이 있다. 
+###### [제안 방식은 3D의 정보를 Fully 이용하기 때문에 아래 5가지 장점이 있다. ]
 
 1. First, we can predict 3D bounding boxes without the extra step of fitting a model from extra CAD data. 
     - This elegantly simplifies the pipeline, accelerates the speed, and boosts the performance because the network can directly optimize for the final goal. 
@@ -96,7 +96,7 @@ Depth RCNN [10] takes a 2D approach: detect objects in the 2D image plane by tre
 
 5. Finally, we can exploit simple 3D context priors by using the Manhattan world assumption to define bounding box orientations.
 
-제안 방식이 3D를 이용하므로써 발생하는 `3가지 도전` 사항 및 해결책 
+###### [제안 방식이 3D를 이용하므로써 발생하는 3가지 도전 사항 및 해결책 ]
 
 1. (계산 부하)First, a 3D volumetric representation requires much more memory and computation.
     - To address this issue, we propose to separate the 3D Region Proposal Network with a low-res whole scene as input, and the Object Recognition Network with high-res input for each object. 
@@ -230,41 +230,42 @@ We desire to learn 3D objectness for general scenes from the data using ConvNets
 
 > 3D공간을 어떻게 가공하여 ConvNet에 입력 하여야 할까?
 
-- For color images, naturally the input is a 2D array of pixel color
+- 이미지는 간단하다. For color images, naturally the input is a 2D array of pixel color
 
-- For depth maps, Depth RCNN [10, 11] proposed to encode `depth` as a 2D color image with three channels. 
+- Depth Map의 경우 Depth RCNN은 이미지의 3rd 채널로 취급하는 법을 제안 하였다. . `For depth maps, Depth RCNN [10, 11] proposed to encode depth as a 2D color image with three channels. `
     - Although it has the advantage to reuse the pretrained ConvNets for color images [12], 
 
 
-본 논문의 방식 
+### 2.1 본 논문의 방식 
 
+- 가능한 3D 정보를 그대로`(naturally)` 사용 하기로 함, we desire a way to encode the geometric shapes naturally in 3D, preserving spatial locality.
 
-- we desire a way to encode the geometric shapes naturally in 3D, preserving
-spatial locality.
-
-- compared to methods using hand-crafted 3D features [5, 31], We desire a representation that encodes the 3D geometry as raw as possible, and let ConvNets learn the most discriminative features from the raw data.
+- hand-crafted 3D features와 비교 하여 본 논문에서는 3D정보를 가능한 Raw한상태로 encode하고 Conv 특징을 학습 하도록 하였다. ` We desire a representation that encodes the 3D geometry as raw as possible, and let ConvNets learn the most discriminative features from the raw data.`
 
 
 ![](https://i.imgur.com/Piqj68M.png)
 
-- To encode a 3D space for recognition, we propose to adopt a directional Truncated Signed Distance Function (TSDF). 
+- 3D encode을 위해 TSDF`(directional Truncated Signed Distance Function)`를 적용 `To encode a 3D space for recognition, we propose to adopt a TSDF. `
 
-Given a 3D space, we divide it into an equally spaced 3D voxel grid. 
+- Given a 3D space, we divide it into an equally spaced 3D voxel grid. 
 
-The value in each voxel is defined to be the shortest distance between the voxel center and the surface from the input depth map. 
+- The value in each voxel is defined to be the shortest distance between the voxel center and the surface from the input depth map. 
 
-To encode the direction of the surface point, instead of a single distance value, we propose a directional TSDF to store a three-dimensional vector [dx, dy, dz] in each voxel to record the distance in three directions to the closest surface point. 
+- To encode the direction of the surface point, instead of a single distance value, we propose a directional TSDF to store a three-dimensional vector [dx, dy, dz] in each voxel to record the distance in three directions to the closest surface point. 
 
-The value is clipped by `2J`, where `J` is the grid size in each dimension. The sign of the value indicates whether the cell is in front of or behind the surface
+- The value is clipped by `2J`, 
+    - `J` is the grid size in each dimension. 
+    - The **sign** of the value indicates whether the cell is in **front of** or **behind** the surface
 
-To further speed up the TSDF computation, as an approximation, we can also use projective TSDF instead of accurate TSDF where the nearest point is found only on the
-line of sight from the camera. 
+- TSDF 연산 성능 향상을 위해 projective TSDF사용 `To further speed up the TSDF computation, as an approximation, we can also use projective TSDF instead of accurate TSDF where the nearest point is found only on the line of sight from the camera.` 
+    - 빠르긴 하지만 성능은 안 좋음 `The projective TSDF is faster to compute, but empirically worse in performance compared to the accurate TSDF for recognition (see Table 2).`
 
-The projective TSDF is faster to compute, but empirically worse in performance compared
-to the accurate TSDF for recognition (see Table 2).
+- 다른 encodings방식들도 적용 했지만, TSDF 가 가장 좋았음 `We also experiment with other encodings, and we find that the proposed directional TSDF outperforms all the other alternatives (see Table 2). `
 
-We also experiment with other encodings, and we find that the proposed directional TSDF outperforms all the other alternatives (see Table 2). 
+- Note that we can also encode colors in this 3D volumetric representation, by appending RGB values to each voxel [28].
 
-Note that we can also encode colors in this 3D volumetric representation, by appending RGB values to each voxel [28].
+## 3. Multi-scale 3D Region Proposal Network
+
+## 4. Joint Amodal Object Recognition Network
 
 
