@@ -3,7 +3,7 @@
 |저자(소속)|Shuran Song (Princeton)|
 |학회/년도| CVPR 2016, [논문](http://dss.cs.princeton.edu/paper.pdf)|
 |키워드|Detection(가려진 물체 탐지),  RPN+ORN, TSDF Representation, Raw 3D 이용,   |
-|데이터셋/모델|NYUv2, SUN RGB-D / ORN의 2D Network = VGGnet pre-trained on ImageNet |
+|데이터셋/모델|NYUv2, SUN RGB-D / ~~ORN의 2D Network = VGGnet pre-trained on ImageNet~~ |
 |참고|[CVPR2016](https://www.youtube.com/watch?v=D-lDbS9NQ_0), [Youtube](https://www.youtube.com/watch?v=zzcipxzZP9E), [Homepage](http://dss.cs.princeton.edu/) |
 |코드|[matlab](https://github.com/shurans/DeepSlidingShape)|
 
@@ -308,23 +308,23 @@ We desire to learn 3D objectness for general scenes from the data using ConvNets
 
 - 물체 분류에서 색상 정보는 중요하며, 기존 네트워크 중 이미지 기반 물체 분류기를 사용하면 좋다. `For certain object categories, color is a very discriminative feature, and existing ConvNets provide very powerful features for image-based recognition that could be useful. `
 
-- For each ofthe 3D proposal box, we project the 3D points inside the proposal box to 2D image plane, and get the 2D box thatcontains all these 2D point projections. 
+- 3D proposal box들에 대하여 투영하여 2D box를 얻는다. `For each of the 3D proposal box, we project the 3D points inside the proposal box to 2D image plane, and get the 2D box that contains all these 2D point projections. `
 
-- We use the state-of the-art VGGnet [22] pre-trained on ImageNet [19] (without fine-tuning) to extract color features from the image. 
+- VGGnet을 이용하여 이미지에서 color features를 추출 하였다. We use the state-of the-art VGGnet [22] pre-trained on ImageNet [19] (without fine-tuning) to extract color features from the image. 
 
-Weuse a Region-of-Interest Pooling Layer from Fast RCNN[7] to uniformly sample 7⇥7 points from conv5 3 layer usingthe 2D window with one more fully connected layer togenerate 4096-dimensional features as the feature from 2Dimages.We also tried the alternative to encode color on 3D voxels,but it performs much worse than the pre-trained VGGnet(Table 2 [dxdydz+rgb] vs. 
+- Fast RCNN의 ROI Pooling 레이어 이용하여  `We use a Region-of-Interest Pooling Layer from Fast RCNN[7] `
+	- to uniformly sample 7x7 points from `conv5_3 laye`r using the 2D window with one more fully connected layer togenerate 4096-dimensional features as the feature from 2Dimages.
 
-[dxdydz+img]). 
 
-This mightbe because encoding color in 3D voxel grid significantlylowers the resolution compared to the original image, andhence high frequency signal in the image get lost. 
+- Color정보를 3D voxel에 encode하는 방법을 고려 하였는데 성능이 더 안 좋았다. `We also tried the alternative to encode color on 3D voxels, but it performs much worse than the pre-trained VGGnet(Table 2 [dxdydz+rgb] vs. [dxdydz+img]). `
 
-In addition,by using the pre-trained model of VGG, we are able toleverage the large amount of training data from ImageNet, and the well engineered network architecture.
+	- 그 이유는 아마도 : This might be because encoding color in 3D voxel grid significantly lowers the resolution compared to the original image, and hence high frequency signal in the image get lost. 
+	- In addition, by using the pre-trained model of VGG, we are able toleverage the large amount of training data from ImageNet, and the well engineered network architecture.
 
 
 ### 4.3 2D and 3D joint recognition 
 
-
-We construct a joint 2D and3D network to make use of both color and depth. 
+- We construct a joint 2D and3D network to make use of both color and depth. 
 
 The featurefrom both 2D VGG Net and our 3D ORN (each has4096 dimensions) are concatenated into one feature vector,and fed into a fully connected layer , which reduces the dimensionto 1000. 
 
