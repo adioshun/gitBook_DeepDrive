@@ -335,21 +335,42 @@ We desire to learn 3D objectness for general scenes from the data using ConvNets
 
 ### 4.4. Multi-task loss 
 
-Similarly to RPN, the loss function consistsof a classification loss and a 3D box regression loss:where the p is the predicted probability over 20 object categories(negative non-objects is labeled as class 0). 
+- Similarly to RPN, the loss function consists of a **classification loss** and a **3D box regression loss**:
 
-For eachmini-batch, we sample 384 examples from different images,with a positive to negative ratio of 1:3. 
+$$
+L(p,p^{\star}, t, t^{\star}) = L_{cls} (p, p^{\star}) + \lambda\prime \[p^{\star} \> 0\] L_{reg}(t, t^{\star})
+$$
 
-For the box regression,each target offset t⇤ is normalized element-wise withthe object category specific mean and standard deviation.During testing, we 0.1 asthe 3D NMS threshold. 
+- the p is the predicted probability over 20 object categories(negative non-objects is labeled as class 0). 
 
-For boxregressions, we directly use the results from the network.
+- For each **mini-batch**, we sample 384 examples from different images, with a positive to negative ratio of 1:3. 
+
+- For the **box regression**, each target offset $$t^{\star}$$ is normalized element-wise with the object category specific mean and standard deviation.
+
+- During testing, we 0.1 as the **3D NMS threshold**. 
+
+- For box regressions, we directly use the results from the network.
 
 
 
 
 #### 4.5 Object size pruning 
 
-When we use amodal boundingboxes to represent objects, the bounding box sizes provideuseful information about the object categories. 
+- Bounding boxes 크기 정보도 유용한 힌트가 될수 있다. `When we use amodal bounding boxes to represent objects, the bounding box sizes provide useful information about the object categories. `
 
-To make useof this information, for each of the detected box, we checkthe box size in each direction, aspect ratio of each pair ofbox edge. 
+- To make use of this information, for each of the detected box, we checkthe box size in each direction, aspect ratio of each pair of box edge. 
 
-We then compare these numbers with the distributioncollected from training examples of the same category.If any of these values falls outside 1st to 99th percentileof the distribution, which indicates this box has avery different size, we decrease its score by 2.
+- We then compare these numbers with the distribution collected from training examples of the same category.
+
+- If any of these values falls outside 1st to 99th percentile of the distribution, which indicates this box has a very different size, we decrease its score by 2.
+
+## 5. Experiments
+
+![](https://i.imgur.com/zrzpEO3.png)
+
+- RPN takes 5.62s and ORN takes 13.93s per image
+
+- Comparison on 3D Object Detection
+	- depth only 67.8
+	- depth + img : 72.3
+
