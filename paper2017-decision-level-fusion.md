@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Sang-Il Oh\(Catholic University\) |
 | 학회/년도 | 2017, [논문](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/), [석사학위논문](http://academic.naver.com/article.naver?doc_id=195223326) |
-| 키워드 |  object-detection, classification, decision-level fusion |
+| 키워드 |  Lidar+Image, object-detection,  decision-level fusion |
 | 데이터셋(센서)/모델 | KITTI |
 | 참고 |  |
 | 코드 |  |
@@ -24,6 +24,9 @@ In this paper, we propose a new **object-detection and classification method** u
 	- which use more than two pre-trained convolutional layers to consider local to global features as data representation. 
 
 3. To represent data using convolutional layers, we apply region of interest (ROI) pooling to the outputs of each layer on the object candidate regions generated using object proposal generation to realize color flattening and semantic grouping for charge-coupled device and Light Detection And Ranging (LiDAR) sensors.
+
+
+> unary classification(=one-class classification) = tries to identify objects of a specific class amongst all objects
 
 ## 1. Introduction
 
@@ -48,22 +51,22 @@ In this paper, we propose a new **object-detection and classification method** u
 	
 ### 1.2  본 논문의 제안 
 
-In this paper, we propose a new object-detection and classification method for a multi-layer LiDAR and a CCD sensor. 
+In this paper, we propose a new **object-detection** and **classification** method for a multi-layer LiDAR and a CCD sensor. 
 
 - The contributions of this work are two-fold: 
-	- (1) an effective **object-region proposal generation** method
-	- (2) a **decision-level fusion** method for accurate object classification.
+	- (1) 후보영역 추전 방법 : an effective **object-region proposal generation** method
+	- (2) 분류 정확도 향상을 위한 **퓨전** 방법 : a **decision-level fusion** method for accurate object classification.
 
 
 - 기존 **object-region proposals**방법 
 	- For the 3D pointcloud data from the LiDAR sensor : **supervoxel segmentation** and **region-growing** methods are used [6],
 	- for the CCD sensor data : **color-flattening image segmentation** and **semantic grouping** methods are proposed  
 
-- **Semantic grouping**정의 : a process in which tiny partitions extracted from segment generation agglomerate with one another to form meaningful object regions. 
+> **Semantic grouping**정의 : a process in which tiny partitions extracted from segment generation agglomerate with one another to form meaningful object regions. 
 
 - 제안 방식 
-	-  Our proposed color flattening is based on L1 norm color transform [8]. 
-	- Semantic grouping is performed using our own dissimilarity cost function between the color-flattened and original images.
+	- Our proposed **color flattening** is based on **L1 norm color transform** [8]. 
+	- **Semantic grouping** is performed using our **own dissimilarity cost function** between the color-flattened and original images.
 
 ![](https://i.imgur.com/DlIqQnW.png)
 ```
