@@ -42,7 +42,7 @@ of
 
 - Given some clear correspondences between data points from each pair of data sets, we align (i.e., pair) the rest of the points between the camera-lidar and camera-V2V data sets.
 
-- The problem is casted as an eigenvalue problem over a graphbasedcompounded Laplacian matrix. 
+- The problem is casted as an eigenvalue problem over a graph based compounded Laplacian matrix. 
 
 Once the mapping ofknown points is done, the other points from each data sets canbe easily added in aligned 3D environment, thus significantlyenriching the vehicle knowledge of its surroundings. 
 
@@ -58,5 +58,5 @@ BSM creation accordingto the Lidar recognized objects from Kitti suite, number o
 
 Section VIIprovides conclusion and future work
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTc1MzU3NTJdfQ==
+eyJoaXN0b3J5IjpbLTYyOTYzNTMzMF19
 -->
