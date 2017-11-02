@@ -70,9 +70,11 @@
 - 시뮬레이션 가상  데이터를 이용하니 validation  정확도가 올라가는 것을 추가적으로 확인 하였따. 
 	- We additionally find that **supplanting** our dataset with **artificial, noise-injected simulation data** further boosts **validation accuracy** on realworld data.
 
-## II. RELATED WORK
+## 2. RELATED WORK
+
+### 2.1 Semantic segmentation for 3D LiDAR point clouds
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMjQyNDk4Ml19
+eyJoaXN0b3J5IjpbLTE5NTk3NTQzMF19
 -->
