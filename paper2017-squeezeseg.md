@@ -67,7 +67,8 @@
 
 - CRF모델은 RNN모듈로 reformulated 하여 CNN과 함께 동작 한다. `The CRF model is reformulated as a recurrentneural network (RNN) module as [11] and can be trained end-to-end together with the CNN model. `
 
-- We additionally find that **supplanting** our dataset with **artificial, noise-injected simulation data** further boosts validation accuracy on realworld data.
+- 시뮬레이션 가상  데이터를 이용하니 validation  정확도가 올라가는 것을 추가적으로 확인 하였따. 
+	- We additionally find that **supplanting** our dataset with **artificial, noise-injected simulation data** further boosts **validation accuracy** on realworld data.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNzc5NTcwN119
+eyJoaXN0b3J5IjpbLTc5Mjk1MDQyNl19
 -->
