@@ -22,13 +22,13 @@
 
 - GTA-V를 이용하여서 가상 데이터 획득 `To obtain extra training data, we built a LiDAR simulator into Grand Theft Auto V (GTA-V), a popular video game, to synthesize large amounts of realistic training data. `
 
-Our experiments show that SqueezeSeg achieves high accuracy with astonishingly fast and stable runtime (8.7 ±0.5 ms per frame), highly desirable for autonomous driving applications. 
+> 실시간 적용이 가능한 속도 이다. `Our experiments show that SqueezeSeg achieves high accuracy with a stonishingly fast and stable runtime (8.7 ±0.5 ms per frame), highly desirable for autonomous driving applications. `
 
 > [8.3ms/F = 120 FPS](https://steamcommunity.com/app/346110/discussions/0/530646715638737020/)
 
-Furthermore, additionally training on synthesizeddata boosts validation accuracy on real-world data. 
+Furthermore, additionally training on synthesized data boosts validation accuracy on real-world data. 
 
 Our sourcecode and synthesized data will be open-sourced.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMjY1MzgzMF19
+eyJoaXN0b3J5IjpbMTMwMjQ2MjQ3NF19
 -->
