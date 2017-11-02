@@ -58,7 +58,10 @@
 	- 출력으로 ... outputs a **point-wise map of labels**, which is further refined by a CRF model. 
 	- 분류 작업으로 ... **Instance-level labels** are then obtained by applying conventional clustering algorithms `(such asDBSCAN)` on points within a category. 
 
-- To feed 3D point clouds to a 2D CNN, we adopt a spherical projection to transform sparse, irregularly distributed 3D point clouds todense, 2D grid representations. 
+- 3D 데이터를 2D에 입력 하기 위하여 `To feed 3D point clouds to a 2D CNN, `
+	- we adopt a **spherical projection** to transform sparse, irregularly distributed 3D point clouds to dense, 2D grid representations. 
+
+> 2D CNN을 쓰는건가? 
 
 The proposed CNN model draws inspiration from SqueezeNet [12] and is carefully designed to reduce parameter size and computational complexity,with an aim to reduce memory requirements and achieve real-time inference speed for our target embeddedapplications. 
 
@@ -70,5 +73,5 @@ To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a s
 
 We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzMzMTMzMDldfQ==
+eyJoaXN0b3J5IjpbLTcwOTYxNTk0M119
 -->
