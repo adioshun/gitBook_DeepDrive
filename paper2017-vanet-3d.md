@@ -135,7 +135,7 @@ The neighborhood weights of a point t(i)as anode in every Laplacian graph for ea
 
 ## 7. CONCLUSION
 
-We developed a framework for corresponding betweenobjects recognized from camera data set to Lidar and to DSRCdata sets that are characterized with the same underlying manifold.
+- We developed a framework for corresponding betweenobjects recognized from camera data set to Lidar and to DSRCdata sets that are characterized with the same underlying manifold.
 
 The mapping allows us to be more informed about oneobject that was paired between one or two data sets in termsof texture details from picture, V2V communication details aswell as the 3D shape and accurate distance to surroundings.
 
@@ -145,5 +145,5 @@ Full scene reconstruction of objects from the threeinput modes is represented wi
 
 In the future work we plan tostudy the effect of confusion in each input mode in the 3Dscene reconstruction without pre-identified paired points.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNzMyOTMyNl19
+eyJoaXN0b3J5IjpbMTc2MTcyOTYzMV19
 -->
