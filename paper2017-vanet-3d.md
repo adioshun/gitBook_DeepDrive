@@ -66,11 +66,19 @@ of
 
 - Joseph et al. [17] developed a general purpose object detection system characterized by a resolution classifier and the usage of a 2 fully connected networks that are built on top of a 24 convolutional layers network. 
 
+```
+
+```
+
 - Additionally,a unified muti-scale deep CNN for real-time object detectionis developed in [4] with many sub-network detectors with multiple output layers for multiple object class recognition. 
 
-Mostautonomous driving systems rely on Lidar, stereo cameras orradar sensors to achieve object detection, scene flow estimationof objects on roads and their key characteristics and influenceon driving decisions and steering commands. 
+```
 
-We present anaugmented scene flow understanding and object mapping byconsidering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
+```
+
+- Most autonomous driving systems rely on Lidar, stereo cameras or radar sensors to achieve object detection, **scene flow estimation** of objects on roads and their key characteristics and influence on driving decisions and steering commands. 
+
+- We present an augmented scene flow understanding and object mapping byconsidering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNjI0MzIwMl19
+eyJoaXN0b3J5IjpbLTM4MDUwOTQyMl19
 -->
