@@ -106,6 +106,10 @@ of
 
 - 여러 물체들이 있기 때문에 모든 물체 탐지를 목적으로 하지는 않는다. `For simplification purposes, we are not considering every object from the Lidar since a tremendous number of unknown objects is detected as a set of neighbored point cloud. `
 
+|![](https://i.imgur.com/q4c8GWT.png)|![](https://i.imgur.com/iJPitSs.png)|
+|-|-|
+
+
 - In Fig.7, the dots represents the objects detected from Lidar with(x,y,z) triplet that represents relative position to the Velodyne Lidar Scanner. 
 
 ![](https://i.imgur.com/nmCOVdh.png)
@@ -145,5 +149,5 @@ of
 
 - In the future work we plan to study the effect of confusion in each input mode in the 3D scene reconstruction without pre-identified paired points.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDE0NjY1NzJdfQ==
+eyJoaXN0b3J5IjpbLTE5MzcxMTkwMDhdfQ==
 -->
