@@ -104,11 +104,11 @@ of
 
 ## 4. 3D OBJECTS FROM LIDAR POINT CLOUD DATA
 
-For simplification purposes, we are not considering every object from the Lidar since a tremendous number of unknownobjects is detected as a set of neighbored point cloud. 
+- 여러 물체들이 있기 때문에 모든 물체 탐지를 목적으로 하지는 않는다. `For simplification purposes, we are not considering every object from the Lidar since a tremendous number of unknown objects is detected as a set of neighbored point cloud. 
 
-In Fig.7, the dots represents the objects detected from Lidar with(x,y,z) triplet that represents relative position to the VelodyneLidar Scanner. 
+- In Fig.7, the dots represents the objects detected from Lidar with(x,y,z) triplet that represents relative position to the Velodyne Lidar Scanner. 
 
-Most of the recognized object classes fromPoint Cloud data from 3D CNN or labeled data are unknownor do not represent major importance in the alignment. 
+- Most of the recognized object classes fromPoint Cloud data from 3D CNN or labeled data are unknownor do not represent major importance in the alignment. 
 
 Wenote that the manifold representing the adjacent objects fromLidar contains larger number of objects comparing to the onefrom the Camera as in Fig. 
 
@@ -119,5 +119,5 @@ For example, the vehicle nextto the paired point is not detected in Fig.
 5, but is detected inFig.7 in addition to other objects that are behind of the cameraand are captured by Lidar Scans.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMDczMTA3N119
+eyJoaXN0b3J5IjpbLTE2NzM1NzgyOTRdfQ==
 -->
