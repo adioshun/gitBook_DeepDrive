@@ -93,7 +93,25 @@ of
 
 - We present an augmented **scene flow** understanding and **object mapping** by considering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
 
-## III. ADAPTED DARKNET’S CONVOLUTIONAL NEURAL NETWORK AND KITTI FRAME TESTING
+## 3. ADAPTED DARKNET’S CONVOLUTIONAL NEURAL NETWORK AND KITTI FRAME TESTING
+
+- YOLO에 Inspired by CNN developed in [17-YOLO], we propose to exploi tthe feature of **Anchor Boxes** that predict the coordinates ofthe bounding boxes around recognized objects to find theirpixel adjacency directly from the fully connected layers thatare developed on top of the convolutional network extractor,as described in Fig. 
+
+1. 
+
+Fig. 
+
+2 and Fig. 
+
+4 represent the originalframes of the two different driving sequences from Kitti. 
+
+Bothof frame(a) and frame(b) present random object count perclass either for image recognition or for labeled Lidar objects. 
+
+Unfortunately, this is not an accurate measure since objectsmight be overlapped and consequently the distance in pixelsdoes not have any significance. 
+
+For this purpose, we introducethat a paired labeled point between camera and Lidar is thefarthest object in the Lidar scan and the farthest one beingdetected in the background of the image. 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc2NjAwMjUyXX0=
+eyJoaXN0b3J5IjpbMTg5NzAzNTUxMV19
 -->
