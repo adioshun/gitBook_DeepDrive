@@ -116,10 +116,11 @@ of
 
 ![](https://i.imgur.com/2oLSv07.png)
 
-- For example, the vehicle next to the paired point is not detected in Fig. 
+- For example, the vehicle next to the paired point is not detected in Fig. 5, but is detected in Fig.7 in addition to other objects that are behind of the camera and are captured by Lidar Scans.
 
-5, but is detected inFig.7 in addition to other objects that are behind of the cameraand are captured by Lidar Scans.
+## 5. SEMI-SUPERVISED ALIGNMENT OF MANIFOLDS: CAMERA TO LIDAR AND CAMERA TO BSMS
 
+Our problem formulation of manifolds alignment is to be applied to find correspondences between source data containing recognized objects from 2D camera and objects 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNzc2OTM1OF19
+eyJoaXN0b3J5IjpbLTk5MDY1NTg4Ml19
 -->
