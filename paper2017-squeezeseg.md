@@ -67,11 +67,7 @@
 
 - CRF모델은 RNN모듈로 reformulated 하여 CNN과 함께 동작 한다. `The CRF model is reformulated as a recurrentneural network (RNN) module as [11] and can be trained end-to-end together with the CNN model. `
 
-Our model is trained on LiDAR point clouds from the KITTI dataset [1]and point-wise segmentation labels are converted from 3D bounding boxes in KITTI. 
-
-To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a simulator toretrieve LiDAR point clouds and point-wise labels.Experiments show that SqueezeSeg achieves high accuracyand is extremely fast and stable, making it suitablefor autonomous driving applications. 
-
-We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
+- We additionally find that **supplanting** our dataset with **artificial, noise-injected simulation data** further boosts validation accuracy on realworld data.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Nzc5MjMyOTZdfQ==
+eyJoaXN0b3J5IjpbLTUwNzc5NTcwN119
 -->
