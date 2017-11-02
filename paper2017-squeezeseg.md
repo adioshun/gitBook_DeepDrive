@@ -30,9 +30,15 @@
 
 - LiDAR는 자율 주행차에서 중요한 센서이다. 본 논문은 3D LiDAR를 이용하여서 도로위 물체 세그멘테이션을 목표로 한다. `LiDAR based perception tasks have attracted significant research attention. In this work, we focus on road-object segmentation using(Velodyne style) 3D LiDAR point clouds. `
 
-Given point cloud output from a LiDAR scanner, the task aims to isolate objects of interest and predict their categories, as shown inFig. 1. 
+- 기존 접근방법은 아래와 같은 단계로 진행 된다. `Previous approaches comprise or use parts of the following stages: `
+	- Remove the ground, 
+	- cluster the remaining points into instances, 
+	- extract (hand-crafted) features from each cluster, 
+	- and classify each cluster based on its features.
 
-Previous approaches comprise or use parts of thefollowing stages: Remove the ground, cluster the remainingpoints into instances, extract (hand-crafted) features fromeach cluster, and classify each cluster based on its features.This paradigm, despite its popularity [2], [3], [4], [5], hasseveral disadvantages: a) Ground segmentation in the above pipeline usually relies on hand-crafted features or decisionrules – some approaches rely on a scalar threshold [6] andothers require more complicated features such as surfacenormals [7] or invariant descriptors [4], all of which mayfail to generalize and the latter of which require signifi-cant preprocessing. 
+- 기존 접근 방법들의 문제점 This paradigm, despite its popularity [2], [3], [4], [5], has several disadvantages: 
+
+a) Ground segmentation in the above pipeline usually relies on hand-crafted features or decisionrules – some approaches rely on a scalar threshold [6] andothers require more complicated features such as surfacenormals [7] or invariant descriptors [4], all of which mayfail to generalize and the latter of which require signifi-cant preprocessing. 
 
 b) Multi-stage pipelines see aggregateeffects of compounded errors, and classification or clusteringalgorithms in the pipeline above are unable to leveragecontext, most importantly the immediate surroundings ofan object. 
 
@@ -62,5 +68,5 @@ To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a s
 
 We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNjgxNjQ5OV19
+eyJoaXN0b3J5IjpbLTk5NzAzNDY0MV19
 -->
