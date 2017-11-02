@@ -54,11 +54,13 @@ of
 - Techniques based on 
 	- Markov RandomFields (MRF), 
 	- Conditional Random Field (CRF) 
-	- many graphical models are presented in [9], [14], [16] to guarantee the consistency of labeling of the pixels in the context ofthe overall image. 
+	- many graphical models are presented in [9], [14], [16] to guarantee the consistency of labeling of the pixels in the context of the overall image. 
 
-In addition, the authors in [18], [12]and [7] developed various methods for presegmentation intosuperpixels or segment candidates that are used to extract thecategories and features characterizing individual segments andfrom combinations of neighboring segments. 
+- In addition, the authors in [18], [12]and [7] developed various methods for 
+	- **presegmentation** into **superpixels** 
+	-  segment candidates that are used to extract the categories and features characterizing individual segments and from combinations of neighboring segments. 
 
-Alternatively,the authors in [13] attempted to create 3D reconstruction ofdynamic scenes by achieving a long-range spatio-temporalregularization in semantic video segmentation, since both thecamera and the scene are in motion. 
+- Alternatively,the authors in [13] attempted to **create 3D reconstruction** of dynamic scenes by achieving a long-range spatio-temporalregularization in semantic video segmentation, since both thecamera and the scene are in motion. 
 
 The developed idea isto integrate deep CNN and CRF to perform sharp pixel-levelboundaries of objects. 
 
@@ -74,5 +76,5 @@ Mostautonomous driving systems rely on Lidar, stereo cameras orradar sensors to 
 
 We present anaugmented scene flow understanding and object mapping byconsidering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc1NDk2MzddfQ==
+eyJoaXN0b3J5IjpbMzMyMTU0MzMyXX0=
 -->
