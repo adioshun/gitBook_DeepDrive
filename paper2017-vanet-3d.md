@@ -110,14 +110,12 @@ of
 
 - 인지된 대부분의 물체들은 Unknown이거나 중요한것들이 아니다. `Most of the recognized object classes (from Point Cloud data from 3D CNN or labeled data) are unknown or do not represent major importance in the alignment. `
 
-- We note that the manifold representing the adjacent objects fromLidar contains larger number of objects comparing to the onefrom the Camera as in Fig. 
-
-6. 
+- 주의 할점은  이미지에 비해 포인트 클라우드는 많은 종류의 representing 를 포함하고 있다. `We note that the manifold representing the adjacent objects from Lidar contains larger number of objects comparing to the one from the Camera as in Fig. 6. `
 
 For example, the vehicle nextto the paired point is not detected in Fig. 
 
 5, but is detected inFig.7 in addition to other objects that are behind of the cameraand are captured by Lidar Scans.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNTQ0ODA5MF19
+eyJoaXN0b3J5IjpbLTQ3NjQyMjE5XX0=
 -->
