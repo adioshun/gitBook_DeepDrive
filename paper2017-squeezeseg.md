@@ -49,11 +49,11 @@
 	- 딥러닝을 이용하여 특징 추출 `use deep learning to extract features,`
 	- 싱글 파이프라인을 이용하여 반복 알고리즘 회피 `develop a single-stage pipeline and thus sidestep iterative algorithms.`
 
-In this paper, we propose an end-to-end pipeline basedon convolutional neural networks (CNN) and conditionalrandom field (CRF). 
+- 제안 방법은 아래에 기반 하고 있다. `In this paper, we propose an end-to-end pipeline based on `
+	- convolutional neural networks (CNN) 
+	- conditional random field (CRF). 
 
-CNNs and CRFs have been successfullyapplied to segmentation tasks on 2D images [8], [9], [10],[11]. 
-
-To apply CNNs to 3D LiDAR point clouds, we designeda CNN that accepts transformed LiDAR point clouds andoutputs a point-wise map of labels, which is further refinedby a CRF model. 
+- CNN에 3D 를 적용하기 위하여 To apply CNNs to 3D LiDAR point clouds, we designed a CNN that accepts transformed LiDAR point clouds and outputs a point-wise map of labels, which is further refined by a CRF model. 
 
 Instance-level labels are then obtainedby applying conventional clustering algorithms (such asDBSCAN) on points within a category. 
 
@@ -69,5 +69,5 @@ To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a s
 
 We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM2MDY5Njg0XX0=
+eyJoaXN0b3J5IjpbNzc0MDQzODQ2XX0=
 -->
