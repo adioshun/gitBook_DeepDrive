@@ -26,9 +26,9 @@
 
 > [8.3ms/F = 120 FPS](https://steamcommunity.com/app/346110/discussions/0/530646715638737020/)
 
-Furthermore, additionally training on synthesized data boosts validation accuracy on real-world data. 
+## I. INTRODUCTION
 
-Our sourcecode and synthesized data will be open-sourced.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMjQ2MjQ3NF19
+eyJoaXN0b3J5IjpbLTIwNTg0NDI3NjddfQ==
 -->
