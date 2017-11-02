@@ -128,10 +128,20 @@ Conference on. IEEE, 2017, pp. 5067–5073
 [16] J. Schlosser, C. K. Chow, and Z. Kira, “Fusing lidar and images for pedestrian detection using convolutional neural networks,” in Robotics and Automation (ICRA), 2016 IEEE International Conference on.
 IEEE, 2016, pp. 2198–2205.
 [17] B. Li, T. Zhang, and T. Xia, “Vehicle detection from 3d lidar using fully convolutional network,” arXiv preprint arXiv:1608.07916, 2016.
-[18] D. Maturana and S. Scherer, “3d convolutional neural networks for landing zone detection from lidar,” in Robotics and Automation
-(ICRA), 2015 IEEE International Conference on. IEEE, 2015, pp.
+[18] D. Maturana and S. Scherer, “3d convolutional neural networks for landing zone detection from lidar,” in Robotics and Automation (ICRA), 2015 IEEE International Conference on. IEEE, 2015, pp.
 3471–3478.
 ```
+
+
+### 2.3 Semantic Segmentation for Images
+
+### 2.4 Data Collection through Simulation
+
+## 3. METHOD DESCRIPTION
+
+### 3.1 Point Cloud Transformation
+
+### 3.2 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAwOTUwMjA0XX0=
+eyJoaXN0b3J5IjpbNTEzMzQxMTU1XX0=
 -->
