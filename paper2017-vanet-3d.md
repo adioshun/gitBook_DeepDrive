@@ -11,17 +11,22 @@
 
 # VANET 
 
-- we design a multimodal framework for object detection, recognition and mapping based on the fusion
+- we design a **multimodal framework** for object **detection**, **recognition** and **mapping** based on the fusion
 of 
 	- stereo camera frames
 	- point cloud Velodyne Lidar scans,
-	- Vehicle-to-Vehicle (V2V) Basic Safety Messages (BSMs) exchanged
-using Dedicated Short Range Communication (DSRC).
+	- Vehicle-to-Vehicle (V2V) Basic Safety Messages exchanged using DSRC
+
+- We merge the key features of rich texture descriptions of objects 
+	- from 2D images, 
+	- depth 
+	- distance between objects provided by 3D point cloud and awareness of hidden vehicles from BSMs’ 3D
+information.
 
 
 ## I. INTRODUCTION
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNTQ1NDIyMF19
+eyJoaXN0b3J5IjpbLTEwOTg2NTE5MTFdfQ==
 -->
