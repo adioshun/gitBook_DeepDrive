@@ -3,13 +3,16 @@
 | --- | --- |
 | 저자\(소속\) | Yassine Maalej \(University of Idaho\) |
 | 학회/년도 | arXiv 2017, [논문](https://arxiv.org/abs/1705.08624) |
-| 키워드 | |
+| 키워드 | Yassine2017,  |
 | 데이터셋(센서)/모델 | |
 | 관련연구||
 | 참고 | |
 | 코드 | |
 
+# VANET 
 
+
+## I. INTRODUCTION
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNjY1OTYzN119
+eyJoaXN0b3J5IjpbMTA0OTcwNTY2OV19
 -->
