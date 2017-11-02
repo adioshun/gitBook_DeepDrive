@@ -81,24 +81,19 @@ of
 [13] Abhijit Kundu, Vibhav Vineet, and Vladlen Koltun. Feature space optimization for semantic video segmentation. In CVPR, 2016.
 ```
 
-- Joseph et al. [17] developed a general purpose object detection system characterized by a resolution classifier and the usage of a 2 fully connected networks that are built on top of a 24 convolutional layers network. 
-
-```
-[17] Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi. You 
-only look once: Unified, real-time object detection. In The IEEE
-Conference on Computer Vision and Pattern Recognition (CVPR), June
-2016.
-```
+- Joseph et al. [17-YOLO] developed a general purpose object detection system characterized by a resolution classifier and the usage of a 2 fully connected networks that are built on top of a 24 convolutional layers network. 
 
 - Additionally,a unified muti-scale deep CNN for real-time object detectionis developed in [4] with many sub-network detectors with multiple output layers for multiple object class recognition. 
 
 ```
-
+[4] Zhaowei Cai, Quanfu Fan, Rogerio Schmidt Feris, and Nuno Vascon- celos. A unified multi-scale deep convolutional neural network for fast object detection. CoRR, abs/1607.07155, 2016.
 ```
 
 - 씬 플로우도 중요 하다. Most autonomous driving systems rely on Lidar, stereo cameras or radar sensors to achieve object detection, **scene flow estimation** of objects on roads and their key characteristics and influence on driving decisions and steering commands. 
 
 - We present an augmented **scene flow** understanding and **object mapping** by considering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
+
+## III. ADAPTED DARKNET’S CONVOLUTIONAL NEURAL NETWORK AND KITTI FRAME TESTING
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NzM0OTcyN119
+eyJoaXN0b3J5IjpbODc2NjAwMjUyXX0=
 -->
