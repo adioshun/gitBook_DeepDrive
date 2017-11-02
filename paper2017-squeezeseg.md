@@ -47,7 +47,7 @@
 
 - 새로운 제안 `We takean alternative approach: `
 	- 딥러닝을 이용하여 특징 추출 `use deep learning to extract features,`
-	- 싱글 파이프라인을 이용하여 반복 알develop a single-stage pipeline and thus sidestep iterative algorithms.
+	- 싱글 파이프라인을 이용하여 반복 알고리즘 회피 `develop a single-stage pipeline and thus sidestep iterative algorithms.`
 
 In this paper, we propose an end-to-end pipeline basedon convolutional neural networks (CNN) and conditionalrandom field (CRF). 
 
@@ -69,5 +69,5 @@ To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a s
 
 We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc5MzE3Njc4XX0=
+eyJoaXN0b3J5IjpbNjM2MDY5Njg0XX0=
 -->
