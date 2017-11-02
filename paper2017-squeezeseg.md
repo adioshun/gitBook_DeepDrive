@@ -99,11 +99,16 @@ Conference on. IEEE, 2017, pp. 5067–5073
 	- It proposed to directly classify point patches into background and foreground objects of different categories then use EMST-RANSAC [5]to further cluster instances
 
 ```
-[4] D. Z. Wang, I. Posner, and P. Newman, “What could move? finding 
-cars, pedestrians and bicyclists in 3d laser data,” in Robotics and
-Automation (ICRA), 2012 IEEE International Conference on. IEEE,
-2012, pp. 4038–4044.
+[4] D. Z. Wang, I. Posner, and P. Newman, “What could move? finding cars, pedestrians and bicyclists in 3d laser data,” in Robotics and Automation (ICRA), 2012 IEEE International Conference on. IEEE,2012, pp. 4038–4044.
 ```
+
+### 2.2 CNN for 3D point clouds
+
+- CNN approaches consider LiDAR point clouds in either **two** or **three** dimensions. 
+
+- Work with **two-dimensional** data considers raw images with projections of LiDAR pointclouds top-down [14] or from a number of other views [15].Other work considers three-dimensional data itself, discretizingthe space into voxels and engineering featuressuch as disparity, mean, and saturation [16]. 
+
+Regardlessof data preparation, deep learning methods consider endto-endmodels that leverage 2D convolutional [17] or 3Dconvolutional [18] neural networks.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTU4NzM1OTZdfQ==
+eyJoaXN0b3J5IjpbMTYxODcwNDI0XX0=
 -->
