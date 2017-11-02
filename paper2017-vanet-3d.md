@@ -28,11 +28,10 @@ of
 
 -  VANET & 자율주행 연구는 **separate worlds**, and barely affected one another despite the obvious relationships.
 
-### 1.1 기존 연구 
+- 기존 연구 **Vote3Deep** is developed in [5] for fast point cloud object detection from 3D CNN in order to keep the key power of Lidar as distance and objects 3D shapes and depth. 
 
-Vote3Deep isdeveloped in [5] for fast point cloud object detection from3D CNN in order to keep the key power of Lidar as distanceand objects 3D shapes and depth. 
-
-The Kitti Vision BenchmarkSuite [6] offers raw Lidar and labeled objects from point cloudas well as RGB and Grayscale sequences images of driving.However, it does not offer any V2V type of message [11], [15]which offers various types of safety applications operating ona control channel of its 7 available channels operating over adedicated 75 MHz spectrum band around 5.9 GHz. 
+-  V2V type of message [11], [15]which 
+	- offers various types of safety applications operating on a control channel of its 7 available channels operating over a dedicated 75 MHz spectrum band around 5.9 GHz. 
 
 The goalof this work is to merge the key features of Lidar in givingaccurate distances, camera with object textural details, andV2V beacons for the awareness of both hidden out-of-sight vehiclesor vehicles not observed by the two other means due tobad conditions (e.g., rainy or foggy weather). 
 
@@ -54,5 +53,5 @@ BSM creation accordingto the Lidar recognized objects from Kitti suite, number o
 
 Section VIIprovides conclusion and future work
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0ODAwNDY1OV19
+eyJoaXN0b3J5IjpbMTA3NzQ2Mjg4NF19
 -->
