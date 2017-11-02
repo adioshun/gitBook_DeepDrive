@@ -42,12 +42,14 @@
 		- all of which may **fail to generalize** and the latter of which require significant preprocessing. 
 	- 단점 2: **Multi-stage pipelines** see aggregate effects of **compounded errors**, and classification or clustering algorithms in the pipeline above are **unable to leverage context**, most importantly the immediate surroundings of an object. 
 	- 단점 3: Many approaches for ground removal rely on **iterative algorithms** 
-		- such as RANSAC (random sampleconsensus) [5], GP-INSAC (Gaussian Process IncrementalSample Consensus) [2], or agglomerative clustering [2]. 
+		- `such as RANSAC (random sampleconsensus) [5], GP-INSAC (Gaussian Process IncrementalSample Consensus) [2], or agglomerative clustering [2]`. 
 		- The **runtime** and **accuracy** of these algorithmic components depend on the quality of random initializations and, therefore,can be **unstable.** 
 
-This instability is not acceptable for manyembedded applications such as autonomous driving. 
+- 새로운 제안 `We takean alternative approach: `
+	- 딥러닝을 이용하여 특징 추출 `use deep learning to extract features,`
+	- 싱글 파이프라인을 이용하여 반복 알develop a single-stage pipeline and thus sidestep iterative algorithms.
 
-We takean alternative approach: use deep learning to extract features,develop a single-stage pipeline and thus sidestep iterativealgorithms.In this paper, we propose an end-to-end pipeline basedon convolutional neural networks (CNN) and conditionalrandom field (CRF). 
+In this paper, we propose an end-to-end pipeline basedon convolutional neural networks (CNN) and conditionalrandom field (CRF). 
 
 CNNs and CRFs have been successfullyapplied to segmentation tasks on 2D images [8], [9], [10],[11]. 
 
@@ -67,5 +69,5 @@ To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a s
 
 We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NjQ1Mjk1XX0=
+eyJoaXN0b3J5IjpbOTc5MzE3Njc4XX0=
 -->
