@@ -141,7 +141,13 @@ IEEE, 2016, pp. 2198–2205.
 
 ### 3.1 Point Cloud Transformation
 
-### 3.2 
+### 3.2 Network structure
+
+### 3.3 Conditional Random Field
+
+### 3.4 Data collection
+
+## 4. EXPERIMENTS
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEzMzQxMTU1XX0=
+eyJoaXN0b3J5IjpbODU2NDE0NTQ0XX0=
 -->
