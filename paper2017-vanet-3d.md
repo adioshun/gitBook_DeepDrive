@@ -58,12 +58,8 @@ of
 
 ```
 [9] Xuming He and Richard S. Zemel. Learning hybrid models for image annotation with partially labeled data. In D. Koller, D. Schuurmans, Y. Bengio, and L. Bottou, editors, Advances in Neural Information Processing Systems 21, pages 625–632. Curran Associates, Inc., 2009.
-[14] L. Ladicky, C. Russell, P. Kohli, and P. H. S. Torr. Associative ´
-hierarchical crfs for object class image segmentation. In 2009 IEEE
-12th International Conference on Computer Vision, pages 739–746, Sept
-2009.
-[16] Daniel Munoz, J Andrew Bagnell, and Martial Hebert. Stacked hierarchical
-labeling. In European Conference on Computer Vision, pages
+[14] L. Ladicky, C. Russell, P. Kohli, and P. H. S. Torr. Associative ´hierarchical crfs for object class image segmentation. In 2009 IEEE 12th International Conference on Computer Vision, pages 739–746, Sept 2009.
+[16] Daniel Munoz, J Andrew Bagnell, and Martial Hebert. Stacked hierarchical labeling. In European Conference on Computer Vision, pages
 57–70. Springer, 2010.
 ```
 
@@ -91,5 +87,5 @@ labeling. In European Conference on Computer Vision, pages
 
 - We present an augmented **scene flow** understanding and **object mapping** by considering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU1MjUzMjE2XX0=
+eyJoaXN0b3J5IjpbLTY4OTE5NDE2XX0=
 -->
