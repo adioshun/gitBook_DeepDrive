@@ -63,15 +63,15 @@
 
 > 2D CNN을 쓰는건가? 
 
-- 제안 모델은 SqueezeNet을 기반으로 하였으며 임베디드 시스템에서 동작 할수 있도록 속도와 메모리 부하를 줄였다. `The proposed CNN model draws inspiration from SqueezeNet [12] and is carefully designed to reduce parameter size and computational complexity, with an aim to reduce memory requirements and achieve real-time inference speed for our target embedded applications. `
+- 제안 모델은 SqueezeNet을 기반으로 하였으며 임베디드 시스템에서 동작 할수 있도록 속도를 높이고 메모리 부하를 줄였다. `The proposed CNN model draws inspiration from SqueezeNet [12] and is carefully designed to reduce parameter size and computational complexity, with an aim to reduce memory requirements and achieve real-time inference speed for our target embedded applications. `
 
-The CRF model is reformulated as a recurrentneural network (RNN) module as [11] and can be trainedend-to-end together with the CNN model. 
+- CRF모델은 RNN모듈로 reformulated 하여 CNN과 함께 동작 한다. `The CRF model is reformulated as a recurrentneural network (RNN) module as [11] and can be trained end-to-end together with the CNN model. `
 
-Our model istrained on LiDAR point clouds from the KITTI dataset [1]and point-wise segmentation labels are converted from 3Dbounding boxes in KITTI. 
+Our model is trained on LiDAR point clouds from the KITTI dataset [1]and point-wise segmentation labels are converted from 3D bounding boxes in KITTI. 
 
 To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a simulator toretrieve LiDAR point clouds and point-wise labels.Experiments show that SqueezeSeg achieves high accuracyand is extremely fast and stable, making it suitablefor autonomous driving applications. 
 
 We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDQ3NDUzNTFdfQ==
+eyJoaXN0b3J5IjpbLTE0Nzc5MjMyOTZdfQ==
 -->
