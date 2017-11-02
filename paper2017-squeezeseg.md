@@ -11,9 +11,11 @@
 
 - 입력 : 3D LiDAR -> Segmentation `In this paper, we address semantic segmentation of road-objects from 3D LiDAR point clouds. `
 
-In particular, wewish to detect and categorize instances of interest, such as cars,pedestrians and cyclists. 
+- We formulate this problem as a **point wise classification problem**
 
-We formulate this problem as a pointwiseclassification problem, and propose an end-to-end pipelinecalled SqueezeSeg based on convolutional neural networks(CNN): the CNN takes a transformed LiDAR point cloud asinput and directly outputs a point-wise label map, which isthen refined by a conditional random field (CRF) implementedas a recurrent layer. 
+- propose an end-to-end pipeline called **SqueezeSeg** based on convolutional neural networks(CNN): 
+
+- the CNN takes a transformed LiDAR point cloud as input and directly outputs a point-wise label map, which is then refined by a conditional random field (CRF) implemented as a recurrent layer. 
 
 Instance-level labels are then obtained byconventional clustering algorithms. 
 
@@ -27,5 +29,5 @@ Furthermore, additionally training on synthesizeddata boosts validation accuracy
 
 Our sourcecode and synthesized data will be open-sourced.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MTk0MDMxN119
+eyJoaXN0b3J5IjpbLTExODMxNjAwOF19
 -->
