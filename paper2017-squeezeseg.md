@@ -20,15 +20,13 @@
 	-  which is then refined by a **conditional random field (CRF)** implemented as a recurrent layer. 
 	- **Instance-level labels** are then obtained by conventional clustering algorithms. 
 
-Our CNN model is trained on LiDAR point clouds from the KITTI [1] dataset, and our point-wise segmentation labels are derived from 3D bounding boxes from KITTI. 
+- GTA-V를 이용하여서 가상 데이터 획득 `To obtain extra training data, we built a LiDAR simulator into Grand Theft Auto V (GTA-V), a popular video game, to synthesize large amounts of realistic training data. `
 
-To obtain extra training data, we built aLiDAR simulator into Grand Theft Auto V (GTA-V), a popularvideo game, to synthesize large amounts of realistic trainingdata. 
-
-Our experiments show that SqueezeSeg achieves highaccuracy with astonishingly fast and stable runtime (8.7 ±0.5 ms per frame), highly desirable for autonomous drivingapplications. 
+Our experiments show that SqueezeSeg achieves high accuracy with astonishingly fast and stable runtime (8.7 ±0.5 ms per frame), highly desirable for autonomous driving applications. 
 
 Furthermore, additionally training on synthesizeddata boosts validation accuracy on real-world data. 
 
 Our sourcecode and synthesized data will be open-sourced.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDM2NTA4OTddfQ==
+eyJoaXN0b3J5IjpbMjczMDQ1ODExXX0=
 -->
