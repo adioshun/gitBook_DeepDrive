@@ -108,14 +108,18 @@ of
 
 - In Fig.7, the dots represents the objects detected from Lidar with(x,y,z) triplet that represents relative position to the Velodyne Lidar Scanner. 
 
+![](https://i.imgur.com/nmCOVdh.png)
+
 - 인지된 대부분의 물체들은 Unknown이거나 중요한것들이 아니다. `Most of the recognized object classes (from Point Cloud data from 3D CNN or labeled data) are unknown or do not represent major importance in the alignment. `
 
 - 주의 할점은  이미지에 비해 포인트 클라우드는 많은 종류의 representing 를 포함하고 있다. `We note that the manifold representing the adjacent objects from Lidar contains larger number of objects comparing to the one from the Camera as in Fig. 6. `
 
-For example, the vehicle nextto the paired point is not detected in Fig. 
+![](https://i.imgur.com/2oLSv07.png)
+
+- For example, the vehicle nextto the paired point is not detected in Fig. 
 
 5, but is detected inFig.7 in addition to other objects that are behind of the cameraand are captured by Lidar Scans.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NjQyMjE5XX0=
+eyJoaXN0b3J5IjpbLTQwNDg3MTg2MF19
 -->
