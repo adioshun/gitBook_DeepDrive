@@ -66,14 +66,28 @@ of
 	- **presegmentation** into **superpixels** 
 	-  segment candidates that are used to extract the categories and features characterizing individual segments and from combinations of neighboring segments. 
 
+```
+[18] Joseph Tighe and Svetlana Lazebnik. Superparsing: Scalable nonparametric image parsing with superpixels. In Proceedings of the 11th European Conference on Computer Vision: Part V, ECCV’10, pages 352–365, Berlin, Heidelberg, 2010. Springer-Verlag.
+[12] M. P. Kumar and D. Koller. Efficiently selecting regions for scene understanding. In 2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, pages 3217–3224, June 2010.
+[7] S. Gould, R. Fulton, and D. Koller. Decomposing a scene into geometric and semantically consistent regions. In 2009 IEEE 12th International Conference on Computer Vision, pages 1–8, Sept 2009
+```
+
+
 - Alternatively,the authors in [13] attempted to **create 3D reconstruction** of dynamic scenes by achieving a long-range spatio-temporal regularization in semantic video segmentation, since both the camera and the scene are in motion. 
 	- The developed idea is to integrate deep CNN and CRF to perform sharp pixel-level boundaries of objects. 
 	- To this end, deep learning has shown the best performance in inferring objects from not previously trained or seen scenes. 
 
+```
+[13] Abhijit Kundu, Vibhav Vineet, and Vladlen Koltun. Feature space optimization for semantic video segmentation. In CVPR, 2016.
+```
+
 - Joseph et al. [17] developed a general purpose object detection system characterized by a resolution classifier and the usage of a 2 fully connected networks that are built on top of a 24 convolutional layers network. 
 
 ```
-
+[17] Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi. You 
+only look once: Unified, real-time object detection. In The IEEE
+Conference on Computer Vision and Pattern Recognition (CVPR), June
+2016.
 ```
 
 - Additionally,a unified muti-scale deep CNN for real-time object detectionis developed in [4] with many sub-network detectors with multiple output layers for multiple object class recognition. 
@@ -86,5 +100,5 @@ of
 
 - We present an augmented **scene flow** understanding and **object mapping** by considering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjM5NTA3NDJdfQ==
+eyJoaXN0b3J5IjpbMTQ4NzM0OTcyN119
 -->
