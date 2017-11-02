@@ -48,15 +48,13 @@ of
 
 ## RELATED WORK
 
-One approach to understand the scene around vehicles is semantic segmentation that labels each pixel in an image withthe category of the belonging objects. 
+- 자율 주행을 위해서는 **세그멘테이션이** 필수 적이다. 
+	- semantic segmentation that labels each pixel in an image withthe 
 
-Labeling each pixel ofthe scene independently from its surrounding pixels is a veryhard task to achieve. 
-
-In order to know the category of a pixel,we have to rely on relatively short-range surrounding informationand long-range information. 
-
-In other words, to determinethat a certain pixel belongs to a vehicle, a person or to anyother class of objects, we need to have a contextual windowthat is wide enough to show the surrounding of the pixel andconsequently to make an informed decision of the object classthat contains the pixel. 
-
-Techniques based on Markov RandomFields (MRF), Conditional Random Field (CRF) and manygraphical models are presented in [9], [14], [16] to guaranteethe consistency of labeling of the pixels in the context ofthe overall image. 
+- Techniques based on 
+	- Markov RandomFields (MRF), 
+	- Conditional Random Field (CRF) 
+	- many graphical models are presented in [9], [14], [16] to guarantee the consistency of labeling of the pixels in the context ofthe overall image. 
 
 In addition, the authors in [18], [12]and [7] developed various methods for presegmentation intosuperpixels or segment candidates that are used to extract thecategories and features characterizing individual segments andfrom combinations of neighboring segments. 
 
@@ -76,5 +74,5 @@ Mostautonomous driving systems rely on Lidar, stereo cameras orradar sensors to 
 
 We present anaugmented scene flow understanding and object mapping byconsidering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTQ2NTUwNV19
+eyJoaXN0b3J5IjpbMjc1NDk2MzddfQ==
 -->
