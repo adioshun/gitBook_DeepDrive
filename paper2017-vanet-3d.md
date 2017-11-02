@@ -135,15 +135,15 @@ The neighborhood weights of a point t(i)as anode in every Laplacian graph for ea
 
 ## 7. CONCLUSION
 
-- We developed a framework for corresponding between objects recognized from camera data set to Lidar and to DSRCdata sets that are characterized with the same underlying manifold.
+- We developed a framework for **corresponding** between objects recognized from **camera data set to Lidar** and to **DSRC data** sets that are characterized with the same underlying manifold.
 
-The mapping allows us to be more informed about oneobject that was paired between one or two data sets in termsof texture details from picture, V2V communication details aswell as the 3D shape and accurate distance to surroundings.
+- The mapping allows us to be more informed about one object that was paired between one or two data sets in terms of texture details from picture, V2V communication details as well as the 3D shape and accurate distance to surroundings.
 
-3D point cloud, 2D images and V2V 3D information aresupplementary to each other to accomplish robust perceptionof roads. 
+- 3D point cloud, 2D images and V2V 3D information are supplementary to each other to accomplish robust perception of roads. 
 
 Full scene reconstruction of objects from the threeinput modes is represented with focus on the increased addedpoints from each technology. 
 
 In the future work we plan tostudy the effect of confusion in each input mode in the 3Dscene reconstruction without pre-identified paired points.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjM0MzU2NjldfQ==
+eyJoaXN0b3J5IjpbNTAzMTgyMDk1XX0=
 -->
