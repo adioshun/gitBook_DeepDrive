@@ -15,13 +15,12 @@
 
 - propose an end-to-end pipeline called **SqueezeSeg** based on convolutional neural networks(CNN): 
 
-- 입력 : LiDAR Point cloud -> 출력 : point-wise label map -> refined 
+- 입력 : LiDAR Point cloud -> 출력 : point-wise label map -> refined -> Instance-level labels
 -  the CNN takes a transformed **LiDAR point cloud** as input and directly outputs a **point-wise label map**,
 	-  which is then refined by a **conditional random field (CRF)** implemented as a recurrent layer. 
+	- **Instance-level labels** are then obtained by conventional clustering algorithms. 
 
-Instance-level labels are then obtained byconventional clustering algorithms. 
-
-Our CNN model is trainedon LiDAR point clouds from the KITTI [1] dataset, and ourpoint-wise segmentation labels are derived from 3D boundingboxes from KITTI. 
+Our CNN model is trained on LiDAR point clouds from the KITTI [1] dataset, and our point-wise segmentation labels are derived from 3D bounding boxes from KITTI. 
 
 To obtain extra training data, we built aLiDAR simulator into Grand Theft Auto V (GTA-V), a popularvideo game, to synthesize large amounts of realistic trainingdata. 
 
@@ -31,5 +30,5 @@ Furthermore, additionally training on synthesizeddata boosts validation accuracy
 
 Our sourcecode and synthesized data will be open-sourced.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MTI0NzE0Ml19
+eyJoaXN0b3J5IjpbLTIwMDM2NTA4OTddfQ==
 -->
