@@ -149,18 +149,97 @@ Example HHA results can be seen in Figure 2.
 
 ### 3.5 Fusion Architectures
 
-Given this pipeline, we explore the key question: at whichpoint in the network should the RGB and HHA data be fusedfor optimal results? Should it be done at the input level, afterlow-level features (edges), after mid-level features (motifs and low-level shapes), or after high-level features (objectclass decisions)? To answer this question, we experimentedwith the following fusion architectures (displayed in Figure3): Each network derives from the architecture described inTable I, which is itself the network from [11]. 
+- 중요한 질문은 Fuse를 어느 시점에 해야 하는가 이다. `Given this pipeline, we explore the key question: at which point in the network should the RGB and HHA data be fused for optimal results? `
+	- Should it be done at the input level, 
+    - afterlow-level features (edges), 
+    - after mid-level features (motifs and low-level shapes), 
+    - or after high-level features (objectclass decisions)? 
+    
+- 이 질문에 대답 하기 위하여 여러 경우에 대하여 실험 하였다. ` To answer this question, we experimented with the following fusion architectures (displayed in Figure3): `
 
-For eachsub-network, parts of the base architecture are copied andeventually fused. 
+![](https://i.imgur.com/DopPPdX.png)
 
-We experimented with a spread of fusionat various levels. 
+- Network A: One fully six-channel (RGBHHA) network
 
-Note that we also experimented with using asingle sub-network for HHA vs. 
+- Network B: Two three-channel sub-networks (RGB and HHA); fused after the norm2 layer and before the conv3 layer
 
-splitting the HHA channelsinto their own individual sub-networks; unlike the RGBchannels, the individual channels in the HHA representationdiffer in the type of information they represent, and so itwas hypothesized that learning channel-specific filters wouldincrease performance.An important consideration for each network is the numberof parameters (weights) in the network. 
+- Network C: Two three-channel sub-networks (RGB and HHA); fused after the relu3 layer and before the conv4 layer
 
-This affects bothtraining time as well as classification speed during deployment.A comparison of the parameter counts for the differentnetwork architectures can be found in Table II.
+- Network D: Two three-channel sub-networks (RGB and HHA); fused after the pool5 layer and before the fc6 layer
+
+- Network E: Four sub-networks (RGB, H, H, and A); fused after the relu3 layer and before the conv4 layer
+
+- Network F: Four sub-networks (RGB, H, H, and A); fused after the pool5 layer and before the fc6 layer 
+
+- We refer to the network from [4] as Network G throughout
+
+```
+[4] Andreas Eitel et al. “Multimodal Deep Learning for Robust RGB-D Object Recognition”. In: CoRR abs/1507.06821 (2015). 
+```
+
+
+- 각 네트워크는 그림1의 Basic 네트워크를 기본으로 한다. `Each network derives from the architecture described in Table I, which is itself the network from [11-Caffe]. `
+
+- For each sub-network, parts of the base architecture are copied and eventually fused. 
+
+- We experimented with a spread of fusion at various levels. 
+
+- Note that we also experimented with using a single sub-network for **HHA vs. splitting the HHA channels** into their own individual sub-networks; 
+	- unlike the RGB channels, the individual channels in the HHA representationdiffer in the type of information they represent, 
+    - and so it was hypothesized that learning channel-specific filters would increase performance.
+    
+ > learning channel-specific filters would increase performance
+
+- 중요한 고려 요소는 각 네트워크의 파라미터 수이다. `An important consideration for each network is the numberof parameters (weights) in the network. `
+	- 파라미터 수는 수행 속도에 영향을 준다. `This affects both training time as well as classification speed during deployment.`
+    - 네트워크별 파라미터 수는 다음 표에 정리 되어 있다. `A comparison of the parameter counts for the different network architectures can be found in Table II.`
+
 
 ## 4. Experimental Design
 
+
+
+
 ## 5. Results
+
+![](https://i.imgur.com/OeYqGM3.png)
+```
+[Fig. 5. Percent improvement in mAP in the three difficulty categories, for all conditions.]
+- Note that the RGB network without pre-training performed worse than the original input proposal mechanism,
+- and that there is a distinct pattern where early and late layers perform well, middle layers come next,
+while intermediate ones between them do not perform as well.
+```
+
+- 파인튜닝 하는것보다 퓨젼하는게 성능이 더 좋다. `From Figure 5, it is apparent that the more successful fusion methods are able to perform quite well and improve over the proposal mechanism even without any fine-tuning.`
+
+- NetworkD가 성능이 가장 좋고 앞단 퓨젼인 Network A, B가 그 다음이다. `Network D, in particular, is able to perform quite well across the board, although the early fusion networks (A & B) are close seconds. `
+
+- 흥미로운 점은 Interestingly, the gain in performance between using a column per channel (e.g. 3 columns for HHA,Network C vs. E or D vs. F) does not consistently improve or decrease performance despite adding more parameters to the network. 
+
+- [4]에서 가져온  파인튜닝이 없는 Network G가 성능이 안 좋다. ` Network G, which mirrors that in [4], performs quite poorly without any fine-tuning. `
+	- 파라미터가 적어서 그런것 같다(??) `This is not surprising,given the small amount of training available. 
+	- 하지만, Network D도 많은 수의 파라미터가 있는데도 성능이 좋게 나왔다. `However, note that Network D has a large number of parameters as well(though still less than G) and can do quite well without finetuning.`
+
+
+- Conv레이어 이후에 퓨젼 하는게 쉽다. (fully-connected layers를 학습할 필요가 없으므로)
+	- It might be that fusing after the convolution layers,`without having to train the fully-connected layers to combine the modalities`, might be easier. 
+
+- 다르게 보면 In other words, combining the filter outputs on each modality and learning a classifier on top of those two sets of feature maps is easier than learning hidden representations for each modality alone andthen fusing the resulting hidden representations.
+
+
+
+
+- While the above results provide some interesting findings, we continued our experiments by performing two additional modifications. 
+
+- 뒷단 퓨전이 성능은 좋지만, 파라미터가 늘어나서 연산 부하가 크다. ` First, while the late fusion methods perform well they incur significant cost due to their large number of parameters. `
+
+- The early fusion networks cannot trivially be fine-tuned (since there is a different number of channels),but the middle layers can be fine-tuned up to the fusion portion. 
+
+- Hence, we fine-tuned Network E to see if we could get better performance while retaining the smaller number ofparameters. 
+
+- Second, since Network G had good performancewhen fine-tuned in work that occurred in parallel with thiswork, we performed this dual-column fine-tuning where boththe RGB and depth columns were initialized with the RGB basedtraining.
+
+
+## 6. Discussion and Conclusions
+
+
