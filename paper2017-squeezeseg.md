@@ -24,11 +24,11 @@
 
 Our experiments show that SqueezeSeg achieves high accuracy with astonishingly fast and stable runtime (8.7 ±0.5 ms per frame), highly desirable for autonomous driving applications. 
 
-> 8.7ms = 
+> 20ms/f would be 50 FPS, 15 ms/f would be 66 FPS and 8.3ms/f would be 120 FPS
 
 Furthermore, additionally training on synthesizeddata boosts validation accuracy on real-world data. 
 
 Our sourcecode and synthesized data will be open-sourced.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTEyODkwNzFdfQ==
+eyJoaXN0b3J5IjpbLTQzODI1NjMxM119
 -->
