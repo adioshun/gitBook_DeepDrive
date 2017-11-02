@@ -78,7 +78,7 @@ of
 
 - Most autonomous driving systems rely on Lidar, stereo cameras or radar sensors to achieve object detection, **scene flow estimation** of objects on roads and their key characteristics and influence on driving decisions and steering commands. 
 
-- We present an augmented scene flow understanding and object mapping byconsidering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
+- We present an augmented **scene flow** understanding and object mapping byconsidering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MDUwOTQyMl19
+eyJoaXN0b3J5IjpbLTE3MDg4ODY4OTRdfQ==
 -->
