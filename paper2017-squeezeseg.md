@@ -9,7 +9,7 @@
 
 # SqueezeSeg
 
-- 입력 : 3D LiDAR -> SegmeIn this paper, we address semantic segmentation of road-objects from 3D LiDAR point clouds. 
+- 입력 : 3D LiDAR -> Segmentation `In this paper, we address semantic segmentation of road-objects from 3D LiDAR point clouds. `
 
 In particular, wewish to detect and categorize instances of interest, such as cars,pedestrians and cyclists. 
 
@@ -27,5 +27,5 @@ Furthermore, additionally training on synthesizeddata boosts validation accuracy
 
 Our sourcecode and synthesized data will be open-sourced.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1ODM0NjExMl19
+eyJoaXN0b3J5IjpbMTg4MTk0MDMxN119
 -->
