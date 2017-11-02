@@ -100,9 +100,24 @@ of
 
 - 하지만, 정확도가 별로 좋지 않다. 왜냐 하면 물체가 겹쳐 있고 거리에 대한 정보를 활용하지 않기 떄문이다. `Unfortunately, this is not an accurate measure since objects might be overlapped and consequently the distance in pixels does not have any significance. `
 
-- 따라서 본 논문에서는 카메라와 LiDAR를 모두 사용하여 For this purpose, we introduce that a paired labeled point between camera and Lidar is the farthest object in the Lidar scan and the farthest one being detected in the background of the image. 
+- 따라서 본 논문에서는 카메라와 LiDAR를 모두 사용하여 멀리 있는 물체도 고려 하였다. `For this purpose, we introduce that a paired labeled point between camera and Lidar is the farthest object in the Lidar scan and the farthest one being detected in the background of the image. `
 
+## 4. 3D OBJECTS FROM LIDAR POINT CLOUD DATA
+
+For simplification purposes, we are not considering every object from the Lidar since a tremendous number of unknownobjects is detected as a set of neighbored point cloud. 
+
+In Fig.7, the dots represents the objects detected from Lidar with(x,y,z) triplet that represents relative position to the VelodyneLidar Scanner. 
+
+Most of the recognized object classes fromPoint Cloud data from 3D CNN or labeled data are unknownor do not represent major importance in the alignment. 
+
+Wenote that the manifold representing the adjacent objects fromLidar contains larger number of objects comparing to the onefrom the Camera as in Fig. 
+
+6. 
+
+For example, the vehicle nextto the paired point is not detected in Fig. 
+
+5, but is detected inFig.7 in addition to other objects that are behind of the cameraand are captured by Lidar Scans.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyODU0MjE1OF19
+eyJoaXN0b3J5IjpbMTAzMDczMTA3N119
 -->
