@@ -15,7 +15,9 @@
 
 - propose an end-to-end pipeline called **SqueezeSeg** based on convolutional neural networks(CNN): 
 
-- the CNN takes a transformed **LiDAR point cloud** as input and directly outputs a point-wise label map, which is then refined by a conditional random field (CRF) implemented as a recurrent layer. 
+- 입력 : LiDAR Point cloud -> 출력 : point-wise label map -> refined 
+-  the CNN takes a transformed **LiDAR point cloud** as input and directly outputs a **point-wise label map**,
+	-  which is then refined by a **conditional random field (CRF)** implemented as a recurrent layer. 
 
 Instance-level labels are then obtained byconventional clustering algorithms. 
 
@@ -29,5 +31,5 @@ Furthermore, additionally training on synthesizeddata boosts validation accuracy
 
 Our sourcecode and synthesized data will be open-sourced.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMjcyMzExMl19
+eyJoaXN0b3J5IjpbLTQ1MTI0NzE0Ml19
 -->
