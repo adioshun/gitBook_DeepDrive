@@ -63,7 +63,7 @@
 
 > 2D CNN을 쓰는건가? 
 
-The proposed CNN model draws inspiration from SqueezeNet [12] and is carefully designed to reduce parameter size and computational complexity,with an aim to reduce memory requirements and achieve real-time inference speed for our target embeddedapplications. 
+- 제안 모델은 SqueezeNet을 기반으로 하였으며 임베디드 시스템에서 동작 할수 있도록 속도와 The proposed CNN model draws inspiration from SqueezeNet [12] and is carefully designed to reduce parameter size and computational complexity, with an aim to reduce memory requirements and achieve real-time inference speed for our target embedded applications. 
 
 The CRF model is reformulated as a recurrentneural network (RNN) module as [11] and can be trainedend-to-end together with the CNN model. 
 
@@ -73,5 +73,5 @@ To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a s
 
 We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwOTYxNTk0M119
+eyJoaXN0b3J5IjpbMTQyNTg0NDk2N119
 -->
