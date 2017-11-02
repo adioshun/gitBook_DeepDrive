@@ -26,7 +26,9 @@ of
 
 ## I. INTRODUCTION
 
+-  VANET & 자율주행 연구는 **separate worlds**, and barely affected one another despite the obvious relationships.
 
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzA2MDIwNTJdfQ==
+eyJoaXN0b3J5IjpbMTE2ODEwNTEwN119
 -->
