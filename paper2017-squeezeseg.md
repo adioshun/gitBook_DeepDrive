@@ -76,15 +76,19 @@
 
 - Previous work saw a wide range of granularity in LiDAR segmentation, handling anything from specific components to the whole pipeline. 
 
-- [7] proposed **mesh based** ground and object segmentation relying on local surface convexity conditions. 
+- [7] proposed **mesh based** ground and object segmentation relying on **local surface convexity** conditions. 
 
-[2] summarized several approaches based on iterativealgorithms such as RANSAC (random sample consensus)and GP-INSAC (gaussian process incremental sampleconsensus) for ground removal. 
+- [2] **summarized** several approaches based on **iterative algorithms** such as RANSAC (random sample consensus)and GP-INSAC (gaussian process incremental sampleconsensus) **for ground removal**. 
 
-Recent work also focusedon algorithmic efficiency. 
+- Recent work also focused on algorithmic efficiency. 
 
-[5] proposed efficient algorithmsfor ground segmentation and clustering while [13] bypassedground segmentation to directly extract foreground objects.[4] expanded its focus to the whole pipeline, includingsegmentation, clustering and classification. 
+- [5] proposed efficient algorithms for **ground segmentation** and **clustering** 
+
+- [13] bypassed ground segmentation to directly extract foreground objects.
+
+- [4] expanded its focus to the whole pipeline, includingsegmentation, clustering and classification. 
 
 It proposed to directlyclassify point patches into background and foregroundobjects of different categories then use EMST-RANSAC [5]to further cluster instances
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1Mjk4MjQ1M119
+eyJoaXN0b3J5IjpbMTM2Njg2OTg0NV19
 -->
