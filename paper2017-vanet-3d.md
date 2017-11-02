@@ -104,7 +104,7 @@ of
 
 ## 4. 3D OBJECTS FROM LIDAR POINT CLOUD DATA
 
-- 여러 물체들이 있기 때문에 모든 물체 탐지를 목적으로 하지는 않는다. `For simplification purposes, we are not considering every object from the Lidar since a tremendous number of unknown objects is detected as a set of neighbored point cloud. 
+- 여러 물체들이 있기 때문에 모든 물체 탐지를 목적으로 하지는 않는다. `For simplification purposes, we are not considering every object from the Lidar since a tremendous number of unknown objects is detected as a set of neighbored point cloud. `
 
 - In Fig.7, the dots represents the objects detected from Lidar with(x,y,z) triplet that represents relative position to the Velodyne Lidar Scanner. 
 
@@ -119,5 +119,5 @@ For example, the vehicle nextto the paired point is not detected in Fig.
 5, but is detected inFig.7 in addition to other objects that are behind of the cameraand are captured by Lidar Scans.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzM1NzgyOTRdfQ==
+eyJoaXN0b3J5IjpbNDc1MTU3MjUwXX0=
 -->
