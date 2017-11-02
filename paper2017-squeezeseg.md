@@ -99,11 +99,11 @@ Conference on. IEEE, 2017, pp. 5067–5073
 	- It proposed to directly classify point patches into background and foreground objects of different categories then use EMST-RANSAC [5]to further cluster instances
 
 ```
-[4] D. Z. Wang, I. Posner, and P. Newman, “What could move? finding
+[4] D. Z. Wang, I. Posner, and P. Newman, “What could move? finding 
 cars, pedestrians and bicyclists in 3d laser data,” in Robotics and
 Automation (ICRA), 2012 IEEE International Conference on. IEEE,
 2012, pp. 4038–4044.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE5MDE5NDMyXX0=
+eyJoaXN0b3J5IjpbLTE5NTU4NzM1OTZdfQ==
 -->
