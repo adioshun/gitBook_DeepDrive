@@ -60,21 +60,17 @@ of
 	- **presegmentation** into **superpixels** 
 	-  segment candidates that are used to extract the categories and features characterizing individual segments and from combinations of neighboring segments. 
 
-- Alternatively,the authors in [13] attempted to **create 3D reconstruction** of dynamic scenes by achieving a long-range spatio-temporalregularization in semantic video segmentation, since both thecamera and the scene are in motion. 
+- Alternatively,the authors in [13] attempted to **create 3D reconstruction** of dynamic scenes by achieving a long-range spatio-temporal regularization in semantic video segmentation, since both the camera and the scene are in motion. 
+	- The developed idea is to integrate deep CNN and CRF to perform sharp pixel-level boundaries of objects. 
+	- To this end, deep learning has shown the best performance in inferring objects from not previously trained or seen scenes. 
 
-The developed idea isto integrate deep CNN and CRF to perform sharp pixel-levelboundaries of objects. 
+- Joseph et al. [17] developed a general purpose object detection system characterized by a resolution classifier and the usage of a 2 fully connected networks that are built on top of a 24 convolutional layers network. 
 
-To this end, deep learning has shownthe best performance in inferring objects from not previouslytrained or seen scenes. 
-
-Joseph et al. 
-
-[17] developed a generalpurpose object detection system characterized by a resolutionclassifier and the usage of a 2 fully connected networks that arebuilt on top of a 24 convolutional layers network. 
-
-Additionally,a unified muti-scale deep CNN for real-time object detectionis developed in [4] with many sub-network detectors with multipleoutput layers for multiple object class recognition. 
+- Additionally,a unified muti-scale deep CNN for real-time object detectionis developed in [4] with many sub-network detectors with multiple output layers for multiple object class recognition. 
 
 Mostautonomous driving systems rely on Lidar, stereo cameras orradar sensors to achieve object detection, scene flow estimationof objects on roads and their key characteristics and influenceon driving decisions and steering commands. 
 
 We present anaugmented scene flow understanding and object mapping byconsidering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMyMTU0MzMyXX0=
+eyJoaXN0b3J5IjpbMTAzNjI0MzIwMl19
 -->
