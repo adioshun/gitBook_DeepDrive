@@ -130,7 +130,7 @@ Robots and Systems (IROS 2014), 2014 IEEE/RSJ International Conference on. IEEE,
 
 - 하지만, 속도는 stereo보다 빠르다. `However, these implementations can be faster since stereo computation is not required and they make use of a simpler sensor that does not need calibration. `
 
-![](https://i.imgur.com/yKeSUm1.png0
+![](https://i.imgur.com/yKeSUm1.png)
 
 Example HHA results can be seen in Figure 2. 
 
