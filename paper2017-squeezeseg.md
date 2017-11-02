@@ -106,9 +106,15 @@ Conference on. IEEE, 2017, pp. 5067–5073
 
 - CNN approaches consider LiDAR point clouds in either **two** or **three** dimensions. 
 
-- Work with **two-dimensional** data considers raw images with projections of LiDAR pointclouds top-down [14] or from a number of other views [15].Other work considers three-dimensional data itself, discretizingthe space into voxels and engineering featuressuch as disparity, mean, and saturation [16]. 
+#### A. 2D로 간주 
+
+- Work with **two-dimensional** data considers **raw images** with **projections** of LiDAR pointclouds top-down [14] or from a number of other views [15].
+
+#### B. 3D로 간주 
+
+- Other work considers **three-dimensional** data itself, **discretizing** the space into voxels and engineering featuressuch as disparity, mean, and saturation [16]. 
 
 Regardlessof data preparation, deep learning methods consider endto-endmodels that leverage 2D convolutional [17] or 3Dconvolutional [18] neural networks.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxODcwNDI0XX0=
+eyJoaXN0b3J5IjpbMTU1NTY5MDgyOV19
 -->
