@@ -120,9 +120,9 @@ of
 
 ## 5. SEMI-SUPERVISED ALIGNMENT OF MANIFOLDS: CAMERA TO LIDAR AND CAMERA TO BSMS
 
-Our problem formulation of manifolds alignment is to be applied to find correspondences between source data containing recognized objects from 2D camera and objects from 3D Lidar point cloud and from 3D V2V exchangedmessages. 
+- Our problem formulation of manifolds alignment is to be applied to find **correspondences between source data** containing recognized objects from 2D camera and objects from 3D Lidar point cloud and from 3D V2V exchanged messages. 
 
-The manifold alignment performs the mappingbetween the dataset by first successfully learning the lowdimensionalembeddings by creating a weighted graph ofthe objects in the data by finding their correlation whilepreserving their neighborhood correlation to preserve thelocal structure of the data. 
+- The manifold alignment performs the mapping between the dataset by first successfully learning the low dimensional embeddings by creating a weighted graph ofthe objects in the data by finding their correlation whilepreserving their neighborhood correlation to preserve thelocal structure of the data. 
 
 Let X , Y and Z three separatedata sets consisting respectively of x,y and z recognized pointsfrom camera, Lidar and V2V BSMs. 
 
@@ -145,5 +145,5 @@ The neighborhood weights of a point t(i)as anode in every Laplacian graph for ea
 
 - In the future work we plan to study the effect of confusion in each input mode in the 3D scene reconstruction without pre-identified paired points.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDYyMDI1NDVdfQ==
+eyJoaXN0b3J5IjpbLTIwNDI1NjU4NDldfQ==
 -->
