@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Joel Schlosser \(Georgia Tech\) |
 | 학회/년도 | ICRA 2016, [논문](http://ieeexplore.ieee.org/abstract/document/7487370/) |
-| 키워드 | KITTI, RGB + HHA, caffe |
+| 키워드 | Joel2016,  KITTI, RGB + HHA, caffe |
 | 참고 |  |
 | 코드 |  |
 

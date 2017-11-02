@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Naman Patel\(NYU\) |
 | 학회/년도 | 2017, [논문](http://cims.nyu.edu/~achoroma/NonFlash/Papers/SMF_CNN.pdf) |
-| 키워드 |   |
+| 키워드 | 조향 각도 예측  |
 | 데이터셋(센서)/모델 | own dataset(LiDAR + Camera) |
 | 참고 |  |
 | 코드 |  |

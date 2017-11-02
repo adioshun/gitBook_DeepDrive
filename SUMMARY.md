@@ -93,14 +93,14 @@
 * [Paper\_2016\_FusionNet \(100%\)](paper2016-fusionnet.md)
 * [Paper\_2016\_DeepSlidingShape \(70%\)](paper2016-deepslidingshape.md)
 * [Paper\_2016\_FuseNet \(50%\)](paper2016-fusenet.md)
-* [Paper\_2016\_Fusing\_LIDAR\_IMAGE\_Pedestrian \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
+* [Paper\_2016\_HHA-Fusion \(30%\)](paper2016-fusing-lidar-image-pedestrian.md)
 * [Paper\_2017\_Decision-Level Fusion \(50%\)](paper2017-decision-level-fusion.md)
-* [Paper\_2017\_Sensor Modality Fusion \(50%\)](paper2017-sensor-modality-fusion.md)
 * [Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)
   * [Paper\_2016\_Deeply\_Fused\_Nets](paper2016-deeply-fused-nets.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
   * [code\_MV3D\_TF](papermultiview-3d-cnn/codemv3d-tf.md)
 * [Report\_2017\_cs231n\_Dempster-Shafer \(50%\)](report2017-cs231n-dempster-shafer.md)
+* [Paper\_2017\_Sensor Modality Fusion \(50%\)](paper2017-sensor-modality-fusion.md)
 
 ## 4D \(Time, RNN\)
 
