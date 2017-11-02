@@ -33,14 +33,16 @@ of
 -  V2V type of message [11], [15]which 
 	- offers various types of safety applications operating on a control channel of its 7 available channels operating over a dedicated 75 MHz spectrum band around 5.9 GHz. 
 
-- 논문 목적 `The goalof this work is to merge the key features of`
+- 퓨젼이 논문 목적 `The goalof this work is to merge the key features of`
 	-  **Lidar** in giving accurate **distances**, 
 	-  **camera** with object **textural details**
 	-  **V2V beacons** for the awareness of both **hidden** out-of-sight vehicles or vehicles **not observed** by the two other means due to bad conditions (e.g., rainy or foggy weather). 
 
-- Exploring the physical neighborhood correlation within these three datasets and their natural correspondences inthe 3D physical space, we cast the merging problem of these three sets of data as a semi-supervised manifold alignment.
+- Exploring the physical neighborhood correlation within these three datasets and their natural correspondences inthe 3D physical space, we cast the merging problem of these three sets of data as a **semi-supervised** manifold alignment.
 
-- Given some clear correspondences between data points fromeach pair of data sets, we align (i.e., pair) the rest of thepoints between the camera-lidar and camera-V2V data sets.The problem is casted as an eigenvalue problem over a graphbasedcompounded Laplacian matrix. 
+- Given some clear correspondences between data points from each pair of data sets, we align (i.e., pair) the rest of the points between the camera-lidar and camera-V2V data sets.
+
+- The problem is casted as an eigenvalue problem over a graphbasedcompounded Laplacian matrix. 
 
 Once the mapping ofknown points is done, the other points from each data sets canbe easily added in aligned 3D environment, thus significantlyenriching the vehicle knowledge of its surroundings. 
 
@@ -56,5 +58,5 @@ BSM creation accordingto the Lidar recognized objects from Kitti suite, number o
 
 Section VIIprovides conclusion and future work
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjUwMjQwNTNdfQ==
+eyJoaXN0b3J5IjpbLTEwOTc1MzU3NTJdfQ==
 -->
