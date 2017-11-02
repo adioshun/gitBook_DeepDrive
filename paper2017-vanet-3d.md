@@ -48,7 +48,7 @@ of
 
 ## RELATED WORK
 
-One approach to understand the scene around vehicles issemantic segmentation that labels each pixel in an image withthe category of the belonging objects. 
+One approach to understand the scene around vehicles is semantic segmentation that labels each pixel in an image withthe category of the belonging objects. 
 
 Labeling each pixel ofthe scene independently from its surrounding pixels is a veryhard task to achieve. 
 
@@ -76,5 +76,5 @@ Mostautonomous driving systems rely on Lidar, stereo cameras orradar sensors to 
 
 We present anaugmented scene flow understanding and object mapping byconsidering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA5NjE2MjIzXX0=
+eyJoaXN0b3J5IjpbLTE2OTQ2NTUwNV19
 -->
