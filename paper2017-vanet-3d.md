@@ -98,13 +98,11 @@ of
 - YOLO의 Anchor Boxes개념을 도입 하였다. `Inspired by CNN developed in [17-YOLO], we propose to exploi tthe feature of Anchor Boxes `
 	-  Anchor Boxes = that predict the coordinates of the bounding boxes around recognized objects to find their pixel adjacency directly from the fully connected layers
 
-- 하지만, 정확도가 별로 좋지 않다. 
+- 하지만, 정확도가 별로 좋지 않다. 왜냐 하면 물체가 겹쳐 있고 거리에 대한 정보를 활용하지 않기 떄문이다. `Unfortunately, this is not an accurate measure since objects might be overlapped and consequently the distance in pixels does not have any significance. `
 
-Unfortunately, this is not an accurate measure since objects might be overlapped and consequently the distance in pixels does not have any significance. 
-
-For this purpose, we introducethat a paired labeled point between camera and Lidar is thefarthest object in the Lidar scan and the farthest one beingdetected in the background of the image. 
+- 따라서 본 논문에서는 카메라와 LiDAR를 모두 사용하여 For this purpose, we introduce that a paired labeled point between camera and Lidar is the farthest object in the Lidar scan and the farthest one being detected in the background of the image. 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4Mzc1MjY4M119
+eyJoaXN0b3J5IjpbLTcyODU0MjE1OF19
 -->
