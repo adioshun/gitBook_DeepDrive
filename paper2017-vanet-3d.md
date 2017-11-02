@@ -15,19 +15,18 @@
 of 
 	- stereo camera frames
 	- point cloud Velodyne Lidar scans,
-	- Vehicle-to-Vehicle (V2V) Basic Safety Messages exchanged using DSRC
+	- Vehicle-to-Vehicle (V2V) Basic Safety Messages(BMS) exchanged using DSRC
 
 - We merge the key features of rich texture descriptions of objects 
 	- from 2D images, 
 	- depth 
 	- distance between objects provided by 3D point cloud 
-	- awareness of hidden vehicles from BSMs’ 3D
-information.
+	- awareness of **hidden vehicles** from BSMs’ 3D information
 
 
 ## I. INTRODUCTION
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNzg3OTIwNV19
+eyJoaXN0b3J5IjpbLTIwNzA2MDIwNTJdfQ==
 -->
