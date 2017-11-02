@@ -108,25 +108,32 @@ Conference on. IEEE, 2017, pp. 5067–5073
 
 #### A. 2D로 간주 
 
-- Work with **two-dimensional** data considers **raw images** with **projections** of LiDAR pointclouds top-down [14] or from a number of other views [15].
+- Work with **two-dimensional** data considers **raw images** with
+	-  **projections** of LiDAR point clouds top-down [14]  
+	- -  **projections** of LiDAR point clouds from a number of other views [15].
 
 ```
-[14] L. Caltagirone, S. Scheidegger, L. Svensson, and M. Wahde, “Fast
-lidar-based road detection using fully convolutional neural networks.”
-in Intelligent Vehicles Symposium (IV), 2017 IEEE. IEEE, 2017, pp.
+[14] L. Caltagirone, S. Scheidegger, L. Svensson, and M. Wahde, “Fast lidar-based road detection using fully convolutional neural networks.” in Intelligent Vehicles Symposium (IV), 2017 IEEE. IEEE, 2017, pp.
 1019–1024.
-[15] X. Chen, H. Ma, J. Wan, B. Li, and T. Xia, “Multi-view 3d
-object detection network for autonomous driving,” arXiv preprint
-arXiv:1611.07759, 2016.
+[15] X. Chen, H. Ma, J. Wan, B. Li, and T. Xia, “Multi-view 3d object detection network for autonomous driving,” arXiv preprint arXiv:1611.07759, 2016.
+```
 
-
-###
-# B. 3D로 간주 
+#### B. 3D로 간주 
 
 - Other work considers **three-dimensional** data itself, **discretizing** the space into **voxels** and engineering features such as **disparity**, **mean**, and **saturation** [16]. 
 
 - Regardless of data preparation, deep learning methods consider end-to-end models that leverage 2D convolutional [17] or 3D convolutional [18] neural networks.
 
+```
+[16] J. Schlosser, C. K. Chow, and Z. Kira, “Fusing lidar and images for pedestrian detection using convolutional neural networks,” in Robotics and Automation (ICRA), 2016 IEEE International Conference on.
+IEEE, 2016, pp. 2198–2205.
+[17] B. Li, T. Zhang, and T. Xia, “Vehicle detection from 3d lidar using
+fully convolutional network,” arXiv preprint arXiv:1608.07916, 2016.
+[18] D. Maturana and S. Scherer, “3d convolutional neural networks
+for landing zone detection from lidar,” in Robotics and Automation
+(ICRA), 2015 IEEE International Conference on. IEEE, 2015, pp.
+3471–3478.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1OTI1OTI3Nl19
+eyJoaXN0b3J5IjpbLTE5MTQwNjMxNDZdfQ==
 -->
