@@ -84,7 +84,9 @@
 
 - [5] proposed efficient algorithms for **ground segmentation** and **clustering** 
 
-`
+```
+
+```
 
 
 - [13] bypassed ground segmentation to directly extract foreground objects.
@@ -92,5 +94,5 @@
 - [4] expanded its focus to the whole pipeline, including segmentation, clustering and classification. 
 	- It proposed to directly classify point patches into background and foreground objects of different categories then use EMST-RANSAC [5]to further cluster instances
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNTYxODM5NV19
+eyJoaXN0b3J5IjpbMTE1OTM5NzU4MV19
 -->
