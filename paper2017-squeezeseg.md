@@ -85,14 +85,25 @@
 - [5] proposed efficient algorithms for **ground segmentation** and **clustering** 
 
 ```
-
+[5] D. Zermas, I. Izzat, and N. Papanikolopoulos, “Fast segmentation of 3d point clouds: A paradigm on lidar data for autonomous vehicle applications,” in Robotics and Automation (ICRA), 2017 IEEE International
+Conference on. IEEE, 2017, pp. 5067–5073
 ```
-
 
 - [13] bypassed ground segmentation to directly extract foreground objects.
 
+```
+[13] M.-O. Shin, G.-M. Oh, S.-W. Kim, and S.-W. Seo, “Real-time and accurate segmentation of 3-d point clouds based on gaussian process regression,” IEEE Transactions on Intelligent Transportation Systems, 2017.
+```
+
 - [4] expanded its focus to the whole pipeline, including segmentation, clustering and classification. 
 	- It proposed to directly classify point patches into background and foreground objects of different categories then use EMST-RANSAC [5]to further cluster instances
+
+```
+[4] D. Z. Wang, I. Posner, and P. Newman, “What could move? finding
+cars, pedestrians and bicyclists in 3d laser data,” in Robotics and
+Automation (ICRA), 2012 IEEE International Conference on. IEEE,
+2012, pp. 4038–4044.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1OTM5NzU4MV19
+eyJoaXN0b3J5IjpbMjE5MDE5NDMyXX0=
 -->
