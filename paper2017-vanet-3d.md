@@ -33,7 +33,10 @@ of
 -  V2V type of message [11], [15]which 
 	- offers various types of safety applications operating on a control channel of its 7 available channels operating over a dedicated 75 MHz spectrum band around 5.9 GHz. 
 
-The goalof this work is to merge the key features of Lidar in givingaccurate distances, camera with object textural details, andV2V beacons for the awareness of both hidden out-of-sight vehiclesor vehicles not observed by the two other means due tobad conditions (e.g., rainy or foggy weather). 
+- 논문 목적 `The goalof this work is to merge the key features of`
+	-  **Lidar** in giving accurate **distances**, 
+	-  **camera** with object **textural details**
+	-  **V2V beacons** for the awareness of both hidden out-of-sight vehicles or vehicles not observed by the two other means due to bad conditions (e.g., rainy or foggy weather). 
 
 Our Frameworkrequires additional prior knowledge about selection of labeledpaired objects between the 3 types of data set that we want tocorrespond. 
 
@@ -53,5 +56,5 @@ BSM creation accordingto the Lidar recognized objects from Kitti suite, number o
 
 Section VIIprovides conclusion and future work
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NzQ2Mjg4NF19
+eyJoaXN0b3J5IjpbLTE5MDUyNDQzMTddfQ==
 -->
