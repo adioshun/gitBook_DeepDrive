@@ -112,9 +112,10 @@ Conference on. IEEE, 2017, pp. 5067–5073
 
 #### B. 3D로 간주 
 
-- Other work considers **three-dimensional** data itself, **discretizing** the space into voxels and engineering featuressuch as disparity, mean, and saturation [16]. 
+- Other work considers **three-dimensional** data itself, **discretizing** the space into **voxels** and engineering features such as **disparity**, **mean**, and **saturation** [16]. 
 
-Regardlessof data preparation, deep learning methods consider endto-endmodels that leverage 2D convolutional [17] or 3Dconvolutional [18] neural networks.
+- Regardless of data preparation, deep learning methods consider end-to-end models that leverage 2D convolutional [17] or 3D convolutional [18] neural networks.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NTY5MDgyOV19
+eyJoaXN0b3J5IjpbLTE3NTk1NTgzMjldfQ==
 -->
