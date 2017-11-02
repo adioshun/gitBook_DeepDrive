@@ -24,9 +24,11 @@
 
 Our experiments show that SqueezeSeg achieves high accuracy with astonishingly fast and stable runtime (8.7 ±0.5 ms per frame), highly desirable for autonomous driving applications. 
 
+> 8.7ms = 
+
 Furthermore, additionally training on synthesizeddata boosts validation accuracy on real-world data. 
 
 Our sourcecode and synthesized data will be open-sourced.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjczMDQ1ODExXX0=
+eyJoaXN0b3J5IjpbLTE3MTEyODkwNzFdfQ==
 -->
