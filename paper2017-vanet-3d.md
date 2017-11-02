@@ -56,6 +56,17 @@ of
 	- Conditional Random Field (CRF) 
 	- many graphical models are presented in [9], [14], [16] to guarantee the consistency of labeling of the pixels in the context of the overall image. 
 
+```
+[9] Xuming He and Richard S. Zemel. Learning hybrid models for image annotation with partially labeled data. In D. Koller, D. Schuurmans, Y. Bengio, and L. Bottou, editors, Advances in Neural Information Processing Systems 21, pages 625–632. Curran Associates, Inc., 2009.
+[14] L. Ladicky, C. Russell, P. Kohli, and P. H. S. Torr. Associative ´
+hierarchical crfs for object class image segmentation. In 2009 IEEE
+12th International Conference on Computer Vision, pages 739–746, Sept
+2009.
+[16] Daniel Munoz, J Andrew Bagnell, and Martial Hebert. Stacked hierarchical
+labeling. In European Conference on Computer Vision, pages
+57–70. Springer, 2010.
+```
+
 - In addition, the authors in [18], [12]and [7] developed various methods for 
 	- **presegmentation** into **superpixels** 
 	-  segment candidates that are used to extract the categories and features characterizing individual segments and from combinations of neighboring segments. 
@@ -76,9 +87,9 @@ of
 
 ```
 
-- Most autonomous driving systems rely on Lidar, stereo cameras or radar sensors to achieve object detection, **scene flow estimation** of objects on roads and their key characteristics and influence on driving decisions and steering commands. 
+- 씬 플로우도 중요 하다. Most autonomous driving systems rely on Lidar, stereo cameras or radar sensors to achieve object detection, **scene flow estimation** of objects on roads and their key characteristics and influence on driving decisions and steering commands. 
 
-- We present an augmented **scene flow** understanding and object mapping byconsidering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
+- We present an augmented **scene flow** understanding and **object mapping** by considering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDg4ODY4OTRdfQ==
+eyJoaXN0b3J5IjpbNzU1MjUzMjE2XX0=
 -->
