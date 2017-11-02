@@ -36,11 +36,11 @@ of
 - 논문 목적 `The goalof this work is to merge the key features of`
 	-  **Lidar** in giving accurate **distances**, 
 	-  **camera** with object **textural details**
-	-  **V2V beacons** for the awareness of both hidden out-of-sight vehicles or vehicles not observed by the two other means due to bad conditions (e.g., rainy or foggy weather). 
+	-  **V2V beacons** for the awareness of both **hidden** out-of-sight vehicles or vehicles **not observed** by the two other means due to bad conditions (e.g., rainy or foggy weather). 
 
-Our Frameworkrequires additional prior knowledge about selection of labeledpaired objects between the 3 types of data set that we want tocorrespond. 
+- Exploring the physical neighborhood correlation within these three datasets and their natural correspondences inthe 3D physical space, we cast the merging problem of these three sets of data as a semi-supervised manifold alignment.
 
-Exploring the physical neighborhood correlationwithin these three datasets and their natural correspondences inthe 3D physical space, we cast the merging problem of thesethree sets of data as a semi-supervised manifold alignment.Given some clear correspondences between data points fromeach pair of data sets, we align (i.e., pair) the rest of thepoints between the camera-lidar and camera-V2V data sets.The problem is casted as an eigenvalue problem over a graphbasedcompounded Laplacian matrix. 
+- Given some clear correspondences between data points fromeach pair of data sets, we align (i.e., pair) the rest of thepoints between the camera-lidar and camera-V2V data sets.The problem is casted as an eigenvalue problem over a graphbasedcompounded Laplacian matrix. 
 
 Once the mapping ofknown points is done, the other points from each data sets canbe easily added in aligned 3D environment, thus significantlyenriching the vehicle knowledge of its surroundings. 
 
@@ -56,5 +56,5 @@ BSM creation accordingto the Lidar recognized objects from Kitti suite, number o
 
 Section VIIprovides conclusion and future work
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDUyNDQzMTddfQ==
+eyJoaXN0b3J5IjpbLTIwMjUwMjQwNTNdfQ==
 -->
