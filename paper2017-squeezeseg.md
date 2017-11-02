@@ -54,13 +54,13 @@
 	- conditional random field (CRF). 
 
 - CNN에 3D 를 적용하기 위하여 수정 하였따. `To apply CNNs to 3D LiDAR point clouds, we designed a CNN that `
-	- 입력으로 ... accepts transformed LiDAR point clouds 
-	- 출력으로 ... outputs a point-wise map of labels, which is further refined by a CRF model. 
-	- Instance-level labels are then obtained by applying conventional clustering algorithms (such asDBSCAN) on points within a category. 
+	- 입력으로 ... accepts transformed **LiDAR point clouds** 
+	- 출력으로 ... outputs a **point-wise map of labels**, which is further refined by a CRF model. 
+	- 분류 작업으로 ... **Instance-level labels** are then obtained by applying conventional clustering algorithms `(such asDBSCAN)` on points within a category. 
 
-To feed 3D point clouds to a 2D CNN, we adopt a spherical projection totransform sparse, irregularly distributed 3D point clouds todense, 2D grid representations. 
+- To feed 3D point clouds to a 2D CNN, we adopt a spherical projection to transform sparse, irregularly distributed 3D point clouds todense, 2D grid representations. 
 
-The proposed CNN modeldraws inspiration from SqueezeNet [12] and is carefullydesigned to reduce parameter size and computational complexity,with an aim to reduce memory requirements andachieve real-time inference speed for our target embeddedapplications. 
+The proposed CNN model draws inspiration from SqueezeNet [12] and is carefully designed to reduce parameter size and computational complexity,with an aim to reduce memory requirements and achieve real-time inference speed for our target embeddedapplications. 
 
 The CRF model is reformulated as a recurrentneural network (RNN) module as [11] and can be trainedend-to-end together with the CNN model. 
 
@@ -70,5 +70,5 @@ To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a s
 
 We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2MTA0ODk4XX0=
+eyJoaXN0b3J5IjpbLTIwNzMzMTMzMDldfQ==
 -->
