@@ -43,7 +43,7 @@
 	- 단점 2: **Multi-stage pipelines** see aggregate effects of **compounded errors**, and classification or clustering algorithms in the pipeline above are **unable to leverage context**, most importantly the immediate surroundings of an object. 
 	- 단점 3: Many approaches for ground removal rely on **iterative algorithms** 
 		- such as RANSAC (random sampleconsensus) [5], GP-INSAC (Gaussian Process IncrementalSample Consensus) [2], or agglomerative clustering [2]. 
-		- The **runtime** and **accuracy** of these algorithmic components depend on the quality of random initializations and, therefore,can be unstable. 
+		- The **runtime** and **accuracy** of these algorithmic components depend on the quality of random initializations and, therefore,can be **unstable.** 
 
 This instability is not acceptable for manyembedded applications such as autonomous driving. 
 
@@ -67,5 +67,5 @@ To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a s
 
 We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjQ2MzgyNTVdfQ==
+eyJoaXN0b3J5IjpbLTQ2NjQ1Mjk1XX0=
 -->
