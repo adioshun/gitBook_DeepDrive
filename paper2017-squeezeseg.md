@@ -110,12 +110,23 @@ Conference on. IEEE, 2017, pp. 5067–5073
 
 - Work with **two-dimensional** data considers **raw images** with **projections** of LiDAR pointclouds top-down [14] or from a number of other views [15].
 
-#### B. 3D로 간주 
+```
+[14] L. Caltagirone, S. Scheidegger, L. Svensson, and M. Wahde, “Fast
+lidar-based road detection using fully convolutional neural networks.”
+in Intelligent Vehicles Symposium (IV), 2017 IEEE. IEEE, 2017, pp.
+1019–1024.
+[15] X. Chen, H. Ma, J. Wan, B. Li, and T. Xia, “Multi-view 3d
+object detection network for autonomous driving,” arXiv preprint
+arXiv:1611.07759, 2016.
+
+
+###
+# B. 3D로 간주 
 
 - Other work considers **three-dimensional** data itself, **discretizing** the space into **voxels** and engineering features such as **disparity**, **mean**, and **saturation** [16]. 
 
 - Regardless of data preparation, deep learning methods consider end-to-end models that leverage 2D convolutional [17] or 3D convolutional [18] neural networks.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTk1NTgzMjldfQ==
+eyJoaXN0b3J5IjpbMjA1OTI1OTI3Nl19
 -->
