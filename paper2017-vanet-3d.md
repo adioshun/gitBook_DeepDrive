@@ -44,19 +44,37 @@ of
 
 - The problem is casted as an eigenvalue problem over a graph based compounded Laplacian matrix. 
 
-Once the mapping ofknown points is done, the other points from each data sets canbe easily added in aligned 3D environment, thus significantlyenriching the vehicle knowledge of its surroundings. 
+- Once the mapping of known points is done, the other points from each data sets can be easily added in aligned 3D environment, thus significantly enriching the vehicle knowledge of its surroundings. 
 
-Theremainder of this paper is organised as follows. 
+## RELATED WORK
 
-The relatedwork is presented in Section II. 
+One approach to understand the scene around vehicles issemantic segmentation that labels each pixel in an image withthe category of the belonging objects. 
 
-Object recognition in scene ofthe kitti dataset are presented in III. 
+Labeling each pixel ofthe scene independently from its surrounding pixels is a veryhard task to achieve. 
 
-Learning the Lidar objectsfrom Lidar point cloud scans in Kitti dataset are studied in IV.We present the manifold alignment formulation and solutionbetween the 3 Dimensional Lidar space, D camera Space,and 3D V2V becons in section V. 
+In order to know the category of a pixel,we have to rely on relatively short-range surrounding informationand long-range information. 
 
-BSM creation accordingto the Lidar recognized objects from Kitti suite, number ofrecognized objects per input type and the performance of thealignment process are illustrated in Section VI. 
+In other words, to determinethat a certain pixel belongs to a vehicle, a person or to anyother class of objects, we need to have a contextual windowthat is wide enough to show the surrounding of the pixel andconsequently to make an informed decision of the object classthat contains the pixel. 
 
-Section VIIprovides conclusion and future work
+Techniques based on Markov RandomFields (MRF), Conditional Random Field (CRF) and manygraphical models are presented in [9], [14], [16] to guaranteethe consistency of labeling of the pixels in the context ofthe overall image. 
+
+In addition, the authors in [18], [12]and [7] developed various methods for presegmentation intosuperpixels or segment candidates that are used to extract thecategories and features characterizing individual segments andfrom combinations of neighboring segments. 
+
+Alternatively,the authors in [13] attempted to create 3D reconstruction ofdynamic scenes by achieving a long-range spatio-temporalregularization in semantic video segmentation, since both thecamera and the scene are in motion. 
+
+The developed idea isto integrate deep CNN and CRF to perform sharp pixel-levelboundaries of objects. 
+
+To this end, deep learning has shownthe best performance in inferring objects from not previouslytrained or seen scenes. 
+
+Joseph et al. 
+
+[17] developed a generalpurpose object detection system characterized by a resolutionclassifier and the usage of a 2 fully connected networks that arebuilt on top of a 24 convolutional layers network. 
+
+Additionally,a unified muti-scale deep CNN for real-time object detectionis developed in [4] with many sub-network detectors with multipleoutput layers for multiple object class recognition. 
+
+Mostautonomous driving systems rely on Lidar, stereo cameras orradar sensors to achieve object detection, scene flow estimationof objects on roads and their key characteristics and influenceon driving decisions and steering commands. 
+
+We present anaugmented scene flow understanding and object mapping byconsidering not only Lidar and cameras, but also DSRC-basedV2V beacons exchanged between vehicles.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyOTYzNTMzMF19
+eyJoaXN0b3J5IjpbNzA5NjE2MjIzXX0=
 -->
