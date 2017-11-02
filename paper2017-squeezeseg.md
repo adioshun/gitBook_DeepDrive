@@ -53,9 +53,10 @@
 	- convolutional neural networks (CNN) 
 	- conditional random field (CRF). 
 
-- CNN에 3D 를 적용하기 위하여 To apply CNNs to 3D LiDAR point clouds, we designed a CNN that accepts transformed LiDAR point clouds and outputs a point-wise map of labels, which is further refined by a CRF model. 
-
-Instance-level labels are then obtainedby applying conventional clustering algorithms (such asDBSCAN) on points within a category. 
+- CNN에 3D 를 적용하기 위하여 수정 하였따. `To apply CNNs to 3D LiDAR point clouds, we designed a CNN that `
+	- 입력으로 ... accepts transformed LiDAR point clouds 
+	- 출력으로 ... outputs a point-wise map of labels, which is further refined by a CRF model. 
+	- Instance-level labels are then obtained by applying conventional clustering algorithms (such asDBSCAN) on points within a category. 
 
 To feed 3D point clouds to a 2D CNN, we adopt a spherical projection totransform sparse, irregularly distributed 3D point clouds todense, 2D grid representations. 
 
@@ -69,5 +70,5 @@ To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a s
 
 We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc0MDQzODQ2XX0=
+eyJoaXN0b3J5IjpbLTU2MTA0ODk4XX0=
 -->
