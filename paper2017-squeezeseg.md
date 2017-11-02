@@ -38,7 +38,7 @@
 
 - 기존 접근 방법들의 문제점 `This paradigm, despite its popularity [2], [3], [4], [5], has several disadvantages: `
 	- Ground segmentation in the above pipeline usually relies on **hand-crafted features** or **decision rules** 
-	- – some approaches rely on a scalar threshold [6] and others require more complicated features such as surface normals [7] or invariant descriptors [4], all of which may **fail to generalize** and the latter of which require significant preprocessing. 
+		- some approaches rely on a scalar threshold [6] and others require more complicated features such as surface normals [7] or invariant descriptors [4], all of which may **fail to generalize** and the latter of which require significant preprocessing. 
 	- Multi-stage pipelines see aggregateeffects of compounded errors, and classification or clusteringalgorithms in the pipeline above are unable to leveragecontext, most importantly the immediate surroundings ofan object. 
 	- Many approaches for ground removal relyon iterative algorithms such as RANSAC (random sampleconsensus) [5], GP-INSAC (Gaussian Process IncrementalSample Consensus) [2], or agglomerative clustering [2]. 
 
@@ -66,5 +66,5 @@ To obtain even more training data,we leveraged Grand Theft Auto V (GTA-V) as a s
 
 We additionally findthat supplanting our dataset with artificial, noise-injectedsimulation data further boosts validation accuracy on realworlddata.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA3ODQ3Mjk5XX0=
+eyJoaXN0b3J5IjpbLTIwMDQ5MDkzMzBdfQ==
 -->
