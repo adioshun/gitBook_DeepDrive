@@ -95,16 +95,16 @@ of
 
 ## 3. ADAPTED DARKNET’S CONVOLUTIONAL NEURAL NETWORK AND KITTI FRAME TESTING
 
-- YOLO의 Anchor Boxes개념을 도입 하였다. `Inspired by CNN developed in [17-YOLO], we propose to exploi tthe feature of **Anchor Boxes** `
-	- that predict the coordinates of the bounding boxes around recognized objects to find their pixel adjacency directly from the fully connected layers that are developed on top of the convolutional network extractor
+- YOLO의 Anchor Boxes개념을 도입 하였다. `Inspired by CNN developed in [17-YOLO], we propose to exploi tthe feature of Anchor Boxes `
+	-  Anchor Boxes = that predict the coordinates of the bounding boxes around recognized objects to find their pixel adjacency directly from the fully connected layers
 
-Bothof frame(a) and frame(b) present random object count perclass either for image recognition or for labeled Lidar objects. 
+- 하지만, 정확도가 별로 좋지 않다. 
 
-Unfortunately, this is not an accurate measure since objectsmight be overlapped and consequently the distance in pixelsdoes not have any significance. 
+Unfortunately, this is not an accurate measure since objects might be overlapped and consequently the distance in pixels does not have any significance. 
 
 For this purpose, we introducethat a paired labeled point between camera and Lidar is thefarthest object in the Lidar scan and the farthest one beingdetected in the background of the image. 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY0MTg3OTY2XX0=
+eyJoaXN0b3J5IjpbMTg4Mzc1MjY4M119
 -->
