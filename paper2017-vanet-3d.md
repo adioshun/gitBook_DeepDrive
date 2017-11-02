@@ -116,10 +116,10 @@ of
 
 ![](https://i.imgur.com/2oLSv07.png)
 
-- For example, the vehicle nextto the paired point is not detected in Fig. 
+- For example, the vehicle next to the paired point is not detected in Fig. 
 
 5, but is detected inFig.7 in addition to other objects that are behind of the cameraand are captured by Lidar Scans.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNDg3MTg2MF19
+eyJoaXN0b3J5IjpbMTMwNzc2OTM1OF19
 -->
