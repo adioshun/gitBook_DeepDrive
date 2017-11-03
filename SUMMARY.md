@@ -9,8 +9,8 @@
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
-* [Paper\_2017\_VANET\_3D](paper2017-vanet-3d.md)
-* [Paper\_2017\_DeepFeatureFlow](paper2017-deepfeatureflow.md)
+* [Paper\_2017\_VANET\_3D \(50%\)](paper2017-vanet-3d.md)
+* [Paper\_2017\_DeepFeatureFlow \(0%\)](paper2017-deepfeatureflow.md)
 
 ## Related Works
 
@@ -30,7 +30,7 @@
 * [Paper\_2016\_Unify monocular detectors \(5%\)](paper2017-unify-monocular-detectors.md)
 * [Paper\_2014\_DepthMap Prediction \(0%\)](paper2014-depthmap-prediction.md)
 * [Paper\_2016\_Mono3D2016 \(70%\)](papermonocular-3d.md)
-* [Paper\_2017\_Monocular Depth /w 2Camera \(0%\)](paper2016-monocular-depth.md)
+* [Paper\_2017\_Monocular Depth /w 2Camera \(30%\)](paper2016-monocular-depth.md)
 * [Report\_2017\_Study\_Monocular \(70%\)](report2017-monocular-3-cnnmethods.md)
 * [Paper\_2017\_Deep3DBox \(15%\)](paper2017-3d-bbox.md)
 * [Paper\_2017\_J-MOD \(30%\)](paper2017-j-mod.md)
