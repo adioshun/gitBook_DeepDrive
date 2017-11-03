@@ -42,7 +42,8 @@
 
 - By contrast, estimating depth from a single image requires the use of monocular depth cues such as 
 	- line angles and perspective
-	- object sizes, image position, and atmospheric effects. 
+	- object sizes
+	- image position, and atmospheric effects. 
 
 Furthermore, a global viewof the scene may be needed to relate these effectively, whereas local disparity is sufficient for stereo.
 
@@ -68,5 +69,5 @@ Our system achieves state-of-the art estimation rates on NYU Depth and KITTI, as
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjEzMTY4MjNdfQ==
+eyJoaXN0b3J5IjpbOTg3NTI4NDQ4XX0=
 -->
