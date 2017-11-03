@@ -40,12 +40,13 @@
 
 ### 1.2 단안 기반 방식이 어려운 이유 
 
-- By contrast, estimating depth from a single image requires the use of monocular depth cues such as 
+- 하나의 이미지에서 깊이를 측정하려면 아래와 같은 depth cues이 필요 하다. `By contrast, estimating depth from a single image requires the use of monocular depth cues such as `
 	- line angles and perspective
 	- object sizes
-	- image position, and atmospheric effects. 
+	- image position
+	- atmospheric effects. 
 
-Furthermore, a global viewof the scene may be needed to relate these effectively, whereas local disparity is sufficient for stereo.
+- 또한, Furthermore, a global view of the scene may be needed to relate these effectively, where as local disparity is sufficient for stereo.
 
 Moreover, the task is inherently ambiguous, and a technically ill-posed problem: Given an image, aninfinite number of possible world scenes may have produced it. 
 
@@ -69,5 +70,5 @@ Our system achieves state-of-the art estimation rates on NYU Depth and KITTI, as
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg3NTI4NDQ4XX0=
+eyJoaXN0b3J5IjpbMjQ3ODA4NDc5XX0=
 -->
