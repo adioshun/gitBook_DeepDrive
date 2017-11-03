@@ -32,13 +32,17 @@
 [17] D. Scharstein and R. Szeliski. A taxonomy and evaluation of dense two-frame stereo correspondence algorithms. IJCV, 47:7–42, 2002.
 ```
 
-There are likely several reasons why the monocular case has not yet been tackled to the same degreeas the stereo one. 
+### 1.1 양안 기반 방식이 쉬운 이유 
 
-Provided accurate image correspondences, depth can be recovered deterministicallyin the stereo case [5]. 
+- Provided accurate image correspondences, depth can be recovered deterministicallyin the stereo case [5]. 
 
-Thus, stereo depth estimation can be reduced to developing robust imagepoint correspondences — which can often be found using local appearance features. 
+- Thus, stereo depth estimation can be reduced to developing robust imagepoint correspondences — which can often be found using local appearance features. 
 
-By contrast,estimating depth from a single image requires the use of monocular depth cues such as line anglesand perspective, object sizes, image position, and atmospheric effects. 
+### 1.2 단안 기반 방식이 어려운 이유 
+
+- By contrast, estimating depth from a single image requires the use of monocular depth cues such as 
+	- line angles and perspective
+	- object sizes, image position, and atmospheric effects. 
 
 Furthermore, a global viewof the scene may be needed to relate these effectively, whereas local disparity is sufficient for stereo.
 
@@ -64,5 +68,5 @@ Our system achieves state-of-the art estimation rates on NYU Depth and KITTI, as
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NDAyNTk2Ml19
+eyJoaXN0b3J5IjpbLTE4NjEzMTY4MjNdfQ==
 -->
