@@ -92,13 +92,11 @@ This focuses attention on the spatial relations within a scene ratherthan genera
 
 - Similarly, **the lower** and **middle layers** are designed to **combine information from different parts of the image** through max-pooling operations to a small spatial dimension. 
 
-Inso doing, the network is able to integrate a global understanding of the full scene to predict thedepth. 
+- In so doing, the network is able to integrate a global understanding of the full scene to predict the depth. 
 
-Such an understanding is needed in the single-image case to make effective use of cues such As illustrated in Fig. 1, the global, coarse-scale network contains five feature extraction layers ofconvolution and max-pooling, followed by two fully connected layers. 
+- Such an understanding is needed in the single-image case to make effective use of cues such As illustrated in Fig. 1, the global, coarse-scale network contains five feature extraction layers of convolution and max-pooling, followed by two fully connected layers. 
 
-The input, feature map andoutput sizes are also given in Fig. 1. 
-
-The final output is at 1/4-resolution compared to the input(which is itself downsampled from the original dataset by a factor of 2), and corresponds to a centercrop containing most of the input (as we describe later, we lose a small border area due to the firstlayer of the fine-scale network and image transformations). 
+- The final output is at 1/4-resolution compared to the input(which is itself downsampled from the original dataset by a factor of 2), and corresponds to a centercrop containing most of the input (as we describe later, we lose a small border area due to the firstlayer of the fine-scale network and image transformations). 
 
 Note that the spatial dimension of the output is larger than that of the topmost convolutional featuremap. 
 
@@ -115,5 +113,5 @@ The convolutionallayers (1-5) of the coarse-scale network are pretrained on the 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2Nzg1MzI4MV19
+eyJoaXN0b3J5IjpbLTMwODcyMzQ5NV19
 -->
