@@ -27,7 +27,45 @@
 
 ## 1. Introduction
 
+In turn, such relations help provide richer representations of objects and their environment, often leadingto improvements in existing recognition tasks [18], as well as enabling many further applicationssuch as 3D modeling [16, 6], physics and support models [18], robotics [4, 14], and potentially reasoningabout occlusions.
+
+While there is much prior work on estimating depth based on stereo images or motion [17], there hasbeen relatively little on estimating depth from a single image. 
+
+Yet the monocular case often arises inpractice: Potential applications include better understandings of the many images distributed on theweb and social media outlets, real estate listings, and shopping sites. 
+
+These include many examplesof both indoor and outdoor scenes.
+
+There are likely several reasons why the monocular case has not yet been tackled to the same degreeas the stereo one. 
+
+Provided accurate image correspondences, depth can be recovered deterministicallyin the stereo case [5]. 
+
+Thus, stereo depth estimation can be reduced to developing robust imagepoint correspondences — which can often be found using local appearance features. 
+
+By contrast,estimating depth from a single image requires the use of monocular depth cues such as line anglesand perspective, object sizes, image position, and atmospheric effects. 
+
+Furthermore, a global viewof the scene may be needed to relate these effectively, whereas local disparity is sufficient for stereo.
+
+Moreover, the task is inherently ambiguous, and a technically ill-posed problem: Given an image, aninfinite number of possible world scenes may have produced it. 
+
+Of course, most of these are physicallyimplausible for real-world spaces, and thus the depth may still be predicted with considerableaccuracy. 
+
+At least one major ambiguity remains, though: the global scale. 
+
+Although extreme cases(such as a normal room versus a dollhouse) do not exist in the data, moderate variations in room and furniture sizes are present. 
+
+We address this using a scale-invariant error in addition to morecommon scale-dependent errors. 
+
+This focuses attention on the spatial relations within a scene ratherthan general scale, and is particularly apt for applications such as 3D modeling, where the model isoften rescaled during postprocessing.
+
+In this paper we present a new approach for estimating depth from a single image. 
+
+We directlyregress on the depth using a neural network with two components: one that first estimates the globalstructure of the scene, then a second that refines it using local information. 
+
+The network is trainedusing a loss that explicitly accounts for depth relations between pixel locations, in addition to pointwiseerror. 
+
+Our system achieves state-of-the art estimation rates on NYU Depth and KITTI, as wellas improved qualitative outputs.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUyODU1ODE3XX0=
+eyJoaXN0b3J5IjpbMTg5OTcxMTg5Ml19
 -->
