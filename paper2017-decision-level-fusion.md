@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Sang-Il Oh\(Catholic University\) |
 | 학회/년도 | 2017, [논문](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298778/), [석사학위논문](http://academic.naver.com/article.naver?doc_id=195223326) |
-| 키워드 |  Lidar+Image, object-detection,  decision-level fusion |
+| 키워드 | Oh2017, Lidar+Image, object-detection,  decision-level fusion |
 | 데이터셋(센서)/모델 | KITTI |
 | 참고 |  |
 | 코드 |  |
