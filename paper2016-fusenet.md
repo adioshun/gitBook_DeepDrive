@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Caner Hazirbas\(Munich\) |
 | 학회/년도 | ACCV 2016, [논문](https://link.springer.com/chapter/10.1007/978-3-319-54181-5_14) |
-| 키워드 | RGB+Depth map -> Segmentation, |
+| 키워드 | Hazirbas2016, RGB+Depth map -> Segmentation, |
 | 데이터셋(센서)/모델 |NYU,SUN-RGBD / VGG 16-layer model pre-trained on the ImageNet dataset  |
 | 관련연구||
 | 참고 | |
