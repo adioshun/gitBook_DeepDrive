@@ -10,10 +10,10 @@
 
 # DMP-MSnet
 
-- Predicting depth is an essential component in understanding the 3D geometry of a scene. 
+- 깊이 예측은 중요하다. `Predicting depth is an essential component in understanding the 3D geometry of a scene. `
 
-- While for stereo images local correspondence suffices for estimation, 
-	- finding depth relations from a single image is less straightforward, requiring integration of both global and local information from various cues. 
+- 양안비젼의 local correspondence은 예측에 충분한 방면 `While for stereo images local correspondence suffices for estimation, `
+	- 단안 비젼은 global and local information을 모두 어렵다. finding depth relations from a single image is less straightforward, requiring integration of both global and local information from various cues. 
 
 Moreover, thetask is inherently ambiguous, with a large source of uncertainty coming from theoverall scale. 
 
@@ -27,5 +27,5 @@ Byleveraging the raw datasets as large sources of training data, our method achi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MTYzMTM3Ml19
+eyJoaXN0b3J5IjpbMTE3OTk0OTU1MV19
 -->
