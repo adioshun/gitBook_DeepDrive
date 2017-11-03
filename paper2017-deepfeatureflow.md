@@ -34,25 +34,28 @@
     - semantic segmentation on Cityscapes dataset [6],
     - objectdetection on ImageNet VID dataset [37]. 
 
-- Nevertheless,applying existing image recognition networks on individual video frames introduces unaffordable computational cost for most applications.
+- 하지만, 이미지 인식용 알고리즘을 동영상에 적용하기에는 부하가 크다. `Nevertheless,applying existing image recognition networks on individual video frames introduces unaffordable computational cost for most applications.`
 
-- It is widely recognized that image content varies slowly over video frames, especially the high level semantics [46,53, 21]. 
+- 일반적으로 이미지 컨텐츠가 동영상이 되면 ....??It is widely recognized that image content varies slowly over video frames, especially the high level semantics [46,53, 21]. 
+    - This observation has been used as means of regularization in feature learning, considering videos as unsupervised data sources [46, 21]. 
 
-This observation has been used as means of regularizationin feature learning, considering videos as unsupervised data sources [46, 21]. 
+- 이러한 data redundancy와 연속성`(continuity)`특징을 이용하면 불필요한 연산 부하를 줄일수 있다. `Yet, such data redundancy and continuity can also be exploited to reduce the computation cost. `
 
-Yet, such data redundancyand continuity can also be exploited to reduce the computationcost. 
+- 하지만 CNN기반 비디오 인식 분야에 잘 고려 되지 않았다. `This aspect, however, has received little attention for video recognition using CNNs in the literature.`
 
-This aspect, however, has received little attentionfor video recognition using CNNs in the literature.Modern CNN architectures [40, 42, 16] share a commonstructure. 
+- 모던 CNN들은 비슷한 구조를 가지고 있다. `Modern CNN architectures [40, 42, 16] share a common structure. `
+    - 대부분 레이어는 Conv. 이다. `Most layers are convolutional and account for the most computation. `
+    - The **intermediate convolutional feature maps** have the **same spatial extent** of the input image`(usually at a smaller resolution, e.g., 16× smaller)`.
+    - They preserve the **spatial correspondences** between the low level image content and middle-to-high level semantic concepts[48]. 
 
-Most layers are convolutional and accountfor the most computation. 
+- 이러한 **correspondences**를 이용하여 ,**Optical flow처럼**,큰 연산 부담 없이 특징 정보들을 다음 frame에 전달 할수 있다. `Such correspondence provides opportunities to cheaply propagate the features between nearby frames by spatial warping, similar to optical flow [17].`
 
-The intermediate convolutionalfeature maps have the same spatial extent of the input image(usually at a smaller resolution, e.g., 16× smaller).They preserve the spatial correspondences between the lowlevel image content and middle-to-high level semantic concepts[48]. 
 
-Such correspondence provides opportunities tocheaply propagate the features between nearby frames byspatial warping, similar to optical flow [17].In this work, we present deep feature flow, a fast andaccurate approach for video recognition. 
+- In this work, we present deep feature flow, a fast and accurate approach for video recognition. 
 
-It applies an imagerecognition network on sparse key frames. 
+- It applies an image recognition network on sparse key frames. 
 
-It propagatesthe deep feature maps from key frames to other frames viaa flow field. 
+- It propagates the deep feature maps from key frames to other frames via a flow field. 
 
 As exemplifed in Figure 1, two intermediatefeature maps are responsive to “car” and “person” concepts.They are similar on two nearby frames. 
 
