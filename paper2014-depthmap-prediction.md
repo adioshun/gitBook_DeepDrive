@@ -67,11 +67,24 @@ This focuses attention on the spatial relations within a scene ratherthan genera
 	- one that first estimates the global structure of the scene, 
 	- a second that refines it using local information. 
 
-- The network is trained using a **loss** that explicitly accounts for depth relations between pixel locations, in addition to pointwise error. 
+- The network is trained using a **loss** that explicitly accounts for **depth relations between pixel locations**, in addition to pointwise error. 
 
-Our system achieves state-of-the art estimation rates on NYU Depth and KITTI, as wellas improved qualitative outputs.
+## 2. Related Work
+
+## 3. Approach
+
+- Our network is made of two component stacks, shown in Fig. 1. 
+	- A coarse-scale network first predictsthe depth of the scene at a global level. 
+	- This is then refined within local regions by a fine-scalenetwork. 
+
+Both stacks are applied to the original input, but in addition, the coarse network’s outputis passed to the fine network as additional first-layer image features. 
+
+In this way, the local networkcan edit the global prediction to incorporate finer-scale details.
+
+### 3.1 Model Architecture
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgyOTM2OTI5XX0=
+eyJoaXN0b3J5IjpbNTYyMDIxNTAwXX0=
 -->
