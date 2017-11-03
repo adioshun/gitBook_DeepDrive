@@ -21,13 +21,13 @@
 	- one that makes a **coarse global prediction** based on the entire image
 	- another that **refines this prediction locally**. 
 
-- We also apply a scale-invariant error to help measure depth relations rather than scale. 
+- We also apply a **scale-invariant error** to help **measure depth relations** rather than scale. 
 
-- By leveraging the raw datasets as large sources of training data, our method achievesstate-of-the-art results on both NYU Depth and KITTI, and matches detailed depthboundaries without the need for superpixelation.
+- By leveraging the raw datasets as large sources of training data, our method achieves state-of-the-art results on both NYU Depth and KITTI, and matches detailed depth boundaries without the need for superpixelation.
 
-##
+## 1. Introduction
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjUxOTUxMDBdfQ==
+eyJoaXN0b3J5IjpbNzUyODU1ODE3XX0=
 -->
