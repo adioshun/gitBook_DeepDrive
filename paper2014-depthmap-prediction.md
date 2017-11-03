@@ -85,8 +85,34 @@ This focuses attention on the spatial relations within a scene ratherthan genera
 ![](https://i.imgur.com/UL72exs.png)
 
 #### A. Global Coarse-Scale Network
+The task of the coarse-scale network is to predict the overall depth map structure using a global viewof the scene. 
+
+The upper layers of this network are fully connected, and thus contain the entire imagein their field of view. 
+
+Similarly, the lower and middle layers are designed to combine informationfrom different parts of the image through max-pooling operations to a small spatial dimension. 
+
+Inso doing, the network is able to integrate a global understanding of the full scene to predict thedepth. 
+
+Such an understanding is needed in the single-image case to make effective use of cues such As illustrated in Fig. 1, the global, coarse-scale network contains five feature extraction layers ofconvolution and max-pooling, followed by two fully connected layers. 
+
+The input, feature map andoutput sizes are also given in Fig. 1. 
+
+The final output is at 1/4-resolution compared to the input(which is itself downsampled from the original dataset by a factor of 2), and corresponds to a centercrop containing most of the input (as we describe later, we lose a small border area due to the firstlayer of the fine-scale network and image transformations). 
+
+Note that the spatial dimension of the output is larger than that of the topmost convolutional featuremap. 
+
+Rather than limiting the output to the feature map size and relying on hardcoded upsamplingbefore passing the prediction to the fine network, we allow the top full layer to learn templates overthe larger area (74x55 for NYU Depth). 
+
+These are expected to be blurry, but will be better than theupsampled output of a 8x6 prediction (the top feature map size); essentially, we allow the networkto learn its own upsampling based on the features. 
+
+Sample output weights are shown in Fig. 2 All hidden layers use rectified linear units for activations, with the exception of the coarse outputlayer 7, which is linear. 
+
+Dropout is applied to the fully-connected hidden layer 6. 
+
+The convolutionallayers (1-5) of the coarse-scale network are pretrained on the ImageNet classification task [1]— while developing the model, we found pretraining on ImageNet worked better than initializingrandomly, although the difference was not very large. 
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNDQ4NDM1NV19
+eyJoaXN0b3J5IjpbMTYxNjkzNjA4Ml19
 -->
