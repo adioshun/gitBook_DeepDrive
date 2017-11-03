@@ -59,17 +59,17 @@ Although extreme cases(such as a normal room versus a dollhouse) do not exist in
 
 We address this using a scale-invariant error in addition to more common scale-dependent errors. 
 
-This focuses attention on the spatial relations within a scene ratherthan general scale, and is particularly apt for applications such as 3D modeling, where the model isoften rescaled during postprocessing.
+This focuses attention on the spatial relations within a scene ratherthan general scale, and is particularly apt for applications such as 3D modeling, where the model is often rescaled during post processing.
 
 In this paper we present a new approach for estimating depth from a single image. 
 
-We directlyregress on the depth using a neural network with two components: one that first estimates the globalstructure of the scene, then a second that refines it using local information. 
+We directly regress on the depth using a neural network with two components: one that first estimates the global structure of the scene, then a second that refines it using local information. 
 
-The network is trainedusing a loss that explicitly accounts for depth relations between pixel locations, in addition to pointwiseerror. 
+The network is trained using a loss that explicitly accounts for depth relations between pixel locations, in addition to pointwise error. 
 
 Our system achieves state-of-the art estimation rates on NYU Depth and KITTI, as wellas improved qualitative outputs.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMyNTYyNzYzXX0=
+eyJoaXN0b3J5IjpbMTc0MjA5MTY4OV19
 -->
