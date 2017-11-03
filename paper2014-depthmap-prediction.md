@@ -74,17 +74,17 @@ This focuses attention on the spatial relations within a scene ratherthan genera
 ## 3. Approach
 
 - Our network is made of two component stacks, shown in Fig. 1. 
-	- A coarse-scale network first predictsthe depth of the scene at a global level. 
-	- This is then refined within local regions by a fine-scalenetwork. 
+	- A **coarse-scale network** first predicts the depth of the scene at a global level. 
+	- This is then refined within local regions by a **fine-scale network**. 
 
-Both stacks are applied to the original input, but in addition, the coarse network’s outputis passed to the fine network as additional first-layer image features. 
+- Both stacks are applied to the original input, but in addition, the coarse network’s output is passed to the fine network as additional first-layer image features. 
 
-In this way, the local networkcan edit the global prediction to incorporate finer-scale details.
+- In this way, the local network can edit the global prediction to incorporate finer-scale details.
 
 ### 3.1 Model Architecture
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYyMDIxNTAwXX0=
+eyJoaXN0b3J5IjpbLTE2MTk0NTA1NDhdfQ==
 -->
