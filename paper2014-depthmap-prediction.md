@@ -10,9 +10,22 @@
 
 # DMP-MSnet
 
+- Predicting depth is an essential component in understanding the 3D geometry of a scene. 
+
+- While for stereo images local correspondence suffices for estimation, 
+	- finding depth relations from a single image is less straightforward, requiring integration of both global and local information from various cues. 
+
+Moreover, thetask is inherently ambiguous, with a large source of uncertainty coming from theoverall scale. 
+
+In this paper, we present a new method that addresses this task byemploying two deep network stacks: one that makes a coarse global predictionbased on the entire image, and another that refines this prediction locally. 
+
+We alsoapply a scale-invariant error to help measure depth relations rather than scale. 
+
+Byleveraging the raw datasets as large sources of training data, our method achievesstate-of-the-art results on both NYU Depth and KITTI, and matches detailed depthboundaries without the need for superpixelation.
+
 ##
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgzMzg4NzU2XX0=
+eyJoaXN0b3J5IjpbMTM0MTYzMTM3Ml19
 -->
