@@ -96,9 +96,9 @@ This focuses attention on the spatial relations within a scene ratherthan genera
 
 - Such an understanding is needed in the single-image case to make effective use of cues such As illustrated in Fig. 1, the global, coarse-scale network contains five feature extraction layers of convolution and max-pooling, followed by two fully connected layers. 
 
-- The final output is at 1/4-resolution compared to the input(which is itself downsampled from the original dataset by a factor of 2), and corresponds to a centercrop containing most of the input (as we describe later, we lose a small border area due to the firstlayer of the fine-scale network and image transformations). 
+- The final output is at 1/4-resolution compared to the input(which is itself down-sampled from the original dataset by a factor of 2), and corresponds to a center crop containing most of the input (as we describe later, we lose a small border area due to the first layer of the fine-scale network and image transformations). 
 
-Note that the spatial dimension of the output is larger than that of the topmost convolutional featuremap. 
+Note that the spatial dimension of the output is larger than that of the topmost convolutional feature map. 
 
 Rather than limiting the output to the feature map size and relying on hardcoded upsamplingbefore passing the prediction to the fine network, we allow the top full layer to learn templates overthe larger area (74x55 for NYU Depth). 
 
@@ -113,5 +113,5 @@ The convolutionallayers (1-5) of the coarse-scale network are pretrained on the 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwODcyMzQ5NV19
+eyJoaXN0b3J5IjpbMTExOTEwMTgwXX0=
 -->
