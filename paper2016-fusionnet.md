@@ -10,6 +10,12 @@
 - [FusionNet: A deep fully residual convolutional neural network for image segmentation in connectomics](https://arxiv.org/abs/1612.05360): 2016, 메디컬 데이터 
 
 ![](https://i.imgur.com/Pog63M8.png)
+```
+[Figure 4: FusionNet is a fusion of three different networks:]
+- V-CNN I, V-CNN II and MV-CNN (which is based on AlexNet and pre-trained on ImageNet). 
+- The three networks fuse at the scores layers where a linear combination of scores is taken before finding the class prediction. 
+- Voxelized CAD models are used for the first two networks and 2D projections are used for latter network
+```
 
 # FusionNet
 
