@@ -13,19 +13,21 @@
 - 깊이 예측은 중요하다. `Predicting depth is an essential component in understanding the 3D geometry of a scene. `
 
 - 양안비젼의 local correspondence은 예측에 충분한 방면 `While for stereo images local correspondence suffices for estimation, `
-	- 단안 비젼은 global and local information을 모두 통합 하여야 하기에 어렵다. `finding depth relations from a single image is less straightforward, requiring integration of both global and local information from various cues. `
 
-Moreover, thetask is inherently ambiguous, with a large source of uncertainty coming from theoverall scale. 
+- 단안 비젼은 global and local information을 모두 통합 하여야 하기에 어렵다. `finding depth relations from a single image is less straightforward, requiring integration of both global and local information from various cues. `
+	Moreover, the task is inherently ambiguous, with a large source of uncertainty coming from the overall scale. 
 
-In this paper, we present a new method that addresses this task byemploying two deep network stacks: one that makes a coarse global predictionbased on the entire image, and another that refines this prediction locally. 
+- 본 논문은 2개의 네트워크를 통해 이 문제를 해결 하였다. `In this paper, we present a new method that addresses this task by employing two deep network stacks: `
+	- one that makes a **coarse global prediction** based on the entire image
+	- another that **refines this prediction locally**. 
 
-We alsoapply a scale-invariant error to help measure depth relations rather than scale. 
+- We also apply a scale-invariant error to help measure depth relations rather than scale. 
 
-Byleveraging the raw datasets as large sources of training data, our method achievesstate-of-the-art results on both NYU Depth and KITTI, and matches detailed depthboundaries without the need for superpixelation.
+- By leveraging the raw datasets as large sources of training data, our method achievesstate-of-the-art results on both NYU Depth and KITTI, and matches detailed depthboundaries without the need for superpixelation.
 
 ##
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEzMjg0MjUxXX0=
+eyJoaXN0b3J5IjpbLTIwMjUxOTUxMDBdfQ==
 -->
