@@ -82,9 +82,11 @@ This focuses attention on the spatial relations within a scene ratherthan genera
 - 두 네트워크에 하나의 이미지가 모두 입력 된다. 첫번째 네트워크 결과는  first-layer image features로써  두번째 네트워크에 입력으로 사용된다. `Both stacks are applied to the original input, but in addition, the coarse network’s output is passed to the fine network as additional first-layer image features. `
 	- In this way, the local network can edit the global prediction to incorporate finer-scale details.
 
+![](https://i.imgur.com/UL72exs.png)
+
 #### A. Global Coarse-Scale Network
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTE5NzU0NDZdfQ==
+eyJoaXN0b3J5IjpbMTAyNDQ4NDM1NV19
 -->
