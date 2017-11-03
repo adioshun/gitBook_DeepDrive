@@ -51,13 +51,13 @@
 
 - 더구나, Moreover, the task is inherently **ambiguous**, and a technically **ill-posed problem**: Given an image, an infinite number of possible world scenes may have produced it. 
 
-Of course, most of these are physically implausible for real-world spaces, and thus the depth may still be predicted with considerable accuracy. 
+- Of course, most of these are physically implausible for real-world spaces, and thus the depth may still be predicted with considerable accuracy. 
 
-At least one major ambiguity remains, though: the global scale. 
+- At least one major ambiguity remains, though: the global scale. 
 
 Although extreme cases(such as a normal room versus a dollhouse) do not exist in the data, moderate variations in room and furniture sizes are present. 
 
-We address this using a scale-invariant error in addition to morecommon scale-dependent errors. 
+We address this using a scale-invariant error in addition to more common scale-dependent errors. 
 
 This focuses attention on the spatial relations within a scene ratherthan general scale, and is particularly apt for applications such as 3D modeling, where the model isoften rescaled during postprocessing.
 
@@ -71,5 +71,5 @@ Our system achieves state-of-the art estimation rates on NYU Depth and KITTI, as
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM4NzU2NDY5XX0=
+eyJoaXN0b3J5IjpbNDMyNTYyNzYzXX0=
 -->
