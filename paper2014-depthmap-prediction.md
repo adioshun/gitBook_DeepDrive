@@ -28,8 +28,12 @@
 ## 1. Introduction
 
 - 양안비젼 기반은 연구가 많지만, 단안비젼 기반은 별로 없다. `While there is much prior work on estimating depth based on stereo images or motion [17], there has been relatively little on estimating depth from a single image. `
+```
+[17] D. Scharstein and R. Szeliski. A taxonomy and evaluation of dense two-frame stereo correspondence algorithms. IJCV, 47:7–42, 2002.
+```
+- Yet the monocular case often arises inpractice: Potential applications include better understandings of the many images distributed on the web and social media outlets, real estate listings, and shopping sites. 
 
-Yet the monocular case often arises inpractice: Potential applications include better understandings of the many images distributed on theweb and social media outlets, real estate listings, and shopping sites. 
+
 
 These include many examplesof both indoor and outdoor scenes.
 
@@ -65,5 +69,5 @@ Our system achieves state-of-the art estimation rates on NYU Depth and KITTI, as
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODQ5MTIyNjldfQ==
+eyJoaXN0b3J5IjpbLTE3NjE2OTIxMTNdfQ==
 -->
