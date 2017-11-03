@@ -31,11 +31,6 @@
 ```
 [17] D. Scharstein and R. Szeliski. A taxonomy and evaluation of dense two-frame stereo correspondence algorithms. IJCV, 47:7–42, 2002.
 ```
-- Yet the monocular case often arises inpractice: Potential applications include better understandings of the many images distributed on the web and social media outlets, real estate listings, and shopping sites. 
-
-
-
-These include many examplesof both indoor and outdoor scenes.
 
 There are likely several reasons why the monocular case has not yet been tackled to the same degreeas the stereo one. 
 
@@ -69,5 +64,5 @@ Our system achieves state-of-the art estimation rates on NYU Depth and KITTI, as
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjE2OTIxMTNdfQ==
+eyJoaXN0b3J5IjpbMTc4NDAyNTk2Ml19
 -->
