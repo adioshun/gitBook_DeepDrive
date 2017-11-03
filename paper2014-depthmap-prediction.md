@@ -27,9 +27,7 @@
 
 ## 1. Introduction
 
-In turn, such relations help provide richer representations of objects and their environment, often leadingto improvements in existing recognition tasks [18], as well as enabling many further applicationssuch as 3D modeling [16, 6], physics and support models [18], robotics [4, 14], and potentially reasoningabout occlusions.
-
-While there is much prior work on estimating depth based on stereo images or motion [17], there hasbeen relatively little on estimating depth from a single image. 
+- 양안비젼 기반은 연구가 많지만, 단안비젼 기반은 별로 없다. `While there is much prior work on estimating depth based on stereo images or motion [17], there has been relatively little on estimating depth from a single image. `
 
 Yet the monocular case often arises inpractice: Potential applications include better understandings of the many images distributed on theweb and social media outlets, real estate listings, and shopping sites. 
 
@@ -67,5 +65,5 @@ Our system achieves state-of-the art estimation rates on NYU Depth and KITTI, as
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5OTcxMTg5Ml19
+eyJoaXN0b3J5IjpbLTIwODQ5MTIyNjldfQ==
 -->
