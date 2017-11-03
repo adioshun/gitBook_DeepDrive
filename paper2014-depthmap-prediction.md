@@ -85,11 +85,12 @@ This focuses attention on the spatial relations within a scene ratherthan genera
 ![](https://i.imgur.com/UL72exs.png)
 
 #### A. Global Coarse-Scale Network
-The task of the coarse-scale network is to predict the overall depth map structure using a global viewof the scene. 
 
-The upper layers of this network are fully connected, and thus contain the entire imagein their field of view. 
+- The task of the coarse-scale network is to **predict the overall depth map** structure using **a global view** of the scene. 
 
-Similarly, the lower and middle layers are designed to combine informationfrom different parts of the image through max-pooling operations to a small spatial dimension. 
+- **The upper layers** of this network are **fully connected**, and thus contain the entire image in their field of view. 
+
+- Similarly, **the lower** and **middle layers** are designed to **combine information from different parts of the image** through max-pooling operations to a small spatial dimension. 
 
 Inso doing, the network is able to integrate a global understanding of the full scene to predict thedepth. 
 
@@ -114,5 +115,5 @@ The convolutionallayers (1-5) of the coarse-scale network are pretrained on the 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNjkzNjA4Ml19
+eyJoaXN0b3J5IjpbMTY2Nzg1MzI4MV19
 -->
