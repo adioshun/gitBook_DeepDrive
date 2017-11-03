@@ -552,4 +552,15 @@ The RGB image is up-scaled so that the shortest size is 500.
 * Then we reduce the learning rate to 0.0001 and train another 20K iterations.
 
 
+---
+LIDAR point cloud + RGB images
+Multi-View 3D Object Detection Network for Autonomous Driving
+- late fusion Schemes : [8] M. Enzweiler and D. M. Gavrila. A multilevel mixture-of experts framework for pedestrian classification. IEEE Transactions on Image Processing, 20(10):2967–2979, 2011- Early Fusion Scheme .: [11] A. Gonzalez, D. Vazquez, A. Lopez, and J. Amores. Onboard object detection: Multicue, multimodal, and multiview random forest of local experts. In IEEE Transactions on Cybernetics,2016
+
+
+Chen et al. (2016c) combine LiDAR laser range data with RGB images for object detection.
+In their approach, the sparse point cloud is encoded using a compact multi-view representation and a proposal generation network utilizes the bird’s eye view representation of the point cloud to generate 3D candidates. +
+
+Finally, they combine region-wise features from multiple views with a deep fusion scheme
+
 

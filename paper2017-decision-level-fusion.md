@@ -392,6 +392,12 @@ Our method consistsof three phases:
     - Fution 90.8%
 
 ---
+DST has previously been used in perception as a pre-processing information fusion step to a CNN to achieve both semantic image labeling as in [25] and object detection and classification as in [16-DL-Fusion].
+[25] presents a custom, 4-layer CNN,
+while [16] utilizes a pre-trained VGG-16 network for each sensor.
+
+
+---
 - Unary classification(=one-class classification) :여러 object중에서 특정 class에 속하는 object만 선택 `tries to identify objects of a specific class amongst all objects, `
 	- by learning from a training set containing only the objects of that class. 
 
