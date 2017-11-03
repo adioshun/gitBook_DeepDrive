@@ -61,15 +61,17 @@ We address this using a scale-invariant error in addition to more common scale-d
 
 This focuses attention on the spatial relations within a scene ratherthan general scale, and is particularly apt for applications such as 3D modeling, where the model is often rescaled during post processing.
 
-In this paper we present a new approach for estimating depth from a single image. 
+### 1. 3 제안 방식 
 
-We directly regress on the depth using a neural network with two components: one that first estimates the global structure of the scene, then a second that refines it using local information. 
+- We directly regress on the depth using a neural network with two components: 
+	- one that first estimates the global structure of the scene, 
+	- a second that refines it using local information. 
 
-The network is trained using a loss that explicitly accounts for depth relations between pixel locations, in addition to pointwise error. 
+- The network is trained using a **loss** that explicitly accounts for depth relations between pixel locations, in addition to pointwise error. 
 
 Our system achieves state-of-the art estimation rates on NYU Depth and KITTI, as wellas improved qualitative outputs.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MjA5MTY4OV19
+eyJoaXN0b3J5IjpbOTgyOTM2OTI5XX0=
 -->
