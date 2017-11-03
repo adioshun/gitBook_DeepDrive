@@ -394,3 +394,14 @@ http://arxiv.org/abs/1605.08359.
 - V-CNN 1 + V-CNN 2 = 91.95%(ModelNet10), 83.78(MedelNet40)
 - MV -CNN = 92.69(ModelNet10), 86.92$(MedelNet40)
 - Fusion = 92.11%(ModelNet10), 90.80%(MedelNet40)
+
+---
+
+- voxels + multiple 2D projections
+
+- 3D volumetric + 2D pixel, AlexNet network사용
+
+- In the work of Hegde and Zadeh [2016], a fusion of volumetric (i.e., 3D) and pixel (i.e., 2D views) representations was attempted for 3D object classification.
+  - More specifically, the authors used AlexNet network [Krizhevsky et al. 2012] for the 2D views of each 3D object, while they proposed two 3D CNNs for the volumetric data.
+
+- The multiview network performed better on ModelNet40 than the volumetric ones, but the highest performance was achieved by the combination of the three different networks, named FusionNet

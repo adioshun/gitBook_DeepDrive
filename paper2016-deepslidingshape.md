@@ -391,3 +391,20 @@ $$
 
 - Deep Sliding Shapes [23] exploits more powerful deep learning features.
   - However, it operates on 3D voxel grids and uses computationally expensive 3D convolutions.
+  
+---
+
+[Sliding Shape [DeepSlidingShape 기존연구] 
+- Sliding Shapes for 3D object detection in depth images (Song2014)
+
+
+깊이 정보 활용을 위해 저자는 sliding shapes를 제안 하였으나 hand-crafted feature로 인해 제약이 있다. To make good use of the depth information, Sliding Shapes [25] was proposed to slide a 3D detection window in 3D space.+
+
+- While it is limited by the use of `hand-crafted` features,
+
+Sliding Shapes [25] is a 3D object detector that runs sliding windows in 3D to directly classify each 3D window. +
+
+However, the algorithm uses hand-crafted features and the algorithm uses many exemplar classifiers so it is very slow.
+
+Sliding Shapes [22] and Vote3D [26] apply SVM classifers on 3D grids encoded with geometry features.
+
