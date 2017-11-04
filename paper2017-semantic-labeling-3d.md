@@ -115,7 +115,7 @@ In contrast to relying on multiple individually-trained components, an end-to-en
 - 그러나 nonuniform & irregular한 포인트 클라우드의 특징으로 2D-CNN에 바로 적용 하기는 어렵다. `However, the nonuniform and irregular nature of 3D pointclouds prevents a straightforward extension of 2D-CNNs, which were designed originally for imagery.`
 
 - 그래서 초기 연구는 3D **CAD데이터**를 중심으로 3D를 2D로 변경 하여 진행 하였다. `Hence, initial deep learning approaches have focused on 3D computer-aided design (CAD) objects, and have relied on transforming the 3D data into more tractable 2D images. `
-    - For example, Su et al. (2015) rendered multiple synthetic “views” by placing a virtual camera around the 3D object. 
+    - For example, Su et al. (2015-MVCNN) rendered multiple synthetic “views” by placing a virtual camera around the 3D object. 
     - Rendered views were passed though replicas of the trained CNN, aggregated using a view poolinglayer, and then passed to another CNN to learn classification labels. 
 
 ```
@@ -190,7 +190,7 @@ Li, B., 2017. 3d fully convolutional network for vehicle detection in point clou
 Huang, J., You, S., 2016. Point cloud labeling using 3d convolutional neural network. In: Pattern Recognition (ICPR), 2016 23rd International Conference on. IEEE, pp. 2670–2675.
 ```
 
-- **voxelization **기법에 대한 다양한 연구도 진행 되었다. Other authors have explored variations of voxelization methods including, 
+- **voxelization **기법에 대한 다양한 연구도 진행 되었다. `Other authors have explored variations of voxelization methods including, `
     - binary occupancy grid, 
     - density grid, 
     - hitgrid. 
@@ -202,24 +202,24 @@ Huang, J., You, S., 2016. Point cloud labeling using 3d convolutional neural net
 Maturana, D., Scherer, S., 2015. Voxnet: A 3d convolutional neural network for real-time object recognition. In: Intelligent Robots and Systems (IROS), 2015 IEEE/RSJ International Conference on. IEEE, pp. 922–928.
 ```
 
-- Qi et al. (2016) suggested that results could collectivelybe improved by merging these two paradigms. 
+- Qi et al. (2016-VMCNN) suggested that results could collectively be improved by merging these two paradigms. 
+    - To address this, a hybrid volumentric CNN was proposed,which used long anisotropic kernels to project the 3D volumeinto a 2D-representation. 
+    - Outputs were processed using an image-based CNN based on the Network In Network (NIN) architecture (Lin et al., 2014b).
+    - To combine the multiview approach with proposed volumetric methods, the 3D-object was rotated to generate different 3D-orientations. 
+    - Each individual orientation was processed individually by the same network to generate 2D-representations, which were then pooled together and passed to the image-based CNN.
 
-To addressthis, a hybrid volumentric CNN was proposed,which used long anisotropic kernels to project the 3Dvolumeinto a 2D-representation. 
+```
+Qi, C. R., Su, H., Nießner, M., Dai, A., Yan, M., Guibas, L. J., 2016. Volumetric and multi-view cnns for object classification on 3d data. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. pp. 5648–5656.
+```
 
-Outputs were processedusing an image-based CNN based on the NetworkIn Network (NIN) architecture (Lin et al., 2014b).
 
-To combine the multiview approach with proposed volumetricmethods, the 3D-object was rotated to generatedifferent 3D-orientations. 
-
-Each individual orientationwas processed individually by the same networkto generate 2D-representations, which were then pooledtogether and passed to the image-based CNN.
-
-Finally, Liu et al. (2017) took a different approachby combining image-like representations with conditionalrandom field in the context of data fusion. 
-
-Insteadof directly operating on the LiDAR data, they interpolatedthe DSM map as a separate channel. 
-
-Using theimagery and the LiDAR data, two separate probabilitymaps were generated. 
-
-A pre-trained FCN was used toestimate the first probability map using optical imagery.
-
-Then, by handcrafting another set of features from boththe spectral and the DSM map, a logistic regression wasapplied to generate a second set of probability maps. 
-
-At the end of this two-stream process, the two probability maps were combined using high-order CRF to label every pixel into one of six categories.
+- Finally, Liu et al. (2017) took a different approach by combining image-like representations with conditional random field in the context of data fusion. 
+    - Instead of directly operating on the LiDAR data, they interpolated the DSM map as a separate channel. 
+    - Using the imagery and the LiDAR data, two separate probability maps were generated. 
+    - A pre-trained FCN was used to estimate the first probability map using optical imagery.
+    - Then, by handcrafting another set of features from both the spectral and the DSM map, a logistic regression was applied to generate a second set of probability maps. 
+    - At the end of this two-stream process, the two probability maps were combined using high-order CRF to label every pixel into one of six categories.
+    
+```
+Liu, Y., Piramanayagam, S., Monteiro, S. T., Saber, E., July 2017. Dense semantic labeling of very-high-resolution aerial imagery and lidar with fully-convolutional neural networks and higherorder crfs. In: 2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW). pp. 1561–1570.
+```
