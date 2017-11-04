@@ -7,6 +7,13 @@
 | 참고 | [이전 논문\(Aug. 2016\)](https://arxiv.org/pdf/1608.07916.pdf) |
 | 코드 | [TF](https://github.com/yukitsuji/3D_CNN_tensorflow) |
 
+```
+- 차량 탐지 알고리즘 `For example Li (2017) presented a method for vehicle detection in ground-based LiDAR point clouds. `
+    - The input point cloud was voxelized, and then a fourth binary channel was appended, representing the binary occupancy,i.e. the presence or the absence of a point within each voxel. 
+    - A 3D-FCN was then trained and evaluated to produce two maps representing the objectness and bounding box scores, using the KITTI dataset.
+
+```
+
 # 3D FCN4VD
 
 ## 1. 개요

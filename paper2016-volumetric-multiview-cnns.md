@@ -9,6 +9,17 @@
 | 참고 | |
 | 코드 | |
 
+
+```
+- Qi et al. (2016-VMCNN) suggested that results could collectively be improved by merging these two paradigms. 
+    - To address this, a hybrid volumentric CNN was proposed,which used long anisotropic kernels to project the 3D volumeinto a 2D-representation. 
+    - Outputs were processed using an image-based CNN based on the Network In Network (NIN) architecture (Lin et al., 2014b).
+    - To combine the multiview approach with proposed volumetric methods, the 3D-object was rotated to generate different 3D-orientations. 
+    - Each individual orientation was processed individually by the same network to generate 2D-representations, which were then pooled together and passed to the image-based CNN.
+```
+
+
+
 # Volumetric and Multi-View CNNs for Object Classification on 3D Data
 
 최근 개발된 3D 처리를 위한 방법
