@@ -8,6 +8,9 @@
 | 참고 | |
 | 코드 | |
 
+![](https://i.imgur.com/s2tmoR4.png)
+
+> 항공 이미지, 관련 연구 부분은 참고 가능 
 
 
 # A Fully Convolutional Network for Semantic Labeling of 3D Point Clouds
