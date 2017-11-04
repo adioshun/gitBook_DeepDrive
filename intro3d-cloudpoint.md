@@ -12,6 +12,20 @@
 > [3D Object Representation](http://www.connellybarnes.com/work/class/2015/intro_gfx/lectures/17-3DObjectRepresentation.pdf): 각 분류에 대한 상세 이미지 및 설명 포함, [Youtube](https://youtu.be/prwm9jTpths?t=11m23s) 
 
 
+- 포인트 클라우드 라벨링은 두 분류로 나눌수 있다. `Point cloud labeling algorithms can generally be grouped into two main categories. `
+
+- Section 2.1 describes“Direct Methods”, 
+    - 변환없이 포인트 클라우드 직접 사용 `which operate immediately on the point clouds themselves, and do not change the 3D nature of the data. `
+
+- Section 2.2 describes “Indirect Methods”,
+    - 변환(이미지, Volume) 하여 사용 `which transform the input point cloud, `
+    - e.g. into an image or a volume, from which known semantic segmentation methods can then be applied. 
+
+- 그래서 초기 연구는 3D **CAD데이터**를 중심으로 3D를 2D로 변경 하여 진행 하였다. `Hence, initial deep learning approaches have focused on 3D computer-aided design (CAD) objects, and have relied on transforming the 3D data into more tractable 2D images. `
+
+
+
+
 ## 1. shape descriptor
 - motivation : challenge of shape matching
 - 정의 : a structured abstraction of a 3D model that captures salient(가장 뚜렷한) shape information
