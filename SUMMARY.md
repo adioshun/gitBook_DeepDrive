@@ -116,7 +116,6 @@
 * ----- VANET -----
 * [Paper\_2017\_VANET\_3D \(50%\)](paper2017-vanet-3d.md)
 * [----- RNN based -----](-rnn-based-.md)
-* [Paper\_2016\_3D-R2N2](paper2016-3d-r2n2.md)
 * [Paper\_2017\_3DCNN\_DQN\_RNN](paper20173dcnndqn-rnn.md)
 
 ## 2D + Time \(Video\)
@@ -133,12 +132,14 @@
 * [ref03\_Tracklet](ref03tracklet.md)
 * ref04\_non-maxima suppression \(NMS\)
 
-## Related Works
+## etc Works
 
 * [Papers\_OccupancyGridFusion](papersoccupancygridfusion.md)
 * [Paper\_2016\_MSF-OG \(5%\)](paper2016-msf-og.md)
 * [----- Octree based -----](-octree-based-.md)
 * [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
+* [Paper\_2016\_3D-R2N2](paper2016-3d-r2n2.md)
+
 
 ## Project
 
