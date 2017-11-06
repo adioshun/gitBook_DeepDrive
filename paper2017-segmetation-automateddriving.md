@@ -325,11 +325,11 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 그러나 SFM방법은 노이즈가 많고, 학습의 영향을 많이 받는다. `However, SFM estimates are quite noisy and also the algorithm variations over time could affect the training of the network. `
 
-But in [18] some cues from the noisy point-cloud was inferred to act as featuresfor segmentation. 
+But in [18] some cues from the noisy point-cloud was inferred to act as features for segmentation. 
 
 The cues proposed were: height abovethe camera, distance to the camera path, projected surfaceorientation, feature track density, and residual reconstructionerror. 
 
 The work in[4] proposed a way of jointly estimatingthe semantic segmentation and structure from motion in aconditional random field formulation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDU1NjY2OTddfQ==
+eyJoaXN0b3J5IjpbMTY5ODUzNjE1M119
 -->
