@@ -323,7 +323,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 정확한 깊이 정보는 semantic segmentation하는데 도움을 준다. `Accurate Depth should help in semantic segmentation and could be passed on as an extra channel. `
 
-그러나 SFM방법은 노이즈가 많고, 학습의 영향을 많이 받는다. `However, SFM estimates are quite noisy and also the algorithm variations over time could affect the training of the network. 
+그러나 SFM방법은 노이즈가 많고, 학습의 영향을 많이 받는다. `However, SFM estimates are quite noisy and also the algorithm variations over time could affect the training of the network. `
 
 But in [18] some cuesfrom the noisy point-cloud was inferred to act as featuresfor segmentation. 
 
@@ -331,5 +331,5 @@ The cues proposed were: height abovethe camera, distance to the camera path, pro
 
 The work in[4] proposed a way of jointly estimatingthe semantic segmentation and structure from motion in aconditional random field formulation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk2NjEyNjAxXX0=
+eyJoaXN0b3J5IjpbLTEwMzYxODY1MDFdfQ==
 -->
