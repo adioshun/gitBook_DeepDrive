@@ -351,7 +351,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 	- a **map** built using **elastic fusion** [42] 
 	- and **semantic segmentation** from convolutional neural networks termed as semantic fusion. 
 
-The class probabilities were maintained for each pixel in the map and updated in an incrementally Bayesian method. 
+- The class probabilities were maintained for each pixel in the map and updated in an incrementally Bayesian method. 
 
 The imagesused in this work were from RGB-D cameras, but it providedpotential use of depth from LIDAR sensors. 
 
@@ -372,5 +372,5 @@ It can also be trained simultaneously in an end-to-endfashion.
 
 This problem can be of potential future direction forfurther research.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk1NjkwNDM0XX0=
+eyJoaXN0b3J5IjpbLTMzOTYyNTQ1N119
 -->
