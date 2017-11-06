@@ -268,7 +268,7 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 - 이 방식은 비싸고 계산 부하가 크다. `As this is high end, it is expensive to cover the entire world and needs large memory requirements. `
 
-- 만일 aligIf there is good alignment, all the static objects (road, lanes, curb, traffic signs) are obtained from the map already and dynamic objects are obtained through background subtraction. 
+- 만If there is good alignment, all the static objects (road, lanes, curb, traffic signs) are obtained from the map already and dynamic objects are obtained through background subtraction. 
 
 TomTom RoadDNA[40] provides an interface to align various sensors like Lidar, Cameras, and others. 
 
@@ -292,5 +292,5 @@ HD mapscan also be used for validation or post-processing the semanticsegmentati
 
 For this, both landmarkmaps and semantic point cloud maps could be used.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNjAzMDM0OF19
+eyJoaXN0b3J5IjpbLTE1OTUwOTA5ODNdfQ==
 -->
