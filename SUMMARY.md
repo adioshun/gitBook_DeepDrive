@@ -12,6 +12,7 @@
 * [Project\_Autoware](projectautoware.md)
 * [Paper\_2017\_SegCloud](paper2017-segcloud.md)
 * [Paper\_2017\_Semantic\_Labeling\_3D](paper2017-semantic-labeling-3d.md)
+* [Paper\_2017\_Segmetation\_AutomatedDriving](paper2017-segmetation-automateddriving.md)
 
 ## 2D CNN
 
@@ -139,7 +140,6 @@
 * [----- Octree based -----](-octree-based-.md)
 * [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
 * [Paper\_2016\_3D-R2N2](paper2016-3d-r2n2.md)
-
 
 ## Project
 

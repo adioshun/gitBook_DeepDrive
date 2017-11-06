@@ -9,11 +9,12 @@
 ### 1.2 Point Cloud
 
 * [awesome-point-cloud-processing](https://github.com/mmolero/awesome-point-cloud-processing)
+
 * [Paper Reading List : 3D Convolutional Neural Networks](http://davidstutz.de/3d-convolutional-neural-networks-a-reading-list/)
 
 ## 2. Paper
 
-* \[Computer Vision for Autonomous Vehicles: Problems, Datasets and State-of-the-Art\]
+* ~~\[Computer Vision for Autonomous Vehicles: Problems, Datasets and State-of-the-Art\]~~
 * [Deep Semantic Segmentation for Automated Driving: Taxonomy, Roadmap and Challenges](https://arxiv.org/abs/1707.02432v2)
 
 ### 2.1 2D CNN
