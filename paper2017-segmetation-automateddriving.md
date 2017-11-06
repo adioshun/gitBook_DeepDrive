@@ -264,7 +264,7 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 - The former is the dense version where the entire scene is **modeled by 3D point cloud** with semantics. 
 
-- Google and TomTom adopt this strategy. 
+> **Google** and **TomTom** adopt this strategy. 
 
 - 이 방식은 비싸고 계산 부하가 크다. `As this is high end, it is expensive to cover the entire world and needs large memory requirements. `
 
@@ -287,9 +287,9 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - Landmark based maps are based on **semantic objects** instead of generic **3D point clouds**. 
 
-- 따라서, 카메라 데이터에 Thus it works primarily for camera data. 
+- 따라서, 카메라 데이터를 가지고 연구 되었다. `Thus it works primarily for camera data. `
 
-Mobileye and HERE follow thisstrategy. 
+> **Mobileye** and **HERE** follow this strategy. 
 
 This can be viewed as a simple form of the 3D pointcloud where a subset of objects is mapped using a 2D map.In this method, object detection is leveraged to provide a HDmap and the accuracy is improved by aggregating over severalobservations from different cars.In case of a good localization, HD maps can be treated asa dominant cue and semantic segmentation algorithm greatlysimplifies to be a refinement algorithm of priors obtained byHD maps. 
 
@@ -301,5 +301,5 @@ HD mapscan also be used for validation or post-processing the semanticsegmentati
 
 For this, both landmarkmaps and semantic point cloud maps could be used.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MTU5Nzg1MF19
+eyJoaXN0b3J5IjpbNjM1MzEzODY3XX0=
 -->
