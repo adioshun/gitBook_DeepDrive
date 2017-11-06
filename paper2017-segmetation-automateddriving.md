@@ -309,7 +309,9 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - For this, both land **markmaps** and **semantic point cloud maps** could be used.
 
-#### ㅊ. Localization
+#### C. Localization
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjg1MDU2NTldfQ==
+eyJoaXN0b3J5IjpbMTY3ODkyMzAxNl19
 -->
