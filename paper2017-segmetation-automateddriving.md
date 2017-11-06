@@ -319,7 +319,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - The straightforward approach to augment localization is to have a parallel independent path for computing dense depth using a standard method like structure from motion (SFM) and then augmenting the depth to localize the objects. 
 
-Dense depth is computed to understand the spatial geometry of the scene. 
+- 깊이 지도는 spatial geometry 를 이해하기 위해서 계산 된다. `Dense depth is computed to understand the spatial geometry of the scene. `
 
 Accurate Depth should help in semantic segmentation and could be passed on as an extra channel. 
 
@@ -331,5 +331,5 @@ The cues proposed were: height abovethe camera, distance to the camera path, pro
 
 The work in[4] proposed a way of jointly estimatingthe semantic segmentation and structure from motion in aconditional random field formulation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDU0Njg4MTNdfQ==
+eyJoaXN0b3J5IjpbLTE0NjM4NTE2NzBdfQ==
 -->
