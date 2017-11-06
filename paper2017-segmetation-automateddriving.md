@@ -136,7 +136,7 @@ The decoder network up-sampled the feature maps by keeping the maxpooling indice
 
 > Finally, the work in [36][19][29][37][38][39] focused onmultiscale semantic segmentation. 
 
-Initially in [19] the scaleissue was addressed by introducing multiple rescaled versionsof the image to the network. 
+Initially in [19] the scale issue was addressed by introducing multiple rescaled versions of the image to the network. 
 
 However with the emergence ofend-to-end learning, the skip-net architecture in [28] was usedto merge heatmaps from different resolutions. 
 
@@ -146,20 +146,23 @@ Since these architectures rely on downsampling the image, loss of resolution can
 
 The work in [39] proposed a u-shaped architecture network where feature maps from different initial layers are upsampled and concatenated for the next layers. 
 
-###### [36]
+###### [36] dilated convolutions
 
-Another work in [36] introduced dilated convolutions,which expanded the receptive field without losing resolutionbased on the dilation factor. 
+Another work in [36] introduced dilated convolutions, which **expanded the receptive field** without **losing resolution** based on the dilation factor. 
 
-Thus it provided a better solutionfor handling multiple scales. 
+Thus it provided a better solution for handling multiple scales. 
+
+###### [37- Attention model]
 
 Finally the recent work in [37]provided a better way for handling scale. 
 
-It uses attentionmodels that provides a mean to focus on the most relevantfeatures with-in the image. 
+It uses attention models that provides a mean to focus on the most relevant features with-in the image. 
 
-This attention model is able tolearn a weighting map that weighs feature maps pixel-by-pixelfrom different scales.
+This attention model is able to learn a weighting map that weighs feature maps pixel-by-pixel from different scales.
 
 ### 2.3  Structured Models
-The previous approaches in fully convolutional networksdo not utilize the structure in the data. 
+
+- The previous approaches in fully convolutional networksdo not utilize the structure in the data. 
 
 Thus, recent workwas directed towards using the prior structure in the data.Specifically in automotive scenes prior structure can be exploitedfor better segmentation. 
 
@@ -224,5 +227,5 @@ For example, whenthe car is turning left, the region imaged by the front cameraw
 
 Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODM2NDYwMF19
+eyJoaXN0b3J5IjpbNTEwNzk3MDY1XX0=
 -->
