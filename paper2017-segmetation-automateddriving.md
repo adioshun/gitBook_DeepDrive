@@ -149,3 +149,6 @@ Finally the recent work in [37]provided a better way for handling scale.
 It uses attentionmodels that provides a mean to focus on the most relevantfeatures with-in the image. 
 
 This attention model is able tolearn a weighting map that weighs feature maps pixel-by-pixelfrom different scales.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE5OTI5NTQzMDldfQ==
+-->
