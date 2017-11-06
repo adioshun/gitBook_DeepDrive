@@ -124,23 +124,29 @@ In this paper, the semantic segmentation problem is explored from the perspectiv
 
 ###### [29]
 
-- In[29] a deeper deconvolution network was developed, in which stacked deconvolution and unpooling layers are used. 
+- In[29] a deeper **deconvolution network** was developed, in which stacked deconvolution and unpooling layers are used. 
+
+###### [ SegNet]
 
 In Segnet [30] a similar approach was used where an encoder decoder architecture was deployed. 
 
 The decoder network up-sampled the feature maps by keeping the maxpooling indicesfrom the corresponding encoder layer. 
 
-In Figure 1 an exampleof the semantic segmentation output of segnet applied in anautomated driving setting is shown.Finally, the work in [36][19][29][37][38][39] focused onmultiscale semantic segmentation. 
+###### [19]
+
+> Finally, the work in [36][19][29][37][38][39] focused onmultiscale semantic segmentation. 
 
 Initially in [19] the scaleissue was addressed by introducing multiple rescaled versionsof the image to the network. 
 
 However with the emergence ofend-to-end learning, the skip-net architecture in [28] was usedto merge heatmaps from different resolutions. 
 
-Since these architecturesrely on downsampling the image, loss of resolutioncan hurt the final prediction. 
+Since these architectures rely on downsampling the image, loss of resolution can hurt the final prediction. 
 
-The work in [39] proposed a ushapedarchitecture network where feature maps from differentinitial layers are upsampled and concatenated for the nextlayers. 
+###### [39] U Net
 
-Another work in [36] introduced dilated convolutions,which expanded the receptive field without losing resolutionbased on the dilation factor. 
+The work in [39] proposed a u-shaped architecture network where feature maps from different initial layers are upsampled and concatenated for the next layers. 
+
+###### [Another work in [36] introduced dilated convolutions,which expanded the receptive field without losing resolutionbased on the dilation factor. 
 
 Thus it provided a better solutionfor handling multiple scales. 
 
@@ -216,5 +222,5 @@ For example, whenthe car is turning left, the region imaged by the front cameraw
 
 Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDA2MDUwMDZdfQ==
+eyJoaXN0b3J5IjpbLTE5ODQ5ODQwOTRdfQ==
 -->
