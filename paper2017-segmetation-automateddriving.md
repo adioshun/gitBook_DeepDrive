@@ -279,13 +279,15 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA 
 ```
 
-Figure 3 illustrates this where the pre-mapped semantic point cloud on the right is aligned with an image at run timewith other dynamic objects. 
+- Figure 3 illustrates this where the pre-mapped semantic point cloud on the right is aligned with an image at run time with other dynamic objects. 
 
-They have mapped majorityof European cities and their system provides an averagelocalization error within 10 cm assuming a coarse locationfrom GPS. 
+- They have mapped majority of European cities and their system provides an average localization error within 10 cm assuming a coarse location from GPS. 
 
-Landmark based maps are based on semantic objects instead of generic 3D point clouds. 
+#### B. Landmark based Maps. 
 
-Thus it worksprimarily for camera data. 
+-  Landmark based maps are based on **semantic objects** instead of generic **3D point clouds**. 
+
+- Thus it works primarily for camera data. 
 
 Mobileye and HERE follow thisstrategy. 
 
@@ -299,5 +301,5 @@ HD mapscan also be used for validation or post-processing the semanticsegmentati
 
 For this, both landmarkmaps and semantic point cloud maps could be used.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI0NzI0OTAwXX0=
+eyJoaXN0b3J5IjpbLTE1MjkwODgwMjhdfQ==
 -->
