@@ -256,9 +256,13 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 - HD maps은 물체 탐지 정확도 향상에 중요한 요소 이다. `High accuracy of Object detection is very difficult to achieve and HD maps is an important cue to improve it. `
 
-There are twotypes of HD maps: (1) Dense Semantic Point Cloud Maps and(2) Landmark based Maps. 
+- 두 종류의 HD maps이 있다. `There are two types of HD maps: `
+	- (1) Dense Semantic Point Cloud Maps 
+	- (2) Landmark based Maps. 
 
-The former is the dense versionwhere the entire scene is modeled by 3D point cloud withsemantics. 
+#### A. Dense Semantic Point Cloud Maps 
+
+- The former is the dense version where the entire scene is modeled by 3D point cloud with semantics. 
 
 Google and TomTom adopt this strategy. 
 
@@ -288,5 +292,5 @@ HD mapscan also be used for validation or post-processing the semanticsegmentati
 
 For this, both landmarkmaps and semantic point cloud maps could be used.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwODU0MDYzNV19
+eyJoaXN0b3J5IjpbLTEzODgzNDMyMDhdfQ==
 -->
