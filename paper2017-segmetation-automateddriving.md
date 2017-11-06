@@ -339,7 +339,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 #### B. LIDAR sensors
 
-- 라이다는 깊이 정보를LIDAR sensors provide very accurate depth estimation. However, they are not dense in the image lattice. 
+- 라이다는 깊이 정보를 제공 하LIDAR sensors provide very accurate depth estimation. However, they are not dense in the image lattice. 
 
 This leads to problems in learning a dense convolutionalneural networks features. 
 
@@ -368,5 +368,5 @@ It can also be trained simultaneously in an end-to-endfashion.
 
 This problem can be of potential future direction forfurther research.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNjUzNTMzXX0=
+eyJoaXN0b3J5IjpbOTU4NjM2NzI2XX0=
 -->
