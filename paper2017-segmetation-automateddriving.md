@@ -249,11 +249,11 @@ Figure 2 shows sample images ofthe four cameras mounted on the car.
 
 - It covers the entire 360 field of view surrounding the car. 
 
-The geometric structure ofthe four cameras and the motion of the car induces a spatiotemporalstructure across the four images. 
+- The geometric structure of the four cameras and the motion of the car induces a spatiotemporalstructure across the four images. 
 
 For example, whenthe car is turning left, the region imaged by the front camerawill be imaged by the right-mirror camera after a delay. 
 
 Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyOTQ4MzE0NF19
+eyJoaXN0b3J5IjpbLTMxNDY2NzUzMV19
 -->
