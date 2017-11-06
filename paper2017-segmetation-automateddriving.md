@@ -285,7 +285,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 #### B. Landmark based Maps. 
 
--  Landmark based maps are based on **semantic objects** instead of generic **3D point clouds**. 
+- Landmark based maps are based on **semantic objects** instead of generic **3D point clouds**. 
 
 - Thus it works primarily for camera data. 
 
@@ -301,5 +301,5 @@ HD mapscan also be used for validation or post-processing the semanticsegmentati
 
 For this, both landmarkmaps and semantic point cloud maps could be used.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjkwODgwMjhdfQ==
+eyJoaXN0b3J5IjpbNDIzNTU4MTU4XX0=
 -->
