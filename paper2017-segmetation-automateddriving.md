@@ -167,21 +167,31 @@ This attention model is able to learn a weighting map that weighs feature maps p
 - 최근 연구에서는  데이터의 prior structure정보를 사용한다. Thus, recent work was directed towards using the prior structure in the data.
 	- 특히 자율주행 에서는  prior structure는 세그멘테이션에 좋은 효과를 준다. `Specifically in automotive scenes prior structure can be exploited for better segmentation. `
 
-The commonly used model  to incorporate structure is conditional random field (CRF)[22][23][24]. 
+#### A. CRF
 
+- The commonly used model  to incorporate structure is conditional random field (CRF)[22][23][24]. 
+
+###### [22]
 In [22], CRF is used as a post processing stepafter the segmentation network. 
 
-In [23], CRF is also usedas post processing to a dilated convolution network to takecontextual information into consideration. 
+###### [23]
+In [23], CRF is also used as post processing to a dilated convolution network to take contextual information into consideration. 
 
-Finally, in [24]the mean field inference algorithm that is used within CRFformulation was formulated as a recurrent network.Another way to model structure is by using a recurrentneural network (RNN) to capture the long range dependenciesof various regions [31]. 
+###### [24]
 
-It introduced a different formulationfor solving the structured prediction problem. 
+Finally, in [24]the mean field inference algorithm that is used within CRFformulation was formulated as a recurrent network.
 
-A Recurrentlayer is used to sweep the image horizontally and vertically,which ensures the usage of contextual information for a bettersegmentation.
+#### B. RNN 
+
+Another way to model structure is by using a recurrent neural network (RNN) to capture the long range dependencies of various regions [31]. 
+
+It introduced a different formulation for solving the structured prediction problem. 
+
+A Recurrent layer is used to sweep the image horizontally and vertically, which ensures the usage of contextual information for a better segmentation.
 
 ### 2.4 Spatio-Temporal Models
 
-All the discussed work was focused on still image segmentation.Recently some approaches emerged for video semanticsegmentation that utilized temporal information [25][32][33][34]. 
+- All the discussed work was focused on still image segmentation.Recently some approaches emerged for video semanticsegmentation that utilized temporal information [25][32][33][34]. 
 
 In [25] introduced clockworks which are clocksignals that control the learning of different layers withdifferent rates. 
 
@@ -228,5 +238,5 @@ For example, whenthe car is turning left, the region imaged by the front cameraw
 
 Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyOTkxOTI4NF19
+eyJoaXN0b3J5IjpbMTU2NzEwNDQ3OV19
 -->
