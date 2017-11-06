@@ -291,7 +291,13 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 > **Mobileye** and **HERE** follow this strategy. 
 
-This can be viewed as a simple form of the 3D pointcloud where a subset of objects is mapped using a 2D map.In this method, object detection is leveraged to provide a HDmap and the accuracy is improved by aggregating over severalobservations from different cars.In case of a good localization, HD maps can be treated asa dominant cue and semantic segmentation algorithm greatlysimplifies to be a refinement algorithm of priors obtained byHD maps. 
+This can be viewed as a simple form of the 3D pointcloud where a subset of objects is mapped using a 2D map.
+
+In this method, object detection is leveraged to provide a HDmap and the accuracy is improved by aggregating over several observations from different cars.
+
+In case of a good localization, HD maps can be treated as a dominant cue and semantic segmentation algorithm greatly simplifies to be a refinement algorithm of priors obtained by HD maps. 
+
+
 
 In Figure 3, the semantic point cloud alignmentprovides an accurate semantic segmentation for static objects.Note that it does not cover distant objects like sky. 
 
@@ -301,5 +307,5 @@ HD mapscan also be used for validation or post-processing the semanticsegmentati
 
 For this, both landmarkmaps and semantic point cloud maps could be used.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM1MzEzODY3XX0=
+eyJoaXN0b3J5IjpbLTMwNzY0NzIwNV19
 -->
