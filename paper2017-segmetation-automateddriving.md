@@ -366,7 +366,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 최근 CNN을 이용한 연구 중에서structure & camera motion을 예측하는게 있다. `There exists promising algorithms on using convolutional neural networks to estimate structure and camera motion. `
 
-###### [43]
+###### [43] Demon
 
 - A recent work in [43]proposed **depth** and **motion** network for learning monocular stereo. 
 
@@ -376,7 +376,11 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - It can also be trained simultaneously in an end-to-end fashion. 
 
-This problem can be of potential future direction forfurther research.
+- This problem can be of potential future direction for further research.
+- 
+```
+[43] B. Ummenhofer, H. Zhou, J. Uhrig, N. Mayer, E. Ilg, A. Dosovitskiy, and T. Brox, “Demon: Depth and motion network for learning monocular stereo,” arXiv preprint arXiv:1612.02401, 2016.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNDQ5MTA4OF19
+eyJoaXN0b3J5IjpbLTE1NDU1Mjc4NDRdfQ==
 -->
