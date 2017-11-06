@@ -202,9 +202,11 @@ In [32] spatio temporal FCN is introduced by using a layer grid of Long Short te
 
 
 
-However conventional LSTMs do not utilize the spatial coherence and would end up with more parameters to learn.
+> 그러나 기존의 LSTM은 학습량만 늘어 나고 **spatial coherence**를 잘 활용하지 않는다. ` However conventional LSTMs do not utilize the spatial coherence and would end up with more parameters to learn.`
 
-In a recent work [33] convolutional gated recurrent networks was used to learn temporal information to leveragethe semantic segmentation of videos. 
+###### [33] convolutional gated recurrent networks
+
+In a recent work [33] convolutional gated recurrent networks was used to learn temporal information to leverage the semantic segmentation of videos. 
 
 The recurrent unit usedin this work was convolutional which enables it to learnboth spatial and temporal information with less number ofparameters. 
 
@@ -245,5 +247,5 @@ For example, whenthe car is turning left, the region imaged by the front cameraw
 
 Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg3NjYyODI4XX0=
+eyJoaXN0b3J5IjpbNzgxMzY4MDVdfQ==
 -->
