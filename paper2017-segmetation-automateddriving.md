@@ -357,6 +357,10 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - Generally, this is agood research problem to be pursued as LIDAR is becoming a standard sensor for next generation automated driving systems.
 
+```
+[41] J. McCormac, A. Handa, A. Davison, and S. Leutenegger, “Semanticfusion: Dense 3d semantic mapping with convolutional neural networks,” arXiv preprint arXiv:1609.05130, 2016.
+```
+
 
 #### C.  Joint In-the-Network Localization
 
@@ -372,5 +376,5 @@ It can also be trained simultaneously in an end-to-endfashion.
 
 This problem can be of potential future direction forfurther research.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ4OTk0MDk2XX0=
+eyJoaXN0b3J5IjpbMjA4MTgzNDQyM119
 -->
