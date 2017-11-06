@@ -311,7 +311,9 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 #### C. Localization
 
+- **Localization** or **depth estimation** is very critical for automated driving. 
 
+- Having image semantics without localization is not very useful.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3ODkyMzAxNl19
+eyJoaXN0b3J5IjpbMTY3MTgxNjkyNl19
 -->
