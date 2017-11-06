@@ -366,15 +366,17 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 최근 CNN을 이용한 연구 중에서structure & camera motion을 예측하는게 있다. `There exists promising algorithms on using convolutional neural networks to estimate structure and camera motion. `
 
+###### [43]
+
 - A recent work in [43]proposed **depth** and **motion** network for learning monocular stereo. 
 
-As far as the authors are aware, there is no work on jointly estimating depth and semantics with in a network. 
+-  estimating **depth** and **semantics**를 Jointly하게 학습 하는 연구로는 처음이다. `As far as the authors are aware, there is no work on jointly estimating depth and semantics with in a network. `
 
-Thiscan synergize and potentially aid in the estimation of eachother. 
+- This can synergize and potentially aid in the estimation of each other. 
 
-It can also be trained simultaneously in an end-to-endfashion. 
+- It can also be trained simultaneously in an end-to-end fashion. 
 
 This problem can be of potential future direction forfurther research.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NTQ3OTI1OV19
+eyJoaXN0b3J5IjpbMTgyNDQ5MTA4OF19
 -->
