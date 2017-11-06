@@ -343,7 +343,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 이점 때문에 학습시 문제가 된다. `This leads to problems in learning a dense convolutional neural networks features. `
 
-- 하지만 fuse를 통해서 세그멘테이션시 깊이 정보를 제공 할수 있다But it can provide a way to fuse semantic segmentation with depth information in a probabilistic framework. 
+- 하지만 fuse를 통해서 세그멘테이션시 깊이 정보를 제공 할수 있다. `But it can provide a way to fuse semantic segmentation with depth information in a probabilistic framework. `
 
 In [41] the method fused a map built using elastic fusion [42] and semantic segmentation from convolutional neural networks termed as semantic fusion. 
 
@@ -368,5 +368,5 @@ It can also be trained simultaneously in an end-to-endfashion.
 
 This problem can be of potential future direction forfurther research.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTMyNTE2MDhdfQ==
+eyJoaXN0b3J5IjpbLTk0MDIwNTQzMl19
 -->
