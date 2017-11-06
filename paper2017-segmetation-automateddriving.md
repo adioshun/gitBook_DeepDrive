@@ -225,15 +225,19 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 - 사전 정보를 활용하면 복잡한 문제를 단순화 할수 있다. `Prior information could simplify model complexity greatly. `
 
-There are different types of prior informationthat can be used. 
+- 사전 정보에는 여러 종류가 있다. `There are different types of prior information that can be used. `
 
-Spatial priors such as the fact thatlanes lie on a ground plane, or that road segmented is mostlyin the bottom half of the images. 
+1. Spatial priors 
+	- such as the fact that lanes lie on a ground plane, or that road segmented is mostly in the bottom half of the images. 
 
-Geometric priors on theshapes of objects, for examples lanes are thick lines that areall converging into a vanishing point. 
+2. Geometric priors on the shapes of objects, 
+	- for examples lanes are thick lines that are all converging into a vanishing point. 
 
-Color priors such as thecolor of traffic lights or white lanes. 
+3. Color priors 
+	- such as the color of traffic lights or white lanes. 
 
-Finally, Location priors,for example the lane, road or buildings locations based on highdefinition maps or aerial maps.
+4. Location priors,
+	- for example the lane, road or buildings locations based on high definition maps or aerial maps.
 
 #### B. Multi-camera Structure: 
 
@@ -251,5 +255,5 @@ For example, whenthe car is turning left, the region imaged by the front cameraw
 
 Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ0NzkzODddfQ==
+eyJoaXN0b3J5IjpbLTE2NzYxNDIwMDFdfQ==
 -->
