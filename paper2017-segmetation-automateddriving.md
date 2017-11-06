@@ -309,11 +309,25 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - For this, both land **markmaps** and **semantic point cloud maps** could be used.
 
-#### C. Localization
+### 3.3 Localization
 
 - **Localization** or **depth estimation** is very critical for automated driving. 
 
 - Having image semantics without localization is not very useful.
+
+#### A. 1) Depth using Structure from Motion(SFM): The straightforward approach to augment localization is to have a parallelindependent path for computing dense depth using a standardmethod like structure from motion (SFM) and then augmentingthe depth to localize the objects. 
+
+Dense depth is computedto understand the spatial geometry of the scene. 
+
+AccurateDepth should help in semantic segmentation and could bepassed on as an extra channel. 
+
+However, SFM estimates arequite noisy and also the algorithm variations over time couldaffect the training of the network. 
+
+But in [18] some cuesfrom the noisy point-cloud was inferred to act as featuresfor segmentation. 
+
+The cues proposed were: height abovethe camera, distance to the camera path, projected surfaceorientation, feature track density, and residual reconstructionerror. 
+
+The work in[4] proposed a way of jointly estimatingthe semantic segmentation and structure from motion in aconditional random field formulation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MTgxNjkyNl19
+eyJoaXN0b3J5IjpbODA4ODMwMTkwXX0=
 -->
