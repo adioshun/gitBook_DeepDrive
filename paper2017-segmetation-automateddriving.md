@@ -301,13 +301,15 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - In Figure 3, the semantic point cloud alignment provides an accurate semantic segmentation for static objects.
 
-Note that it does not cover distant objects like sky. 
+- Note that it does not cover distant objects like sky. 
 
-This wouldneed a good confidence measure for localization accuracy,typically some kind of re-projection error is used. 
+- This would need a good confidence measure for localization accuracy,typically some kind of re-projection error is used. 
 
-HD mapscan also be used for validation or post-processing the semanticsegmentation to eliminate false positives. 
+- HD maps can also be used for validation or post-processing the semantic segmentation to eliminate false positives. 
 
-For this, both landmarkmaps and semantic point cloud maps could be used.
+- For this, both land **markmaps** and **semantic point cloud maps** could be used.
+
+#### ㅊ. Localization
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMDQ4NTcyNl19
+eyJoaXN0b3J5IjpbLTE0Mjg1MDU2NTldfQ==
 -->
