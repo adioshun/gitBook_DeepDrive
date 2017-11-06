@@ -274,7 +274,12 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 -  TomTom RoadDNA[40] provides an interface to align various sensors like Lidar, Cameras, and others. 
 
-Figure 3 illustrates this where the pre-mapped semanticpoint cloud on the right is aligned with an image at runtimewith other dynamic objects. 
+![](blob:https://imgur.com/b1e58cec-4fc0-40b9-888a-e92fbce89e14)
+```
+Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA 
+```
+
+Figure 3 illustrates this where the pre-mapped semantic point cloud on the right is aligned with an image at run timewith other dynamic objects. 
 
 They have mapped majorityof European cities and their system provides an averagelocalization error within 10 cm assuming a coarse locationfrom GPS. 
 
@@ -294,5 +299,5 @@ HD mapscan also be used for validation or post-processing the semanticsegmentati
 
 For this, both landmarkmaps and semantic point cloud maps could be used.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTE1ODgzNjNdfQ==
+eyJoaXN0b3J5IjpbNDI0NzI0OTAwXX0=
 -->
