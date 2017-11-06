@@ -251,6 +251,42 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 	- 예를 들어 차가 좌회전을 하면 전면의 카메라의 이미지는 잠시후 오른쪽 카메라의 이미지가 된다. `For example, when the car is turning left, the region imaged by the front camera will be imaged by the right-mirror camera after a delay. `
 
 - 4대의 카메라의 도로 상태도 같은 것이다. `There is also similarity in the near-field road surface in all the four cameras as they belong to the same road surface.`
+
+### 3.2 Dense High Definition(HD) maps
+
+High accuracy of Object detection is very difficult to achieveand HD maps is an important cue to improve it. 
+
+There are twotypes of HD maps: (1) Dense Semantic Point Cloud Maps and(2) Landmark based Maps. 
+
+The former is the dense versionwhere the entire scene is modeled by 3D point cloud withsemantics. 
+
+Google and TomTom adopt this strategy. 
+
+As this ishigh end, it is expensive to cover the entire world and needslarge memory requirements. 
+
+If there is good alignment, all thestatic objects (road, lanes, curb, traffic signs) are obtained fromthe map already and dynamic objects are obtained throughbackground subtraction. 
+
+TomTom RoadDNA[40] provides aninterface to align various sensors like Lidar, Cameras, andothers. 
+
+Figure 3 illustrates this where the pre-mapped semanticpoint cloud on the right is aligned with an image at runtimewith other dynamic objects. 
+
+They have mapped majorityof European cities and their system provides an averagelocalization error within 10 cm assuming a coarse locationfrom GPS. 
+
+Landmark based maps are based on semantic objects instead of generic 3D point clouds. 
+
+Thus it worksprimarily for camera data. 
+
+Mobileye and HERE follow thisstrategy. 
+
+This can be viewed as a simple form of the 3D pointcloud where a subset of objects is mapped using a 2D map.In this method, object detection is leveraged to provide a HDmap and the accuracy is improved by aggregating over severalobservations from different cars.In case of a good localization, HD maps can be treated asa dominant cue and semantic segmentation algorithm greatlysimplifies to be a refinement algorithm of priors obtained byHD maps. 
+
+In Figure 3, the semantic point cloud alignmentprovides an accurate semantic segmentation for static objects.Note that it does not cover distant objects like sky. 
+
+This wouldneed a good confidence measure for localization accuracy,typically some kind of re-projection error is used. 
+
+HD mapscan also be used for validation or post-processing the semanticsegmentation to eliminate false positives. 
+
+For this, both landmarkmaps and semantic point cloud maps could be used.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkwMjE1NjUyXX0=
+eyJoaXN0b3J5IjpbLTE4NzY0Mjc0NjZdfQ==
 -->
