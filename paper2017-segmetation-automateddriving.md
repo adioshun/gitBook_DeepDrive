@@ -345,9 +345,13 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 하지만 fuse를 통해서 세그멘테이션시 깊이 정보를 제공 할수 있다. `But it can provide a way to fuse semantic segmentation with depth information in a probabilistic framework. `
 
-In [41] the method fused a map built using elastic fusion [42] and semantic segmentation from convolutional neural networks termed as semantic fusion. 
+###### [41]
 
-Theclass probabilities were maintained for each pixel in the mapand updated in an incrementally Bayesian method. 
+- In [41] the method fused 
+	- a **map** built using **elastic fusion** [42] 
+	- and **semantic segmentation** from convolutional neural networks termed as semantic fusion. 
+
+The class probabilities were maintained for each pixel in the map and updated in an incrementally Bayesian method. 
 
 The imagesused in this work were from RGB-D cameras, but it providedpotential use of depth from LIDAR sensors. 
 
@@ -368,5 +372,5 @@ It can also be trained simultaneously in an end-to-endfashion.
 
 This problem can be of potential future direction forfurther research.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MDIwNTQzMl19
+eyJoaXN0b3J5IjpbOTk1NjkwNDM0XX0=
 -->
