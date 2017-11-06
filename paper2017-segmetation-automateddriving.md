@@ -151,9 +151,43 @@ It uses attentionmodels that provides a mean to focus on the most relevantfeatur
 This attention model is able tolearn a weighting map that weighs feature maps pixel-by-pixelfrom different scales.
 
 ### 2.3  Structured Models
+The previous approaches in fully convolutional networksdo not utilize the structure in the data. 
+
+Thus, recent workwas directed towards using the prior structure in the data.Specifically in automotive scenes prior structure can be exploitedfor better segmentation. 
+
+The commonly used model  to incorporate structure is conditional random field (CRF)[22][23][24]. 
+
+In [22], CRF is used as a post processing stepafter the segmentation network. 
+
+In [23], CRF is also usedas post processing to a dilated convolution network to takecontextual information into consideration. 
+
+Finally, in [24]the mean field inference algorithm that is used within CRFformulation was formulated as a recurrent network.Another way to model structure is by using a recurrentneural network (RNN) to capture the long range dependenciesof various regions [31]. 
+
+It introduced a different formulationfor solving the structured prediction problem. 
+
+A Recurrentlayer is used to sweep the image horizontally and vertically,which ensures the usage of contextual information for a bettersegmentation.
+
+### 2.4 Spatio-Temporal Models
+
+All the discussed work was focused on still image segmentation.Recently some approaches emerged for video semanticsegmentation that utilized temporal information [25][32][33][34]. 
+
+In [25] introduced clockworks which are clocksignals that control the learning of different layers withdifferent rates. 
+
+In [32] spatio temporal FCN is introducedby using a layer grid of Long Short term memory models(LSTMs). 
+
+However conventional LSTMs do not utilize thespatial coherence and would end up with more parameters tolearn.In a recent work [33] convolutional gated recurrent networkswas used to learn temporal information to leveragethe semantic segmentation of videos. 
+
+The recurrent unit usedin this work was convolutional which enables it to learnboth spatial and temporal information with less number ofparameters. 
+
+Thus, it was easier to train and memory efficient.The work in [34] combined the power of both convolutionalgated architectures and spatial transformers for leveragingvideo semantic segmentation.
 
 
-### 2.4 
+## 3. DEEP SEMANTIC SEGMENTATION IN AUTOMATED DRIVING
+
+### 3.1 Problem Structure.
+
+#### A. 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjc0MzE0OTFdfQ==
+eyJoaXN0b3J5IjpbLTgxNzQ3MTcxNl19
 -->
