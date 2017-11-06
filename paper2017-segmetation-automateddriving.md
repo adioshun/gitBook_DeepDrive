@@ -353,9 +353,9 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - The class probabilities were maintained for each pixel in the map and updated in an incrementally Bayesian method. 
 
-The images used in this work were from RGB-D cameras, but it providedpotential use of depth from LIDAR sensors. 
+- 이 논문에서 사용된건 RGB-D카메라이지만 LiDAR도 적용 할수 있다. `The images used in this work were from RGB-D cameras, but it provided potential use of depth from LIDAR sensors. `
 
-Generally, this is agood research problem to be pursued as LIDAR is becoming astandard sensor for next generation automated driving systems.
+- Generally, this is agood research problem to be pursued as LIDAR is becoming a standard sensor for next generation automated driving systems.
 
 
 #### C.  Joint In-the-Network Localization
@@ -372,5 +372,5 @@ It can also be trained simultaneously in an end-to-endfashion.
 
 This problem can be of potential future direction forfurther research.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDIwNzU5MzldfQ==
+eyJoaXN0b3J5IjpbMjQ4OTk0MDk2XX0=
 -->
