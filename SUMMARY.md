@@ -1,6 +1,6 @@
 # Summary
 
-## Introduction
+## Introduction/Survy
 
 * [ReadME](README.md)
 * [----- ToRead DeepDrive -----](-toread-deepdrive-.md)
@@ -10,14 +10,15 @@
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 * [Paper\_2017\_Guide\_Segmetation\_AutomatedDriving](paper2017-segmetation-automateddriving.md)
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
-* [Project\_Autoware](projectautoware.md)
-* [Paper\_2017\_SegCloud](paper2017-segcloud.md)
-* [Paper\_2017\_Segmetation\_AutomatedDriving](paper2017-segmetation-automateddriving.md)
+
+
 
 ## 2D CNN
 
 * [Paper\_2016\_MultiNet \(0%\)](paper2016-multinet.md)
 * [Paper\_2017\_SqueezeDet \(50%\)](paper2016-squeezedet.md)
+* [Paper\_2016\_SegNet](paper2016-segnet.md)
+
 
 ## 2D Monocular Vision
 
@@ -85,6 +86,10 @@
 * [Paper\_2016\_PointNet3D \(50%\)](paper2016-pointnet3d.md)
 * [Paper\_2016\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * [Paper\_2017\_Vote3Deep \(50%\)](papervote3deep.md)
+* [Paper\_2017\_SegCloud](paper2017-segcloud.md)
+
+
+
 
 ## \[실습\] 3D Pointcloud based
 
@@ -145,4 +150,6 @@
 
 * [Project\_2017\_iPRoBe Lab](project2017-iprobe-lab.md)
 * [Project\_2017\_Berkeley](project2017-berkeley.md)
+* [Project\_Autoware](projectautoware.md)
+
 
