@@ -262,13 +262,13 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 #### A. Dense Semantic Point Cloud Maps 
 
-- The former is the dense version where the entire scene is modeled by 3D point cloud with semantics. 
+- The former is the dense version where the entire scene is **modeled by 3D point cloud** with semantics. 
 
-Google and TomTom adopt this strategy. 
+- Google and TomTom adopt this strategy. 
 
-As this ishigh end, it is expensive to cover the entire world and needslarge memory requirements. 
+- 이 방식은 비싸고 계산 부하가 크다. `As this is high end, it is expensive to cover the entire world and needs large memory requirements. `
 
-If there is good alignment, all thestatic objects (road, lanes, curb, traffic signs) are obtained fromthe map already and dynamic objects are obtained throughbackground subtraction. 
+- If there is good alignment, all the static objects (road, lanes, curb, traffic signs) are obtained from the map already and dynamic objects are obtained through background subtraction. 
 
 TomTom RoadDNA[40] provides aninterface to align various sensors like Lidar, Cameras, andothers. 
 
@@ -292,5 +292,5 @@ HD mapscan also be used for validation or post-processing the semanticsegmentati
 
 For this, both landmarkmaps and semantic point cloud maps could be used.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODgzNDMyMDhdfQ==
+eyJoaXN0b3J5IjpbNTkzMzMyODU1XX0=
 -->
