@@ -337,7 +337,38 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 	- and **structure from motion** 
 - in a conditional random field formulation.
 
-#### B. 
+#### B. LIDAR sensors
+
+LIDAR sensors provide very accurate depth estimation. 
+
+However, they are not dense in the imagelattice. 
+
+This leads to problems in learning a dense convolutionalneural networks features. 
+
+But it can provide a wayto fuse semantic segmentation with depth information in a probabilistic framework. 
+
+In [41] the method fused a mapbuilt using elastic fusion [42] and semantic segmentation fromconvolutional neural networks termed as semantic fusion. 
+
+Theclass probabilities were maintained for each pixel in the mapand updated in an incrementally Bayesian method. 
+
+The imagesused in this work were from RGB-D cameras, but it providedpotential use of depth from LIDAR sensors. 
+
+Generally, this is agood research problem to be pursued as LIDAR is becoming astandard sensor for next generation automated driving systems.
+
+
+#### C.  Joint In-the-Network Localization
+
+There exists promisingalgorithms on using convolutional neural networks toestimate structure and camera motion. 
+
+A recent work in [43]proposed depth and motion network for learning monocularstereo. 
+
+As far as the authors are aware, there is no work onjointly estimating depth and semantics with in a network. 
+
+Thiscan synergize and potentially aid in the estimation of eachother. 
+
+It can also be trained simultaneously in an end-to-endfashion. 
+
+This problem can be of potential future direction forfurther research.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYwMDcwNjM5XX0=
+eyJoaXN0b3J5IjpbLTUzMTI2NzcwM119
 -->
