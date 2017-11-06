@@ -272,7 +272,7 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 	- 모든 고정된 장비 들은 map에 표시 되고 `all the static objects (road, lanes, curb, traffic signs) are obtained from the map already `
 	- 동적인 물체 들만 배경 제거 기법으로 얻어 낼수 있다. `and dynamic objects are obtained through background subtraction. `
 
-- RoadDNA는 여러 센서TomTom RoadDNA[40] provides an interface to align various sensors like Lidar, Cameras, and others. 
+-  TomTom RoadDNA[40] provides an interface to align various sensors like Lidar, Cameras, and others. 
 
 Figure 3 illustrates this where the pre-mapped semanticpoint cloud on the right is aligned with an image at runtimewith other dynamic objects. 
 
@@ -294,5 +294,5 @@ HD mapscan also be used for validation or post-processing the semanticsegmentati
 
 For this, both landmarkmaps and semantic point cloud maps could be used.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1OTkyMDE1NF19
+eyJoaXN0b3J5IjpbLTIwOTE1ODgzNjNdfQ==
 -->
