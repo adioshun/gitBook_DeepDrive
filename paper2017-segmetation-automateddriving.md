@@ -206,11 +206,15 @@ In [32] spatio temporal FCN is introduced by using a layer grid of Long Short te
 
 ###### [33] convolutional gated recurrent networks
 
-In a recent work [33] convolutional gated recurrent networks was used to learn temporal information to leverage the semantic segmentation of videos. 
+In a recent work [33] **convolutional gated recurrent networks** was used to learn temporal information to leverage the semantic segmentation of videos. 
 
-The recurrent unit usedin this work was convolutional which enables it to learnboth spatial and temporal information with less number ofparameters. 
+The recurrent unit used in this work was convolutional which enables it to learn both spatial and temporal information with less number of parameters. 
 
-Thus, it was easier to train and memory efficient.The work in [34] combined the power of both convolutionalgated architectures and spatial transformers for leveragingvideo semantic segmentation.
+Thus, it was easier to train and memory efficient.
+
+###### [34]
+
+The work in [34] **combined** the power of both **convolutional gated architectures** and **spatial transformers** for leveraging video semantic segmentation.
 
 
 ## 3. DEEP SEMANTIC SEGMENTATION IN AUTOMATED DRIVING
@@ -219,7 +223,7 @@ Thus, it was easier to train and memory efficient.The work in [34] combined the 
 
 #### A.  Scene Structure
 
-Prior information could simplify modelcomplexity greatly. 
+- 사전 정보를 활용하면 복잡한 문제를 단순화 할수 있다. `Prior information could simplify model complexity greatly. `
 
 There are different types of prior informationthat can be used. 
 
@@ -247,5 +251,5 @@ For example, whenthe car is turning left, the region imaged by the front cameraw
 
 Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgxMzY4MDVdfQ==
+eyJoaXN0b3J5IjpbNTQ0NzkzODddfQ==
 -->
