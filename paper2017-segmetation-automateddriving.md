@@ -364,11 +364,11 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 #### C.  Joint In-the-Network Localization
 
-There exists promisingalgorithms on using convolutional neural networks toestimate structure and camera motion. 
+- 최근 CNN을 이용한 연구 중에서structure & camera motion을 예측하는게 있다. `There exists promising algorithms on using convolutional neural networks to estimate structure and camera motion. `
 
-A recent work in [43]proposed depth and motion network for learning monocularstereo. 
+- A recent work in [43]proposed **depth** and **motion** network for learning monocular stereo. 
 
-As far as the authors are aware, there is no work onjointly estimating depth and semantics with in a network. 
+As far as the authors are aware, there is no work on jointly estimating depth and semantics with in a network. 
 
 Thiscan synergize and potentially aid in the estimation of eachother. 
 
@@ -376,5 +376,5 @@ It can also be trained simultaneously in an end-to-endfashion.
 
 This problem can be of potential future direction forfurther research.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MTgzNDQyM119
+eyJoaXN0b3J5IjpbMTM0NTQ3OTI1OV19
 -->
