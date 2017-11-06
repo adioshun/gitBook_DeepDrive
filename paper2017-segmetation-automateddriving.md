@@ -315,11 +315,13 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - Having image semantics without localization is not very useful.
 
-#### A. 1) Depth using Structure from Motion(SFM): The straightforward approach to augment localization is to have a parallelindependent path for computing dense depth using a standardmethod like structure from motion (SFM) and then augmentingthe depth to localize the objects. 
+#### A. Depth using Structure from Motion(SFM)
 
-Dense depth is computedto understand the spatial geometry of the scene. 
+- The straightforward approach to augment localization is to have a parallel independent path for computing dense depth using a standard method like structure from motion (SFM) and then augmenting the depth to localize the objects. 
 
-AccurateDepth should help in semantic segmentation and could bepassed on as an extra channel. 
+Dense depth is computed to understand the spatial geometry of the scene. 
+
+Accurate Depth should help in semantic segmentation and could be passed on as an extra channel. 
 
 However, SFM estimates arequite noisy and also the algorithm variations over time couldaffect the training of the network. 
 
@@ -329,5 +331,5 @@ The cues proposed were: height abovethe camera, distance to the camera path, pro
 
 The work in[4] proposed a way of jointly estimatingthe semantic segmentation and structure from motion in aconditional random field formulation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA4ODMwMTkwXX0=
+eyJoaXN0b3J5IjpbLTExNDU0Njg4MTNdfQ==
 -->
