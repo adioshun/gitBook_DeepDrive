@@ -241,7 +241,7 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 #### B. Multi-camera Structure: 
 
-- Typically automotive systemsuses a multi-camera network. 
+- Typically automotive systems uses a multi-camera network. 
 
 Current systems have at leastfour cameras and it is increasing to more than ten cameras forfuture generation systems. 
 
@@ -255,5 +255,5 @@ For example, whenthe car is turning left, the region imaged by the front cameraw
 
 Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzYxNDIwMDFdfQ==
+eyJoaXN0b3J5IjpbMjA3OTg1ODU5XX0=
 -->
