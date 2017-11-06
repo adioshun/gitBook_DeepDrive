@@ -341,11 +341,11 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 라이다는 깊이 정보를 제공 하지만, Dese는 이미지 만큼 좋지 않다. `LIDAR sensors provide very accurate depth estimation. However, they are not dense in the image lattice. `
 
-This leads to problems in learning a dense convolutionalneural networks features. 
+- 이점 때문에 학습시 문제가 된다. `This leads to problems in learning a dense convolutional neural networks features. `
 
-But it can provide a wayto fuse semantic segmentation with depth information in a probabilistic framework. 
+- 하지만 ㄹBut it can provide a way to fuse semantic segmentation with depth information in a probabilistic framework. 
 
-In [41] the method fused a mapbuilt using elastic fusion [42] and semantic segmentation fromconvolutional neural networks termed as semantic fusion. 
+In [41] the method fused a map built using elastic fusion [42] and semantic segmentation from convolutional neural networks termed as semantic fusion. 
 
 Theclass probabilities were maintained for each pixel in the mapand updated in an incrementally Bayesian method. 
 
@@ -368,5 +368,5 @@ It can also be trained simultaneously in an end-to-endfashion.
 
 This problem can be of potential future direction forfurther research.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg3NDI2MTk0XX0=
+eyJoaXN0b3J5IjpbMTE3MTAyODM2N119
 -->
