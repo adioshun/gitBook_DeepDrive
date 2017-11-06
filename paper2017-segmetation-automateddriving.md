@@ -146,7 +146,8 @@ Since these architectures rely on downsampling the image, loss of resolution can
 
 The work in [39] proposed a u-shaped architecture network where feature maps from different initial layers are upsampled and concatenated for the next layers. 
 
-###### [36Another work in [36] introduced dilated convolutions,which expanded the receptive field without losing resolutionbased on the dilation factor. 
+###### [36]
+Another work in [36] introduced dilated convolutions,which expanded the receptive field without losing resolutionbased on the dilation factor. 
 
 Thus it provided a better solutionfor handling multiple scales. 
 
@@ -222,5 +223,5 @@ For example, whenthe car is turning left, the region imaged by the front cameraw
 
 Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MTY5MjE5MV19
+eyJoaXN0b3J5IjpbMTExMzkyOTI0Ml19
 -->
