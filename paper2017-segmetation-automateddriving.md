@@ -191,7 +191,7 @@ A Recurrent layer is used to sweep the image horizontally and vertically, which 
 
 ### 2.4 Spatio-Temporal Models
 
-- 지금까지 살펴본 것들은 이미지 세그멘테이션에 관한 것이다. All the discussed work was focused on still image segmentation.Recently some approaches emerged for video semanticsegmentation that utilized temporal information [25][32][33][34]. 
+- 지금까지 살펴본 것들은 이미지 세그멘테이션에 관한 것이다. 최근 연구에서는 All the discussed work was focused on still image segmentation.Recently some approaches emerged for video semanticsegmentation that utilized temporal information [25][32][33][34]. 
 
 In [25] introduced clockworks which are clocksignals that control the learning of different layers withdifferent rates. 
 
@@ -238,5 +238,5 @@ For example, whenthe car is turning left, the region imaged by the front cameraw
 
 Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxODkxNzExOV19
+eyJoaXN0b3J5IjpbMzE3OTU3MjczXX0=
 -->
