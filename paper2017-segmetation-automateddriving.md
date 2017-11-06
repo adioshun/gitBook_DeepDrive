@@ -332,7 +332,12 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 	- feature track density, 
 	- and residual reconstruction error. 
 
-The work in[4] proposed a way of jointly estimating the semantic segmentation and structure from motion in a conditional random field formulation.
+- The work in[4] proposed a way of **jointly estimating** 
+	- the **semantic segmentation** 
+	- and **structure from motion** 
+- in a conditional random field formulation.
+
+#### B. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMjM4MzAxNV19
+eyJoaXN0b3J5IjpbNDYwMDcwNjM5XX0=
 -->
