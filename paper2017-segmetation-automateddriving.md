@@ -245,7 +245,7 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 ![](https://i.imgur.com/eE9Mf1M.png)
 
-- 위 그림은 차량에 설치된 4대의 카메라로 차량 주면을 360도 Figure 2 shows sample images ofthe four cameras mounted on the car. It covers the entire 360 field of view surrounding the car. 
+- 위 그림은 차량에 설치된 4대의 카메라로 차량 주면을 360도 모두 Figure 2 shows sample images ofthe four cameras mounted on the car. It covers the entire 360 field of view surrounding the car. 
 
 - The geometric structure of the four cameras and the motion of the car induces a spatio temporal structure across the four images. 
 
@@ -253,5 +253,5 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 - There is also similarity in the near-field road surface in all the four cameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MTEyMjA4NF19
+eyJoaXN0b3J5IjpbLTE0MDkxOTcyMjhdfQ==
 -->
