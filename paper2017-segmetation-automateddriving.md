@@ -245,15 +245,13 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 ![](https://i.imgur.com/eE9Mf1M.png)
 
-Figure 2 shows sample images ofthe four cameras mounted on the car. 
+- 위 그림은 차량에 설치된 4대의 카메라로 차량 주면을 Figure 2 shows sample images ofthe four cameras mounted on the car. It covers the entire 360 field of view surrounding the car. 
 
-- It covers the entire 360 field of view surrounding the car. 
+- The geometric structure of the four cameras and the motion of the car induces a spatio temporal structure across the four images. 
 
-- The geometric structure of the four cameras and the motion of the car induces a spatiotemporalstructure across the four images. 
+- For example, when the car is turning left, the region imaged by the front camera will be imaged by the right-mirror camera after a delay. 
 
-For example, whenthe car is turning left, the region imaged by the front camerawill be imaged by the right-mirror camera after a delay. 
-
-Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
+- There is also similarity in the near-field road surface in all the four cameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNDY2NzUzMV19
+eyJoaXN0b3J5IjpbMjk5MzI3NDI3XX0=
 -->
