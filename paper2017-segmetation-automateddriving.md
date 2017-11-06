@@ -377,10 +377,13 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 - It can also be trained simultaneously in an end-to-end fashion. 
 
 - This problem can be of potential future direction for further research.
-- 
+ 
 ```
 [43] B. Ummenhofer, H. Zhou, J. Uhrig, N. Mayer, E. Ilg, A. Dosovitskiy, and T. Brox, “Demon: Depth and motion network for learning monocular stereo,” arXiv preprint arXiv:1612.02401, 2016.
 ```
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDU1Mjc4NDRdfQ==
+eyJoaXN0b3J5IjpbMTk4MDIxNzM5OV19
 -->
