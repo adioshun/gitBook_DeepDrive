@@ -241,13 +241,13 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 #### B. Multi-camera Structure: 
 
-- Typically automotive systems uses a multi-camera network. 
+- 최근 자유 주행 차는 4개 이상의 여러 카메라를 가지고 있는 경우가 흔하다. `Typically automotive systems uses a multi-camera network. Current systems have at least four cameras and it is increasing to more than ten cameras for future generation systems. `
 
-Current systems have at leastfour cameras and it is increasing to more than ten cameras forfuture generation systems. 
+![](https://i.imgur.com/eE9Mf1M.png)
 
 Figure 2 shows sample images ofthe four cameras mounted on the car. 
 
-It covers the entire 360◦field of view surrounding the car. 
+- It covers the entire 360 field of view surrounding the car. 
 
 The geometric structure ofthe four cameras and the motion of the car induces a spatiotemporalstructure across the four images. 
 
@@ -255,5 +255,5 @@ For example, whenthe car is turning left, the region imaged by the front cameraw
 
 Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3OTg1ODU5XX0=
+eyJoaXN0b3J5IjpbLTUyOTQ4MzE0NF19
 -->
