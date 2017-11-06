@@ -254,7 +254,7 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 ### 3.2 Dense High Definition(HD) maps
 
-High accuracy of Object detection is very difficult to achieveand HD maps is an important cue to improve it. 
+- HD maps은 물체 탐지 정확도 향상에 중요한 요소 이따High accuracy of Object detection is very difficult to achieve and HD maps is an important cue to improve it. 
 
 There are twotypes of HD maps: (1) Dense Semantic Point Cloud Maps and(2) Landmark based Maps. 
 
@@ -288,5 +288,5 @@ HD mapscan also be used for validation or post-processing the semanticsegmentati
 
 For this, both landmarkmaps and semantic point cloud maps could be used.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzY0Mjc0NjZdfQ==
+eyJoaXN0b3J5IjpbMTI0Nzk5MTk3MV19
 -->
