@@ -122,9 +122,9 @@ In this paper, the semantic segmentation problem is explored from the perspectiv
 
 - **patch-wise training**와는 다르게 이 방식은 Full 이미지를 사용하여 조밀한 예측이 가능하다. `Unlike patch-wise training methods this method uses the full image to infer dense predictions. `
 
+###### [29]
 
-
-In[29] a deeper deconvolution network was developed, in whichstacked deconvolution and unpooling layers are used. 
+- In[29] a deeper deconvolution network was developed, in which stacked deconvolution and unpooling layers are used. 
 
 In Segnet [30] a similar approach was used where an encoder decoder architecture was deployed. 
 
@@ -186,8 +186,35 @@ Thus, it was easier to train and memory efficient.The work in [34] combined the 
 
 ### 3.1 Problem Structure.
 
-#### A. 
+#### A.  Scene Structure
 
+Prior information could simplify modelcomplexity greatly. 
+
+There are different types of prior informationthat can be used. 
+
+Spatial priors such as the fact thatlanes lie on a ground plane, or that road segmented is mostlyin the bottom half of the images. 
+
+Geometric priors on theshapes of objects, for examples lanes are thick lines that areall converging into a vanishing point. 
+
+Color priors such as thecolor of traffic lights or white lanes. 
+
+Finally, Location priors,for example the lane, road or buildings locations based on highdefinition maps or aerial maps.
+
+#### B. Multi-camera Structure: 
+
+- Typically automotive systemsuses a multi-camera network. 
+
+Current systems have at leastfour cameras and it is increasing to more than ten cameras forfuture generation systems. 
+
+Figure 2 shows sample images ofthe four cameras mounted on the car. 
+
+It covers the entire 360◦field of view surrounding the car. 
+
+The geometric structure ofthe four cameras and the motion of the car induces a spatiotemporalstructure across the four images. 
+
+For example, whenthe car is turning left, the region imaged by the front camerawill be imaged by the right-mirror camera after a delay. 
+
+Thereis also similarity in the near-field road surface in all the fourcameras as they belong to the same road surface.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNzQ3MTcxNl19
+eyJoaXN0b3J5IjpbLTIwNDA2MDUwMDZdfQ==
 -->
