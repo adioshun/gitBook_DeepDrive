@@ -609,7 +609,7 @@ They termed that as reduction of internalcovariate shift.
 The covariate shift occurs due to change of networks parameters during training.
 
 
-(5) The resolution of the input image largely affects thesegmentation, although it seems as a tiny detail. 
+(5) The resolution of the input image largely affects the segmentation, although it seems as a tiny detail. 
 
 We found thathigher input image resolution can help with segmenting smallobjects like pedestrian. 
 
@@ -617,5 +617,5 @@ Also, using random crops to helpreduce the class imbalance can further help the 
 
 However,the extensive use of these skip connections can lead tooverhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODkxNjMyOV19
+eyJoaXN0b3J5IjpbLTE3Mjk4Mjk5MjddfQ==
 -->
