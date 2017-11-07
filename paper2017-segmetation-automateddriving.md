@@ -495,7 +495,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 #### F. Variable object complexity
 
-- 일반적으로 주행 환경에서의 화면은 매우 복잡 하고 다양성을 ㄱA typical automotive scene has large complexity variability with simple structures like road or sky and complex structures like pedestrians. 
+- 일반적으로 주행 환경에서의 화면은 매우 복잡 하고 다양성을 가진다. A typical automotive scene has large complexity variability with simple structures like road or sky and complex structures like pedestrians. 
 
 Pedestrianshave higher complexity due to large appearance variationsand articulations. 
 
@@ -509,5 +509,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDc2MzQ2NDldfQ==
+eyJoaXN0b3J5IjpbLTE4MzU1MjQ2OThdfQ==
 -->
