@@ -140,7 +140,7 @@ vol. 34, pp. 12–27, 2016.
 
 - **patch-wise training**와는 다르게 이 방식은 Full 이미지를 사용하여 조밀한 예측이 가능하다. `Unlike patch-wise training methods this method uses the full image to infer dense predictions. `
 
-###### [29]
+###### [29] Deconvolution network
 
 - In[29] a deeper **deconvolution network** was developed, in which stacked deconvolution and unpooling layers are used. 
 
@@ -152,6 +152,10 @@ vol. 34, pp. 12–27, 2016.
 In Segnet [30] a similar approach was used where an encoder decoder architecture was deployed. 
 
 The decoder network up-sampled the feature maps by keeping the maxpooling indicesfrom the corresponding encoder layer. 
+
+```
+[30] V. Badrinarayanan, A. Kendall, and R. Cipolla, “Segnet: A deep convolutional encoder-decoder architecture for image segmentation,” arXiv preprint arXiv:1511.00561, 2015.
+```
 
 ###### [19]
 
@@ -643,5 +647,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjI2MzQ5MF19
+eyJoaXN0b3J5IjpbMzU1NTM4MDNdfQ==
 -->
