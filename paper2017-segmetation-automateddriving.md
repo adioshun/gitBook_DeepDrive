@@ -271,6 +271,7 @@ The work in [34] **combined** the power of both **convolutional gated architectu
 
 ```
 
+```
 
 ## 3. DEEP SEMANTIC SEGMENTATION IN AUTOMATED DRIVING
 
@@ -677,5 +678,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NTIwMzExMF19
+eyJoaXN0b3J5IjpbLTEwMzc4OTI0NjBdfQ==
 -->
