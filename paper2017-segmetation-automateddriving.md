@@ -386,6 +386,19 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 ### 4.1 Computational Bound in Embedded Systems
 
+- 고성능 장비에서도 On a high end automotive platform like Nvidia Tegra X1,
+	- **Enet** [44] achieves around **4 fps** 
+	- the proposed algorithm in[45] achieves around 3 fps at a slightly higher accuracy. 
+
+Thisbenchmark is for a 720P resolution and the current generationcameras are around 2 Megapixel which will reduce the runtimeby another factor of 3X. 
+
+This is clearly not acceptable for acommercial solution to handle high speed objects for highwaydriving. 
+
+Reducing the resolution to VGA (640x480) bringsit close to 10 fps which is still not reasonable and reducingresolution degrades accuracy and misses small objects whichmight be critical. 
+
+Additionally, for full surround view sensingat least 4 cameras need to be employed which adds inanother factor of 4X. 
+
+However the industry is moving towardscustom hardware accelerators for CNNs which will enable thepossibility of doing multi-camera semantic segmentation at ahigher frame rate, Nvidia Xavier for instance supports 30 teraops.There is also active research on efficient network designwhich will improve the performance.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NTc2Njg4MF19
+eyJoaXN0b3J5IjpbMTAzMzI0MjkzNF19
 -->
