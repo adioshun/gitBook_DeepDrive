@@ -430,14 +430,17 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 	- Toronto City [49]. 
 
 -위 데이터들은 기후 변화나 카메라에 따른 다양한 variability들을 제공한다. `It also offers large variability in terms of weather condition, camera type and geographic coverage.`
+
 - 토론토 도시 데이터는 `Toronto City is a massive semantic segmentation, mapping and 3D reconstruction dataset covering `
 	- 712 km 2 of land, 
 	- 8439km of road 
 	- around 400,000 buildings. 
 
-The annotation iscompletely automated by leveraging Aerial Drone data, HDmaps, city maps and LIDARs. 
+- 주석 작업은 자동화되어 진행 된다. `The annotation is completely automated by leveraging Aerial Drone data, HDmaps, city maps and LIDARs. `
 
-It is then manually verified andrefined.
+- 이후 사람이 확인 및 수정을 한다. `It is then manually verified and refined.`
+
+### Learning Challenges
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjg5NjE1NjNdfQ==
+eyJoaXN0b3J5IjpbLTEzNDE5MTQ3MDZdfQ==
 -->
