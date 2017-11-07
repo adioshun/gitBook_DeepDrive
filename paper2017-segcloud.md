@@ -162,7 +162,7 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ### 2.3 Joint CNN + CRF
 
-- 3D CNN과 3D CRF를 합치는 연구는 이전에는 Medical 데이터에서 상처 부분을 세금Combining 3D CNN and 3D CRF has been previously proposed for the task of lesion segmentation in 3D medical scans. 
+- 3D CNN과 3D CRF를 합치는 연구는 이전에는 Medical 데이터에서 상처 부분을 세그멘테이션 할때 사용 되었다. `Combining 3D CNN and 3D CRF has been previously proposed for the task of lesion segmentation in 3D medical scans. `
 
 - Kamnitsas et al. [34] propose a multi-scale 3D CNN with a CRF to classify 4 types of lesions from healthy brain tissues. 
 
@@ -187,5 +187,5 @@ We show that the combination ofjointly trained 3D-FCNN and CRF with TI consisten
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTIyNTYzM119
+eyJoaXN0b3J5IjpbMTgwMjg1MTI2Ml19
 -->
