@@ -407,8 +407,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 - 딥러닝의 성공에는 이미지넷 데이터넷이 있다. 세그멘테이션은 이미지넷보다 더 많은 데이터를 요구 한다. `The real potential of deep learning was unveiled becauseof the large dataset Imagenet[46]. The functional complexity of semantic segmentation is much higher and it requires a significantly larger dataset relative to Imagenet. `
 
 - 세그멘테이션용 데이터의 테깅하는데는 한장에 한시간이나 걸리며 소요 시간이 크다. `Annotation for semantic segmentation is time consuming, typically it can take around an hour for annotating a single image. `
-
-It can be speeded up by the availability of other cues like LIDAR or exploiting temporal propagation and bootstrapping classifier.
+	- LIDAR등의 정보를 사용하면 속도 향상을 가져 올수 있따. `It can be speeded up by the availability of other cues like LIDAR or exploiting temporal propagation and bootstrapping classifier.`
 
 The popular semantic segmentation automotive datasets are CamVid [18] and the more recent cityscapes [11]. 
 
@@ -426,5 +425,5 @@ The annotation iscompletely automated by leveraging Aerial Drone data, HDmaps, c
 
 It is then manually verified andrefined.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwOTg3MDM3NV19
+eyJoaXN0b3J5IjpbLTEyNTI4NDk1ODBdfQ==
 -->
