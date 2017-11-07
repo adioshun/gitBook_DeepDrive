@@ -462,7 +462,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 - 모든 물체를 학습 시키는건 불가능 하다. `It is not possible to cover all possible objects in training phase '
 	- (eg: a rare animal like Kangaroo or a rare vehicles like construction truck). 
 
-- 해결법 : 불확실성 기반This could be handled by measuring uncertainty of the output classification, similar to Bayesian Segnet [52].
+- 해결법 : 불확실성 기반 학습 This could be handled by measuring uncertainty of the output classification, similar to Bayesian Segnet [52].
 
 
 
@@ -490,5 +490,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODE1NzkyMzRdfQ==
+eyJoaXN0b3J5IjpbMTYxMzI2NTgyNl19
 -->
