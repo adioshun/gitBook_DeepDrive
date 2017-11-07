@@ -203,12 +203,21 @@ In [22], CRF is used as a post processing stepafter the segmentation network.
 [22] G. Lin, C. Shen, I. Reid et al., “Efficient piecewise training of deep structured models for semantic segmentation,” arXiv preprint arXiv:1504.01013, 2015.
 ```
 
-###### [23]
+###### [23- DeepLab]
 In [23], CRF is also used as post processing to a dilated convolution network to take contextual information into consideration. 
+
+```
+[23] L.-C. Chen, G. Papandreou, I. Kokkinos, K. Murphy, and A. L. Yuille, “Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs,” arXiv preprint
+arXiv:1606.00915, 2016.
+```
 
 ###### [24]
 
 Finally, in [24]the mean field inference algorithm that is used within CRFformulation was formulated as a recurrent network.
+
+```
+[24] S. Zheng, S. Jayasumana, B. Romera-Paredes, V. Vineet, Z. Su, D. Du,C. Huang, and P. H. Torr, “Conditional random fields as recurrent neural networks,” in Proceedings of the IEEE International Conference on Computer Vision, 2015, pp. 1529–1537.
+```
 
 #### B. RNN 을 활용하는 방법 
 
@@ -217,6 +226,12 @@ Another way to model structure is by using a recurrent neural network (RNN) to c
 It introduced a different formulation for solving the structured prediction problem. 
 
 A Recurrent layer is used to sweep the image horizontally and vertically, which ensures the usage of contextual information for a better segmentation.
+
+```
+[31] F. Visin, M. Ciccone, A. Romero, K. Kastner, K. Cho, Y. Bengio,M. Matteucci, and A. Courville, “Reseg: A recurrent neural networkbased model for semantic segmentation,” in Proceedings of the IEEE
+Conference on Computer Vision and Pattern Recognition Workshops,
+2016, pp. 41–48.
+```
 
 ### 2.4 Spatio-Temporal Models(시공간 모델)
 
@@ -651,5 +666,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4Njc4MTA4M119
+eyJoaXN0b3J5IjpbLTIwNjYzNzEyNjFdfQ==
 -->
