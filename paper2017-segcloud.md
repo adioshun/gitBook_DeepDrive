@@ -103,7 +103,7 @@ to obtain fine-grained 3D Segmentation.
 - Huang et al. [32] present a 3D-FCNN for 3D **semantic segmentation** which produces coarse voxel level segmentation. 
 
 ```
-[32] S. Y. J. Huang. Point Cloud Labeling using 3D Convolutional Neural Network. In International Conference on Pattern Recognition, pages 1–6, 2016
+[32] S. Y. J. Huang. Point Cloud Labeling using 3D Convolutional Neural Network. In International Conference on Pattern Recognition, pages 1–6, 2016 (공중+차량 포인트 클라우드)
 ```
 
 ###### [16]
@@ -111,6 +111,10 @@ to obtain fine-grained 3D Segmentation.
 - Dai et al. [16] also propose a fully convolutional architecture, 
 	- 그러나, but they make a single prediction for all voxels in the same voxel grid column. 
 	- This makes the wrong assumption that a voxel grid column contains 3D points with the same object label. 
+
+```
+[16] A. Dai, A. X. Chang, M. Savva, M. Halber, T. Funkhouser,and M. Nießner. Scannet: Richly-annotated 3d reconstructions of indoor scenes. arXiv preprint arXiv:1702.04405, 2017
+```
 
 ###### [본 논문에서 제안 하는 법 ]
 
@@ -134,5 +138,5 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MTA1NTMwMV19
+eyJoaXN0b3J5IjpbLTEwOTE1NTQzMjddfQ==
 -->
