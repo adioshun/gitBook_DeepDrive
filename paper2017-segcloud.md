@@ -153,11 +153,11 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ###### [본 논문에서 제안 하는것] 
 
-- In contrast to these methods, our framework uses a **3D-FCNN** which can learn **higher dimensional features** and provide strong unaries foreach data point. 
+- In contrast to these methods, our framework uses a **3D-FCNN** which can learn **higher dimensional features** and provide strong **unaries** for each data point. 
 
-Moreover, our CRF is implemented as afully differentiable Recurrent Neural Network, similar to[76]. 
+- Moreover, our CRF is implemented as a fully differentiable Recurrent Neural Network, similar to[76]. 
 
-This allows the 3D-FCNN and CRF to be trained endto-end,and enables information flow from the CRF to theCNN classification stage.
+- This allows the 3D-FCNN and CRF to be trained end-to-end,and enables information flow from the CRF to the CNN classification stage.
 
 
 ### 2.3 Joint CNN + CRF
@@ -165,5 +165,5 @@ This allows the 3D-FCNN and CRF to be trained endto-end,and enables information 
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MTY1Njc3Ml19
+eyJoaXN0b3J5IjpbNDM3NDM5OTE1XX0=
 -->
