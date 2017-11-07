@@ -269,6 +269,8 @@ Thus, it was easier to train and memory efficient.
 
 The work in [34] **combined** the power of both **convolutional gated architectures** and **spatial transformers** for leveraging video semantic segmentation.
 
+```
+
 
 ## 3. DEEP SEMANTIC SEGMENTATION IN AUTOMATED DRIVING
 
@@ -675,5 +677,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDA4MDc1MTRdfQ==
+eyJoaXN0b3J5IjpbMTE5NTIwMzExMF19
 -->
