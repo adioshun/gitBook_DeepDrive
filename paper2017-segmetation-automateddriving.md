@@ -517,7 +517,17 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - We present it with other possibilities where it can be coupled.
 
+### 5.1 Multi-task Learning
 
+- Since the same CNN features generalize well for various tasks beyond object detection like flow estimation, depth, correspondence, and tracking. 
+
+- Thus a common CNN feature pipeline can be harmonized to be used for various tasks. 
+
+######
+
+- In [51], they propose a CNN encoder and decoder for various tasks like scene classification and vehicle detection. 
+
+- A joint flow estimation and semantic segmentation in [54] was presented.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMzY4NTY1OF19
+eyJoaXN0b3J5IjpbMzkyODg4OF19
 -->
