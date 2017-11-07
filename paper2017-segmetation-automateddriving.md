@@ -505,11 +505,18 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 #### G. Corner Case Mining
 
-As the object detection parts aretightly coupled, it is difficult to do hard negative mining and toanalyze corner cases. 
+- As the object detection parts are tightly coupled, it is difficult to do hard negative mining and to analyze corner cases. 
 
-Even when the corner cases are knownconceptually, it can be hard to record video sequences forthe same. 
+- Even when the corner cases are known conceptually, it can be hard to record video sequences for the same. 
 
-Synthetic sequences could be used to design suchscenarios.
+- 해결책 : Synthetic sequences could be used to design such scenarios.
+
+## 5. ALTERNATIVE APPLICATION ARCHITECTURES
+
+- In this section different alternatives to pure semantic segmentation are discussed. 
+
+- We present it with other possibilities where it can be coupled.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2Nzk3ODg0MV19
+eyJoaXN0b3J5IjpbLTEyOTcwMzQ3NzJdfQ==
 -->
