@@ -476,7 +476,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 #### D. Recovering individual objects
 
-- 픽셁Pixel-wise Semantic segmentation produces regions of same object and hence does not provide individual objects in a segment. 
+- 픽셀기반 Pixel-wise Semantic segmentation produces regions of same object and hence does not provide individual objects in a segment. 
 
 - This might be needed for tracking applications which tend to track objects like pedestrians individually. 
 
@@ -498,5 +498,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODIzMTM3OTFdfQ==
+eyJoaXN0b3J5IjpbLTQxMTE3OTcwMF19
 -->
