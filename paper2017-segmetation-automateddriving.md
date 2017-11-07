@@ -55,6 +55,12 @@ In this paper, the semantic segmentation problem is explored from the perspectiv
 - 세그멘티에션에 대한 이전 서베이 논문은 [16]이다. `A related survey in [16] on semantic segmentation literature is presented. `
     - 하지만 이 논문은 자율 주행의 특정 어플리게이션에 대하여 언급 하진 않았다. `However it is not addressing the specific application of automated driving. `
 
+```
+[16] H. Zhu, F. Meng, J. Cai, and S. Lu, “Beyond pixels: A comprehensive survey from bottom-up to semantic image segmentation and cosegmentation,” Journal of Visual Communication and Image Representation,
+vol. 34, pp. 12–27, 2016.
+```
+
+
 - 본 논문에서는 자율 주행에서 세그멘테이션의 무었이 중요한지와 대한은 무었인지 살펴 본다. `This paper addresses the question on what is the importance of semantic segmentation in automated driving and reviews alternative approaches. `
 
 ## 2. DEEP SEMANTIC SEGMENTATION TAXONOMY
@@ -634,5 +640,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk2MDg3NjY5XX0=
+eyJoaXN0b3J5IjpbMTgxMjE5MjE3MV19
 -->
