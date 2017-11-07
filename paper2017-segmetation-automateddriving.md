@@ -145,9 +145,7 @@ vol. 34, pp. 12–27, 2016.
 - In[29] a deeper **deconvolution network** was developed, in which stacked deconvolution and unpooling layers are used. 
 
 ```
-[29] H. Noh, S. Hong, and B. Han, “Learning deconvolution network
-for semantic segmentation,” in Proceedings of the IEEE International
-Conference on Computer Vision, 2015, pp. 1520–1528
+[29] H. Noh, S. Hong, and B. Han, “Learning deconvolution network for semantic segmentation,” in Proceedings of the IEEE International Conference on Computer Vision, 2015, pp. 1520–1528
 ```
 ###### [ SegNet]
 
@@ -645,5 +643,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NjA5MzE5MF19
+eyJoaXN0b3J5IjpbLTE1MjI2MzQ5MF19
 -->
