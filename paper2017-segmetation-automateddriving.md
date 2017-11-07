@@ -398,7 +398,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 서라운딩 뷰의 경우 가메라가 최소 4대 이므로 시간이 4대 더 든다. `Additionally, for full surround view sensing at least 4 cameras need to be employed which adds in another factor of 4X. `
 
-However the industry is moving towardscustom hardware accelerators for CNNs which will enable thepossibility of doing multi-camera semantic segmentation at ahigher frame rate, Nvidia Xavier for instance supports 30 teraops.There is also active research on efficient network designwhich will improve the performance.
+However the industry is moving towards custom hardware accelerators for CNNs which will enable thepossibility of doing multi-camera semantic segmentation at ahigher frame rate, Nvidia Xavier for instance supports 30 teraops.There is also active research on efficient network designwhich will improve the performance.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA5NDIzMDgxXX0=
+eyJoaXN0b3J5IjpbMjAyODEyOTIxNV19
 -->
