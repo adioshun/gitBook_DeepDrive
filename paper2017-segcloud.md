@@ -84,7 +84,11 @@ to obtain fine-grained 3D Segmentation.
 
 - Recent works have started exploring the use of Neural Networks for 3D Semantic Segmentation[53, 16, 32]. 
 
-Qi et al. [53] propose a Multilayer Perceptron(MLP) architecture that extracts a global feature vectorfrom a 3D point cloud of 1m3 physical size and processeseach point using the extracted feature vector and additionalpoint level transformations. 
+###### [Multilayer Perceptron]
+
+- Qi et al. [53] propose a Multilayer Perceptron(MLP) architecture 
+	-  that extracts a global feature vector from a 3D point cloud of $$1m^3$$ physical size 
+	-  and processes each point using the extracted feature vector and additional point level transformations. 
 
 Their method operatesat the point level and thus inherently provides a fine-grainedsegmentation. 
 
@@ -113,5 +117,5 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NzA0MjM2MF19
+eyJoaXN0b3J5IjpbLTE5NjA3NzQ4NTddfQ==
 -->
