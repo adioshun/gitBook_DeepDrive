@@ -577,9 +577,10 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 - (2) Xception [56] which is a classification network that was not used in the segmentation problem before. 
 - (3) Dilated FCN16s, an architecture that was designed to be computationally and memory efficient with reasonable accuracy.
 - (4) FCN8s [28]. 
-- (5) Segnet Basic [30]. (6) Dilation8
+- (5) Segnet Basic [30]. 
+- (6) Dilation8
 [36]. (7)Enet [44], which is the most efficient architecture for
 semantic segmentation. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY1OTQzMjc4XX0=
+eyJoaXN0b3J5IjpbNTA1MzkzMjU3XX0=
 -->
