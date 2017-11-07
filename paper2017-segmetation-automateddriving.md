@@ -26,6 +26,14 @@ In this paper, the semantic segmentation problem is explored from the perspectiv
     - medical applications [5][6]
     - augmented reality [7]
     - most prominently automated driving [8][9][10][11].
+
+```
+[8] H. Zhang, A. Geiger, and R. Urtasun, “Understanding high-level semantics by modeling traffic patterns,” in Proceedings of the IEEE International Conference on Computer Vision, 2013, pp. 3056–3063.
+[9] G. Ros, L. Sellart, J. Materzynska, D. Vazquez, and A. M. Lopez, “The synthia dataset: A large collection of synthetic images for semantic segmentation of urban scenes,” in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2016, pp. 3234–3243.
+[10] G. J. Brostow, J. Fauqueur, and R. Cipolla, “Semantic object classes in video: A high-definition ground truth database,” Pattern Recognition Letters, vol. 30, no. 2, pp. 88–97, 2009.
+[11] M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler, R. Benenson, U. Franke, S. Roth, and B. Schiele, “The cityscapes dataset for semantic urban scene understanding,” arXiv preprint arXiv:1604.01685,
+2016.
+```
     
 - 자율 주행에 대한 **두가지** 패러다임 `Two main paradigms for automated driving emerged: `
     - (1)인식 기반 접근법 `The mediated perception approach `
@@ -37,6 +45,10 @@ In this paper, the semantic segmentation problem is explored from the perspectiv
 - 하지만 최근에 행동 유동성`(affordance)`지표를 이용하는 방법이 제안 되었다. ` However, in [15] an intermediate approach was suggested that learns affordance indicators for the driving scene. `
     - These indicators can then feedback on a simple controller for the final driving decision.
     
+```
+[15] C. Chen, A. Seff, A. Kornhauser, and J. Xiao, “Deepdriving: Learning affordance for direct perception in autonomous driving,” in Proceedings of the IEEE International Conference on Computer Vision, 2015, pp.
+2722–2730.
+```
     
 - 이전 연구에서는 세그멘테이션이 자율 주행에 필요한가? 아닌가?에 대한 연구가 있었다. `The previous work on automated driving pose the important question of whether the solution for automated driving need semantic segmentation module or not?`
 
@@ -622,5 +634,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1OTcyODcwMV19
+eyJoaXN0b3J5IjpbNTk2MDg3NjY5XX0=
 -->
