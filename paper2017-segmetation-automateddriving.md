@@ -564,7 +564,12 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 ### 6.1 Benchmarking
 
 - 이전에도 성능 평가한 연구는 있었다. ` Although there has been numerous work showing evaluation of different architectures on CamVid [18]`
+	- 하지만 정확도만 집중 하였다. `However the previous work was concerned only with the accuracy of the segmentation`
+
+- We present an evaluation of both **shallower** and state of the art work in terms of **mean intersection over union** and **speed**..
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcwNjMxMzAwXX0=
+eyJoaXN0b3J5IjpbLTE3NjE4Mzg3MjRdfQ==
 -->
