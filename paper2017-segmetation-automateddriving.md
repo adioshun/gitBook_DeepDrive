@@ -440,7 +440,43 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 이후 사람이 확인 및 수정을 한다. `It is then manually verified and refined.`
 
-### Learning Challenges
+### 4.3 Learning Challenges
+
+#### A. 1) Class imbalance: There is severe class imbalance dueto the fact that important objects like pedestrians are underrepresented unlike sky and building. 
+
+This could also createa bias to ignore small objects. 
+
+This could be handled bya weighting scheme in the error function. 
+
+Another potentialsolution is to use mask predictions on detected bounding boxesof these small objects as in [50][51].2) Unobserved Objects: Because the soft-max classifier isnormalized to probability one, it doesn’t handle previous unseenobjects. 
+
+The classifier matches it to one of the previouslytrained classes. 
+
+It is not possible to cover all possible objectsin training phase (eg: a rare animal like Kangaroo or a rarevehicles like construction truck). 
+
+This could be handled bymeasuring uncertainty of the output classification, similar toBayesian Segnet [52].3) Complexity of Output: The output representation ofsemantic segmentation is a set of complex contours and canbe very complex in very high textured scenes. 
+
+The post processingmodules like mapping or maneuvering require a muchsimpler representation of objects. 
+
+This leads to a question oflearning to classify this simpler representation directly insteadof semantic segmentation.4) Recovering individual objects: Pixel-wise Semantic segmentationproduces regions of same object and hence does notprovide individual objects in a segment. 
+
+This might be neededfor tracking applications which tend to track objects likepedestrians individually. 
+
+One solution is to use post processingclassifier to further sub-divide the regions but this could be directly classified instead. 
+
+However, a recent instance levelsegmentation paradigm can segment different instances of thesame class as in [50] without the need for post processing.5) Goal Orientation: Semantic segmentation is a genericproblem and at the moment there is no goal orientation towardsthe end goal of automated driving. 
+
+For example, there maynot be a need for accurate contour of objects or in detectingirrelevant objects like sky for end driving goal. 
+
+This could beachieved by customizing the loss function (eg: weighting ofimportant objects) but a modular end to end system will bescalable to automatically perform it.6) Variable object complexity: A typical automotive scenehas large complexity variability with simple structures likeroad or sky and complex structures like pedestrians. 
+
+Pedestrianshave higher complexity due to large appearance variationsand articulations. 
+
+Thus instead of using a small complexitynetwork across the image, a variable complexity network likea cascaded CNN [53] will be more efficient.7) Corner Case Mining: As the object detection parts aretightly coupled, it is difficult to do hard negative mining and toanalyze corner cases. 
+
+Even when the corner cases are knownconceptually, it can be hard to record video sequences forthe same. 
+
+Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDE5MTQ3MDZdfQ==
+eyJoaXN0b3J5IjpbMjExNzY2MjgwMF19
 -->
