@@ -388,11 +388,11 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 고성능 장비에서도 On a high end automotive platform like Nvidia Tegra X1,
 	- **Enet** [44] achieves around **4 fps** 
-	- the proposed algorithm in[45] achieves around 3 fps at a slightly higher accuracy. 
+	- the proposed algorithm in**[45]** achieves around **3 fps** at a slightly higher accuracy. 
 
-Thisbenchmark is for a 720P resolution and the current generationcameras are around 2 Megapixel which will reduce the runtimeby another factor of 3X. 
+- 위 결과는 화소도 낮은(720P )거라 최근 고해상(2 Megapixel)도 적용시 3배는 더 시간이 든다. `This benchmark is for a 720P resolution and the current generation cameras are around 2 Megapixel which will reduce the runtime by another factor of 3X. `
 
-This is clearly not acceptable for acommercial solution to handle high speed objects for highwaydriving. 
+- 상용화 하기에는 ㅅThis is clearly not acceptable for a commercial solution to handle high speed objects for highway driving. 
 
 Reducing the resolution to VGA (640x480) bringsit close to 10 fps which is still not reasonable and reducingresolution degrades accuracy and misses small objects whichmight be critical. 
 
@@ -400,5 +400,5 @@ Additionally, for full surround view sensingat least 4 cameras need to be employ
 
 However the industry is moving towardscustom hardware accelerators for CNNs which will enable thepossibility of doing multi-camera semantic segmentation at ahigher frame rate, Nvidia Xavier for instance supports 30 teraops.There is also active research on efficient network designwhich will improve the performance.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMzI0MjkzNF19
+eyJoaXN0b3J5IjpbLTEyODU1MTEwNDhdfQ==
 -->
