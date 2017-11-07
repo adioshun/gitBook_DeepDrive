@@ -270,7 +270,7 @@ Thus, it was easier to train and memory efficient.
 The work in [34] **combined** the power of both **convolutional gated architectures** and **spatial transformers** for leveraging video semantic segmentation.
 
 ```
-
+[34] D. Nilsson and C. Sminchisescu, “Semantic video segmentation by gated recurrent flow propagation,” arXiv preprint arXiv:1612.08871, 2016
 ```
 
 ## 3. DEEP SEMANTIC SEGMENTATION IN AUTOMATED DRIVING
@@ -381,7 +381,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 그러나 SFM방법은 노이즈가 많고, 학습의 영향을 많이 받는다. `However, SFM estimates are quite noisy and also the algorithm variations over time could affect the training of the network. `
 
-- [18]에서는 포인트 클라우드의 노이즈를 이용하는 방법이 제안 되었다. `But in [18] some cues from the noisy point-cloud was inferred to act as features for segmentation. The cues proposed were: `
+- [18-2008]에서는 포인트 클라우드의 노이즈를 이용하는 방법이 제안 되었다. `But in [18] some cues from the noisy point-cloud was inferred to act as features for segmentation. The cues proposed were: `
 	- height above the camera, 
 	- distance to the camera path, 
 	- projected surface orientation, 
@@ -678,5 +678,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzc4OTI0NjBdfQ==
+eyJoaXN0b3J5IjpbNjIwNzgxNDI3XX0=
 -->
