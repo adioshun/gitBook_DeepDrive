@@ -233,16 +233,23 @@ A Recurrent layer is used to sweep the image horizontally and vertically, which 
 
 ### 2.4 Spatio-Temporal Models(시공간 모델)
 
-- 지금까지 살펴본 것들은 이미지 세그멘테이션에 관한 것이다. 최근 연구에서는 시간`(temporal )`정보를 이용한 비디오 세그멘테이션이 연구 되고 있다. ` All the discussed work was focused on still image segmentation.Recently some approaches emerged for video semantic segmentation that utilized temporal information [25][32][33][34]. `
+- 지금까지 살펴본 것들은 이미지 세그멘테이션에 관한 것이다. 최근 연구에서는 시간`(temporal )`정보를 이용한 **비디오** 세그멘테이션이 연구 되고 있다. ` All the discussed work was focused on still image segmentation.Recently some approaches emerged for video semantic segmentation that utilized temporal information [25][32][33][34]. `
 
 ###### [25]
 
 In [25] introduced clockworks which are clock signals that control the learning of different layers with different rates. 
 
+```
+[25] E. Shelhamer, K. Rakelly, J. Hoffman, and T. Darrell, “Clockwork convnets for video semantic segmentation,” CoRR, vol. abs/1608.03609, 2016. [Online]. Available: http://arxiv.org/abs/1608.03609
+```
+
 ###### [32]
 In [32] spatio temporal FCN is introduced by using a layer grid of Long Short term memory models(LSTMs). 
 
-
+```
+[32] M. Fayyaz, M. H. Saffar, M. Sabokrou, M. Fathy, and R. Klette, “STFCN: spatio-temporal FCN for semantic video segmentation,” CoRR, vol. abs/1608.05971, 2016. [Online]. Available: http://arxiv.org/
+abs/1608.05971
+```
 
 > 그러나 기존의 LSTM은 학습량만 늘어 나고 **spatial coherence**를 잘 활용하지 않는다. ` However conventional LSTMs do not utilize the spatial coherence and would end up with more parameters to learn.`
 
@@ -253,6 +260,10 @@ In a recent work [33] **convolutional gated recurrent networks** was used to lea
 The recurrent unit used in this work was convolutional which enables it to learn both spatial and temporal information with less number of parameters. 
 
 Thus, it was easier to train and memory efficient.
+
+```
+[33] M. Siam, S. Valipour, M. Jagersand, and N. Ray, “Convolutional gated recurrent networks for video segmentation,” arXiv preprint arXiv:1611.05435, 2016.
+```
 
 ###### [34]
 
@@ -664,5 +675,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MTMxMjY5XX0=
+eyJoaXN0b3J5IjpbLTE1MDA4MDc1MTRdfQ==
 -->
