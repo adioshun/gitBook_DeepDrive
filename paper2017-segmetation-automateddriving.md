@@ -404,7 +404,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 ### 4.2 Need of large annotated datasets
 
-- 딥러닝의 성공에는 이미지넷 데이터넷이 있다. 세그멘테이션은 이미지넷보다 더 많은 데The real potential of deep learning was unveiled becauseof the large dataset Imagenet[46]. 
+- 딥러닝의 성공에는 이미지넷 데이터넷이 있다. 세그멘테이션은 이미지넷보다 더 많은 데이터를 요구The real potential of deep learning was unveiled becauseof the large dataset Imagenet[46]. 
 
 The functional complexity of semantic segmentation is much higher and it requires a significantly larger dataset relative to Imagenet. 
 
@@ -426,5 +426,5 @@ The annotation iscompletely automated by leveraging Aerial Drone data, HDmaps, c
 
 It is then manually verified andrefined.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE1ODMwMjg1XX0=
+eyJoaXN0b3J5IjpbNDgyNzY2NjYxXX0=
 -->
