@@ -490,12 +490,12 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - For example, there may not be a need for accurate contour of objects or in detecting irrelevant objects like sky for end driving goal. 
 
-- 해결 방안 : Loss함수 조절 `This could be achieved by customizing the loss function `
-	- (eg: weighting ofimportant objects) but a modular end to end system will bescalable to automatically perform it.
+- 해결 방안 : Loss함수 조절 `This could be achieved by customizing the loss function (eg: weighting of important objects) `
+	- but a modular end to end system will be scalable to automatically perform it.
 
 #### F. Variable object complexity
 
-A typical automotive scenehas large complexity variability with simple structures likeroad or sky and complex structures like pedestrians. 
+- 일반적으로 주행 환경에A typical automotive scene has large complexity variability with simple structures like road or sky and complex structures like pedestrians. 
 
 Pedestrianshave higher complexity due to large appearance variationsand articulations. 
 
@@ -509,5 +509,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMjE3MTEyNF19
+eyJoaXN0b3J5IjpbLTIwODE4OTMyNjhdfQ==
 -->
