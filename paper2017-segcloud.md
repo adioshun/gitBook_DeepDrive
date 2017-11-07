@@ -198,6 +198,12 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ## 3. SEGCloud Framework
 
+![](https://i.imgur.com/A5x43UJ.png)
+```
+[Figure 1: SEGCloud: A 3D point cloud is voxelized and fed through a 3D fully convolutional neural network to produce coarse downsampled voxel labels.] A trilinear interpolation layer transfers this coarse output from voxels back to the original 3D Points representation.
+The obtained 3D point scores are used for inference in the 3D fully connected CRF to produce the final results. Our framework is trained
+end-to-end.
+```
 An overview of the SEGCloud pipeline is shown in Figure1. 
 
 In the first stage of our pipeline, the 3D data isvoxelized and the resulting 3D grid is processed by a 3Dfully convolutional neural network (3D-FCNN)1. 
@@ -208,5 +214,5 @@ The next stage is a trilinear interpolationlayer which interpolates class scores
 
 Finally, inferenceis performed using a CRF which combines the original3D points features with interpolated scores to produce finegrainedclass distributions over the point set (Section 3.3).Our entire pipeline is jointly optimized and the CRF inferenceand joint optimization processes are presented in Section4.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDY0NjQ2MzZdfQ==
+eyJoaXN0b3J5IjpbMzI1NDI0MjU0XX0=
 -->
