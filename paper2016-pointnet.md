@@ -26,6 +26,17 @@ Two Challenges
 PointNet은 max pooling을 기준으로 앞부분의 local feature단과 뒷부분의 global feature단을 보는 것으로 나눌 수 있는데, 논문에서는 critical point로 불리는 global feature에 영향을 주는 point set은 매우 적고 주요 경계마다만 있고 대다수의 point들은 영향을 주지 않기 떄문에 전에 point clouds에서 50%까지 data loss가 있더라도 전혀 성능에 문제가 발생하지 않는다. \(robustness to missing data\)
 
 
+```
+- Qi et al. [53] propose a Multilayer Perceptron(MLP) architecture 
+	-  that extracts a global feature vector from a 3D point cloud of $$1m^3$$ physical size 
+	-  and processes each point using the extracted feature vector and additional **point level** transformations. 
+
+- Their method operates at the point level and thus inherently provides a fine-grained segmentation. 
+
+- It works well for indoor semantic scene understanding,although there is no evidence that it scales to larger input dimensions without additional training or adaptation required. 
+```
+
+
 # PointNet
 
 Due to Point cloud's irregular format, most researchers transform such data to
