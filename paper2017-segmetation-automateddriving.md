@@ -555,9 +555,9 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 - Using this auxiliary loss, the CNN loosely learns to semantically segment, 
 	- but it is also learns to have a better representation for the intermediate features. 
 
-It was shown inthat work that using auxiliary loss outperforms the vanilla endto end learning. 
+- It was shown inthat work that using auxiliary loss outperforms the vanilla endto end learning. 
 
 The work also uses recurrent gated unit afterthe CNN to model temporal information.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTQ2MzA4NzBdfQ==
+eyJoaXN0b3J5IjpbLTY3NzU1MDIxN119
 -->
