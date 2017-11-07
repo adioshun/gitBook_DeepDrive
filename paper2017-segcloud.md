@@ -94,5 +94,5 @@ to obtain fine-grained 3D Segmentation.
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NDYxOTExNl19
+eyJoaXN0b3J5IjpbMTQ2MzgyMjk0XX0=
 -->
