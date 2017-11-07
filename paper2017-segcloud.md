@@ -164,11 +164,19 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 - 3D CNN과 3D CRF를 합치는 연구는 이전에는 Medical 데이터에서 상처 부분을 세그멘테이션 할때 사용 되었다. `Combining 3D CNN and 3D CRF has been previously proposed for the task of lesion segmentation in 3D medical scans. `
 
+###### [34]
+
 - Kamnitsas et al. [34] propose a multi-scale 3D CNN with a CRF to classify 4 types of lesions from healthy brain tissues. 
 
-The method consists oftwo modules that are not trained end-to-end: a 2-streamarchitecture operating at 2 different scan resolutions and aCRF. 
+- The method consists of two modules that are not trained end-to-end: 
+	- a 2-stream architecture operating at 2 different scan resolutions 
+	- and a CRF. 
 
-In the CRF training stage, the authors reduce the problemto a 2-class segmentation task in order to find parametersfor the CRF that can improve segmentation accuracy.Joint end-to-end training of CNN and CRF was firstdemonstrated by [76] in the context of image semantic segmentation,where the CRF is implemented as a differentiableRecurrent Neural Network (RNN). 
+- In the CRF training stage, the authors reduce the problem to a 2-class segmentation task in order to find parameters for the CRF that can improve segmentation accuracy.
+
+###### [76]
+
+- Joint end-to-end training of CNN and CRF was first demonstrated by [76] in the context of image semantic segmentation,where the CRF is implemented as a differentiableRecurrent Neural Network (RNN). 
 
 The combinationof CNN and CRF trained in an end-to-end fashion demonstratedstate-of-the-art accuracy for semantic segmentationin images. 
 
@@ -187,5 +195,5 @@ We show that the combination ofjointly trained 3D-FCNN and CRF with TI consisten
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMjg1MTI2Ml19
+eyJoaXN0b3J5IjpbMjA1MTA4OTE0M119
 -->
