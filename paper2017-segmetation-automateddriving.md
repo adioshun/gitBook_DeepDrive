@@ -167,7 +167,7 @@ This attention model is able to learn a weighting map that weighs feature maps p
 - 최근 연구에서는  데이터의 prior structure정보를 사용한다. Thus, recent work was directed towards using the prior structure in the data.
 	- 특히 자율주행 에서는  prior structure는 세그멘테이션에 좋은 효과를 준다. `Specifically in automotive scenes prior structure can be exploited for better segmentation. `
 
-#### A. CRF
+#### A. CRF를 활용하는 방법
 
 - The commonly used model  to incorporate structure is conditional random field (CRF)[22][23][24]. 
 
@@ -181,7 +181,7 @@ In [23], CRF is also used as post processing to a dilated convolution network to
 
 Finally, in [24]the mean field inference algorithm that is used within CRFformulation was formulated as a recurrent network.
 
-#### B. RNN 
+#### B. RNN 을 활용하는 방버버 
 
 Another way to model structure is by using a recurrent neural network (RNN) to capture the long range dependencies of various regions [31]. 
 
@@ -622,5 +622,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjA4MzkxNjldfQ==
+eyJoaXN0b3J5IjpbLTE4ODQxMTIwNjhdfQ==
 -->
