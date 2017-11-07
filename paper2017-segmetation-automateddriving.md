@@ -422,9 +422,12 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 	- Virtual KITTI [47]
 -  were created. 
 
-There is some literature which demonstrates that a combination produces reasonable results in small datasets. 
+- There is some literature which demonstrates that a combination produces reasonable results in small datasets. 
+	- But they are still limited for a commercial deployment of an automated driving system.
 
-But they are still limited for acommercial deployment of an automated driving system.Hence there is a recent effort to build larger semanticsegmentation datasets like Mapillary Vistas dataset [48] andToronto City [49]. 
+- 최근에 시멘Hence there is a recent effort to build larger semantic segmentation datasets like 
+	- Mapillary Vistas dataset [48] 
+	- Toronto City [49]. 
 
 Mapillary dataset comprises of 25,000images with 100 classes. 
 
@@ -434,5 +437,5 @@ The annotation iscompletely automated by leveraging Aerial Drone data, HDmaps, c
 
 It is then manually verified andrefined.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzY2NTY1MDhdfQ==
+eyJoaXN0b3J5IjpbLTcwNjI5MDI1NF19
 -->
