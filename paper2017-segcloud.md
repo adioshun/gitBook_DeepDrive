@@ -100,7 +100,8 @@ to obtain fine-grained 3D Segmentation.
 
 ###### [16]
 
-- Dai et al. [16] also propose a fully convolutional architecture, but they make a single prediction for all voxels in the same voxel grid column. 
+- Dai et al. [16] also propose a fully convolutional architecture, 
+	- 그러나 싱글 but they make a single prediction for all voxels in the same voxel grid column. 
 
 This makes the wrong assumption that a voxel grid column contains 3D points with the same object label. 
 
@@ -123,5 +124,5 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mjk3OTcwMzldfQ==
+eyJoaXN0b3J5IjpbLTk4ODE4NTI5XX0=
 -->
