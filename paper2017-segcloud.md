@@ -130,7 +130,29 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ### 2.2 Graphical Models for 3D Segmentation
 
+- Our framework builds on top of a long line of works combining graphical models( [61, 62, 39, 20, 38]) and highly engineered classifiers. 
 
+Early works on 3D Semantic Segmentation formulate the problem as a graphical model built ontop of a set of features. 
+
+Such models have been used inseveral works to capture contextual relationships based onvarious features and cues such as appearance, shape, andgeometry. 
+
+These models are shown to work well for thistask [50, 49, 36, 58, 44, 3, 48].A common paradigm in 3D semantic segmentation combinesa classifier stage and a Conditional Random Field toimpose smoothness and consistency [68, 69, 45, 66, 69].Random Forests [7, 15] are a popular choice of classi-fier in this paradigm and in 3D Segmentation in general[75, 17, 9, 8, 51, 67]; they use hand-crafted featuresto robustly provide class scores for voxels, oversegmentsor 3D Points. 
+
+In [45], the spin image descriptor is used asa feature, while [68] uses a 14-dimensional feature vectorbased on geometry and appearance. 
+
+Hackel et al. 
+
+[27] also define a custom set of features aimed at capturing geometry,appearance and location. 
+
+In these works, the RandomForests output is used as unary potentials (class scores) fora CRF whose parameters are learned independently. 
+
+TheCRF then leverages the confidence provided by the classi-fier, as well as similarity between an additional set of features,to perform the final inference. 
+
+In contrast to thesemethods, our framework uses a 3D-FCNN which can learnhigher dimensional features and provide strong unaries foreach data point. 
+
+Moreover, our CRF is implemented as afully differentiable Recurrent Neural Network, similar to[76]. 
+
+This allows the 3D-FCNN and CRF to be trained endto-end,and enables information flow from the CRF to theCNN classification stage.
 
 
 ### 2.3 Joint CNN + CRF
@@ -138,5 +160,5 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTE1NTQzMjddfQ==
+eyJoaXN0b3J5IjpbLTEyNjYzNDE4NThdfQ==
 -->
