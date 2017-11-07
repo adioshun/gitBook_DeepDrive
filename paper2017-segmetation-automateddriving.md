@@ -392,7 +392,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 위 결과는 화소도 낮은(720P )거라 최근 고해상(2 Megapixel)도 적용시 3배는 더 시간이 든다. `This benchmark is for a 720P resolution and the current generation cameras are around 2 Megapixel which will reduce the runtime by another factor of 3X. `
 
-- 상용화 하기에는 ㅅThis is clearly not acceptable for a commercial solution to handle high speed objects for highway driving. 
+- 상용화 하기에는 속도가 좋지 않다. This is clearly not acceptable for a commercial solution to handle high speed objects for highway driving. 
 
 Reducing the resolution to VGA (640x480) bringsit close to 10 fps which is still not reasonable and reducingresolution degrades accuracy and misses small objects whichmight be critical. 
 
@@ -400,5 +400,5 @@ Additionally, for full surround view sensingat least 4 cameras need to be employ
 
 However the industry is moving towardscustom hardware accelerators for CNNs which will enable thepossibility of doing multi-camera semantic segmentation at ahigher frame rate, Nvidia Xavier for instance supports 30 teraops.There is also active research on efficient network designwhich will improve the performance.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODU1MTEwNDhdfQ==
+eyJoaXN0b3J5IjpbLTE3NjA2MjY3NTVdfQ==
 -->
