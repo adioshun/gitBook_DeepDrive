@@ -519,7 +519,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 ### 5.1 Multi-task Learning
 
-- CNN과 조합한 방식 Since the same CNN features generalize well for various tasks beyond object detection like flow estimation, depth, correspondence, and tracking.  Thus a common CNN feature pipeline can be harmonized to be used for various tasks. 
+- CNN과 조합한 방식 `Since the same CNN features generalize well for various tasks beyond object detection like flow estimation, depth, correspondence, and tracking.  Thus a common CNN feature pipeline can be harmonized to be used for various tasks. `
 
 ###### [51]
 
@@ -528,6 +528,21 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 ###### [54]
 
 - A joint **flow estimation** and **semantic segmentation** in [54] was presented.
+
+
+### 5.2 End to end learning
+
+- Human beings perform soft computing and they do not perform an accurate object detection when driving. 
+
+- They are goal oriented and an accurate object detection is not necessary for safe driving. 
+
+- End to end has the big advantage of not having to do any annotation as the driving signal outputs are obtained directly from the Controller Area Network (CAN) signals. 
+
+Companies like Uber are betting thisaway as they can collect lots of driving data through their taxifleet.The output is of fewer dimensions (brake, steering, acceleration)and also temporally smooth. 
+
+Hence for the same input,mathematically this function should have a simpler functionalcomplexity relative to the complex output structure of semanticsegmentation. 
+
+The work in [13][14] is in that direction.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NTc3MzQzOF19
+eyJoaXN0b3J5IjpbMjA2MzgyNzc5M119
 -->
