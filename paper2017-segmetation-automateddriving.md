@@ -417,9 +417,12 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 위 데이터로 학습한 모델은 다른 도시 환경이나 새로운 환경(터널)등에는 잘 동작 하지 않는다. `The algorithms trained on this dataset do not generalize well to data tested on other cities and with unseen objects like tunnels.`
 
-To compensate for that, synthetic datasets like Synthia [9]and Virtual KITTI [47] were created. 
+- 이를 해결 하기 위해 가상 데이터도 사용 할수 있다. `To compensate for that, synthetic datasets like `
+	- Synthia [9]
+	- Virtual KITTI [47]
+-  were created. 
 
-There is some literaturewhich demonstrates that a combination produces reasonableresults in small datasets. 
+There is some literature which demonstrates that a combination produces reasonable results in small datasets. 
 
 But they are still limited for acommercial deployment of an automated driving system.Hence there is a recent effort to build larger semanticsegmentation datasets like Mapillary Vistas dataset [48] andToronto City [49]. 
 
@@ -431,5 +434,5 @@ The annotation iscompletely automated by leveraging Aerial Drone data, HDmaps, c
 
 It is then manually verified andrefined.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkxNjk3NTg1XX0=
+eyJoaXN0b3J5IjpbLTExNzY2NTY1MDhdfQ==
 -->
