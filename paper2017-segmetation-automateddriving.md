@@ -429,13 +429,12 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 	- Mapillary Vistas dataset [48] : Mapillary dataset comprises of 25,000images with 100 classes. 
 	- Toronto City [49]. 
 
-- It also offers large variability in terms of weather condition, camera type and geographic coverage.
-
-- Toronto City is a massive semantic segmentation, mappingand 3D reconstruction dataset covering 712 km2 of land, 8439km of road and around 400,000 buildings. 
+-위 데이터들은 기후 변화나 카메라에 따른 다양한 variability들을 제공한다. `It also offers large variability in terms of weather condition, camera type and geographic coverage.`
+- 토론토 도시 데이터는 `Toronto City is a massive semantic segmentation, mapping and 3D reconstruction dataset covering 712 km 2 of land, 8439km of road and around 400,000 buildings. 
 
 The annotation iscompletely automated by leveraging Aerial Drone data, HDmaps, city maps and LIDARs. 
 
 It is then manually verified andrefined.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5Nzc2NjIxXX0=
+eyJoaXN0b3J5IjpbMTgwNDgwNTIyM119
 -->
