@@ -581,7 +581,38 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 - (6) Dilation8 [36]. 
 - (7)Enet [44], which is the most efficient architecture for semantic segmentation. 
 
-### 6.3 
+### 6.3 Design Exploration
+- 설계시 참고 사항 `Some good design choices that are accepted with-in the community are presented:`
+
+(1) The use of 3x3 convolutions similar to VGG architectures[59] turned to be useful experimentally. 
+
+Especially inscenarios where you care about the resolution of your inputsuch as segmentation. 
+
+Since larger filter size will causereduction in the image resolution.
+
+
+(2) The dilated convolution is considered to be the best practice in segmentation as it increases the receptive field without downgrading resolution. 
+
+Although in ourcomparative evaluation Dilation8 was not suitable for realtimeapplications. 
+
+However that can be due to their use of adeep network to build upon.
+
+(3) For real-time performance shallow networks can be useful for segmentation with a compromise in the accuracy.
+
+
+(4) Batch normalization [57] turned to be a very useful trick for better convergence during training in our experiments.
+
+This is due to the reduction of change in distribution of network activations. 
+
+They termed that as reduction of internalcovariate shift. 
+
+The covariate shift occurs due to change ofnetworks parameters during training.(5) The resolution of the input image largely affects thesegmentation, although it seems as a tiny detail. 
+
+We found thathigher input image resolution can help with segmenting smallobjects like pedestrian. 
+
+Also, using random crops to helpreduce the class imbalance can further help the segmentation.This can be seen in Dilation8 results, they use random cropsfrom the image that is then upsampled as input.(6) Skip connections is widely used in segmentationarchitectures such as FCN8s [28] and U-net [39]. 
+
+However,the extensive use of these skip connections can lead tooverhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjcyMzc4NTJdfQ==
+eyJoaXN0b3J5IjpbLTIwNzAxMDQ5MV19
 -->
