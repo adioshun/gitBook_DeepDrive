@@ -538,11 +538,25 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - End to end has the big advantage of not having to do any annotation as the driving signal outputs are obtained directly from the Controller Area Network (CAN) signals. 
 
-- Companies like Uber are betting thisaway as they can collect lots of driving data through their taxifleet.The output is of fewer dimensions (brake, steering, acceleration)and also temporally smooth. 
+- Companies like Uber are betting this away as they can collect lots of driving data through their taxi fleet.
 
-Hence for the same input,mathematically this function should have a simpler functionalcomplexity relative to the complex output structure of semanticsegmentation. 
+- The output is of fewer dimensions (brake, steering, acceleration)and also temporally smooth. 
 
-The work in [13][14] is in that direction.
+- Hence for the same input,mathematically this function should have a simpler functional complexity relative to the complex output structure of semantic segmentation. 
+
+- The work in [13][14] is in that direction.
+
+### 5.3 Modular End to End learning
+
+- We use the term modular end to end learning when there are auxiliary losses to ensure safety and interpret ability. 
+
+- For instance, segmentation loss can be added as an auxiliary loss for an end to end drivingCNN [55]. 
+
+Using this auxiliary loss, the CNN loosely learnsto semantically segment, but it is also learns to have a betterrepresentation for the intermediate features. 
+
+It was shown inthat work that using auxiliary loss outperforms the vanilla endto end learning. 
+
+The work also uses recurrent gated unit afterthe CNN to model temporal information.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNzcwNjMzNF19
+eyJoaXN0b3J5IjpbLTI4NTYwNzI3Nl19
 -->
