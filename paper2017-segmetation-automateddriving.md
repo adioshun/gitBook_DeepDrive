@@ -200,8 +200,7 @@ This attention model is able to learn a weighting map that weighs feature maps p
 In [22], CRF is used as a post processing stepafter the segmentation network. 
 
 ```
-[22] G. Lin, C. Shen, I. Reid et al., “Efficient piecewise training of deep structured models for semantic segmentation,” arXiv preprint
-arXiv:1504.01013, 2015.
+[22] G. Lin, C. Shen, I. Reid et al., “Efficient piecewise training of deep structured models for semantic segmentation,” arXiv preprint arXiv:1504.01013, 2015.
 ```
 
 ###### [23]
@@ -652,5 +651,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MTkzMjE2MV19
+eyJoaXN0b3J5IjpbMTA4Njc4MTA4M119
 -->
