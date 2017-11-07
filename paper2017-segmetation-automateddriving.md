@@ -569,7 +569,9 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 - We present an evaluation of both **shallower** and state of the art work in terms of **mean intersection over union** and **speed**..
 
 
+- 평가 지표 : Evaluation metrics used are **mean intersection over union(IoU)** and **per class IoU**.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjE4Mzg3MjRdfQ==
+eyJoaXN0b3J5IjpbOTY4OTUwNzU4XX0=
 -->
