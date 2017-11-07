@@ -579,8 +579,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 - (4) FCN8s [28]. 
 - (5) Segnet Basic [30]. 
 - (6) Dilation8 [36]. 
-- (7)Enet [44], which is the most efficient architecture for
-semantic segmentation. 
+- (7)Enet [44], which is the most efficient architecture for semantic segmentation. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ2MDgxMzc2XX0=
+eyJoaXN0b3J5IjpbMTEzODAwMDcxNF19
 -->
