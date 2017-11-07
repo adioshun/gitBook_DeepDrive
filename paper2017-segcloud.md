@@ -94,6 +94,10 @@ to obtain fine-grained 3D Segmentation.
 
 - It works well for indoor semantic scene understanding,although there is no evidence that it scales to larger input dimensions without additional training or adaptation required. 
 
+```
+[53] C. R. Qi, H. Su, K. Mo, and L. J. Guibas. Pointnet: Deep learning on point sets for 3d classificatio  and segmentation. CoRR, abs/1612.00593, 2016
+```
+
 ###### [3D-FCNN]
 
 - Huang et al. [32] present a 3D-FCNN for 3D **semantic segmentation** which produces coarse voxel level segmentation. 
@@ -107,9 +111,9 @@ to obtain fine-grained 3D Segmentation.
 ###### [본 논문에서 제안 하는 법 ]
 
 - 앞서 말한것들의 제약 `All the aforementioned methods are limited by the fact that `
-	- they do not explicitly enforce spatial consistency between neighboring points predictions and/or provide a coarse labeling of the 3D data.
+	- they do not explicitly enforce **spatial consistency** between **neighboring points predictions** and/or **provide a coarse labeling** of the 3D data.
 
-In contrast, our method makes fine-grained predictions for each point in the 3D input, explicitly enforces spatial consistency and models class interactions through a CRF. 
+- 하지만 제안 방식은 In contrast, our method makes **fine-grained predictions** for each point in the 3D input, explicitly enforces spatial consistency and models class interactions through a CRF. 
 
 Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs, since our classifier stage is fully convolutional.
 
@@ -126,5 +130,5 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDQ3NjQyOThdfQ==
+eyJoaXN0b3J5IjpbMjg0Mjg1MzY0XX0=
 -->
