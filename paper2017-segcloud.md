@@ -88,13 +88,15 @@ to obtain fine-grained 3D Segmentation.
 
 - Qi et al. [53] propose a Multilayer Perceptron(MLP) architecture 
 	-  that extracts a global feature vector from a 3D point cloud of $$1m^3$$ physical size 
-	-  and processes each point using the extracted feature vector and additional point level transformations. 
+	-  and processes each point using the extracted feature vector and additional **point level** transformations. 
 
-Their method operatesat the point level and thus inherently provides a fine-grainedsegmentation. 
+- Their method operates at the point level and thus inherently provides a fine-grained segmentation. 
 
-It works well for indoor semantic scene understanding,although there is no evidence that it scales tolarger input dimensions without additional training or adaptationrequired. 
+- It works well for indoor semantic scene understanding,although there is no evidence that it scales to larger input dimensions without additional training or adaptation required. 
 
-Huang et al. [32] present a 3D-FCNN for3D semantic segmentation which produces coarse voxellevelsegmentation. 
+###### [3D-FCNN]
+
+- Huang et al. [32] present a 3D-FCNN for 3D **semantic segmentation** which produces coarse voxel level segmentation. 
 
 Dai et al. [16] also propose a fully convolutionalarchitecture, but they make a single predictionfor all voxels in the same voxel grid column. 
 
@@ -117,5 +119,5 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjA3NzQ4NTddfQ==
+eyJoaXN0b3J5IjpbLTE5NTcyNjU1XX0=
 -->
