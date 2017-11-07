@@ -181,7 +181,7 @@ In [23], CRF is also used as post processing to a dilated convolution network to
 
 Finally, in [24]the mean field inference algorithm that is used within CRFformulation was formulated as a recurrent network.
 
-#### B. RNN 을 활용하는 방버버 
+#### B. RNN 을 활용하는 방법 
 
 Another way to model structure is by using a recurrent neural network (RNN) to capture the long range dependencies of various regions [31]. 
 
@@ -189,7 +189,7 @@ It introduced a different formulation for solving the structured prediction prob
 
 A Recurrent layer is used to sweep the image horizontally and vertically, which ensures the usage of contextual information for a better segmentation.
 
-### 2.4 Spatio-Temporal Models
+### 2.4 Spatio-Temporal Models(시공간 모델)
 
 - 지금까지 살펴본 것들은 이미지 세그멘테이션에 관한 것이다. 최근 연구에서는 시간`(temporal )`정보를 이용한 비디오 세그멘테이션이 연구 되고 있다. ` All the discussed work was focused on still image segmentation.Recently some approaches emerged for video semantic segmentation that utilized temporal information [25][32][33][34]. `
 
@@ -622,5 +622,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODQxMTIwNjhdfQ==
+eyJoaXN0b3J5IjpbMTU1OTcyODcwMV19
 -->
