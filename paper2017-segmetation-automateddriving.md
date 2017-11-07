@@ -457,11 +457,12 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - soft-max 분류기의 특징으로 인해 이전에 보지 못한 물체는 처리 하지 못한다. `Because the soft-max classifier is normalized to probability one, it doesn’t handle previous unseen objects. `
 
-- The classifier matches it to one of the previouslytrained classes. 
+- 분류기는 학습된 Class 분류 중에서만 Match를 진행 한다. `The classifier matches it to one of the previously trained classes. `
 
-It is not possible to cover all possible objectsin training phase (eg: a rare animal like Kangaroo or a rarevehicles like construction truck). 
+- 모든 물체를 학습 시키는건 불가능 하다. `It is not possible to cover all possible objects in training phase '
+	- (eg: a rare animal like Kangaroo or a rare vehicles like construction truck). 
 
-This could be handled bymeasuring uncertainty of the output classification, similar toBayesian Segnet [52].3) Complexity of Output: The output representation ofsemantic segmentation is a set of complex contours and canbe very complex in very high textured scenes. 
+This could be handled by measuring uncertainty of the output classification, similar to Bayesian Segnet [52].3) Complexity of Output: The output representation ofsemantic segmentation is a set of complex contours and canbe very complex in very high textured scenes. 
 
 The post processingmodules like mapping or maneuvering require a muchsimpler representation of objects. 
 
@@ -485,5 +486,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MTczNTM1MV19
+eyJoaXN0b3J5IjpbLTEyMzIwNDAwMDZdfQ==
 -->
