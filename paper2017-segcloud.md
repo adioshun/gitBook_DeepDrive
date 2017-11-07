@@ -98,11 +98,15 @@ to obtain fine-grained 3D Segmentation.
 
 - Huang et al. [32] present a 3D-FCNN for 3D **semantic segmentation** which produces coarse voxel level segmentation. 
 
-Dai et al. [16] also propose a fully convolutionalarchitecture, but they make a single predictionfor all voxels in the same voxel grid column. 
+###### [16]
 
-This makesthe wrong assumption that a voxel grid column contains 3Dpoints with the same object label. 
+- Dai et al. [16] also propose a fully convolutional architecture, but they make a single prediction for all voxels in the same voxel grid column. 
 
-All the aforementionedmethods are limited by the fact that they do not explicitlyenforce spatial consistency between neighboring points predictionsand/or provide a coarse labeling of the 3D data.In contrast, our method makes fine-grained predictions foreach point in the 3D input, explicitly enforces spatial consistencyand models class interactions through a CRF. 
+This makes the wrong assumption that a voxel grid column contains 3D points with the same object label. 
+
+All the aforementioned methods are limited by the fact that they do not explicitly enforce spatial consistency between neighboring points predictions and/or provide a coarse labeling of the 3D data.
+
+In contrast, our method makes fine-grained predictions for each point in the 3D input, explicitly enforces spatial consistency and models class interactions through a CRF. 
 
 Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs, since our classifier stage is fully convolutional.
 
@@ -119,5 +123,5 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTcyNjU1XX0=
+eyJoaXN0b3J5IjpbLTE5Mjk3OTcwMzldfQ==
 -->
