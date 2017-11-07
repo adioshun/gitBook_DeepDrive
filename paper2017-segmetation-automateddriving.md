@@ -550,13 +550,13 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - We use the term modular end to end learning when there are auxiliary losses to ensure safety and interpret ability. 
 
-- For instance, segmentation loss can be added as an auxiliary loss for an end to end drivingCNN [55]. 
+- For instance, segmentation loss can be added as an auxiliary loss for an end to end driving CNN [55]. 
 
-Using this auxiliary loss, the CNN loosely learnsto semantically segment, but it is also learns to have a betterrepresentation for the intermediate features. 
+- Using this auxiliary loss, the CNN loosely learnsto semantically segment, but it is also learns to have a betterrepresentation for the intermediate features. 
 
 It was shown inthat work that using auxiliary loss outperforms the vanilla endto end learning. 
 
 The work also uses recurrent gated unit afterthe CNN to model temporal information.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4NTYwNzI3Nl19
+eyJoaXN0b3J5IjpbOTQxODU0NTY1XX0=
 -->
