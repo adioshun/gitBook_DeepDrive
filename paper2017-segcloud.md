@@ -213,11 +213,16 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 - the 3D data is voxelized and the resulting 3D grid is processed by a 3D fully convolutional neural network (3D-FCNN)1. 
 
-The 3DFCNNdown-samples the input volume and produces probabilitydistributions over the set of classes for each downsampledvoxel (Section 3.1). 
+- The 3DFCNN down-samples the input volume and produces probability distributions over the set of classes for each downsampled voxel (Section 3.1). 
 
-The next stage is a trilinear interpolationlayer which interpolates class scores from downsampledvoxels to 3D points (Section 3.2). 
+###### [The next stage is]
 
-Finally, inferenceis performed using a CRF which combines the original3D points features with interpolated scores to produce finegrainedclass distributions over the point set (Section 3.3).Our entire pipeline is jointly optimized and the CRF inferenceand joint optimization processes are presented in Section4.
+-  a trilinear interpolation layer which interpolates class scores from downsampled voxels to 3D points (Section 3.2). 
+
+###### [Finally]
+- inference is performed using a CRF which combines the original 3D points features with interpolated scores to produce finegrained class distributions over the point set (Section 3.3).
+
+Our entire pipeline is jointly optimized and the CRF inference and joint optimization processes are presented in Section4.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mzk5MDgwMjhdfQ==
+eyJoaXN0b3J5IjpbMTA3ODY1NTQ3N119
 -->
