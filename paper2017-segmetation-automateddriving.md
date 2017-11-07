@@ -495,11 +495,13 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 #### F. Variable object complexity
 
-- 일반적으로 주행 환경에서의 화면은 매우 복잡 하고 다양성을 가진다. A typical automotive scene has large complexity variability with simple structures like road or sky and complex structures like pedestrians. 
+- 일반적으로 주행 환경에서의 화면은 매우 복잡 하고 다양성을 가진다. `A typical automotive scene has large complexity variability with`
+	- simple structures like road or sky 
+	- complex structures like pedestrians. 
 
-Pedestrianshave higher complexity due to large appearance variationsand articulations. 
+- 보행자는 가장 많은 다양성을 가진 다. `Pedestrians have higher complexity due to large appearance variations and articulations. `
 
-Thus instead of using a small complexitynetwork across the image, a variable complexity network likea cascaded CNN [53] will be more efficient.
+- 해결책 : cascaded CNN `Thus instead of using a small complexity network across the image, a variable complexity network like a cascaded CNN [53] will be more efficient.`
 
 #### G. Corner Case Mining
 
@@ -509,5 +511,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzU1MjQ2OThdfQ==
+eyJoaXN0b3J5IjpbLTk2Nzk3ODg0MV19
 -->
