@@ -228,8 +228,7 @@ It introduced a different formulation for solving the structured prediction prob
 A Recurrent layer is used to sweep the image horizontally and vertically, which ensures the usage of contextual information for a better segmentation.
 
 ```
-[31] F. Visin, M. Ciccone, A. Romero, K. Kastner, K. Cho, Y. Bengio,M. Matteucci, and A. Courville, “Reseg: A recurrent neural networkbased model for semantic segmentation,” in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops,
-2016, pp. 41–48.
+[31] F. Visin, M. Ciccone, A. Romero, K. Kastner, K. Cho, Y. Bengio,M. Matteucci, and A. Courville, “Reseg: A recurrent neural networkbased model for semantic segmentation,” in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops, 2016, pp. 41–48.
 ```
 
 ### 2.4 Spatio-Temporal Models(시공간 모델)
@@ -665,5 +664,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTMxNzEzNDFdfQ==
+eyJoaXN0b3J5IjpbLTU0MTMxMjY5XX0=
 -->
