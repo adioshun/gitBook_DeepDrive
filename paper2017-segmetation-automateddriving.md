@@ -471,18 +471,20 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - **mapping** 나 **maneuvering**등의 후처리 작업이 필요 하며 이를 통해 단순화 할수 있다. `The post processing modules like mapping or maneuvering require a much simpler representation of objects. `
 
-This leads to a question of learning to classify this simpler representation directly instead of semantic segmentation.
+- This leads to a question of learning to classify this simpler representation directly instead of semantic segmentation.
 
 
 #### D. Recovering individual objects
 
-Pixel-wise Semantic segmentationproduces regions of same object and hence does notprovide individual objects in a segment. 
+- Pixel-wise Semantic segmentation produces regions of same object and hence does not provide individual objects in a segment. 
 
-This might be neededfor tracking applications which tend to track objects likepedestrians individually. 
+- This might be needed for tracking applications which tend to track objects like pedestrians individually. 
 
 One solution is to use post processingclassifier to further sub-divide the regions but this could be directly classified instead. 
 
-However, a recent instance levelsegmentation paradigm can segment different instances of thesame class as in [50] without the need for post processing.5) Goal Orientation: Semantic segmentation is a genericproblem and at the moment there is no goal orientation towardsthe end goal of automated driving. 
+However, a recent instance levelsegmentation paradigm can segment different instances of thesame class as in [50] without the need for post processing.
+
+#### E.  Goal Orientation: Semantic segmentation is a genericproblem and at the moment there is no goal orientation towardsthe end goal of automated driving. 
 
 For example, there maynot be a need for accurate contour of objects or in detectingirrelevant objects like sky for end driving goal. 
 
@@ -496,5 +498,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NDg0OTM4MV19
+eyJoaXN0b3J5IjpbMTc3Mzc1NDIxM119
 -->
