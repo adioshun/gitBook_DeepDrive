@@ -471,7 +471,10 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - **mapping** 나 **maneuvering**등의 후처리 작업이 필요 하며 이를 통해 단순화 할수 있다. `The post processing modules like mapping or maneuvering require a much simpler representation of objects. `
 
-This leads to a question oflearning to classify this simpler representation directly insteadof semantic segmentation.4) Recovering individual objects: Pixel-wise Semantic segmentationproduces regions of same object and hence does notprovide individual objects in a segment. 
+This leads to a question of learning to classify this simpler representation directly instead of semantic segmentation.
+
+
+#### D. Recovering individual objects: Pixel-wise Semantic segmentationproduces regions of same object and hence does notprovide individual objects in a segment. 
 
 This might be neededfor tracking applications which tend to track objects likepedestrians individually. 
 
@@ -491,5 +494,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NjczODE0Ml19
+eyJoaXN0b3J5IjpbNTg3MDUyMzc3XX0=
 -->
