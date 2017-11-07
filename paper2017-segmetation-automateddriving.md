@@ -382,8 +382,10 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 [43] B. Ummenhofer, H. Zhou, J. Uhrig, N. Mayer, E. Ilg, A. Dosovitskiy, and T. Brox, “Demon: Depth and motion network for learning monocular stereo,” arXiv preprint arXiv:1612.02401, 2016.
 ```
 
-## 4. 
+## 4. CHALLENGES
+
+### 4.1 Computational Bound in Embedded Systems
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4OTkzMzA3M119
+eyJoaXN0b3J5IjpbMjA3NTc2Njg4MF19
 -->
