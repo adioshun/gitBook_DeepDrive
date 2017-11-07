@@ -145,13 +145,15 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 - In [45], the spin image descriptor is used as a feature, while [68] uses a 14-dimensional feature vector based on geometry and appearance. 
 
-Hackel et al. [27] also define a custom set of features aimed at capturing geometry,appearance and location. 
+- Hackel et al. [27] also define a custom set of features aimed at capturing geometry,appearance and location. 
 
-In these works, the RandomForests output is used as unary potentials (class scores) fora CRF whose parameters are learned independently. 
+- In these works, the RandomForests output is used as unary potentials (class scores) for a CRF whose parameters are learned independently. 
 
-TheCRF then leverages the confidence provided by the classi-fier, as well as similarity between an additional set of features,to perform the final inference. 
+- The CRF then leverages the confidence provided by the classifier, as well as similarity between an additional set of features,to perform the final inference. 
 
-In contrast to thesemethods, our framework uses a 3D-FCNN which can learnhigher dimensional features and provide strong unaries foreach data point. 
+###### [본 논문에서 제안 하는것] 
+
+- In contrast to these methods, our framework uses a **3D-FCNN** which can learn **higher dimensional features** and provide strong unaries foreach data point. 
 
 Moreover, our CRF is implemented as afully differentiable Recurrent Neural Network, similar to[76]. 
 
@@ -163,5 +165,5 @@ This allows the 3D-FCNN and CRF to be trained endto-end,and enables information 
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDMxMDg2NjBdfQ==
+eyJoaXN0b3J5IjpbMTY2MTY1Njc3Ml19
 -->
