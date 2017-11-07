@@ -498,11 +498,15 @@ A typical automotive scenehas large complexity variability with simple structure
 
 Pedestrianshave higher complexity due to large appearance variationsand articulations. 
 
-Thus instead of using a small complexitynetwork across the image, a variable complexity network likea cascaded CNN [53] will be more efficient.7) Corner Case Mining: As the object detection parts aretightly coupled, it is difficult to do hard negative mining and toanalyze corner cases. 
+Thus instead of using a small complexitynetwork across the image, a variable complexity network likea cascaded CNN [53] will be more efficient.
+
+#### G. Corner Case Mining
+
+As the object detection parts aretightly coupled, it is difficult to do hard negative mining and toanalyze corner cases. 
 
 Even when the corner cases are knownconceptually, it can be hard to record video sequences forthe same. 
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNTg5NzQzMF19
+eyJoaXN0b3J5IjpbLTIwMzc2MDY2OV19
 -->
