@@ -517,6 +517,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - We present it with other possibilities where it can be coupled.
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTcwMzQ3NzJdfQ==
+eyJoaXN0b3J5IjpbMTEyMzY4NTY1OF19
 -->
