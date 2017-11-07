@@ -442,11 +442,13 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 ### 4.3 Learning Challenges
 
-#### A. 1) Class imbalance: There is severe class imbalance dueto the fact that important objects like pedestrians are underrepresented unlike sky and building. 
+#### A. 1) Class imbalance
 
-This could also createa bias to ignore small objects. 
+- There is severe class imbalance due to the fact that important objects like **pedestrians** are under represented unlike **sky** and **building**. 
 
-This could be handled bya weighting scheme in the error function. 
+- This could also create a bias to **ignore small objects**. 
+
+- This could be handled by a weighting scheme in the error function. 
 
 Another potentialsolution is to use mask predictions on detected bounding boxesof these small objects as in [50][51].2) Unobserved Objects: Because the soft-max classifier isnormalized to probability one, it doesn’t handle previous unseenobjects. 
 
@@ -478,5 +480,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNzY2MjgwMF19
+eyJoaXN0b3J5IjpbLTQxNDAxNjY4NV19
 -->
