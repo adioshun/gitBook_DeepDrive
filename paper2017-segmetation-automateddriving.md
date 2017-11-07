@@ -80,7 +80,7 @@ vol. 34, pp. 12–27, 2016.
 
 #### A. random forest classifier & conditional random fields
 
-- The main approachesused in semantic segmentation was based on** random forest classifier** or **conditional random fields**. 
+- The main approachesused in semantic segmentation was based on **random forest classifier** or **conditional random fields**. 
 
 - In [17] decision forests were used, where each tree was trained on random subsetof the training data. 
 
@@ -640,5 +640,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMjE5MjE3MV19
+eyJoaXN0b3J5IjpbLTE3MDU4ODgyMTNdfQ==
 -->
