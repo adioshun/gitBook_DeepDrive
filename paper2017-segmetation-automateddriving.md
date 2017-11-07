@@ -425,7 +425,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 - There is some literature which demonstrates that a combination produces reasonable results in small datasets. 
 	- But they are still limited for a commercial deployment of an automated driving system.
 
-- 최근에 Hence there is a recent effort to build larger semantic segmentation datasets like 
+- 최근에 세그멘Hence there is a recent effort to build larger semantic segmentation datasets like 
 	- Mapillary Vistas dataset [48] 
 	- Toronto City [49]. 
 
@@ -437,5 +437,5 @@ The annotation iscompletely automated by leveraging Aerial Drone data, HDmaps, c
 
 It is then manually verified andrefined.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTg2NTcwXX0=
+eyJoaXN0b3J5IjpbMTQ5MTc1MDAyNl19
 -->
