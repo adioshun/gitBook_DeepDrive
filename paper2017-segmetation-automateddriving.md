@@ -455,7 +455,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 #### B. Unobserved Objects
 
-- soft-max 분류기는 확률Because the soft-max classifier is normalized to probability one, it doesn’t handle previous unseen objects. 
+- soft-max 분류기ㅇBecause the soft-max classifier is normalized to probability one, it doesn’t handle previous unseen objects. 
 
 The classifier matches it to one of the previouslytrained classes. 
 
@@ -485,5 +485,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNzA3MTU2MV19
+eyJoaXN0b3J5IjpbLTgwODg0NjM5N119
 -->
