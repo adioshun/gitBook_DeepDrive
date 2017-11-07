@@ -84,7 +84,7 @@ to obtain fine-grained 3D Segmentation.
 
 - Recent works have started exploring the use of Neural Networks for 3D Semantic Segmentation[53, 16, 32]. 
 
-###### [Multilayer Perceptron]
+###### [PointNetDeep]
 
 - Qi et al. [53] propose a Multilayer Perceptron(MLP) architecture 
 	-  that extracts a global feature vector from a 3D point cloud of $$1m^3$$ physical size 
@@ -101,6 +101,10 @@ to obtain fine-grained 3D Segmentation.
 ###### [3D-FCNN]
 
 - Huang et al. [32] present a 3D-FCNN for 3D **semantic segmentation** which produces coarse voxel level segmentation. 
+
+```
+[32] S. Y. J. Huang. Point Cloud Labeling using 3D Convolutional Neural Network. In International Conference on Pattern Recognition, pages 1–6, 2016
+```
 
 ###### [16]
 
@@ -130,5 +134,5 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg0Mjg1MzY0XX0=
+eyJoaXN0b3J5IjpbMTY2MTA1NTMwMV19
 -->
