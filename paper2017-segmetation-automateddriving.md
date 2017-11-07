@@ -474,7 +474,8 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 This leads to a question of learning to classify this simpler representation directly instead of semantic segmentation.
 
 
-#### D. Recovering individual objects: Pixel-wise Semantic segmentationproduces regions of same object and hence does notprovide individual objects in a segment. 
+#### D. Recovering individual objects
+Pixel-wise Semantic segmentationproduces regions of same object and hence does notprovide individual objects in a segment. 
 
 This might be neededfor tracking applications which tend to track objects likepedestrians individually. 
 
@@ -494,5 +495,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg3MDUyMzc3XX0=
+eyJoaXN0b3J5IjpbLTE4OTI2MzExODddfQ==
 -->
