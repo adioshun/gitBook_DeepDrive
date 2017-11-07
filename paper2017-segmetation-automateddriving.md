@@ -523,11 +523,11 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - Thus a common CNN feature pipeline can be harmonized to be used for various tasks. 
 
-######
+###### 
 
 - In [51], they propose a CNN encoder and decoder for various tasks like scene classification and vehicle detection. 
 
 - A joint flow estimation and semantic segmentation in [54] was presented.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkyODg4OF19
+eyJoaXN0b3J5IjpbLTY5NzMzODEwXX0=
 -->
