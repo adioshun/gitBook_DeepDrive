@@ -409,9 +409,15 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 - 세그멘테이션용 데이터의 테깅하는데는 한장에 한시간이나 걸리며 소요 시간이 크다. `Annotation for semantic segmentation is time consuming, typically it can take around an hour for annotating a single image. `
 	- LIDAR등의 정보를 사용하면 속도 향상을 가져 올수 있따. `It can be speeded up by the availability of other cues like LIDAR or exploiting temporal propagation and bootstrapping classifier.`
 
-The popular semantic segmentation automotive datasets are CamVid [18] and the more recent cityscapes [11]. 
+- 유명한 semantic segmentation를 위한 차량용 데이터 셋은 `The popular semantic segmentation automotive datasets are `
+	- CamVid [18] 
+	- cityscapes [11]. 
 
-The latterhas a size of 5000 annotation frames which is relatively small.The algorithms trained on this dataset do not generalize well todata tested on other cities and with unseen objects like tunnels.To compensate for that, synthetic datasets like Synthia [9]and Virtual KITTI [47] were created. 
+The latter has a size of 5000 annotation frames which is relatively small. 
+
+The algorithms trained on this dataset do not generalize well to data tested on other cities and with unseen objects like tunnels.
+
+To compensate for that, synthetic datasets like Synthia [9]and Virtual KITTI [47] were created. 
 
 There is some literaturewhich demonstrates that a combination produces reasonableresults in small datasets. 
 
@@ -425,5 +431,5 @@ The annotation iscompletely automated by leveraging Aerial Drone data, HDmaps, c
 
 It is then manually verified andrefined.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTI4NDk1ODBdfQ==
+eyJoaXN0b3J5IjpbNzY4NTI5NjMzXX0=
 -->
