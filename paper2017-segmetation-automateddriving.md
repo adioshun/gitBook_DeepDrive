@@ -118,14 +118,14 @@ vol. 34, pp. 12–27, 2016.
 
 #### A. The first [19][20][21] used patch-wise training to yield the final classification. 
 
-##### 가. In[19] 
+##### 가. In[192013] 
 
 - 입력 = 이미지, 처리 = Laplacian pyramid `an image is fed into a Laplacian pyramid,`
     - each scale is forwarded through a 3-stage network to extract hierarchical features and patch-wise classification is used. 
 
 - 출력 = The output is post processed with a graph based classical segmentation method. `
 
-##### 나. In [21]
+##### 나. In [21-2009]
 
  - 후처리 부하를 출이기 위하여 딥러닝을 이용하여 **pixel-wise classification** 실시 `a deep network was used for the final pixel-wise classification to alleviate any post processing needed. `
 
@@ -144,6 +144,9 @@ vol. 34, pp. 12–27, 2016.
 
 - In[29] a deeper **deconvolution network** was developed, in which stacked deconvolution and unpooling layers are used. 
 
+```
+
+```
 ###### [ SegNet]
 
 In Segnet [30] a similar approach was used where an encoder decoder architecture was deployed. 
@@ -640,5 +643,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDU4ODgyMTNdfQ==
+eyJoaXN0b3J5IjpbLTIwMzMxMzUxODFdfQ==
 -->
