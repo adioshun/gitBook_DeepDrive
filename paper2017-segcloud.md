@@ -101,11 +101,13 @@ to obtain fine-grained 3D Segmentation.
 ###### [16]
 
 - Dai et al. [16] also propose a fully convolutional architecture, 
-	- 그러나 싱글 but they make a single prediction for all voxels in the same voxel grid column. 
+	- 그러나, but they make a single prediction for all voxels in the same voxel grid column. 
+	- This makes the wrong assumption that a voxel grid column contains 3D points with the same object label. 
 
-This makes the wrong assumption that a voxel grid column contains 3D points with the same object label. 
+###### [본 논문에서 제안 하는 법 ]
 
-All the aforementioned methods are limited by the fact that they do not explicitly enforce spatial consistency between neighboring points predictions and/or provide a coarse labeling of the 3D data.
+- 앞서 말한것들의 제약 `All the aforementioned methods are limited by the fact that `
+	- they do not explicitly enforce spatial consistency between neighboring points predictions and/or provide a coarse labeling of the 3D data.
 
 In contrast, our method makes fine-grained predictions for each point in the 3D input, explicitly enforces spatial consistency and models class interactions through a CRF. 
 
@@ -124,5 +126,5 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4ODE4NTI5XX0=
+eyJoaXN0b3J5IjpbLTExMDQ3NjQyOThdfQ==
 -->
