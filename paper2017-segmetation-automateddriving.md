@@ -450,12 +450,12 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 해결 방법 #1 : This could be handled by a **weighting scheme** in the error function. 
 
-- 해결 방법 #2 : Another potential solution is to use mask predictions on detected bounding boxes of these small objects as in [50][51].
+- 해결 방법 #2 : Another potential solution is to use **mask predictions** on detected bounding boxes of these small objects as in [50][51].
 
 
 #### B. Unobserved Objects
 
-Because the soft-max classifier isnormalized to probability one, it doesn’t handle previous unseenobjects. 
+- soft-max 분류기는 Because the soft-max classifier is normalized to probability one, it doesn’t handle previous unseen objects. 
 
 The classifier matches it to one of the previouslytrained classes. 
 
@@ -485,5 +485,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMTIyMzEzOF19
+eyJoaXN0b3J5IjpbLTYxODE3NDM4MF19
 -->
