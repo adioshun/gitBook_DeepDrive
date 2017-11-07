@@ -187,16 +187,18 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 - Our work follows a similar thrust by defining the CRF as an RNN and using a trilinear interpolation layer to transfer the coarse output of the 3D-FCNN to individual 3D points before the CRF stage. 
 
-- In contrast to [34], our framework is a single stream architecture which jointly optimizesthe 3D CNN and CRF, targets the domain of 3D Scene PointClouds, and is able to handle a large number of classes bothat the CNN and CRF stage. 
+- In contrast to [34], our framework is a single stream architecture which jointly optimizes the 3D CNN and CRF, targets the domain of 3D Scene PointClouds, and is able to handle a large number of classes both at the CNN and CRF stage. 
 
-Unlike [76, 42, 10], we choose to use deterministic interpolation weights that take into accountthe metric distance between a 3D point and its neighboringvoxel centers (Section 3.2). 
+- Unlike [76, 42, 10], we choose to use deterministic interpolation weights that take into accountthe metric distance between a 3D point and its neighboring voxel centers (Section 3.2). 
 
-Our approach reducesthe number of parameters to be learned, and we find it towork well in practice. 
+- Our approach reducesthe number of parameters to be learned, and we find it to work well in practice. 
 
-We show that the combination ofjointly trained 3D-FCNN and CRF with TI consistently performsbetter than a stand alone 3D-FCNN.
+- We show that the combination of jointly trained 3D-FCNN and CRF with TI consistently performs better than a stand alone 3D-FCNN.
 
 
 ## 3. SEGCloud Framework
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDg3MjI0NTldfQ==
+eyJoaXN0b3J5IjpbNjYxNjc0MTU2XX0=
 -->
