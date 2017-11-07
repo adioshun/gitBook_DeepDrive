@@ -203,7 +203,7 @@ In [22], CRF is used as a post processing stepafter the segmentation network.
 [22] G. Lin, C. Shen, I. Reid et al., “Efficient piecewise training of
 deep structured models for semantic segmentation,” arXiv preprint
 arXiv:1504.01013, 2015.
-``
+```
 
 ###### [23]
 In [23], CRF is also used as post processing to a dilated convolution network to take contextual information into consideration. 
@@ -653,5 +653,5 @@ This can be seen in Dilation8 results, they use random crops from the image that
 
 However,the extensive use of these skip connections can lead to overhead in memory bandwidth.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MTk2NjA1N119
+eyJoaXN0b3J5IjpbMTgxMDQyNDkwMV19
 -->
