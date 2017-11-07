@@ -162,8 +162,30 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 
 ### 2.3 Joint CNN + CRF
 
+- 3D CNN과 3D CRF를 합치는 연구는 이전에는 Medical 데이터에서 상처 부분을 세금Combining 3D CNN and 3D CRF has been previously proposed for the task of lesion segmentation in 3D medical scans. 
+
+- Kamnitsas et al. [34] propose a multi-scale 3D CNN with a CRF to classify 4 types of lesions from healthy brain tissues. 
+
+The method consists oftwo modules that are not trained end-to-end: a 2-streamarchitecture operating at 2 different scan resolutions and aCRF. 
+
+In the CRF training stage, the authors reduce the problemto a 2-class segmentation task in order to find parametersfor the CRF that can improve segmentation accuracy.Joint end-to-end training of CNN and CRF was firstdemonstrated by [76] in the context of image semantic segmentation,where the CRF is implemented as a differentiableRecurrent Neural Network (RNN). 
+
+The combinationof CNN and CRF trained in an end-to-end fashion demonstratedstate-of-the-art accuracy for semantic segmentationin images. 
+
+In [76] and other related works [42, 10], theCNN has a final upsampling layer with learned weightswhich allows to obtain pixel level unaries before the CRFstage. 
+
+Our work follows a similar thrust by defining theCRF as an RNN and using a trilinear interpolation layer totransfer the coarse output of the 3D-FCNN to individual 3Dpoints before the CRF stage. 
+
+In contrast to [34], our frameworkis a single stream architecture which jointly optimizesthe 3D CNN and CRF, targets the domain of 3D Scene PointClouds, and is able to handle a large number of classes bothat the CNN and CRF stage. 
+
+Unlike [76, 42, 10], we choose to use deterministic interpolation weights that take into accountthe metric distance between a 3D point and its neighboringvoxel centers (Section 3.2). 
+
+Our approach reducesthe number of parameters to be learned, and we find it towork well in practice. 
+
+We show that the combination ofjointly trained 3D-FCNN and CRF with TI consistently performsbetter than a stand alone 3D-FCNN.
+
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM3NDM5OTE1XX0=
+eyJoaXN0b3J5IjpbLTE4OTIyNTYzM119
 -->
