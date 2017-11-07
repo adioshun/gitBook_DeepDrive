@@ -80,6 +80,25 @@ to obtain fine-grained 3D Segmentation.
 
 ### 2.1 Neural Networks for 3D Data
 
+- 3D Neural Networks have been extensively used for 3D object and parts recognition[60, 54, 46, 25, 53, 21], understanding object shape priors, as well as generating and reconstructing objects [73,71, 19, 70, 12]. 
+
+- Recent works have started exploring the use of Neural Networks for 3D Semantic Segmentation[53, 16, 32]. 
+
+Qi et al. [53] propose a Multilayer Perceptron(MLP) architecture that extracts a global feature vectorfrom a 3D point cloud of 1m3 physical size and processeseach point using the extracted feature vector and additionalpoint level transformations. 
+
+Their method operatesat the point level and thus inherently provides a fine-grainedsegmentation. 
+
+It works well for indoor semantic scene understanding,although there is no evidence that it scales tolarger input dimensions without additional training or adaptationrequired. 
+
+Huang et al. [32] present a 3D-FCNN for3D semantic segmentation which produces coarse voxellevelsegmentation. 
+
+Dai et al. [16] also propose a fully convolutionalarchitecture, but they make a single predictionfor all voxels in the same voxel grid column. 
+
+This makesthe wrong assumption that a voxel grid column contains 3Dpoints with the same object label. 
+
+All the aforementionedmethods are limited by the fact that they do not explicitlyenforce spatial consistency between neighboring points predictionsand/or provide a coarse labeling of the 3D data.In contrast, our method makes fine-grained predictions foreach point in the 3D input, explicitly enforces spatial consistencyand models class interactions through a CRF. 
+
+Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs, since our classifier stage is fully convolutional.
 
 
 
@@ -94,5 +113,5 @@ to obtain fine-grained 3D Segmentation.
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MzgyMjk0XX0=
+eyJoaXN0b3J5IjpbMTc1NzA0MjM2MF19
 -->
