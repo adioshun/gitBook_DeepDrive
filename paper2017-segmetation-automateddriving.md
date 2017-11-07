@@ -398,7 +398,33 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 서라운딩 뷰의 경우 가메라가 최소 4대 이므로 시간이 4대 더 든다. `Additionally, for full surround view sensing at least 4 cameras need to be employed which adds in another factor of 4X. `
 
-However the industry is moving towards custom hardware accelerators for CNNs which will enable thepossibility of doing multi-camera semantic segmentation at ahigher frame rate, Nvidia Xavier for instance supports 30 teraops.There is also active research on efficient network designwhich will improve the performance.
+- 하드웨어 최적화가 진행 중이다. `However the industry is moving towards custom hardware accelerators for CNNs which will enable the possibility of doing multi-camera semantic segmentation at a higher frame rate, Nvidia Xavier for instance supports 30 teraops.`
+
+- 네트워크 경량화도 연구 되고 있따. `There is also active research on efficient network design which will improve the performance.`
+
+### 4.2 Need of large annotated datasets
+
+The real potential of deep learning was unveiled becauseof the large dataset Imagenet[46]. 
+
+The functional complexityof semantic segmentation is much higher and it requires a significantly larger dataset relative to Imagenet. 
+
+Annotationfor semantic segmentation is time consuming, typically it cantake around an hour for annotating a single image. 
+
+It can bespeeded up by the availability of other cues like LIDAR orexploiting temporal propagation and bootstrapping classifier.The popular semantic segmentation automotive datasets areCamVid [18] and the more recent cityscapes [11]. 
+
+The latterhas a size of 5000 annotation frames which is relatively small.The algorithms trained on this dataset do not generalize well todata tested on other cities and with unseen objects like tunnels.To compensate for that, synthetic datasets like Synthia [9]and Virtual KITTI [47] were created. 
+
+There is some literaturewhich demonstrates that a combination produces reasonableresults in small datasets. 
+
+But they are still limited for acommercial deployment of an automated driving system.Hence there is a recent effort to build larger semanticsegmentation datasets like Mapillary Vistas dataset [48] andToronto City [49]. 
+
+Mapillary dataset comprises of 25,000images with 100 classes. 
+
+It also offers large variability in termsof weather condition, camera type and geographic coverage.Toronto City is a massive semantic segmentation, mappingand 3D reconstruction dataset covering 712 km2 of land, 8439km of road and around 400,000 buildings. 
+
+The annotation iscompletely automated by leveraging Aerial Drone data, HDmaps, city maps and LIDARs. 
+
+It is then manually verified andrefined.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyODEyOTIxNV19
+eyJoaXN0b3J5IjpbLTE2NDM4MjgwNV19
 -->
