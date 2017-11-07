@@ -486,11 +486,15 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 #### E.  Goal Orientation
 
-- Semantic segmentation is a genericproblem and at the moment there is no goal orientation towardsthe end goal of automated driving. 
+- Semantic segmentation is a generic problem and at the moment there is no goal orientation towards the end goal of automated driving. 
 
-For example, there maynot be a need for accurate contour of objects or in detectingirrelevant objects like sky for end driving goal. 
+- For example, there may not be a need for accurate contour of objects or in detecting irrelevant objects like sky for end driving goal. 
 
-This could beachieved by customizing the loss function (eg: weighting ofimportant objects) but a modular end to end system will bescalable to automatically perform it.6) Variable object complexity: A typical automotive scenehas large complexity variability with simple structures likeroad or sky and complex structures like pedestrians. 
+- This could be achieved by customizing the loss function (eg: weighting ofimportant objects) but a modular end to end system will bescalable to automatically perform it.
+
+#### F. Variable object complexity
+
+A typical automotive scenehas large complexity variability with simple structures likeroad or sky and complex structures like pedestrians. 
 
 Pedestrianshave higher complexity due to large appearance variationsand articulations. 
 
@@ -500,5 +504,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM5NjkzMTUzXX0=
+eyJoaXN0b3J5IjpbMjEyNTg5NzQzMF19
 -->
