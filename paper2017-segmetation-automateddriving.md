@@ -426,16 +426,14 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 	- But they are still limited for a commercial deployment of an automated driving system.
 
 - 최근의 데이터셋 `Hence there is a recent effort to build larger semantic segmentation datasets like `
-	- Mapillary Vistas dataset [48] 
+	- Mapillary Vistas dataset [48] : Mapillary dataset comprises of 25,000images with 100 classes. 
 	- Toronto City [49]. 
 
-Mapillary dataset comprises of 25,000images with 100 classes. 
-
-It also offers large variability in termsof weather condition, camera type and geographic coverage.Toronto City is a massive semantic segmentation, mappingand 3D reconstruction dataset covering 712 km2 of land, 8439km of road and around 400,000 buildings. 
+- It also offers large variability in terms of weather condition, camera type and geographic coverage.Toronto City is a massive semantic segmentation, mappingand 3D reconstruction dataset covering 712 km2 of land, 8439km of road and around 400,000 buildings. 
 
 The annotation iscompletely automated by leveraging Aerial Drone data, HDmaps, city maps and LIDARs. 
 
 It is then manually verified andrefined.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mzk2Mzg2ODNdfQ==
+eyJoaXN0b3J5IjpbNTU3NTM4NzU2XX0=
 -->
