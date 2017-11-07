@@ -467,9 +467,9 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 #### C. Complexity of Output
 
-- The output representation ofsemantic segmentation is a set of complex contours and canbe very complex in very high textured scenes. 
+- 세그멘테이션의 결과값은 여러개의 The output representation of semantic segmentation is a set of complex contours and can be very complex in very high textured scenes. 
 
-The post processingmodules like mapping or maneuvering require a muchsimpler representation of objects. 
+- The post processingmodules like mapping or maneuvering require a muchsimpler representation of objects. 
 
 This leads to a question oflearning to classify this simpler representation directly insteadof semantic segmentation.4) Recovering individual objects: Pixel-wise Semantic segmentationproduces regions of same object and hence does notprovide individual objects in a segment. 
 
@@ -491,5 +491,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3OTc4NDE0OV19
+eyJoaXN0b3J5IjpbLTc1Nzc4MzY3Ml19
 -->
