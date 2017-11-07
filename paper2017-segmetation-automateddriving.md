@@ -457,7 +457,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - soft-max 분류기의 특징으로 인해 이전에 보지 못한 물체는 처리 하지 못한다. `Because the soft-max classifier is normalized to probability one, it doesn’t handle previous unseen objects. `
 
-The classifier matches it to one of the previouslytrained classes. 
+- The classifier matches it to one of the previouslytrained classes. 
 
 It is not possible to cover all possible objectsin training phase (eg: a rare animal like Kangaroo or a rarevehicles like construction truck). 
 
@@ -485,5 +485,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAyNTQ5NzMyXX0=
+eyJoaXN0b3J5IjpbMTc4MTczNTM1MV19
 -->
