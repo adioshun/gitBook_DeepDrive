@@ -25,6 +25,7 @@
 
 ## 1. Introduction
 
+
 - 시멘틱 세그멘테이션은 그래픽모델의 설명력`(representational power)`을 활용하여 많이 연구 되었다. 
     - Semantic segmentation of **3D point sets** or** point clouds** has been addressed through a variety of methods leveraging the **representational power of graphical models** [36,44, 3, 48, 30, 35]. 
 
@@ -92,3 +93,6 @@ to obtain fine-grained 3D Segmentation.
 
 
 ## 3. SEGCloud Framework
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTk2NDYxOTExNl19
+-->
