@@ -480,11 +480,13 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 물체 추적을 위해서는 개별적 구분이 필요 하다. `This might be needed for tracking applications which tend to track objects like pedestrians individually. `
 
-- 해결책 : One solution is to use post processing classifier to further sub-divide the regions but this could be directly classified instead. 
+- 해결책 : 후처리 `One solution is to use post processing classifier to further sub-divide the regions but this could be directly classified instead. `
 
-However, a recent instance levelsegmentation paradigm can segment different instances of thesame class as in [50] without the need for post processing.
+- 하지만 최근에는 **instance 단위** 세그멘테이션 기법도 나왔다. `However, a recent instance level segmentation paradigm can segment different instances of the same class as in [50] without the need for post processing.`
 
-#### E.  Goal Orientation: Semantic segmentation is a genericproblem and at the moment there is no goal orientation towardsthe end goal of automated driving. 
+#### E.  Goal Orientation
+
+- Semantic segmentation is a genericproblem and at the moment there is no goal orientation towardsthe end goal of automated driving. 
 
 For example, there maynot be a need for accurate contour of objects or in detectingirrelevant objects like sky for end driving goal. 
 
@@ -498,5 +500,5 @@ Even when the corner cases are knownconceptually, it can be hard to record video
 
 Synthetic sequences could be used to design suchscenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTM3Nzk3MTldfQ==
+eyJoaXN0b3J5IjpbNzM5NjkzMTUzXX0=
 -->
