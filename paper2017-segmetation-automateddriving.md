@@ -538,11 +538,11 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - End to end has the big advantage of not having to do any annotation as the driving signal outputs are obtained directly from the Controller Area Network (CAN) signals. 
 
-Companies like Uber are betting thisaway as they can collect lots of driving data through their taxifleet.The output is of fewer dimensions (brake, steering, acceleration)and also temporally smooth. 
+- Companies like Uber are betting thisaway as they can collect lots of driving data through their taxifleet.The output is of fewer dimensions (brake, steering, acceleration)and also temporally smooth. 
 
 Hence for the same input,mathematically this function should have a simpler functionalcomplexity relative to the complex output structure of semanticsegmentation. 
 
 The work in [13][14] is in that direction.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MzgyNzc5M119
+eyJoaXN0b3J5IjpbMjEzNzcwNjMzNF19
 -->
