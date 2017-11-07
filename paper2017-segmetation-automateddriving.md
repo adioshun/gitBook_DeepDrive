@@ -415,7 +415,7 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 전체를 합치면 5000개 정도 되지만 상대적으로 적은 수이다. `The latter has a size of 5000 annotation frames which is relatively small. `
 
-- 위 데이터로 학습한 모델은 다른 도시 환경이나 새로운 환경(터널)들The algorithms trained on this dataset do not generalize well to data tested on other cities and with unseen objects like tunnels.
+- 위 데이터로 학습한 모델은 다른 도시 환경이나 새로운 환경(터널)등에는 The algorithms trained on this dataset do not generalize well to data tested on other cities and with unseen objects like tunnels.
 
 To compensate for that, synthetic datasets like Synthia [9]and Virtual KITTI [47] were created. 
 
@@ -431,5 +431,5 @@ The annotation iscompletely automated by leveraging Aerial Drone data, HDmaps, c
 
 It is then manually verified andrefined.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzgzNzUxODJdfQ==
+eyJoaXN0b3J5IjpbLTYyODQ2NzIxM119
 -->
