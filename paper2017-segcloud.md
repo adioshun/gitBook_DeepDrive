@@ -137,6 +137,7 @@ Also,in contrast to [53], we readily scale to larger and arbitrarilysized inputs
 - Such models have been used in several works to capture contextual relationships based on various features and cues such as appearance, shape, and geometry. 
 
 - These models are shown to work well for this task [50, 49, 36, 58, 44, 3, 48].
+
 - A common paradigm in 3D semantic segmentation combinesa classifier stage and a Conditional Random Field toimpose smoothness and consistency [68, 69, 45, 66, 69].Random Forests [7, 15] are a popular choice of classi-fier in this paradigm and in 3D Segmentation in general[75, 17, 9, 8, 51, 67]; they use hand-crafted featuresto robustly provide class scores for voxels, oversegmentsor 3D Points. 
 
 In [45], the spin image descriptor is used asa feature, while [68] uses a 14-dimensional feature vectorbased on geometry and appearance. 
@@ -161,5 +162,5 @@ This allows the 3D-FCNN and CRF to be trained endto-end,and enables information 
 
 ## 3. SEGCloud Framework
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTk4ODQwOTJdfQ==
+eyJoaXN0b3J5IjpbMTg3ODExNDM1NF19
 -->
