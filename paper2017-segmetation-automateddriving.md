@@ -394,11 +394,11 @@ Fig. 3: Example of High Definition (HD) map from TomTom RoadDNA
 
 - 상용화 하기에는 속도가 좋지 않다. `This is clearly not acceptable for a commercial solution to handle high speed objects for highway driving. `
 
-- Reducing the resolution to VGA (640x480) bringsit close to 10 fps which is still not reasonable and reducingresolution degrades accuracy and misses small objects whichmight be critical. 
+- 해상도를 낮추면 10fps까지 가능하지만, 이것도 빠른게 아니며, 사고 위험도 생긴다. `Reducing the resolution to VGA (640x480) bringsit close to 10 fps which is still not reasonable and reducing resolution degrades accuracy and misses small objects which might be critical. `
 
-Additionally, for full surround view sensingat least 4 cameras need to be employed which adds inanother factor of 4X. 
+- 서라운딩 뷰의 경우 가메라가 최소 4대 이므로 시간이 4대 더 든다. `Additionally, for full surround view sensing at least 4 cameras need to be employed which adds in another factor of 4X. `
 
 However the industry is moving towardscustom hardware accelerators for CNNs which will enable thepossibility of doing multi-camera semantic segmentation at ahigher frame rate, Nvidia Xavier for instance supports 30 teraops.There is also active research on efficient network designwhich will improve the performance.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3NzY4Mzc0XX0=
+eyJoaXN0b3J5IjpbNjA5NDIzMDgxXX0=
 -->
