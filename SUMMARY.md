@@ -75,7 +75,7 @@
 
 * [----- Pointcloud based -----](-pointcloud-based-.md)
 * [Paper\_2016\_PointNetDeep \(50%\)](paper2016-pointnet.md)
-* [Paper\_2016\_PointNet3D \(50%\)](paper2016-pointnet3d.md)
+
 * [Paper\_2016\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * [Paper\_2017\_Vote3Deep \(50%\)](papervote3deep.md)
 * [Paper\_2017\_SegCloud](paper2017-segcloud.md)
@@ -127,7 +127,7 @@
 * [ref03\_Tracklet](ref03tracklet.md)
 * ref04\_non-maxima suppression \(NMS\)
 
-## etc Works
+## Out of Scope
 
 * [Papers\_OccupancyGridFusion](papersoccupancygridfusion.md)
 * [Paper\_2016\_MSF-OG \(5%\)](paper2016-msf-og.md)
@@ -139,6 +139,7 @@
 * [Paper\_2015\_DL Representation ](paper2016-deep-learning-representation/paper2015-dl-representation.md)
 * [Paper\_2015\_3DMesh\_Laveling](paper2016-deep-learning-representation/paper2015-3dmesh-laveling.md)
 * [Paper\_2014\_AE3D shape Retrieval \(30%\)](paper2014-ae3d-shape-retrieval.md)
+* [Paper\_2016\_PointNet3D \(50%\)](paper2016-pointnet3d.md)
 
 
 
