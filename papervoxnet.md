@@ -440,4 +440,92 @@ To evaluate VoxNet we consider benchmarks with data from three different domains
 > 제외
 
 
+---
 
+```
+LiDAR + RGB + CAD
+Dense 3D occupancy grids obtained from point clouds are processed with CNNs in VoxNet
+
+```
+
+
+
+
+
+```
+Maturana and Scherer have also employed volumetric (i.e., spatially 3D) representation of the 3D data to perform 3D object recognition [Maturana and Scherer 2015].+
+
+- In the proposed VoxNet architecture, a volumetric occupancy grid of size 32×32× 32 voxels was at first generated from a point cloud’s segment that was then given as input to a CNN.
+- The employed network was constructed using two convolutional (with 3D filters), one pooling, and two FC layers, while it was trained using SGD with momentum.
+- An object class label was finally predicted for each seg-ment.
+- Data from three different domains were used for evaluating VoxNet.
+. LIDAR data point clouds
+. RGB-D point clouds
+. CAD models
+
+```
+
+
+```
+A similar approach is VoxNet [24], which also uses binary voxel grids and a corresponding 3D CNN architecture.
+
+```
+
+```
+The advantage of these approaches is that it can process different sources of 3D data, including LiDAR point clouds, RGB-D point clouds, and CAD models; we likewise follow this direction. [중요] 3DShapeNets & VoxNet = LiDAR 데이터에도 적용할수 있다는 장점이 있다.
+
+```
+
+
+```
+Dense 3D occupancy grids obtained from point clouds are processed with CNNs in [8-Voxnet] and [9-Daniel2015a=Landingzone].+
+
+With a minimum cell size of 0.1m, [8-Voxnet] reports a speed of 6ms on a GPU to classify a single crop with a grid-size of 32×32×32 cells.
+Similarly, a processing time of 5ms per $$m^3$$ for landing zone detection is reported in [9].
+With 3D point clouds often being larger than 60m × 60m × 5m, this would result in a processing time of $$60×60×5×5×10^{−3} = 90s$$ per frame, which does not comply with speed requirements typically encountered in robotics applications.
+```
+
+
+```
+[16] introduced `Voxnet, a 3D CNN for 3D point cloud data and voxelized models, which performed significantly better than[27].
+
+
+```
+Recently CNNs have been applied to 3D shapes by representing them as 3D occupancy grids, and building generative [39-ShapeNet]or discriminative [26-VoxNet] networks.
+
+```
+
+```
+VoxNet [13] introduces three different occupancy grids (32 × 32 × 32 voxels) that employ 3D ray tracing to compute the number of beams hitting or passing each voxel and then use that information to compute the value of each voxel depending on the chosen model: +
+
+- a binary occupancy grid using probabilistic estimates,
+- a density grid in which each voxel holds a value corresponding to the probability that it will block a sensor beam,
+- a hit grid that only considers hits thus ignoring empty or unknown space.
+
+The binary and density grids proposed by Maturana et al[13]. differentiate unknown and empty space, whilst the hit grid and the binary tensor do not.
+```
+
+
+```
+Volumetric CNNs: [28-ShapeNet, 17-VoxNet, 18-VMCNN] are the pioneers applying 3D convolutional neural networks on voxelized shapes. However, volumetric representation is constrained by its resolution due to data sparsity and computation cost of 3D convolution.
+
+```
+
+
+```
+[VoxNet (확장버젼)] boosted VoxNet
+
+Sedaghat et al. [2016] modified VoxNet’s architecture in such a way that the object’s orientation was taken into account.
+In their final model, the class labels were extracted directly from the orientation activations.
+
+
+[boosted VoxNet] N. Sedaghat, M. Zolfaghari, and Th. Brox. 2016. Orientation-boosted voxel nets for 3D object recognition. CoRR abs/1604.03351 (2016).
+
+```
+
+```
+[VoxNet (이전연구)] 3D convolutional neural networks for landing zone detection from lidar (Daniel2015a)
+
+
+[Daniel2015a] propose a generative 3D convolutional model of shape and apply it to RGBD object recognition, among other tasks.
+```
