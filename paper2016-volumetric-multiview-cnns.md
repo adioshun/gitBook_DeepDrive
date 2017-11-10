@@ -440,3 +440,44 @@ We use AlexNet instead of VGG for efficiency.
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbNTcxODUwNTY3XX0=
 -->
+
+
+---
+
+
+
+```
+Deep Learning Representation using Autoencoder for 3D Shape Retrieval
+
+- 3D를 2D로 투영 `we project 3D shapes into 2D space` 
+- 오토인코더를 이용하여 특징 학습 ` use autoencoder for feature learning on the 2D images` (depth images)
+	-  we aim to use autoencoder to learn a 3D shape representation based on the depth images obtained by projection.
+ improve MVCNN2015 performance through a multi-resolution extension with improved data augmentation
+
+```
+
+
+```
+Qi et al. [2016] elaborated on two factors
+- The first proposed CNN included a 3D extension of the mlpconv layers proposed in Lin et al. [2013]
+- The second CNN initially took advantage of long anisotropic kernels to consider long-distance interactions and exploited an adapted NIN network [Lin et al. 2013]
+
+```
+
+
+```
+Multiview CNNs: [23-MVCNN, 18-VMCNN] have tried to render 3D point cloud or shapes into 2D images and then apply 2D conv nets to classify them.+
+
+With well engineered image CNNs, this line of methods have achieved dominating performance on shape classification and retrieval tasks.
+However, it’s nontrivial to extend them to scene understanding or other 3D tasks such as point classification and shape completion.
+
+```
+
+
+```
+Volumetric and multi-view cnns
+
+However, this difference in classification performance between CNNs that use volumetric input and those that use 2D pixel input was partly bridged in a concurrent paper on Volumetric CNNs [19].+
+
+```
+
