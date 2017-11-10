@@ -1,9 +1,9 @@
 | 논문명 | PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation |
 | --- | --- |
-| 저자\(소속\) | Charles R. Qi, Hao Su, Kaichun Mo, Leonidas J. Guibas \(Stanford University\) |
+| 저자\(소속\) | Charles R. Qi \(Stanford University\)|
 | 학회/년도 | Dec 2016 ~ Apr 2017, CVPR 2017,  [논문](https://arxiv.org/abs/1612.00593) |
-| 키워드 |Pointnet2017, Segmentation    |
-| 데이터셋(센서)/모델| ModelNet40|
+| 키워드 |Charles2016, Classification, Segmentation    |
+| 데이터셋(센서)/모델| ModelNet40,  ShapeNet part data, Stanford 3D semantic parsing data|
 |관련연구|이후연구 : Pointnet++|
 | 참고 | [ppt](https://www.facebook.com/thinking.factory/posts/1408857052524274), [홈페이지](http://stanford.edu/~rqi/pointnet/),[CVPR2017](https://www.youtube.com/watch?v=Cge-hot0Oc0), [Youtube](https://youtu.be/8CenT_4HWyY?t=1h16m39s), [ppt](http://3ddl.stanford.edu/CVPR17_Tutorial_PointCloud.pdf) |
 | 코드 | [TF](https://github.com/charlesq34/pointnet), [pyTorch](https://github.com/fxia22/pointnet.pytorch) |
