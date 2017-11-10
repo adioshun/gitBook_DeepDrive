@@ -7,15 +7,6 @@
 | 참고 | 이전연구: 3D convolutional neural networks for landing zone detection from lidar,” in ICRA, 2015. |
 | 코드 | [Theano+Lasagne](https://github.com/dimatura/voxnet) |
 
-```
-- **voxelization **기법에 대한 다양한 연구도 진행 되었다. `Other authors have explored variations of voxelization methods including, `
-    - binary occupancy grid, 
-    - density grid, 
-    - hitgrid. 
-
-- VoxNet에서는 위 다양한 방식에 대한 테스트가 진행 되었다. `In VoxNet, Maturana and Scherer (2015) tested each voxelization model individually, to train 3D-CNN swith 32x32x32 grid inputs. `
-    - To handle multi-resolution inputs, they trained two separate networks each receiving an occupancy grid with different resolution Parallel development of both multiview and volumetric CNNs has resulted in an empirical performance gap.
-```
 
 
 
@@ -447,6 +438,20 @@ LiDAR + RGB + CAD
 Dense 3D occupancy grids obtained from point clouds are processed with CNNs in VoxNet
 
 ```
+
+```
+- **voxelization **기법에 대한 다양한 연구도 진행 되었다. `Other authors have explored variations of voxelization methods including, `
+    - binary occupancy grid, 
+    - density grid, 
+    - hitgrid. 
+
+- VoxNet에서는 위 다양한 방식에 대한 테스트가 진행 되었다. `In VoxNet, Maturana and Scherer (2015) tested each voxelization model individually, to train 3D-CNN swith 32x32x32 grid inputs. `
+    - To handle multi-resolution inputs, they trained two separate networks each receiving an occupancy grid with different resolution Parallel development of both multiview and volumetric CNNs has resulted in an empirical performance gap.
+```
+
+
+
+
 
 
 
