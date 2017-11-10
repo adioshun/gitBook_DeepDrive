@@ -136,3 +136,37 @@ Recently, Bai et al. [17] adopted contour fragments as the input features for le
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMTAxNTc2ODk0NF19
 -->
+
+
+---
+
+```
+A. 최초 도입한 논문 (2014)
+
+In the aforementioned work, an AE was used in order to generate a global deep representation of a 3D shape for the application scenario of 3D shape retrieval.
+Pose normalization for differences in translation and scale was initially applied to each 3D model, while a set of 2D projections was subsequently collected for each of them.
+After pretraining the stacked RBMs with the projections, the AE was fine-tuned using back-propagation in order to minimize the reconstruction error.
+Finally, the hidden (code) layer was used for representing the corresponding projection/view of the 3D shape in the retrieval process.
+Since more than one code was generated for each model (one per projection), a variant of the Hausdorff distance was used to compute the distance between the final representations of two different 3D shapes.
+
+```
+
+
+```
+[또 다른 AE활용 논문] B. Leng, S. Guo, X. Zhang, and Z. Xiong. 2015. 3D object retrieval with stacked local convolutional autoen-coder.Signal Processing 112, C (2015), 119–128
+
+B. Stacked Local Convo-lutional AutoEncoder (SLCAE) (2015)
+
+An AE was also adopted for 3D object retrieval in Leng et al. [2015a].
+In this method, an extension of the standard AE inspired from CNNs, called Stacked Local Convo-lutional AutoEncoder (SLCAE)
+A Local Convolutional Autoencoder (LCAE) is constructed by substituting the FC layers of a standard AE with locally connected layers using the convolution operation.
+In the stacked version of LCAE, many encoders were placed on top of each other and the output of the last one was used as the representation of a 3D object.
+The input provided to the proposed AE was multiple depth images of several views of the 3D object, while each layer of the architecture was trained using the gradient descent method.+
+
+
+```
+
+
+```
+
+```

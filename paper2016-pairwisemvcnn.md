@@ -179,3 +179,26 @@ The problem addressed in this paper is to plan the **next sensor's position**, c
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMzYyNjA3Mjc1XX0=
 -->
+
+---
+```
+A different approach for exploiting the multiple views of a 3D object was followed by Johns et al. [2016] for the application scenario of multiview object recognition under unconstrained camera trajectories.
+
+In this work, the collection of views was organized in pairs that were provided to a CNN together with their relative pose.
+
+The VGG-M network [Chatfield et al. 2014] was employed in this case consisting of five convolutional and three FC layers.
+
+입력 : Grayscale images + depth images
+
+The outputs of the convolutional layers from the two images were concatenated before being provided to the first FC layer.
+
+제안 방식은 voxel-based 3D ShapeNets [Wu et al. 2015], MVCNN보다 좋은 성능 보임
+```
+
+
+```
+Recent work on Active Multi-View Recognition [10] predicts the Next Best View (NBV)
+- which is most likely to give the highest extra information about the object, needing a smaller number of image sequences during test-time to predict the model class. 
+
+```
+

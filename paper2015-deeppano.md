@@ -188,3 +188,46 @@ In addition, to establish the robust alignments/correspondence[23], [24] between
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTEyODA0ODkzMTVdfQ==
 -->
+
+---
+
+
+
+```
+DeepPano [28] converts 3D shapes into panoramic views; i.e., a cylinder projection around its principle axis.
+
+```
+
+
+```
+Recently, CNN architectures have been extended to allow for recognition from image sequences using a single network,
+by unwrapping an object shape into a panorama and max pooling across each row [33-DeepPano].
+
+단점 : However, both these methods assume that a fixed-length image sequence is provided during both training and testing, and hence are unsuitable for generalised multi-view recognition.
+
+```
+
+
+
+```
+In [21], the authors suggest a new robust representation of 3D data by way of a cylindrical panoramic projection that is learned using a CNN.+
+
+The authors tested their panoramic representation on ModelNet datasets and outperformed typical methods when they published their work.
+
+```
+
+
+
+```
+[기존연구] “PANORAMA: A 3d shape descriptor based on panoramic views for unsupervised 3d object retrieval (2015)
+
+기존 연구도 panoramic views를 이용하였다. In [6], Panagiotis et al. proposed to represent a 3-D shape by the Discrete Fourier Transform and Discrete Wavelet Transform descriptors calculated from a set of panoramic views.+
+
+Panoramoc view의 큰 문제점 : However,the panoramic view shifts when the 3-D shape rotates along its principle axis.
+기존 연구에서는 normalization으로 해결 In [6], this problem is alleviated by pose normalization.
+
+Also, they presented a 3D descriptor (PANORAMA) [15] that captures the panoramic view of a 3D shape by projecting it to a lateral surface of a cylinder parallel to one of its three principal axes.
+By aligning its principle axes to capture theg lobal information and combining 2D Discrete Fourier Transformand 2D Discrete Wavelet Transform, the PANORAMA outperforms all the other 3D shape retrieval methods on several standard 3D benchmarks.
+
+
+```

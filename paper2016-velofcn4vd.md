@@ -305,3 +305,36 @@ Note that $$L_{box}$$ is only computed for those points on vehicles. For non-veh
 - Second, the image space based criterion does not reflect the advantage of range scan methods in localizing objects in full 3D world space
 
 > Related explanation can also be found from Wang and Posner [31].
+
+
+---
+
+
+
+```
+Li et al. (2016b) improve upon these results by exploiting a fully convolutional neural network for detecting vehicles from range data. +
+
+They represent the data in a 2D point map, and predict an objectness confidence and a bounding box simultaneously using a single 2D CNN.
+The encoding used to represent the data allows them to predict the full 3D bounding box of the vehicles.
+```
+
+
+```
+A CNN-based approach in [7]
+- by projecting the point cloud into a 2D depth map, with an additional channel for the height of a point from the ground.
+
+Their model predicts detection scores and 20regresses to bounding boxes.
+
+However, the projection to a specific viewpoint discards valuable information, which is particularly detrimental, for example, in crowded scenes.+
+
+It also requires the network filters to learn local dependencies with regards to depth, information that is readily available in a 3D representation and which can be efficiently extracted with sparse convolutions.
+
+
+```
+
+
+```
+In addition to the 3D voxel representation, VeloFCN [17] projects point cloud to the front view, obtaining a 2D point map.
+They apply a fully convolutional network on the 2D point map and predict 3D boxes densely from the convolutional feature maps.
+
+```
