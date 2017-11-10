@@ -315,6 +315,7 @@ Note that $$L_{box}$$ is only computed for those points on vehicles. For non-veh
 Li et al. (2016b) improve upon these results by exploiting a fully convolutional neural network for detecting vehicles from range data. +
 
 They represent the data in a 2D point map, and predict an objectness confidence and a bounding box simultaneously using a single 2D CNN.
+
 The encoding used to represent the data allows them to predict the full 3D bounding box of the vehicles.
 ```
 
