@@ -257,12 +257,18 @@ The resulting representation is a 3D binary voxel grid, which is the input to a 
 
 ```
 3D shapes were provided as input (a 3D voxel grid where each voxel was a binary variable indicating whether it belonged to the 3D shape or it was empty space), while the DBN model was employed.
+
 In order to diminish the huge number of parameters required from feeding a fully connected DBN with a 3D voxel volume of normal resolution, convolution with 3D filters was applied.
+
 Most specifically, a Convolutional Deep Belief Network (CDBN) with five layers (three convolutional, one fully connected, and one output layer) was proposed.
 The model was initially pretrained layerwise and afterward, fine-tuned by backpropagation.
+
 Standard contrastive divergence was used for training the first four layers, but the more sophis-ticated Fast Persistent Contrastive Divergence (FPCD) was employed for training the top layer.
+
 The proposed framework was tested on the tasks of 3D shape classification and retrieval, next-best view prediction, and view-based 2.5D recognition outperform-ing other state-of-the-art methods.
 ```
+
+
 ```
 Seminal work by Wu et al. [33] propose volumetric CNN architectures on volumetric grids for object classification and retrieval.
 ```
@@ -271,6 +277,7 @@ Seminal work by Wu et al. [33] propose volumetric CNN architectures on volumetri
 Wu et al. [33] lift 2.5D to 3D with their 3D ShapeNets approach by categorizing each voxel as free space, surface or occluded, depending on whether it is in front of, on, or behind the visible surface (i.e., the depth value) from the depth map.+
 
 The resulting representation is a 3D binary voxel grid, which is the input to a CNN with 3D filter banks.
+
 Their method is particularly relevant in the context of this work, as they are the first to apply CNNs on a 3D representation.
 ```
 
@@ -283,9 +290,7 @@ With the exception of the recent work of Wu et al. [37]
 - which learns shape descriptors from the voxel-based representation of an object through 3D convolutional nets, 
 ```
 
-```
-Different from [14] which performs 3-D convolutionson the voxels, we extract the representation of a 3-D shapefrom 2-D images.
-```
+
 
 ```
 Rather than modelling an object as a set of views with 2D features, an explicit 3D shape can be learned from reconstruction[37-PASCAL VOC] or provided by CAD models [39-ShapeNET], and subsequently matched to from depth images [13- Saurabh2014], 3D reconstructions [1],or partial reconstructions with shape completion [12, 39-ShapeNet].
