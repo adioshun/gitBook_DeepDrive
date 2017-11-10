@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Daniel Maturana \(CMU\) |
 | 학회/년도 | IROS 2015, [논문](http://ieeexplore.ieee.org/document/7353481/) |
-| 키워드 | Voxnet2015, Volumetric Occupancy Grid + 3D CNN, LiDAR와 비교 실험\(결과는?\) |
+| 키워드 | Daniel2015, Volumetric Occupancy Grid + 3D CNN, LiDAR와 비교 실험\(결과는?\) |
 | 데이터셋/모델 | Sydney Urban Objects\(차량 고려\), NYUv2, ModelNet40 |
 | 참고 | 이전연구: 3D convolutional neural networks for landing zone detection from lidar,” in ICRA, 2015. |
 | 코드 | [Theano+Lasagne](https://github.com/dimatura/voxnet) |
@@ -488,7 +488,7 @@ With 3D point clouds often being larger than 60m × 60m × 5m, this would result
 
 ```
 [16] introduced `Voxnet, a 3D CNN for 3D point cloud data and voxelized models, which performed significantly better than[27].
-
+```
 
 ```
 Recently CNNs have been applied to 3D shapes by representing them as 3D occupancy grids, and building generative [39-ShapeNet]or discriminative [26-VoxNet] networks.
