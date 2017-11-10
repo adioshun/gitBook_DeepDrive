@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Martin Engelcke, D. Z. Wang \(옥스포드\) |
 | 학회/년도 | Sep 2016~Mar 2017, ICRA2017, [논문](https://arxiv.org/abs/1609.06666) |
-| 키워드 | Missing Point  |
+| 키워드 | Martin2017, Missing Point  |
 | 데이터셋(센서)/모델 | KITTI|
 | 참고 | [Youtube](https://www.youtube.com/watch?v=WUOSmAfeXIw) |
 | 코드 | [Keras](https://github.com/lijiannuist/Vote3Deep_lidar) |

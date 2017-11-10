@@ -50,10 +50,8 @@
 * [Paper\_2017\_Sruvey\_3D data\(100%\)](paper2017-sruvey-3d-data.md)
 * [Paper\_2013\_Survey\_2D\_3DShape Descriptor \(30%\)](paper2016-deep-learning-representation.md)
 
-
 ## 3D Volumetic based
 
-* [----- Volumetic based -----](-volumetic-based-.md)
 * [Paper\_2015\_3D\_ShapeNet \(50%\)](paper2015-3d-shapenet.md)
 * [Paper\_2015\_VoxNet \(70%\)](papervoxnet.md)
 * [Paper\_2016\_V\_M CNNs \(70%\)](paper2016-volumetric-multiview-cnns.md)
@@ -64,7 +62,6 @@
 * [Paper\_2015\_MVCNN \(70%\)](paper2015-mvcnn.md)
 * [Paper\_2015\_DeepPano \(70%\)](paper2015-deeppano.md)
 * [Paper\_2016\_pMVCNN \(30%\)](paper2016-pairwisemvcnn.md)
-
 * [Paper\_2016\_VeloFCN\_Bo Li \(70%\)](paper2016-velofcn4vd.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 * [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
@@ -74,8 +71,7 @@
 ## 3D Pointcloud based
 
 * [----- Pointcloud based -----](-pointcloud-based-.md)
-* [Paper\_2016\_PointNetDeep \(50%\)](paper2016-pointnet.md)
-
+* [Paper\_2016\_PointNet \(50%\)](paper2016-pointnet.md)
 * [Paper\_2016\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * [Paper\_2017\_Vote3Deep \(50%\)](papervote3deep.md)
 * [Paper\_2017\_SegCloud](paper2017-segcloud.md)
@@ -140,8 +136,6 @@
 * [Paper\_2015\_3DMesh\_Laveling](paper2016-deep-learning-representation/paper2015-3dmesh-laveling.md)
 * [Paper\_2014\_AE3D shape Retrieval \(30%\)](paper2014-ae3d-shape-retrieval.md)
 * [Paper\_2016\_PointNet3D \(50%\)](paper2016-pointnet3d.md)
-
-
 
 ## Project
 

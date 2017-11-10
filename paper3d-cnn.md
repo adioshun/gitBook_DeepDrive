@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Bo Li \(Baidu\) |
 | 학회/년도 | Nov. 2016 ~ Jan. 2017, [논문](https://arxiv.org/abs/1611.08069) |
-| 키워드 |  |
+| 키워드 | Bo2016b |
 | 데이터셋\(센서\)/모델 | KITTI |
 | 참고 | [이전 논문\(Aug. 2016\)](https://arxiv.org/pdf/1608.07916.pdf) |
 | 코드 | [TF](https://github.com/yukitsuji/3D_CNN_tensorflow) |
