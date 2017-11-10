@@ -2,7 +2,7 @@
 | --- | --- |
 | 저자\(소속\) | Yi Fang \( New York University\) |
 | 학회/년도 | IEEE 2015, [논문](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7298845) |
-| 키워드 | DeepSD2015, |
+| 키워드 | Yi20155, |
 | 데이터셋/모델 | SHREC’10 ShapeGoogle and McGill 3D benchmark datasets |
 | 참고 |  |
 | 코드 |  |
