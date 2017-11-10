@@ -310,7 +310,82 @@ We illustrate this capability of MVCNNs in the context of sketch recognition in 
 ## 5. Conclusion
 
 
+---
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbODYwODg3MzYyXX0=
--->
+
+```
+Recently, CNN architectures have been extended to allow for recognition from image sequences using a single network,
+by max pooling across all viewpoints [35-MVCNN],
+
+단점 : However, both these methods assume that a fixed-length image sequence is provided during both training and testing, and hence are unsuitable for generalised multi-view recognition.
+
+```
+
+```
+Current state-of-the-art uses multiple rendered views, and trains a CNN that can process all views jointly [32]. This multi-view CNN (MVCNN) is pre-trained on ImageNet [6] and uses view-point pooling to combine all streams obtained from each view.
+
+```
+
+```
+Multiple views of a 3D object were also exploited in the work of Su et al. [2015] in order to build a compact shape descriptor for the tasks of 3D object classification and retrieval.
+
+In order to obtain different views of the models, two setups were tested.
+- The first setup included 12 rendered views of the 3D objects by placing an equal number of virtual cameras around them, while the second involved 80 views.
+
+네트워크
+- All the available views of an object passed through the first part of the network separately
+- and then, elementwise max pooling was performed across all views in the view pooling layer.
+- Finally, the aggregated result passed through the remaining network.
+
+For retrieval, the penultimate seventh layer of the network (which is fully connected) was used as shape descriptor.
+
+The employed network was pretrained using the ImageNet1K dataset and then, fine-tuned using the 3D dataset ModelNet40 [Wu et al. 2015] that was used in the experimental evaluation of the MVCNN architecture.
+
+제안된 Shape descriptors(여러 2D)는 3D ShapeNets of Wu et al. [2015]보다 좋은 성능 보임
+
+```
+
+```
+While these approaches achieve good results, it turns out that training a CNN on multiple 2D views achieves a significantly higher performance, as shown by Su et al. [32], who augment their 2D CNN with pre-training from ImageNet RGB data [Imagenet].
+
+```
+
+```
+As of now however, CNNs with 2D view-based methods[35-MVCNN] have outperformed their counterpart 3D voxel-based methods [39-ShapeNet, 26-VoxNet], and we therefore adopt the 2D approach in our work.
+
+```
+
+```
+Multiview CNNs: [23-MVCNN, 18-VMCNN] have tried to render 3D point cloud or shapes into 2D images and then apply 2D conv nets to classify them.+
+
+With well engineered image CNNs, this line of methods have achieved dominating performance on shape classification and retrieval tasks.
+However, it’s nontrivial to extend them to scene understanding or other 3D tasks such as point classification and shape completion.
+
+```
+
+
+
+```
+Multi-view CNN
+
+There was a significant jump in classification and retrieval performance by simply using 2D projections of the 3D model and using networks pre-trained on ImageNet [4] for classification as shown by [24].+
+
+A part of this significant jump in performance is due to highly efficient and data independent features learned in the pre-training stage (on ImageNet data), which generalize well to other 2D images.
+
+```
+
+
+```
+Multi-View CNN (MV-CNN), introduced in [24] aggregates 2D projections of the polygon mesh using a standard VGG-M network
+
+[24] where for each of the 20 views, the camera is rotated 0, 90, 180 and 270 degrees along the axis passing through the camera into the centroid of the object, giving 80 views per object. 
+
+```
+
+
+```
+```
+
+
+```
+```
