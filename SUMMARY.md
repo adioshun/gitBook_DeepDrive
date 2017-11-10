@@ -64,7 +64,7 @@
 * [Paper\_2015\_MVCNN \(70%\)](paper2015-mvcnn.md)
 * [Paper\_2015\_DeepPano \(70%\)](paper2015-deeppano.md)
 * [Paper\_2016\_pMVCNN \(30%\)](paper2016-pairwisemvcnn.md)
-* [Paper\_2014\_AE3D shape Retrieval \(30%\)](paper2014-ae3d-shape-retrieval.md)
+
 * [Paper\_2016\_VeloFCN\_Bo Li \(70%\)](paper2016-velofcn4vd.md)
 * [Paper\_2016\_3D GAN](paper2016-3d-gan.md)
 * [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
@@ -138,6 +138,7 @@
 * [Paper\_2015\_DeepSD \(70%\)](paper2016-deep-learning-representation/paper2015-3d-deep-shape-descriptor.md)
 * [Paper\_2015\_DL Representation ](paper2016-deep-learning-representation/paper2015-dl-representation.md)
 * [Paper\_2015\_3DMesh\_Laveling](paper2016-deep-learning-representation/paper2015-3dmesh-laveling.md)
+* [Paper\_2014\_AE3D shape Retrieval \(30%\)](paper2014-ae3d-shape-retrieval.md)
 
 
 
