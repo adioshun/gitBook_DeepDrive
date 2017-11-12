@@ -50,12 +50,16 @@
 
 #### B. visual odometry/SLAM
 
-- output of the GPS/IMU localization unit projected into the coordinate system
+- The ground truth for visual odometry/SLAM is directly given by the output of the GPS/IMU localization unit projected into the coordinate system
 
+#### C. 3D object 
+
+- 사람이 직접 진행 
+- 
 
 ### 2.4. Benchmark Selection 
 
 ### 2.5. Evaluation Metrics
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNDg2MjEzMl19
+eyJoaXN0b3J5IjpbNDUxODU4NjE2XX0=
 -->
