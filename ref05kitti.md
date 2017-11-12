@@ -59,6 +59,12 @@
 ### 2.4. Benchmark Selection 
 
 ### 2.5. Evaluation Metrics
+
+
+#### A. stereo and optical flow 
+
+-  we evaluate **stereo** and **optical flow** using the average number of **erroneous pixels** in terms of disparity and end-point error.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU3NzM3ODkwXX0=
+eyJoaXN0b3J5IjpbLTE1MTMxMzM3OTddfQ==
 -->
