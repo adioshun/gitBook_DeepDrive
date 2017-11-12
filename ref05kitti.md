@@ -69,14 +69,15 @@
 
 - 3단계로 구분 되어 있다. `Our 3D object detection and orientation estimation benchmark is split into three parts: `
 
-###### First, we evaluate classical 2D object detection by measuring performance 
-- using the well established **average precision (AP)** metric as described in [16]. 
+##### 가. average precision (AP)
+- First, we evaluate classical 2D object detection by measuring performance 
+	- using the well established **average precision (AP)** metric as described in [16]. 
 
 - Detections are iteratively assigned to ground truth labels starting with the largest overlap, measured by bounding box intersection over union. 
 
-We require true positives to overlap by more than 50% and count multiple detections of the same object as false positives. 
+- We require true positives to overlap by more than 50% and count multiple detections of the same object as false positives. 
 
-We assess the performanceof jointly detecting objects and estimating their 3Dorientation using a novel measure which we called the averageorientation similarity (AOS), which we define as:
+- We assess the performance of jointly detecting objects and estimating their 3D orientation using a novel measure which we called the **average orientation similarity (AOS)**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTg3MTI4MDFdfQ==
+eyJoaXN0b3J5IjpbMTcwODY1NDA3Nl19
 -->
