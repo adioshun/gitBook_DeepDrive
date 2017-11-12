@@ -20,9 +20,12 @@
 
 ## 1. Introduction
 
-
+-  기존 benchmarks
+	- Caltech-101[17], 
+	- Middlebury for stereo [41] 
+	- optical flow [2]
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0OTAyMDIxXX0=
+eyJoaXN0b3J5IjpbLTczMTUyOTUzMV19
 -->
