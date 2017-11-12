@@ -11,7 +11,7 @@
 
 # The KITTI Vision Benchmark Suite
 
-- stereo
+- stereo 
 - optical flow
 - visual odometry / SLAM 
 - 3D object detection
@@ -32,5 +32,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NzYwNjUzNF19
+eyJoaXN0b3J5IjpbMjAzMjE1MTQyNF19
 -->
