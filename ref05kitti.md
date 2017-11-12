@@ -48,9 +48,14 @@
 - Given the **camera calibration**, the corresponding **disparity maps** are readily computed
 - **Optical flow fields** are obtained by projecting the **3D points into the next frame**
 
+#### B. visual odometry/SLAM
+
+- output of the GPS/IMU localization unit projected into the coordinate system
+
+
 ### 2.4. Benchmark Selection 
 
 ### 2.5. Evaluation Metrics
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDgxMDI1NF19
+eyJoaXN0b3J5IjpbMjExNDg2MjEzMl19
 -->
