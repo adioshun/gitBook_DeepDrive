@@ -11,15 +11,11 @@
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
 * [Paper\_2016\_Sementic\_Fusion](paper2016-sementic-fusion.md)
 
-
-
 ## LowLevel CV
-* [Intro\_Scene Flow](introscene-flow.md)
+
 * [List\_Scene Flow](listscene-flow.md)
+* [Intro\_Scene Flow](introscene-flow.md)
 * [Vision-based SLAM\_SfM](vision-based-slam.md)
-
-
-
 
 ## 2D CNN
 
@@ -132,8 +128,6 @@
 * [ref03\_Tracklet](ref03tracklet.md)
 * ref04\_non-maxima suppression \(NMS\)
 * [ref05\_KITTI](ref05kitti.md)
-
-
 
 ## Out of Scope
 
