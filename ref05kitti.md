@@ -56,10 +56,9 @@
 
 - 사람이 직접 진행 
 - 
-
 ### 2.4. Benchmark Selection 
 
 ### 2.5. Evaluation Metrics
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MDk0NDU5XX0=
+eyJoaXN0b3J5IjpbLTE0OTU1ODQ0MzVdfQ==
 -->
