@@ -16,6 +16,15 @@
 * [List\_Scene Flow](listscene-flow.md)
 * [Intro\_Scene Flow](introscene-flow.md)
 * [Vision-based SLAM\_SfM](vision-based-slam.md)
+* [Paper\_2014\_\[M\]DepthMap Prediction \(20%\)](paper2014-depthmap-prediction.md)
+* [Paper\_2017\_\[M\]Monocular Depth /w 2Camera \(30%\)](paper2016-monocular-depth.md)
+* [Paper\_2017\_\[M\]Semi\_MDE \(0%\)](paper2017-semi-mde.md)
+* [Paper\_2017\_\[M\]Domain Independent MDE  \(30%\)](paper2017-domain-independent-mde.md)
+* [Paper\_2015\_\[S\]DispNet \(30%\)](paper2015-dispnet.md)
+* [Paper\_2016\_\[S\]DL4SM \(30%\)](paper2016-dl4sm.md)
+* [Paper\_2016\_\[S\]StereoFusion \(0%\)](paper2016-stereofusion.md)
+* [Paper\_2014\_\[S\]SPS-Stereo \(30%\)](paper2014-sps-stereo.md)
+
 
 ## 2D CNN
 
@@ -29,14 +38,14 @@
 * [Intro\_MonocularVision](introback-projection.md)
 * [Papers\_국내 논문\_단일카메라 \(100%\)](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0.md)
 * [Paper\_2016\_Unify monocular detectors \(5%\)](paper2017-unify-monocular-detectors.md)
-* [Paper\_2014\_DepthMap Prediction \(20%\)](paper2014-depthmap-prediction.md)
+
 * [Paper\_2016\_Mono3D2016 \(70%\)](papermonocular-3d.md)
-* [Paper\_2017\_Monocular Depth /w 2Camera \(30%\)](paper2016-monocular-depth.md)
+
 * [Report\_2017\_Study\_Monocular \(70%\)](report2017-monocular-3-cnnmethods.md)
 * [Paper\_2017\_Deep3DBox \(15%\)](paper2017-3d-bbox.md)
 * [Paper\_2017\_J-MOD \(30%\)](paper2017-j-mod.md)
-  * [Paper\_2017\_Domain Independent MDE  \(30%\)](paper2017-domain-independent-mde.md)
-* [Paper\_2017\_Semi\_MDE \(0%\)](paper2017-semi-mde.md)
+  
+
 
 ## 2D Stereo Vision
 
@@ -44,10 +53,7 @@
 * [Intro\_StereoVision](introstereovision.md)
 * [Paper\_2014\_Know\_limit\_stereo](paper2014-know-limit-stereo.md)
 * [Paper\_2017\_3DOP\_X Chen \(70%\)](paper2017-3d-object-proposals.md)
-  * [Paper\_2014\_SPS-Stereo \(30%\)](paper2014-sps-stereo.md)
-* [Paper\_2015\_DispNet \(30%\)](paper2015-dispnet.md)
-* [Paper\_2016\_DL4SM \(30%\)](paper2016-dl4sm.md)
-* [Paper\_2016\_StereoFusion \(0%\)](paper2016-stereofusion.md)
+ 
 
 ## 3D OverView
 
@@ -148,4 +154,3 @@
 * [Project\_2017\_Berkeley](project2017-berkeley.md)
 * [Project\_2017\_iPRoBe Lab](project2017-iprobe-lab.md)
 * [Project\_Autoware](projectautoware.md)
-
