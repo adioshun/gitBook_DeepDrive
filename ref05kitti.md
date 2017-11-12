@@ -32,7 +32,11 @@
 
 ## 2. Challenges and Methodology
 
-
+- 실시간으로 데이터 수집  collection of large amounts of data in real time
+- 칼리브레이션  the calibration of diverse sensors working at different rates,
+- GT 생성  the generation of ground truth minimizing the amount of supervision required
+- the selection of the appropriate sequences and frames for each benchmark 
+- the development of metrics for each task.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNTAzMzk3MF19
+eyJoaXN0b3J5IjpbMTY0OTYyMzE4NF19
 -->
