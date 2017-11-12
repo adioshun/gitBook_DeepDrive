@@ -45,12 +45,12 @@
 ### 2.3. Ground Truth
 
 #### A. stereo and optical flow 
-Optical flow fields
-are obtained by projecting the 3D points into the next frame
+- Given the **camera calibration**, the corresponding **disparity maps** are readily computed
+- **Optical flow fields** are obtained by projecting the **3D points into the next frame**
 
 ### 2.4. Benchmark Selection 
 
 ### 2.5. Evaluation Metrics
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzI4NzIxNjhdfQ==
+eyJoaXN0b3J5IjpbLTE1MDgxMDI1NF19
 -->
