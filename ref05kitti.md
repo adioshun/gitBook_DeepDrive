@@ -44,9 +44,13 @@
 
 ### 2.3. Ground Truth
 
+#### A. stereo and optical flow 
+Optical flow fields
+are obtained by projecting the 3D points into the next frame
+
 ### 2.4. Benchmark Selection 
 
 ### 2.5. Evaluation Metrics
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzM2NzY0NV19
+eyJoaXN0b3J5IjpbLTE5NzI4NzIxNjhdfQ==
 -->
