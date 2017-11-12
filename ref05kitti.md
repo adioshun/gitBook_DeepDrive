@@ -64,8 +64,15 @@
 #### A. stereo and optical flow 
 -  we evaluate **stereo** and **optical flow** using the average number of **erroneous pixels** in terms of disparity and end-point error.
 #### B. visual odometry/SLAM
-#### C. 3D object 
 
+#### C. 3D object 
+Our 3D object detection and orientation estimationbenchmark is split into three parts: First, we evaluate classical2D object detection by measuring performance using thewell established average precision (AP) metric as describedin [16]. 
+
+Detections are iteratively assigned to ground truthlabels starting with the largest overlap, measured by boundingbox intersection over union. 
+
+We require true positivesto overlap by more than 50% and count multiple detectionsof the same object as false positives. 
+
+We assess the performanceof jointly detecting objects and estimating their 3Dorientation using a novel measure which we called the averageorientation similarity (AOS), which we define as:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNDA0MjQ5OV19
+eyJoaXN0b3J5IjpbMTIzMzMxMjczN119
 -->
