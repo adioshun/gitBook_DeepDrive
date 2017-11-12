@@ -78,6 +78,10 @@
 - We require true positives to overlap by more than 50% and count multiple detections of the same object as false positives. 
 
 - We assess the performance of jointly detecting objects and estimating their 3D orientation using a novel measure which we called the **average orientation similarity (AOS)**
+
+##### 다.
+
+- Finally, we also evaluate pure classification (16 bins for cars) and regression (continuous orientation) performance on the task of 3D object orientation estimation in terms of orientation similarity.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwODY1NDA3Nl19
+eyJoaXN0b3J5IjpbMTk5MjA4OTM5Nl19
 -->
