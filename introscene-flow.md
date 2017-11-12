@@ -7,6 +7,12 @@
     - optical flow: 단안 카메라, 동영상 파일, a projection of the world’s 3D motion onto the image plane. (FlowNet)
 
 
+```
+- high-level vision tasks : image classification, object detection and semantic segmentation
+- low-level vision tasks : optical flow prediction
+```
+
+
 ## 1. Stereo Matching
 
 
