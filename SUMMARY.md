@@ -24,6 +24,10 @@
 * [Paper\_2016\_\[S\]DL4SM \(30%\)](paper2016-dl4sm.md)
 * [Paper\_2016\_\[S\]StereoFusion \(0%\)](paper2016-stereofusion.md)
 * [Paper\_2014\_\[S\]SPS-Stereo \(30%\)](paper2014-sps-stereo.md)
+* [Paper\_2015\_FlowNet1 \(10%\)](paper2015-flownet1.md)
+* [Paper\_2017\_FlowNet2](paper2017-flownet2.md)
+
+
 
 ## 2D CNN
 
@@ -117,8 +121,7 @@
 ## 2D + Time \(Video\)
 
 * [Paper\_2017\_DeepFeatureFlow \(0%\)](paper2017-deepfeatureflow.md)
-* [Paper\_2015\_FlowNet1 \(10%\)](paper2015-flownet1.md)
-* [Paper\_2017\_FlowNet2](paper2017-flownet2.md)
+
 
 ## 참고
 
