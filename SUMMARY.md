@@ -37,21 +37,18 @@
 * [----- Monocular Vision -----](-monocular-vision-.md)
 * [Intro\_MonocularVision](introback-projection.md)
 * [Papers\_국내 논문\_단일카메라 \(100%\)](paperdepth-from-single-image/paper2015-b2e8-c77c-ce74-ba54-b77c-2-c7a5-c758-c774-bbf8-c9c0.md)
-* [Paper\_2016\_Unify monocular detectors \(5%\)](paper2017-unify-monocular-detectors.md)
-
+  * [Report\_2017\_Study\_Monocular \(70%\)](report2017-monocular-3-cnnmethods.md)
+  * [Paper\_2016\_Unify monocular detectors \(5%\)](paper2017-unify-monocular-detectors.md)
 * [Paper\_2016\_Mono3D2016 \(70%\)](papermonocular-3d.md)
-
-* [Report\_2017\_Study\_Monocular \(70%\)](report2017-monocular-3-cnnmethods.md)
 * [Paper\_2017\_Deep3DBox \(15%\)](paper2017-3d-bbox.md)
 * [Paper\_2017\_J-MOD \(30%\)](paper2017-j-mod.md)
   
-
 
 ## 2D Stereo Vision
 
 * [----- Stereo Vision -----](-stereo-vision-.md)
 * [Intro\_StereoVision](introstereovision.md)
-* [Paper\_2014\_Know\_limit\_stereo](paper2014-know-limit-stereo.md)
+  * [Paper\_2014\_Know\_limit\_stereo](paper2014-know-limit-stereo.md)
 * [Paper\_2017\_3DOP\_X Chen \(70%\)](paper2017-3d-object-proposals.md)
  
 
