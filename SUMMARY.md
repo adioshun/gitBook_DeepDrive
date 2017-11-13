@@ -10,6 +10,7 @@
 * [Paper\_2017\_Guide\_Segmetation\_AutomatedDriving \(100%\)](paper2017-segmetation-automateddriving.md)
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
 * [Paper\_2016\_Sementic\_Fusion](paper2016-sementic-fusion.md)
+* [Paper\_2015\_Depth\_Monocular](paper2015-depth-monocular.md)
 
 ## LowLevel CV
 
@@ -25,7 +26,6 @@
 * [Paper\_2015\_\[S\]DispNet \(30%\)](paper2015-dispnet.md)
 * [Paper\_2016\_\[S\]DL4SM \(30%\)](paper2016-dl4sm.md)
 * [Paper\_2016\_\[S\]StereoFusion \(0%\)](paper2016-stereofusion.md)
-
 
 ## 2D CNN
 
