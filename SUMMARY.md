@@ -10,7 +10,6 @@
 * [Paper\_2017\_Guide\_Segmetation\_AutomatedDriving \(100%\)](paper2017-segmetation-automateddriving.md)
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
 * [Paper\_2016\_Sementic\_Fusion](paper2016-sementic-fusion.md)
-* [Paper\_2015\_Depth\_Monocular](paper2015-depth-monocular.md)
 
 ## LowLevel CV
 
@@ -18,6 +17,7 @@
 * [Intro\_Scene Flow](introscene-flow.md)
 * [Vision-based SLAM\_SfM](vision-based-slam.md)
 * [Paper\_2014\_\[M\] DMP-MSnet \(20%\)](paper2014-depthmap-prediction.md)
+* [Paper\_2015\_\[M\] Depth\_Monocular](paper2015-depth-monocular.md)
 * [Paper\_2017\_\[M\] UnsuperviseMD \(30%\)](paper2016-monocular-depth.md)
 * [Paper\_2017\_\[M\]Semi\_MDE \(0%\)](paper2017-semi-mde.md)
 * [Paper\_2017\_\[M\]Domain Independent MDE  \(30%\)](paper2017-domain-independent-mde.md)
