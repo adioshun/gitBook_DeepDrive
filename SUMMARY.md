@@ -20,13 +20,11 @@
 * [Paper\_2017\_\[M\] UnsuperviseMD \(30%\)](paper2016-monocular-depth.md)
 * [Paper\_2017\_\[M\]Semi\_MDE \(0%\)](paper2017-semi-mde.md)
 * [Paper\_2017\_\[M\]Domain Independent MDE  \(30%\)](paper2017-domain-independent-mde.md)
+* [Paper\_2015\_FlowNet1 \(10%\)](paper2015-flownet1.md)
+* [Paper\_2017\_FlowNet2](paper2017-flownet2.md)
 * [Paper\_2015\_\[S\]DispNet \(30%\)](paper2015-dispnet.md)
 * [Paper\_2016\_\[S\]DL4SM \(30%\)](paper2016-dl4sm.md)
 * [Paper\_2016\_\[S\]StereoFusion \(0%\)](paper2016-stereofusion.md)
-* [Paper\_2014\_\[S\]SPS-Stereo \(30%\)](paper2014-sps-stereo.md)
-* [Paper\_2015\_FlowNet1 \(10%\)](paper2015-flownet1.md)
-* [Paper\_2017\_FlowNet2](paper2017-flownet2.md)
-
 
 
 ## 2D CNN
@@ -121,7 +119,6 @@
 ## 2D + Time \(Video\)
 
 * [Paper\_2017\_DeepFeatureFlow \(0%\)](paper2017-deepfeatureflow.md)
-
 
 ## 참고
 
