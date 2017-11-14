@@ -44,6 +44,7 @@
 
 ## 7. Implementation (Project)
 
+- [Real-Time SLAM for Monocular, Stereo and RGB-D Cameras, with Loop Detection and Relocalization Capabilities](https://github.com/raulmur/ORB_SLAM2)
 
 ## 8. Research Group / Conference 
 
