@@ -2,6 +2,33 @@
 
 - [The PCD (Point Cloud Data) file format](http://pointclouds.org/documentation/tutorials/pcd_file_format.php)
 
+```
+# .PCD v.7 - Point Cloud Data file format
+VERSION .7
+FIELDS x y z rgb
+SIZE 4 4 4 4
+TYPE F F F F
+COUNT 1 1 1 1
+WIDTH 213
+HEIGHT 1
+VIEWPOINT 0 0 0 1 0 0 0
+POINTS 213
+DATA ascii
+0.93773 0.33763 0 4.2108e+06
+0.90805 0.35641 0 4.2108e+06
+0.81915 0.32 0 4.2108e+06
+0.97192 0.278 0 4.2108e+06
+0.944 0.29474 0 4.2108e+06
+0.98111 0.24247 0 4.2108e+06
+0.93655 0.26143 0 4.2108e+06
+0.91631 0.27442 0 4.2108e+06
+0.81921 0.29315 0 4.2108e+06
+0.90701 0.24109 0 4.2108e+06
+0.83239 0.23398 0 4.2108e+06
+0.99185 0.2116 0 4.2108e+06
+0.89264 0.21174 0 4.2108e+06
+```
+
 ## 1. 개요 
 
 > [Ronny Restrepo](http://ronny.rest/tutorials/module/pointclouds_01/point_cloud_data/)
