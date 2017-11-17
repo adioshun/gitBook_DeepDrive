@@ -28,7 +28,7 @@ roscd didi_challenge_ros
 #### launch file 설명
 `display_rosbag_rviz.launch` 파일의 역할 
 
-```bash
+```python
 <launch>
 
 <!-- Usage: roslaunch didi_challenge_ros display_rosbag_rviz.launch rosbag_file:=/path/approach_1.bag  -->
@@ -47,7 +47,7 @@ roscd didi_challenge_ros
 
 `display_rviz.launch` 파일의 역할 
   
-```bash
+```python
 <launch>
 
 # Publishing the transformation between the link 'base_link' and 'velodyne'    
