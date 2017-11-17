@@ -12,7 +12,7 @@
     - Cython <= 0.25.2
 
 
-1. pcl 설치 
+- pcl 설치 
 ```
 sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
 sudo apt-get update
@@ -21,12 +21,12 @@ sudo apt-get install libpcl-all
 
 > `add-apt-repository`설치 : `sudo apt-get install software-properties-common`
 
-2. cython설치 
+- cython설치 
 ```
 pip install Cython
 ```
 
-3. python-pcl 설치 
+- python-pcl 설치 
 ```
 git clone https://github.com/strawlab/python-pcl.git
 cd python-pcl
