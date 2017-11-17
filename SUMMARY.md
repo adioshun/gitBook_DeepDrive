@@ -149,4 +149,6 @@
 * [Project\_2017\_iPRoBe Lab](project2017-iprobe-lab.md)
 * [Project\_Autoware](projectautoware.md)
 * [Project\_DiDi Competition](projectdidi-competition.md)
+  * [Didi\_Getting\_Started](projectdidi-competition/didigetting-started.md)
+  * [Didi\_Solution\_hengck23](projectdidi-competition/didisolution-hengck23.md)
 
