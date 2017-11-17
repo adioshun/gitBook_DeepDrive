@@ -93,6 +93,7 @@
   * [KITTI Dataset Visualizing.ipynb](https://github.com/hunjung-lim/awesome-vehicle-datasets/blob/master/vehicle/kitti/KITTI%2BDataset%2BVisualizing.ipynb)
   * [Read\_RGBD](pointcloud-data/readrgbd.md)
   * [Velodyne\_LiDAR](pointcloud-data/velodynelidar.md)
+  * [PCL Library](pointcloud-data/pcl-library.md)
 
 ## Fusion
 
