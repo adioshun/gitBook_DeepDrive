@@ -11,7 +11,6 @@
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
 * [Paper\_2016\_Sementic\_Fusion](paper2016-sementic-fusion.md)
 
-
 ## LowLevel CV
 
 * [List\_Scene Flow](listscene-flow.md)
@@ -149,7 +148,5 @@
 * [Project\_2017\_Berkeley](project2017-berkeley.md)
 * [Project\_2017\_iPRoBe Lab](project2017-iprobe-lab.md)
 * [Project\_Autoware](projectautoware.md)
-* Project\_DiDi Competition
-
-
+* [Project\_DiDi Competition](projectdidi-competition.md)
 
