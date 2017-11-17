@@ -153,4 +153,5 @@
   * [Didi\_Solution\_hengck23](projectdidi-competition/didisolution-hengck23.md)
   * [Didi\_Solution\_OmgTeam](projectdidi-competition/didisolution-omgteam.md)
   * [Didi\_ref\_3D DataHandling](projectdidi-competition/didiref-3d-datahandling.md)
+  * [Didi\_ref\_visualization](projectdidi-competition/didiref-visualization.md)
 
