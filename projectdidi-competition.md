@@ -42,7 +42,7 @@
 - [hengck23's GitHub](https://github.com/hengck23/didi-udacity-2017)
 
 
-### 2.3 markstrefford
+### 2.3 Team Timelaps(markstrefford)
 
 - [github](https://github.com/markstrefford/didi-sdc-challenge-2017)
 
@@ -117,7 +117,7 @@ https://github.com/adioshun/MV3D_TF
 
 ### 4.2 Docker
 
-- [Karthikksamy-Teamsf4win](https://hub.docker.com/r/karthikksamy/teamsf4win/0)
+- [Karthikksamy-Teamsf4win](https://hub.docker.com/r/karthikksamy/teamsf4win/0): 
 
 ### 4.3 변환 툴 
 
