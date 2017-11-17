@@ -51,6 +51,8 @@
 
 > 포인트 클라우드가 아닌 이미지에 3D Bbox 적용하는 방법 
 
+- [3D Vehicle Detection for Self Driving Car](https://experiencor.github.io/sdc_3d.html)
+
 - [Didi-Starter](https://github.com/experiencor/didi-starter)
 
 - [Simple Solution](https://github.com/experiencor/didi-starter/tree/master/simple_solution)
@@ -80,7 +82,7 @@ https://github.com/adioshun/MV3D_TF
 
 - ~~[Vehicle detection using LIDAR: EDA, augmentation and feature extraction](https://chatbotslife.com/vehichle-detection-using-lidar-eda-augmentation-and-feature-extraction-udacity-didi-challenge-4c95a0c28566)~~: 별 내용 없음 
 
-- [3D Vehicle Detection for Self Driving Car](https://experiencor.github.io/sdc_3d.html)
+
 
 - [explore_udacity_didi_data.ipynb](https://github.com/markstrefford/didi-sdc-challenge-2017/blob/master/explore_udacity_didi_data.ipynb)
 
@@ -104,7 +106,7 @@ https://github.com/adioshun/MV3D_TF
 ### 4.1 ROS Viwer
 
 
-- [redlinesolutions](https://github.com/redlinesolutions/Udacity-Didi-Challenge-ROSBag-Reader): Udacity-Didi-Challenge-ROSBag-Reader
+- [redlinesolutions](https://github.com/redlinesolutions/Udacity-Didi-Challenge-ROSBag-Reader): ROSbag 비디오 파일 뷰어 구현물 
 
 - [mjshiggins](https://github.com/mjshiggins/ros-examples): height-map
 
