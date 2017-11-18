@@ -1,5 +1,7 @@
 # Didi Data Visualization 
 
+- [jokla](https://github.com/jokla/didi_challenge_ros)
+
 ![](https://github.com/jokla/didi_challenge_ros/raw/master/visualization.gif)
 
 > Udacity에서 배포 하는 [데이터셋](http://academictorrents.com/details/76352487923a31d47a6029ddebf40d9265e770b5)에서만 제대로 동작 하며 KITTI파일을 ROS bag으로 변경시에는 에러 
