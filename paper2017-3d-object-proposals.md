@@ -11,6 +11,15 @@
 |이전연구|3D Object Proposals for Accurate Object Class Detection(NIPS, 2015.)|
 
 
+Code [compatible with cuDNNv3](http://www.cs.toronto.edu/objprop3d/3DOP_code_cuDNNv3.tar.gz)
+Code [compatible with cuDNNv5](http://www.cs.toronto.edu/objprop3d/3DOP_code_cuDNNv5.tar.gz)
+[Train/Val Split](http://www.cs.toronto.edu/objprop3d/data/ImageSets.tar.gz)
+[Disparity and Road planes on KITTI set](http://www.cs.toronto.edu/objprop3d/data/disparity_road.tar.gz)
+[3DOP proposals on KITTI training set](http://www.cs.toronto.edu/objprop3d/data/3DOP.tar.gz)
+[Trained networks for 3DOP proposasls on KITTI training set](http://www.cs.toronto.edu/objprop3d/data/frcn_kitti_models_3DOP.tar.gz)
+[2D/3D Detection Results on KITTI validation set](http://www.cs.toronto.edu/objprop3d/data/results_kitti_val_vgg16.tar.gz)
+
+
 # 3DOP
 
 목표 : generating a set of 3D object proposals by exploiting stereo imagery
