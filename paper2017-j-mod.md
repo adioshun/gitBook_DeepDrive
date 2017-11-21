@@ -149,4 +149,37 @@ In particular,
 [13] M. Mancini, G. Costante, P. Valigi, T. A. Ciarfuglia, J. Delmerico, and D. Scaramuzza, “Towards domain independence for learning-based monocular depth estimation,” IEEE Robotics and Automation Letters, 2017.
 ```
 
+## 3. NETWORK OVERVIEW
 
+![](https://i.imgur.com/pCnKxIk.png)
+
+- 입력이미지에서 Feature 추출 `Given an 256×160 RGB input, features are extracted with a fine-tuned version of the VGG19 network pruned of its fully connected layers [32]. `
+    - VGG19 weights are initialized on the image classification task on the ImageNet dataset. 
+
+- 추출된 Feature는 두개의 분리된 Task branch로 입력 `Features are then fed to two, task-dependent branches:`
+    - 깊이 예측 `a depth prediction branch and `
+    - 장애물 탐지 `a obstacle detector branch. `
+
+###### [깊이 예측 branch ]
+
+-  네트워크 구성 및 결과물: The former is composed by 4 upconvolution layers and a final convolution layer which outputs the **predicted depth** at original input resolution. 
+    - This branch, plus the VGG19 feature extractor, is equivalent to the fully convolutional network proposed in [13]. 
+
+- We optimize depth prediction on the following loss:
+
+
+###### [장애물 탐지 branch]
+
+- 네트워크 구성 : The obstacle detection branch is composed by 9 convolutional layer with `Glorot` initialization. 
+
+- 탐지 방법은 YOLO와 비슷 : The detection methodology is similar to the one presented in [31-YOLO]: 
+    - the input image is divided into a 8 × 5 grid of square-shaped cells of size 32 × 32 pixels. 
+
+- 학습 대상 : For each cell, we train a detector to estimate:
+    - The (x, y) coordinates of the bounding box center & width `w` and height `h`
+    - A confidence score C
+    - 거리 : The average distance of the detected obstacle from the camera `m` and the variance of its depth distribution `v`
+    
+- 결과물 : 
+    
+    
