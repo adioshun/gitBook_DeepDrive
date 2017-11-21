@@ -28,7 +28,10 @@ Code [compatible with cuDNNv5](http://www.cs.toronto.edu/objprop3d/3DOP_code_cuD
 
 * object size priors
 * placement of objects on the ground plane
-* several depth informed features that reason about free space, point cloud densities and distance to the ground
+* several depth informed features that reason about 
+  - free space
+  - point cloud densities
+  - distance to the ground
 
 Fusion하면 성능이 더 좋음 : Furthermore, we experiment also with the setting where `LIDAR information is available`, and show that using both LIDAR and stereo leads to the best result.
 
