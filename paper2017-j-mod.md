@@ -209,13 +209,35 @@ We train the detector on the following loss:
 
 - 이러한 이유로 물체 탐지 branch에서는 intrinsics가 바뀌더라도 global scale을 복구 할수 있는 기능을 제공한다. `For this reason, we suppose that the obstacle detection branch can help recovering the global scale when intrinsics change. `
 
-- We hypothesize that, while learning to regress obstacles bounding boxes, a detector model implicitly learns sizes and proportions of objects belonging to the training domain. 
+- 우리이 가설은 물체의 B.Box를 학습 할때 탐지 모델은 암묵적으로 크기와 특징을 Train 도메인에서 학습 할것이라고 가정하는 것이다. `We hypothesize that, while learning to regress obstacles bounding boxes, a detector model implicitly learns sizes and proportions of objects belonging to the training domain.` 
 
-- We can then evaluate estimated obstacle distances from the detection branch and use them as a tool to correct dense depth estimations. 
+- 이후에 물체탐지 branch에서 장애물까지의 거리를 평가(evaluation)한다. 그리고 평가 결과를 "dense depth estimations"을 교정 하는데 사용한다. `We can then evaluate estimated obstacle distances from the detection branch and use them as a tool to correct dense depth estimations. `
 
 Let $$m_j$$ be the average distance of the obstacle `j` computed by the detector, $$\hat D_j$$ the average depth estimation within the `j-th` obstacle bounding box, no the number of estimated obstacles,then we compute the correction factor `k` as:
 $$
     k = \frac{\frac{1}{n_0}\sum^{n_0}_j m_j}{\frac{1}{n_0}\sum^{n_0}_j \hat D_j}
 $$
 
-Finally, we calculate the corrected depth at each pixel i as D˜i = kDi. To validate our hypothesis, in Section IV-D we test on target domains with camera focal lengths that differ from the one used for training.
+Finally, we calculate the corrected depth at each pixel i as D˜i = kDi. 
+
+To validate our hypothesis, in Section IV-D we test on target domains with camera focal lengths that differ from the one used for training.
+
+## 4. EXPERIMENTS
+
+### 4.1 Datasets
+
+#### A. Unreal Dataset
+
+#### B. Zurich Forest Dataset
+
+### 4.2 Training and testing details
+
+As baselines, we compare J-MOD2 with:
+- The depth estimation method proposed in [13].
+- Our implementation of the multi-scale Eigen’s model [12].
+- A simple obstacle detector, consisting of our proposed model, trained without the depth estimation branch.
+
+```
+[13] M. Mancini, G. Costante, P. Valigi, T. A. Ciarfuglia, J. Delmerico, and D. Scaramuzza, “Towards domain independence for learning-based monocular depth estimation,” IEEE Robotics and Automation Letters, 2017
+[12] D. Eigen and R. Fergus, “Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture,” in Proceedings of the IEEE International Conference on Computer Vision, 2015, pp. 2650–2658.
+```
