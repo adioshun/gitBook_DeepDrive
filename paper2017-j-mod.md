@@ -241,3 +241,13 @@ As baselines, we compare J-MOD2 with:
 [13] M. Mancini, G. Costante, P. Valigi, T. A. Ciarfuglia, J. Delmerico, and D. Scaramuzza, “Towards domain independence for learning-based monocular depth estimation,” IEEE Robotics and Automation Letters, 2017
 [12] D. Eigen and R. Fergus, “Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture,” in Proceedings of the IEEE International Conference on Computer Vision, 2015, pp. 2650–2658.
 ```
+### 4.3 Test on UnrealDataset
+
+### 4.4 Testing robustness to focal length
+
+### 4.5 Test: Zurich Forest Dataset
+
+### 4.6 Navigation experiments
+
+## 5. CONCLUSION AND FUTURE WORK
+
