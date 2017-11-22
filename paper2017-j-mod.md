@@ -190,20 +190,24 @@ We train the detector on the following loss:
 
 - 이미지 한장에서 깊이 예측의 절대 크기(absolute scale)를 알기는 어렵다. `The absolute scale of a depth estimation is not observable from a single image. `
 
+
 - 하지만, 학습 기반 깊이 예측 방법은 특정 조건에서는 scale에 대한 정확도 추측 값`(accurate guess)`을 제공한다. `However, learning-based depth estimators are able to give an accurate guess of the scale under certain conditions. `
+
 
 - 이러한 모델은 학습시에 암묵적으로 도메인에 특화된 물체 특징이나 외형 정보를 학습 한다. `While training, these models implicitly learn domain-specific object proportions and appearances.`
     - 이를 통해 `Depth map`과 `Depth map의 absolute scale`를 예측 하는데 도움이 된다. `This helps the estimation process in giving depth maps with correct absolute scale. `
 
-- As the relations between object proportions and global scale in the image strongly depend on camera focal length, at test time the absolute scale estimation are strongly biased towards the training set domain and its intrinsics. 
 
-- For these reasons, when object proportions and/or camera parameters change from training to test, scale estimates quickly degrade. 
+- 물체의 특징과 global scale간의 상관 관계는 카메라의 focal length의 큰 영향을 받는다. `As the relations between object proportions and global scale in the image strongly depend on camera focal length, `
+    - 테스트 시점에 이러한 학습 데이터의 도메인 특징은 `absolute scale`측정에 bais 요소가 된다. `at test time the absolute scale estimation are strongly biased towards the training set domain and its intrinsics. `
+    - 이러한 이유로 **학습 데이터**와 **테스트 데이터**의 물체 특징 및 카메라 파라미터가 바뀌게 되면 크기(scale) 예측은 감소 한다. `For these reasons, when object proportions and/or camera parameters change from training to test, scale estimates quickly degrade. `
 
-- Nonetheless, if object proportions stay roughly the same and only camera intrinsics are altered at test time, it is possible to employ some recovery strategy.
 
-- If the size of a given object is known, we can analyticallycompute its distance from the camera and recover the globalscale for the whole depth map. 
+- 그래도 물체 특징이 roughly 하게 같고 카메라 고유값(intrinsics)가 테스트 시점에 바뀌어도 복구 시킬수 있다. `Nonetheless, if object proportions stay roughly the same and only camera intrinsics are altered at test time, it is possible to employ some recovery strategy.`
 
-- For this reason, we suppose that the obstacle detection branch can help recovering the global scale when intrinsics change. 
+- 만약 주어진 물체의 크기를 알고 있다면 거리를 계산 할수 있으며 전체 depth map의 global scale을 복구 할수 있다. `If the size of a given object is known, we can analytically compute its distance from the camera and recover the global scale for the whole depth map. `
+
+- 이러한 이유로 물체 탐지 branch에서는 intrinsics가 바뀌더라도 global scale을 복구 할수 있는 기능을 제공한다. `For this reason, we suppose that the obstacle detection branch can help recovering the global scale when intrinsics change. `
 
 - We hypothesize that, while learning to regress obstacles bounding boxes, a detector model implicitly learns sizes and proportions of objects belonging to the training domain. 
 
