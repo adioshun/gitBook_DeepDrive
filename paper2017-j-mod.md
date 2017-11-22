@@ -188,13 +188,12 @@ We train the detector on the following loss:
 
 ### 3.1 Exploiting detection to correct global scale estimations
 
-- The absolute scale of a depth estimation is not observable from a single image. 
+- 이미지 한장에서 깊이 예측의 절대 크기(absolute scale)를 알기는 어렵다. `The absolute scale of a depth estimation is not observable from a single image. `
 
-- However, learning-based depth estimators are able to give an accurate guess of the scale under certain conditions. 
+- 하지만, 학습 기반 깊이 예측 방법은 특정 조건에서는 scale에 대한 정확도 추측 값`(accurate guess)`을 제공한다. `However, learning-based depth estimators are able to give an accurate guess of the scale under certain conditions. `
 
-- While training, these models implicitly learn domain-specific object proportions and appearances.
-
-- This helps the estimation process in giving depth mapswith correct absolute scale. 
+- 이러한 모델은 학습시에 암묵적으로 도메인에 특화된 물체 특징이나 외형 정보를 학습 한다. `While training, these models implicitly learn domain-specific object proportions and appearances.`
+    - 이를 통해 `Depth map`과 `Depth map의 absolute scale`를 예측 하는데 도움이 된다. `This helps the estimation process in giving depth maps with correct absolute scale. `
 
 - As the relations between object proportions and global scale in the image strongly depend on camera focal length, at test time the absolute scale estimation are strongly biased towards the training set domain and its intrinsics. 
 
