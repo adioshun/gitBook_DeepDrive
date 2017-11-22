@@ -186,6 +186,33 @@ In particular,
 
 We train the detector on the following loss:
 
-### 3.1 
-    
-    
+### 3.1 Exploiting detection to correct global scale estimations
+
+- The absolute scale of a depth estimation is not observable from a single image. 
+
+- However, learning-based depth estimators are able to give an accurate guess of the scale under certain conditions. 
+
+- While training, these models implicitly learn domain-specific object proportions and appearances.
+
+- This helps the estimation process in giving depth mapswith correct absolute scale. 
+
+- As the relations between object proportions and global scale in the image strongly depend on camera focal length, at test time the absolute scale estimation are strongly biased towards the training set domain and its intrinsics. 
+
+- For these reasons, when object proportions and/or camera parameters change from training to test, scale estimates quickly degrade. 
+
+- Nonetheless, if object proportions stay roughly the same and only camera intrinsics are altered at test time, it is possible to employ some recovery strategy.
+
+- If the size of a given object is known, we can analyticallycompute its distance from the camera and recover the globalscale for the whole depth map. 
+
+- For this reason, we suppose that the obstacle detection branch can help recovering the global scale when intrinsics change. 
+
+- We hypothesize that, while learning to regress obstacles bounding boxes, a detector model implicitly learns sizes and proportions of objects belonging to the training domain. 
+
+- We can then evaluate estimated obstacle distances from the detection branch and use them as a tool to correct dense depth estimations. 
+
+Let $$m_j$$ be the average distance of the obstacle `j` computed by the detector, $$\hat D_j$$ the average depth estimation within the `j-th` obstacle bounding box, no the number of estimated obstacles,then we compute the correction factor `k` as:
+$$
+    k = \frac{\frac{1}{n_0}\sum^{n_0}_j m_j}{\frac{1}{n_0}\sum^{n_0}_j \hat D_j}
+$$
+
+Finally, we calculate the corrected depth at each pixel i as D˜i = kDi. To validate our hypothesis, in Section IV-D we test on target domains with camera focal lengths that differ from the one used for training.
