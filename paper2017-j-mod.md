@@ -176,10 +176,16 @@ In particular,
     - the input image is divided into a 8 × 5 grid of square-shaped cells of size 32 × 32 pixels. 
 
 - 학습 대상 : For each cell, we train a detector to estimate:
-    - The (x, y) coordinates of the bounding box center & width `w` and height `h`
+    - 대상물 좌표(x,y,w,h) The (x, y) coordinates of the bounding box center & width `w` and height `h`
     - A confidence score C
     - 거리 : The average distance of the detected obstacle from the camera `m` and the variance of its depth distribution `v`
     
-- 결과물 : 
+- 결과물 : The resulting output has a 40 × 7 shape. 
+    - At test time, we consider only **predictions** with a **confidence score** over a certain threshold. 
+
+
+We train the detector on the following loss:
+
+### 3.1 
     
     
