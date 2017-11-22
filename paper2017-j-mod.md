@@ -251,3 +251,14 @@ As baselines, we compare J-MOD2 with:
 
 ## 5. CONCLUSION AND FUTURE WORK
 
+- **물체 탐지**와 **깊이 예측**이 가능한 end-to-end 모델인 J-MOD2를 제안 한다. `In this work, we proposed J-MOD2, a novel end-to-end deep architecture for joint obstacle detection and depth estimation. `
+
+- 가상 데이터와 실제 데이터를 이용하여 테스트 하였다. `We demonstrated its effectiveness in detecting obstacles on synthetic and real-world datasets. `
+
+- 초점거리(focal length)와 외형에 강건성을 가지는지 테스트 하였다. `We tested its robustness to appearance and camera focal length changes.`
+
+- 추가적으로 드론에 적용하여 산악지대 에서 테스트 하였다. `Furthermore, we deployed J-MOD2 as an obstacle detector and 3D mapping module in a full MAV navigation system and we tested it on a highly photo-realistic simulated forests cenario. `
+
+- 성능이 좋다. `We showed how J-MOD2 dramatically improves mapping quality in a previously unknown scenario, leading to a substantial lower navigation failure rate than other SotA depth estimators. `
+
+- 향후 계획 In future works, we plan to further improve robustness over appearance changes, as this is the major challenge for the effective deployment of these algorithms in practical real-world scenarios.
