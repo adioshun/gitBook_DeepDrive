@@ -410,7 +410,9 @@ as:
 
 #### B. Pedestrian and Cyclist Detection
 
-### 
+### 3.2. Data Augmentation
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM3Njg2NTEwXX0=
+eyJoaXN0b3J5IjpbMTI2NDQ3MzE0NV19
 -->
