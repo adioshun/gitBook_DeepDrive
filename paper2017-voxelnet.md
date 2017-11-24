@@ -273,7 +273,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 
 - V는 t개이상의 포인트를 가진 비어 있지 않은 **복셀**인다. 
-	- Denote $$V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in \Re^4 \}_{i=1...t}$$ as a non-empty voxel containing t ≤ T LiDAR points, 
+	- Denote $$V= \{ p_i = \left[ x_i, y_i, z_i, r_i\]^T \in \Re^4 \}_{i=1...t}$$ as a non-empty voxel containing t ≤ T LiDAR points, 
 	- where $$p_i$$ contains XYZ coordinates for the i-th point and $$r_i$$ is the received reflectance. 
 
 - 먼저  local mean을 구하여 V에 있는 모든 포인트의 Centroid값으로 정한다.  
