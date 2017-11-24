@@ -222,7 +222,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 ###### [Voxel Partition]
 
-![](https://i.imgur.com/CR3qkLX.png)
+![](https://i.imgur.com/cNJrBJ6.png)
 
 - Given a point cloud, we subdivide the 3D space into equally spaced voxels as shown in Figure 2. 
 
@@ -234,5 +234,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - Here, for simplicity, we assume D, H, W are a multiple of $v_D, v_H, v_W$ .
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NTQ2MDQ0MF19
+eyJoaXN0b3J5IjpbMTA1MzQxNTM1MV19
 -->
