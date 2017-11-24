@@ -272,13 +272,12 @@ Intelligent Vehicles Symposium (IV), 2015.
 ![](https://i.imgur.com/6xPqfKR.png)
 
 
-Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in R^4 \}_{i=1...t} as a non-empty voxel containing t ≤ T LiDAR points, where
-pi contains XYZ coordinates for the i-th point and ri
-is the
-received reflectance. We first compute the local mean as
-the centroid of all the points in V, denoted as (vx, vy, vz).
-Then we augment each point pi with the relative offset w.r.t.
-the centroid and obtain the input feature set Vin = {pˆi =
+- Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in R^4 \}_{i=1...t} as a non-empty voxel containing t ≤ T LiDAR points, where
+$p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received reflectance. 
+
+- We first compute the local mean as the centroid of all the points in V, denoted as $(v_x, v_y, v_z)$.
+
+- Then we augment each point pi with the relative offset w.r.t. the centroid and obtain the input feature set Vin = {pˆi =
 [xi
 , yi
 , zi
@@ -295,5 +294,5 @@ shape of the surface contained within the voxel. The FCN
 is composed of a linear layer, a batch normalization (BN)
 layer, and a rectified linear unit (ReLU) layer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzI1NzA3MF19
+eyJoaXN0b3J5IjpbMzI3MTQxMDQ4XX0=
 -->
