@@ -390,7 +390,7 @@ After each convolution layer, BN and ReLU operations areapplied.
 	-  $$l^g, w^g, h^g$$ are length, width, height of the box
 	- $$, \theta^g$$ is the yaw rotation around Z-axis. 
 
-- To retrieve the ground truth box from a matching positive anchor parameterized as $$(x^a_c, y^a_c, z^a_c, l^a, w^a, h^g, \theta^g)$$ 
+- To retrieve the ground truth box from a matching positive anchor parameterized as $$(x^a_c, y^a_c, z^a_c, l^a, w^a, h^a, \theta^g)$$ 
 ), we define the
 residual vector u
 ∗ ∈ R
@@ -401,5 +401,5 @@ corresponding to center location ∆x, ∆y, ∆z, three di-
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjk1MzY1MTJdfQ==
+eyJoaXN0b3J5IjpbLTIwNzE2NjA4Nl19
 -->
