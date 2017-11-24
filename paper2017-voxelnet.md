@@ -401,6 +401,8 @@ as:
 ### 2.3 Efficient Implementation
 
 ![](https://i.imgur.com/eWL8LDG.png)
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzg2OTQ3NjFdfQ==
+eyJoaXN0b3J5IjpbNjA4MDc1NV19
 -->
