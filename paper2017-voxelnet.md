@@ -291,6 +291,21 @@ $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received refl
 
 - All non-empty voxels are encoded in the same way and they share the same set of parameters in FCN.
 
+
+
+- We use $VFE-i(c_{in}, c_{out})$ to represent the i-th VFE layer that transforms input features of dimension cin into output
+features of dimension cout. The linear layer learns a matrix
+of size cin ×(cout/2), and the point-wise concatenation
+yields the output of dimension cout.
+Because the output feature combines both point-wise
+features and locally aggregated feature, stacking VFE layers
+encodes point interactions within a voxel and enables
+the final feature representation to learn descriptive shape
+information. The voxel-wise feature is obtained by transforming
+the output of VFE-n into R
+C via FCN and applying
+element-wise Maxpool where C is the dimension of the
+voxel-wise feature, as shown in Figure 2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzU3NjQ5NzFdfQ==
+eyJoaXN0b3J5IjpbMjA2ODg4MzAxMl19
 -->
