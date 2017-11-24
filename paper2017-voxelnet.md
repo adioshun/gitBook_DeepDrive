@@ -255,7 +255,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - 따라서 복셀에 t개 이상의 포인트가 있다면, t개의 샘플들만 선택 하여 사용한다. `To this end, we randomly sample a fixed number, T, of points from those voxels containing more than T points. `
 
-- 이 샘플링의 목적은 ㄷThis sampling strategy has two purposes,(1) computational savings (see Section 2.3 for details); and(2) decreases the imbalance of points between the voxelswhich reduces the sampling bias, and adds more variationto training.
+- 이 샘플링의 목적은 다음과 같ㄷThis sampling strategy has two purposes,(1) computational savings (see Section 2.3 for details); and(2) decreases the imbalance of points between the voxelswhich reduces the sampling bias, and adds more variationto training.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMjIzMDc2M119
+eyJoaXN0b3J5IjpbLTkwNDIxMTQxMF19
 -->
