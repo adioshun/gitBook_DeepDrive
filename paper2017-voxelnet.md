@@ -446,7 +446,7 @@ as:
 
 - 제안 방식은 산재된 3D데이터에 바로 적용 가능하다. `Our approach can operate directly on sparse 3D points and capture 3D shape information effectively. `
 
-We also present an efficient implementationof VoxelNet that benefits from point cloud sparsityand parallel processing on a voxel grid. 
+- We also present an efficient implementationof VoxelNet that benefits from point cloud sparsityand parallel processing on a voxel grid. 
 
 Our experimentson the KITTI car detection task show that VoxelNet outperformsstate-of-the-art LiDAR based 3D detection methodsby a large margin. 
 
@@ -454,5 +454,5 @@ On more challenging tasks, such as 3Ddetection of pedestrians and cyclists, Voxe
 
 Future work includes extending VoxelNetfor joint LiDAR and image based end-to-end 3D detectionto further improve detection and localization accuracy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MzU4ODcxNV19
+eyJoaXN0b3J5IjpbLTIzNDMwODg3Ml19
 -->
