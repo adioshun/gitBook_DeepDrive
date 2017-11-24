@@ -410,7 +410,7 @@ as:
 
 #### B. Pedestrian and Cyclist Detection
 
-### 3.2. Data Augmentation (3D 포인트 
+### 3.2. Data Augmentation (3D 포인트 클라우드 데이터 증
 
 With less than 4000 training point clouds, training our
 network from scratch will inevitably suffer from overfitting.
@@ -419,5 +419,5 @@ data augmentation. The augmented training data are generated
 on-the-fly without the need to be stored on disk [20].
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkyNDQ4NzQwXX0=
+eyJoaXN0b3J5IjpbNzY5NjU2OTkzXX0=
 -->
