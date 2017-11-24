@@ -279,11 +279,12 @@ $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received refl
 
 - Then we augment each point pi with the relative offset w.r.t. the centroid and obtain the input feature set $ V_{in} = \{\hat p_i = \[x_i, y_i, z_i, r_i, x_i − v_x, y_i −v_y, z_i −v_z\]^T \in R^7\}_{i=1...t}
 
-- Next, each $\hat p_i$ is transformed through the fully connected network (FCN) into a feature space, where we can aggregate information from the point features fi ∈ R
-m to encode the
-shape of the surface contained within the voxel. The FCN
-is composed of a linear layer, a batch normalization (BN)
-layer, and a rectified linear unit (ReLU) layer.
+- Next, each $\hat p_i$ is transformed through the fully connected network (FCN) into a feature space, where we can aggregate information from the point features $f_i \in R^m$ to encode the shape of the surface contained within the voxel. 
+
+- The FCN is composed of a linear layer, a batch normalization (BN) layer, and a rectified linear unit (ReLU) layer. 
+
+- After obtaining point-wise feature representations, we use element-wise MaxPooling across all $f_i$ associated to $V$ to get the locally aggregated feature ˜f ∈ R
+m for V. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc5OTc5ODYwXX0=
+eyJoaXN0b3J5IjpbLTE4NjY2NjcxMDJdfQ==
 -->
