@@ -427,7 +427,10 @@ as:
 - Secondly, we apply global scaling to all ground truth boxes $$b_i$$ and to the whole point cloud M
 
 
-#### C
+#### C. 
+
+- Finally, we apply global rotation to all ground truth
+boxes bi and to the whole point cloud M.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNDIxODkzNl19
+eyJoaXN0b3J5IjpbLTY2MTAyNjQzMV19
 -->
