@@ -450,9 +450,9 @@ as:
 
 - 실험 결과 성능이 좋다. `Our experiments on the KITTI car detection task show that VoxelNet outperformsstate-of-the-art LiDAR based 3D detection methodsby a large margin. `
 
-- On more challenging tasks, such as 3Ddetection of pedestrians and cyclists, VoxelNet also demonstratesencouraging results showing that it provides a better3D representation. 
+- On more challenging tasks, such as 3D detection of pedestrians and cyclists, VoxelNet also demonstratesencouraging results showing that it provides a better3D representation. 
 
 Future work includes extending VoxelNetfor joint LiDAR and image based end-to-end 3D detectionto further improve detection and localization accuracy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTAzNjEyNDVdfQ==
+eyJoaXN0b3J5IjpbNzE2NDU2NTQxXX0=
 -->
