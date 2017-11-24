@@ -311,8 +311,6 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - 비어 있지 않은 복셀들은 모두 같은 절차를 적용 받고 동일한 파라미터 셋을 공유 한다. `All non-empty voxels are encoded in the same way and they share the same set of parameters in FCN.`
 
-
-
 - We use $$VFE-i(c_{in}, c_{out})$$ to represent the i-th VFE layer that transforms input features of dimension $$c_{in}$$ into output features of dimension $$c_{out}$$. 
 
 - The linear layer learns a matrix of size $$c_{in} \time ( c_{out} / 2 )$$, and the point-wise concatenation yields the output of dimension $$c_{out}$$.
@@ -332,5 +330,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTU1MDI3MDddfQ==
+eyJoaXN0b3J5IjpbLTk4NDY4MzIxNV19
 -->
