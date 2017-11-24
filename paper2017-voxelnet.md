@@ -290,6 +290,7 @@ $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received refl
 - Thus we obtain the output feature set $V_{out} = \{ f^{out)_i\}_{i...t}$. 
 
 - All non-empty voxels are encoded in the same way and they share the same set of parameters in FCN.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTExOTgyOTddfQ==
+eyJoaXN0b3J5IjpbLTE1MzU3NjQ5NzFdfQ==
 -->
