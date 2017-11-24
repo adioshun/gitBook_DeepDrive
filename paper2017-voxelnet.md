@@ -431,10 +431,10 @@ as:
 
 - Finally, we apply global rotation to all ground truth boxes $$b_i$$ and to the whole point cloud M.
 
-> 3D Data Augmentation방법에 대하여 조사 하고 이를 적용시 성능향상
+> 3D Data Augmentation방법에 대하여 조사 하고 이를 적용시 성능향상에 대한 논문 
 
 
 ## 4. Experiments
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNzk0NDgzMl19
+eyJoaXN0b3J5IjpbOTE1MTE2MDE2XX0=
 -->
