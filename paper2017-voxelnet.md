@@ -342,12 +342,12 @@ Intelligent Vehicles Symposium (IV), 2015.
 - We use ConvMD($$c_{in}, c_{out}, k, s, p$$) to represent an M-dimensional convolution operator
 	-  입출력 채널:  where $$c_{in}$$ and $$c_{out}$$ are the number of input and output channels, 
 	- 파라미터 : k(kernel size), s(stride size), and p(padding size) are the M-dimensional vectors 
-	- When the size across the M-dimensions are the same, we use a scalar to represent the size e.g. k for k = (k, k, k).
+	- 크기는 모두 동일함 When the size across the M-dimensions are the same, we use a scalar to represent the size e.g. k for k = (k, k, k).
 
 - Each convolutional middle layer applies 3D convolution, BN layer, and ReLU layer sequentially. 
 - The convolutional middle layers aggregate voxel-wise features within a progressively expanding receptive field, adding more context to the shape description. 
 - The detailed sizes of the filters in the convolutional middle layers are explained in Section 3
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MjAzNTkxOV19
+eyJoaXN0b3J5IjpbMzUxNTY4NjJdfQ==
 -->
