@@ -283,8 +283,9 @@ $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received refl
 
 - The FCN is composed of a linear layer, a batch normalization (BN) layer, and a rectified linear unit (ReLU) layer. 
 
-- After obtaining point-wise feature representations, we use element-wise MaxPooling across all $f_i$ associated to $V$ to get the locally aggregated feature ˜f ∈ R
-m for V. 
+- After obtaining point-wise feature representations, we use element-wise MaxPooling across all $f_i$ associated to $V$ to get the locally aggregated feature $\tilde{f} \in R^m$ for V. 
+
+-   Finally, we augment 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjY2NjcxMDJdfQ==
+eyJoaXN0b3J5IjpbMTYzNzEwOTY2MF19
 -->
