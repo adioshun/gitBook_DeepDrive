@@ -302,18 +302,22 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- After obtaining point-wise feature representations, we use element-wise MaxPooling across all $$f_i$$ associated to $V$ to get the locally aggregated feature $$\tilde{f} \in \Re^m$$ for V. 
 
 
--   마지막으로 Finally, we augment each $$f_i$$ with $$\tilde{f}$$ to form the point-wise concatenated feature as $$f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in \Re^{2m}$$. 
+-   마지막으로 Finally, we augment each $$f_i$$ with $$\tilde{f}$$ to form the point-wise concatenated feature as $$f^{out}_i = \left[f^T_i, \tilde{f}^T \right]^T \in \Re^{2m}$$. 
 
 
 - 결과적으로 아웃푹 특징셋을 얻게 된다. 
-	- Thus we obtain the output feature set $$V_{out} = \{ f^{out)_i\}_{i...t}$$. 
+	- Thus we obtain the output feature set $$V_{out} = \{ f^{out}_i\}_{i...t}$$. 
 
 
 - 비어 있지 않은 복셀들은 모두 같은 절차를 적용 받고 동일한 파라미터 셋을 공유 한다. `All non-empty voxels are encoded in the same way and they share the same set of parameters in FCN.`
 
-- We use $$VFE-i(c_{in}, c_{out})$$ to represent the i-th VFE layer that transforms input features of dimension $$c_{in}$$ into output features of dimension $$c_{out}$$. 
+- i번째 VFE층으로 표현되는$$VFE-i(c_{in}, c_{out})$$는 입력 특징의 차원을 출력 특징의 차원으로 변경한 것이다. 
+	- We use $$VFE-i(c_{in}, c_{out})$$ to represent the i-th VFE layer that transforms input features of dimension $$c_{in}$$ into output features of dimension $$c_{out}$$. 
 
-- The linear layer learns a matrix of size $$c_{in} \time ( c_{out} / 2 )$$, and the point-wise concatenation yields the output of dimension $$c_{out}$$.
+
+- 선형층은 $$c_{in} \times ( c_{out} / 2 )$$크기의 매트릭스를 학습하고 **point-wise concatenation**은 $$c_{out}$$차원의 결과물을 출력한다.
+	- The linear layer learns a matrix of size $$c_{in} \times ( c_{out} / 2 )$$, and the point-wise concatenation yields the output of dimension $$c_{out}$$.
+
 
 - Because the output feature combines both point-wise features and locally aggregated feature, stacking VFE layers encodes point interactions within a voxel and enables the final feature representation to learn descriptive shape information. 
 
