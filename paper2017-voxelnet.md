@@ -439,7 +439,7 @@ as:
 
 ## 5. Conclusion
 
-- Most existing methods in LiDAR-based 3D detectionrely on hand-crafted feature representations, for example,a bird’s eye view projection. 
+- Most existing methods in LiDAR-based 3D detection rely on hand-crafted feature representations, for example,a bird’s eye view projection. 
 
 In this paper, we remove thebottleneck of manual feature engineering and propose VoxelNet,a novel end-to-end trainable deep architecture forpoint cloud based 3D detection. 
 
@@ -453,5 +453,5 @@ On more challenging tasks, such as 3Ddetection of pedestrians and cyclists, Voxe
 
 Future work includes extending VoxelNetfor joint LiDAR and image based end-to-end 3D detectionto further improve detection and localization accuracy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzg3Nzg5MzBdfQ==
+eyJoaXN0b3J5IjpbNTQwMjM2NDE4XX0=
 -->
