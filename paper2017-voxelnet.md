@@ -355,12 +355,9 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - The detailed sizes of the filters in the convolutional middle layers are explained in Section 3
 
-#### C. BN layer, and ReLU layer sequentially. The convolutional
-middle layers aggregate voxel-wise features within a progressively
-expanding receptive field, adding more context
-to the shape description. The detailed sizes of the filters in
-the convolutional middle layers are explained in Section 3
+#### 
+Region Proposal Network
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMTk4ODI5Nl19
+eyJoaXN0b3J5IjpbMjUyNzEwNzgwXX0=
 -->
