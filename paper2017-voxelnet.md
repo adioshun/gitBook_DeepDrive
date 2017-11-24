@@ -258,6 +258,16 @@ Intelligent Vehicles Symposium (IV), 2015.
 - 이 샘플링의 목적은 다음과 같다. `This sampling strategy has two purposes,`
 	- (1) 계산 부하 `computational savings (see Section 2.3 for details); and`
 	- (2) 복셀간 포인트 불균형 문제 해결 `decreases the imbalance of points between the voxels which reduces the sampling bias, and adds more variation to training.`
+
+###### [Stacked Voxel Feature Encoding ]
+
+- The key innovation is the chain of VFE layers. 
+
+- For simplicity, Figure 2 illustrates the hierarchical feature encoding process for one voxel.
+
+- Without loss of generality, we use VFE Layer-1 to describe the details in the following paragraph. 
+
+- Figure 3 shows the architecture for VFE Layer-1.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxNTMyNjc1N119
+eyJoaXN0b3J5IjpbLTM2ODYzNzI0Ml19
 -->
