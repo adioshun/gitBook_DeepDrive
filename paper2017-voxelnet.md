@@ -220,9 +220,9 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 #### A. Feature Learning Network
 
-###### [Voxel Partition]
+![](https://i.imgur.com/z2DPRjY.png)
 
-![](https://i.imgur.com/cNJrBJ6.png)
+###### [Voxel Partition]
 
 - Given a point cloud, we subdivide the 3D space into equally spaced voxels as shown in Figure 2. 
 
@@ -233,6 +233,13 @@ Intelligent Vehicles Symposium (IV), 2015.
 - The resulting 3D voxel grid is of size $ \prime D = \frac {D}{v_D}, \prime H = frac{H}{v_H}, \prime W= \frac{W}{v_W}$ . 
 
 - Here, for simplicity, we assume D, H, W are a multiple of $v_D, v_H, v_W$ .
+
+###### [Grouping]
+
+-  We group the points according to the voxel theyreside in. 
+Due to factors such as distance, occlusion, object’srelative pose, and non-uniform sampling, the LiDAR point cloud is sparse and has highly variable point densitythroughout the space. 
+Therefore, after grouping, a voxelwill contain a variable number of points. 
+An illustration isshown in Figure 2, where Voxel-1 has significantly morepoints than Voxel-2 and Voxel-4, while Voxel-3 contains nopoint
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MzQxNTM1MV19
+eyJoaXN0b3J5IjpbMjczMjU0MTk2XX0=
 -->
