@@ -272,9 +272,9 @@ Intelligent Vehicles Symposium (IV), 2015.
 ![](https://i.imgur.com/6xPqfKR.png)
 
 
-- Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in \Re^4 \}_\{i=1...t}$ as a non-empty voxel containing t ≤ T LiDAR points, 
-	- where $p_i$ contains XYZ coordinates for the i-th point 
-	- and $r_i$ is the received reflectance. 
+- V는 t개이상의 포인트를 가진 비어 있지 않은 **복셀**인다. 
+	- Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in \Re^4 \}_{i=1...t}$ as a non-empty voxel containing t ≤ T LiDAR points, 
+	- where $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received reflectance. 
 
 - 먼저  local mean을 구하여 V에 있는 모든 포인트의 Centroid값으로 정한다.  
 	- We first compute the local mean as the centroid of all the points in V, 
@@ -315,5 +315,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0MTMxNjg2XX0=
+eyJoaXN0b3J5IjpbMTU5NjI1Njc1OF19
 -->
