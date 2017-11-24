@@ -272,20 +272,20 @@ Intelligent Vehicles Symposium (IV), 2015.
 ![](https://i.imgur.com/6xPqfKR.png)
 
 
-- Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in R^4 \}_{i=1...t}$ as a non-empty voxel containing t ≤ T LiDAR points, where
+- Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in \Re^4 \}_{i=1...t}$ as a non-empty voxel containing t ≤ T LiDAR points, where
 $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received reflectance. 
 
 - We first compute the local mean as the centroid of all the points in V, denoted as $(v_x, v_y, v_z)$.
 
-- Then we augment each point pi with the relative offset w.r.t. the centroid and obtain the input feature set $ V_{in} = \{\hat p_i = \[x_i, y_i, z_i, r_i, x_i − v_x, y_i −v_y, z_i −v_z\]^T \in R^7\}_{i=1...t}
+- Then we augment each point pi with the relative offset w.r.t. the centroid and obtain the input feature set $ V_{in} = \{\hat p_i = \[x_i, y_i, z_i, r_i, x_i − v_x, y_i −v_y, z_i −v_z\]^T \in \Re^7\}_{i=1...t}
 
-- Next, each $\hat p_i$ is transformed through the fully connected network (FCN) into a feature space, where we can aggregate information from the point features $f_i \in R^m$ to encode the shape of the surface contained within the voxel. 
+- Next, each $\hat p_i$ is transformed through the fully connected network (FCN) into a feature space, where we can aggregate information from the point features $f_i \in \Re^m$ to encode the shape of the surface contained within the voxel. 
 
 - The FCN is composed of a linear layer, a batch normalization (BN) layer, and a rectified linear unit (ReLU) layer. 
 
-- After obtaining point-wise feature representations, we use element-wise MaxPooling across all $f_i$ associated to $V$ to get the locally aggregated feature $\tilde{f} \in R^m$ for V. 
+- After obtaining point-wise feature representations, we use element-wise MaxPooling across all $f_i$ associated to $V$ to get the locally aggregated feature $\tilde{f} \in \Re^m$ for V. 
 
--   Finally, we augment each fi with $\tilde{f}$ to form the point-wise concatenated feature as $f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in R^{2m}
+-   Finally, we augment each fi with $\tilde{f}$ to form the point-wise concatenated feature as $f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in \Re^{2m}$
 out
 i = [f
 T
@@ -303,5 +303,5 @@ i
 encoded in the same way and they share the same set of
 parameters in FCN.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDE3MzI3MTNdfQ==
+eyJoaXN0b3J5IjpbLTE1MTYzNTI2MDBdfQ==
 -->
