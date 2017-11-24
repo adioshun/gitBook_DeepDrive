@@ -315,5 +315,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MzM4MTI5N119
+eyJoaXN0b3J5IjpbLTE4ODYyNTM2NDZdfQ==
 -->
