@@ -383,7 +383,7 @@ After each convolution layer, BN and ReLU operations areapplied.
 ### 2.3  Loss Function
 
 - Let $$ \{ a^{pos}_i\}_{i=1...N_{pos}} $$ be the set of Npos positive anchors 
-- $$ \{ a^{pos}_i\}_{i=1...N_{pos}}
+- $$ \{ a^{pos}_i\}_{i=1...N_{}}
 neg
 j
 }j=1...Nneg be the set of Nneg negative
@@ -437,5 +437,5 @@ corresponding to center location ∆x, ∆y, ∆z, three di-
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzODQyNDUwNV19
+eyJoaXN0b3J5IjpbMTc5NjQ4ODUxNV19
 -->
