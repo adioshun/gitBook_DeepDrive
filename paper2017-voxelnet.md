@@ -404,7 +404,9 @@ as:
 
 ## 3. Training Details
 
+### 3.1. Network Details
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5Nzc1NzAwNl19
+eyJoaXN0b3J5IjpbMTA4MDcwMDkwMV19
 -->
