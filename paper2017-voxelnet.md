@@ -383,8 +383,9 @@ After each convolution layer, BN and ReLU operations areapplied.
 ### 2.3  Loss Function
 
 - Let $$ \{ a^{pos}_i\}_{i=1...N_{pos}} $$ be the set of N_pos positive anchors 
-- $$ \{ a^{neg}_j\}_{j=1...N_{neg}} be the set of N_neg negative anchors. We parameterize a 3D ground truth box as
-(x
+- $$ \{ a^{neg}_j\}_{j=1...N_{neg}} be the set of N_neg negative anchors. 
+
+- We parameterize a 3D ground truth box as (x
 g
 c
 , yg
@@ -433,5 +434,5 @@ corresponding to center location ∆x, ∆y, ∆z, three di-
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTUwNjIwODRdfQ==
+eyJoaXN0b3J5IjpbLTE1ODk3MTY1ODFdfQ==
 -->
