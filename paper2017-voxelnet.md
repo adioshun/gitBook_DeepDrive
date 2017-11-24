@@ -285,23 +285,13 @@ $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received refl
 
 - After obtaining point-wise feature representations, we use element-wise MaxPooling across all $f_i$ associated to $V$ to get the locally aggregated feature $\tilde{f} \in \Re^m$ for V. 
 
--   Finally, we augment each fi with $\tilde{f}$ to form the point-wise concatenated feature as $f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in \Re^{2m}$
-out
-i = [f
-T
-i
-,
-˜f
-T
-]
-T ∈ R
-2m. Thus we obtain the output
-feature set Vout = {f
-out
-i
-}i...t. All non-empty voxels are
+-   Finally, we augment each fi with $\tilde{f}$ to form the point-wise concatenated feature as $f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in \Re^{2m}$. 
+
+- Thus we obtain the output feature set $V_{out} = \{ f^{out)_i\}_{i...t}$. 
+
+- All non-empty voxels are
 encoded in the same way and they share the same set of
 parameters in FCN.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTYzNTI2MDBdfQ==
+eyJoaXN0b3J5IjpbOTIyNTMwMDEzXX0=
 -->
