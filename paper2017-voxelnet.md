@@ -412,11 +412,11 @@ as:
 
 ### 3.2. Data Augmentation (3D 포인트 클라우드 데이터 증폭 방법)
 
-- 4000개의 학습 데이터는 오버 피팅 위험성이 있으므로 데이터 증폭 수행 `With less than 4000 training point clouds, training our network from scratch will inevitably suffer from overfitting.`
+- 4000개의 학습 데이터는 오버 피팅 위험성이 있으므로 데이터 증폭  `With less than 4000 training point clouds, training our network from scratch will inevitably suffer from overfitting.`
 
 - To reduce this issue, we introduce three different forms of data augmentation. 
 - The augmented training data are generated on-the-fly without the need to be stored on disk [20].
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjIxOTgyNDldfQ==
+eyJoaXN0b3J5IjpbLTE5MDIxNTA0OTBdfQ==
 -->
