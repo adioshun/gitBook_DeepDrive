@@ -273,14 +273,14 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 
 - V는 t개이상의 포인트를 가진 비어 있지 않은 **복셀**인다. 
-	- Denote $$V= \{ p_i = \left[ x_i, y_i, z_i, r_i\]^T \in \Re^4 \}_{i=1...t}$$ as a non-empty voxel containing t ≤ T LiDAR points, 
+	- Denote $$V= \{ p_i = \left[ x_i, y_i, z_i, r_i\right]^T \in \Re^4 \}_{i=1...t}$$ as a non-empty voxel containing t ≤ T LiDAR points, 
 	- where $$p_i$$ contains XYZ coordinates for the i-th point and $$r_i$$ is the received reflectance. 
 
 - 먼저  local mean을 구하여 V에 있는 모든 포인트의 Centroid값으로 정한다.  
 	- We first compute the local mean as the centroid of all the points in V, 
 	- denoted as $$(v_x, v_y, v_z)$$.
 
-- Then we augment each point $$p_i$$ with the relative offset w.r.t. the centroid and obtain the input feature set $ V_{in} = \{\hat p_i = \[x_i, y_i, z_i, r_i, x_i − v_x, y_i −v_y, z_i −v_z\]^T \in \Re^7\}_{i=1...t}$
+- 다음, centroid와 입력 특징셋 V_포인트를 증폭시킨다. Then we augment each point $$p_i$$ with the relative offset w.r.t. the centroid and obtain the input feature set $ V_{in} = \{\hat p_i = \[x_i, y_i, z_i, r_i, x_i − v_x, y_i −v_y, z_i −v_z\]^T \in \Re^7\}_{i=1...t}$
 
 - Next, each $$\hat p_i$$ is transformed through the fully connected network (FCN) into a feature space, where we can aggregate information from the point features $$f_i \in \Re^m$$ to encode the shape of the surface contained within the voxel. 
 
@@ -315,5 +315,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODYyNTM2NDZdfQ==
+eyJoaXN0b3J5IjpbMTMwOTE5MjQzNF19
 -->
