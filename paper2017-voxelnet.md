@@ -301,7 +301,17 @@ $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received refl
 
 - The voxel-wise feature is obtained by transforming the output of $VFE-n$ into $\Re^C$ via FCN and applying element-wise Maxpool where C is the dimension of the voxel-wise feature, as shown in Figure 2.
 
+######[Sparse Tensor Representation]
+
+- By processing only the non-empty voxels, we obtain a list of voxel features, each uniquely associated to the spatial coordinates of a particular non-empty voxel. 
+
+The obtained list of voxel-wise features can be represented as a sparse 4D tensor, of size $C × \prime{D}× \prime{H} × \prime{W}$ as shown in Figure 2. Although the
+point cloud contains ∼100k points, more than 90% of voxels
+typically are empty. Representing non-empty voxel features
+as a sparse tensor greatly reduces the memory usage
+and computation cost during backpropagation, and it is a
+critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNDY2OTE2Nl19
+eyJoaXN0b3J5IjpbLTEyNzY0NjE4OTddfQ==
 -->
