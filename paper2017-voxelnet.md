@@ -414,10 +414,9 @@ as:
 
 - With less than 4000 training point clouds, training our network from scratch will inevitably suffer from overfitting.
 
-- To reduce this issue, we introduce three different forms of
-data augmentation. The augmented training data are generated
+- To reduce this issue, we introduce three different forms of data augmentation. The augmented training data are generated
 on-the-fly without the need to be stored on disk [20].
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNTY0MTk5NV19
+eyJoaXN0b3J5IjpbLTE2NzQ2MTgxNDNdfQ==
 -->
