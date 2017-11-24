@@ -238,11 +238,24 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 -  복셀 단위로 포인트 들을 그룹핑 `We group the points according to the voxel they reside in. `
 
+
 - 아래 특징으로 포인트 클라우드는 산재 되어 있고 highly variable point density하다. `Due to factors the LiDAR point cloud is sparse and has highly variable point density throughout the space. `
 	- Factors = such as distance, occlusion, object’s relative pose, and non-uniform sampling,
 
+
 - 따라서 그룹핑후 복셀은 포인트에 대한 variable number을 가지게 된다. `Therefore, after grouping, a voxel will contain a variable number of points. `
 	- 그림 2에서는 복셀 1이 포이트가 가장 많고, 복셀 3은 하나도 없다. `An illustration is shown in Figure 2, where Voxel-1 has significantly more points than Voxel-2 and Voxel-4, while Voxel-3 contains nopoint`
+
+
+###### [Random Sampling]
+
+- 일반적으로 고밀도 LiDARTypically a high-definition LiDAR point cloud is composed of ∼100k points. 
+
+Directly processingall the points not only imposes increased memory/efficiencyburdens on the computing platform, but alsohighly variable point density throughout the space mightbias the detection. 
+
+To this end, we randomly sample a fixednumber, T, of points from those voxels containing morethan T points. 
+
+This sampling strategy has two purposes,(1) computational savings (see Section 2.3 for details); and(2) decreases the imbalance of points between the voxelswhich reduces the sampling bias, and adds more variationto training.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjkxOTE2OThdfQ==
+eyJoaXN0b3J5IjpbLTE2MjgwMzEwOF19
 -->
