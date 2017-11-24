@@ -393,9 +393,9 @@ After each convolution layer, BN and ReLU operations areapplied.
 - To retrieve the ground truth box from a matching positive anchor parameterized as $$(x^a_c, y^a_c, z^a_c, l^a, w^a, h^a, \theta^a)$$ , we define the residual vector $$ u\star \in \Re^7$$ containing the 7 regression targets
 corresponding to center location ∆x, ∆y, ∆z, three di-mensions ∆l, ∆w, ∆h, and the rotation ∆θ, which are computed
 as:
-
+\Delta
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzEwNzc0N119
+eyJoaXN0b3J5IjpbLTE4NTI1NDIzNDVdfQ==
 -->
