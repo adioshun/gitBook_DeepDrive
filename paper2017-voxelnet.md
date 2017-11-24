@@ -341,11 +341,10 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - We use ConvMD($$c_{in}, c_{out}, k, s, p$$) to represent an M-dimensional convolution operator
 	-  where $$c_{in}$$ and $$c_{out}$$ are the number of input and output channels, 
-	- k(kernel size), s(stride size), and p(padding size) are the M-dimensional vectors corresponding to , stride size and  respectively. 
-	- When the size across the
-M-dimensions are the same, we use a scalar to represent
+	- k(kernel size), s(stride size), and p(padding size) are the M-dimensional vectors 
+	- When the size across the M-dimensions are the same, we use a scalar to represent
 the size e.g. k for k = (k, k, k).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTc0NTc2NjBdfQ==
+eyJoaXN0b3J5IjpbOTAwMjE0MzMyXX0=
 -->
