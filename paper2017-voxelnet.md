@@ -201,11 +201,13 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 ### 1.2 Contributions
 
-- We propose a novel end-to-end trainable deep architecture for point-cloud-based 3D detection, VoxelNet,that directly operates on sparse 3D points and avoids information bottlenecks introduced by manual feature engineering.
+- 산재된 3D points에 바로 동작 하여 메뉴얼한 피쳐 엔지니어링 불필요 `We propose a novel end-to-end trainable deep architecture for point-cloud-based 3D detection, VoxelNet,that directly operates on sparse 3D points and avoids information bottlenecks introduced by manual feature engineering.`
 
-- We present an efficient method to implement VoxelNetwhich benefits both from the sparse point structure andefficient parallel processing on the voxel grid.
+- We present an efficient method to implement VoxelNet which benefits both from the 
+	- sparse point structure and 
+	- efficient parallel processing on the voxel grid.
 
 - We conduct experiments on KITTI benchmark andshow that VoxelNet produces state-of-the-art resultsin LiDAR-based car, pedestrian, and cyclist detectionbenchmarks.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzEyNTE2N119
+eyJoaXN0b3J5IjpbLTEzMDE3OTA0MThdfQ==
 -->
