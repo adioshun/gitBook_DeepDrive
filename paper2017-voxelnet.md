@@ -367,7 +367,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - 본 연구에서는 RPN의 일부분을 수정하여 적용 하였다. `In this work, we make several key modifications to the RPN architecture proposed in [32] ,and combine it with the feature learning network and convolutional middle layers to form an end-to-end trainable pipeline.`
 
-The input to our RPN is the feature map provided bythe convolutional middle layers. 
+The input to our RPN is the feature map provided by the convolutional middle layers. 
 
 The architecture of thisnetwork is illustrated in Figure 4. 
 
@@ -380,5 +380,5 @@ We then upsample the output of every block to afixed size and concatanate to con
 Finally, this feature map is mapped to the desiredlearning targets: (1) a probability score map and (2) aregression map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NjI1MTE5XX0=
+eyJoaXN0b3J5IjpbLTQ3MDUxMTY1M119
 -->
