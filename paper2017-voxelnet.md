@@ -410,7 +410,7 @@ as:
 
 #### B. Pedestrian and Cyclist Detection
 
-#### C.
+#### C. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY2ODU4MTQyXX0=
+eyJoaXN0b3J5IjpbMTYyNjcwODgyMl19
 -->
