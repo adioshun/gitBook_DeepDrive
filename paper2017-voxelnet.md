@@ -398,7 +398,9 @@ as:
 
 
 
-### 2.3 
+### 2.3 Efficient Implementation
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNjc4MjU2Ml19
+eyJoaXN0b3J5IjpbLTEzMzgwMjU1MV19
 -->
