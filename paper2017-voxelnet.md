@@ -325,7 +325,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 - 복셀 단위 특징`(voxel-wise feature)`은 FCN과 element-wise Maxpool을 이용하여 출력 $$VFE-n$$을 $$\Re^C$$로 변환하여 얻은 것이다. 
 	- The voxel-wise feature is obtained by transforming the output of $$VFE-n$$ into $$\Re^C$$ via FCN and applying element-wise Maxpool where C is the dimension of the voxel-wise feature, as shown in Figure 2.
 
-######[Sparse Tensor Representation]
+###### [Sparse Tensor Representation]
 
 - 하나의 복셀에 대한 연산을 통해 복셀 특징 리스트를 얻게 된다. `By processing only the non-empty voxels, we obtain a list of voxel features,` 
 	- 각각은 복셀의 공간적 좌표와 연결되어 있다. `each uniquely associated to the spatial coordinates of a particular non-empty voxel. `
@@ -335,8 +335,8 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - 비록 포인트 클라우드가 ∼100k points로 구성되어 있지만 90%는 비어 있는 것이다. ` Although the point cloud contains ∼100k points, more than 90% of voxels typically are empty. `
 
-- Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
+- 비어있지 않는 복셀 특징을 sparse tensor표현하는것은 효율화 측면에서 좋다. ` Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczOTcxOTg2MV19
+eyJoaXN0b3J5IjpbMTU1NzY4NDYwMl19
 -->
