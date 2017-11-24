@@ -348,9 +348,11 @@ Intelligent Vehicles Symposium (IV), 2015.
 		- 3D convolution, 
 		- BN layer, and 
 		- ReLU layer sequentially. 
+
+
 - The convolutional middle layers aggregate voxel-wise features within a progressively expanding receptive field, adding more context to the shape description. 
 - The detailed sizes of the filters in the convolutional middle layers are explained in Section 3
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MDMwMjA2Nl19
+eyJoaXN0b3J5IjpbOTc4MTgyNTUwXX0=
 -->
