@@ -407,6 +407,8 @@ as:
 ### 3.1. Network Details
 
 #### A. Car Detection
+
+#### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NTkxODc3NV19
+eyJoaXN0b3J5IjpbMjM1MTY1Njc5XX0=
 -->
