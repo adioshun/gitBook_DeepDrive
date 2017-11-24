@@ -239,11 +239,11 @@ Intelligent Vehicles Symposium (IV), 2015.
 -  복셀 단위로 포인트 들을 그룹핑 `We group the points according to the voxel they reside in. `
 
 - Due to factors the LiDAR point cloud is sparse and has highly variable point density throughout the space. 
-	- Factors
+	- Factors = such as distance, occlusion, object’s relative pose, and non-uniform sampling,
 
 - Therefore, after grouping, a voxelwill contain a variable number of points. 
 
 - An illustration is shown in Figure 2, where Voxel-1 has significantly more points than Voxel-2 and Voxel-4, while Voxel-3 contains nopoint
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NDEyNTAyOF19
+eyJoaXN0b3J5IjpbOTMxNzM3NTI4XX0=
 -->
