@@ -355,7 +355,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - The detailed sizes of the filters in the convolutional middle layers are explained in Section 3
 
-#### 
+#### C
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NTk0NjI1Ml19
+eyJoaXN0b3J5IjpbLTE4OTM3OTE1MTVdfQ==
 -->
