@@ -5,7 +5,7 @@
 | Citation ID / 키워드 | Yin2017VoxelNet, |
 | 데이터셋(센서)/모델 | |
 | 관련연구||
-| 참고 | |
+| 참고 |[post](https://goo.gl/udPYQ4) |
 | 코드 | |
 
 
@@ -90,3 +90,66 @@ Publishing.
 
 - 본 논문에서는 `point set feature learning` 와 `RPN`간의 차이를 줄였다. `In this paper,we close the gap between point set feature learning and RPN for 3D detection task.`
 
+###### [본 논문의 제안] 
+
+- 특징 추출과 물체 탐지를 동시에 수행하는 end-to-end 기반 VoxelNet 제안 `We present VoxelNet, a generic 3D detection framework that simultaneously learns a discriminative feature representation from point clouds and predicts accurate 3D bounding boxes, in an end-to-end fashion, as shown in Figure 2. `
+
+![](https://i.imgur.com/CR3qkLX.png)
+```
+[Figure 2. VoxelNet architecture.]
+- The feature learning network takes a raw point cloud as input, 
+- partitions the space into voxels, and transforms points within each voxel to a vector representation characterizing the shape information. 
+- The space is represented as a sparse 4D tensor. 
+- The convolutional middle layers processes the 4D tensor to aggregate spatial context. 
+- Finally, a RPN generates the 3D detection
+```
+
+- VFE 층 제안 `We design a novel voxel feature encoding (VFE) layer, which enables`
+    - point-wise features combine을 통해 Voxel내 포인트간의 상호 작용이 가능 `inter-point interaction within a voxel, by combining point-wise features with a locally aggregated feature.`
+
+- VFE 층을 쌓음으로써 성능 향상이 가능하다. `Stacking multiple VFE layers allows learning complex features for characterizing local 3D shape information. `
+
+- Specifically,VoxelNet divides the point cloud into equally 
+    - spaced 3D voxels, encodes each voxel via stacked VFE layers, 
+    - and then 3D convolution further aggregates local voxel features, transforming the point cloud into a high-dimensional volumetric representation. 
+
+- 마지막으로 volumetric representation에 RPN을 적용하여 탐지 결과를 출력한다. `Finally, a RPN consumes the volumetric representation and yields the detection result. `
+
+- 이 방식은 산재된 포인트 클라우드 구조와 voxel grid의 parallel연산에도 효율적이다. `This efficient algorithm benefits both from the sparse point structure and efficient parallel processing on the voxel grid.`
+
+
+###### [성능평가] 
+
+- 성능평가는 KITTI데이터셋의 **bird’s eye view detection** 와 **the full 3D detection tasks**에 대하여 진행 하였다. `We evaluate VoxelNet on the bird’s eye view detection and the full 3D detection tasks, provided by the KITTI benchmark [11]. `
+
+- 다른 아이디어 대비 성능 좋다. `Experimental results show that VoxelNet outperforms the state-of-the-art LiDAR based 3D detection methods by a large margin. `
+
+- 보행자와 자전거 탐지에도 좋은 성능을 보인다. `We also demonstrate that VoxelNet achieves highly encouraging results in detecting pedestrians and cyclists from LiDAR point cloud.`
+
+### 1.1 Related Work
+
+Rapid development of 3D sensor technology has motivatedresearchers to develop efficient representations to detectand localize objects in point clouds. 
+
+Some of the earliermethods for feature representation are [39, 8, 7, 19, 40, 33,6, 25, 1, 34, 2]. 
+
+These hand-crafted features yield satisfactoryresults when rich and detailed 3D shape information isavailable. 
+
+However their inability to adapt to more complexshapes and scenes, and learn required invariances from dataresulted in limited success for uncontrolled scenarios suchas autonomous navigation.Given that images provide detailed texture information,many algorithms infered the 3D bounding boxes from 2Dimages [4, 3, 42, 43, 44, 36]. 
+
+However, the accuracy ofimage-based 3D detection approaches are bounded by theaccuracy of the depth estimation.Several LIDAR based 3D object detection techniquesutilize a voxel grid representation. 
+
+[41, 9] encode eachnonempty voxel with 6 statistical quantities that are derivedfrom all the points contained within the voxel. 
+
+[37]fuses multiple local statistics to represent each voxel. 
+
+[38]computes the truncated signed distance on the voxel grid.[21] uses binary encoding for the 3D voxel grid. 
+
+[5] introducesa multi-view representation for a LiDAR pointcloud by computing a multi-channel feature map in thebird’s eye view and the cylindral coordinates in the frontalview. 
+
+Several other studies project point clouds onto a perspectiveview and then use image-based feature encoding schemes [28, 15, 22].There are also several multi-modal fusion methods thatcombine images and LiDAR to improve detection accuracy[10, 16, 5]. 
+
+These methods provide improved performancecompared to LiDAR-only 3D detection, particularlyfor small objects (pedestrians, cyclists) or when the objectsare far, since cameras provide an order of magnitude moremeasurements than LiDAR. 
+
+However the need for an additionalcamera that is time synchronized and calibrated withthe LiDAR restricts their use and makes the solution moresensitive to sensor failure modes. 
+
+In this work we focus onLiDAR-only detection.
