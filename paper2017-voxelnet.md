@@ -369,7 +369,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - RPN의 입력은 합성곱 중간 층에서 제공되는 특징맵이다. `The input to our RPN is the feature map provided by the convolutional middle layers. `
 
-The architecture of thisnetwork is illustrated in Figure 4. 
+The architecture of this network is illustrated in Figure 4. 
 
 The network has threeblocks of fully convolutional layers. 
 
@@ -380,5 +380,5 @@ We then upsample the output of every block to afixed size and concatanate to con
 Finally, this feature map is mapped to the desiredlearning targets: (1) a probability score map and (2) aregression map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5ODY5MTY1OV19
+eyJoaXN0b3J5IjpbLTUwOTE0MDQzM119
 -->
