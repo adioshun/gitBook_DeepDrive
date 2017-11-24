@@ -295,17 +295,13 @@ $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received refl
 
 - We use $VFE-i(c_{in}, c_{out})$ to represent the i-th VFE layer that transforms input features of dimension $c_{in}$ into output features of dimension $c_{out}$. 
 
-- The linear layer learns a matrix of size $c_{in} \time ( \frac{c_{out}}{2})$, and the point-wise concatenation
-yields the output of dimension cout.
-Because the output feature combines both point-wise
-features and locally aggregated feature, stacking VFE layers
-encodes point interactions within a voxel and enables
-the final feature representation to learn descriptive shape
-information. The voxel-wise feature is obtained by transforming
-the output of VFE-n into R
-C via FCN and applying
-element-wise Maxpool where C is the dimension of the
-voxel-wise feature, as shown in Figure 2.
+- The linear layer learns a matrix of size $c_{in} \time ( c_{out} / 2 )$, and the point-wise concatenation yields the output of dimension cout.
+
+- Because the output feature combines both point-wise features and locally aggregated feature, stacking VFE layers encodes point interactions within a voxel and enables the final feature representation to learn descriptive shape information. 
+
+- The voxel-wise feature is obtained by transforming the output of $VFE-n$ into $\Re^C$ via FCN and applying element-wise Maxpool where C is the dimension of the voxel-wise feature, as shown in Figure 2.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAyNTkzMDU2XX0=
+eyJoaXN0b3J5IjpbLTQxNDY2OTE2Nl19
 -->
