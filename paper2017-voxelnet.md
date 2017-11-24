@@ -344,8 +344,8 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- k(kernel size), s(stride size), and p(padding size) are the M-dimensional vectors 
 	- When the size across the M-dimensions are the same, we use a scalar to represent the size e.g. k for k = (k, k, k).
 
-- 
+- Each convolutional middle layer applies 3D convolution,
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDEzMDAwNzddfQ==
+eyJoaXN0b3J5IjpbLTE2NDM2OTI3ODhdfQ==
 -->
