@@ -224,7 +224,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - Given a point cloud, we subdivide the 3D space into equally spaced voxels as shown in Figure 2. 
 
-- Suppose the point cloud encompasses 3D space with range $$D,H, W along the Z, Y, X axes respectively. 
+- Suppose the point cloud encompasses 3D space with range $$D,H, W$$ along the Z, Y, X axes respectively. 
 
 We define eachvoxel of size vD, vH, and vW accordingly. 
 
@@ -232,5 +232,5 @@ The resulting3D voxel grid is of size D0= D/vD, H0= H/vH, W0=W/vW .
 
 Here, for simplicity, we assume D, H, W are amultiple of vD, vH, vW .
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYwNzIwOTYzXX0=
+eyJoaXN0b3J5IjpbLTE0MDQxODMyOTNdfQ==
 -->
