@@ -358,7 +358,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 #### C. Region Proposal Network
 
 - Recently, region proposal networks [32-Faster R-CNN] have become an important building block of top-performing object detection frameworks [38, 5, 23]. 
-- 
+
 ```
 
 In this work, we make severalkey modifications to the RPN architecture proposed in [32],and combine it with the feature learning network and convolutionalmiddle layers to form an end-to-end trainablepipeline.The input to our RPN is the feature map provided bythe convolutional middle layers. 
@@ -374,5 +374,5 @@ We then upsample the output of every block to afixed size and concatanate to con
 Finally, this feature map is mapped to the desiredlearning targets: (1) a probability score map and (2) aregression map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg0NjY4MjczXX0=
+eyJoaXN0b3J5IjpbMTY5NjkzNjk5MF19
 -->
