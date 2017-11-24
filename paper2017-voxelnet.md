@@ -402,7 +402,9 @@ as:
 
 ![](https://i.imgur.com/eWL8LDG.png)
 
-## 
+## 3. Training Details
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjk4Njg5OTFdfQ==
+eyJoaXN0b3J5IjpbMTU5Nzc1NzAwNl19
 -->
