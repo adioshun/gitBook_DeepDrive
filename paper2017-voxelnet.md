@@ -414,9 +414,9 @@ as:
 
 - 4000개의 학습 데이터는 오버 피팅 위험성이 있으므로 데이터 증폭 필요 `With less than 4000 training point clouds, training our network from scratch will inevitably suffer from overfitting.`
 
-- 본 논문에서는 3가To reduce this issue, we introduce three different forms of data augmentation. 
+- 본 논문에서는 3가지 형태의 방법 ㅅTo reduce this issue, we introduce three different forms of data augmentation. 
 - The augmented training data are generated on-the-fly without the need to be stored on disk [20].
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODkzOTI3MzddfQ==
+eyJoaXN0b3J5IjpbMjAyNTExMzA1NV19
 -->
