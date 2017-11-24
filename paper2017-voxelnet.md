@@ -288,9 +288,12 @@ Intelligent Vehicles Symposium (IV), 2015.
 	-  Next, each $$\hat p_i$$ is transformed through the fully connected network (FCN) into a feature space, 
 	- where we can aggregate information from the point features $$f_i \in \Re^m$$ to encode the shape of the surface contained within the voxel. 
 
-- The FCN is composed of a linear layer, a batch normalization (BN) layer, and a rectified linear unit (ReLU) layer. 
+- FCN의 구성 `The FCN is composed of`
+	- a linear layer, 
+	- a batch normalization (BN) layer, 
+	- and a rectified linear unit (ReLU) layer. 
 
-- After obtaining point-wise feature representations, we use element-wise MaxPooling across all $$f_i$$ associated to $V$ to get the locally aggregated feature $$\tilde{f} \in \Re^m$$ for V. 
+- `point-wise feature representations`를 획득후 $V$에 연관된 모든 $$f_i$$에 대하여 After obtaining point-wise feature representations, we use element-wise MaxPooling across all $$f_i$$ associated to $V$ to get the locally aggregated feature $$\tilde{f} \in \Re^m$$ for V. 
 
 -   Finally, we augment each fi with $$\tilde{f}$$ to form the point-wise concatenated feature as $$f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in \Re^{2m}$$. 
 
@@ -319,5 +322,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NTcxODI1NF19
+eyJoaXN0b3J5IjpbMjAxNDY5MzQzOF19
 -->
