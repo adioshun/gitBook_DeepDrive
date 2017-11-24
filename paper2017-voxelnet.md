@@ -377,11 +377,10 @@ Intelligent Vehicles Symposium (IV), 2015.
 - 네트워크는 3개의 FCL 블럭으로 이루어져 있다. `The network has three blocks of fully convolutional layers. `
 	- The first layer of each block down samples the feature map by half via a convolution with a stride size of 2, followed by a sequence of convolutions of stride 1 (×q means q applications of the filter).
 After each convolution layer, BN and ReLU operations areapplied. 
-
 We then upsample the output of every block to a fixed size and concatanate to construct the high resolution feature map. 
 
 Finally, this feature map is mapped to the desiredlearning targets: (1) a probability score map and (2) aregression map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTc0MDMzODFdfQ==
+eyJoaXN0b3J5IjpbMjA3NDc4MDE1M119
 -->
