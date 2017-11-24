@@ -448,11 +448,11 @@ as:
 
 - 또한 이를 구현 하였다. `We also present an efficient implementation of VoxelNet that benefits from point cloud sparsity and parallel processing on a voxel grid. `
 
-Our experiments on the KITTI car detection task show that VoxelNet outperformsstate-of-the-art LiDAR based 3D detection methodsby a large margin. 
+- 실험 겱Our experiments on the KITTI car detection task show that VoxelNet outperformsstate-of-the-art LiDAR based 3D detection methodsby a large margin. 
 
 On more challenging tasks, such as 3Ddetection of pedestrians and cyclists, VoxelNet also demonstratesencouraging results showing that it provides a better3D representation. 
 
 Future work includes extending VoxelNetfor joint LiDAR and image based end-to-end 3D detectionto further improve detection and localization accuracy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA1NzkzMjYyXX0=
+eyJoaXN0b3J5IjpbLTE3OTIyMTU0MDJdfQ==
 -->
