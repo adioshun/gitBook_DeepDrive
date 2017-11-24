@@ -431,10 +431,10 @@ as:
 
 - Finally, we apply global rotation to all ground truth boxes $$b_i$$ and to the whole point cloud M.
 
-> 
+> Data Augmentation
 
 
 ## 4. Experiments
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MzAyNjkyNV19
+eyJoaXN0b3J5IjpbNDk2NzQwODEzXX0=
 -->
