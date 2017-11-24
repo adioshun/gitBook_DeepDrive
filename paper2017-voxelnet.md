@@ -277,12 +277,7 @@ $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received refl
 
 - We first compute the local mean as the centroid of all the points in V, denoted as $(v_x, v_y, v_z)$.
 
-- Then we augment each point pi with the relative offset w.r.t. the centroid and obtain the input feature set Vin = {pˆi =
-[xi
-, yi
-, zi
-, ri
-, xi −vx, yi −vy, zi −vz]
+- Then we augment each point pi with the relative offset w.r.t. the centroid and obtain the input feature set $ V_{in} = \{\hat p_i = \[x_i, y_i, z_i, r_i, x_i − v_x, y_i −v_y, z_i −v_z\]^T \in 
 T ∈ R
 7}i=1...t. Next,
 each pˆi
@@ -294,5 +289,5 @@ shape of the surface contained within the voxel. The FCN
 is composed of a linear layer, a batch normalization (BN)
 layer, and a rectified linear unit (ReLU) layer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI3MTQxMDQ4XX0=
+eyJoaXN0b3J5IjpbLTE5NjM5NjQ3MzZdfQ==
 -->
