@@ -418,7 +418,7 @@ as:
 
 - The augmented training data are generated on-the-fly without the need to be stored on disk [20].
 
-#### A. 
+#### A.  첫번째 방법
 
 - The first form of data augmentation applies **perturbation** independently to each ground truth 3D bounding box together with those LiDAR points within the box
 
@@ -431,5 +431,5 @@ as:
 
 - Finally, we apply global rotation to all ground truth boxes $$b_i$$ and to the whole point cloud M.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMjYxNzU5Nl19
+eyJoaXN0b3J5IjpbLTEwMzY2NTk4ODVdfQ==
 -->
