@@ -422,7 +422,7 @@ as:
 
 - The first form of data augmentation applies **perturbation** independently to each ground truth 3D bounding box together with those LiDAR points within the box
 
-#### B. 
+#### B. 두번째 방법
 
 - Secondly, we apply global scaling to all ground truth boxes $$b_i$$ and to the whole point cloud M
 
@@ -431,5 +431,5 @@ as:
 
 - Finally, we apply global rotation to all ground truth boxes $$b_i$$ and to the whole point cloud M.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzY2NTk4ODVdfQ==
+eyJoaXN0b3J5IjpbMTQxNjg5MDYyM119
 -->
