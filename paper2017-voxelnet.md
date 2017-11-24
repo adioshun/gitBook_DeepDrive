@@ -207,7 +207,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- sparse point structure and 
 	- efficient parallel processing on the voxel grid.
 
-- We conduct experiments on KITTI benchmark andshow that VoxelNet produces state-of-the-art resultsin LiDAR-based car, pedestrian, and cyclist detectionbenchmarks.
+- 성능 평가 결과 좋음 `We conduct experiments on KITTI benchmark and show that VoxelNet produces state-of-the-art results in LiDAR-based car, pedestrian, and cyclist detection benchmarks.`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDE3OTA0MThdfQ==
+eyJoaXN0b3J5IjpbMTM2MjE4OTkzMl19
 -->
