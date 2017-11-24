@@ -319,10 +319,8 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- The linear layer learns a matrix of size $$c_{in} \times ( c_{out} / 2 )$$, and thepoint-wise concatenation yields the output of dimension $$c_{out}$$.
 
 
-- 출력 특징은 아래 두가지를 합친 것이기 때문에 `Because the output feature combines both`
-	- ** point-wise features** 
-	- **locally aggregated feature**, 
-- VFE층을 쌓아 올린 것은, stacking VFE layers encodes point interactions within a voxel and enables the final feature representation to learn descriptive shape information. 
+- 출력 특징은 point-wise features와 locally aggregated feature를 합친 것이기 때문에 
+	- `Because the output feature combines both point-wise features and locally aggregated feature, stacking VFE layers encodes point interactions within a voxel and enables the final feature representation to learn descriptive shape information. 
 
 - The voxel-wise feature is obtained by transforming the output of $$VFE-n$$ into $$\Re^C$$ via FCN and applying element-wise Maxpool where C is the dimension of the voxel-wise feature, as shown in Figure 2.
 
@@ -337,5 +335,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1Njc5MzgxXX0=
+eyJoaXN0b3J5IjpbLTEzNzE5MDI2MTNdfQ==
 -->
