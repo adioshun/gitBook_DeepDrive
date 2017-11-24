@@ -330,12 +330,13 @@ Intelligent Vehicles Symposium (IV), 2015.
 - 하나의 복셀에 대한 연산을 통해 복셀 특징 리스트를 얻게 된다. `By processing only the non-empty voxels, we obtain a list of voxel features,` 
 	- 각각은 복셀의 공간적 좌표와 연결되어 있다. `each uniquely associated to the spatial coordinates of a particular non-empty voxel. `
 
-- The obtained list of voxel-wise features can be represented as a sparse 4D tensor, of size $C × D \prime× H \prime × W \prime$ as shown in Figure 2. 
+- 얻은 복셀 특징 리스트는 4D Tensor로 표현된다. 
+	- The obtained list of voxel-wise features can be represented as a sparse 4D tensor, of size $C × D \prime× H \prime × W \prime$ as shown in Figure 2. 
 
-- Although the point cloud contains ∼100k points, more than 90% of voxels typically are empty. 
+- 비록 포인트 클라우드가 ∼100k points로 구성되어 있지만 90%는 비어 있는 것이다. ` Although the point cloud contains ∼100k points, more than 90% of voxels typically are empty. `
 
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM0NzYwNjcxXX0=
+eyJoaXN0b3J5IjpbMTczOTcxOTg2MV19
 -->
