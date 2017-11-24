@@ -222,15 +222,17 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 ###### [Voxel Partition]
 
+![](https://i.imgur.com/CR3qkLX.png)
+
 - Given a point cloud, we subdivide the 3D space into equally spaced voxels as shown in Figure 2. 
 
 - Suppose the point cloud encompasses 3D space with range D,H, W along the Z, Y, X axes respectively. 
 
 - We define each voxel of size $v_D$, $v_H$, and $v_W $ accordingly. 
 
-- The resulting 3D voxel grid is of size $ \prime D = \frac {D}{v_D}, \prime H = frac{H}{v_H}, \prime W= \frac{W}{v_W}W/vW$ . 
+- The resulting 3D voxel grid is of size $ \prime D = \frac {D}{v_D}, \prime H = frac{H}{v_H}, \prime W= \frac{W}{v_W}$ . 
 
-Here, for simplicity, we assume D, H, W are amultiple of vD, vH, vW .
+- Here, for simplicity, we assume D, H, W are a multiple of $v_D, v_H, v_W$ .
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODk2NTM3NDBdfQ==
+eyJoaXN0b3J5IjpbLTY2NTQ2MDQ0MF19
 -->
