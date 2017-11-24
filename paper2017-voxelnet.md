@@ -429,8 +429,7 @@ as:
 
 #### C. 
 
-- Finally, we apply global rotation to all ground truth
-boxes bi and to the whole point cloud M.
+- Finally, we apply global rotation to all ground truth boxes bi and to the whole point cloud M.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MTAyNjQzMV19
+eyJoaXN0b3J5IjpbMTg5ODUzMDQzN119
 -->
