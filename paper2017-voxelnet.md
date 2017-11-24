@@ -276,9 +276,11 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- where $p_i$ contains XYZ coordinates for the i-th point 
 	- and $r_i$ is the received reflectance. 
 
-- 먼저 V에 있는 모든 포인트의 local mean을 구하여 Centroid값으로 정한다.  We first compute the local mean as the centroid of all the points in V, denoted as $(v_x, v_y, v_z)$.
+- 먼저  local mean을 구하여 V에 있는 모든 포인트의 Centroid값으로 정한다.  
+	- We first compute the local mean as the centroid of all the points in V, 
+	- denoted as $(v_x, v_y, v_z)$.
 
-- Then we augment each point pi with the relative offset w.r.t. the centroid and obtain the input feature set $ V_{in} = \{\hat p_i = \[x_i, y_i, z_i, r_i, x_i − v_x, y_i −v_y, z_i −v_z\]^T \in \Re^7\}_{i=1...t}
+- Then we augment each point $p_i$ with the relative offset w.r.t. the centroid and obtain the input feature set $ V_{in} = \{\hat p_i = \[x_i, y_i, z_i, r_i, x_i − v_x, y_i −v_y, z_i −v_z\]^T \in \Re^7\}_{i=1...t}$
 
 - Next, each $\hat p_i$ is transformed through the fully connected network (FCN) into a feature space, where we can aggregate information from the point features $f_i \in \Re^m$ to encode the shape of the surface contained within the voxel. 
 
@@ -313,5 +315,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzOTg2NTk4N119
+eyJoaXN0b3J5IjpbMTI4Mjg2NDIzMF19
 -->
