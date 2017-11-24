@@ -357,7 +357,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 #### C. Region Proposal Network
 
-- 최근 RPN은 물Recently, region proposal networks [32-Faster R-CNN] have become an important building block of top-performing object detection frameworks [38, 5, 23]. 
+- 최근 RPN은 물체 탐지에서Recently, region proposal networks [32-Faster R-CNN] have become an important building block of top-performing object detection frameworks [38, 5, 23]. 
 
 ```
 [38] S. Song and J. Xiao. Deep Sliding Shapes for amodal 3D object detection in RGB-D images. In CVPR, 2016. 1
@@ -379,5 +379,5 @@ We then upsample the output of every block to afixed size and concatanate to con
 Finally, this feature map is mapped to the desiredlearning targets: (1) a probability score map and (2) aregression map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxODQ5NjUwN119
+eyJoaXN0b3J5IjpbLTc1NjQwOTM4OV19
 -->
