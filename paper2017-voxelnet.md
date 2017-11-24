@@ -383,22 +383,20 @@ After each convolution layer, BN and ReLU operations areapplied.
 ### 2.3  Loss Function
 
 - Let $$ \{ a^{pos}_i\}_{i=1...N_{pos}} $$ be the set of N_pos positive anchors 
-- $$ \{ a^{neg}_j\}_{j=1...N_{neg}} be the set of N_neg negative anchors. 
+- $$ \{ a^{neg}_j\}_{j=1...N_{neg}}$$ be the set of N_neg negative anchors. 
 
 - We parameterize a 3D ground truth box as $$(x^g_c, y^g_c, z^g_c, l^g, w^g, h^g, \theta^g)$$   
-	-  where $$(x^g_c, y^g_c, z^g_c$$ represent the center location,
-	-  $$l^g, w^g, h^g$$ are length, width, height of the box
-	- $$, \theta^g$$ is the yaw rotation around Z-axis. 
+	- where $$(x^g_c, y^g_c, z^g_c$$ represent the center location,
+	- $$l^g, w^g, h^g$$ are length, width, height of the box
+	- $$\theta^g$$ is the yaw rotation around Z-axis. 
 
-- To retrieve the ground truth box from a matching positive anchor parameterized as $$(x^a_c, y^a_c, z^a_c, l^a, w^a, h^a, \theta^a)$$ , we define the residual vector $$ u\star \in \Re^7$$ containing the 7 regression targets
-corresponding to center location ∆ x, ∆y, ∆z three di-mensions ∆l, ∆w, ∆h, and the rotation ∆θ, which are computed
-as:
+- To retrieve the ground truth box from a matching positive anchor parameterized as $$(x^a_c, y^a_c, z^a_c, l^a, w^a, h^a, \theta^a)$$ , we define the residual vector $$ u\star \in \Re^7$$ containing the 7 regression targets corresponding to center location ∆ x, ∆y, ∆z three di-mensions ∆l, ∆w, ∆h, and the rotation ∆θ, which are computed as:
 
 ![](https://i.imgur.com/grUDIA0.png)
 
 
 
-### 2.3 Efficient Implementation
+### 2.4 Efficient Implementation
 
 ![](https://i.imgur.com/eWL8LDG.png)
 
