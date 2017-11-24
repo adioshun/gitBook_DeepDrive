@@ -452,7 +452,7 @@ as:
 
 - 어려운 도전중 하나인 보행자와 자전거 인식도 잘된다. `On more challenging tasks, such as 3D detection of pedestrians and cyclists, VoxelNet also demonstrates encouraging results showing that it provides a better 3D representation. `
 
-- 향후 이미지Future work includes extending VoxelNet for joint LiDAR and image based end-to-end 3D detection to further improve detection and localization accuracy
+- 향후 이미지와의 겨합을 Future work includes extending VoxelNet for joint LiDAR and image based end-to-end 3D detection to further improve detection and localization accuracy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NzAyNTE1OF19
+eyJoaXN0b3J5IjpbLTE2NDU0NDk0NDNdfQ==
 -->
