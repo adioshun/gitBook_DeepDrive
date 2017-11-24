@@ -387,7 +387,7 @@ After each convolution layer, BN and ReLU operations areapplied.
 
 - We parameterize a 3D ground truth box as $$(x^g_c, y^g_c, z^g_c, l^g, w^g, h^g, \theta^g)$$   
 	-  where $$(x^g_c, y^g_c, z^g_c$$ represent the center location,
-	-  $$l^g, w^g, h^g, \theta^g$
+	-  $$l^g, w^g, h^g, \theta^g$$ 
 g
 , wg
 , hg
@@ -417,5 +417,5 @@ corresponding to center location ∆x, ∆y, ∆z, three di-
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5ODM3Mzg0OF19
+eyJoaXN0b3J5IjpbLTIwMDQxOTQ1NDBdfQ==
 -->
