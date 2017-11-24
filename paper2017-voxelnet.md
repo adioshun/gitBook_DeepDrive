@@ -337,6 +337,15 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - 비어있지 않는 복셀 특징을 sparse tensor표현하는것은 효율화 측면에서 좋다. ` Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.`
 
+#### B. Convolutional Middle Layers
+
+- We use ConvMD($$c_{in}, c_{out}, k, s, p$$) to represent an M-dimensional convolution operator
+	-  where cin and cout are the number of input and output channels, k, s, and p are the
+M-dimensional vectors corresponding to kernel size, stride
+size and padding size respectively. When the size across the
+M-dimensions are the same, we use a scalar to represent
+the size e.g. k for k = (k, k, k).
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NzY4NDYwMl19
+eyJoaXN0b3J5IjpbLTMzODQ0MDI3OV19
 -->
