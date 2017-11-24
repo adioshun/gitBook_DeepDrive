@@ -382,9 +382,63 @@ After each convolution layer, BN and ReLU operations areapplied.
 
 ### 2.3  Loss Function
 
+- Let {a
+pos
+i
+}i=1...Npos be the set of Npos positive anchors
+and {a
+neg
+j
+}j=1...Nneg be the set of Nneg negative
+anchors. We parameterize a 3D ground truth box as
+(x
+g
+c
+, yg
+c
+, zg
+c
+, lg
+, wg
+, hg
+, θg
+), where x
+g
+c
+, yg
+c
+, zg
+c
+represent the
+center location, l
+g
+, wg
+, hg
+are length, width, height of the
+box, and θ
+g
+is the yaw rotation around Z-axis. To retrieve
+the ground truth box from a matching positive anchor
+parameterized as (x
+a
+c
+, ya
+c
+, za
+c
+, la
+, wa
+, ha
+, θa
+), we define the
+residual vector u
+∗ ∈ R
+7
+containing the 7 regression targets
+corresponding to center location ∆x, ∆y, ∆z, three di-
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcyMjAwMzk2XX0=
+eyJoaXN0b3J5IjpbLTg0MjAwMzQ3Ml19
 -->
