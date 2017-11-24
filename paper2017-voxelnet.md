@@ -286,23 +286,23 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - The FCN is composed of a linear layer, a batch normalization (BN) layer, and a rectified linear unit (ReLU) layer. 
 
-- After obtaining point-wise feature representations, we use element-wise MaxPooling across all $f_i$ associated to $V$ to get the locally aggregated feature $\tilde{f} \in \Re^m$ for V. 
+- After obtaining point-wise feature representations, we use element-wise MaxPooling across all $$f_i$$ associated to $V$ to get the locally aggregated feature $$\tilde{f} \in \Re^m$$ for V. 
 
--   Finally, we augment each fi with $\tilde{f}$ to form the point-wise concatenated feature as $f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in \Re^{2m}$. 
+-   Finally, we augment each fi with $$\tilde{f}$$ to form the point-wise concatenated feature as $$f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in \Re^{2m}$$. 
 
-- Thus we obtain the output feature set $V_{out} = \{ f^{out)_i\}_{i...t}$. 
+- Thus we obtain the output feature set $$V_{out} = \{ f^{out)_i\}_{i...t}$$. 
 
 - All non-empty voxels are encoded in the same way and they share the same set of parameters in FCN.
 
 
 
-- We use $VFE-i(c_{in}, c_{out})$ to represent the i-th VFE layer that transforms input features of dimension $c_{in}$ into output features of dimension $c_{out}$. 
+- We use $$VFE-i(c_{in}, c_{out})$$ to represent the i-th VFE layer that transforms input features of dimension $$c_{in}$$ into output features of dimension $$c_{out}$$. 
 
-- The linear layer learns a matrix of size $c_{in} \time ( c_{out} / 2 )$, and the point-wise concatenation yields the output of dimension cout.
+- The linear layer learns a matrix of size $$c_{in} \time ( c_{out} / 2 )$$, and the point-wise concatenation yields the output of dimension $$c_{out}$$.
 
 - Because the output feature combines both point-wise features and locally aggregated feature, stacking VFE layers encodes point interactions within a voxel and enables the final feature representation to learn descriptive shape information. 
 
-- The voxel-wise feature is obtained by transforming the output of $VFE-n$ into $\Re^C$ via FCN and applying element-wise Maxpool where C is the dimension of the voxel-wise feature, as shown in Figure 2.
+- The voxel-wise feature is obtained by transforming the output of $$VFE-n$$ into $$\Re^C$$ via FCN and applying element-wise Maxpool where C is the dimension of the voxel-wise feature, as shown in Figure 2.
 
 ######[Sparse Tensor Representation]
 
@@ -315,5 +315,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNDE3MjE5NF19
+eyJoaXN0b3J5IjpbMTg3MzM4MTI5N119
 -->
