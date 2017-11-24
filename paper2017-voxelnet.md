@@ -351,9 +351,9 @@ Intelligent Vehicles Symposium (IV), 2015.
 		- ReLU layer sequentially. 
 
 
-- The convolutional middle layers aggregate voxel-wise features within a progressively expanding receptive field, adding more context to the shape description. 
+- The convolutional middle layers aggregate **voxel-wise features** within a progressively expanding receptive field, adding more context to the shape description. 
 - The detailed sizes of the filters in the convolutional middle layers are explained in Section 3
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NTE5MzU2MF19
+eyJoaXN0b3J5IjpbMTk4ODMwNjMyXX0=
 -->
