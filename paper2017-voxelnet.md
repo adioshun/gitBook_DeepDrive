@@ -438,6 +438,7 @@ as:
 
 
 ## 5. Conclusion
+
 Most existing methods in LiDAR-based 3D detection
 rely on hand-crafted feature representations, for example,
 a bird’s eye view projection. In this paper, we remove the
@@ -457,5 +458,5 @@ encouraging results showing that it provides a better
 for joint LiDAR and image based end-to-end 3D detection
 to further improve detection and localization accuracy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjUzMjMzNjFdfQ==
+eyJoaXN0b3J5IjpbMjQyNzM2MzA1XX0=
 -->
