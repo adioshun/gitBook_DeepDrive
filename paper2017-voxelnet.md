@@ -345,11 +345,9 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- When the size across the M-dimensions are the same, we use a scalar to represent the size e.g. k for k = (k, k, k).
 
 - Each convolutional middle layer applies 3D convolution, BN layer, and ReLU layer sequentially. 
-- The convolutional middle layers aggregate voxel-wise features within a progressively
-expanding receptive field, adding more context
-to the shape description. The detailed sizes of the filters in
+- The convolutional middle layers aggregate voxel-wise features within a progressively expanding receptive field, adding more context to the shape description. The detailed sizes of the filters in
 the convolutional middle layers are explained in Section 3
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NTEyMjg0Ml19
+eyJoaXN0b3J5IjpbLTE2MTUyMzQ2NjJdfQ==
 -->
