@@ -270,6 +270,37 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Figure 3 shows the architecture for VFE Layer-1.
 
 ![](https://i.imgur.com/6xPqfKR.png)
+
+
+Denote V = {pi = [xi
+, yi
+, zi
+, ri
+]
+T ∈ R
+4}i=1...t as a
+non-empty voxel containing t ≤ T LiDAR points, where
+pi contains XYZ coordinates for the i-th point and ri
+is the
+received reflectance. We first compute the local mean as
+the centroid of all the points in V, denoted as (vx, vy, vz).
+Then we augment each point pi with the relative offset w.r.t.
+the centroid and obtain the input feature set Vin = {pˆi =
+[xi
+, yi
+, zi
+, ri
+, xi −vx, yi −vy, zi −vz]
+T ∈ R
+7}i=1...t. Next,
+each pˆi
+is transformed through the fully connected network
+(FCN) into a feature space, where we can aggregate information
+from the point features fi ∈ R
+m to encode the
+shape of the surface contained within the voxel. The FCN
+is composed of a linear layer, a batch normalization (BN)
+layer, and a rectified linear unit (ReLU) layer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDIyNzE0ODZdfQ==
+eyJoaXN0b3J5IjpbLTg0MjM1MDAzMV19
 -->
