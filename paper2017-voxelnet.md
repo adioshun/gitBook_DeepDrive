@@ -435,6 +435,27 @@ as:
 
 
 ## 4. Experiments
+
+
+## 5. Conclusion
+Most existing methods in LiDAR-based 3D detection
+rely on hand-crafted feature representations, for example,
+a bird’s eye view projection. In this paper, we remove the
+bottleneck of manual feature engineering and propose VoxelNet,
+a novel end-to-end trainable deep architecture for
+point cloud based 3D detection. Our approach can operate
+directly on sparse 3D points and capture 3D shape information
+effectively. We also present an efficient implementation
+of VoxelNet that benefits from point cloud sparsity
+and parallel processing on a voxel grid. Our experiments
+on the KITTI car detection task show that VoxelNet outperforms
+state-of-the-art LiDAR based 3D detection methods
+by a large margin. On more challenging tasks, such as 3D
+detection of pedestrians and cyclists, VoxelNet also demonstrates
+encouraging results showing that it provides a better
+3D representation. Future work includes extending VoxelNet
+for joint LiDAR and image based end-to-end 3D detection
+to further improve detection and localization accuracy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDQxMzc2MDZdfQ==
+eyJoaXN0b3J5IjpbLTEyNjUzMjMzNjFdfQ==
 -->
