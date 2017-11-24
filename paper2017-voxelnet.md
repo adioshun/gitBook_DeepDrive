@@ -386,15 +386,7 @@ After each convolution layer, BN and ReLU operations areapplied.
 - $$ \{ a^{neg}_j\}_{j=1...N_{neg}} be the set of N_neg negative anchors. 
 
 - We parameterize a 3D ground truth box as $(x^g_c, y^g_c, z^g_c, l^g, w^g, h^g, \theta^g)$   
-, yg
-c
-, zg
-c
-, lg
-, wg
-, hg
-, θg
-), where x
+	-  where x
 g
 c
 , yg
@@ -432,5 +424,5 @@ corresponding to center location ∆x, ∆y, ∆z, three di-
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MzI3OTQ2MV19
+eyJoaXN0b3J5IjpbNjIyNjgwNjU1XX0=
 -->
