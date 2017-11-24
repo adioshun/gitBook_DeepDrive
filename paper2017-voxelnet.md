@@ -272,7 +272,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 ![](https://i.imgur.com/6xPqfKR.png)
 
 
-- Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in R^4 \}_{i=1...t} as a non-empty voxel containing t ≤ T LiDAR points, where
+- Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in R^4 \}_{i=1...t}$ as a non-empty voxel containing t ≤ T LiDAR points, where
 $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received reflectance. 
 
 - We first compute the local mean as the centroid of all the points in V, denoted as $(v_x, v_y, v_z)$.
@@ -285,7 +285,23 @@ $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received refl
 
 - After obtaining point-wise feature representations, we use element-wise MaxPooling across all $f_i$ associated to $V$ to get the locally aggregated feature $\tilde{f} \in R^m$ for V. 
 
--   Finally, we augment 
+-   Finally, we augment each fi with $\tilde{f}$ to form the point-wise concatenated feature as $f^{out}_
+out
+i = [f
+T
+i
+,
+˜f
+T
+]
+T ∈ R
+2m. Thus we obtain the output
+feature set Vout = {f
+out
+i
+}i...t. All non-empty voxels are
+encoded in the same way and they share the same set of
+parameters in FCN.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzEwOTY2MF19
+eyJoaXN0b3J5IjpbMTc1NDY3MTU2NV19
 -->
