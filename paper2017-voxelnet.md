@@ -261,13 +261,15 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 ###### [Stacked Voxel Feature Encoding ]
 
-- The key innovation is the chain of VFE layers. 
+- 가장 중요한 요소는 `VFE layers.`이다. `The key innovation is the chain of VFE layers. `
 
 - For simplicity, Figure 2 illustrates the hierarchical feature encoding process for one voxel.
 
 - Without loss of generality, we use VFE Layer-1 to describe the details in the following paragraph. 
 
 - Figure 3 shows the architecture for VFE Layer-1.
+
+![](https://i.imgur.com/6xPqfKR.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2ODYzNzI0Ml19
+eyJoaXN0b3J5IjpbLTEzMDIyNzE0ODZdfQ==
 -->
