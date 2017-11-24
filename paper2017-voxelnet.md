@@ -23,7 +23,7 @@
     - Specifically, VoxelNet divides a point cloud into equally spaced 3D voxels and transforms a group of points within each voxel into a unified feature representation through the newly introduced voxel feature encoding (VFE) layer. 
 
 
-- 이렇게 함으로써 포인트 클라우드는 설명령을 가지는 **volumetric representation**로 encode된다. `In this way,the point cloud is encoded as a descriptive volumetric representation,`
+- 이렇게 함으로써 포인트 클라우드는 설명력을 가지는 **volumetric representation**로 encode된다. `In this way,the point cloud is encoded as a descriptive volumetric representation,`
     - 이 representation을 PRN에 적용하여 후보 영역을 찾는다. `which is then connected to a RPN to generate detections. `
 
 
@@ -228,11 +228,11 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - Suppose the point cloud encompasses 3D space with range D,H, W along the Z, Y, X axes respectively. 
 
-- We define each voxel of size $v_D$, $v_H$, and $v_W $ accordingly. 
+- We define each voxel of size $$v_D$$, $$v_H$$, and $$v_W$$ accordingly. 
 
-- The resulting 3D voxel grid is of size $ \prime D = \frac {D}{v_D}, \prime H = frac{H}{v_H}, \prime W= \frac{W}{v_W}$ . 
+- The resulting 3D voxel grid is of size $$D\prime = \frac {D}{v_D}, H\prime = \frac{H}{v_H},  W\prime= \frac{W}{v_W}$$ . 
 
-- Here, for simplicity, we assume D, H, W are a multiple of $v_D, v_H, v_W$ .
+- Here, for simplicity, we assume D, H, W are a multiple of $$v_D, v_H, v_W$$ .
 
 ###### [Grouping]
 
