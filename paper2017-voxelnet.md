@@ -285,7 +285,7 @@ $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received refl
 
 - After obtaining point-wise feature representations, we use element-wise MaxPooling across all $f_i$ associated to $V$ to get the locally aggregated feature $\tilde{f} \in R^m$ for V. 
 
--   Finally, we augment each fi with $\tilde{f}$ to form the point-wise concatenated feature as $f^{out}_
+-   Finally, we augment each fi with $\tilde{f}$ to form the point-wise concatenated feature as $f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in R^{2m}
 out
 i = [f
 T
@@ -303,5 +303,5 @@ i
 encoded in the same way and they share the same set of
 parameters in FCN.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NDY3MTU2NV19
+eyJoaXN0b3J5IjpbLTIwNDE3MzI3MTNdfQ==
 -->
