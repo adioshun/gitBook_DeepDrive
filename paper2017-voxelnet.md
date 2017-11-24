@@ -322,11 +322,12 @@ Intelligent Vehicles Symposium (IV), 2015.
 - 출력 특징은 point-wise features와 locally aggregated feature를 합친 것이기 때문에 
 	- `Because the output feature combines both point-wise features and locally aggregated feature, stacking VFE layers encodes point interactions within a voxel and enables the final feature representation to learn descriptive shape information. 
 
-- 복셀 단위 특징은 FCN과 element-wise Maxpool을 적용하여 출력 The voxel-wise feature is obtained by transforming the output of $$VFE-n$$ into $$\Re^C$$ via FCN and applying element-wise Maxpool where C is the dimension of the voxel-wise feature, as shown in Figure 2.
+- 복셀 단위 특징`(voxel-wise feature)`은 FCN과 element-wise Maxpool을 이용하여 출력 $$VFE-n$$을 $$\Re^C$$로 변환하여 얻은 것이다. 
+	- The voxel-wise feature is obtained by transforming the output of $$VFE-n$$ into $$\Re^C$$ via FCN and applying element-wise Maxpool where C is the dimension of the voxel-wise feature, as shown in Figure 2.
 
 ######[Sparse Tensor Representation]
 
-- By processing only the non-empty voxels, we obtain a list of voxel features, each uniquely associated to the spatial coordinates of a particular non-empty voxel. 
+- 하나의By processing only the non-empty voxels, we obtain a list of voxel features, each uniquely associated to the spatial coordinates of a particular non-empty voxel. 
 
 - The obtained list of voxel-wise features can be represented as a sparse 4D tensor, of size $C × D \prime× H \prime × W \prime$ as shown in Figure 2. 
 
@@ -335,5 +336,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MjcyNjg4MV19
+eyJoaXN0b3J5IjpbMTUxMzc5NTQyN119
 -->
