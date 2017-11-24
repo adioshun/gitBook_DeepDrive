@@ -208,6 +208,15 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- efficient parallel processing on the voxel grid.
 
 - 성능 평가 결과 좋음 `We conduct experiments on KITTI benchmark and show that VoxelNet produces state-of-the-art results in LiDAR-based car, pedestrian, and cyclist detection benchmarks.`
+
+## 2.  VoxelNet
+
+### 2.1 VoxelNet Architecture
+
+- VoxelNet은 3가지 요소로 구성 되어 있다. `The proposed VoxelNet consists of three functional blocks:`
+	- (1) Feature learning network, 
+	- (2) Convolutional middle layers, and 
+	- (3) Region proposal network [32]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2MjE4OTkzMl19
+eyJoaXN0b3J5IjpbMjAyNjM4NTI3OV19
 -->
