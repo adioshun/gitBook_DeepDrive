@@ -364,7 +364,8 @@ Intelligent Vehicles Symposium (IV), 2015.
 object detection in RGB-D images. In CVPR, 2016. 1
 
 
-
+[23] T. Lin, P. Goyal, R. B. Girshick, K. He, and P. Dollar. Focal ´
+loss for dense object detection. IEEE ICCV, 2017.
 ```
 
 
@@ -381,5 +382,5 @@ We then upsample the output of every block to afixed size and concatanate to con
 Finally, this feature map is mapped to the desiredlearning targets: (1) a probability score map and (2) aregression map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MDM1NTAzNl19
+eyJoaXN0b3J5IjpbODc0MTE1MzY4XX0=
 -->
