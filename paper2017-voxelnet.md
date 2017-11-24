@@ -441,10 +441,10 @@ as:
 
 - 기존 방식은 수작업 특징에 의존 하였다. `Most existing methods in LiDAR-based 3D detection rely on hand-crafted feature representations, for example,a bird’s eye view projection. `
 
-- 본 논문에서는 수작업 피쳐 엔지니어링을 제거한 VoxelNet를 제안 하였다. In this paper, we remove the bottleneck of manual feature engineering and propose VoxelNet,`
+- 본 논문에서는 수작업 피쳐 엔지니어링을 제거한 VoxelNet를 제안 하였다. `In this paper, we remove the bottleneck of manual feature engineering and propose VoxelNet,`
 	- a novel end-to-end trainable deep architecture for point cloud based 3D detection. 
 
-Our approach can operatedirectly on sparse 3D points and capture 3D shape informationeffectively. 
+- Our approach can operatedirectly on sparse 3D points and capture 3D shape informationeffectively. 
 
 We also present an efficient implementationof VoxelNet that benefits from point cloud sparsityand parallel processing on a voxel grid. 
 
@@ -454,5 +454,5 @@ On more challenging tasks, such as 3Ddetection of pedestrians and cyclists, Voxe
 
 Future work includes extending VoxelNetfor joint LiDAR and image based end-to-end 3D detectionto further improve detection and localization accuracy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI4OTEzNjM4XX0=
+eyJoaXN0b3J5IjpbMTkzNTMwNjA4NV19
 -->
