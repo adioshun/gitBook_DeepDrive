@@ -365,7 +365,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 [23] T. Lin, P. Goyal, R. B. Girshick, K. He, and P. Dollar. Focal ´loss for dense object detection. IEEE ICCV, 2017.
 ```
 
-- 본 연구에서는 RPN의 일부분을 수정하여 In this work, we make several key modifications to the RPN architecture proposed in [32] ,and combine it with the feature learning network and convolutional middle layers to form an end-to-end trainable pipeline.
+- 본 연구에서는 RPN의 일부분을 수정하여 적용 하In this work, we make several key modifications to the RPN architecture proposed in [32] ,and combine it with the feature learning network and convolutional middle layers to form an end-to-end trainable pipeline.
 
 The input to our RPN is the feature map provided bythe convolutional middle layers. 
 
@@ -380,5 +380,5 @@ We then upsample the output of every block to afixed size and concatanate to con
 Finally, this feature map is mapped to the desiredlearning targets: (1) a probability score map and (2) aregression map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNjg0ODk3N119
+eyJoaXN0b3J5IjpbLTcxNDg4NTA3M119
 -->
