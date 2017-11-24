@@ -422,7 +422,9 @@ as:
 
 - The first form of data augmentation applies **perturbation** independently to each ground truth 3D bounding box together with those LiDAR points within the box
 
+#### B. 
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzE5NzcxOTRdfQ==
+eyJoaXN0b3J5IjpbLTEyMDAzMjI5NzhdfQ==
 -->
