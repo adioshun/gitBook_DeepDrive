@@ -424,8 +424,8 @@ as:
 
 #### B. 
 
-- Secondly, we apply global scaling to all ground truth boxes $$bi$$ and to the whole point cloud M
+- Secondly, we apply global scaling to all ground truth boxes $$b_i$$ and to the whole point cloud M
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDI1MDQ3MTJdfQ==
+eyJoaXN0b3J5IjpbMTU0MDExOTU5OV19
 -->
