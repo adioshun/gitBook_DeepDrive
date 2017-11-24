@@ -427,9 +427,9 @@ as:
 - Secondly, we apply global scaling to all ground truth boxes $$b_i$$ and to the whole point cloud M
 
 
-#### C. 
+#### C.  세번쨰 방법 
 
 - Finally, we apply global rotation to all ground truth boxes $$b_i$$ and to the whole point cloud M.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNjg5MDYyM119
+eyJoaXN0b3J5IjpbMTA4NjMzMDAzNV19
 -->
