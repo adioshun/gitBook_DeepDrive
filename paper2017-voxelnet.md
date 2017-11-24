@@ -418,7 +418,9 @@ as:
 
 - The augmented training data are generated on-the-fly without the need to be stored on disk [20].
 
-#### 
+#### A. The first form of data augmentation applies perturbation
+independently to each ground truth 3D bounding box together
+with those LiDAR points within the box
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NDcxODk4MV19
+eyJoaXN0b3J5IjpbODgzMDUwNzddfQ==
 -->
