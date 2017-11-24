@@ -327,7 +327,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 ######[Sparse Tensor Representation]
 
-- 하나의 복셀By processing only the non-empty voxels, we obtain a list of voxel features, each uniquely associated to the spatial coordinates of a particular non-empty voxel. 
+- 하나의 복셀을 By processing only the non-empty voxels, we obtain a list of voxel features, each uniquely associated to the spatial coordinates of a particular non-empty voxel. 
 
 - The obtained list of voxel-wise features can be represented as a sparse 4D tensor, of size $C × D \prime× H \prime × W \prime$ as shown in Figure 2. 
 
@@ -336,5 +336,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDgxNTM2NDRdfQ==
+eyJoaXN0b3J5IjpbMTg5NTk1MjE4NF19
 -->
