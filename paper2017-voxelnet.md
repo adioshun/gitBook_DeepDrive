@@ -242,8 +242,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- Factors = such as distance, occlusion, object’s relative pose, and non-uniform sampling,
 
 - 따라서 그룹핑후 복셀은 포인트에 대한 variable number을 가지게 된다. `Therefore, after grouping, a voxel will contain a variable number of points. `
-
-- An illustration is shown in Figure 2, where Voxel-1 has significantly more points than Voxel-2 and Voxel-4, while Voxel-3 contains nopoint
+	- 그림 2에서는 복셀 1이 포이트가 가장 많고, 복셀 3은 하나도 없다. `An illustration is shown in Figure 2, where Voxel-1 has significantly more points than Voxel-2 and Voxel-4, while Voxel-3 contains nopoint`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NTM5NjAxOV19
+eyJoaXN0b3J5IjpbLTEzMjkxOTE2OThdfQ==
 -->
