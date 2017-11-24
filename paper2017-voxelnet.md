@@ -345,10 +345,10 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- 크기는 모두 동일함 When the size across the M-dimensions are the same, we use a scalar to represent the size e.g. k for k = (k, k, k).
 
 	- 각 합성곱 중간 레이어는 다음 절차를 순서대로 진행 한다. Each convolutional middle layer applies 
-	- 3D convolution, BN layer, and ReLU layer sequentially. 
+		- 3D convolution, BN layer, and ReLU layer sequentially. 
 - The convolutional middle layers aggregate voxel-wise features within a progressively expanding receptive field, adding more context to the shape description. 
 - The detailed sizes of the filters in the convolutional middle layers are explained in Section 3
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Njg3MTc1ODBdfQ==
+eyJoaXN0b3J5IjpbMjA2NTM4NzE2NF19
 -->
