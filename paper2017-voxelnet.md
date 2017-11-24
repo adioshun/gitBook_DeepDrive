@@ -340,12 +340,12 @@ Intelligent Vehicles Symposium (IV), 2015.
 #### B. Convolutional Middle Layers
 
 - We use ConvMD($$c_{in}, c_{out}, k, s, p$$) to represent an M-dimensional convolution operator
-	-  where cin and cout are the number of input and output channels, k, s, and p are the
+	-  where $$cin$$ and cout are the number of input and output channels, k, s, and p are the
 M-dimensional vectors corresponding to kernel size, stride
 size and padding size respectively. When the size across the
 M-dimensions are the same, we use a scalar to represent
 the size e.g. k for k = (k, k, k).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzODQ0MDI3OV19
+eyJoaXN0b3J5IjpbMTkzMzk2NjUwNV19
 -->
