@@ -276,28 +276,37 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- Denote $$V= \{ p_i = \left[ x_i, y_i, z_i, r_i\right]^T \in \Re^4 \}_{i=1...t}$$ as a non-empty voxel containing t ≤ T LiDAR points, 
 	- where $$p_i$$ contains XYZ coordinates for the i-th point and $$r_i$$ is the received reflectance. 
 
+
 - 먼저  local mean을 구하여 V에 있는 모든 포인트의 Centroid값으로 정한다.  
 	- We first compute the local mean as the centroid of all the points in V, 
 	- denoted as $$(v_x, v_y, v_z)$$.
+
 
 - 다음, centroid와 입력 특징셋 $$V_{in}$$를 기반으로 포인트를 증폭시킨다. 
 	- Then we augment each point $$p_i$$ with the relative offset 
 	- w.r.t. the **centroid** and obtain the **input feature set** $$ V_{in} = \{\hat p_i = \left[x_i, y_i, z_i, r_i, x_i − v_x, y_i −v_y, z_i −v_z\right]^T \in \Re^7\}_{i=1...t}$$
 
+
 - 다음 $$\hat p_i$$는 FCN을 이용하여 특징공간으로 변환 된다. 이공간에서 포인트 특징에서 얻은 정보를 shape로 encode한다. 
 	-  Next, each $$\hat p_i$$ is transformed through the fully connected network (FCN) into a feature space, 
 	- where we can aggregate information from the point features $$f_i \in \Re^m$$ to encode the shape of the surface contained within the voxel. 
+
 
 - FCN의 구성 `The FCN is composed of`
 	- a linear layer, 
 	- a batch normalization (BN) layer, 
 	- and a rectified linear unit (ReLU) layer. 
 
-- `point-wise feature representations`를 획득후 $V$에 연관된 모든 $$f_i$$에 대하여 `element-wise MaxPooling`를 적용하여 After obtaining point-wise feature representations, we use element-wise MaxPooling across all $$f_i$$ associated to $V$ to get the locally aggregated feature $$\tilde{f} \in \Re^m$$ for V. 
 
--   Finally, we augment each fi with $$\tilde{f}$$ to form the point-wise concatenated feature as $$f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in \Re^{2m}$$. 
+- `point-wise feature representations`를 획득후 $V$에 연관된 모든 $$f_i$$에 대하여 `element-wise MaxPooling`를 적용하여 V에 대한  locally aggregated feature를 획득 한다. 
+	- After obtaining point-wise feature representations, we use element-wise MaxPooling across all $$f_i$$ associated to $V$ to get the locally aggregated feature $$\tilde{f} \in \Re^m$$ for V. 
+
+
+-   Finally, we augment each $$f_i$$ with $$\tilde{f}$$ to form the point-wise concatenated feature as $$f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in \Re^{2m}$$. 
+
 
 - Thus we obtain the output feature set $$V_{out} = \{ f^{out)_i\}_{i...t}$$. 
+
 
 - All non-empty voxels are encoded in the same way and they share the same set of parameters in FCN.
 
@@ -322,5 +331,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjQ1NzMwNzFdfQ==
+eyJoaXN0b3J5IjpbMTA0NzQ3NDk4Ml19
 -->
