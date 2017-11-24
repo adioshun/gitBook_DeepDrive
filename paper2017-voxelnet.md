@@ -272,8 +272,8 @@ Intelligent Vehicles Symposium (IV), 2015.
 ![](https://i.imgur.com/6xPqfKR.png)
 
 
-- Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in \Re^4 \}_{i=1...t}$ as a non-empty voxel containing t ≤ T LiDAR points, where
-$p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received reflectance. 
+- Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in \Re^4 \}_{i=1...t}$ as a non-empty voxel containing t ≤ T LiDAR points, 
+	- where $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received reflectance. 
 
 - We first compute the local mean as the centroid of all the points in V, denoted as $(v_x, v_y, v_z)$.
 
@@ -312,5 +312,5 @@ $p_i$ contains XYZ coordinates for the i-th point and $r_i$ is the received refl
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNzU4OTI5Ml19
+eyJoaXN0b3J5IjpbMjAxMjAzNzM4M119
 -->
