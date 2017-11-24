@@ -361,12 +361,8 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 ```
 [38] S. Song and J. Xiao. Deep Sliding Shapes for amodal 3D object detection in RGB-D images. In CVPR, 2016. 1
-[5] X. Chen, H. Ma, J. Wan, B. Li, and T. Xia. Multi-view 3d
-object detection network for autonomous driving. In IEEE
-CVPR, 2017.
-
-[23] T. Lin, P. Goyal, R. B. Girshick, K. He, and P. Dollar. Focal ´
-loss for dense object detection. IEEE ICCV, 2017.
+[5] X. Chen, H. Ma, J. Wan, B. Li, and T. Xia. Multi-view 3d object detection network for autonomous driving. In IEEE CVPR, 2017.
+[23] T. Lin, P. Goyal, R. B. Girshick, K. He, and P. Dollar. Focal ´loss for dense object detection. IEEE ICCV, 2017.
 ```
 
 
@@ -383,5 +379,5 @@ We then upsample the output of every block to afixed size and concatanate to con
 Finally, this feature map is mapped to the desiredlearning targets: (1) a probability score map and (2) aregression map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NDM1MTY0N119
+eyJoaXN0b3J5IjpbLTEzMDYzMDQ0NjVdfQ==
 -->
