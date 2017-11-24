@@ -198,6 +198,14 @@ Intelligent Vehicles Symposium (IV), 2015.
 - 그러나 카메라를 사용하게 되면 싱크 시간이나 칼리브레이션 이 필요 하며 둘중 하나의 센서가 고장 나는 위험도 있다. `However the need for an additional camera that is time synchronized and calibrated with the LiDAR restricts their use and makes the solution more sensitive to sensor failure modes. `
 
 - 따라서 본 논문은 라이다만 고려 한다. `In this work we focus onLiDAR-only detection.`
+
+### 1.2 Contributions
+
+- We propose a novel end-to-end trainable deep architecture for point-cloud-based 3D detection, VoxelNet,that directly operates on sparse 3D points and avoids information bottlenecks introduced by manual feature engineering.
+
+- We present an efficient method to implement VoxelNetwhich benefits both from the sparse point structure andefficient parallel processing on the voxel grid.
+
+- We conduct experiments on KITTI benchmark andshow that VoxelNet produces state-of-the-art resultsin LiDAR-based car, pedestrian, and cyclist detectionbenchmarks.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODE1MzYzMThdfQ==
+eyJoaXN0b3J5IjpbLTEwNzEyNTE2N119
 -->
