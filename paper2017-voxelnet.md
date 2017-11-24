@@ -390,7 +390,8 @@ After each convolution layer, BN and ReLU operations areapplied.
 	-  $$l^g, w^g, h^g, \theta^g$$ 
 g
 , wg
-, hgare length, width, height of the
+, hg
+are length, width, height of the
 box, and θ
 g
 is the yaw rotation around Z-axis. To retrieve
@@ -416,5 +417,5 @@ corresponding to center location ∆x, ∆y, ∆z, three di-
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg3NDE5MDQ2XX0=
+eyJoaXN0b3J5IjpbLTIwMDQxOTQ1NDBdfQ==
 -->
