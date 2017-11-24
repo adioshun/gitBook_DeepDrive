@@ -309,7 +309,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- Thus we obtain the output feature set $$V_{out} = \{ f^{out)_i\}_{i...t}$$. 
 
 
-- 비어 있지 않은 복셀들은 모두 같은 절차를 적용 받고 동일한 파라미터 셋을 공유 한다. All non-empty voxels are encoded in the same way and they share the same set of parameters in FCN.
+- 비어 있지 않은 복셀들은 모두 같은 절차를 적용 받고 동일한 파라미터 셋을 공유 한다. `All non-empty voxels are encoded in the same way and they share the same set of parameters in FCN.
 
 
 
@@ -332,5 +332,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMTY1MjAwOV19
+eyJoaXN0b3J5IjpbLTE0ODkwNDU5MDFdfQ==
 -->
