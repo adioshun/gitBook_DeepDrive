@@ -355,9 +355,8 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - The detailed sizes of the filters in the convolutional middle layers are explained in Section 3
 
-#### 
-Region Proposal Network
+#### C. Region Proposal Network
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUyNzEwNzgwXX0=
+eyJoaXN0b3J5IjpbNDc1NzY2NjkxXX0=
 -->
