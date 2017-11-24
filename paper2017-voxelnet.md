@@ -444,7 +444,7 @@ as:
 - 본 논문에서는 수작업 피쳐 엔지니어링을 제거한 VoxelNet를 제안 하였다. `In this paper, we remove the bottleneck of manual feature engineering and propose VoxelNet,`
 	- a novel end-to-end trainable deep architecture for point cloud based 3D detection. 
 
-- 제Our approach can operate directly on sparse 3D points and capture 3D shape information effectively. 
+- 제안 방식은 Our approach can operate directly on sparse 3D points and capture 3D shape information effectively. 
 
 We also present an efficient implementationof VoxelNet that benefits from point cloud sparsityand parallel processing on a voxel grid. 
 
@@ -454,5 +454,5 @@ On more challenging tasks, such as 3Ddetection of pedestrians and cyclists, Voxe
 
 Future work includes extending VoxelNetfor joint LiDAR and image based end-to-end 3D detectionto further improve detection and localization accuracy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODg5NDQxMTVdfQ==
+eyJoaXN0b3J5IjpbNDk3MzU1OTA1XX0=
 -->
