@@ -282,9 +282,10 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - 다음, centroid와 입력 특징셋 $$V_{in}$$를 기반으로 포인트를 증폭시킨다. 
 	- Then we augment each point $$p_i$$ with the relative offset 
-	- w.r.t. the centroid and obtain the input feature set $$ V_{in} = \{\hat p_i = \left[x_i, y_i, z_i, r_i, x_i − v_x, y_i −v_y, z_i −v_z\right]^T \in \Re^7\}_{i=1...t}$$
+	- w.r.t. the **centroid** and obtain the **input feature set** $$ V_{in} = \{\hat p_i = \left[x_i, y_i, z_i, r_i, x_i − v_x, y_i −v_y, z_i −v_z\right]^T \in \Re^7\}_{i=1...t}$$
 
-- Next, each $$\hat p_i$$ is transformed through the fully connected network (FCN) into a feature space, where we can aggregate information from the point features $$f_i \in \Re^m$$ to encode the shape of the surface contained within the voxel. 
+- 다음 $$\hat p_i$$는 FCN을 이용하여 특징공간으로 변환 된다. 
+	-  Next, each $$\hat p_i$$ is transformed through the fully connected network (FCN) into a feature space, where we can aggregate information from the point features $$f_i \in \Re^m$$ to encode the shape of the surface contained within the voxel. 
 
 - The FCN is composed of a linear layer, a batch normalization (BN) layer, and a rectified linear unit (ReLU) layer. 
 
@@ -317,5 +318,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMzgyMDE1Ml19
+eyJoaXN0b3J5IjpbLTQ4ODA5NjMwNV19
 -->
