@@ -302,13 +302,14 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- After obtaining point-wise feature representations, we use element-wise MaxPooling across all $$f_i$$ associated to $V$ to get the locally aggregated feature $$\tilde{f} \in \Re^m$$ for V. 
 
 
--   Finally, we augment each $$f_i$$ with $$\tilde{f}$$ to form the point-wise concatenated feature as $$f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in \Re^{2m}$$. 
+-   마지막으로 Finally, we augment each $$f_i$$ with $$\tilde{f}$$ to form the point-wise concatenated feature as $$f^{out}_i = \[f^T_i, \tilde{f}^T \]^T \in \Re^{2m}$$. 
 
 
-- Thus we obtain the output feature set $$V_{out} = \{ f^{out)_i\}_{i...t}$$. 
+- 결과적으로 아웃푹 특징셋을 얻게 된다. 
+	- Thus we obtain the output feature set $$V_{out} = \{ f^{out)_i\}_{i...t}$$. 
 
 
-- All non-empty voxels are encoded in the same way and they share the same set of parameters in FCN.
+- 비어 있지 않은 복셀들은 모두 같은 절차를 적용 받고 동일한 파라미터 셋을 공유 한다. All non-empty voxels are encoded in the same way and they share the same set of parameters in FCN.
 
 
 
@@ -331,5 +332,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NzQ3NDk4Ml19
+eyJoaXN0b3J5IjpbMTgxMTY1MjAwOV19
 -->
