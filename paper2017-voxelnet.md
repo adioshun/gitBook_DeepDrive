@@ -316,13 +316,13 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 
 - 선형층은 $$c_{in} \times ( c_{out} / 2 )$$크기의 매트릭스를 학습하고 **point-wise concatenation**은 $$c_{out}$$차원의 결과물을 출력한다.
-	- The linear layer learns a matrix of size $$c_{in} \times ( c_{out} / 2 )$$, and the point-wise concatenation yields the output of dimension $$c_{out}$$.
+	- The linear layer learns a matrix of size $$c_{in} \times ( c_{out} / 2 )$$, and thepoint-wise concatenation yields the output of dimension $$c_{out}$$.
 
 
 - 출력 특징은 아래 두가지를 합친 것이기 때문에 `Because the output feature combines both`
-	- **point-wise features** 
+	- ** point-wise features** 
 	- **locally aggregated feature**, 
-- VFE층을 쌓아 올린 것은 stacking VFE layers encodes point interactions within a voxel and enables the final feature representation to learn descriptive shape information. 
+- VFE층을 쌓아 올린 것은, stacking VFE layers encodes point interactions within a voxel and enables the final feature representation to learn descriptive shape information. 
 
 - The voxel-wise feature is obtained by transforming the output of $$VFE-n$$ into $$\Re^C$$ via FCN and applying element-wise Maxpool where C is the dimension of the voxel-wise feature, as shown in Figure 2.
 
@@ -337,5 +337,5 @@ Intelligent Vehicles Symposium (IV), 2015.
 - Representing non-empty voxel features as a sparse tensor greatly reduces the memory usage and computation cost during backpropagation, and it is a critical step in our efficient implementation.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NDY4MzIxNV19
+eyJoaXN0b3J5IjpbMTU1Njc5MzgxXX0=
 -->
