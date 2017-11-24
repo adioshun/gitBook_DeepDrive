@@ -372,6 +372,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - The architecture of this network is illustrated in Figure 4. 
 
+![](https://i.imgur.com/uUkN62h.png)
 
 
 The network has threeblocks of fully convolutional layers. 
@@ -383,5 +384,5 @@ We then upsample the output of every block to afixed size and concatanate to con
 Finally, this feature map is mapped to the desiredlearning targets: (1) a probability score map and (2) aregression map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgwNDM5MDg4XX0=
+eyJoaXN0b3J5IjpbMTAyNjM1OTkwOF19
 -->
