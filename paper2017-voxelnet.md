@@ -251,11 +251,11 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - 일반적으로 고밀도 LiDAR는 ~100k개의 포인트로 구성된다. `Typically a high-definition LiDAR point cloud is composed of ∼100k points. `
 
-Directly processingall the points not only imposes increased memory/efficiencyburdens on the computing platform, but alsohighly variable point density throughout the space mightbias the detection. 
+Directly processing all the points not only imposes increased memory/efficiencyburdens on the computing platform, but alsohighly variable point density throughout the space mightbias the detection. 
 
 To this end, we randomly sample a fixednumber, T, of points from those voxels containing morethan T points. 
 
 This sampling strategy has two purposes,(1) computational savings (see Section 2.3 for details); and(2) decreases the imbalance of points between the voxelswhich reduces the sampling bias, and adds more variationto training.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNDQyNTIxMV19
+eyJoaXN0b3J5IjpbMTYzNTExMzYzN119
 -->
