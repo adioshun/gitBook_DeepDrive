@@ -2,8 +2,8 @@
 | --- | --- |
 | 저자\(소속\) | Yin Zhou\(Apple\) |
 | 학회/년도 | arXiv Nov 2017, [논문](https://arxiv.org/abs/1711.06396) |
-| Citation ID / 키워드 | Yin2017VoxelNet, |
-| 데이터셋(센서)/모델 | |
+| Citation ID / 키워드 | Yin2017VoxelNet, LiDAR Onlu |
+| 데이터셋(센서)/모델 | KITTI  |
 | 관련연구||
 | 참고 |[post](https://goo.gl/udPYQ4) |
 | 코드 | |
@@ -128,28 +128,73 @@ Publishing.
 
 ### 1.1 Related Work
 
-Rapid development of 3D sensor technology has motivatedresearchers to develop efficient representations to detectand localize objects in point clouds. 
+- 3D sensor기술의 발전은 detect과 localize을 위한 효율적인 representations개발에 모티브가 되었다. `Rapid development of 3D sensor technology has motivated researchers to develop efficient representations to detect and localize objects in point clouds. `
 
-Some of the earliermethods for feature representation are [39, 8, 7, 19, 40, 33,6, 25, 1, 34, 2]. 
+- 초반기의 특징 representations방법들은 다음과 같다. `Some of the earlier methods for feature representation are [39, 8, 7, 19, 40, 33,6, 25, 1, 34, 2]. `
 
-These hand-crafted features yield satisfactoryresults when rich and detailed 3D shape information isavailable. 
+- 이러한 수작업 특징들은 rich하고 detailed 3D shape information가 있을때는 좋은 성과를 보인다. `These hand-crafted features yield satisfactory results when rich and detailed 3D shape information is available. `
 
-However their inability to adapt to more complexshapes and scenes, and learn required invariances from dataresulted in limited success for uncontrolled scenarios suchas autonomous navigation.Given that images provide detailed texture information,many algorithms infered the 3D bounding boxes from 2Dimages [4, 3, 42, 43, 44, 36]. 
+- 하지만, 자율 주행 분야 등의 특징에서는 안 좋다. `However their inability to adapt to more complex shapes and scenes, and learn required invariances from data resulted in limited success for uncontrolled scenarios such as autonomous navigation.`
 
-However, the accuracy ofimage-based 3D detection approaches are bounded by theaccuracy of the depth estimation.Several LIDAR based 3D object detection techniquesutilize a voxel grid representation. 
+- 이미지 데이터가 상세한 texture정보를 제공할수 있으므로 많은 알고리즘은 2D 이미지를 이용하여서 3D B.Box를 예측 한다. `Given that images provide detailed texture information,many algorithms infered the 3D bounding boxes from 2D images [4, 3, 42, 43, 44, 36]. `
 
-[41, 9] encode eachnonempty voxel with 6 statistical quantities that are derivedfrom all the points contained within the voxel. 
+- 하지만 이미지 기반의 3D 탐지 기법은 깊이 예측의 정확도로 인하여 한계가 있다. `However, the accuracy of image-based 3D detection approaches are bounded by the accuracy of the depth estimation.`
 
-[37]fuses multiple local statistics to represent each voxel. 
+- 일부 LiDAR기반의 3D 물체 탐지 기법들은 voxel grid representation를 활용한다. `Several LIDAR based 3D object detection techniques utilize a voxel grid representation. `
 
-[38]computes the truncated signed distance on the voxel grid.[21] uses binary encoding for the 3D voxel grid. 
+- [41, 9-Vote3deep] encode each nonempty voxel with 6 statistical quantities that are derived from all the points contained within the voxel. 
 
-[5] introducesa multi-view representation for a LiDAR pointcloud by computing a multi-channel feature map in thebird’s eye view and the cylindral coordinates in the frontalview. 
+```
+[41] D. Z. Wang and I. Posner. Voting for voting in online point cloud object detection. In Proceedings of Robotics: Science and Systems, Rome, Italy, July 2015.
+[9] M. Engelcke, D. Rao, D. Z. Wang, C. H. Tong, and I. Posner. Vote3deep: Fast object detection in 3d point clouds using efficient convolutional neural networks. In 2017 IEEE International Conference on Robotics and Automation (ICRA), pages 1355–1361, May 2017.
 
-Several other studies project point clouds onto a perspectiveview and then use image-based feature encoding schemes [28, 15, 22].There are also several multi-modal fusion methods thatcombine images and LiDAR to improve detection accuracy[10, 16, 5]. 
+```
 
-These methods provide improved performancecompared to LiDAR-only 3D detection, particularlyfor small objects (pedestrians, cyclists) or when the objectsare far, since cameras provide an order of magnitude moremeasurements than LiDAR. 
+- 지역적 통계값 사용 : [37-Sliding shapes]fuses multiple local statistics to represent each voxel. 
 
-However the need for an additionalcamera that is time synchronized and calibrated withthe LiDAR restricts their use and makes the solution moresensitive to sensor failure modes. 
+```
+[37] S. Song and J. Xiao. Sliding shapes for 3d object detection in depth images. In European Conference on Computer Vision, Proceedings, pages 634–651, Cham, 2014. Springer International
+Publishing.
+```
 
-In this work we focus onLiDAR-only detection.
+- [38]computes the truncated signed distance on the voxel grid.
+
+```
+[38] S. Song and J. Xiao. Deep Sliding Shapes for amodal 3D object detection in RGB-D images. In CVPR, 2016.
+```
+
+- [21] uses binary encoding for the 3D voxel grid. 
+
+```
+[21] B. Li. 3d fully convolutional network for vehicle detection in point cloud. In IROS, 2017.
+```
+
+- [5-MV3D] introduces a multi-view representation for a LiDAR pointcloud by computing a multi-channel feature map in the bird’s eye view and the cylindral coordinates in the frontal view. 
+
+```
+[5] X. Chen, H. Ma, J. Wan, B. Li, and T. Xia. Multi-view 3d object detection network for autonomous driving. In IEEE CVPR, 2017.
+```
+
+- 일부 연구는 포인트 클라우드를 원점뷰로 투영후 이미지 기반 특징 encode 방법 적용 `Several other studies project point clouds onto a perspective view and then use image-based feature encoding schemes [28, 15, 22].`
+
+```
+[28] C. Premebida, J. Carreira, J. Batista, and U. Nunes. Pedestrian detection combining RGB and dense LIDAR data. In IROS, pages 0–1. IEEE, Sep 2014
+[15] A. Gonzalez, G. Villalonga, J. Xu, D. Vazquez, J. Amores, and A. Lopez. Multiview random forest of local experts combining rgb and lidar data for pedestrian detection. In IEEE
+Intelligent Vehicles Symposium (IV), 2015.
+[22] B. Li, T. Zhang, and T. Xia. Vehicle detection from 3d lidar using fully convolutional network. In Robotics: Science and Systems, 2016.
+```
+
+- 이미지와 LiDAR를 합치는 멀티 모달 방식 `There are also several multi-modal fusion methods that combine images and LiDAR to improve detection accuracy[10, 16, 5]. `
+
+```
+[10] M. Enzweiler and D. M. Gavrila. A multilevel mixture-ofexperts framework for pedestrian classification. IEEE Transactions on Image Processing, 20(10):2967–2979, Oct 2011
+[16] A. Gonzlez, D. Vzquez, A. M. Lpez, and J. Amores. Onboard object detection: Multicue, multimodal, and multiview random forest of local experts. IEEE Transactions on Cybernetics,
+47(11):3980–3990, Nov 2017. 
+[5] X. Chen, H. Ma, J. Wan, B. Li, and T. Xia. Multi-view 3d object detection network for autonomous driving. In IEEE CVPR, 2017.
+```
+
+- 이러한 방식들은 작은 물체는 멀리 있는 물체를 탐지 하는데는 3D만 사용 하는 방식 보다는 성능이 좋. `These methods provide improved performance compared to LiDAR-only 3D detection, particularly for small objects (pedestrians, cyclists) or when the objects are far, since cameras provide an order of magnitude more measurements than LiDAR.`
+
+- 그러나 카메라를 사용하게 되면 싱크 시간이나 칼리브레이션 이 필요 하며 둘중 하나의 센서가 고장 나는 위험도 있다. `However the need for an additional camera that is time synchronized and calibrated with the LiDAR restricts their use and makes the solution more sensitive to sensor failure modes. `
+
+- 따라서 본 논문은 라이다만 고려 한다. `In this work we focus onLiDAR-only detection.`
