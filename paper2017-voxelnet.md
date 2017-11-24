@@ -272,8 +272,7 @@ Intelligent Vehicles Symposium (IV), 2015.
 ![](https://i.imgur.com/6xPqfKR.png)
 
 
-Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in R^4 \}_{i=1...t} as a
-non-empty voxel containing t ≤ T LiDAR points, where
+Denote $V= \{ p_i = \[ x_i, y_i, z_i, r_i]^T \in R^4 \}_{i=1...t} as a non-empty voxel containing t ≤ T LiDAR points, where
 pi contains XYZ coordinates for the i-th point and ri
 is the
 received reflectance. We first compute the local mean as
@@ -296,5 +295,5 @@ shape of the surface contained within the voxel. The FCN
 is composed of a linear layer, a batch normalization (BN)
 layer, and a rectified linear unit (ReLU) layer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MDg3NzE3Ml19
+eyJoaXN0b3J5IjpbLTE1NzI1NzA3MF19
 -->
