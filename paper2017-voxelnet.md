@@ -380,6 +380,8 @@ After each convolution layer, BN and ReLU operations areapplied.
 	- We then upsample the output of every block to a fixed size and concatanate to construct the high resolution feature map. 
 	- Finally, this feature map is mapped to the desired learning targets: (1) a probability score map and (2) a regression map.
 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzIxMDc0MjNdfQ==
+eyJoaXN0b3J5IjpbMzYxODA1NzU3XX0=
 -->
