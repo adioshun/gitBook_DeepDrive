@@ -217,6 +217,8 @@ Intelligent Vehicles Symposium (IV), 2015.
 	- (1) Feature learning network, 
 	- (2) Convolutional middle layers, and 
 	- (3) Region proposal network [32]
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNjM4NTI3OV19
+eyJoaXN0b3J5IjpbLTI4MTU2NzAxM119
 -->
