@@ -408,7 +408,7 @@ as:
 
 #### A. Car Detection
 
-#### B. 
+#### B. Pedestrian and Cyclist Detection
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MTMzMzkwNV19
+eyJoaXN0b3J5IjpbMjExOTk1MDU1XX0=
 -->
