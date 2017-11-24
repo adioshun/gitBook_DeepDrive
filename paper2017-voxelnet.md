@@ -228,9 +228,9 @@ Intelligent Vehicles Symposium (IV), 2015.
 
 - We define each voxel of size $v_D$, $v_H$, and $v_W $ accordingly. 
 
-- The resulting 3D voxel grid is of size $ \prime D = D/vD, H0= H/vH, W0=W/vW$ . 
+- The resulting 3D voxel grid is of size $ \prime D = \frac {D}{v_D}, \prime H = frac{H}{v_H}, \prime W= \frac{W}{v_W}W/vW$ . 
 
 Here, for simplicity, we assume D, H, W are amultiple of vD, vH, vW .
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTI3MDQzNDldfQ==
+eyJoaXN0b3J5IjpbLTE3ODk2NTM3NDBdfQ==
 -->
