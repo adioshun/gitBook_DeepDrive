@@ -387,7 +387,7 @@ After each convolution layer, BN and ReLU operations areapplied.
 
 - We parameterize a 3D ground truth box as $$(x^g_c, y^g_c, z^g_c, l^g, w^g, h^g, \theta^g)$$   
 	-  where $$(x^g_c, y^g_c, z^g_c$$ represent the center location,
-	-  $$l^g, w^g, h^g, \theta^g$$ are length, width, height of the box, and θg
+	-  $$l^g, w^g, h^g, \theta^g$$ are length, width, height of the box, and θ g
 is the yaw rotation around Z-axis. To retrieve
 the ground truth box from a matching positive anchor
 parameterized as (x
@@ -411,5 +411,5 @@ corresponding to center location ∆x, ∆y, ∆z, three di-
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MzY5ODk4OF19
+eyJoaXN0b3J5IjpbLTYwMDA3ODE0NF19
 -->
