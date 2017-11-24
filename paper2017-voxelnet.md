@@ -394,9 +394,9 @@ After each convolution layer, BN and ReLU operations areapplied.
 corresponding to center location ∆ x, ∆y, ∆z three di-mensions ∆l, ∆w, ∆h, and the rotation ∆θ, which are computed
 as:
 
-![](blob:https://imgur.com/3888093a-6166-4bee-b60b-402dff4ad0f2
+![](
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MTI3NTc3Nl19
+eyJoaXN0b3J5IjpbLTQ5MzU5OTk5Ml19
 -->
