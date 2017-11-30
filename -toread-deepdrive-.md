@@ -127,7 +127,7 @@
 
 ### 7.1 시뮬레이션 툴 
 
-- [Microsoft/AirSim](https://github.com/Microsoft/AirSim)
+- [Microsoft/AirSim](https://github.com/Microsoft/AirSim): [설명](http://www.aitimes.kr/news/articleView.html?idxno=10994)
 
 - [CARLA](http://www.carla.org/) is an open-source simulator for autonomous driving research. [설명](https://www.technologyreview.com/s/609503/the-open-source-driving-simulator-that-trains-autonomous-vehicles/)
 
