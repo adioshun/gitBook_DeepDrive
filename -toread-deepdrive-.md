@@ -129,7 +129,7 @@
 
 - [Microsoft/AirSim](https://github.com/Microsoft/AirSim)
 
-- [CARLA](http://www.carla.org/) is an open-source simulator for autonomous driving research
+- [CARLA](http://www.carla.org/) is an open-source simulator for autonomous driving research. [설명](https://www.technologyreview.com/s/609503/the-open-source-driving-simulator-that-trains-autonomous-vehicles/)
 
 - [Reading game frames in Python with OpenCV - Python Plays GTA V](https://pythonprogramming.net/game-frames-open-cv-python-plays-gta-v/): GTA를 이용한 자율 주행
 
