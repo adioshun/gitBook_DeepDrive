@@ -115,6 +115,9 @@
 
 * [PyDriver](https://github.com/lpltk/pydriver): Training and evaluating object detectors and classifiers in road traffic 
 
+
+- [Reading game frames in Python with OpenCV - Python Plays GTA V](https://pythonprogramming.net/game-frames-open-cv-python-plays-gta-v/): GTA를 이용한 자율 주행
+
 ### 7.2
 
 [~~Project: Development of AEB System for Pedestrian Protection \(4th year\)~~](https://github.com/nlkim0817/ProjAEB_4thYear)
