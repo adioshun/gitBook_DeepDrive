@@ -98,4 +98,7 @@
 <그림 5>는 Daimler에서 진행하고 있는 Stixel 처리방법의예를보여준다.
 ```
 
+## 4. Classifier-based Object Detection (COD)
+
+
 
