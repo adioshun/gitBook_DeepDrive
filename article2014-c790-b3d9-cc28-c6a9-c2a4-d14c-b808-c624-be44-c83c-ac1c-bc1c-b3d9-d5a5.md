@@ -27,7 +27,7 @@
 
 - 계산된 조밀한 스테레오 매칭 결과를 **Dense Disparity Map**이라고부른다.
 
-- 현재 가장 선호되는 알고리즘 : SGM(Semi-Global Matching)
+- 가장 선호되는 알고리즘 : SGM(Semi-Global Matching)
     - Benz S-class에 적용 
 
 > SGM은 픽셀단위의 매칭Cost와 다수의 1D Constraint로근사화된 2D Smoothness를 최소화함으로써 스테레오 매칭을 수행하는 방법
@@ -48,7 +48,9 @@
 
 ### 3.1 GOD 혹은 중간수준표현 단계 수행
 
-1. 전방 도로면의 형태를 추정하는 과정이 필요
+![](https://i.imgur.com/6XymEF3.png)
+
+먼저 GOD 혹은 중간수준표현 단계를 효과적으로 수행하기 위해서는 전방 도로면의 형태를 추정하는 과정이 필요하다
 
 도로면은 일반적으로 3차원 곡면이다. 따라서 평면, 2차 곡면, B-spline 곡면 등의 3차원곡면 모델을 사용하여 추정할 수 있다. 
 
@@ -64,7 +66,7 @@
 
 ### 3.2 GOD 혹은 중간수준표현으로 사용 되는대표적인방법은세가지가있다
 
-![](https://i.imgur.com/QFoz526.png)
+![](https://i.imgur.com/A4LStCI.png)
 
 #### A. Occupancy Grid 기반 방법
 
@@ -79,5 +81,21 @@
 이는장애물과 도로면의 경계와 장애물의 높이를추정하여 이를 이어주는 다수의 막대들로전방 상황을 표현하는 방법으로 Stixel은Stick과 Pixel의 합성어이다. 
 
 이 방법은 주로Daimler의U.Franke 팀에의해연구되고있다
+
+### 3.2 가장 선호되는 GOD 알고리즘 : Stixel 
+
+- 장점 : 매우 많은 정보량을 갖는 Dense Disparity Map을 위치, 높이, 움직임 정보를 갖는 Stixel이라불리는 소수의 막대로 표현하는 방법으로 정보 축약 측면에서 매우 효율적
+
+- 수행 절차 
+    1. 이 방법은 전방 주행 상황에 존재하는 장애물이 도로면에수직하게서있다는 가정하에이를 고정픽셀 너비의 Stixel로 모델링한다. 
+    2. 그 후 SGM을 통해 생성된 Dense Disparity Map을 사용하여 Stixel의 위치 및 높이를 추정한다. 
+    3. 검출된 Stixel의 움직임은 Dense Optical Flow와 Kalman Filter를 기반으로 추정되며, 이와 같은 움직임 정보를포함하는Stixel을Dynamic Stixel이라고부른다. 
+    4. 마지막으로 Dynamic Stixel들은 위치, 높이, 움직임의 유사성을 기반으로 구분되어 실세계에서 서로 같은 물체를 구성하는 Stixel들끼리 묶여지게된다.
+    
+    
+![](https://i.imgur.com/blbcT1B.png)
+```
+<그림 5>는 Daimler에서 진행하고 있는 Stixel 처리방법의예를보여준다.
+```
 
 
