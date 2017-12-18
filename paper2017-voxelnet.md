@@ -452,5 +452,5 @@ After each convolution layer, BN and ReLU operations areapplied.
 
 - 향후 이미지와의 결합을 통한 성능 향상을 진행 할 예정이다. `Future work includes extending VoxelNet for joint LiDAR and image based end-to-end 3D detection to further improve detection and localization accuracy`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2OTUwMTAwOF19
+eyJoaXN0b3J5IjpbNzk4NTk5NDgzXX0=
 -->
