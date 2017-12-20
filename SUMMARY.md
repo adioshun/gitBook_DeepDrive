@@ -17,7 +17,6 @@
 
 * [List\_Scene Flow](listscene-flow.md)
 * [Intro\_Scene Flow](introscene-flow.md)
-* [Vision-based SLAM\_SfM](vision-based-slam.md)
 * [Paper\_2014\_\[M\] DMP-MSnet \(20%\)](paper2014-depthmap-prediction.md)
 * [Paper\_2015\_\[M\] Depth\_Monocular](paper2015-depth-monocular.md)
 * [Paper\_2017\_\[M\] UnsuperviseMD \(30%\)](paper2016-monocular-depth.md)
