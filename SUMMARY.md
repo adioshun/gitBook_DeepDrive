@@ -12,7 +12,7 @@
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
 * [Paper\_2016\_Sementic\_Fusion](paper2016-sementic-fusion.md)
 * [Paper\_2017\_VoxelNet](paper2017-voxelnet.md)
-* [List\_of\_DeepDrive2](listof-deepdrive2.md)
+
 
 ## LowLevel CV
 
