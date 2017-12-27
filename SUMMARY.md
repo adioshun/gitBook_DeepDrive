@@ -4,6 +4,7 @@
 
 * [ReadME](README.md)
 * [List\_of\_DeepDrive](-toread-deepdrive-.md)
+* [List\_of\_DeepDrive2](listof-deepdrive2.md)
 * [Paper\_2017\_Survey\_CV4Vehicle \(50%\)](paper2017-survey.md)
 * [Paper\_2017\_Overview of Services \(50%\)](paper2017-overview-of-services.md)
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
@@ -11,7 +12,7 @@
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
 * [Paper\_2016\_Sementic\_Fusion](paper2016-sementic-fusion.md)
 * [Paper\_2017\_VoxelNet](paper2017-voxelnet.md)
-* [Article\_2014\_자동차용스테레오비젼개발동향](article2014-c790-b3d9-cc28-c6a9-c2a4-d14c-b808-c624-be44-c83c-ac1c-bc1c-b3d9-d5a5.md)
+* [List\_of\_DeepDrive2](listof-deepdrive2.md)
 
 ## LowLevel CV
 
