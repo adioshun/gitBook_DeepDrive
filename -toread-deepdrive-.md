@@ -100,6 +100,8 @@
 
 * [ADAS \(Advanced Driving Assistance System\)](https://www.slideshare.net/yuhuang/advanced-driving-assistance-system): ppt 261, Baidu USA, 2017.04
 
+
+
 ### 6.2 Point Cloud
 
 * [~~Synthesize for Learning: Joint analysis of 2D images and 3D shapes~~](http://ai.stanford.edu/~haosu/slides/3dv.pptx): ShapeNet \(3D Datasets\)
@@ -110,6 +112,8 @@
 
 * [Learning 3D representations,disparity estimation, and structure from motion  
   ](http://3ddl.cs.princeton.edu/2016/slides/brox.pdf): FlowNet, DispNet, DeMoN
+
+- [AutonomousDrivingCookbook](https://github.com/Microsoft/AutonomousDrivingCookbook/tree/master/AirSimE2EDeepLearning): MS, 자율주행 자동차와 관련한 AirSim 시뮬레이션 환경과 Keras 를 이용해 관련 프로젝트를 학습하고 프로젝트를 수행 
 
 ## 7. Implementation \(Project\)
 
