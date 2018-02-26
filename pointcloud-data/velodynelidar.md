@@ -1,8 +1,3 @@
-http://unanancyowen.com/en/pcl-with-velodyne/
-
-http://pointclouds.org/
-
-http://velodynelidar.com/downloads.html
 
 # Sample data 
 
