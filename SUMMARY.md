@@ -87,13 +87,10 @@
 ## \[실습\] 3D Pointcloud based
 
 * [Point\_Cloud\_Data](pointcloud-data.md)
-  * [ROS bags-TO-Image.ipynb](https://gist.github.com/anonymous/4857f8920c9fc901121a429ead32a7db)
-  * [ROS bags-TO-Point Clods.ipynb](https://gist.github.com/anonymous/e675ea14113252be321320be62248034)
-  * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
+
   * [KITTI Dataset Exploration.ipynb](https://github.com/hunjung-lim/awesome-vehicle-datasets/blob/master/vehicle/kitti/KITTI%2BDataset%2BExploration.ipynb)
   * [KITTI Dataset Visualizing.ipynb](https://github.com/hunjung-lim/awesome-vehicle-datasets/blob/master/vehicle/kitti/KITTI%2BDataset%2BVisualizing.ipynb)
   * [Read\_RGBD](pointcloud-data/readrgbd.md)
-  * [Velodyne\_LiDAR](pointcloud-data/velodynelidar.md)
 
 ## Fusion
 
