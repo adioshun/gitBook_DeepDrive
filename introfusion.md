@@ -1,7 +1,8 @@
 ###### [칼만필터 ]
 - Each state from the individual sensors with their respective error covariance is used for correcting the state estimate in the Kalman Filter. 
-- The error covariance represents the trust in the state estimation, e.g. a camera image is reliable for estimating the width of objects but distance or speed measurements are very inaccurate. 
-- In contrast a RADAR sensor provides very accurate distance and velocity measurements. 
+- The error covariance represents the trust in the state estimation, 
+	- e.g. a camera image is reliable for estimating the width of objects but distance or speed measurements are very inaccurate. 
+	- In contrast a RADAR sensor provides very accurate distance and velocity measurements. 
 - Thus, in the final state estimate, velocity information and distance will be closer to the RADAR measurements, while the size would be closer to the measurements from the camera which, in theory, should result in a better final state estimate.
 
 
@@ -17,7 +18,8 @@
 ### 2.1 절차(간략) `The process of combination is as follows:`
 	1. 대략적 위치 추정 : `Make a wild guess of the position of the object (initialization);`
 	2. 측정값을 활용하여 정확도 향상 : `Use the measurement of the position to improve the accuracy (update by measurement);`
-	3. 움직임 예측`(motion prediction)`과 2단계에서의 업데이트된 예측값`(updated estimation)`을 이용하여서 예측 정확도 향상 : `Use the **motion prediction** and based the updated estimation of the object’s position in step 2 to further predict/improve the estimation of the position of the object (predict by independent motion estimation);`
+	3. motion prediction과 2단계에서의 업데이트된 예측값 `(updated estimation)`을 이용하여서 예측 정확도 향상 : 
+		- `Use the motion prediction and based the updated estimation of the object’s position in step 2 to further predict/improve the estimation of the position of the object (predict by independent motion estimation)`
 	4. 3단계 결과를 이용하여 위치를 예측, 2~4단계 부터 반복 `Use the outcome of step 3, as the new estimation of the object’s position, repeat the iteration starting from step 2.`
 
 ### 2.2 절차(상세)
@@ -73,8 +75,9 @@ This algorithm is a recursive two-step process: **prediction**, and **update**.
 	- 이단계에서 예측값(=이후 State로 표기)은 가중치 평균`(예측된 상태와 현 측정값 기반 상태의 평균)`을 통해 업데이트 된다. `In this step, the estimates (let’s call it state from here on) are updated based on the weighted average of the predicted state and the state based on the current measurement. `
 	- 낮은 가중치는 높은 불확실성을 의미 한다. `A lower weight is given to that with a higher uncertainty.`
 
-|![](https://cdn-images-1.medium.com/max/1100/1*QJsilpC73Afq0wurq5Ie1Q.png)|![](https://cdn-images-1.medium.com/max/660/1*2XhsE376_bgaQFNk_YQG3Q.png)|
-|-|-|
+![](https://cdn-images-1.medium.com/max/1100/1*QJsilpC73Afq0wurq5Ie1Q.png)
+
+![](https://cdn-images-1.medium.com/max/660/1*2XhsE376_bgaQFNk_YQG3Q.png)
 
 ## 3. 특징 
 
@@ -113,6 +116,7 @@ This algorithm is a recursive two-step process: **prediction**, and **update**.
 
 
 ---
+![image](https://user-images.githubusercontent.com/17797922/40119558-f7ebf0cc-5957-11e8-8aa4-a6570d70876f.png)
 
 ## 1. Kalman Filters
 
@@ -135,6 +139,8 @@ This algorithm is a recursive two-step process: **prediction**, and **update**.
 - 멀티센서일때는 각 센서 마다 고유의 measurement update scheme가 있다. `In the case where multiple sensors are used then each sensor has its own measurement update scheme. `
 
 - 멀티 센서여도 The belief about the state of the unkown variables is updated asynchronously each time the measurement is received regardless of the sources sensor.
+
+
 
 
 ### 1.2 Extended Kalman Filters (EKF)
