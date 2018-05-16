@@ -187,3 +187,12 @@ Preferred: A doctorate degree in an above discipline with specialization in esti
 
 
 센서 퓨전은 여러 개의 센서에서 전송하는 데이터를 지능적으로 결합하여 애플리케이션이나 시스템의 성능을 개선하는 소프트웨어입니다. 즉, 복수의 센서에서 나오는 데이터를 취합하여 개별 센서의 결함을 수정하며 그 결과로 정확한 위치와 방향 정보를 계산할 수 있습니다.
+
+
+---
+
+## 추천 강의 
+
+![image](https://user-images.githubusercontent.com/17797922/40107264-bb9a86e4-5932-11e8-8d47-aa0ed5aef6ef.png)
+
+[중등2 - AI for Robotics(Stanford)](https://www.youtube.com/playlist?list=PLlSZlNj22M7RJ_6BW8w699SucNXzZZo83): Youtube, 쥬피터 강사, 2017
