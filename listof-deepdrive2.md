@@ -26,6 +26,8 @@
 - [16 Questions About Self-Driving Cars](https://vimeo.com/198256576)[[Q List]](https://medium.com/self-driving-cars/frank-chens-16-questions-about-self-driving-car-3c663987965b#.85q8lxbdy)
 - [Autonomous Vehicles Overview](https://www.youtube.com/watch?v=CruCp6vqPQs&feature=youtu.be) : Wiley Jones,2016. 8. 28, 56분, Robotics, actuation, sensors, SLAM, computational platforms
 
+- [udacity SDC 2 한글 설명(Youtube)](https://www.youtube.com/watch?v=5Y1bJlNx13o)
+
 ## 논문
 * [논문: End to End Learning for Self-Driving](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) : NVIDIA 2016 Paper
 * [논문: End to End Learning for Self-Driving Cars](https://arxiv.org/abs/1604.07316) : 카메라 3대와 운전자의 핸들 조작+알파로 학습한다음 카메라 하나만 입력으로 사용하고 운전대를 어떻게 움직이는지를 예측하여 자동운전,  [[YOUTUBE]](https://drive.google.com/file/d/0B9raQzOpizn1TkRIa241ZnBEcjQ/view)
