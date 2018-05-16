@@ -188,3 +188,9 @@ This algorithm is a recursive two-step process: **prediction**, and **update**.
 [중등2 - AI for Robotics(Stanford)](https://www.youtube.com/playlist?list=PLlSZlNj22M7RJ_6BW8w699SucNXzZZo83): Youtube, 쥬피터 강사, 2017
 
 [중등4 - Introduction to AI(Stanford)](https://www.youtube.com/playlist?list=PLlSZlNj22M7RtNfjq94w2m4E9U4Y1sAG5): 파티클 필터 , 쥬피터 
+
+
+## Particle filter 
+
+-[Particle Filter Explained without Equations](https://www.youtube.com/watch?v=aUkBa1zMKv4):youtube 7:30초 
+
