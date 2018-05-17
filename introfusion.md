@@ -5,6 +5,7 @@
 - Used to estimate a system state(=velo, position), where it cannot measure it directly, but an indirect measurement is available
 
 > 참고 : 도대체 칼만필터란 무엇인가? [[1]](https://blog.naver.com/pjy6075/221228342912), [[2]](https://blog.naver.com/pjy6075/221244351376), [[공식설명]](https://blog.naver.com/dusrb2003/220272227990),[코드분석](http://msnayana.blog.me/80107534127),  [책정리](http://msnayana.blog.me/80144116755), [영문매거진](http://academic.csuohio.edu/simond/courses/eec644/kalman.pdf)
+> 참고(영문) : [Object tracking with LIDAR, Radar, sensor fusion and Extended Kalman Filter](http://www.coldvision.io/2017/04/15/object-tracking-with-lidar-radar-sensor-fusion-and-extended-kalman-filter/), [Sensor Fusion Algorithms For Autonomous Driving: Part 1 ](https://medium.com/@wilburdes/sensor-fusion-algorithms-for-autonomous-driving-part-1-the-kalman-filter-and-extended-kalman-a4eab8a833dd)
 
 ![image](https://user-images.githubusercontent.com/17797922/40174416-f9f5df64-5a0f-11e8-9c8a-cbbdec5d3412.png)
 > [칼만필터.pptx](https://github.com/adioshun/gitBook_SystemSetup/files/2012933/default.pptx)
