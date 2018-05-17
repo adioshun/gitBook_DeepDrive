@@ -1,4 +1,25 @@
-###### [칼만필터 ]
+
+# 칼만필터
+
+> 참고 : 도대체 칼만필터란 무엇인가? [[1]](https://blog.naver.com/pjy6075/221228342912), [[2]](https://blog.naver.com/pjy6075/221244351376), [[공식설명]](https://blog.naver.com/dusrb2003/220272227990),[코드분석](http://msnayana.blog.me/80107534127),  [책정리](http://msnayana.blog.me/80144116755), [영문매거진](http://academic.csuohio.edu/simond/courses/eec644/kalman.pdf)
+
+![image](https://user-images.githubusercontent.com/17797922/40174416-f9f5df64-5a0f-11e8-9c8a-cbbdec5d3412.png)
+> [칼만필터.pptx](https://github.com/adioshun/gitBook_SystemSetup/files/2012933/default.pptx)
+
+![image](https://user-images.githubusercontent.com/17797922/40169944-36caa93c-5a02-11e8-9664-7584d9eebcd5.png)
+
+
+
+
+
+
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Basic_concept_of_Kalman_filtering.svg/1701px-Basic_concept_of_Kalman_filtering.svg.png)
+
+## 추정 = Measurement Update = correct 
+
+
+
 - Each state from the individual sensors with their respective error covariance is used for correcting the state estimate in the Kalman Filter. 
 - The error covariance represents the trust in the state estimation, e.g. a camera image is reliable for estimating the width of objects but distance or speed measurements are very inaccurate. 
 - In contrast a RADAR sensor provides very accurate distance and velocity measurements. 
@@ -177,7 +198,9 @@ This algorithm is a recursive two-step process: **prediction**, and **update**.
  - which includes Predicting the new measurements and updating the state belief.
 
 
+### 1.4 칼만-부시 필터(The Kalman–Bucy filter)
 
+칼만 필터의 연속 시간 버전이다.
 
 ---
 
@@ -193,4 +216,11 @@ This algorithm is a recursive two-step process: **prediction**, and **update**.
 ## Particle filter 
 
 -[Particle Filter Explained without Equations](https://www.youtube.com/watch?v=aUkBa1zMKv4):youtube 7:30초 
+
+![](https://cdn-images-1.medium.com/max/800/1*s2kA7oclIHoCAQsao2fXhw.jpeg)
+
+![image](https://user-images.githubusercontent.com/17797922/40173698-a45fd8ae-5a0d-11e8-8e37-681f95210626.png)
+
+
+
 
