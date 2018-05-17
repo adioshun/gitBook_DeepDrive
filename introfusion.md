@@ -1,10 +1,33 @@
 
 # 칼만필터
 
+- Used to estimate a state of the system by combining measurements from different sources
+- Used to estimate a system state(=velo, position), where it cannot measure it directly, but an indirect measurement is available
+
 > 참고 : 도대체 칼만필터란 무엇인가? [[1]](https://blog.naver.com/pjy6075/221228342912), [[2]](https://blog.naver.com/pjy6075/221244351376), [[공식설명]](https://blog.naver.com/dusrb2003/220272227990),[코드분석](http://msnayana.blog.me/80107534127),  [책정리](http://msnayana.blog.me/80144116755), [영문매거진](http://academic.csuohio.edu/simond/courses/eec644/kalman.pdf)
 
 ![image](https://user-images.githubusercontent.com/17797922/40174416-f9f5df64-5a0f-11e8-9c8a-cbbdec5d3412.png)
 > [칼만필터.pptx](https://github.com/adioshun/gitBook_SystemSetup/files/2012933/default.pptx)
+
+
+## Predict : motion(=time) update 
+
+- 예상 되는 정보, 현재 -> 미래, 수정해서 갱신 하는 정보 
+- 더하기 연산(=conv., addtional)
+- 정확도 향상이 목적이 아님 
+- Add more information
+- Measure가 Not Available일때 
+
+
+## Correction : Measurement Update = correct 
+
+- 하나의 사실에 대해 모순되는 정보 있을때 (eg. Prior와 Measure가 다를때)
+	- Prior : 내 위치라고 생각 하는 값
+	- measure : 실제 내 위치 
+- 수행시, 공분산 낮아지고 & 정확도 향상 
+
+> 칼만 개인 : 두 분포(예측 & 관측) 중에 가중치를 줄지 결정 ($$KG = \frac{E_{est}}{E_{est}+E_{mea}}$$)
+
 
 ![image](https://user-images.githubusercontent.com/17797922/40169944-36caa93c-5a02-11e8-9664-7584d9eebcd5.png)
 
@@ -15,8 +38,6 @@
 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Basic_concept_of_Kalman_filtering.svg/1701px-Basic_concept_of_Kalman_filtering.svg.png)
-
-## 추정 = Measurement Update = correct 
 
 
 
