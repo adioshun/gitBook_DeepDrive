@@ -103,13 +103,16 @@ For a specific task, it is not trivial to find the optimal feature combination.
 
 #### A. Volumetric CNNs
 
-Volumetric CNNs: \[28, 17, 18\] are the pioneers applying 3D convolutional neural networks on voxelized shapes.
+- \[28, 17, 18\] are the pioneers applying 3D convolutional neural networks on voxelized shapes.
 
 > ShpaeNet, VoxNet, Vol/Multi-View CNNs
 
 제약 : sparsity problem, 계산 부하 `However, volumetric representation is constrained by its resolution due to data sparsity and computation cost of 3D convolution.`
 
-sparsity 문제 해결법 : `FPNN [13]` and `Vote3D [26]` proposed special methods to deal with the sparsity problem; - however, their operations are still on sparse volumes, it’s challenging for them to process very large point clouds.
+sparsity 문제 해결 논문 
+- FPNN [13]
+- Vote3D [26]
+- however, their operations are still on sparse volumes, it’s challenging for them to process very large point clouds.
 
 ```
 [28] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang, and J. Xiao. 3d shapenets: A deep representation for volumetric shapes. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 1912–1920, 2015.
@@ -123,7 +126,7 @@ sparsity 문제 해결법 : `FPNN [13]` and `Vote3D [26]` proposed special metho
 
 > 3D Point Cloud를 2D 이미지로 맵핑하고 2D CNN을 접목하는 방법, 성능이 잘 나옴
 
-Multiview CNNs: \[23, 18\] have tried to render 3D point cloud or shapes into 2D images and then apply 2D conv nets to classify them.
+- \[23, 18\] have tried to render 3D point cloud or shapes into 2D images and then apply 2D conv nets to classify them.
 
 With well engineered image CNNs, this line of methods have achieved dominating performance on shape classification and retrieval tasks \[21\].
 
