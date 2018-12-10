@@ -128,9 +128,9 @@ sparsity 문제 해결 논문
 
 - \[23, 18\] have tried to render 3D point cloud or shapes into 2D images and then apply 2D conv nets to classify them.
 
-With well engineered image CNNs, this line of methods have achieved dominating performance on shape classification and retrieval tasks \[21\].
+- With well engineered image CNNs, this line of methods have achieved dominating performance on shape classification and retrieval tasks \[21\].
 
-However, it’s nontrivial to extend them to scene understanding or other 3D tasks such as point classification and shape completion.
+- However, it’s nontrivial to extend them to scene understanding or other 3D tasks such as point classification and shape completion.
 
 ```
 [23] H. Su, S. Maji, E. Kalogerakis, and E. G. Learned-Miller. Multi-view convolutional neural networks for 3d shape recognition. In Proc. ICCV, to appear, 2015
@@ -140,9 +140,9 @@ However, it’s nontrivial to extend them to scene understanding or other 3D tas
 
 #### D. Spectral CNNs
 
-Spectral CNNs: Some latest works \[4, 16\] use spectral CNNs on meshes.
+- Some latest works \[4, 16\] use spectral CNNs on meshes.
 
-However, these methods are currently constrained on manifold meshes such as organic objects and it’s not obvious how to extend them to non-isometric shapes such as furniture.
+- However, these methods are currently constrained on manifold meshes such as organic objects and it’s not obvious how to extend them to non-isometric shapes such as furniture.
 
 ```
 [4] J. Bruna, W. Zaremba, A. Szlam, and Y. LeCun. Spectral networks and locally connected networks on graphs. arXiv preprint arXiv:1312.6203, 2013
@@ -151,9 +151,9 @@ However, these methods are currently constrained on manifold meshes such as orga
 
 #### E. Feature-based DNNs
 
-Feature-based DNNs: \[6, 8\]firstly convert the 3D data into a vector, by extracting traditional shape features and then use a fully connected net to classify the shape.
+- \[6, 8\]firstly convert the 3D data into a vector, by extracting traditional shape features and then use a fully connected net to classify the shape.
 
-We think they are constrained by the representation power of the features extracted.
+- 제약 : We think they are constrained by the representation power of the features extracted.
 
 > 특징 추출단계에서 표현력 제약 발생 가능
 
