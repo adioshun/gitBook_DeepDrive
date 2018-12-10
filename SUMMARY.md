@@ -88,9 +88,8 @@
 ## \[실습\] 3D Pointcloud based
 
 * [Point\_Cloud\_Data](pointcloud-data.md)
-  * [KITTI Dataset Exploration.ipynb](https://github.com/hunjung-lim/awesome-vehicle-datasets/blob/master/vehicle/kitti/KITTI%2BDataset%2BExploration.ipynb)
-  * [KITTI Dataset Visualizing.ipynb](https://github.com/hunjung-lim/awesome-vehicle-datasets/blob/master/vehicle/kitti/KITTI%2BDataset%2BVisualizing.ipynb)
-  * [Read\_RGBD](pointcloud-data/readrgbd.md)
+
+* [Read\_RGBD](pointcloud-data/readrgbd.md)
 
 ## Fusion
 
@@ -124,7 +123,7 @@
 * [ref02\_Metrics](ref02metrics.md)
 * [ref03\_Tracklet](ref03tracklet.md)
 * ref04\_non-maxima suppression \(NMS\)
-* [ref05\_KITTI](ref05kitti.md)
+
 
 ## Out of Scope
 
