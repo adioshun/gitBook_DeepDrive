@@ -44,17 +44,37 @@ PointNet은 max pooling을 기준으로 앞부분의 local feature단과 뒷부�
 
 # PointNet
 
-Due to Point cloud's irregular format, most researchers transform such data to
+
+## 1. Introduction
+
+기존 연구 방법 Due to Point cloud's irregular format, most researchers transform such data to
 
 * regular 3D voxel grids or 
 * collections of images
 
-we design a novel type of neural network that directly consumes point clouds
+기존 연구 문제점 :  This data representation transformation, however, renders the resulting data unnecessarily voluminous — while also introducing quantization artifacts that can obscure natural invariances of the data
 
 
-## 1. Introduction
+제안 방식 
+- 입력 
+    - s three coordinates (x, y, z)
+    - normals 
+    - local or global features
+- 출력 
+    - classifiaction : label
+    - Segmentation : 각 point별 label 
+    
 
-??
+네트워크 특징 
+
+- a single symmetric function, max pooling. 
+
+    - Effectively the network learns a set of optimization functions/criteria that select interesting or informative points of the point cloud and encode the reason for their selection. 
+
+- The final fully connected layers of the network aggregate these learnt optimal values into the global descriptor for the entire shape as mentioned above (shape classification) or are used to predict per point labels (shape segmentation).
+
+
+
 
 ## 2. Related Work
 
@@ -64,9 +84,16 @@ we design a novel type of neural network that directly consumes point clouds
 
 Most existing features for point cloud are `handcrafted` towards specific tasks.
 
-Point features often encode certain statistical properties of points and are designed to be invariant to certain transformations, which are typically classified as intrinsic \[2, 24, 3\] or extrinsic \[20, 19, 14, 10, 5\].
+Point features often encode certain statistical properties of points and are designed to be invariant to certain transformations, 
 
-They can also be categorized as `local features` and `global features`.
+
+분류 1
+- intrinsic \[2, 24, 3\] 
+- extrinsic \[20, 19, 14, 10, 5\].
+
+분류 2
+- local features
+- global features
 
 For a specific task, it is not trivial to find the optimal feature combination.
 
@@ -80,9 +107,9 @@ Volumetric CNNs: \[28, 17, 18\] are the pioneers applying 3D convolutional neura
 
 > ShpaeNet, VoxNet, Vol/Multi-View CNNs
 
-However, volumetric representation is constrained by its resolution due to data sparsity and computation cost of 3D convolution.
+제약 : sparsity problem, 계산 부하 `However, volumetric representation is constrained by its resolution due to data sparsity and computation cost of 3D convolution.`
 
-`FPNN [13]` and `Vote3D [26]` proposed special methods to deal with the sparsity problem; - however, their operations are still on sparse volumes, it’s challenging for them to process very large point clouds.
+sparsity 문제 해결법 : `FPNN [13]` and `Vote3D [26]` proposed special methods to deal with the sparsity problem; - however, their operations are still on sparse volumes, it’s challenging for them to process very large point clouds.
 
 ```
 [28] Z. Wu, S. Song, A. Khosla, F. Yu, L. Zhang, X. Tang, and J. Xiao. 3d shapenets: A deep representation for volumetric shapes. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 1912–1920, 2015.
