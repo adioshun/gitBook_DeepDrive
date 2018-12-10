@@ -322,8 +322,6 @@ Our idea is to approximate a general function defined on a point set by applying
 - The MLP close to the output consists of two layers with sizes 512,256.
 ```
 
-
-
 #### B. Local and Global Information Aggregation
 
 #### C. Joint Alignment Network
