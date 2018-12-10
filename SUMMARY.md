@@ -85,11 +85,6 @@
 * [Paper\_2017\_Vote3Deep \(50%\)](papervote3deep.md)
 * [Paper\_2017\_SegCloud](paper2017-segcloud.md)
 
-## \[실습\] 3D Pointcloud based
-
-* [Point\_Cloud\_Data](pointcloud-data.md)
-
-* [Read\_RGBD](pointcloud-data/readrgbd.md)
 
 ## Fusion
 
@@ -123,7 +118,7 @@
 * [ref02\_Metrics](ref02metrics.md)
 * [ref03\_Tracklet](ref03tracklet.md)
 * ref04\_non-maxima suppression \(NMS\)
-
+* [ref05-Read\_RGBD](pointcloud-data/readrgbd.md)
 
 ## Out of Scope
 
