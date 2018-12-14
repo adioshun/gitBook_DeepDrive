@@ -8,6 +8,7 @@
 | 참고 |[post](https://goo.gl/udPYQ4), [애플 자율주행차 기술 ‘복셀넷’…최신 라이다 기능 훌쩍 뛰어넘어](http://www.itnews.or.kr/?p=24461) |
 | 코드 | [Chainer](https://github.com/yukitsuji/voxelnet_chainer), [TF](https://github.com/qianguih/voxelnet), [TF](https://github.com/jeasinema/VoxelNet-tensorflow), [pyTorch](https://github.com/traveller59/second.pytorch), [pytorch](https://github.com/skyhehe123/VoxelNet-pytorch) |
 
+![](http://www.itnews.or.kr/wp-content/uploads/2017/11/119.png)
 
 # VoxelNet
 
