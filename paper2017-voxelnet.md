@@ -2,11 +2,11 @@
 | --- | --- |
 | 저자\(소속\) | Yin Zhou\(Apple\) |
 | 학회/년도 | arXiv Nov 2017, [논문](https://arxiv.org/abs/1711.06396) |
-| Citation ID / 키워드 | Yin2017VoxelNet, LiDAR Onlu |
+| Citation ID / 키워드 | Yin2017VoxelNet, LiDAR Only |
 | 데이터셋(센서)/모델 | KITTI  |
 | 관련연구||
-| 참고 |[post](https://goo.gl/udPYQ4) |
-| 코드 | |
+| 참고 |[post](https://goo.gl/udPYQ4), [애플 자율주행차 기술 ‘복셀넷’…최신 라이다 기능 훌쩍 뛰어넘어](http://www.itnews.or.kr/?p=24461) |
+| 코드 | [Chainer](https://github.com/yukitsuji/voxelnet_chainer), [TF](https://github.com/qianguih/voxelnet), [TF](https://github.com/jeasinema/VoxelNet-tensorflow), [pyTorch](https://github.com/traveller59/second.pytorch), [pytorch](https://github.com/skyhehe123/VoxelNet-pytorch) |
 
 
 # VoxelNet
