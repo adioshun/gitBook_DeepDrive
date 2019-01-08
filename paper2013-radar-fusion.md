@@ -45,6 +45,7 @@ vol. 33, no. 12, pp. 2477–2491, 2011.
 ### 2.2 Fusion 분류 : **early** Vs. **late** fusion.
 
 
+![](https://i.imgur.com/5x0JuYR.png)
 
 
 
