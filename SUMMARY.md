@@ -12,6 +12,7 @@
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
 * [Paper\_2016\_Sementic\_Fusion](paper2016-sementic-fusion.md)
 * [Paper\_2017\_VoxelNet](paper2017-voxelnet.md)
+* [Sensor\_fusion\_paper](sensorfusion-paper.md)
 
 ## LowLevel CV
 
