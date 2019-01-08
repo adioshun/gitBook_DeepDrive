@@ -165,12 +165,89 @@ The data-fusion scheme is generally categorized into two types, namely early and
 
 ---
 
-## MULTI-SENSOR DATA FUSION METHODS
+# MULTI-SENSOR DATA FUSION METHODS
 
 > Raja Sekhar Rao Dheekonda, [Object Detection from a Vehicle using Deep Learning Network and Future Integration with Multi-Sensor Fusion Algorithm](https://scholarworks.iupui.edu/bitstream/handle/1805/14903/Dheekonda_2017_object.pdf?sequence=1), 2017
 
+## 1. Probabilistic Methods
+
+The main limitations of probabilistic methods for
+information fusion are [11] complexity (need large number
+of probabilities), inconsistency (difficult to specify
+consistent set of beliefs in terms of probability) and model
+precision (precise probabilities about almost unknown
+events).
+
+### 1.1 Occupancy Grids
+
+Probabilistic occupancy grids (POGs)
+are conceptually the simplest approach to implement
+Bayesian data fusion methods. Although simple, POGs
+can be applied to different problems within the perception
+task: e.g., mapping [12], moving object detection [13], and
+sensor fusion [14].
+
+### 1.2 Kalman Filter (KF)
+
+KF features make it suited to deal
+with multi-sensor estimation and data fusion problems
+[11]. First, its explicit description of processes and
+observations allows a wide variety of different sensor
+models to be incorporated within the basic algorithm.
+Second, the consistent use of statistical measures of
+uncertainty makes it possible to quantitatively evaluate
+the role each sensor plays in overall system performance.
 
 
+### 1.3 Monte Carlo (MC) Methods
+
+MC methods are well suited
+for problems where state transition models and
+observation models are highly non-linear [11]. The reason
+for this is that sample-based methods can represent very
+general probability densities. In particular, multi-modal or
+multiple hypothesis density functions are well handled by
+Monte Carlo techniques [12].
+
+## 2. Non-Probabilistic Methods
+
+### 2.1 Interval Calculus (IC)
+
+In this method, uncertainty is
+represented by bound values. One major advantage
+compared to probabilistic method is that IC provides
+better measures of uncertainties in absence of probability
+information but the errors of sensor data are bounded to
+a certain value. However, IC are not generally used in
+data fusion because of the difficulty to get results that
+converge to a desired value; and the difficulty to encode
+dependencies between variables which are at the core of
+many data fusion problems [11].
+
+
+### 2.2 Fuzzy Logic
+
+Fuzzy logic is a popular method in control
+and sensor fusion to represent uncertainty where
+reasoning is based on degrees of truth rather than
+absolute value. But this method becomes more complex
+with the increase of sensor inputs. Also, validation of this
+method needs extensive testing where safety is an
+important factor [15].
+
+
+### 2.3 Evidence Theory (ET)
+
+The advantage of ET is its ability
+to represent incomplete evidence, total ignorance and the
+lack of a need for a priori probabilities [11]. In the field of
+intelligent vehicle perception there is a variety of imperfect
+information: uncertain or imprecise. For example, objects
+are missing (occlusions), sensor cannot measure all
+relevant attributes of the object (hardware limitations),
+and when an observation is ambiguous (partial object
+detection). But with higher number of hypotheses ET
+becomes less computational tractable.
 
 
 --- 
