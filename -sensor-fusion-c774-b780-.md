@@ -70,6 +70,19 @@
 - 추천 : [Tracking pedestrians for self driving cars](https://medium.com/towards-data-science/tracking-pedestrians-for-self-driving-cars-ccf588acd170)
 - 추천 : [Tracking a self-driving car with high precision](https://medium.com/@priya.dwivedi/latest)
 
+- [Object tracking with LIDAR, Radar, sensor fusion and Extended Kalman Filter](http://www.coldvision.io/2017/04/15/object-tracking-with-lidar-radar-sensor-fusion-and-extended-kalman-filter/): post
+
+- Sensor Fusion Algorithms For Autonomous Driving
+  - [Part 1 — The Kalman filter and Extended Kalman Filter](https://medium.com/@wilburdes/sensor-fusion-algorithms-for-autonomous-driving-part-1-the-kalman-filter-and-extended-kalman-a4eab8a833dd)
+
+- [Sensor Fusion with Kalman Filter (1/2)](https://winfriedauner.de/projects/extended_kalman/)
+
+- [Sensor Fusion with Kalman Filter (2/2)](https://winfriedauner.de/projects/unscented)
+
+- [Sensor Fusion](http://www.towardsautonomy.com/sensor_fusion)
+
+- [Udacity carnd2 Sensor Fusion, Extended Karman Filter (English)](https://hk.saowen.com/a/cfd402f9504a2c6390b7ca1e4e91d271de65281f5f4d405ae06b94484463e6ae)
+
 
 
 ## 3. Tutorial (Series, )
@@ -90,9 +103,22 @@
 
 ## 7. Implementation (Project)
 
+- [An extended Kalman Filter implementation in Python for fusing lidar and radar sensor measurements](https://github.com/mithi/Fusion-EKF-Python): mithi, python
+  - [Cpp버젼](https://github.com/mithi/fusion-ekf), [CPP버젼v2](https://github.com/mithi/fusion-ekf/tree/master/A-UPDATED-FUSIONEKF)
+  - [Object-Tracking-and-State-Prediction-with-Unscented-and-Extended-Kalman-Filters](https://github.com/srnand/Object-Tracking-and-State-Prediction-with-Unscented-and-Extended-Kalman-Filters) : 변형
+
+- [Extended Kalman Filter Project Starter Code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project): Udacity
+
+
+
 
 
 ## 8. Research Group / Conference 
+
+[Data fusion development with ROS | BASELABS](https://www.baselabs.de/data-fusion-development-with-ros/): 필독, 샘플파일 제공 
+
+
+
 
 
 
