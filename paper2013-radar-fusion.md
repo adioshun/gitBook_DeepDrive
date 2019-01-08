@@ -165,6 +165,16 @@ The data-fusion scheme is generally categorized into two types, namely early and
 
 ---
 
+## MULTI-SENSOR DATA FUSION METHODS
+
+> Raja Sekhar Rao Dheekonda, [Object Detection from a Vehicle using Deep Learning Network and Future Integration with Multi-Sensor Fusion Algorithm](https://scholarworks.iupui.edu/bitstream/handle/1805/14903/Dheekonda_2017_object.pdf?sequence=1), 2017
+
+
+
+
+
+--- 
+
 ## Sensor fusion methods
 
 > [An Introduction to Sensor Fusion](https://www.researchgate.net/publication/267771481), 2015
