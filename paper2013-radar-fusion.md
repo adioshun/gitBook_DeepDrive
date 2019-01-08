@@ -163,7 +163,53 @@ The data-fusion scheme is generally categorized into two types, namely early and
 - 단점 #2 : Another disadvantage of the late fusion approach is the **potential loss of correlation** in mixed feature space. 
 
 
+---
 
+## Sensor fusion methods
+
+> [An Introduction to Sensor Fusion](https://www.researchgate.net/publication/267771481), 2015
+
+### 1. Smoothing, Filtering, and Prediction
+
+![](https://i.imgur.com/SrKJ9nJ.png)
+
+- Smoothing (m < 0): The change of a process entity shall be reconstructed
+after a series of measurements has been performed. For each instant
+of interest, several measurements from previous, actual, and following
+instants are used in order to estimate the value of the process variable.While the measurements have to be recorded in real time, the smoothing
+algorithm can be performed offline.
+
+- Filtering (m = 0): The actual state of a process entity shall be estimated
+by using an actual measurement and information gained from previous
+measurements. Usually, filtering is performed in real time.
+
+- Prediction (m > 0): The actual state of a process entity shall be estimated
+by using a history of previous measurements. The prediction problem
+requires an adequate system model in order to produce a meaningful es-
+timation. Typically, prediction is performed in real time.
+
+
+
+
+### 2. Kalman Filtering
+
+> 생략 
+
+### 3. Inference Methods
+
+
+- Inference methods are
+used for decision fusion, i. e., to take a decision based on given knowledge.
+
+
+### 4. Occupancy Maps
+
+- two-dimensional raster image uniformly dis-
+tributed over the robot’s working space.
+
+### 5. Certainty Grid
+
+- A certainty grid is a special form of an occupancy ma
 
 
 ---
