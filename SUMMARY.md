@@ -88,6 +88,7 @@
 ## Fusion
 
 * [List to Read](-sensor-fusion-c774-b780-.md)
+* [Mind_Map](https://mind42.com/public/9ff131a4-af98-426a-b9b3-e27e5c9b63b7)
 * [Intro\_Early\_Late\_Deep\_Fusion](paper2013-radar-fusion.md)
 * [\[논문\] Sensor\_fusion\_paper](sensorfusion-paper.md)
   * [Paper\_2011\_LateFusion \(0%\)](paper2011latefusion.md)
