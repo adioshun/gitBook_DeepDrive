@@ -102,13 +102,9 @@
   * [code\_MV3D\_TF](papermultiview-3d-cnn/codemv3d-tf.md)
 * [Report\_2017\_cs231n\_Dempster-Shafer \(50%\)](report2017-cs231n-dempster-shafer.md)
 * [Paper\_2017\_Sensor Modality Fusion \(50%\)](paper2017-sensor-modality-fusion.md)
-* ----- VANET -----
 * [Paper\_2017\_VANET\_3D \(50%\)](paper2017-vanet-3d.md)
-* [----- RNN based -----](-rnn-based-.md)
 * [Paper\_2017\_3DCNN\_DQN\_RNN](paper20173dcnndqn-rnn.md)
 * [라이다 및 비전 센서 융합 기반 장애물 검지 및 차량 인식](b77c-c774-b2e4-bc0f-be44-c804-c13c-c11c-c735-d569-ae30-bc18-c7a5-c560-bb3c-ac80-c9c0-bc0f-cc28-b7c9-c778-c2dd.md)
-
-
 
 ## 2D + Time \(Video\)
 
