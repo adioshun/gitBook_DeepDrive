@@ -1,8 +1,19 @@
-# Fusion 분류 : centralized vs. decentralized
+# Sensor Fusion 
+
+## 1. 정의 
+
+ 센서 퓨전은 여러 개의 센서에서 전송하는 데이터를 지능적으로 결합하여 애플리케이션이나 시스템의 성능을 개선하는 소프트웨어입니다. 즉, 복수의 센서에서 나오는 데이터를 취합하여 개별 센서의 결함을 수정하며 그 결과로 정확한 위치와 방향 정보를 계산할 수 있습니다.
+  
+## 2. 분류  
+
+
+
+
+### 2.1 Fusion 분류 : centralized vs. decentralized
 
 The architectures for sensor data fusion can be divided into centralized and decentralized fusion.
 
-### 가. centralized fusion architecture
+#### 가. centralized fusion architecture
 
 [137] T. De Laet, H. Bruyninckx, and J. De Schutter, “Shape-based online multitarget tracking and detection for targets causing multiple measurements: Variational Bayesian clustering and lossless data association,” IEEE Transactions on Pattern Analysis and Machine Intelligence,
 vol. 33, no. 12, pp. 2477–2491, 2011.
@@ -11,7 +22,7 @@ vol. 33, no. 12, pp. 2477–2491, 2011.
 [140] S. Chen, H. Leung, and l. Boss, “A maximum likelihood approach to joint registration, association and fusion for multi-sensor multi-target tracking,” in Proceedings of International Conference on Information Fusion, 2009, pp. 686–693.
 [141] Z. Li, S. Chen, H. Leung, and E. Bosse, “Joint data association, registration, and fusion using EM-KF,” IEEE Transactions on Aerospace and Electronic Systems, vol. 46, no. 2, pp. 496–507, 2010.
 
-### 나. decentralized fusion architecture
+#### 나. decentralized fusion architecture
 ```
 [142] N. N. Okello and S. Challa, “Joint sensor registration and track-to-track fusion for distributed trackers,” IEEE Transactions on Aerospace and Electronic Systems, vol. 40, no. 3, pp. 808–823, 2004.
 [143] H. Zhu, H. Leung, and K. V. Yuen, “A joint data association, registration, and fusion approach for distributed tracking,” Information Sciences, vol. 324, pp. 186–196, 2015.
@@ -31,7 +42,7 @@ vol. 33, no. 12, pp. 2477–2491, 2011.
 
 ---
 
-# Fusion 분류 : **early** Vs. **late** fusion.
+### 2.2 Fusion 분류 : **early** Vs. **late** fusion.
 
 
 
