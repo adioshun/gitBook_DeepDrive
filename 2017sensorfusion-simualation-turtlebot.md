@@ -136,8 +136,48 @@ In this context, there are following fusion stages:
 3. Decision level fusion
 
 
+#### A. Signal Level Fusion
+
+- data from multiple sources (sensors) are combined to obtain better quality data
+
+##### 가. 목적 
+
+- 목적 #1 : 동일한 센서(온도계 3개)에서 데이터를 수집하여 불확실성 제거 
+    - Obtain a higher quality version of the input signals i.e. higher signal to noise ratio [33]. 
+    - Sensor measurements from several sensors which have same physical properties are combined to determine the parameter being measured, more accurately [21]. 
+    - This minimizes and sometimes eliminates any uncertainty or inaccurate predictions caused by measurements from faulty sensors, measurement noise and state noise. 
+    - For instance, readings from multiple temperature sensors in close proximity in a given space can be used for this kind of fusion.
+    
+- 목적 #2 : 이기종 센서를 이용하여 새로운 feature 생성 
+    - Obtain a feature or mid-level information about the system that a single measuring node cannot reveal. 
+    - A feature is the first stage in understanding the state of the environment that helps the system in formulating a decision.
+    - **Heterogeneous sensors** are often employed for this process. 
+    - For instance, signals from radar and images from camera are used in target recognition [25].
 
 
+##### 나. 방법론 
+
+- Weighted Averaging : Taking an average of the various sensor signals measuring a particular parameter of the environment
+- Kalman Filter : common adaptive method of sensor fusion to remove redundancy in the system and to predict the state of the system
+- Track-to-Track Fusion 
+- Neural Networks
+
+
+#### B. Decision level fusion (=Symbol level fusion)
+
+##### 가. 목적
+
+- The decision level fusion combines several sub-decisions or features to yield a final or higher decision that can be used to take an action
+
+- Symbol could be an input decision
+
+##### 나. 방법론 
+
+![](https://i.imgur.com/b0dmAWW.png)
+
+- Dempster-Shafer Theory of Evidence
+- Comparison of D-S and Bayesian Fusion
+- 
 
 
 
