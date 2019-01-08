@@ -163,6 +163,9 @@ The data-fusion scheme is generally categorized into two types, namely early and
 - 단점 #2 : Another disadvantage of the late fusion approach is the **potential loss of correlation** in mixed feature space. 
 
 
+
+
+
 ---
 
 | 논문명 | Multi-View 3D Object Detection Network for Autonomous Driving |
