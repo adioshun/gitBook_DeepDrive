@@ -13,7 +13,6 @@
 * [Paper\_2016\_Sementic\_Fusion](paper2016-sementic-fusion.md)
 * [Paper\_2017\_VoxelNet](paper2017-voxelnet.md)
 
-
 ## LowLevel CV
 
 * [List\_Scene Flow](listscene-flow.md)
@@ -89,9 +88,8 @@
 ## Fusion
 
 * [List to Read](-sensor-fusion-c774-b780-.md)
-  * [Udacity\_Program](-sensor-fusion-c774-b780-/udacityprogram.md)
 * [Intro\_Early\_Late\_Deep\_Fusion](paper2013-radar-fusion.md)
-* [Sensor\_fusion\_paper](sensorfusion-paper.md)
+* [\[논문\] Sensor\_fusion\_paper](sensorfusion-paper.md)
   * [Paper\_2011\_LateFusion \(0%\)](paper2011latefusion.md)
   * [Paper\_2016\_FusionNet \(100%\)](paper2016-fusionnet.md)
   * [Paper\_2016\_DeepSlidingShape \(70%\)](paper2016-deepslidingshape.md)
@@ -101,13 +99,13 @@
   * [Paper\_2017\_VANET\_3D \(50%\)](paper2017-vanet-3d.md)
   * [Paper\_2017\_3DCNN\_DQN\_RNN](paper20173dcnndqn-rnn.md)
   * [라이다 및 비전 센서 융합 기반 장애물 검지 및 차량 인식](b77c-c774-b2e4-bc0f-be44-c804-c13c-c11c-c735-d569-ae30-bc18-c7a5-c560-bb3c-ac80-c9c0-bc0f-cc28-b7c9-c778-c2dd.md)
-* [Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)
+* [\[구현\_1\] Paper\_2017\_MV3D\(70%\)](papermultiview-3d-cnn.md)
   * [Paper\_2016\_Deeply\_Fused\_Nets](paper2016-deeply-fused-nets.md)
   * [Code\_MV3D](papermultiview-3d-cnn/codemv3d.md)
   * [code\_MV3D\_TF](papermultiview-3d-cnn/codemv3d-tf.md)
+* [\[구현\_2\] Udacity\_Program](-sensor-fusion-c774-b780-/udacityprogram.md)
 * [Report\_2017\_cs231n\_Dempster-Shafer \(50%\)](report2017-cs231n-dempster-shafer.md)
 * [Paper\_2017\_Sensor Modality Fusion \(50%\)](paper2017-sensor-modality-fusion.md)
-
 
 ## 2D + Time \(Video\)
 
