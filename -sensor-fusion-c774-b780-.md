@@ -18,6 +18,8 @@
 * [Radar/Lidar sensor fusion for car-following on highways](http://ieeexplore.ieee.org/abstract/document/6144918/): 2011
 
 
+- Shruti Gangadhar, SENSOR FUSION FRAMEWORK AND SIMULATION ON A TURTLEBOT ROBOTIC VEHICLE, 2017, [석사학위](https://webpages.uncc.edu/~jmconrad/GradStudents/Thesis_Gangadhar.pdf)
+
 
 - A comparative study of data fusion for RGB-D based visual recognition : A study of data fusion methods for RGB-D visual recognition can be found in Sanchez-Riera et al. [2016].
 
