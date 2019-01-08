@@ -46,7 +46,7 @@ vol. 33, no. 12, pp. 2477–2491, 2011.
 
 
 ![](https://i.imgur.com/5x0JuYR.png)
-
+[`Shashibushan Yenkanchi, MULTI SENSOR DATA FUSION FOR AUTONOMOUS VEHICLES, 2016`]
 
 
 
