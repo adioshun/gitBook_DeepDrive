@@ -9,7 +9,7 @@
 
 
 
-### 2.1 Fusion 분류 : centralized vs. decentralized
+### 2.1 Topology 기반 분류 : centralized vs. decentralized
 
 The architectures for sensor data fusion can be divided into centralized and decentralized fusion.
 
@@ -42,19 +42,11 @@ vol. 33, no. 12, pp. 2477–2491, 2011.
 ```
 
 
----
-
-### 2.2 Fusion 분류 : **early** Vs. **late** fusion.
+### 2.2 알고리즘 기반 분류 : **early** Vs. **late** fusion.
 
 
 ![](https://i.imgur.com/5x0JuYR.png)
 [`Shashibushan Yenkanchi, MULTI SENSOR DATA FUSION FOR AUTONOMOUS VEHICLES, 2016`]
-
-
-
-- scene-level탐지 및 분류를 위해서 다양한 센서 정보가 사용된다. ` In particular, for the scene-level detection and classification tasks, various sensor modalities are used. `
-- 실내용 : The RGB-depth sensor is widely used for **indoor scene** recognition [36–38]
-- 실외용: LiDAR-stereo vision [39,40], LiDAR-CCD [41], LiDAR-radar [42] and LiDAR-radar-stereo vision [43] are used for **outdoor scenes**.
 
 - The fusion methods are divided into two categories, namely **early** and **late** fusion.
 
