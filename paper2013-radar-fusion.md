@@ -63,6 +63,8 @@ vol. 33, no. 12, pp. 2477–2491, 2011.
 42. Nuss D., Yuan T., Krehl G., Stuebler M., Reuter S., Dietmayer K. Fusion of laser and radar sensor data with a sequential Monte Carlo Bayesian occupancy filter; Proceedings of the 2015 IEEE Intelligent Vehicles Symposium (IV); Seoul, Korea. 28 June–1 July 2015; pp. 1074–1081.
 43. Cho H., Seo Y.W., Kumar B.V., Rajkumar R.R. A multi-sensor fusion system for moving object detection and tracking in urban driving environments; Proceedings of the 2014 IEEE International Conference on Robotics and Automation (ICRA); Hong Kong, China. 31 May–7 June 2014; pp. 1836–1843.
 ```
+
+
 ---
 
 
@@ -74,27 +76,32 @@ vol. 33, no. 12, pp. 2477–2491, 2011.
 
 ###### [ early fusion method]
 
-- the measurements are fused by mapping them together,or by concatenation, or probabilistic fusion [41,44,45]. 
 
+### 1.1 Two data-fusion scheme
+The data-fusion scheme is generally categorized into two types, namely early and late fusion. 
+
+###### The early-fusion method 
+- 방법 : Raw데이터 병합, feature 연결 `fuses two or more data by combining raw data or concatenating feature descriptors. `
+	- the measurements are fused by mapping them together,or by concatenation, or probabilistic fusion [41,44,45]. 
+
+- it often cannot handle incomplete measurements. 
+
+- 장점 : If one sensor modality becomes useless due to malfunctions, breakdown or severe weather conditions, its measurements will be rendered ambiguous. 
+	- 장비의 고장및
 - 제약 : However, the early fusion method suffers from problems of **non-overlapping regions** and **uncertainties**. 
 
 - 해결책 : To solve these problems, the **decision-level fusion method** is used as a **late fusion** method. 
 
 
 
-### 1.1 Two data-fusion scheme
-The data-fusion scheme is generally categorized into two types, namely early and late fusion. 
 
-###### The early-fusion method 
-- fuses two or more data by combining raw data or concatenating feature descriptors. 
-- it often cannot handle incomplete measurements. 
-- If one sensor modality becomes useless due to malfunctions, breakdown or severe weather conditions, its measurements will be rendered ambiguous. 
+
+
+
 
 ###### The late-fusion method 
 - independently performs detection and classification from each sensor modality
-
-
-- Subsequently, the classified outputs are fused at the decision level for final classification.
+	- Subsequently, the classified outputs are fused at the decision level for final classification.
 
 - decision-level 퓨전 장점 `By using the decision-level fusion scheme for the object detection and classification task, `
 	- 센서가 제대로 동작 하지 않는 상황에 대처 가능 `we can prevent the autonomous driving system from becoming non-functional when information conflicts are introduced to more than one sensor. `
