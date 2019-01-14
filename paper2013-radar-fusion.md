@@ -32,8 +32,10 @@ vol. 33, no. 12, pp. 2477–2491, 2011.
 ```
 
 ---
-이미지 + optical flow + LiDAR가 함꺼번에 합쳐져서 DNN에 입력으로 이용 RGB image,optical flow, and LiDAR range images are combined to forma six channel input to a deep neural network [20] for object detection.
-동일 모델을 이용하여 joint representation학습에도 활용 The same network can also be used for different modalities to learn a joint representation [21].
+- 이미지 + optical flow + LiDAR가 함꺼번에 합쳐져서 DNN에 입력으로 이용 `RGB image,optical flow, and LiDAR range images are combined to forma six channel input to a deep neural network [20] for object detection.`
+
+- 동일 모델을 이용하여 joint representation학습에도 활용 `The same network can also be used for different modalities to learn a joint representation [21].`
+
 ```
 [20] M. Giering, V. Venugopalan, and K. Reddy, “Multi-modal sensor registration for vehicle perception via deep neural networks,” in High Performance Extreme Computing Conference (HPEC), 2015 IEEE,Sept 2015, pp. 1–6.
 [21] L. Castrejon, Y. Aytar, C. Vondrick, H. Pirsiavash, and A. Torralba,“Learning aligned cross-modal representations from weakly aligned data,” in 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2016, pp. 2940–2949.
