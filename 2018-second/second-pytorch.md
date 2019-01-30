@@ -1,3 +1,6 @@
+# [SECOND](https://github.com/traveller59/second.pytorch)
+
+> 내부적으로 [spconv](https://github.com/traveller59/spconv)사용
 
 ONLY support python 3.6+, pytorch 1.0.0+. Tested in Ubuntu 16.04/18.04.
 
@@ -20,7 +23,7 @@ sudo apt-get install libboost-all-dev
 ```
 cd ~
 pip3 install shapely fire pybind11 tensorboardX protobuf scikit-image numba pillow numba
-pip3 install 
+pip3 install torch torchvision
 git clone https://github.com/traveller59/spconv.git --recursive
 cd spconv
 python setup.py bdist_wheel
