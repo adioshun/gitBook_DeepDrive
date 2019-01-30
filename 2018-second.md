@@ -130,3 +130,60 @@ The key contributions of our work are as follows:
 - We propose an improved method of sparse convolution that allows it to run faster.
 - We propose a novel angle loss regression approach that demonstrates better orientation regression performance than other methods do.
 - We introduce a novel data augmentation method for LiDAR-only learning problems that greatly increases the convergence speed and performance.
+
+
+## 2. Related Work
+
+Below, we briefly review existing works on 3D object detection based on point cloud data and images.
+
+
+### 2.1. Front-View- and Image-Based Methods
+
+Methods using 2D representations of RGB-D data can be divided into two classes: 
+- those based on a bird’s eye view (BEV) 
+- those based on a front view. 
+
+In typical image-based methods [5], 2D bounding boxes, class semantics and instance semantics are generated first, and then hand-crafted approaches are used to generate feature maps. 
+
+Another method [17] uses a CNN to estimate 3D bounding boxes from images and a specially designed discrete-continuous CNN to estimate the orientations of objects. 
+
+Methods using LiDAR [18] involve the conversion of point clouds into front-view 2D maps and the application of 2D detectors to localize objects in the front-view images. 
+
+These methods have been shown to perform poorly for both BEV detection and 3D detection compared to other methods.
+
+
+### 2.2. Bird’s-Eye-View-Based Methods
+
+MV3D [8] is the first method to convert point cloud data into a BEV representation. 
+- In this method, point cloud data are converted into several slices to obtain height maps, 
+- and these height maps are then concatenated with the intensity map and density map to obtain multichannel features. 
+
+ComplexYOLO [19] 
+- uses a YOLO (You Only Look Once) [20] network and a complex angle encoding approach to increase speed and orientation performance, 
+- but it uses fixed heights and z-locations in the predicted 3D bounding boxes. 
+
+
+In [21], 
+- a fast single-stage proposal-free detector is designed that makes use of specific height-encoded BEV input. 
+
+
+위 방법들의 단점은 BEV를 생성하면서 버려지는 정보(point)들이 많다. `A key problem with all of these approaches, however, is that many data points are dropped when generating a BEV map, resulting in a considerable loss of information on the vertical axis. `
+- 이로 인해 3D BBox생성에 문제가 된다. `This information loss severely impacts the performance of these methods in 3D bounding box regression.`
+
+
+### 2.3. 3D-Based Methods
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
