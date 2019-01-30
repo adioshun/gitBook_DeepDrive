@@ -65,7 +65,7 @@ Recently, a new approach called VoxelNet [14] has been developed.
 
 This method incorporates several improvements to the existing convolutional network architecture. 
 
-### 1.1 첫번째 장점 
+### 1.1 첫번째 장점 : Spatially sparse convolutional networks
 
 Spatially sparse convolutional networks are introduced for LiDAR-based detection and are used to extract information from the z-axis before the 3D data are downsampled to something akin to 2D image data. 
 - We also use a GPU-based rule generation algorithm for sparse convolution to increase the speed. 
@@ -75,10 +75,34 @@ Spatially sparse convolutional networks are introduced for LiDAR-based detection
 
 As a further test, we have designed a small model for real-time detection that has a run time of approximately 0.025 s on a GTX 1080 Ti GPU, with only a slight loss of performance.
 
-### 1.2 두번째 장점 
+> 제출 시점에 큰 모델로는 20fps,  작은 모델은 40fps 속도로 KITI 3D Detection을 수행 ㅏ였다. 
 
-Another advantage of using point cloud data is that it is very easy to scale, rotate and move objects by applying direct transformations to specified points on those objects. SECOND incorporates a novel form of data augmentation based on this capability. A ground-truth database is generated that contains the attributes of objects and the associated point cloud data. Objects sampled from this database are then introduced into the point clouds during training. This approach can greatly increase the convergence speed and the final performance of our network.
+### 1.2 두번째 장점 : Data augmentation 
+
+Another advantage of using point cloud data is that it is very easy to scale, rotate and move objects by applying direct transformations to specified points on those objects. 
+
+SECOND incorporates a novel form of data augmentation based on this capability. 
+
+A ground-truth database is generated that contains the attributes of objects and the associated point cloud data. 
+
+Objects sampled from this database are then introduced into the point clouds during training. 
+
+This approach can greatly increase the convergence speed and the final performance of our network.
+
+### 1.3 세번째 장점 : angle loss regression
+
+In addition to the above, we also introduce a novel angle loss regression approach to solve the problem of the large loss generated when the difference in orientation between the ground truth and the prediction is equal to π, which yields a bounding box identical to the true bounding box. 
+
+The performance of this angle regression approach surpasses that of any current method we know about, including the orientation vector regression function available in AVOD [9]. 
+
+We also introduce an auxiliary direction classifier to recognize the directions of objects.
 
 
+### 1.4 본 논문의 기여 
 
+The key contributions of our work are as follows:
 
+- We apply sparse convolution in LiDAR-based object detection, thereby greatly increasing the speeds of training and inference.
+- We propose an improved method of sparse convolution that allows it to run faster.
+- We propose a novel angle loss regression approach that demonstrates better orientation regression performance than other methods do.
+- We introduce a novel data augmentation method for LiDAR-only learning problems that greatly increases the convergence speed and performance.
