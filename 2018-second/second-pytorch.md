@@ -33,8 +33,11 @@ vi ~/.bashrc
 export NUMBAPRO_CUDA_DRIVER=/usr/lib/x86_64-linux-gnu/libcuda.so
 export NUMBAPRO_NVVM=/usr/local/cuda/nvvm/lib64/libnvvm.so
 export NUMBAPRO_LIBDEVICE=/usr/local/cuda/nvvm/libdevice
+export PYTHONPATH=$PYTHONPATH:/workspace/second.pytorch
+source ~/.bashrc
 
-cd ~
+cd /workspace
 git clone https://github.com/traveller59/second.pytorch.git
 ```
+
 
