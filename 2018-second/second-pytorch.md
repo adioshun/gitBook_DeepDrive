@@ -59,3 +59,10 @@ docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/t
 "pybind11/detail/common.h:112:20: fatal error: Python.h: No such file or directory"
 
 apt install python3.6-dev
+
+
+Create kitti infos:`python create_data.py create_kitti_info_file --data_path=/datasets`
+Create reduced point cloud: `python create_data.py create_reduced_point_cloud --data_path=/datasets`
+Create groundtruth-database infos:`python create_data.py create_groundtruth_database --data_path=/datasets`
+
+TRAIN : `python ./pytorch/train.py train --config_path=./configs/car.fhd.config --model_dir=/path/to/model_dir`
