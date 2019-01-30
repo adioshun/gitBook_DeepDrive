@@ -33,6 +33,11 @@ vi ~/.bashrc
 export NUMBAPRO_CUDA_DRIVER=/usr/lib/x86_64-linux-gnu/libcuda.so
 export NUMBAPRO_NVVM=/usr/local/cuda/nvvm/lib64/libnvvm.so
 export NUMBAPRO_LIBDEVICE=/usr/local/cuda/nvvm/libdevice
+
+export PATH="/usr/local/cuda/bin:$PATH"  
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
+export CUDA_HOME=/usr/local/cuda
+
 export PYTHONPATH=$PYTHONPATH:/workspace/second.pytorch
 source ~/.bashrc
 
