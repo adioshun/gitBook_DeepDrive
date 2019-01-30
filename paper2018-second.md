@@ -210,9 +210,36 @@ In a distinct approach,
 
 
 
+위 여러 방법들과 같이 제안 방식도 3D conv구조를 지닌다. 하지만 몇가지 개선 사항을 가지고 있다. `Similar to all of these approaches, our method makes use of a 3D convolutional architecture, but it incorporates several novel improvements.`
 
 
 
+### 2.4. Fusion-Based Methods
+
+일부 기법은 카메라 이미지와 포이트 클라우드를 합쳤다. `Some methods combine camera images with point clouds. `
+
+For instance, the authors of [29] 
+- use a 3D RPN at two scales with different receptive fields to generate 3D proposals and then feed the 3D volume from the depth data of each 3D proposal into a 3D CNN and the corresponding 2D color patch into a 2D CNN to predict the final results. 
+
+In the method presented in [8], 
+- point cloud data are converted into a front view and a BEV, 
+- and then the feature maps extracted from both point cloud maps are fused with an image feature map. 
+- The MV3D network with images performs better than the BEV-only network by a large margin, 
+    - but this architecture does not work well for small objects and runs slowly because it contains three CNNs. 
+
+The authors of [9] 
+- combine images with a BEV and then use a novel architecture to generate high-resolution features maps and 3D object proposals. 
+
+In [11], 
+- 2D detection results are used to filter a point cloud such that PointNet [22] could then be applied to predict 3D bounding boxes. 
+
+
+위 퓨전 기반 식들은 많은 이미지 파일을 처리 해야 하기 때문에 대부분 느리다. `However, fusion-based methods typically run slowly because they need to process a significant amount of image input.`
+
+또한 카메라와 Lidar간의 시간 동기화 문제도 고려 해야 한다. `The additional requirement of a time-synchronized and calibrated camera with LiDAR capabilities restricts the environments in which such methods can be used and reduces their robustness.`
+
+ 
+반대로 우리의 제안 방식은 Lidar데이터만 가지고도 좋은 성과를 보인다. `Our method, by contrast, can achieve state-of-the-art performance using only LiDAR data.`
 
 
 
