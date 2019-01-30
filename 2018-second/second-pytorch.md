@@ -18,10 +18,14 @@ sudo apt-get install libboost-all-dev
 
 > python3.6인지 확인 
 
-```
+```sh
 cd ~
-pip3 install shapely fire pybind11 tensorboardX protobuf scikit-image numba pillow numba
-pip3 install torch torchvision
+#pip3 install shapely fire pybind11 tensorboardX protobuf scikit-image numba pillow numba
+conda install -c conda-forge shapely fire pybind11 tensorboardX protobuf scikit-image numba pillow numba
+
+#pip3 install torch torchvision
+conda install -c anaconda pytorch-gpu 
+
 git clone https://github.com/traveller59/spconv.git --recursive
 cd spconv
 python3 setup.py bdist_wheel
