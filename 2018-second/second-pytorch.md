@@ -3,8 +3,43 @@
 > 내부적으로 [spconv](https://github.com/traveller59/spconv)사용
 
 SECOND 시스템 요구 사항 : ONLY support python 3.6+, pytorch 1.0.0+. Tested in Ubuntu 16.04/18.04., 
-
 SPConv 시스템 요구 사항 : CUDA 9.0+, cmake >= 3.13.2
+
+
+## 도커로 실행 
+
+```
+# host PC에서 
+$ cd /workspace
+$ git clone https://github.com/traveller59/second.pytorch.git
+
+$ docker push adioshun/second:latest
+
+
+## KITTI  데이터 위치 : /media/adioshun/data/datasets
+## code 위치 : /workspace/second.pytorch
+$ docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY -v /media/adioshun/data/datasets:/datasets --volume /workspace:/workspace --name 'second'  adioshun/second:latest /bin/bash
+
+$ docker start 
+$ docker exec -it second bash
+
+# 도커 상에서 
+
+$ cd /workspace/second.pytorch/second
+
+Create kitti infos:`python create_data.py create_kitti_info_file --data_path=/datasets`
+Create reduced point cloud: `python create_data.py create_reduced_point_cloud --data_path=/datasets`
+Create groundtruth-database infos:`python create_data.py create_groundtruth_database --data_path=/datasets`
+
+TRAIN : `python ./pytorch/train.py train --config_path=./configs/car.fhd.config --model_dir=/path/to/model_dir`
+```
+
+
+
+---
+
+
+## 코드 설치로 진행 
 
 ```
 wget https://github.com/Kitware/CMake/releases/download/v3.13.3/cmake-3.13.3.tar.gz
@@ -15,8 +50,6 @@ wget https://github.com/Kitware/CMake/releases/download/v3.13.3/cmake-3.13.3.tar
 
 sudo apt-get install libboost-all-dev
 
-
-> python3.6인지 확인 
 
 ```sh
 cd ~
@@ -49,20 +82,6 @@ cd /workspace
 git clone https://github.com/traveller59/second.pytorch.git
 ```
 
-
-docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY -v /media/adioshun/data/datasets:/datasets --volume /workspace:/workspace --name 'second'  adioshun/second /bin/bash
-
+"pybind11/detail/common.h:112:20: fatal error: Python.h: No such file or directory" -> apt install python3.6-dev
 
 
----
-
-"pybind11/detail/common.h:112:20: fatal error: Python.h: No such file or directory"
-
-apt install python3.6-dev
-
-
-Create kitti infos:`python create_data.py create_kitti_info_file --data_path=/datasets`
-Create reduced point cloud: `python create_data.py create_reduced_point_cloud --data_path=/datasets`
-Create groundtruth-database infos:`python create_data.py create_groundtruth_database --data_path=/datasets`
-
-TRAIN : `python ./pytorch/train.py train --config_path=./configs/car.fhd.config --model_dir=/path/to/model_dir`
