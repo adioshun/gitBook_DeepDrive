@@ -24,11 +24,12 @@ pip3 install shapely fire pybind11 tensorboardX protobuf scikit-image numba pill
 pip3 install torch torchvision
 git clone https://github.com/traveller59/spconv.git --recursive
 cd spconv
-python setup.py bdist_wheel
+python3 setup.py bdist_wheel
 cd ./dist
-pip3 *.whl
+pip3 install spconv-1.0-cp36-cp36m-linux_x86_64.whl
 
 # Setup cuda for numba
+vi ~/.bashrc
 export NUMBAPRO_CUDA_DRIVER=/usr/lib/x86_64-linux-gnu/libcuda.so
 export NUMBAPRO_NVVM=/usr/local/cuda/nvvm/lib64/libnvvm.so
 export NUMBAPRO_LIBDEVICE=/usr/local/cuda/nvvm/libdevice
@@ -36,3 +37,4 @@ export NUMBAPRO_LIBDEVICE=/usr/local/cuda/nvvm/libdevice
 cd ~
 git clone https://github.com/traveller59/second.pytorch.git
 ```
+

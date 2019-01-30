@@ -34,3 +34,11 @@ Voxel-based 3D convolutional networks는 Lidar데이터 에서 의미 있는 정
 또한 새로운 자세 추정을 위한 angle LOSS와 데이터 증폭 기법을 제안 한다. `We also introduce a new form of angle loss regression to improve the orientation estimation performance and a new data augmentation approach that can enhance the convergence speed and performance. `
 
 제안 기법은 빠른 성능을 보이면서 좋은 결과를 나타냈다. `The proposed network produces state-of-the-art results on the KITTI 3D object detection benchmarks while maintaining a fast inference speed.`
+
+
+## 1. Introduction
+
+State-of-the-art methods can achieve 
+- an average precision (AP) of 90% of 2D car detection 
+- but only an AP of 15% [7] for 3D image-based car detection.
+
