@@ -2,11 +2,9 @@
 
 > 내부적으로 [spconv](https://github.com/traveller59/spconv)사용
 
-ONLY support python 3.6+, pytorch 1.0.0+. Tested in Ubuntu 16.04/18.04.
+SECOND 시스템 요구 사항 : ONLY support python 3.6+, pytorch 1.0.0+. Tested in Ubuntu 16.04/18.04., 
 
-CUDA 9.0+
-
-cmake >= 3.13.2
+SPConv 시스템 요구 사항 : CUDA 9.0+, cmake >= 3.13.2
 
 ```
 wget https://github.com/Kitware/CMake/releases/download/v3.13.3/cmake-3.13.3.tar.gz
