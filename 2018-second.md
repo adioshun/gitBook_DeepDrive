@@ -61,10 +61,23 @@ Recently, a new approach called VoxelNet [14] has been developed.
 - 가장 최신 기술이지만, 속도가 느리다. `At present, this is a state-of-the-art approach. However, its computational cost makes it difficult to use for real-time applications. `
 
 
-In this paper, we present a novel approach called SECOND (Sparsely Embedded CONvolutional Detection), which addresses these challenges in 3D convolution-based detection by maximizing the use of the rich 3D information present in point cloud data. This method incorporates several improvements to the existing convolutional network architecture. Spatially sparse convolutional networks are introduced for LiDAR-based detection and are used to extract information from the z-axis before the 3D data are downsampled to something akin to 2D image data. We also use a GPU (Graphics Processing Unit)-based rule generation algorithm for sparse convolution to increase the speed. In comparison to a dense convolution network, our sparse-convolution-based detector achieves a factor-of-4 speed enhancement during training on the KITTI dataset and a factor-of-3 improvement in the speed of inference. As a further test, we have designed a small model for real-time detection that has a run time of approximately 0.025 s on a GTX 1080 Ti GPU, with only a slight loss of performance.
+본 논문에서 제안 하는 SECOND를 이용하여 이런 문제를 해결 하고자 한다. `In this paper, we present a novel approach called SECOND (Sparsely Embedded CONvolutional Detection), which addresses these challenges in 3D convolution-based detection by maximizing the use of the rich 3D information present in point cloud data. `
+
+This method incorporates several improvements to the existing convolutional network architecture. 
+
+### 1.1 첫번째 장점 
+
+Spatially sparse convolutional networks are introduced for LiDAR-based detection and are used to extract information from the z-axis before the 3D data are downsampled to something akin to 2D image data. 
+- We also use a GPU-based rule generation algorithm for sparse convolution to increase the speed. 
+
+제안 하는 Sparse conv네트워크는 기존의 Dense conv네트워크에 비해서 속도가 빠르다. `In comparison to a dense convolution network, our sparse-convolution-based detector achieves a factor-of-4 speed enhancement during training on the KITTI dataset and a factor-of-3 improvement in the speed of inference. `
 
 
+As a further test, we have designed a small model for real-time detection that has a run time of approximately 0.025 s on a GTX 1080 Ti GPU, with only a slight loss of performance.
 
+### 1.2 두번째 장점 
+
+Another advantage of using point cloud data is that it is very easy to scale, rotate and move objects by applying direct transformations to specified points on those objects. SECOND incorporates a novel form of data augmentation based on this capability. A ground-truth database is generated that contains the attributes of objects and the associated point cloud data. Objects sampled from this database are then introduced into the point clouds during training. This approach can greatly increase the convergence speed and the final performance of our network.
 
 
 
