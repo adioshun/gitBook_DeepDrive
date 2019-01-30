@@ -37,7 +37,7 @@
 * [Paper\_2017\_SegCloud](paper2017-segcloud.md)
 * [Paper\_2017\_VoxelNet](paper2017-voxelnet.md)
   * [VoxelNet-tensorflow](paper2017-voxelnet/voxelnet-tensorflow.md)
-* [2018-SECOND](2018-second.md)
+* [2018-SECOND](paper2018-second.md)
   * [SECOND-pytorch](2018-second/second-pytorch.md)
 
 ## 2D + Time \(Video\)
