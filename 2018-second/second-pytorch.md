@@ -51,3 +51,11 @@ git clone https://github.com/traveller59/second.pytorch.git
 
 
 docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY -v /media/adioshun/data/datasets:/datasets --volume /workspace:/workspace --name 'second'  adioshun/second /bin/bash
+
+
+
+---
+
+"pybind11/detail/common.h:112:20: fatal error: Python.h: No such file or directory"
+
+apt install python3.6-dev
