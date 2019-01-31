@@ -20,7 +20,7 @@
 
 
 
-# SECOND: Sparsely Embedded Convolutional Detection
+# SECOND: Sparsely Embedded Convolutional Detection (작성중 30%)
 
 
 Lidar는 여러 분야에 중요 하다. `LiDAR-based or RGB-D-based object detection is used in numerous applications, ranging from autonomous driving to robot vision. `
