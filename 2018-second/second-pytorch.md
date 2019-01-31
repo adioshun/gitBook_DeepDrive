@@ -1,9 +1,7 @@
 # [SECOND](https://github.com/traveller59/second.pytorch)
 
-> 내부적으로 [spconv](https://github.com/traveller59/spconv)사용
-
-SECOND 시스템 요구 사항 : ONLY support python 3.6+, pytorch 1.0.0+. Tested in Ubuntu 16.04/18.04., 
-SPConv 시스템 요구 사항 : CUDA 9.0+, cmake >= 3.13.2
+- SECOND 시스템 요구 사항 : ONLY support python 3.6+, pytorch 1.0.0+. Tested in Ubuntu 16.04/18.04., 
+- SPConv 시스템 요구 사항 : CUDA 9.0+, cmake >= 3.13.2  ([내부적으로사용](https://github.com/traveller59/spconv))
 
 
 ## 도커로 실행 
@@ -13,7 +11,7 @@ SPConv 시스템 요구 사항 : CUDA 9.0+, cmake >= 3.13.2
 $ cd /workspace
 $ git clone https://github.com/traveller59/second.pytorch.git
 
-$ docker push adioshun/second:latest
+$ docker pull adioshun/second:latest
 
 
 ## KITTI  데이터 위치 : /media/adioshun/data/datasets
@@ -32,6 +30,23 @@ Create reduced point cloud: `python create_data.py create_reduced_point_cloud --
 Create groundtruth-database infos:`python create_data.py create_groundtruth_database --data_path=/datasets`
 
 TRAIN : `python ./pytorch/train.py train --config_path=./configs/car.fhd.config --model_dir=/path/to/model_dir`
+Evaluate : `python ./pytorch/train.py evaluate --config_path=./configs/car.fhd.config --model_dir=/path/to/model_dir --measure_time=True --batch_size=1`
+
+```
+
+```
+└── KITTI_DATASET_ROOT (eg. /datasets/
+       ├── training    <-- 7481 train data
+       |   ├── image_2 <-- for visualization
+       |   ├── calib
+       |   ├── label_2
+       |   ├── velodyne
+       |   └── velodyne_reduced <-- empty directory
+       └── testing     <-- 7580 test data
+           ├── image_2 <-- for visualization
+           ├── calib
+           ├── velodyne
+           └── velodyne_reduced <-- empty directory
 ```
 
 
