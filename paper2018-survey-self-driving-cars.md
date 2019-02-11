@@ -221,165 +221,170 @@ Aptiv recently acquired two relevant self-driving companies, Movimento and nuTon
 
 ### 6.8 Didi
 
-Didi is a Chinese transportation service that bought Uber's
-rights in China. Didi's self-driving car project was announced
-in 2017 and, in February of 2018, they did the first successful
-demonstration of their technology. In the same month,
-company’s cars started being tested in USA and China. Within
-a year, Didi obtained the certificate for HD mapping in China.
-The company is now negotiating a partnership with Renault,
-Nissan, and Mitsubishi to build an electric and autonomous
-ride-sharing service [ENG18]. 
+Didi is a Chinese transportation service that bought Uber's rights in China. 
 
-Tesla was founded in 2003 and, in 2012, it started selling its
-first electric car, the Model S. In 2015, the company enabled
-the autopilot software for owners of the Model S. The
-software has been improved since then and its current version,
-the so called enhanced autopilot, is now able to match speed
-with traffic conditions, keep within a lane, change lanes,
-transition from one freeway to another, exit the freeway when
-the destination is near, self-park when near a parking spot, and
-be summoned to and from the user’s garage [TES18]. Tesla's
-current sensor set does not include LIDARs.
+Didi's self-driving car project was announced in 2017 and, in February of 2018, they did the first successful demonstration of their technology. 
 
-A Chinese company called LeEco is producing self-driving
-luxury sedans to compete with the Tesla Model S. The
-company is also backing up Faraday Future for the
-development of a concept car. LeEco is also partnering Aston
-Martin for the development of the RapidE electric car
-[VERG16]. 
+In the same month, company’s cars started being tested in USA and China. 
 
-Besides developing hardware for general-purpose highperformance
-computing, NVDIA is also developing hardware
-and software for self-driving cars [NVI18]. Although their
-solutions rely mostly on artificial intelligence and deep
-learning, they are also capable of performing sensor fusion,
-localization in HD maps, and planning [NVID18]. 
+Within a year, Didi obtained the certificate for HD mapping in China. 
 
-Aurora is a new company founded by experienced
-engineers that worked in Google's self-driving project, Tesla,
-and Uber [AUR18]. The company plans to work with
-automakers and suppliers to develop full-stack solutions for
-cars with level 4 and, eventually, level 5 of autonomy. Aurora
-has independent partnerships with Volkswagen group (that
-owns Volkswagen Passenger Cars, Audi, Bentley, Skoda, and
-Porsche) and Hyunday [FORT18].
-
-Zenuity is a joint venture created by Volvo Cars and
-Autoliv [ZEN18]. Ericsson will aid in the development of
-Zenuity’s Connected Cloud that will use Ericsson's IoT
-Accelerator [ERI18]. TomTom also partnered with Zenuity
-and provided its HD mapping technology [TOM18].
-TomTom’s HD maps will be used for localization, perception
-and path planning in Zenuity's software stack.
-
-Daimler and Bosch are joining forces to advance the
-development of cars with level 4 and 5 of autonomy by the
-beginning of the next decade [BOS18]. The companies already
-have an automated valet parking in Stuttgart [DAA18] and
-they also have tested the so called Highway Pilot in trucks in
-USA and Germany [DAB18]. Besides partnering with Bosch,
-Daimler also merged its car sharing business, Car2Go, with
-BMW's ReachNow, from the same business segment, in an
-effort to stave off competition from other technology
-companies, such as Waymo and Uber [DAC18]. The new
-company will include business in car sharing, ride-hailing,
-valet parking, and electric vehicle charging.
-
-Argo AI founders led self-driving car teams at Google and
-Uber [ARG18]. The company received an investment of U$ 1
-billion from Ford with the goal of developing a new software
-platform for Ford’s fully autonomous vehicle (level 4) coming
-in 2021. They have partnerships with professors from
-Carnegie Mellon University and Georgia Tech [ARB18]. 
-
-Renesas Autonomy develops several solutions for
-automated driving assistant systems (ADAS) and automated driving [REN18]. The company has a partnership with the
-University of Waterloo [RENE18]. 
+The company is now negotiating a partnership with Renault, Nissan, and Mitsubishi to build an electric and autonomous ride-sharing service [ENG18]. 
 
 
-Honda revealed in 2017 plans for introducing cars with
-level 4 of autonomy by 2025. The company intends to have
-vehicles with level 3 of autonomy by 2020 and it is
-negotiating a partnership with Waymo [HON18]. 
+### 6.9 Tesla 
 
-Visteon is a technology company that manufactures cockpit
-electronic products and connectivity solutions for several
-vehicle manufacturers [VIS18]. In 2018, Visteon introduced
-its autonomous driving platform capable of level 3 of
-autonomy and, potentially, higher levels. The company does
-not aim at producing cars and sensors, but at producing
-integrated solutions and software. 
+Tesla was founded in 2003 and, in 2012, it started selling its first electric car, the Model S. 
 
-AImotive is using low cost components to develop a selfdriving
-platform [AIM18]. Its solution relies strongly on
-computer vision, but it uses additional sensors. The company
-is already able to perform valet parking and navigate in
-highways. AImotive also developed a photorealistic simulator
-for data collection and preliminary system testing, and chips
-for artificial intelligence-based, latency-critic, and cameracentric
-systems. 
+In 2015, the company enabled the autopilot software for owners of the Model S. 
 
-As AImotive, AutoX is avoiding to use LIDARs in its
-solution. However, the company is going further than
-Almotive and trying to develop a level 5 car without using
-RADARs, ultrasonics, and differential GPS’s. AutoX's
-approach is to create a full-stack software solution based on
-artificial intelligence [AUT18].
+The software has been improved since then and its current version, the so called enhanced autopilot, is now able to match speed with traffic conditions, keep within a lane, change lanes, transition from one freeway to another, exit the freeway when the destination is near, self-park when near a parking spot, and be summoned to and from the user’s garage [TES18]. 
 
-Mobileye is also seeking to develop a self-driving solution
-without using LIDARs, but relying mostly in a single-lensed
-camera (mono-camera). Mobileye is one of the leading
-suppliers of software for Advanced Driver Assist Systems
-(ADAS), with more than 25 partners among automakers.
-Beyond ADAS, Mobileye is also developing technology to
-support other key components for autonomous driving, such as
-perception (detection of free space, driving paths, moving
-objects, traffic lights, and traffic signs, among others),
-mapping, and control. The company partnered with BMW and
-Intel to develop production-ready fully autonomous vehicles,
-with production launch planned for 2021 [MOB18].
+Tesla's current sensor set does not include LIDARs.
 
-Ambarella also does not use LIDAR, but only RADARs
-and stereo cameras. The company joined the autonomous
-driving race in 2015 by acquiring VisLAB. Different from
-other companies, Ambarella does not aim at becoming a tierone
-supplier or selling complete autonomous-driving systems.
-Instead, they plan to sell chips and software to automakers,
-suppliers, and software developers. Ambarella’s current
-research and development guidelines include detection of
-vehicles, obstacles, pedestrians, and lanes; traffic sign
-recognition; terrain mapping; and issues related to technology
-commercialization, such as system calibration, illumination,
-noise, temperature, and power consumption [AMB18]. 
+### 6.10 LeEco 
 
-Pony.ai was founded in December of 2016 and, in July of
-2017, it completed its first fully autonomous driving
-demonstration. The company signed a strategic agreement
-with one of the biggest Chinese car makers, the Guangzhou
-Auto Group (GAC) [PON18].
+A Chinese company called LeEco is producing self-driving luxury sedans to compete with the Tesla Model S. 
 
-Navya [NAA18] and Transdev [TRA18] are French
-companies that develop self-driving buses. Navya has several
-of their buses being tested in Europe, Asia, and Australia.
-Their sensor set consists of two multi-layer 360º LIDARs, six
-180º mono-layer LIDARs, front and rear cameras, odometer
-(wheels encoder + IMU), and a GNSS RTK [NAB18].
-Transdev is also already demonstrating their self-driving buses
-for the public [TRA18].
+The company is also backing up Faraday Future for the development of a concept car. 
 
-JD is a Chinese e-commerce company interested in building
-self-driving delivery vehicles [JD18]. JD's project, started in
-2016, is being developed together with Idriverplus [IDR18], a
-Chinese self-driving car startup. 
+LeEco is also partnering Aston Martin for the development of the RapidE electric car [VERG16]. 
 
-In March, 2018, Toyota announced an investment of U$ 2.8
-billion in the creation of a new company called the Toyota
-Research Institute-Advanced Development (TRI-AD) with the
-goal of developing an electric and autonomous car until 2020
-[TOYT18]. Besides Toyota [TOY18], other car
-manufacturers, such as Ford [FOR18], Volvo [VOLV18], and
-Mercedes-Benz [MER18], have also recently presented their
-plans for self-driving cars. Ford defined 2021 as a deadline for
-presenting a fully autonomous vehicle ready for commercial
-operation.
+### 6.11 NVIDIA 
+
+Besides developing hardware for general-purpose highperformance computing, NVDIA is also developing hardware and software for self-driving cars [NVI18]. 
+
+Although their solutions rely mostly on artificial intelligence and deep learning, they are also capable of performing sensor fusion, localization in HD maps, and planning [NVID18]. 
+
+### 6.12 Aurora 
+
+Aurora is a new company founded by experienced engineers that worked in Google's self-driving project, Tesla, and Uber [AUR18]. 
+
+The company plans to work with automakers and suppliers to develop full-stack solutions for cars with level 4 and, eventually, level 5 of autonomy. 
+
+Aurora has independent partnerships with Volkswagen group (that owns Volkswagen Passenger Cars, Audi, Bentley, Skoda, and Porsche) and Hyunday [FORT18].
+
+
+### 6.13 Zenuity 
+
+Zenuity is a joint venture created by Volvo Cars and Autoliv [ZEN18]. 
+
+Ericsson will aid in the development of Zenuity’s Connected Cloud that will use Ericsson's IoT Accelerator [ERI18]. 
+
+TomTom also partnered with Zenuity and provided its HD mapping technology [TOM18].
+
+TomTom’s HD maps will be used for localization, perception and path planning in Zenuity's software stack.
+
+### 6.14 Daimler and Bosch
+
+Daimler and Bosch are joining forces to advance the development of cars with level 4 and 5 of autonomy by the beginning of the next decade [BOS18]. 
+
+The companies already have an automated valet parking in Stuttgart [DAA18] and they also have tested the so called Highway Pilot in trucks in USA and Germany [DAB18]. 
+
+Besides partnering with Bosch, Daimler also merged its car sharing business, Car2Go, with BMW's ReachNow, from the same business segment, in an effort to stave off competition from other technology companies, such as Waymo and Uber [DAC18]. 
+
+The new company will include business in car sharing, ride-hailing, valet parking, and electric vehicle charging.
+
+### 6.15 Argo 
+
+Argo AI founders led self-driving car teams at Google and Uber [ARG18]. 
+
+The company received an investment of U$ 1 billion from Ford with the goal of developing a new software platform for Ford’s fully autonomous vehicle (level 4) coming in 2021. 
+
+They have partnerships with professors from Carnegie Mellon University and Georgia Tech [ARB18]. 
+
+### 6.16 Renesas 
+
+Renesas Autonomy develops several solutions for automated driving assistant systems (ADAS) and automated driving [REN18]. 
+
+The company has a partnership with the University of Waterloo [RENE18]. 
+
+
+### 6.17 Hoda 
+
+Honda revealed in 2017 plans for introducing cars with level 4 of autonomy by 2025. 
+
+The company intends to have vehicles with level 3 of autonomy by 2020 and it is negotiating a partnership with Waymo [HON18]. 
+
+### 6.18 Visteon 
+
+Visteon is a technology company that manufactures cockpit electronic products and connectivity solutions for several vehicle manufacturers [VIS18]. 
+
+In 2018, Visteon introduced its autonomous driving platform capable of level 3 of autonomy and, potentially, higher levels. 
+
+The company does not aim at producing cars and sensors, but at producing integrated solutions and software. 
+
+
+### 6.19 AI Motive 
+
+AI motive is using low cost components to develop a selfdriving platform [AIM18]. 
+
+Its solution relies strongly on computer vision, but it uses additional sensors. 
+
+The company is already able to perform valet parking and navigate in highways. 
+
+AImotive also developed a photorealistic simulator for data collection and preliminary system testing, and chips for artificial intelligence-based, latency-critic, and camera centric systems. 
+
+As AImotive, AutoX is avoiding to use LIDARs in its solution. 
+
+However, the company is going further than Almotive and trying to develop a level 5 car without using RADARs, ultrasonics, and differential GPS’s. 
+
+AutoX's approach is to create a full-stack software solution based on artificial intelligence [AUT18].
+
+
+### 6.20 Mobileye 
+
+Mobileye is also seeking to develop a self-driving solution without using LIDARs, but relying mostly in a single-lensed camera (mono-camera). 
+
+Mobileye is one of the leading suppliers of software for Advanced Driver Assist Systems (ADAS), with more than 25 partners among automakers.
+
+Beyond ADAS, Mobileye is also developing technology to support other key components for autonomous driving, such as perception (detection of free space, driving paths, moving objects, traffic lights, and traffic signs, among others),mapping, and control. 
+
+The company partnered with BMW and Intel to develop production-ready fully autonomous vehicles, with production launch planned for 2021 [MOB18].
+
+
+### 6.21 Ambarella
+
+Ambarella also does not use LIDAR, but only RADARs and stereo cameras. 
+
+The company joined the autonomous driving race in 2015 by acquiring VisLAB. 
+
+Different from other companies, Ambarella does not aim at becoming a tier one supplier or selling complete autonomous-driving systems.
+
+Instead, they plan to sell chips and software to automakers, suppliers, and software developers. 
+
+Ambarella’s current research and development guidelines include detection of vehicles, obstacles, pedestrians, and lanes; traffic sign recognition; terrain mapping; and issues related to technology commercialization, such as system calibration, illumination, noise, temperature, and power consumption [AMB18]. 
+
+
+### 6.22 Pony.ai 
+
+Pony.ai was founded in December of 2016 and, in July of 2017, it completed its first fully autonomous driving demonstration. 
+
+The company signed a strategic agreement with one of the biggest Chinese car makers, the Guangzhou Auto Group (GAC) [PON18].
+
+### 6.23 Navya and Transdev
+
+Navya [NAA18] and Transdev [TRA18] are French companies that develop self-driving buses. 
+
+Navya has several of their buses being tested in Europe, Asia, and Australia.
+
+Their sensor set consists of two multi-layer 360º LIDARs, six 180º mono-layer LIDARs, front and rear cameras, odometer (wheels encoder + IMU), and a GNSS RTK [NAB18].
+
+Transdev is also already demonstrating their self-driving buses for the public [TRA18].
+
+### 6.24 JD
+
+JD is a Chinese e-commerce company interested in building self-driving delivery vehicles [JD18]. 
+
+JD's project, started in 2016, is being developed together with Idriverplus [IDR18], a Chinese self-driving car startup. 
+
+### 6.25 Toyota 
+
+In March, 2018, Toyota announced an investment of U$ 2.8 billion in the creation of a new company called the Toyota Research Institute-Advanced Development (TRI-AD) with the goal of developing an electric and autonomous car until 2020
+[TOYT18]. 
+
+Besides Toyota [TOY18], other car manufacturers, such as Ford [FOR18], Volvo [VOLV18], and Mercedes-Benz [MER18], have also recently presented their plans for self-driving cars. 
+
+### 6.26 Ford
+
+Ford defined 2021 as a deadline for presenting a fully autonomous vehicle ready for commercial operation.
