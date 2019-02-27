@@ -36,6 +36,7 @@
   * [PointNet-pytorch](paper2016-pointnet/pointnet-pytorch.md)
 * [Paper\_2016\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
 * [Paper\_2017\_Vote3Deep \(50%\)](papervote3deep.md)
+* [Paper-2017-Multi-View 3D](paper2017-mv3d.md)
 * [Paper\_2017\_SegCloud](paper2017-segcloud.md)
 * [Paper\_2017\_VoxelNet](paper2017-voxelnet.md)
   * [VoxelNet-tensorflow](paper2017-voxelnet/voxelnet-tensorflow.md)
