@@ -187,8 +187,84 @@ The proposed method applies SVM with a radial basis function (RBF) kernel to lea
 
 ### 4.2 Pedestrian Classification
 
-Features f 1 and f 2 are introduced by
-the Premebida method [15]. The features from f 3 to f 7 are
-proposed by the Navarro-Serment method [17]. To improve
-the classification performance, the proposed method adds the
-following two features.
+![](https://i.imgur.com/oK1QSRR.png)
+
+- Features f 1 and f 2 are introduced by the Premebida method [15]. 
+- The features from f 3 to f 7 are proposed by the Navarro-Serment method [17]. 
+- To improve the classification performance, the proposed method adds the following two features.
+
+#### A. 1) Slice Feature for a Cluster
+
+사람은 다리 길이, 머리-어깨 길이의 특징을 가진다. `The pattern of the legs and the profile from the head to the shoulder are distinctive human shapes. `
+
+하지만 먼거리 물체는 이를 구분하기 어렵다. `It is, however, difficult to extract these partial features at a long distance, where the spatial resolution decreases. `
+
+A rough profile from the head to the legs is therefore utilized as the 3D shape of the pedestrians.
+
+Three principal axes for the pedestrian candidates are calculated by principal component analysis (PCA). 
+
+We assume that most pedestrians are in an upright position, so the principal eigenvector is expected to be vertically aligned with the person’s body. 
+
+![](https://i.imgur.com/FRDTz62.png)
+
+3D points in the cluster are divided into N blocks of the same size along the principal eigenvector,as shown in the left image of Fig. 4. 
+
+As a result of the division, a common feature can be extracted from pedestrians of different heights, such as an adult and a child. 
+
+Then, the 3D points in each block are projected onto a plane orthogonal to the principal eigenvector, and two widths along the other eigenvectors are computed as the feature. 
+
+The number of blocks is 10. The feature vector is represented as follows.
+
+`f 8 = {w 10 , w 11 , · · · , w j0 , w j1 , · · · , w N0 , w N1 }`
+
+This feature vector is called the ”slice feature” in this paper.
+
+#### B. 2) Distribution of Reflection Intensities in the Cluster
+
+As known in the field of spectroscopy, a substance has its own unique reflectance characteristics. 
+
+The reflection intensities of a pedestrian might have large individual variability because their clothing and their belongings are composed of various materials. 
+
+It is, however, expected that materials leading to false positives, such as trees and utility poles, are comparatively homogeneous. 
+
+Therefore, the reflection intensities of 3D points can contribute to the discrimination of pedestrians and false positives. 
+
+Examples of the reflection intensities of a pedestrian and a utility pole are shown in Fig. 5.
+
+![](https://i.imgur.com/383Nv01.png)
+
+The reflection intensity P r is defined by the following equation. 
+
+It is in inverse proportion to the square of the distance r:
+
+$$
+P_r = \fract ???
+$$
+
+- P 0 is the intensity of the emitted laser beam 
+- k is the coefficient defined by the LIDAR specifications, 
+- σ is the reflectance of the target.
+
+Strictly speaking, the reflection intensity has to be normalized by the square of the distance. 
+
+We can directly use the sensor output since LIDAR outputs an 8 bit value normalized for the distance as the reflection intensity.
+
+반사도 정보를 이용한 3가지 feature`The following three values are computed from the reflection intensities of the 3D points contained in each candidate:`
+- Mean intensity
+- Standard deviation of the intensities
+- Normalized histogram: the number of bins is 25 and the range of the intensities is divided at equal intervals.
+
+## V. RESULTS
+
+## VI. CONCLUSION
+
+목적 : This paper presents a method for recognizing pedestrians from 3D range data acquired by high-definition LIDAR. 
+
+제안 특징 The slice feature and the distribution of the reflection intensities are proposed to improve the recognition performance at a long range with low spatial resolution. 
+- The slice feature can represent the rough profile of a pedestrian shape efficiently and 
+- the distribution of the reflection intensities is effective to discriminate the materials of the targets. 
+
+결과 
+- The quantitative evaluation using real 3D range data confirms that the proposed method achieves higher performance than the Navarro-Serment method. 
+- Moreover, the proposed features can improve the classification ability at a range of more than 30 m.
+
