@@ -241,15 +241,21 @@ A total of 164 geometric features are determined for each object.
  - 이 계산값을 GS라고 부른다. `We call this the Geometric Score (GS). `
  - 정적 보행자 탐지에도 효과적이다. `The GS is particularly effective for detecting static pedestrians. `
 
-Similarly, the features used to determine the MS (i.e. object’s size, the distance it has traveled, and the corresponding size and motion noises) contain valuable information about the motion of the target. 
+- MS를 결정하는 Feature들은 물체의 모션 정보를 가지고 있다. `Similarly, the features used to determine the MS  contain valuable information about the motion of the target. `
+ - MS : object’s size, the distance it has traveled, and the corresponding size and motion noises
 
-Together with the GS, these features are fed to a second SVM, whose output represents the distance to the decision surface of the SVM. 
+#### B. 두번째 SVM
 
-The Strength of Detection (SOD), the total measure of how strongly the algorithm rates the object as being a human, is calculated as the logistic function of the distance to the decision surface. 
+- GS+MS를 입력으로 받아 결과로 `distance to the decision surface of the SVM`를 출력 한다. 
+ - Together with the GS, these features are fed to a second SVM, whose output represents the distance to the decision surface of the SVM. 
 
-This number is reported for each object. 
+- 신뢰도를 계산 하는데 사용된다. 
+ - The Strength of Detection (SOD), the total measure of how strongly the algorithm rates the object as being a human, is calculated as the logistic function of the distance to the decision surface. 
 
-If the GS cannot be computed (e.g. insufficient data from a distant target, or violation of the upright position assumption), then the MS is reported as the SOD for that object.
+- 각 물체 별로 계산 된다. This number is reported for each object. 
+
+- 만약 GS가 계산되지 않으면 MS값이 신뢰도(SOD)로 제공된다. 
+ - If the GS cannot be computed (e.g. insufficient data from a distant target, or violation of the upright position assumption), then the MS is reported as the SOD for that object.
 
 
 #### A. Training
