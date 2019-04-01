@@ -193,6 +193,13 @@ The proposed method applies SVM with a radial basis function (RBF) kernel to lea
 - The features from f 3 to f 7 are proposed by the Navarro-Serment method [17]. 
 - To improve the classification performance, the proposed method adds the following two features.
 
+
+```
+[15] C. Premebida, O. Ludwig and U. Nunes, ”Exploiting LIDAR-based Features on Pedestrian Detection in Urban Scenarios,” in Proc. 12th Int. IEEE Conf. on Intelligent Transportation Systems, 2009
+[17] L. E. Navarro-Serment, C. Mertz, and M. Hebert, ”Pedestrian Detection and Tracking Using Three-Dimensional LADAR Data,” in Proc. Int. Conf. on Field and Service Robotics, 2009.
+
+```
+
 #### A. 1) Slice Feature for a Cluster
 
 사람은 다리 길이, 머리-어깨 길이의 특징을 가진다. `The pattern of the legs and the profile from the head to the shoulder are distinctive human shapes. `

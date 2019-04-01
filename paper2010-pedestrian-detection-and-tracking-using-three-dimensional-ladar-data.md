@@ -188,6 +188,8 @@ A feature vector is computed from each of these sets (Figs. 2(d) - (e)), and the
 
 #### A. Feature Extraction
 
+![](https://i.imgur.com/P0hIA57.png)
+
 - 특정 물체K의 포인트를 `S_k`라고 간주 하자. : Let `S_k = {x1, x2, . . . , xn}` be the set of points belonging to the object `k`, whose elements are represented by Cartesian coordinates x = (x, y, z). 
 
 - 특징은 S_K를 기반으로 계산된다. : A set of suitable features is computed from `Sk`, as depicted in Fig. 2(d), which constitutes a profile of the object.
