@@ -1,7 +1,7 @@
 |논문명 |Pedestrian Detection and Tracking Using Three-dimensional LADAR Data |
 | --- | --- |
-| 저자\(소속\) | Yan Yan(=traveller59), Bo Li\(\) |
-| 학회/년도 | 2010, [논문](https://journals.sagepub.com/doi/abs/10.1177/0278364910370216?journalCode=ijra) |
+| 저자\(소속\) | Luis E. Navarro-Serment\(Carnegie Mellon University\) |
+| 학회/년도 | 2010, [논문](https://www.ri.cmu.edu/pub_files/2009/7/navarro_et_al_fsr_09.pdf) |
 | Citation ID / 키워드 | |
 | 데이터셋(센서)/모델 | |
 | 관련연구||
