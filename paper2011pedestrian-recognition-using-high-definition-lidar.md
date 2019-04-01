@@ -233,17 +233,15 @@ Examples of the reflection intensities of a pedestrian and a utility pole are sh
 
 ![](https://i.imgur.com/383Nv01.png)
 
-The reflection intensity P r is defined by the following equation. 
+The reflection intensity `P_r` is defined by the following equation. 
 
-It is in inverse proportion to the square of the distance r:
+It is in inverse proportion to the square of the distance `r`:
 
-$$
-P_r = \fract ???
-$$
+![](https://i.imgur.com/zA5Asf1.png)
 
-- P 0 is the intensity of the emitted laser beam 
-- k is the coefficient defined by the LIDAR specifications, 
-- σ is the reflectance of the target.
+- `P_0` is the intensity of the emitted laser beam 
+- `k` is the coefficient defined by the LIDAR specifications, 
+- `σ` is the reflectance of the target.
 
 Strictly speaking, the reflection intensity has to be normalized by the square of the distance. 
 
