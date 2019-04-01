@@ -97,9 +97,192 @@ Among other differences, as opposed to our work, they extract a shape template f
 ### 3.1 Projection into 2D Plane
 
 
+특정한 높이를 기준으로 3D -> 2D로 변형 `we initially isolate a 2D virtual slice, which contains only points located at a certain height above ground.`
+
+
+The ground elevation is stored in a scrolling grid that contains accumulated LADAR points and is centered at the vehicle’s current position. 
+
+포인트는 age정보로 가중치를 주며 최근 일수록 가중치가 크다. `The points are weighted by age, more recent points have a heigher weight. `
+
+The mean and standard deviation of the heights of all scan points that are inside each cell are computed, and the elevation is then calculated by subtracting one standard deviation from the average height of all the points in the cell. 
+
+중심 아이디어 : The key properties of this simple algorithm are that mean and standard deviations can be calculated recursively, and that the elevation is never below the lowest point while still having about 80% of the points above ground.
+
+
+The system adapts to different environments by varying the shape of the sensing plane i.e., by adjusting the height of the slice from which points are projected onto a two-dimensional plane. 
+
+
+Spurious measurements produced by ground returns are avoided by searching for measurements at a constant
+height above the ground. 
+
+Since our research was done in an open outdoor environment, we did not encounter overhanging structures like over paths or ceilings. 
+
+These might be topics of future research.
+
+### 3.2 Motion Features
+
+
+After detecting and tracking objects using the virtual scan line we can compute a Motion Score (MS).
+
+The MS is a measure of how confident the algorithm is that the detected object is a human, based on four motion-related variables: 
+- the object’s size, 
+- the distance it has traveled, 
+- and the variations in the object’s size and velocity. 
+
+The size test discriminates against large objects like cars and walls. 
+
+The distance traveled test discriminates against stationary objects like barrels and posts. 
+
+The variation tests discriminate against vegetation, since their appearance changes a lot due to their porous and flexible nature. 
+
+The individual results of these tests are scored, and then used to calculate the MS. 
+
+A detailed description of each test and all parameters involved is presented in [6].
+
+
+### 3.3 Geometric Features
+
+고정 물체 탐지 To discriminate against static structures, we compute a group of distinguishing geometric features from the set of points belonging to each object being tracked in 2D, and then feed these features to a classifier, which determines whether the object is a human or not. 
+
+![](https://i.imgur.com/NxZtEeb.png)
+
+As shown in Fig. 2(a), the process starts when a point cloud is read from the sensor. 
+
+We define `Zj = {x1, x2, . . . , xN }` as the set of N points contained in a frame collected at time `tj` , whose elements are represented by Cartesian coordinates x = (x, y, z). 
+
+The points corresponding to one frame are shown, and are colored according to their height above ground. 
+
+To avoid the computational cost of processing the entire point cloud, we extract a 2D virtual slice, as described in Section 3.1 (Fig. 2(b)). 
+
+For each object being tracked, its position, velocity, and size are estimated using the algorithm described
+in [6]. 
+
+These values are used to compute the MS. 
+
+The object’s position and size information are used to isolate, from the original point cloud, only those
+points corresponding to potential humans, as shown in Fig. 2(c). 
+
+In this way, the three-dimensional information corresponding to each object is recovered in the form of smaller sets of points. 
+
+At this point, we have a collection of `M` sets `{S1, S2, . . . , SM}`, where `Si∈{1,2,...,M} ⊂ Zj` .
+
+A feature vector is computed from each of these sets (Figs. 2(d) - (e)), and then fed to a classifier that determines for each object whether it is a human or not, Fig. 2(f).
+
+
+This decision is made for each object, and is based on the most recent set of points collected from the sensor. 
+ 
+The classifier also takes into account the information used to calculate the MS; this is described in a subsequent section.
+
+A set of features is computed with the purpose of extracting the most informative signatures of a human in an upright posture from the 3D data.
+
+The legs are particularly distinctive of the human figure, so the algorithm computes statistical descriptions from points located around the legs. 
+
+Similar descriptions are computed from the trunk area, representing the upper body.
+
+Additionally, the moment of inertia tensor is used to capture the overall distribution of all points. 
+
+Finally, to include the general shape of the human figure, we compute the normalized 2D histograms on two planes aligned with the gravity vector.
+
+
+#### A. Feature Extraction
+
+Let `Sk = {x1, x2, . . . , xn}` be the set of points belonging to the object `k`, whose elements are represented by Cartesian coordinates x = (x, y, z). 
+
+A set of suitable features is computed from `Sk`, as depicted in Fig. 2(d), which constitutes a profile of the object.
+
+We begin by performing Principal Component Analysis (PCA) using all the elements of `Sk`, to identify the statistical patterns in the three-dimensional data (see Fig. 3). 
+
+This involves the subtraction of the mean `m` from each of the three data dimensions. 
+
+From this new data set with zero mean, we calculate the covariance matrix  `Σ ∈ <3×3`, and the normalized moment of inertia tensor `M ∈ <3×3`, treating all points as unit point masses:
+
+![](https://i.imgur.com/kZL2TaV.png)
+
+Since both `Σ` and `M` are symmetric, we only use 6 elements from each as features.
+
+Resulting from the PCA are three pairs of eigenvectors and eigenvalues, sorted according to decreasing eigenvalue. 
+
+Call these eigenvectors `e1`, `e2`, `e3`, with their corresponding eigenvalues `λ1 > λ2 > λ3`. 
+
+We assume that a pedestrian is in an upright position, so the principal component `e1` is expected to be vertically aligned with the person’s body1. 
+
+Together with the second largest component `e2`, it forms the main plane (Fig.3, center top), and also
+forms the secondary plane with the smallest component, e3 (Fig.3, center bottom). 
+
+We then transform the original data into two representations using each pair of components `e1`, `e2` and `e1`, `e3`, from which we proceed to compute additional features (the third possible representation, i.e. using the two
+smallest components e2, e3, is not used).
+
+We focus on the points included in the main plane, to analyze the patterns that would correspond to the legs and trunk of a pedestrian, as shown in Fig 3, center top. 
+
+These zones are the upper half, and the left and right lower halves. 
+
+After separating the points into these zones, we calculate the covariance matrix (in 2D) over the transformed points laying inside each zone.
+
+This results in 9 additional features (3 unique values from each zone).
+
+Finally, we compute the normalized 2D histograms for each of the two principal planes (Fig. 3, right), to capture the shape of the object. 
+
+We use `14×7` bins for the main plane, and `9×5` for the secondary plane. 
+
+Each bin is used as a feature, so there are 143 features representing the shape. 
+
+A total of 164 geometric features are determined for each object.
+
+## 3.4 Human Detection
+
+A classifier (Fig. 2(f)), composed of two independent Support Vector Machines (SVM) [2], determines for each object whether it is human or not. 
+
+The first classifier is a SVM that receives the vector of 164 geometric features computed directly from Sk, and scores how closely the set matches a human shape. 
+
+We call this the Geometric Score (GS). The GS is particularly effective for detecting static pedestrians. 
+
+Similarly, the features used to determine the MS (i.e. object’s size, the distance it has traveled, and the corresponding size and motion noises) contain valuable information about the motion of the target. 
+
+Together with the GS, these features are fed to a second SVM, whose output represents the distance to the decision surface of the SVM. 
+
+The Strength of Detection (SOD), the total measure of how strongly the algorithm rates the object as being a human, is calculated as the logistic function of the distance to the decision surface. 
+
+This number is reported for each object. 
+
+If the GS cannot be computed (e.g. insufficient data from a distant target, or violation of the upright position assumption), then the MS is reported as the SOD for that object.
+
+
+#### A. Training
+
+We trained the GS classifier using a combination of simulated and real examples. 
+
+Because it is impossible to collect enough real data to evaluate perception algorithms in all possible situations, we have created a simulator capable of producing synthetic examples of sensor data. 
+
+The simulator uses a ray tracing engine to generate a set of ray intersections between sensor and the objects in the scene to simulate. 
+
+This information is then used to produce synthetic LADAR measurements according to a set of parameters for a particular sensor, as shown in Fig. 4. 
+
+We trained the GS classifier using over 3500 examples (27.4% humans, 72.6% non-humans). 
+
+The human set included 62% of simulated examples. 
+
+The second classifier was trained using only real examples, since the motion and size noises used to determine the MS are of a dynamic nature and consequently harder to simulate efficiently (over 46000 examples: 6% humans, 94% non-humans).
+
+We trained both SVMs using a five-fold cross validation procedure. 
+
+We found that both radial basis function (RBF) and polynomial kernels resulted in similar levels of classification performance. 
+
+After multiple tests, we determined that a RBF kernel was the best for the calculation of the GS, while a polynomial kernel was preferred for the second classifier.
 
 
 
+## 4 EXPERIMENTAL RESULTS
+
+
+## 5 CONCLUSION
+
+We described a pedestrian detection and tracking system using only three dimensional data. 
+
+The approach uses geometric and motion features to recognize human signatures, and clearly improves the detection performance achieved in our previous work. 
+
+The set of features used to determine the human and motion scores was designed to detect humans in upright positions.
+
+To increase the robustness of detection of humans in other postures, in future research we will investigate ways of extracting signatures from the point cloud that are highly invariant to deformations of the human body.
 
 
 
