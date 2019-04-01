@@ -12,6 +12,8 @@
 * [Paper\_2016\_Sementic\_Fusion](paper2016-sementic-fusion.md)
 * [Paper\_2018\_Survey\_Self-Driving Cars \(15%\)](paper2018-survey-self-driving-cars.md)
 * [Simulator\_CARLA](simulatorcarla.md)
+* [Paper\_2010\_Pedestrian Detection and Tracking Using Three-dimensional LADAR Data](paper2010-pedestrian-detection-and-tracking-using-three-dimensional-ladar-data.md)
+* [Paper\_2011\_Pedestrian Recognition Using High-definition LIDAR](paper2011pedestrian-recognition-using-high-definition-lidar.md)
 
 ## 3D OverView
 
