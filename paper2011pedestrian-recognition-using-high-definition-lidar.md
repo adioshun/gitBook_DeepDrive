@@ -12,7 +12,7 @@
 
 |년도|1st 저자|논문명|코드|
 |-|-|-|-|
-|||||
+|2008|T Miyasaka|[Ego-Motion Estimation and Moving Object Tracking using Multi-layer LIDAR](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5164269)||
 
 
 

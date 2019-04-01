@@ -17,3 +17,9 @@
 
 
 
+# Pedestrian Detection and Tracking Using Three-Dimensional LADAR Data
+
+The algorithm uses geometric and motion features to recognize human signatures
+
+## 1 INTRODUCTION
+
