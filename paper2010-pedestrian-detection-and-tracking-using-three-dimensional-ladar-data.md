@@ -112,8 +112,7 @@ The mean and standard deviation of the heights of all scan points that are insid
 The system adapts to different environments by varying the shape of the sensing plane i.e., by adjusting the height of the slice from which points are projected onto a two-dimensional plane. 
 
 
-Spurious measurements produced by ground returns are avoided by searching for measurements at a constant
-height above the ground. 
+가짜 데이터 처리 : Spurious measurements produced by ground returns are avoided by searching for measurements at a constant height above the ground. 
 
 Since our research was done in an open outdoor environment, we did not encounter overhanging structures like over paths or ceilings. 
 
@@ -142,17 +141,21 @@ A detailed description of each test and all parameters involved is presented in 
 
 ### 3.3 Geometric Features
 
-고정 물체 탐지 To discriminate against static structures, we compute a group of distinguishing geometric features from the set of points belonging to each object being tracked in 2D, and then feed these features to a classifier, which determines whether the object is a human or not. 
+고정 물체 탐지를 위해서 2D로 추적된 물체의 geometric features를 계산 한다. 계산값은 분류기에 전달 되어 사람인지 아닌지 판단 한다. `To discriminate against static structures, we compute a group of distinguishing geometric features from the set of points belonging to each object being tracked in 2D, and then feed these features to a classifier, which determines whether the object is a human or not.`
 
 ![](https://i.imgur.com/NxZtEeb.png)
 
-As shown in Fig. 2(a), the process starts when a point cloud is read from the sensor. 
+#### A. 데이터 수집 : Fig. 2(a)
 
-We define `Zj = {x1, x2, . . . , xN }` as the set of N points contained in a frame collected at time `tj` , whose elements are represented by Cartesian coordinates x = (x, y, z). 
+- As shown in Fig. 2(a), the process starts when a point cloud is read from the sensor. 
+ - We define `Zj = {x1, x2, . . . , xN }` as the set of N points contained in a frame collected at time `tj` , 
+ - whose elements are represented by Cartesian coordinates x = (x, y, z). 
 
-The points corresponding to one frame are shown, and are colored according to their height above ground. 
+- 색상은 높이 이다. The points corresponding to one frame are shown, and are colored according to their height above ground. 
 
-To avoid the computational cost of processing the entire point cloud, we extract a 2D virtual slice, as described in Section 3.1 (Fig. 2(b)). 
+#### B. extract a 2D virtual slice : Fig. 2(b)
+
+- 계산 부하를 줄이기 위해 2D V-Slice 생성 `To avoid the computational cost of processing the entire point cloud, we extract a 2D virtual slice, as described in Section 3.1 (Fig. 2(b)).` 
 
 For each object being tracked, its position, velocity, and size are estimated using the algorithm described
 in [6]. 
