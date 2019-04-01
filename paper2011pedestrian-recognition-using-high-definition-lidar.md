@@ -16,4 +16,14 @@
 
 
 
+# Pedestrian Recognition Using High-definition LIDAR
+
+Two novel features are introduced to improve the classification performance. 
+- One is the slice feature, which represents the profile of a human body by widths at the different height levels. 
+- The other is the distribution of the reflection intensities of points measured on the target.
+    - because each substance has its own unique reflection characteristics
+
+Our approach applies a **support vector machine (SVM)** to train a classifier from these features.
+
+## I. INTRODUCTION
 
