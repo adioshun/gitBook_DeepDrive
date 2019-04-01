@@ -2,10 +2,10 @@
 | --- | --- |
 | 저자\(소속\) | Kiyosumi Kidono \(Toyota Central R&D Labs\) |
 | 학회/년도 | 2011, [논문](http://www.aisl.cs.tut.ac.jp/~jun/pdffiles/kidono-iv2011.pdf) |
-| Citation ID / 키워드 | |
+| Citation ID / 키워드 |slice feature, distribution of reflection intensities, Velodyne HDL-64ES2 |
 | 데이터셋(센서)/모델 | |
 | 관련연구||
-| 참고 | |
+| 참고 |  |
 | 코드 |  |
 
 
@@ -75,4 +75,64 @@ Lidar 큰 장점 : LIDAR which can obtain dense range data
 - In Section IV, the details of the proposed method for recognizing pedestrians are presented. 
 - Section V contains the experimental results and 
 - Section VI concludes the paper
+
+## II. RELATED WORK
+
+### 2.1 
+
+> 사무실 환경, 2D range data, 2D lidar(??),AdaBoost 알고리즘, 14개 feature학습 
+
+Arras et al. [14] detected people in 2D range data from LIDAR in a cluttered office environment. 
+
+They used a LIDAR sensor with one horizontally scanning line and applied the AdaBoost algorithm to learn a robust classifier. 
+
+The classifier, learned from 14 features, 
+- such as the number of laser points and the values indicating the linearity and the circularity in
+the 2D plane, identified the groups of beams that correspond to people’s legs. 
+
+### 2.2
+
+> [14]연구를  multilayer lidar로 확대, 도로/도보자 탐지, 다중분류기 사용, feature(linearity and the circularity)
+
+Premebida et al. [15] extended the method to pedestrian detection in a road environment using multilayer
+LIDAR. 
+
+They applied a multiple classification method to detect people within a range up to 35 m. 
+
+Those methods rely on the linearity and the circularity of the 2D range data for the feature extraction. 
+
+단점 : Extending the approach to 3D laser range data increases the computational load.
+
+### 2.3
+
+> [14][15]연구를 3D lidar로 확대, 서로 다른 높이의 2D lidar로 나눔, 각 높이의 정보를 AdaBoost로 예측 /통합, 거리에 민감한 단점 
+
+Spinello et al. [16] expanded these approaches based on a 2D point cloud into a 3D point cloud. 
+
+They subdivided the 3D point cloud of the target into several 2D point clouds at different heights. 
+
+The classifiers obtained by AdaBoost estimated whether each 2D point cloud was a part of a human body. 
+
+The estimation results of all parts of the target were integrated and the target with the correct combination of
+parts was identified as the pedestrian. 
+
+단점 : However, the detection performance was very sensitive to the distance to the target.
+
+### 2.4 
+
+> 대사을 3개로 나누고 특징 적용 
+
+Navarro-Serment et al. [17] also presented a method of tracking people in 3D range data from high-definition LI-
+DAR. 
+
+The 3D point cloud in the target was divided into three parts corresponding to the legs and the trunk of a pedestrian,
+and the variances of the 3D points contained in each part were utilized as a feature to discriminate the pedestrians.
+
+In addition, they represented a 3D pedestrian shape by 2D histograms on two principal planes. 
+
+장점 : The approach has the advantage of a low computational load because the feature extraction is very simple. 
+
+단점 : However, the performance at a long range was also reduced in this approach.
+
+
 
