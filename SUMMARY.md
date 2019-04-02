@@ -48,7 +48,7 @@
 * [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
 * [Paper\_2017\_SqueezeSeg](paper2017-squeezeseg.md)
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
-* [2018-SECOND](paper2018-second.md)
+* [Paper\_2018-SECOND](paper2018-second.md)
   * [SECOND-pytorch](2018-second/second-pytorch.md)
 * [Code\_2018\_DenseLidarNet](code2018-DenseLidarNet.md)
 * [Paper\_2019\_Pseudo-LiDAR from Visual Depth Estimation](paper2019-Pseudo-LiDAR.md)
