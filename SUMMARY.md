@@ -40,6 +40,7 @@
   * [PointNet-pytorch](paper2016-pointnet/pointnet-pytorch.md)
 * [Paper\_2016\_PointNet3D \(50%\)](paper2016-pointnet3d.md)
 * [Paper\_2016\_FCN4VD\_Bo Li  \(30%\)](paper3d-cnn.md)
+* [Paper\_2017\_Depth\_Clustering](paper2017-depthclustering.md)
 * [Paper\_2017\_Vote3Deep \(50%\)](papervote3deep.md)
 * [Paper-2017-Multi-View 3D](paper2017-mv3d.md)
   * [mv3d-implementation](paper2017-mv3d/mv3d-implementation.md)
