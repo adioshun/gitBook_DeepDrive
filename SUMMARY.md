@@ -51,6 +51,7 @@
 * [Paper\_2018-SECOND](paper2018-second.md)
   * [SECOND-pytorch](2018-second/second-pytorch.md)
 * [Code\_2018\_DenseLidarNet](code2018-DenseLidarNet.md)
+* [Paper_2018_Point Cloud Upsampling Network](paper-PU-Net.md)
 * [Paper\_2019\_Pseudo-LiDAR from Visual Depth Estimation](paper2019-Pseudo-LiDAR.md)
 
 ## 2D + Time \(Video\)
