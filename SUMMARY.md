@@ -5,10 +5,9 @@
 * [ReadME](README.md)
 * [List\_of\_DeepDrive](-toread-deepdrive-.md)
 * [List\_of\_DeepDrive2](listof-deepdrive2.md)
-* [----- Multiview based -----](-multiview-based-.md)
 * [----- Pointcloud based -----](-pointcloud-based-.md)
 
-## Survey 
+## Survey
 
 * [Paper\_2013\_Survey\_Vehicle Detection \(0%\)](paper2013-survey-vehicle-detection.md)
 * [Paper\_2016\_Sementic\_Fusion](paper2016-sementic-fusion.md)
@@ -19,8 +18,6 @@
 * [Paper\_2018\_Survey\_Self-Driving Cars \(15%\)](paper2018-survey-self-driving-cars.md)
 * [Paper\_2018\_A Survey of Clustering With Deep Learning](survey/Deep_clustering.md)
 * [Paper\_2018\_Clustering with Deep Learning](survey/Clustering-with-Deep-Learning.md)
-
-
 
 ## 3D OverView
 
@@ -53,6 +50,8 @@
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
 * [2018-SECOND](paper2018-second.md)
   * [SECOND-pytorch](2018-second/second-pytorch.md)
+* [Code\_2018\_DenseLidarNet](code2018-DenseLidarNet.md)
+* [Paper\_2019\_Pseudo-LiDAR from Visual Depth Estimation](paper2019-Pseudo-LiDAR.md)
 
 ## 2D + Time \(Video\)
 
@@ -67,9 +66,6 @@
 * ref04\_non-maxima suppression \(NMS\)
 * [ref05-Read\_RGBD](pointcloud-data/readrgbd.md)
 * [Simulator\_CARLA](simulatorcarla.md)
-
-
-
 
 ## Out of Scope
 
