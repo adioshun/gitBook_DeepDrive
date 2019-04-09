@@ -19,6 +19,8 @@
 * [Paper\_2018\_A Survey of Clustering With Deep Learning](survey/Deep_clustering.md)
 * [Paper\_2018\_Clustering with Deep Learning](survey/Clustering-with-Deep-Learning.md)
 * [Paper\_2013\_Survey\_2D\_3DShape Descriptor \(30%\)](paper2016-deep-learning-representation.md)
+* [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
+* [Code\_2018\_DenseLidarNet](code2018-DenseLidarNet.md)
 
 ## 3D OverView
 
@@ -47,10 +49,8 @@
   * [VoxelNet-tensorflow](paper2017-voxelnet/voxelnet-tensorflow.md)
 * [Paper\_2017\_LoDNN\_Road Detection \(10%\)](paper2017-lodnnroad-detection.md)
 * [Paper\_2017\_SqueezeSeg](paper2017-squeezeseg.md)
-* [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
 * [Paper\_2018-SECOND](paper2018-second.md)
   * [SECOND-pytorch](2018-second/second-pytorch.md)
-* [Code\_2018\_DenseLidarNet](code2018-DenseLidarNet.md)
 * [Paper\_2018\_Point Cloud Upsampling Network](paper-PU-Net.md)
 * [Paper\_2019\_Pseudo-LiDAR from Visual Depth Estimation](paper2019-Pseudo-LiDAR.md)
 
