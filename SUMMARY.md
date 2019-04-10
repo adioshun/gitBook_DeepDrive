@@ -20,28 +20,27 @@
 * [Paper\_2018\_Clustering with Deep Learning](survey/Clustering-with-Deep-Learning.md)
 * [Paper\_2013\_Survey\_2D\_3DShape Descriptor \(30%\)](paper2016-deep-learning-representation.md)
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
-* [Code\_2018\_DenseLidarNet](code2018-DenseLidarNet.md)
+
 
 ## 3D OverView
 
 * [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
 * [Paper\_2018-SECOND](paper2018-second.md)
-
-## 2D + Time \(Video\)
-
-## 참고
-
-* [ref00\_Terms](ref00terms.md)
-* [ref01\_Hardware](ref01hardware.md)
-* [ref02\_Metrics](ref02metrics.md)
-* [ref03\_Tracklet](ref03tracklet.md)
-* ref04\_non-maxima suppression \(NMS\)
-* [ref05-Read\_RGBD](pointcloud-data/readrgbd.md)
-* [Simulator\_CARLA](simulatorcarla.md)
+* [Code\_2018\_DenseLidarNet](code2018-DenseLidarNet.md)
 
 ## Out of Scope
 
 * [Papers\_OccupancyGridFusion](papersoccupancygridfusion.md)
+
+
+## LowLevel CV
+
+* [Intro\_Scene Flow](introscene-flow.md)
+
+## 2D Monocular_Stereo Vision
+
+* [Intro\_MonocularVision](introback-projection.md)
+* [Intro\_StereoVision](introstereovision.md)
 
 ## Project
 
@@ -56,17 +55,14 @@
   * [Didi\_ref\_3D DataHandling](projectdidi-competition/didiref-3d-datahandling.md)
   * [Didi\_ref\_visualization](projectdidi-competition/didiref-visualization.md)
 
-## LowLevel CV
+## 참고
 
-* [Intro\_Scene Flow](introscene-flow.md)
+* [ref00\_Terms](ref00terms.md)
+* [ref01\_Hardware](ref01hardware.md)
+* [ref02\_Metrics](ref02metrics.md)
+* [ref03\_Tracklet](ref03tracklet.md)
+* ref04\_non-maxima suppression \(NMS\)
+* [ref05-Read\_RGBD](pointcloud-data/readrgbd.md)
+* [Simulator\_CARLA](simulatorcarla.md)
 
-## 2D CNN
-
-## 2D Monocular Vision
-
-* [Intro\_MonocularVision](introback-projection.md)
-
-## 2D Stereo Vision
-
-* [Intro\_StereoVision](introstereovision.md)
 
