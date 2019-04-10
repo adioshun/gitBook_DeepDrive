@@ -44,15 +44,9 @@
 ## Out of Scope
 
 * [Papers\_OccupancyGridFusion](papersoccupancygridfusion.md)
-* [Paper\_2016\_MSF-OG \(5%\)](paper2016-msf-og.md)
 * [----- Octree based -----](-octree-based-.md)
-* [Paper\_2017\_OctNet \(30%\)](paper2017-octnet.md)
 * [Paper\_2016\_3D-R2N2](paper2016-3d-r2n2.md)
 * [----- 3D Feature based -----](-feature-based-.md)
-* [Paper\_2015\_DeepSD \(70%\)](paper2016-deep-learning-representation/paper2015-3d-deep-shape-descriptor.md)
-* [Paper\_2015\_DL Representation ](paper2016-deep-learning-representation/paper2015-dl-representation.md)
-* [Paper\_2015\_3DMesh\_Laveling](paper2016-deep-learning-representation/paper2015-3dmesh-laveling.md)
-* [Paper\_2014\_AE3D shape Retrieval \(30%\)](paper2014-ae3d-shape-retrieval.md)
 
 ## Project
 
