@@ -45,7 +45,6 @@
 
 * [Papers\_OccupancyGridFusion](papersoccupancygridfusion.md)
 * [----- Octree based -----](-octree-based-.md)
-* [Paper\_2016\_3D-R2N2](paper2016-3d-r2n2.md)
 * [----- 3D Feature based -----](-feature-based-.md)
 
 ## Project
