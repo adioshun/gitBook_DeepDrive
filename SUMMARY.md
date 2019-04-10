@@ -44,8 +44,6 @@
 ## Out of Scope
 
 * [Papers\_OccupancyGridFusion](papersoccupancygridfusion.md)
-* [----- Octree based -----](-octree-based-.md)
-* [----- 3D Feature based -----](-feature-based-.md)
 
 ## Project
 
@@ -62,18 +60,15 @@
 
 ## LowLevel CV
 
-* [List\_Scene Flow](listscene-flow.md)
 * [Intro\_Scene Flow](introscene-flow.md)
 
 ## 2D CNN
 
 ## 2D Monocular Vision
 
-* [----- Monocular Vision -----](-monocular-vision-.md)
 * [Intro\_MonocularVision](introback-projection.md)
 
 ## 2D Stereo Vision
 
-* [----- Stereo Vision -----](-stereo-vision-.md)
 * [Intro\_StereoVision](introstereovision.md)
 
