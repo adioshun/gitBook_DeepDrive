@@ -96,6 +96,4 @@
 
 * [----- Stereo Vision -----](-stereo-vision-.md)
 * [Intro\_StereoVision](introstereovision.md)
-  * [Paper\_2014\_Know\_limit\_stereo](paper2014-know-limit-stereo.md)
-* [Paper\_2017\_3DOP\_X Chen \(70%\)](paper2017-3d-object-proposals.md)
 
