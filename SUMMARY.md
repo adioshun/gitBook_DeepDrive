@@ -21,7 +21,6 @@
 * [Paper\_2013\_Survey\_2D\_3DShape Descriptor \(30%\)](paper2016-deep-learning-representation.md)
 * [Tutorial\_2017\_CVPR\_3D Deeplearning](tutorial2017-cvpr-3d-deeplearning.md)
 
-
 ## 3D OverView
 
 * [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
@@ -32,12 +31,11 @@
 
 * [Papers\_OccupancyGridFusion](papersoccupancygridfusion.md)
 
-
 ## LowLevel CV
 
 * [Intro\_Scene Flow](introscene-flow.md)
 
-## 2D Monocular_Stereo Vision
+## 2D Monocular\_Stereo Vision
 
 * [Intro\_MonocularVision](introback-projection.md)
 * [Intro\_StereoVision](introstereovision.md)
@@ -61,8 +59,7 @@
 * [ref01\_Hardware](ref01hardware.md)
 * [ref02\_Metrics](ref02metrics.md)
 * [ref03\_Tracklet](ref03tracklet.md)
-* ref04\_non-maxima suppression \(NMS\)
+* [ref04\_non-maxima suppression \(NMS\)](ref04non-maxima-suppression-nms.md)
 * [ref05-Read\_RGBD](pointcloud-data/readrgbd.md)
 * [Simulator\_CARLA](simulatorcarla.md)
-
 
