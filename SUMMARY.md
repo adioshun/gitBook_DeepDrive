@@ -29,8 +29,6 @@
 
 ## 2D + Time \(Video\)
 
-* [Paper\_2017\_DeepFeatureFlow \(0%\)](paper2017-deepfeatureflow.md)
-
 ## 참고
 
 * [ref00\_Terms](ref00terms.md)
