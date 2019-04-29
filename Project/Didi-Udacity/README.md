@@ -127,6 +127,8 @@ https://github.com/adioshun/MV3D_TF
 
 - [lancejchen](https://github.com/lancejchen/didi-competition.git)
 
+- https://github.com/markstrefford/didi-sdc-challenge-2017
+
 ## 3. References
 
 - [**List** of LIDAR Point Clouds and Deep Learning](https://bigsnarf.wordpress.com/2017/05/12/lidar-point-clouds-and-deep-learning/)
