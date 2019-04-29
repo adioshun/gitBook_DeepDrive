@@ -54,13 +54,6 @@
 * [Project\_2017\_Berkeley](project2017-berkeley.md)
 * [Project\_2017\_iPRoBe Lab](project2017-iprobe-lab.md)
 * [Project\_Autoware](projectautoware.md)
-* [Project\_DiDi Competition](projectdidi-competition.md)
-  * [Didi\_Getting\_Started](projectdidi-competition/didigetting-started.md)
-  * [Didi\_Solution\_hengck23](projectdidi-competition/didisolution-hengck23.md)
-  * [Didi\_Solution\_OmgTeam](projectdidi-competition/didisolution-omgteam.md)
-  * [Didi\_Solution\_Timelaps](projectdidi-competition/didisolution-timelaps.md)
-  * [Didi\_ref\_3D DataHandling](projectdidi-competition/didiref-3d-datahandling.md)
-  * [Didi\_ref\_visualization](projectdidi-competition/didiref-visualization.md)
 
 ## 참고
 
