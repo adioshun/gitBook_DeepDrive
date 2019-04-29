@@ -43,7 +43,6 @@
 ## Mooc
 
 * [README](MOOC/README.md)
-* [Udacity Robotics Nanodegree](MOOC/Udacity-Robotics-Nanodegree/README.md)
 
 
 ## Project
