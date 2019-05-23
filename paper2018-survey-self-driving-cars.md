@@ -5,29 +5,32 @@ https://arxiv.org/pdf/1901.04407v1.pdf
 ```
 Summary
 I. Introduction......................................................................2
+
 II. Overview of the Architecture of Self-Driving Cars.....3
+
 III. Perception ....................................................................4
 A. Localization..............................................................4
-1) LIDAR-Based Localization .....................................5
-2) LIDAR plus Camera-Based Localization ................6
-3) Camera-Based Localization .....................................6
+    1) LIDAR-Based Localization .....................................5
+    2) LIDAR plus Camera-Based Localization ................6
+    3) Camera-Based Localization .....................................6
 B. Offline Obstacle Mapping........................................7
-1) Discrete Space Metric Representations....................7
-2) Continuous Space Metric Representations...............8
+    1) Discrete Space Metric Representations....................7
+    2) Continuous Space Metric Representations...............8
 C. Road Mapping..........................................................8
-1) Road Map Representation........................................8
-2) Road Map Creation ..................................................9
+    1) Road Map Representation........................................8
+    2) Road Map Creation ..................................................9
 D. Moving Objects Tracking ......................................10
-1) Traditional Based MOT .........................................10
-2) Model Based MOT.................................................10
-3) Stereo Vision Based MOT .....................................11
-4) Grid Map Based MOT ...........................................11
-5) Sensor Fusion Based MOT ....................................11
-6) Deep Learning Based MOT ...................................12
+    1) Traditional Based MOT .........................................10
+    2) Model Based MOT.................................................10
+    3) Stereo Vision Based MOT .....................................11
+    4) Grid Map Based MOT ...........................................11
+    5) Sensor Fusion Based MOT ....................................11
+    6) Deep Learning Based MOT ...................................12
 E. Traffic Signalization Detection and Recognition.......12
-1) Traffic Light Detection and Recognition ...............12
-2) Traffic Sign Detection and Recognition.................13
-3) Pavement Marking Detection and Recognition......14
+    1) Traffic Light Detection and Recognition ...............12
+    2) Traffic Sign Detection and Recognition.................13
+    3) Pavement Marking Detection and Recognition......14
+
 IV. Decision Making........................................................14
 A. Route Planning.......................................................14
 1) Goal-Directed Techniques .....................................15
@@ -41,9 +44,10 @@ B. Motion Planning ....................................................16
 C. Control...................................................................19
 1) Path Tracking Methods..........................................19
 2) Hardware Actuation Control Methods...................20
+
 V. Architecture of the UFES’s Car “IARA”...................20
+
 VI. Self-Driving Cars under Development in the Industry
-22
 References .............................................................................24
 ```
 
@@ -81,7 +85,7 @@ The decision making system is commonly partitioned as well into many subsystems 
 - localizer (or localization)
 - offline obstacle mapping
 - road mapping
-- moving obstacle tracking
+- moving object tracking
 - and traffic signalization detection and recognition.
 
 ### 3.1 Localization
@@ -89,9 +93,6 @@ The decision making system is commonly partitioned as well into many subsystems 
 
 
 #### A. LIDAR-Based Localization
-
-
-
 
 #### B. LIDAR plus Camera-Based Localization
 
@@ -117,7 +118,10 @@ The main topics of the road mapping subsystem are
 
 ### 3.4 Moving Objects Tracking
 
->  중요, 다시 살펴 보기 
+
+
+
+
 
 ### 3.5 Traffic Signalization Detection and Recognition
 
