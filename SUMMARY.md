@@ -41,7 +41,6 @@
 
 * [Intro\_3D CloudPoint](intro3d-cloudpoint.md)
 * [Paper\_2018-SECOND](paper2018-second.md)
-* [Code\_2018\_DenseLidarNet](code2018-DenseLidarNet.md)
 
 ## Out of Scope
 
